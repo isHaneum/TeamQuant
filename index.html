@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Team Quant 투자전략 검증 및 모의투자"><title>Team Quant · 투자전략 검증</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <section id="login-view" class="login-view">
+    <div class="login-copy"><span class="brand-mark">TQ</span><p class="eyebrow">TEAM QUANT</p><h1>투자전략 검증<br>및 모의투자</h1><p>전략의 조건과 판단 근거를 확인하고 모의 자산으로 실행할 수 있습니다.</p></div>
+    <form id="login-form" class="login-card"><p class="eyebrow">LOGIN</p><h2>로그인</h2><p>처음 사용하는 ID는 체험 계정으로 등록됩니다.</p><label>사용자 ID<input id="login-id" autocomplete="username" required maxlength="24" placeholder="사용자 ID"></label><label>4자리 PIN<input id="login-pin" type="password" inputmode="numeric" autocomplete="current-password" required pattern="[0-9]{4}" maxlength="4" placeholder="PIN"></label><button class="primary" type="submit">로그인</button><button id="demo-login" class="secondary" type="button">체험 계정</button><small>수업용 프로토타입 로그인 · 브라우저별 저장</small></form>
+  </section>
+
+  <div id="app" class="app-shell" hidden>
+    <header class="topbar"><a class="brand" href="#home"><span class="brand-mark">TQ</span><span>Team Quant</span></a><div class="top-actions"><span class="mode">모의투자 · 실제 주문 없음</span><strong id="user-name">—</strong><button id="logout" class="text-button">로그아웃</button></div></header>
+    <div class="layout">
+      <aside class="sidebar"><nav><button class="nav-button active" data-view="home"><span>01</span>대시보드</button><button class="nav-button" data-view="strategy"><span>02</span>전략 설정</button><button class="nav-button" data-view="assets"><span>03</span>자산·모의주문</button><button class="nav-button" data-view="evidence"><span>04</span>판단 기록</button></nav><div class="side-note"><strong>운용 기준</strong><p>승인된 전략 버전만 검증과 모의주문에 사용합니다.</p></div></aside>
+      <main>
+        <section class="view active" data-page="home" id="home">
+          <div class="page-head"><div><p class="eyebrow">DASHBOARD</p><h1>대시보드</h1><p><span id="welcome-name">—</span>님의 전략과 모의 자산 현황입니다.</p></div><button class="primary compact" data-open="strategy">전략 설정</button></div>
+          <div class="summary-grid"><article><span>승인 전략</span><strong id="home-strategy">없음</strong><small id="home-strategy-id">전략을 먼저 승인하세요.</small></article><article><span>모의 총자산</span><strong id="home-total">—</strong><small id="home-profit">초기 자금 대비</small></article><article><span>최근 판단</span><strong id="home-decision">—</strong><small id="home-reason">검증 후 표시됩니다.</small></article></div>
+          <article class="journey-card"><div class="journey-step"><b>1</b><span>원칙 입력<small>자연어 입력</small></span></div><i></i><div class="journey-step" id="journey-approve"><b>2</b><span>규칙 승인<small>조건 확인</small></span></div><i></i><div class="journey-step" id="journey-test"><b>3</b><span>과거 검증<small>성과 비교</small></span></div><i></i><div class="journey-step" id="journey-paper"><b>4</b><span>모의 운용<small>판단 기록</small></span></div></article>
+          <div class="two-column"><article class="panel"><div class="panel-head"><div><span>최근 검증</span><h2 id="home-result-title">검증 결과 없음</h2></div></div><div id="home-chart" class="mini-chart"></div><p id="home-result-copy" class="muted">승인된 전략을 시장 데이터로 검증하세요.</p></article><article class="panel"><div class="panel-head"><div><span>검증 항목</span><h2>판단 재현 정보</h2></div></div><ul class="plain-list"><li>전략 원문과 승인 규칙</li><li>전략·데이터·비용 버전</li><li>거래일별 지표값과 판단 사유</li><li>전략 판단과 사용자 행동</li></ul></article></div>
+        </section>
+
+        <section class="view" data-page="strategy" id="strategy">
+          <div class="page-head"><div><p class="eyebrow">STRATEGY</p><h1>전략 설정</h1><p>투자 원칙을 입력하고 변환된 규칙을 확인합니다.</p></div></div>
+          <div class="strategy-layout"><div>
+            <article class="panel"><div class="step-title"><span>1</span><div><h2>투자 원칙</h2><p>기간과 기준값을 포함해 입력하세요.</p></div></div><label>자연어 입력<textarea id="natural-rule" rows="5">20일 이동평균이 60일 이동평균을 상향 돌파하고 RSI 14가 70 미만일 때 매수. 하향 돌파하면 매도. 손절 8%, 종목당 비중 20%.</textarea></label><div class="examples"><button data-example="ma">이동평균</button><button data-example="rsi">RSI 반전</button><button data-example="breakout">가격 돌파</button></div><button id="parse-rule" class="primary">규칙 변환</button></article>
+            <article class="panel" id="rule-review"><div class="step-title"><span>2</span><div><h2>규칙 확인</h2><p>실행 전 변환 결과를 확인합니다.</p></div></div><div class="rule-list"><div><span>전략</span><strong id="review-name">—</strong></div><div><span>매수</span><strong id="review-entry">—</strong></div><div><span>매도</span><strong id="review-exit">—</strong></div><div><span>위험 관리</span><strong id="review-risk">—</strong></div></div><div id="parse-warning" class="notice" hidden></div><label class="approval"><input id="approve-check" type="checkbox">변환된 규칙과 다음 거래일 시가 체결 조건을 확인했습니다.</label><button id="approve-strategy" class="primary" disabled>전략 승인</button></article>
+          </div><article class="panel verify-panel"><div class="step-title"><span>3</span><div><h2>과거 데이터 검증</h2><p>승인된 전략만 실행됩니다.</p></div></div><div class="field-grid"><label>종목<input id="symbol" value="005930.KS" list="symbols"></label><label>기간<select id="range"><option value="1y">1년</option><option value="2y" selected>2년</option><option value="5y">5년</option></select></label></div><datalist id="symbols"><option value="005930.KS">삼성전자</option><option value="000660.KS">SK하이닉스</option><option value="035420.KS">NAVER</option><option value="035720.KS">카카오</option></datalist><div class="field-grid"><label>초기 자금<input id="capital" type="number" value="10000000"></label><label>거래비용 (%)<input id="cost" type="number" value="0.2" step="0.01"></label></div><button id="run-backtest" class="primary" disabled>검증 실행</button><div id="verify-state" class="verify-empty">전략 승인 후 실행할 수 있습니다.</div><div id="verify-result" hidden><div class="metrics"><div><span>전체 수익률</span><strong id="result-return">—</strong></div><div><span>최대 낙폭</span><strong id="result-mdd">—</strong></div><div><span>평가 구간 수익률</span><strong id="result-validation">—</strong></div></div><div id="robust-warning" class="notice"></div><button id="register-paper" class="primary">모의 운용 등록</button></div></article></div>
+        </section>
+
+        <section class="view" data-page="assets" id="assets">
+          <div class="page-head"><div><p class="eyebrow">ASSETS</p><h1>자산·모의주문</h1><p>모의 자산과 전략 판단을 확인합니다.</p></div><button id="refresh-assets" class="secondary">현재가 갱신</button></div><div class="asset-tabs"><button class="active" data-asset-tab="paper">모의 자산</button><button data-asset-tab="kis">한국투자 계좌</button></div>
+          <div id="paper-assets" class="asset-page active"><div class="summary-grid asset-summary"><article><span>총자산</span><strong id="asset-total">—</strong></article><article><span>주문 가능 현금</span><strong id="asset-cash">—</strong></article><article><span>평가 손익</span><strong id="asset-pnl">—</strong></article></div><div class="two-column assets-layout"><article class="panel"><div class="panel-head"><div><span>보유 종목</span><h2>모의 포트폴리오</h2></div></div><div class="table-wrap"><table><thead><tr><th>종목</th><th>수량</th><th>평균단가</th><th>현재가</th><th>평가손익</th></tr></thead><tbody id="holdings-body"></tbody></table></div></article><article class="panel order-card"><div class="panel-head"><div><span>전략 판단</span><h2 id="order-symbol">검증 결과 없음</h2></div><span id="order-decision" class="decision-badge">—</span></div><p id="order-reason" class="muted">최근 판단 사유가 표시됩니다.</p><div class="rule-evidence" id="order-evidence">지표값 —</div><div class="field-grid"><label>수량<input id="order-qty" type="number" min="1" value="1"></label><label>사용자 행동<select id="user-action"><option value="FOLLOW">전략 판단 따르기</option><option value="BUY">직접 매수</option><option value="SELL">직접 매도</option><option value="SKIP">거래하지 않기</option></select></label></div><label id="override-wrap" hidden>다르게 판단한 이유<input id="override-reason" placeholder="판단 이유 입력"></label><button id="paper-order" class="primary">모의 결정 기록</button><small>모의 잔고에만 반영됩니다.</small></article></div></div>
+          <div id="kis-assets" class="asset-page"><article class="panel kis-card"><div><p class="eyebrow">KIS · READ ONLY</p><h2>한국투자 계좌</h2><p>계좌 정보는 서버에서만 처리하며 화면에는 잔고 조회 결과만 표시합니다.</p></div><button id="load-kis" class="primary compact">연결 확인</button></article><div id="kis-result" class="panel"><p class="muted">연결 상태를 확인하지 않았습니다.</p></div></div>
+        </section>
+
+        <section class="view" data-page="evidence" id="evidence">
+          <div class="page-head"><div><p class="eyebrow">EVIDENCE</p><h1>판단 기록</h1><p>전략 판단과 사용자 행동을 함께 확인합니다.</p></div><button id="export-log" class="secondary">CSV 저장</button></div><div class="summary-grid evidence-summary"><article><span>기록</span><strong id="log-count">0건</strong></article><article><span>원칙 준수율</span><strong id="adherence">—</strong></article><article><span>전략 버전</span><strong id="evidence-version">—</strong></article></div><article class="panel"><div class="table-wrap"><table class="evidence-table"><thead><tr><th>평가일</th><th>종목</th><th>전략 판단</th><th>사용자 행동</th><th>지표값</th><th>판단 근거</th><th>전략 버전</th></tr></thead><tbody id="evidence-body"></tbody></table></div></article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div id="toast" class="toast" aria-live="polite"></div><script type="module" src="/app.js"></script>
+</body></html>
