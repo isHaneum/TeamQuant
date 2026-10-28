@@ -43,7 +43,7 @@ KIS_ACCOUNT_PRODUCT_CODE=01
 
 1. Git 저장소에 이 폴더를 올린다.
 2. Vercel에서 저장소를 Import한다.
-3. Root Directory를 `team_quant/market-simulator`로 지정한다.
+3. 이 저장소에서는 Root Directory를 `.`로 지정한다.
 4. KIS 연결이 필요하면 위 환경변수를 Secret으로 등록한다.
 5. 배포 후 `/api/market`과 `/api/kis-account`를 확인한다.
 
@@ -55,3 +55,9 @@ KIS_ACCOUNT_PRODUCT_CODE=01
 npm test
 ```
 
+
+## 종목 뉴스
+
+NAVER API HUB 뉴스 API 키를 서버 환경변수 `NAVER_API_HUB_CLIENT_ID`, `NAVER_API_HUB_CLIENT_SECRET`으로 등록한다. `NAVER_NEWS_PROVIDER=hub`를 사용한다. 로컬에서는 `.env.local`에 저장하고 서버를 재시작한다. 키를 Git이나 브라우저에 넣지 않는다.
+
+종목 뉴스 메뉴에서 4개 종목과 자유 키워드를 최신순·관련도순으로 검색할 수 있다. 기사 요약은 검색 제공 패시지이며 뉴스가 전략이나 모의 주문을 자동 변경하지 않는다.

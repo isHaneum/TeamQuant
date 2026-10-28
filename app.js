@@ -1,3 +1,4 @@
+import "/news-ui.js";
 import { createStrategyDefinition, runBacktest } from "/lib/backtest.js";
 import { parseNaturalStrategy } from "/lib/natural-language.js";
 
