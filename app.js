@@ -7,6 +7,8 @@ import { parseNaturalStrategy } from "/lib/natural-language.js";
 import "/news-ui.js";
 import "/overview-ui.js";
 import "/account-ui.js";
+import "/toss-ui.js";
+import "/asset-hub-ui.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];

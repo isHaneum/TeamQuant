@@ -12,3 +12,8 @@ Vercel Production 환경변수: KIS_APP_KEY, KIS_APP_SECRET, KIS_ACCOUNT_NO(앞 
 ## 데이터
 NAVER_NEWS_PROVIDER=hub, NAVER_API_HUB_CLIENT_ID, NAVER_API_HUB_CLIENT_SECRET. DART_API_KEY는 종목 시장 확인에 사용. Yahoo 비공식 지연 일봉은 모의 검증용. DEMO 가격은 합성.
 로컬 ML 연구는 운영 배포 제외. 비밀키와 개인 잔고는 Git에 올리지 말 것.
+
+
+## Personal PC bridge
+Vercel only serves UI; Toss keys and portfolio reads stay on localhost:8766. Set TOSS_KEY_FILE locally, npm run dev, log in to the local UI and issue a one-use code. Enter the code at https://teamquant.vercel.app in the same PC browser. Browser local-network permission may require manual approval. Codes expire in 2 minutes, sessions in 1 hour, and connections are lost on page reload. Assets refresh every 5 minutes while the tab is visible. Tokens and portfolios are memory-only; no financial data is added to cloud environment variables.
+The local server binds 127.0.0.1, validates Host/Origin and pairs only the fixed production origin. POST read routes only; no brokerage orders. Actual holdings lack cash, so whole-account cash/concentration compliance is unavailable. Current-holdings historical comparison is a retrospective hypothesis with selection bias, not historical account performance or independent OOS proof. Symbol badges are identification marks, not official brand logos.

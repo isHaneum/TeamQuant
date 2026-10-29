@@ -1,0 +1,16 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {createTossReader,normalizeTossHoldings,allowLocalToss} from '../lib/toss.js';
+const item=(currency='USD')=>({symbol:currency==='USD'?'AAPL':'005930',name:'Example',currency,quantity:'0.5',averagePurchasePrice:'100',lastPrice:'120',marketValue:{purchaseAmount:'50',amount:'60'},profitLoss:{amount:'10',rate:'.2'},dailyProfitLoss:{amount:'-1',rate:'-.01'}});
+test('mixed currencies stay separate and missing FX never adds USD to KRW',()=>{const r=normalizeTossHoldings({items:[item('KRW'),item()]});assert.equal(r.totals[0].value,60);assert.equal(r.totals[1].value,60);assert.equal(r.holdingValueKrw,null);assert.equal(r.cashKnown,false);assert.equal(r.positions[1].quantity,.5);assert.equal(r.positions[1].returnPct,20);});
+test('current mid exchange rate converts holdings only, no fabricated cash',()=>{const r=normalizeTossHoldings({items:[item('KRW'),item()]},{midRate:'1300',validFrom:'2026-10-29'});assert.equal(r.holdingValueKrw,78060);assert.equal(r.fx.midRate,1300);assert.equal(r.cashKnown,false);});
+test('malformed numeric amounts fail instead of showing zeros',()=>{assert.throws(()=>normalizeTossHoldings({items:[{...item(),quantity:'oops'}]}));assert.throws(()=>normalizeTossHoldings({items:[{...item(),lastPrice:null}]}));});
+test('reader follows envelopes, caches one token, never calls orders or buying-power',async()=>{
+ const calls=[];let time=1_000_000;
+ const reader=createTossReader({now:()=>time,credentials:async()=>({clientId:'fake-id',clientSecret:'fake-secret'}),fetchImpl:async(url,options)=>{calls.push({url,options});const data=url.endsWith('/oauth2/token')?{access_token:'fake-token',expires_in:86400}:url.endsWith('/accounts')?{result:[{accountNo:'private',accountSeq:1,accountType:'BROKERAGE'}]}:url.includes('exchange-rate')?{result:{midRate:'1300',validFrom:'time'}}:{result:{items:[item()]}};return {ok:true,json:async()=>data};}});
+ const first=await reader();time+=1500;await reader();assert.equal(calls.filter(c=>c.url.endsWith('/oauth2/token')).length,1);assert.equal(first.holdingValueKrw,78000);assert.ok(calls.every(c=>!c.url.includes('/orders')&&!c.url.includes('buying-power')));assert.ok(!JSON.stringify(first).includes('private'));assert.equal(calls.find(c=>c.url.endsWith('/holdings')).options.headers['X-Tossinvest-Account'],'1');
+});
+test('IP failure is safe and causes no holdings request',async()=>{let calls=0;const reader=createTossReader({credentials:async()=>({clientId:'id',clientSecret:'secret'}),fetchImpl:async()=>{calls++;return {ok:false,status:403,json:async()=>({error:'access_denied',error_description:'secret-value'})};}});await assert.rejects(reader(),e=>e.code==='ip_not_allowed'&&!e.message.includes('secret-value'));assert.equal(calls,1);});
+test('local account reads block GET, remote origins, rebinding and Vercel',()=>{
+ const r={method:'POST',headers:{host:'127.0.0.1:8766',origin:'http://127.0.0.1:8766','x-teamquant-action':'read-toss'}};
+ assert.equal(allowLocalToss(r,8766,{}),true);assert.equal(allowLocalToss({...r,method:'GET'},8766,{}),false);assert.equal(allowLocalToss({...r,headers:{...r.headers,origin:'https://evil.example'}},8766,{}),false);assert.equal(allowLocalToss({...r,headers:{...r.headers,host:'evil.example'}},8766,{}),false);assert.equal(allowLocalToss(r,8766,{VERCEL:'1'}),false);
+});
