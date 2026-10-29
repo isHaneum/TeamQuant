@@ -30,8 +30,8 @@ $('#comparison-stocks').after(finderDetails);
 finder.classList.remove('verify-panel');finder.classList.add('finder-content');
 
 const inputPanel=$('#natural-rule').closest('article');inputPanel.classList.add('principle-input');
-inputPanel.querySelector('.step-title p').textContent='사고팔 때 지키고 싶은 조건을 적어주세요. 아래 예시로 시작해도 좋아요.';
-$('#natural-rule').placeholder='예: 20일 최고가를 넘으면 사고, 7% 손실이 나면 팔고 싶어요.';
+inputPanel.querySelector('.step-title p').textContent='사고팔 때 지키고 싶은 조건을 입력하십시오. 예시를 선택해 시작할 수 있습니다.';
+$('#natural-rule').placeholder='예: 20일 최고가를 넘으면 사고, 7% 손실 7% 도달 시 매도.';
 $('#parse-rule').textContent='조건 확인하기';
 $('#rule-review').hidden=true;
 $('#natural-rule').addEventListener('input',()=>{$('#rule-review').hidden=true;$('#approve-check').checked=false;$('#approve-strategy').disabled=true;});
@@ -62,7 +62,7 @@ function sync(){
     if(name===page)b.setAttribute('aria-current','step');
     b.classList.toggle('complete',i===0?!!s.approved:i===1?!!s.comparison:!!s.activeStrategy);
   });
-  $('#flow-help').textContent={home:'기준을 정하고, 과거 결과를 확인한 뒤 모의투자로 시작하세요.',strategy:'1 / 3 · 투자 기준을 적고, 변환된 조건을 확인하세요.',comparison:'2 / 3 · 종목과 투자금을 고르면 같은 조건으로 비교해요.',assets:'3 / 3 · 등록한 전략의 판단을 모의 자산으로 확인하세요.',news:'관심 뉴스 확인 후 상단 단계로 돌아가 이어갈 수 있어요.',evidence:'어떤 기준으로 판단했는지 확인하세요.'}[page]||'고급 분석 도구';
+  $('#flow-help').textContent={home:'기준을 정하고, 과거 결과를 확인한 뒤 모의투자로 시작하세요.',strategy:'1 / 3 · 투자 기준을 적고, 변환된 조건을 확인하세요.',comparison:'2 / 3 · 종목과 투자금을 고르면 같은 조건으로 비교합니다.',assets:'3 / 3 · 등록한 전략의 판단을 모의 자산으로 확인하세요.',news:'관심 뉴스 확인 후 상단 단계로 돌아가 이어갈 수 있습니다.',evidence:'어떤 기준으로 판단했는지 확인하세요.'}[page]||'고급 분석 도구';
   if(s.comparison?.perStock?.length){
     const first=s.comparison.perStock[0].symbol,heading=$('#comparison-period').textContent;
     const names={'005930.KS':'삼성전자','000660.KS':'SK하이닉스','035420.KS':'NAVER','035720.KS':'카카오'};

@@ -9,14 +9,14 @@ import { fileURLToPath } from "node:url";
 import { fetchMarketSeries } from "./lib/market.js";
 import { fetchNews } from "./lib/news.js";
 import { fetchKisAccount } from "./lib/kis.js";
-
+import { getResearchStatus, startResearchRefresh } from "./lib/research-job.js";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 for (const file of [".env", ".env.local"]) {
   try { process.loadEnvFile(join(root, file)); } catch (error) { if (error.code !== "ENOENT") throw error; }
 }
 const port = Number(process.env.PORT || 8766);
-const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8" };
+const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8", ".zip":"application/zip" };
 
 const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:async(symbol,range)=>{const resolved=/^\d[\dA-Z]{5}$/.test(symbol)?(await searchStocks('',symbol)).symbol:symbol.replace(/\.(?!KS$|KQ$)/g,'-');return fetchMarketSeries(resolved,range);},readNews:fetchNews});
 http.createServer(async (request, response) => {
@@ -49,6 +49,22 @@ http.createServer(async (request, response) => {
       response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'private, no-store'});
       return response.end(JSON.stringify(data));
     }
+    if (url.pathname === '/api/ml') {
+      const report=await readFile(join(root,'data','ml-report.json'));
+      response.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});
+      return response.end(report);
+    }
+    if (url.pathname === '/api/research') {
+      if(!['GET','POST'].includes(request.method)){response.writeHead(405);return response.end();}
+      if(request.method==='POST') {
+        const allowedOrigin=`http://127.0.0.1:${port}`;
+        if(request.headers.origin!==allowedOrigin || request.headers['x-teamquant-action']!=='refresh'){
+          response.writeHead(403);return response.end(JSON.stringify({error:'허용되지 않은 요청'}));
+        }
+      }
+      response.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});
+      return response.end(JSON.stringify(request.method==='GET'?getResearchStatus():startResearchRefresh()));
+    }
     if (url.pathname === "/api/market") {
       const data = await fetchMarketSeries(url.searchParams.get("symbol") || "005930.KS", url.searchParams.get("range") || "1y");
       response.writeHead(200, { "Content-Type":"application/json; charset=utf-8", "Cache-Control":"no-store" });
@@ -62,7 +78,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:index\.html|styles\.css|overview\.css|overview-ui\.js|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads/TeamQuant-PC\.zip|index\.html|styles\.css|overview\.css|overview-ui\.js|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");

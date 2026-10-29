@@ -1,7 +1,7 @@
 import "/flow-ui.js";
 import {stockName,resolveStockInput} from "/lib/instruments.js";
 import "/journey-ui.js";
-import { createStrategyDefinition, runBacktest } from "/lib/backtest.js";
+import { createStrategyDefinition, validateStrategy, runBacktest } from "/lib/backtest.js";
 import { parseNaturalStrategy } from "/lib/natural-language.js";
 
 import "/news-ui.js";
@@ -9,6 +9,7 @@ import "/overview-ui.js";
 import "/account-ui.js";
 import "/toss-ui.js";
 import "/asset-hub-ui.js";
+import "/help-ui.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -51,7 +52,7 @@ function renderMiniChart(items=[]) {
 function renderDashboard() {
   const state=loadState(), approved=state.approved, run=state.lastRun, paper=state.paper;
   $("#welcome-name").textContent=activeUser; $("#user-name").textContent=activeUser;
-  $("#home-strategy").textContent=approved?.definition.name||"없음"; $("#home-strategy-id").textContent=approved?.definition.entryRule||"투자 기준을 먼저 정해보세요.";
+  $("#home-strategy").textContent=approved?.definition.name||"없음"; $("#home-strategy-id").textContent=approved?.definition.entryRule||"투자 기준을 먼저 정해확인하십시오.";
   const total=paper.cash+Object.values(paper.holdings).reduce((sum,h)=>sum+h.qty*h.lastPrice,0), profit=(total/paper.initialCash-1)*100;
   $("#home-total").textContent=money(total); $("#home-profit").textContent=`초기 자금 대비 ${pct(profit)}`;
   $("#home-decision").textContent=run?.latestDecision.decision||"—"; $("#home-reason").textContent=run?.latestDecision.reason||"검증 후 표시됩니다.";
@@ -62,7 +63,7 @@ function renderDashboard() {
 
 function restoreApproved() {
   const approved=loadState().approved; if(!approved)return;
-  $("#natural-rule").value=approved.original; draft={original:approved.original,config:approved.config,warnings:[],definition:approved.definition}; renderDraft(); $("#approve-check").checked=true; $("#approve-strategy").disabled=false; $("#approve-strategy").textContent="3개월 검증으로 이동"; $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${approved.definition.id}`;
+  $("#natural-rule").value=approved.original; draft={original:approved.original,config:approved.config,warnings:[],definition:approved.definition}; renderDraft(); $("#approve-check").checked=true; $("#approve-strategy").disabled=false; $("#approve-strategy").textContent="3개월 검증으로 이동"; $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${approved.definition.id}`; try{validateStrategy(approved.definition);}catch(e){draft=null;$("#approve-check").checked=false;$("#approve-strategy").disabled=true;$("#run-backtest").disabled=true;$("#parse-warning").hidden=false;$("#parse-warning").textContent=e.message+" 원칙 문장을 다시 변환하여 확인·승인하십시오.";}
 }
 
 function renderDraft() {
@@ -72,12 +73,12 @@ function renderDraft() {
 }
 
 function parseRule() {
-  try { const parsed=parseNaturalStrategy($("#natural-rule").value); draft={...parsed,definition:createStrategyDefinition(parsed.config)}; renderDraft(); toast("변환된 규칙을 확인하세요."); }
+  try { const parsed=parseNaturalStrategy($("#natural-rule").value),definition=createStrategyDefinition(parsed.config); validateStrategy(definition); draft={...parsed,definition}; renderDraft(); toast("변환된 규칙을 확인하세요."); }
   catch(error){toast(error.message);}
 }
 
 function approveStrategy() {
-  if(!draft||!$("#approve-check").checked)return; const state=loadState(); if(state.approved?.definition.id===draft.definition.id&&state.approved.original===draft.original){showPage("comparison");return;} state.approved={...draft,approvedAt:new Date().toISOString()}; state.activeStrategy=null; delete state.comparison; saveState(state); $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${draft.definition.id}`; $("#verify-result").hidden=true; renderDashboard(); toast("전략을 승인했습니다."); showPage("comparison");
+  if(!draft||!$("#approve-check").checked)return; try{validateStrategy(draft.definition);}catch(e){toast(e.message);return;} const state=loadState(); if(state.approved?.definition.id===draft.definition.id&&state.approved.original===draft.original){showPage("comparison");return;} state.approved={...draft,approvedAt:new Date().toISOString()}; state.activeStrategy=null; delete state.comparison; saveState(state); $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${draft.definition.id}`; $("#verify-result").hidden=true; renderDashboard(); toast("전략을 승인했습니다."); showPage("comparison");
 }
 
 async function runApprovedBacktest() {
@@ -157,7 +158,7 @@ window.addEventListener('teamquant:model-evidence',event=>{
 });
 
 window.addEventListener('teamquant:comparison-paper',event=>{
-  const s=loadState(),report=event.detail,stock=report.perStock[0],run=stock.base;
+  const s=loadState(),report=event.detail,stock=report.perStock.find(x=>x.symbol===report.paperSymbol)||report.perStock[0],run=stock.base;
   if(!s.approved||s.approved.definition.id!==report.strategyId)return toast('투자 기준이 바뀌었습니다. 다시 검증하세요.');
   const last=run.decisions.at(-1);
   s.lastRun={symbol:stock.symbol,startDate:report.start,endDate:report.end,lastPrice:last.close,summary:run.summary,validationReturn:null,latestDecision:last,equity:run.equity,strategy:run.strategy,settings:run.settings};

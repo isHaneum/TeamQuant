@@ -21,7 +21,7 @@ async function searchNews() {
     if (current !== controller) return;
     status.textContent = data.items.length
       ? `‘${data.query}’ · ${data.items.length}건 · ${data.source} · 조회 ${new Date(data.fetchedAt).toLocaleString('ko-KR')}`
-      : `‘${data.query}’ 검색 결과가 없습니다. 다른 키워드로 검색해 보세요.`;
+      : `‘${data.query}’ 검색 결과가 없습니다. 다른 키워드로 검색해 확인하십시오.`;
     for (const item of data.items) {
       const article = document.createElement('article'); article.className = 'news-item';
       const meta = document.createElement('p'); meta.className = 'muted';

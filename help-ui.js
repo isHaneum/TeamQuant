@@ -1,0 +1,27 @@
+import '/asset-hub-ui.js';
+const $=s=>document.querySelector(s);
+const navigate=page=>document.querySelector(`[data-view="${page}"]`)?.click();
+const nav=document.createElement('button');nav.className='nav-button';nav.dataset.view='help';nav.textContent='이용 안내 · FAQ';$('.overview-nav nav').append(nav);
+const page=document.createElement('section');page.id='help';page.className='view';page.dataset.page='help';
+page.innerHTML=`<div class="page-head"><div><h1>이용 안내</h1><p>투자 원칙 작성부터 성과 검증, 모의 운용까지</p></div></div>
+<article class="panel"><h2>처음 사용한다면</h2><p>계좌 없이 전략의 성과를 확인할 수 있습니다. 검증 결과를 확인한 후 실제 자산을 연결하거나 모의 운용을 시작하십시오.</p><div class="tutorial-grid">
+<article><b>1. 투자 원칙 작성</b><p>진입·매도 조건, 손절, 투자 비중을 입력합니다. 변환된 수치와 규칙을 확인한 후 승인합니다.</p><button data-help-go="strategy" class="secondary">원칙 작성</button></article>
+<article><b>2. 같은 원칙의 성과 검증</b><p>투자할 주식·ETF를 선택하고 최근 3개월 검증을 실행합니다. 상품 순위를 매기는 기능이 아닙니다.</p><button data-help-go="comparison" class="secondary">실제 데이터로 검증</button></article>
+<article><b>3. 결과와 판단 확인</b><p>수익률, 시장 대비 초과수익(%p), 최대 낙폭을 확인합니다. 날짜 슬라이더와 판단 근거를 확인한 후 JSON을 저장합니다.</p><button data-help-go="comparison" class="secondary">결과 확인</button></article>
+<article><b>4. 모의 운용</b><p>계좌 없이 가상 현금으로 시작할 수 있습니다. 실제 자산 연결 후에는 보유분을 복사한 별도 가상 장부도 사용할 수 있습니다.</p><button data-help-go="assets" class="secondary">모의 운용</button></article>
+<article><b>5. 실제 자산에 적용</b><p>본인 PC를 연결하여 보유 상품을 조회합니다. 승인 원칙으로 점검하고 기사 출처와 대응 이유를 기록합니다. 실제 주문은 실행하지 않습니다.</p><button data-help-go="toss" class="secondary">개인 PC 연결</button></article></div></article>
+<article class="panel"><h2>그래프와 성과를 읽는 방법</h2><dl class="help-definitions"><dt>원칙만 적용</dt><dd>승인된 매수·매도·손절 규칙으로 운용한 결과입니다.</dd><dt>원칙 + 시장 조건</dt><dd>같은 규칙에 ‘기준 시장 종가가 60일 평균보다 높을 때만 신규 매수’ 조건을 추가합니다. 뉴스·AI 분석 성과를 뜻하지 않습니다.</dd><dt>같은 상품 그대로 보유</dt><dd>같은 상품·같은 자금 배분으로 시작 시 매수 후 유지한 결과입니다. 매매 원칙을 적용한 효과의 비교 기준입니다.</dd><dt>기준 시장</dt><dd>원화는 코스피 지수, 달러는 SPY 가격을 사용합니다. 투자 비중·현금 노출이 전략과 다릅니다.</dd><dt>시작 자금 100</dt><dd>105는 +5%, 95는 −5%입니다. 날짜 슬라이더로 각 날짜의 모든 값을 확인할 수 있습니다. 범례의 색상과 선 모양은 그래프와 같습니다.</dd><dt>초과수익과 최대 낙폭</dt><dd>전략 − 시장의 수익률 차이는 %p입니다. 최대 낙폭은 도중 최고점 대비 가장 큰 손실 폭입니다. 시장보다 덜 하락해도 수익이 발생했다는 의미는 아닙니다.</dd></dl></article>
+<article class="panel"><h2>다른 컴퓨터에서 본인 계좌 연결</h2><ol class="setup-steps"><li><a href="/downloads/TeamQuant-PC.zip" download>PC 연결 패키지 다운로드</a> 후 압축을 해제합니다. Node.js 20 이상이 필요합니다.</li><li>패키지의 START-HERE.md에 따라 .env.local을 만들고 본인 토스 API 키 파일 경로를 설정합니다. 다른 사람의 키를 복사하지 않습니다. 금융사 허용 IP에도 본인 PC의 공인 IP가 등록되어야 합니다.</li><li>start-personal-server.cmd 실행 후 <a href="http://127.0.0.1:8766/" target="_blank" rel="noopener">PC 화면</a>을 엽니다. ‘내 실제 자산’에서 Vercel 연결코드를 발급합니다.</li><li>같은 PC의 TeamQuant Vercel 화면에서 프로필을 열고 ‘내 실제 자산’에 코드를 입력합니다. 브라우저가 로컬 네트워크 접근을 요청하면 직접 허용합니다.</li><li>연결 후 5분 간격으로 갱신합니다. PC 서버를 계속 실행해야 하며, 연결은 1시간 유지됩니다. 새로고침 후에는 다시 연결합니다.</li></ol><p class="notice">현재 프로필은 브라우저별 저장 방식입니다. 같은 이름으로 다른 PC에 접속해도 계정·전략이 동기화되지 않습니다. 서버 회원 인증은 미구현입니다. 금융 키·잔고는 Vercel에 업로드하지 않으며, 각 PC 서버에 설정한 계좌만 조회합니다.</p></article>
+<article class="panel"><h2>자주 묻는 질문</h2>
+<details><summary>어떤 상품을 사용할 수 있습니까?</summary><p>국내 상장 주식과 지원 ETF(KODEX 200, TIGER 미국S&P500)를 이름으로 추가하여 검증·모의 운용할 수 있습니다. 연결 계좌의 지원 국내·미국 보유 주식은 통화별로 점검합니다. 일반 펀드는 일별 기준가 CSV를 이용한 연구용 검증만 지원하며, 상품별 매매·환매 결제는 구현하지 않았습니다.</p></details>
+<details><summary>검증 결과가 없거나 거래가 0회인 이유는 무엇입니까?</summary><p>규칙 승인, 준비 기간, 가격 자료가 필요합니다. 기간 중 진입 조건이 없으면 현금 상태가 유지됩니다. 수익을 만들기 위해 임의로 거래하지 않습니다. 날짜별 판단 근거에서 조건과 지표값을 확인하십시오.</p></details>
+<details><summary>시장 조건을 추가하면 항상 더 좋습니까?</summary><p>그렇지 않습니다. 상승 기회를 놓치거나 진입이 지연될 수 있습니다. 같은 기간·상품·비용으로 비교한 실제 결과를 확인해야 합니다. 최근 3개월을 보며 튜닝한 전략은 별도의 기간에서 다시 검증해야 합니다.</p></details>
+<details><summary>뉴스와 AI가 성과 검증에 포함됩니까?</summary><p>현재 비교는 수치 규칙과 60일 시장 추세 조건의 효과입니다. 기사는 최신 정보의 출처 확인용이며 과거 뉴스 기반 AI 성과 실험과 LLM 판단은 아직 연결하지 않았습니다.</p></details>
+<details><summary>모의 운용과 실제 계좌는 어떻게 다릅니까?</summary><p>일반 모의 장부는 가상 현금으로 시작합니다. 실제 보유분 복사 장부는 현재 상품·수량과 입력한 가상 현금으로 시작하며 실제 잔고와 분리됩니다. 조회 시세의 가상 체결이며 호가·세금·배당·환매 지연을 완전히 재현하지 않습니다.</p></details>
+<details><summary>본인 계좌의 실제 3개월 수익률입니까?</summary><p>아닙니다. 현재 보유 상품을 과거에 운용했다는 가정입니다. 실제 체결·입출금·현금 원장이 없어 계좌의 과거 성과를 재현할 수 없습니다.</p></details>
+<details><summary>다른 사용자가 내 자산을 보게 됩니까?</summary><p>다른 PC는 그 PC의 로컬 서버와 키에 연결합니다. Vercel에는 금융 키와 잔고를 저장하지 않습니다. 같은 PC의 로컬 서버는 설정된 한 명의 API 소유자 계좌를 제공합니다. 브라우저 프로필만으로 같은 PC의 금융 접근을 사용자별 분리하는 기능은 없습니다.</p></details>
+<details><summary>무엇이 저장되며 어떻게 삭제합니까?</summary><p>전략과 일반 모의 기록은 브라우저 프로필별 저장소에 보관됩니다. 실제 자산·복사 모의 장부·연결 토큰은 탭 메모리에만 존재하며 ‘화면에서 지우기’ 또는 새로고침 시 제거됩니다. 내보낸 JSON은 직접 보관하는 파일입니다.</p></details>
+</article>`;
+document.querySelector('main').append(page);page.querySelectorAll('[data-help-go]').forEach(b=>b.onclick=()=>navigate(b.dataset.helpGo));
+const intro=document.createElement('article');intro.className='panel verification-entry';intro.innerHTML=`<div><p class="eyebrow">원칙의 효과 검증</p><h2>내 원칙은 수익과 하락 방어에 도움이 되었는가?</h2><p>최근 3개월의 실제 가격으로 원칙만 적용한 결과와 시장 조건을 추가한 결과를 비교합니다. 계좌 연결 없이 시작할 수 있습니다.</p></div><div class="ov-actions"><button class="primary" data-intro="comparison">3개월 전략 검증</button><button class="secondary" data-intro="help">처음 이용 안내</button></div>`;$('#overview .page-head').after(intro);intro.querySelectorAll('[data-intro]').forEach(b=>b.onclick=()=>navigate(b.dataset.intro));
+const accountGuide=document.createElement('p');accountGuide.className='notice';accountGuide.innerHTML='각 사용자는 자기 PC 서버와 본인 API 키로 연결합니다. <button class="text-button" id="account-help">연결 방법·지원 범위</button>';$('#toss .page-head').after(accountGuide);$('#account-help').onclick=()=>navigate('help');
