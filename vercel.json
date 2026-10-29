@@ -1,16 +1,21 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "functions": {
+    "api/stocks.js": {
+      "includeFiles": "data/stocks.json"
+    },
     "api/*.js": {
-      "maxDuration": 10
+      "maxDuration": 30
     }
   },
   "headers": [
     {
-      "source": "/api/market",
+      "source": "/api/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "s-maxage=300, stale-while-revalidate=600" }
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store"
+        }
       ]
     }
   ]

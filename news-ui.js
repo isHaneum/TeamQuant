@@ -46,6 +46,6 @@ document.querySelectorAll('[data-news-query]').forEach(button => button.addEvent
 document.querySelector('#strategy-news').addEventListener('click', () => {
   const symbol = document.querySelector('#symbol').value.trim().toUpperCase();
   const names = {'005930.KS':'삼성전자', '000660.KS':'SK하이닉스', '035420.KS':'NAVER', '035720.KS':'카카오'};
-  query.value = names[symbol] || symbol;
+  query.value = names[symbol] || document.querySelector("#symbol").value.trim();
   document.querySelector('[data-view="news"]').click(); searchNews();
 });

@@ -1,6 +1,12 @@
-import "/news-ui.js";
+import "/flow-ui.js";
+import {stockName,resolveStockInput} from "/lib/instruments.js";
+import "/journey-ui.js";
 import { createStrategyDefinition, runBacktest } from "/lib/backtest.js";
 import { parseNaturalStrategy } from "/lib/natural-language.js";
+
+import "/news-ui.js";
+import "/overview-ui.js";
+import "/account-ui.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -25,12 +31,12 @@ async function hash(text) { const data=new TextEncoder().encode(text); const dig
 function showPage(name) {
   $$(".view").forEach(node=>node.classList.toggle("active",node.dataset.page===name));
   $$(".nav-button").forEach(node=>node.classList.toggle("active",node.dataset.view===name));
-  if(name==="assets") renderAssets(); if(name==="evidence") renderEvidence(); window.scrollTo({top:0,behavior:"smooth"});
+  window.dispatchEvent(new Event("teamquant:page")); if(name==="assets") renderAssets(); if(name==="evidence") renderEvidence(); window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function indicatorText(indicators={}) {
-  const labels={fastSma:"단기 MA",slowSma:"장기 MA",previousFastSma:"전일 단기 MA",previousSlowSma:"전일 장기 MA",rsi:"RSI",previousRsi:"전일 RSI",close:"종가",entryHigh:"진입 최고가",exitLow:"청산 최저가"};
-  return Object.entries(indicators).map(([key,value])=>`${labels[key]||key} ${won.format(value)}`).join(" · ") || "—";
+  const labels={fastSma:"단기 MA",slowSma:"장기 MA",previousFastSma:"전일 단기 MA",previousSlowSma:"전일 장기 MA",rsi:"RSI",previousRsi:"전일 RSI",close:"종가",entryHigh:"진입 최고가",exitLow:"청산 최저가",predictedPct:"5일 예측(%)",thresholdPct:"진입 기준(%)"};
+  return Object.entries(indicators).map(([key,value])=>`${labels[key]||key} ${key.endsWith('Pct')?Number(value).toFixed(3):/rsi/i.test(key)?Number(value).toFixed(2):won.format(value)}`).join(" · ") || "—";
 }
 
 function renderMiniChart(items=[]) {
@@ -43,23 +49,24 @@ function renderMiniChart(items=[]) {
 function renderDashboard() {
   const state=loadState(), approved=state.approved, run=state.lastRun, paper=state.paper;
   $("#welcome-name").textContent=activeUser; $("#user-name").textContent=activeUser;
-  $("#home-strategy").textContent=approved?.definition.name||"없음"; $("#home-strategy-id").textContent=approved?.definition.id||"전략을 먼저 승인하세요.";
+  $("#home-strategy").textContent=approved?.definition.name||"없음"; $("#home-strategy-id").textContent=approved?.definition.entryRule||"투자 기준을 먼저 정해보세요.";
   const total=paper.cash+Object.values(paper.holdings).reduce((sum,h)=>sum+h.qty*h.lastPrice,0), profit=(total/paper.initialCash-1)*100;
   $("#home-total").textContent=money(total); $("#home-profit").textContent=`초기 자금 대비 ${pct(profit)}`;
   $("#home-decision").textContent=run?.latestDecision.decision||"—"; $("#home-reason").textContent=run?.latestDecision.reason||"검증 후 표시됩니다.";
-  $("#home-result-title").textContent=run?`${run.symbol} · ${pct(run.summary.totalReturn)}`:"검증 결과 없음"; $("#home-result-copy").textContent=run?`${run.startDate}~${run.endDate} · MDD -${run.summary.maxDrawdown.toFixed(2)}% · 평가 구간 ${pct(run.validationReturn)}`:"승인된 전략을 시장 데이터로 검증하세요.";
+  $("#home-result-title").textContent=run?`${stockName(run.symbol)} · ${pct(run.summary.totalReturn)}`:"검증 결과 없음"; $("#home-result-copy").textContent=run?`${run.startDate}~${run.endDate} · 최대 낙폭 -${run.summary.maxDrawdown.toFixed(2)}%`:"승인된 전략을 시장 데이터로 검증하세요.";
+  window.dispatchEvent(new Event("teamquant:state"));
   renderMiniChart(run?.equity||[]); $("#journey-approve").classList.toggle("done",!!approved); $("#journey-test").classList.toggle("done",!!run); $("#journey-paper").classList.toggle("done",!!state.activeStrategy);
 }
 
 function restoreApproved() {
   const approved=loadState().approved; if(!approved)return;
-  $("#natural-rule").value=approved.original; draft={original:approved.original,config:approved.config,warnings:[],definition:approved.definition}; renderDraft(); $("#approve-check").checked=true; $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${approved.definition.id}`;
+  $("#natural-rule").value=approved.original; draft={original:approved.original,config:approved.config,warnings:[],definition:approved.definition}; renderDraft(); $("#approve-check").checked=true; $("#approve-strategy").disabled=false; $("#approve-strategy").textContent="3개월 검증으로 이동"; $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${approved.definition.id}`;
 }
 
 function renderDraft() {
-  if(!draft)return; const def=draft.definition;
+  if(!draft)return; $("#approve-strategy").textContent="이 기준으로 3개월 검증"; const def=draft.definition;
   $("#review-name").textContent=def.name; $("#review-entry").textContent=def.entryRule; $("#review-exit").textContent=def.exitRule; $("#review-risk").textContent=def.riskRule;
-  const warning=$("#parse-warning"); warning.hidden=!draft.warnings.length; warning.textContent=draft.warnings.join(" "); $("#approve-check").checked=false; $("#approve-strategy").disabled=true;
+  window.dispatchEvent(new Event("teamquant:draft")); const warning=$("#parse-warning"); warning.hidden=!draft.warnings.length; warning.textContent=draft.warnings.join(" "); $("#approve-check").checked=false; $("#approve-strategy").disabled=true;
 }
 
 function parseRule() {
@@ -68,20 +75,20 @@ function parseRule() {
 }
 
 function approveStrategy() {
-  if(!draft||!$("#approve-check").checked)return; const state=loadState(); state.approved={...draft,approvedAt:new Date().toISOString()}; state.activeStrategy=null; saveState(state); $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${draft.definition.id}`; $("#verify-result").hidden=true; renderDashboard(); toast("전략을 승인했습니다.");
+  if(!draft||!$("#approve-check").checked)return; const state=loadState(); if(state.approved?.definition.id===draft.definition.id&&state.approved.original===draft.original){showPage("comparison");return;} state.approved={...draft,approvedAt:new Date().toISOString()}; state.activeStrategy=null; delete state.comparison; saveState(state); $("#run-backtest").disabled=false; $("#verify-state").textContent=`승인됨 · ${draft.definition.id}`; $("#verify-result").hidden=true; renderDashboard(); toast("전략을 승인했습니다."); showPage("comparison");
 }
 
 async function runApprovedBacktest() {
   const state=loadState(); if(!state.approved)return toast("전략을 먼저 승인하세요."); const button=$("#run-backtest"); button.disabled=true; button.textContent="데이터 조회 중";
   try {
-    const symbol=$("#symbol").value.trim().toUpperCase(), range=$("#range").value, response=await fetch(`/api/market?symbol=${encodeURIComponent(symbol)}&range=${range}`), data=await response.json(); if(!response.ok)throw new Error(data.error||"시장 데이터 조회 실패");
+    const symbol=await resolveStockInput($("#symbol").value), range=$("#range").value, response=await fetch(`/api/market?symbol=${encodeURIComponent(symbol)}&range=${range}`), data=await response.json(); if(!response.ok)throw new Error(data.error||"시장 데이터 조회 실패");
     const cost=Number($("#cost").value)/100, options={...state.approved.config,initialCapital:Number($("#capital").value),feeRate:cost/2,slippageRate:cost/2};
     const result=runBacktest(data.candles,options); let validationReturn=null;
     try { const split=Math.floor(data.candles.length*.7), segment=data.candles.slice(split); validationReturn=runBacktest(segment,options).summary.totalReturn; } catch {}
     currentData=data; currentResult=result; const latest=result.decisions.at(-1);
     state.lastRun={symbol:data.symbol,startDate:data.candles[0].date,endDate:data.candles.at(-1).date,lastPrice:data.candles.at(-1).close,summary:result.summary,validationReturn,latestDecision:latest,equity:result.equity.filter((_,i)=>i%Math.max(1,Math.floor(result.equity.length/100))===0),strategy:result.strategy,settings:result.settings};
     const log={id:`${result.strategy.id}:${data.symbol}:${latest.date}`,date:latest.date,symbol:data.symbol,strategyDecision:latest.decision,userAction:null,indicators:latest.indicators,reason:latest.reason,strategyId:result.strategy.id,createdAt:new Date().toISOString()}; const index=state.logs.findIndex(x=>x.id===log.id); if(index>=0)state.logs[index]={...state.logs[index],...log,userAction:state.logs[index].userAction};else state.logs.push(log);
-    saveState(state); $("#result-return").textContent=pct(result.summary.totalReturn); $("#result-mdd").textContent=`-${result.summary.maxDrawdown.toFixed(2)}%`; $("#result-validation").textContent=pct(validationReturn); const gap=validationReturn===null?null:result.summary.totalReturn-validationReturn; $("#robust-warning").textContent=gap!==null&&gap>10?`전체 구간보다 평가 구간 수익률이 ${gap.toFixed(1)}%p 낮습니다. 기간과 변수 변경 검증이 필요합니다.`:"전체 구간과 평가 구간을 분리해 계산했습니다."; $("#verify-result").hidden=false; $("#verify-state").textContent=`${data.symbol} · ${data.candles.at(-1).date} 기준`; renderDashboard(); toast("검증을 완료했습니다.");
+    saveState(state); $("#result-return").textContent=pct(result.summary.totalReturn); $("#result-mdd").textContent=`-${result.summary.maxDrawdown.toFixed(2)}%`; $("#result-validation").textContent=pct(validationReturn); const gap=validationReturn===null?null:result.summary.totalReturn-validationReturn; $("#robust-warning").textContent=gap!==null&&gap>10?`전체 구간보다 평가 구간 수익률이 ${gap.toFixed(1)}%p 낮습니다. 기간과 변수 변경 검증이 필요합니다.`:"전체 구간과 평가 구간을 분리해 계산했습니다."; $("#verify-result").hidden=false; $("#verify-state").textContent=`${stockName(data.symbol)} · ${data.candles.at(-1).date} 기준`; renderDashboard(); toast("검증을 완료했습니다.");
   } catch(error){toast(error.message); $("#verify-state").textContent=error.message;} finally{button.disabled=false;button.textContent="검증 실행";}
 }
 
@@ -89,9 +96,10 @@ function registerPaper() { const state=loadState(); if(!state.lastRun)return; st
 
 function renderAssets() {
   const state=loadState(),paper=state.paper,run=state.lastRun,holdings=Object.values(paper.holdings); let holdingValue=0,pnl=0;
-  $("#holdings-body").innerHTML=holdings.length?holdings.map(h=>{const value=h.qty*h.lastPrice,itemPnl=(h.lastPrice-h.avgPrice)*h.qty;holdingValue+=value;pnl+=itemPnl;return `<tr><td>${h.symbol}</td><td>${won.format(h.qty)}주</td><td>${money(h.avgPrice)}</td><td>${money(h.lastPrice)}</td><td class="${itemPnl>=0?'good':'bad'}">${money(itemPnl)}</td></tr>`}).join(""):'<tr><td colspan="5" class="empty">보유 종목이 없습니다.</td></tr>';
+  $("#holdings-body").innerHTML=holdings.length?holdings.map(h=>{const value=h.qty*h.lastPrice,itemPnl=(h.lastPrice-h.avgPrice)*h.qty;holdingValue+=value;pnl+=itemPnl;return `<tr><td>${stockName(h.symbol)}</td><td>${won.format(h.qty)}주</td><td>${money(h.avgPrice)}</td><td>${money(h.lastPrice)}</td><td class="${itemPnl>=0?'good':'bad'}">${money(itemPnl)}</td></tr>`}).join(""):'<tr><td colspan="5" class="empty">보유 종목이 없습니다.</td></tr>';
   $("#asset-total").textContent=money(paper.cash+holdingValue); $("#asset-cash").textContent=money(paper.cash); $("#asset-pnl").textContent=money(pnl); $("#asset-pnl").className=pnl>=0?"good":"bad";
-  $("#order-symbol").textContent=run?`${run.symbol} · ${money(run.lastPrice)}`:"검증 결과 없음"; $("#order-decision").textContent=run?.latestDecision.decision||"—"; $("#order-reason").textContent=run?.latestDecision.reason||"최근 판단 사유가 표시됩니다."; $("#order-evidence").textContent=`지표값 · ${indicatorText(run?.latestDecision.indicators)}`;
+  $("#order-asof").textContent=run?`${run.endDate} 검증 기준 가격 · 실제 체결이 아닌 모의 기록`:"검증한 날짜의 가격과 판단이 표시됩니다.";
+  $("#order-symbol").textContent=run?`${stockName(run.symbol)} · ${money(run.lastPrice)}`:"검증 결과 없음"; $("#order-decision").textContent=run?.latestDecision.decision||"—"; $("#order-reason").textContent=run?.latestDecision.reason||"최근 판단 사유가 표시됩니다."; $("#order-evidence").textContent=`지표값 · ${indicatorText(run?.latestDecision.indicators)}`;
 }
 
 async function refreshAssets() {
@@ -104,15 +112,16 @@ function actionLabel(action){return {BUY:"모의 매수",SELL:"모의 매도",SK
 function strategyAction(decision){return decision==="매수 신호"?"BUY":decision==="매도 신호"?"SELL":"SKIP";}
 
 function executePaperDecision() {
-  const state=loadState(),run=state.lastRun;if(!run)return toast("전략 검증을 먼저 실행하세요."); const action=selectedUserAction(),expected=strategyAction(run.latestDecision.decision),qty=Math.max(1,Math.floor(Number($("#order-qty").value))),price=run.lastPrice,feeRate=run.settings.feeRate,holding=state.paper.holdings[run.symbol],different=action!==expected,override=$("#override-reason").value.trim(); if(different&&!override)return toast("전략과 다르게 판단한 이유를 입력하세요.");
+  const state=loadState(),run=state.lastRun;if(!run)return toast("전략 검증을 먼저 실행하세요."); if(!state.activeStrategy||state.approved?.definition.id!==run.strategy.id||state.activeStrategy.symbol!==run.symbol)return toast("현재 투자 기준으로 검증하고 모의 운용을 등록하세요."); const action=selectedUserAction(),expected=strategyAction(run.latestDecision.decision),qty=Math.max(1,Math.floor(Number($("#order-qty").value))),price=run.lastPrice,feeRate=run.settings.feeRate,holding=state.paper.holdings[run.symbol],different=action!==expected,override=$("#override-reason").value.trim(); if(!Number.isFinite(qty)||!Number.isSafeInteger(qty)||qty<1)return toast("수량을 올바르게 입력하세요."); if(different&&!override)return toast("전략과 다르게 판단한 이유를 입력하세요.");
   if(action==="BUY"){const cost=qty*price*(1+feeRate);if(cost>state.paper.cash)return toast("모의 현금이 부족합니다.");const oldQty=holding?.qty||0,oldCost=holding?holding.avgPrice*oldQty:0;state.paper.cash-=cost;state.paper.holdings[run.symbol]={symbol:run.symbol,qty:oldQty+qty,avgPrice:(oldCost+qty*price)/(oldQty+qty),lastPrice:price};}
   if(action==="SELL"){if(!holding||holding.qty<qty)return toast("모의 보유 수량이 부족합니다.");state.paper.cash+=qty*price*(1-feeRate);holding.qty-=qty;holding.lastPrice=price;if(holding.qty===0)delete state.paper.holdings[run.symbol];}
   if(action!=="SKIP")state.paper.orders.push({date:new Date().toISOString(),symbol:run.symbol,action,qty,price,strategyId:run.strategy.id,different,reason:override||run.latestDecision.reason}); const id=`${run.strategy.id}:${run.symbol}:${run.latestDecision.date}`,log=state.logs.find(x=>x.id===id);if(log){log.userAction=actionLabel(action);log.userReason=override||"전략 판단 따름";log.adherent=!different;} saveState(state);renderAssets();renderEvidence();renderDashboard();toast(action==="SKIP"?"판단을 기록했습니다.":`${actionLabel(action)}를 반영했습니다.`);
 }
 
+const escapeHtml=value=>String(value??"—").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function renderEvidence() {
-  const state=loadState(),logs=state.logs.slice().reverse(),acted=logs.filter(x=>x.userAction),adherent=acted.filter(x=>x.adherent).length; $("#log-count").textContent=`${logs.length}건`; $("#adherence").textContent=acted.length?`${(adherent/acted.length*100).toFixed(1)}%`:"—"; $("#evidence-version").textContent=state.approved?.definition.id||"—";
-  $("#evidence-body").innerHTML=logs.length?logs.map(x=>`<tr><td>${x.date}</td><td>${x.symbol}</td><td>${x.strategyDecision}</td><td>${x.userAction||"검증만"}${x.userReason?`<br><small>${x.userReason}</small>`:""}</td><td>${indicatorText(x.indicators)}</td><td>${x.reason}</td><td>${x.strategyId}</td></tr>`).join(""):'<tr><td colspan="7" class="empty">기록이 없습니다.</td></tr>';
+  const state=loadState(),logs=state.logs.slice().reverse(),acted=logs.filter(x=>x.userAction&&typeof x.adherent==='boolean'),adherent=acted.filter(x=>x.adherent).length; $("#log-count").textContent=`${logs.length}건`; $("#adherence").textContent=acted.length?`${(adherent/acted.length*100).toFixed(1)}%`:"—"; $("#evidence-version").textContent=state.approved?.definition.id||"—";
+  $("#evidence-body").innerHTML=logs.length?logs.map(x=>`<tr><td>${escapeHtml(x.date)}</td><td>${escapeHtml(stockName(x.symbol))}</td><td>${escapeHtml(x.strategyDecision)}</td><td>${escapeHtml(x.userAction||"검증만")}${x.userReason?`<br><small>${escapeHtml(x.userReason)}</small>`:""}</td><td>${escapeHtml(indicatorText(x.indicators))}</td><td>${escapeHtml(x.reason)}</td><td>${escapeHtml(x.strategyId)}</td></tr>`).join(""):'<tr><td colspan="7" class="empty">기록이 없습니다.</td></tr>';
 }
 
 async function loadKisAccount() {
@@ -132,3 +141,34 @@ $$("[data-asset-tab]").forEach(b=>b.addEventListener("click",()=>{$$("[data-asse
 
 function resumeSession(user){activeUser=user;$("#login-view").hidden=true;$("#app").hidden=false;restoreApproved();renderDashboard();renderAssets();renderEvidence();}
 const session=sessionStorage.getItem("teamQuantSession");if(session)resumeSession(session);
+
+window.addEventListener('teamquant:model-evidence',event=>{
+  if(!activeUser)return;
+  const {signal,production,data}=event.detail,state=loadState();
+  const id=`${signal.modelId}:${signal.symbol}:${signal.date}`;
+  const entry={id,date:signal.date,symbol:signal.symbol,strategyDecision:signal.decision,userAction:'모델 예측 저장',adherent:null,
+    indicators:{predictedPct:signal.predictedReturn*100,thresholdPct:signal.threshold*100},
+    reason:`${signal.modelId} · 학습 정답 관측 ${production.lastTrainingLabel} · 데이터 ${data.hash.slice(0,12)} · 5일 예측 · 주문 실행 없음`,
+    strategyId:signal.modelId,modelEvidence:{signal,production,datasetHash:data.hash},createdAt:new Date().toISOString()};
+  if(!state.logs.some(x=>x.id===id))state.logs.push(entry);
+  saveState(state);renderEvidence();$('#ml-saved').textContent='판단 기록에 저장했습니다. 기존 승인 전략과 모의 잔고는 유지됩니다.';
+});
+
+window.addEventListener('teamquant:comparison-paper',event=>{
+  const s=loadState(),report=event.detail,stock=report.perStock[0],run=stock.base;
+  if(!s.approved||s.approved.definition.id!==report.strategyId)return toast('투자 기준이 바뀌었습니다. 다시 검증하세요.');
+  const last=run.decisions.at(-1);
+  s.lastRun={symbol:stock.symbol,startDate:report.start,endDate:report.end,lastPrice:last.close,summary:run.summary,validationReturn:null,latestDecision:last,equity:run.equity,strategy:run.strategy,settings:run.settings};
+  s.activeStrategy={...s.approved,registeredAt:new Date().toISOString(),symbol:stock.symbol};
+  const id=`${run.strategy.id}:${stock.symbol}:${last.date}`;
+  if(!s.logs.some(x=>x.id===id))s.logs.push({id,date:last.date,symbol:stock.symbol,strategyDecision:last.decision,userAction:null,indicators:last.indicators,reason:last.reason,strategyId:run.strategy.id,createdAt:new Date().toISOString()});
+  saveState(s);renderDashboard();renderAssets();renderEvidence();showPage('assets');toast(stockName(stock.symbol)+'에 기본 전략을 모의 등록했습니다. 주문은 아직 실행되지 않았습니다.');
+});
+
+$("#natural-rule").addEventListener("input",()=>{draft=null;});
+
+window.addEventListener('teamquant:review',event=>{
+  const r=event.detail,s=loadState();
+  s.logs.push({id:r.id,date:new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul'}).format(new Date(r.createdAt)),symbol:r.symbol,strategyDecision:'자산 원칙 점검',userAction:r.action,userReason:r.reason,adherent:null,indicators:{},reason:`${r.mode.toUpperCase()} · 비중 ${r.options.beforeWeightPct.toFixed(2)}% / 최대 ${r.principle.maxPositionPct}% · 선택지 검토, 주문 없음`,strategyId:r.principle.id,evidenceRefs:r.articleRefs,reviewSnapshot:r,createdAt:r.createdAt});
+  saveState(s);renderEvidence();
+});
