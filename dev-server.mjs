@@ -6,7 +6,7 @@ import http from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
-import { fetchMarketSeries } from "./lib/market.js";
+import { fetchMarketSeries, fetchHeldMarketSeries } from "./lib/market.js";
 import { fetchNews } from "./lib/news.js";
 import { fetchKisAccount } from "./lib/kis.js";
 import { getResearchStatus, startResearchRefresh } from "./lib/research-job.js";
@@ -18,7 +18,7 @@ for (const file of [".env", ".env.local"]) {
 const port = Number(process.env.PORT || 8766);
 const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8", ".zip":"application/zip" };
 
-const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:async(symbol,range)=>{const resolved=/^\d[\dA-Z]{5}$/.test(symbol)?(await searchStocks('',symbol)).symbol:symbol.replace(/\.(?!KS$|KQ$)/g,'-');return fetchMarketSeries(resolved,range);},readNews:fetchNews});
+const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:fetchHeldMarketSeries,readNews:fetchNews});
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host}`);
@@ -78,7 +78,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads/TeamQuant-PC\.zip|index\.html|styles\.css|overview\.css|overview-ui\.js|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|overview\.css|overview-ui\.js|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");

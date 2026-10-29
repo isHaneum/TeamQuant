@@ -25,7 +25,7 @@ $('#assets .asset-tabs').hidden=true;
 
 const finder=$('.verify-panel');
 const finderDetails=document.createElement('details');finderDetails.className='stock-finder';
-const finderSummary=document.createElement('summary');finderSummary.textContent='다른 종목 추가';finderDetails.append(finderSummary,finder);
+const finderSummary=document.createElement('summary');finderSummary.textContent='추가 도구 · 상세 기간 검증·뉴스';finderDetails.append(finderSummary,finder);
 $('#comparison-stocks').after(finderDetails);
 finder.classList.remove('verify-panel');finder.classList.add('finder-content');
 

@@ -29,7 +29,8 @@ const productName=symbol=>fundSeries.get(symbol)?.name||result?.products?.find(p
 const addProduct=(symbol,name)=>{let item=[...document.querySelectorAll('[data-compare-symbol]')].find(x=>x.dataset.compareSymbol===symbol);if(item){item.checked=true;return;}const label=document.createElement('label');item=document.createElement('input');item.type='checkbox';item.checked=true;item.dataset.compareSymbol=symbol;label.append(item,document.createTextNode(name));$('#comparison-stocks').append(label);};
 const extra=document.createElement('div');extra.className='product-picker';extra.innerHTML=`<label>상품 추가<input id="comparison-product" list="symbols" placeholder="주식·ETF 이름 또는 6자리 코드"></label><button id="comparison-add" class="secondary" type="button">투자 대상에 추가</button><p class="muted">지원 ETF: KODEX 200, TIGER 미국S&P500. ETF는 펀드 중 거래소 상장 상품입니다.</p><details><summary>일반 펀드 · 기준가 CSV로 연구용 검증</summary><p>실제 상품의 일별 기준가를 date,nav 두 열로 입력하십시오. 최근 1년 권장, 90행 이상 필요. 파일은 서버로 전송하지 않습니다. 매매 체결·환매 기간을 재현하지 않습니다.</p><label>펀드 이름<input id="fund-name" maxlength="60" value="기준가 펀드"></label><label>통화<select id="fund-currency"><option>KRW</option><option>USD</option></select></label><input type="file" id="fund-file" accept=".csv,text/csv" aria-label="펀드 기준가 CSV"><p id="fund-status" role="status"></p></details><label>기준 시장<select id="compare-benchmark"><option value="^KS11">코스피 · 원화 상품</option><option value="SPY">SPY · 달러 상품</option></select></label>`;
 $('#comparison-stocks').after(extra);
-$('#compare-benchmark').onchange=invalidateComparison;
+function currencyLabel(){const label=$('#compare-capital').closest('label');label.firstChild.textContent=$('#compare-benchmark').value==='SPY'?'모의 투자금 (USD)':'모의 투자금 (원)';}
+$('#compare-benchmark').onchange=()=>{currencyLabel();invalidateComparison();};
 $('#comparison-add').onclick=async()=>{try{const v=$('#comparison-product').value,symbol=await resolveStockInput(v);addProduct(symbol,stockName(symbol));invalidateComparison();$('#compare-status').textContent=stockName(symbol)+' 추가 완료';}catch(e){$('#compare-status').textContent=e.message;}};
 $('#fund-file').onchange=async e=>{try{const f=e.target.files[0];if(!f)return;if(f.size>2_000_000)throw new Error('2MB 이하 파일만 지원합니다.');const data=parseFundCsv(await f.text(),$('#fund-name').value,$('#fund-currency').value);data.symbol='FUND-'+crypto.randomUUID().slice(0,8);fundSeries.set(data.symbol,data);addProduct(data.symbol,data.name+' · 기준가');invalidateComparison();$('#fund-status').textContent=`${data.candles.length}행 확인 · ${data.candles[0].date} ~ ${data.candles.at(-1).date} · 연구용`; }catch(e){$('#fund-status').textContent=e.message;}e.target.value='';};
 const symbolInput=$('#symbol');
@@ -71,7 +72,7 @@ function chart(data){
 }
 function renderComparison(){
     $('#compare-capital').value=result.initialCapital;$('#compare-cost').value=result.costPct;
-    $('#compare-benchmark').value=result.benchmarkLabel==='SPY'?'SPY':'^KS11';
+    $('#compare-benchmark').value=result.benchmarkLabel==='SPY'?'SPY':'^KS11';currencyLabel();
     for(const p of result.products||[])addProduct(p.symbol,p.name);
     $('#comparison-paper-symbol').replaceChildren();for(const x of result.perStock){const option=document.createElement('option');option.value=x.symbol;option.textContent=productName(x.symbol);$('#comparison-paper-symbol').append(option);}
     const selected=new Set(result.perStock.map(x=>x.symbol));
