@@ -7,7 +7,7 @@ const state=()=>{try{return JSON.parse(localStorage.getItem('teamQuant:user:'+se
 const pct=v=>(v>0?'+':'')+v.toFixed(2)+'%';
 const navigate=name=>document.querySelector(`[data-view="${name}"]`).click();
 function guide(){
-  const s=state();
+  const s=state();if(!s.comparison&&$('#comparison-settings'))$('#comparison-settings').open=true;
   if(result && result.strategyId!==s.approved?.definition.id){result=null;$('#comparison-result').hidden=true;}
   if(!result && s.comparison?.perStock && s.comparison.strategyId===s.approved?.definition.id){result=s.comparison;renderComparison();}
   const next=!s.approved?'strategy':!s.comparison||!s.activeStrategy?'comparison':'assets';
