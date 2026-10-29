@@ -13,7 +13,6 @@ $('#toss').append(hub);
 let snap=null,epoch=0,prices=new Map(),signals=[],reports=[],paper=null;
 function approved(){try{return JSON.parse(localStorage.getItem('teamQuant:user:'+sessionStorage.getItem('teamQuantSession'))||'{}').approved;}catch{return null;}}
 function strategy(){const a=approved();if(!a)throw new Error('Strategy Lab에서 투자 기준을 확인하고 승인하세요.');return a;}
-function badge(p){let h=0;const colors=['#1764cc','#6648ad','#008780','#ad6529','#33744b'];for(const c of p.symbol)h=(h+c.charCodeAt(0))%colors.length;return `<span class="company-badge" style="background:${colors[h]}" aria-label="${esc(p.name)} 구분 배지">${esc(p.symbol.replace(/[^A-Z]/g,'').slice(0,2)||p.name.slice(0,1))}</span>`;}
 function graph(sets,labels){return performanceChart(sets,labels,{normalized:sets.length>1,unit:sets.length>1?'시작 자금 = 100':'종가 · 선택 상품의 거래 통화',title:sets.length>1?'같은 원칙의 운용 방식별 결과':'상품 가격 추이'});}
 async function market(symbol){
  if(prices.has(symbol))return prices.get(symbol);
@@ -23,11 +22,11 @@ async function market(symbol){
 window.addEventListener('teamquant:asset-snapshot',event=>{
  const hadSnapshot=!!snap;snap=event.detail;epoch++;prices.clear();signals=[];hub.hidden=false;
  $('#hub-symbol').innerHTML=snap.positions.map(p=>`<option value="${esc(p.symbol)}">${esc(p.name)}</option>`).join('');$('#hub-strategy').textContent=approved()?`${approved().definition.name} · ${approved().definition.entryRule}`:'승인한 전략이 아직 없습니다.';
- $('#hub-weights').innerHTML=holdingWeights(snap).filter(p=>p.weight!==null).sort((a,b)=>b.weight-a.weight).map(p=>`<div class="allocation-row"><span>${badge(p)} ${esc(p.name)}</span><b>${(p.weight*100).toFixed(1)}%</b><div><i style="width:${p.weight*100}%;background:#2165d3"></i></div></div>`).join('');
+ $('#hub-weights').innerHTML=holdingWeights(snap).filter(p=>p.weight!==null).sort((a,b)=>b.weight-a.weight).map(p=>`<div class="allocation-row"><span>${esc(p.name)}</span><b>${(p.weight*100).toFixed(1)}%</b><div><i style="width:${p.weight*100}%;background:#2165d3"></i></div></div>`).join('');
  if(!hadSnapshot){reports=[];$('#hub-signals').replaceChildren();$('#hub-report').replaceChildren();$('#hub-export').disabled=true;$('#hub-news-result').replaceChildren();}else{$('#hub-strategy').textContent+=' · 자산이 갱신되었습니다. 종목 점검은 다시 실행하세요.';if(reports.length)$('#hub-compare-state').textContent='아래 결과는 이전 조회 시점의 종목·평가액 기준입니다. 다시 비교하면 갱신됩니다.';}$('#hub-chart').replaceChildren();
  if(snap.positions.length)$('#hub-symbol').onchange();
  if(paper){for(const p of paper.positions){const quote=snap.positions.find(x=>x.symbol===p.symbol);if(quote){p.price=quote.price;p.value=p.price*p.quantity;p.pnl=p.value-p.quantity*p.avgCost;}}renderPaper();}
- setTimeout(()=>{if(!snap)return;const rows=$('#toss-result tbody')?.querySelectorAll('tr')||[];rows.forEach((row,i)=>{const p=snap.positions[i];if(!p)return;row.cells[0].insertAdjacentHTML('afterbegin',badge(p));row.cells[5]?.classList.add(p.pnl>=0?'rise':'fall');row.cells[6]?.classList.add(p.dailyPnl>=0?'rise':'fall');});},0);
+ setTimeout(()=>{if(!snap)return;const rows=$('#toss-result tbody')?.querySelectorAll('tr')||[];rows.forEach((row,i)=>{const p=snap.positions[i];if(!p)return;row.cells[5]?.classList.add(p.pnl>=0?'rise':'fall');row.cells[6]?.classList.add(p.dailyPnl>=0?'rise':'fall');});},0);
 });
 window.addEventListener('teamquant:asset-clear',()=>{snap=null;epoch++;prices.clear();signals=[];reports=[];paper=null;hub.hidden=true;for(const id of ['hub-chart','hub-weights','hub-signals','hub-report','hub-paper','hub-news-result'])$('#'+id).replaceChildren();$('#hub-trade').hidden=true;});
 document.querySelectorAll('[data-hub-tab]').forEach(b=>b.addEventListener('click',()=>{if(!b.closest('#asset-hub'))return;document.querySelectorAll('#asset-hub [data-hub-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('[data-asset-panel]').forEach(x=>x.hidden=x.dataset.assetPanel!==b.dataset.hubTab);}));
