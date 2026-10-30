@@ -1,5 +1,7 @@
+import {createHistoryStore} from './lib/history-store.js';
+import {createHistoryRecorder} from './lib/history-recorder.js';
 import {createLocalBridge} from './lib/local-bridge.js';
-import {allowLocalToss,fetchTossHoldings} from './lib/toss.js';
+import {allowLocalToss,createTossReader} from './lib/toss.js';
 import {privateAccountStatus,readPrivateAccount} from './lib/private-account.js';
 import {searchStocks} from "./lib/stocks.js";
 import http from "node:http";
@@ -18,6 +20,8 @@ for (const file of [".env", ".env.local"]) {
 const port = Number(process.env.PORT || 8766);
 const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8", ".zip":"application/zip" };
 
+const historyRecorder=createHistoryRecorder({store:createHistoryStore({publicRoots:[root]})});
+const fetchTossHoldings=createTossReader({onSnapshot:historyRecorder.snapshot,onFailure:historyRecorder.failure});
 const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:fetchHeldMarketSeries,readNews:fetchNews});
 http.createServer(async (request, response) => {
   try {

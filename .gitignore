@@ -7,3 +7,8 @@ node_modules
 __pycache__/
 *.pyc
 .private/
+
+# Private performance history must stay outside the application checkout.
+portfolio-history/
+*.history.json
+.identity-salt
