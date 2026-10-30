@@ -25,4 +25,9 @@
 개인 키를 GitHub, Vercel, Notion에 올리지 않습니다. 이 패키지를 다시 공유할 때 `.env.local`, 키 파일, 내보낸 자산 JSON을 제외하십시오.
 
 ## 자산 이력 저장(Task A)
-기본 위치: Windows `%LOCALAPPDATA%/TeamQuant/portfolio-history`, Linux `$XDG_DATA_HOME/TeamQuant/portfolio-history` 또는 `~/.local/share/TeamQuant/portfolio-history`. `.env.local`의 `TEAMQUANT_HISTORY_DIR`로 변경할 수 있으나 프로젝트 내부 경로는 허용하지 않습니다. 일반 JSON 파일이며 암호화 저장은 아닙니다. 보유 주식·수량·가격·환율·조회 시각을 기록하며, 계좌 식별은 로컬 HMAC을 사용합니다. API 키와 계좌번호 원문은 기록하지 않습니다. 현금·입출금·실현손익·TWR·XIRR·월별 수익률은 미구현입니다. 로컬 이력 조회 UI와 삭제 UI는 후속 작업입니다.
+기본 위치: Windows `%LOCALAPPDATA%/TeamQuant/portfolio-history`, Linux `$XDG_DATA_HOME/TeamQuant/portfolio-history` 또는 `~/.local/share/TeamQuant/portfolio-history`. `.env.local`의 `TEAMQUANT_HISTORY_DIR`로 변경할 수 있으나 프로젝트 내부 경로는 허용하지 않습니다. 일반 JSON 파일이며 암호화 저장은 아닙니다. 보유 주식·수량·가격·환율·조회 시각을 기록하며, 계좌 식별은 로컬 HMAC을 사용합니다. API 키와 계좌번호 원문은 기록하지 않습니다. 토스 조회만으로 현금·입출금·계좌 수익률을 계산하지 않습니다. 전체 평가·입출금 CSV 분석과 관측 이력 조회는 나의 투자 성과에서 제공합니다.
+
+## 나의 투자 성과
+최신 PC 서버 실행 → Vercel의 ‘나의 투자 성과’에서 연결코드 입력 → 평가자산/외부 입출금/선택 거래 CSV를 공통 양식에 맞춰 가져오기 → 자료 확인 및 PC 저장 순서입니다. CSV 분석 자체는 토스 API 키가 필요하지 않습니다. 헤더 양식과 DEMO는 화면에서 제공합니다. 평가자산은 현금 포함 전체 자산이어야 하며, 입출금 전후 평가가 빠지면 TWR은 계산하지 않습니다. 계좌 데이터 자동복원 기능이 아닙니다.
+
+성과 자료는 PC의 portfolio-history/performance에 평문 저장합니다. ‘보관함’은 파일을 보존하며 복원할 수 있습니다. 데이터와 계산 근거의 JSON 내보내기는 본인 PC에만 저장합니다. 브라우저 프로필은 서버 회원 인증이 아닙니다. 상세 계산 조건은 docs/PERFORMANCE_TRACKING_SPEC.md를 참조하십시오.

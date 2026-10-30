@@ -10,6 +10,7 @@ import "/account-ui.js";
 import "/toss-ui.js";
 import "/asset-hub-ui.js";
 import "/help-ui.js";
+import "/performance-ui.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];

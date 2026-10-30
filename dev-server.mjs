@@ -1,3 +1,4 @@
+import {createPerformanceStore} from './lib/performance-store.js';
 import {createHistoryStore} from './lib/history-store.js';
 import {createHistoryRecorder} from './lib/history-recorder.js';
 import {createLocalBridge} from './lib/local-bridge.js';
@@ -20,15 +21,17 @@ for (const file of [".env", ".env.local"]) {
 const port = Number(process.env.PORT || 8766);
 const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8", ".zip":"application/zip" };
 
-const historyRecorder=createHistoryRecorder({store:createHistoryStore({publicRoots:[root]})});
+const historyStore=createHistoryStore({publicRoots:[root]});
+const historyRecorder=createHistoryRecorder({store:historyStore});
+const performanceStore=createPerformanceStore({publicRoots:[root]});
 const fetchTossHoldings=createTossReader({onSnapshot:historyRecorder.snapshot,onFailure:historyRecorder.failure});
-const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:fetchHeldMarketSeries,readNews:fetchNews});
+const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:fetchHeldMarketSeries,readNews:fetchNews,performance:performanceStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host}`);
     if(url.pathname.startsWith('/api/bridge/')){
       let size=0,raw='',body={};
-      for await(const chunk of request){size+=chunk.length;if(size>4096){response.writeHead(413);return response.end();}raw+=chunk;}
+      for await(const chunk of request){size+=chunk.length;if(size>(url.pathname==='/api/bridge/performance-import'?4_000_000:4096)){response.writeHead(413);return response.end();}raw+=chunk;}
       try{if(raw)body=JSON.parse(raw);}catch{response.writeHead(400);return response.end();}
       const result=await bridge.handle(request,url.pathname.split('/').at(-1),body);
       response.writeHead(result.status,result.headers);return response.end(result.body?JSON.stringify(result.body):'');
@@ -82,7 +85,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");
