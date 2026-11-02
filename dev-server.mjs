@@ -1,3 +1,4 @@
+import {localStatus} from './lib/local-status.js';
 import {createPerformanceStore} from './lib/performance-store.js';
 import {createHistoryStore} from './lib/history-store.js';
 import {createHistoryRecorder} from './lib/history-recorder.js';
@@ -25,7 +26,7 @@ const historyStore=createHistoryStore({publicRoots:[root]});
 const historyRecorder=createHistoryRecorder({store:historyStore});
 const performanceStore=createPerformanceStore({publicRoots:[root]});
 const fetchTossHoldings=createTossReader({onSnapshot:historyRecorder.snapshot,onFailure:historyRecorder.failure});
-const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:fetchHeldMarketSeries,readNews:fetchNews,performance:performanceStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
+const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host}`);

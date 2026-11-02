@@ -9,6 +9,7 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 | My Performance UI / benchmark | `performance-ui.js`, `performance-view-ui.js`, `lib/performance-benchmark.js` |
 | Local history / Task A | `lib/history-model.js`, `lib/history-store.js`, `lib/history-recorder.js`, `test/history.test.js` |
 | Broker read + observation hook | `lib/toss.js` (`createTossReader`), `dev-server.mjs` (recorder wiring) |
+| Windows quick launch / key availability | `launch-personal-server.mjs`, `lib/local-launcher.js`, `lib/local-status.js`, `test/local-launcher.test.js` |
 | PC authorization | `lib/local-bridge.js`, `bridge-client.js`, `test/local-bridge.test.js` |
 | Real holdings display | `toss-ui.js`; copied paper workspace / owned-basket tests: `asset-hub-ui.js`, `lib/asset-workspace.js` |
 | Strategy input | `lib/natural-language.js`, `lib/backtest.js`; approval wiring in `app.js` |

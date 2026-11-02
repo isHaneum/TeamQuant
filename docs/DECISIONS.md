@@ -28,3 +28,10 @@ A prototype calculation should fail visibly with missing data or ambiguous XIRR 
 
 ### Follow-up validation
 All 75 regression tests pass, including 17 performance tests. Checked hand-calculated flow-linked TWR, Excel's published XIRR example, zero-equity/full-withdrawal intervals, timezone grouping, missing coverage, trade costs, benchmark freshness, restart persistence, cloud guards and recoverable archive/restore. Browser QA used only synthetic CSVs: import, insufficient-coverage state, preview, local save/reload, archive/restore and public index comparison. The DEMO's 13.4375% TWR and 130,000 KRW P/L are example arithmetic, never the user's returns. Public market requests contain only the benchmark symbol/range; account CSVs are processed in browser memory and optionally saved to the paired PC. Archive files and active files remain plaintext on that PC. No production multi-user authentication or independent strategy replay is claimed.
+
+
+## 2026-11-02 — Existing-key connection friction
+
+The user already has a working local Toss key. Do not ask for it again or confuse a browser profile with broker authentication. Add a Windows launcher that reuses the recognized loopback service or starts it hidden, then opens the local account view after the existing profile flow. Never terminate an unknown listener or change OS startup/security policy. Key status reports file availability only, not OAuth validity or contents. The same bridge Origin/Host/POST/capability gates remain. Local account-view entry triggers a read and reuses same-profile results for one minute; manual/5-minute refresh remains. Clear, logout and profile-change invalidation must prevent stale data reuse. Remote pairing duration and one-use code are unchanged. Private evaluation/portfolio review documents must not enter deployment archives.
+
+Validation: 80 regression tests pass (5 new status/launcher tests). Synthetic browser QA confirms first-entry automatic query, same-profile one-minute reuse (one read across repeat navigation), and clear removes the displayed holdings. No private key values are read for setup checks, copied into public files or sent to Vercel.

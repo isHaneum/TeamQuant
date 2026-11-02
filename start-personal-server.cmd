@@ -1,4 +1,4 @@
 @echo off
 cd /d "%~dp0"
-node dev-server.mjs
-pause
+node launch-personal-server.mjs
+if errorlevel 1 pause
