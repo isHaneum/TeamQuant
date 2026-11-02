@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {holdingsOverview} from '../lib/holdings-overview.js';
+const fixture=()=>({fx:{midRate:1400},fetchedAt:'2026-11-02T00:00Z',positions:[{symbol:'SYNTH',currency:'USD',price:10,avgCost:8,quantity:2,value:20,pnl:4,dailyPnl:null},{symbol:'TEST',currency:'KRW',price:1000,avgCost:800,quantity:1,value:1000,pnl:200,dailyPnl:100}]});
+test('home holdings convert currencies without manufacturing account cash or returns',()=>{const f=fixture(),r=holdingsOverview(f);assert.equal(r.total,29000);assert.equal(r.pnl,5800);assert.equal(r.cash,null);assert.equal(r.cashPct,null);assert.equal(r.returnPct,null);assert.equal(r.dailyPnl,null);assert.equal(f.positions[0].price,10);});
+test('missing FX leaves aggregate and USD valuation unknown',()=>{const f=fixture();f.fx=null;const r=holdingsOverview(f);assert.equal(r.total,null);assert.equal(r.positions[0].price,null);assert.equal(r.positions[1].value,1000);assert.equal(r.positions[1].weightPct,null);});

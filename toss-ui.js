@@ -39,7 +39,7 @@ window.addEventListener('teamquant:asset-clear',()=>{
 });
 let wasActive=false,visit=0;
 window.addEventListener('teamquant:page',()=>{
- const active=document.querySelector('.view.active')?.dataset.page==='toss';
+ const page=document.querySelector('.view.active')?.dataset.page,active=page==='toss'||page==='home';
  const thisVisit=++visit;
  if(active&&!wasActive&&onPc&&!$('#app').hidden&&sessionStorage.getItem('teamQuantSession')){
   const owner=sessionStorage.getItem('teamQuantSession');

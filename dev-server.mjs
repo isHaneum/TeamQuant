@@ -88,7 +88,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");

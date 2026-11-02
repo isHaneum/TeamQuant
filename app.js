@@ -13,6 +13,7 @@ import "/help-ui.js";
 import "/performance-ui.js";
 import "/orders-ui.js";
 import "/planner-ui.js";
+import "/workspace-ui.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -137,7 +138,7 @@ async function loadKisAccount() {
 
 function exportLogs(){const logs=loadState().logs;if(!logs.length)return toast("저장할 기록이 없습니다.");const rows=[["date","symbol","strategyDecision","userAction","indicators","reason","strategyId"],...logs.map(x=>[x.date,x.symbol,x.strategyDecision,x.userAction||"",JSON.stringify(x.indicators),x.reason,x.strategyId])];const csv="\ufeff"+rows.map(row=>row.map(v=>`"${String(v).replaceAll('"','""')}"`).join(",")).join("\n"),blob=new Blob([csv],{type:"text/csv;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`team-quant-${activeUser}-decisions.csv`;a.click();URL.revokeObjectURL(a.href);}
 
-async function login(id,pin){const user=id.trim().toLowerCase();if(!/^[a-z0-9가-힣_-]{2,24}$/i.test(user))return toast("사용자 ID는 2~24자로 입력하세요.");const users=JSON.parse(localStorage.getItem("teamQuantUsers")||"{}"),digest=await hash(`${user}:${pin}`);if(users[user]&&users[user]!==digest)return toast("PIN이 일치하지 않습니다.");if(!users[user]){users[user]=digest;localStorage.setItem("teamQuantUsers",JSON.stringify(users));}activeUser=user;sessionStorage.setItem("teamQuantSession",user);$("#login-view").hidden=true;$("#app").hidden=false;restoreApproved();renderDashboard();renderAssets();renderEvidence();}
+async function login(id,pin){const user=id.trim().toLowerCase();if(!/^[a-z0-9가-힣_-]{2,24}$/i.test(user))return toast("사용자 ID는 2~24자로 입력하세요.");const users=JSON.parse(localStorage.getItem("teamQuantUsers")||"{}"),digest=await hash(`${user}:${pin}`);if(users[user]&&users[user]!==digest)return toast("PIN이 일치하지 않습니다.");if(!users[user]){users[user]=digest;localStorage.setItem("teamQuantUsers",JSON.stringify(users));}activeUser=user;sessionStorage.setItem("teamQuantSession",user);$("#login-view").hidden=true;$("#app").hidden=false;restoreApproved();renderDashboard();renderAssets();renderEvidence();showPage("home");}
 
 $("#login-form").addEventListener("submit",async e=>{e.preventDefault();await login($("#login-id").value,$("#login-pin").value);});
 $("#demo-login").addEventListener("click",()=>login("demo","0000")); $("#logout").addEventListener("click",()=>{sessionStorage.removeItem("teamQuantSession");location.reload();});
@@ -145,7 +146,7 @@ $$(".nav-button").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.v
 $$("[data-example]").forEach(b=>b.addEventListener("click",()=>{$("#natural-rule").value=examples[b.dataset.example];parseRule();})); $("#parse-rule").addEventListener("click",parseRule); $("#approve-check").addEventListener("change",()=>$("#approve-strategy").disabled=!draft||!$("#approve-check").checked); $("#approve-strategy").addEventListener("click",approveStrategy); $("#run-backtest").addEventListener("click",runApprovedBacktest); $("#register-paper").addEventListener("click",registerPaper);
 $$("[data-asset-tab]").forEach(b=>b.addEventListener("click",()=>{$$("[data-asset-tab]").forEach(x=>x.classList.toggle("active",x===b));$$(".asset-page").forEach(x=>x.classList.toggle("active",x.id===`${b.dataset.assetTab}-assets`));})); $("#refresh-assets").addEventListener("click",refreshAssets); $("#user-action").addEventListener("change",()=>{$("#override-wrap").hidden=$("#user-action").value==="FOLLOW";}); $("#paper-order").addEventListener("click",executePaperDecision); $("#load-kis").addEventListener("click",loadKisAccount); $("#export-log").addEventListener("click",exportLogs);
 
-function resumeSession(user){activeUser=user;$("#login-view").hidden=true;$("#app").hidden=false;restoreApproved();renderDashboard();renderAssets();renderEvidence();}
+function resumeSession(user){activeUser=user;$("#login-view").hidden=true;$("#app").hidden=false;restoreApproved();renderDashboard();renderAssets();renderEvidence();showPage("home");}
 const session=sessionStorage.getItem("teamQuantSession");if(session)resumeSession(session);
 
 window.addEventListener('teamquant:model-evidence',event=>{
