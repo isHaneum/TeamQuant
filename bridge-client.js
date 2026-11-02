@@ -1,8 +1,8 @@
 const local=location.hostname==='127.0.0.1';
 let capability=null;
-export async function privateRead(path,body={}){
+export async function privateRead(path,body={},options={}){
  if(!local&&!capability&&path!=='pair')throw new Error('PC 화면에서 연결코드를 발급한 뒤 이 화면에 입력하세요.');
- let response;try{response=await fetch((local?'':'http://127.0.0.1:8766')+'/api/bridge/'+path,{method:'POST',headers:{'Content-Type':'application/json',...(local?{'X-TeamQuant-Action':'bridge-local'}:{}),...(capability?{Authorization:'Bearer '+capability.token}:{})},body:JSON.stringify(body),cache:'no-store'});}catch{throw new Error('PC의 로컬 서버 실행 여부와 브라우저의 로컬 네트워크 접근 권한을 확인하세요.');}
+ let response;try{response=await fetch((local?'':'http://127.0.0.1:8766')+'/api/bridge/'+path,{method:'POST',headers:{'Content-Type':'application/json',...(local?{'X-TeamQuant-Action':'bridge-local'}:{}),...(capability?{Authorization:'Bearer '+capability.token}:{})},body:JSON.stringify(body),cache:'no-store',...(options.signal?{signal:options.signal}:{})});}catch(error){if(error.name==='AbortError')throw error;throw new Error('PC의 로컬 서버 실행 여부와 브라우저의 로컬 네트워크 접근 권한을 확인하세요.');}
  const data=await response.json();if(!response.ok){if(response.status===401&&!local)capability=null;throw new Error(data.error||'PC 연결 실패');}return data;
 }
 export async function pairPrivatePc(code){capability=await privateRead('pair',{code});return {expiresAt:capability.expiresAt};}

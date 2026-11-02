@@ -1,7 +1,7 @@
 # TeamQuant development
 
 - Read `docs/PROJECT_MAP.md` first, then only the spec and code needed for the task. Use `rg -n` and bounded reads. Do not routinely load the full app, generated bundles, historical worklogs or data files.
-- Keep edits within the requested stage. The current follow-up simplifies PC startup and existing-key account viewing. Preserve profile/PIN and remote pairing policy; do not upload keys or private review documents. CSV analytics remain governed by `docs/PERFORMANCE_TRACKING_SPEC.md`. No broad refactor of `app.js`/`overview-ui.js`.
+- Keep edits within the requested stage. The current follow-up adds read-only broker order/fill history. Never expose order mutation endpoints or claim complete cash-flow/performance coverage. Preserve profile/PIN and remote pairing policy; do not upload keys or private review documents. CSV analytics remain governed by `docs/PERFORMANCE_TRACKING_SPEC.md`. No broad refactor of `app.js`/`overview-ui.js`.
 - Real account observations, counterfactual backtests and future scenarios are different datasets. Never manufacture account returns from today's holdings or infer cash as zero. TWR/XIRR require the relevant historical valuations and external cash flows.
 - Financial data stays on the user's PC. Do not read or print credential files, account numbers, personal snapshots or exported private JSON while investigating code. Use synthetic fixtures for tests.
 - Never commit/deploy `.env.local`, `.key` files, `.identity-salt` or history records. Keep persistence outside the checkout and outside Vercel. Packages must use an explicit source allowlist.

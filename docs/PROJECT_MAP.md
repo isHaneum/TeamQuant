@@ -8,6 +8,7 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 | Private dataset persistence | `lib/performance-store.js`; API dispatch in `lib/local-bridge.js` |
 | My Performance UI / benchmark | `performance-ui.js`, `performance-view-ui.js`, `lib/performance-benchmark.js` |
 | Local history / Task A | `lib/history-model.js`, `lib/history-store.js`, `lib/history-recorder.js`, `test/history.test.js` |
+| Actual order / aggregate execution history | `orders-ui.js`, `lib/toss-orders.js`; reader in `lib/toss.js`, bridge in `lib/local-bridge.js`; `test/toss-orders.test.js` |
 | Broker read + observation hook | `lib/toss.js` (`createTossReader`), `dev-server.mjs` (recorder wiring) |
 | Windows quick launch / key availability | `launch-personal-server.mjs`, `lib/local-launcher.js`, `lib/local-status.js`, `test/local-launcher.test.js` |
 | PC authorization | `lib/local-bridge.js`, `bridge-client.js`, `test/local-bridge.test.js` |
@@ -23,5 +24,5 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 - `api/*.js` runs on Vercel. `dev-server.mjs` runs only on loopback; history and imported datasets are wired here only.
 - Do not open `.env.local`, key files, history records, personal exports or large `data/` catalogs to locate code.
 - Local source retains ML research; the deployed source omits its UI. Preserve that distinction when packaging.
-- Tests: `node --test test/history.test.js test/toss.test.js test/local-bridge.test.js`; performance: `node --test test/performance.test.js`; regression: `npm test`.
+- Tests: `node --test test/history.test.js test/toss.test.js test/local-bridge.test.js`; performance: `node --test test/performance.test.js`; orders: `node --test test/toss-orders.test.js`; regression: `npm test`.
 - `downloads/TeamQuant-PC.zip` is a generated source-only artifact, not a source of truth. Rebuild it from an explicit source allowlist when PC-server code changes; never include runtime history or credentials.
