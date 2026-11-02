@@ -78,3 +78,8 @@ BAZE execution finished local work; parent review corrected native USD amounts d
 - Optional profile retention saves only profile name and expiry. It is not financial authentication. Logout revokes the short session; explicit connection removal revokes remembered trust.
 - Same-origin script/XSS and compromised device remain risks. This is a single-owner PC bridge, not multi-user account isolation, MFA or cloud authentication. Browser storage deletion requires pairing again. PC must remain running.
 - No brokerage keys or financial snapshots are persisted in the browser by this feature. No cross-site cookie dependence, cloud custody or trading permission added.
+
+## 2026-11-02 Account-first connected workspace
+- Asset home now waits for an actual account snapshot; no demo, default paper cash or silent fallback. Successful empty holdings are distinct from failure. Real cash/account returns remain unknown when not provided.
+- Reused private owned-basket comparison and paper panels in Strategy Lab, preserving their IDs, live snapshot and approved strategy. Legacy independent research/paper controls remain collapsed. No real positions are written to browser storage by this integration.
+- Strategy version changes clear prior checks/comparisons; paper copies remain distinct and require an explicit copy operation. Profile retention can be enabled in Settings for the current browser profile.

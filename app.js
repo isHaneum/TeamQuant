@@ -15,6 +15,7 @@ import "/performance-ui.js";
 import "/orders-ui.js";
 import "/planner-ui.js";
 import "/workspace-ui.js";
+import "/connected-workspace-ui.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];

@@ -54,6 +54,10 @@ window.addEventListener('teamquant:asset-clear',()=>{historyEpoch++;observations
 // Put strategy education in the Lab; asset home leads with account context.
 const researchIntro=$('#home .verification-entry');if(researchIntro)$('#strategy .page-head').after(researchIntro);
 $('#home h1').textContent='내 자산';
-const homeRead=document.createElement('button');homeRead.className='primary';homeRead.textContent='실제 보유 주식 조회';homeRead.id='home-read-holdings';$('#overview .page-head .ov-actions').prepend(homeRead);homeRead.onclick=()=>$('#toss-refresh').click();
-const readState=document.createElement('p');readState.className='muted';readState.setAttribute('role','status');readState.textContent='체험 프로필과 증권사 연결은 별도입니다. 연결 설정은 우측 설정에서 관리합니다.';$('#overview .page-head').after(readState);
+const homeRead=document.createElement('button');homeRead.className='primary';homeRead.textContent='계좌 새로고침';homeRead.id='home-read-holdings';$('#overview .page-head .ov-actions').prepend(homeRead);homeRead.onclick=()=>$('#toss-refresh').click();
+const readState=document.createElement('p');readState.className='muted';readState.setAttribute('role','status');readState.textContent='등록된 PC 연결을 확인하고 있습니다.';$('#overview .page-head').after(readState);
 new MutationObserver(()=>{readState.textContent=$('#toss-status').textContent;homeRead.disabled=$('#toss-refresh').disabled;}).observe($('#toss-status'),{childList:true,subtree:true,characterData:true});
+
+window.addEventListener('teamquant:asset-snapshot',()=>{if(planOwner!==sessionStorage.getItem('teamQuantSession'))void summarizePlan();});
+
+const rememberCurrent=document.createElement('button');rememberCurrent.className='secondary';rememberCurrent.textContent='이 PC에서 현재 프로필 유지 (30일)';$('#workspace-profile').append(rememberCurrent);rememberCurrent.onclick=()=>{const user=sessionStorage.getItem('teamQuantSession');if(!user)return;localStorage.setItem('teamQuantRememberProfile',JSON.stringify({user,expiresAt:Date.now()+30*86400000}));rememberCurrent.textContent='현재 프로필 유지 설정 완료 · 30일';};

@@ -1,3 +1,4 @@
+import {accountView} from '/lib/account-view.js';
 import {holdingsOverview} from '/lib/holdings-overview.js';
 import {privateRead} from '/bridge-client.js';
 import {performanceChart,wireCharts} from '/lib/performance-view.js';
@@ -8,14 +9,14 @@ const $=s=>document.querySelector(s),money=v=>v===null?'—':Math.round(v).toLoc
 const pct=v=>v===null?'—':(v>0?'+':'')+v.toFixed(2)+'%',esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key=()=>sessionStorage.getItem('teamQuantSession')?'teamQuant:user:'+sessionStorage.getItem('teamQuantSession'):null;
 const state=()=>{try{return JSON.parse(localStorage.getItem(key())||'{}');}catch{return {};}};
-let liveAccount=null;
-const get=()=>{const o={schemaVersion:1,mode:'paper',quotes:{},newsCache:{},principleVersions:[],reviews:[],simulationRuns:[],...state().overview};if(['account','broker_holdings'].includes(o.mode)&&(!liveAccount||liveAccount.owner!==key()))o.mode='paper';if(o.mode==='broker_holdings')o.newsCache=liveAccount.newsCache||{};return o;};
+let liveAccount=null,connectionState='idle';
+const get=()=>{const o={schemaVersion:1,mode:'paper',quotes:{},newsCache:{},principleVersions:[],reviews:[],simulationRuns:[],...state().overview};o.mode=accountView(key(),liveAccount,connectionState).mode;if(o.mode==='broker_holdings')o.newsCache=liveAccount.newsCache||{};return o;};
 function save(change){const k=key();if(!k)return;const s=state();const o=get();if(o.mode==='broker_holdings'&&change.newsCache)liveAccount.newsCache=change.newsCache;s.overview={...o,...change};if(o.mode==='broker_holdings')s.overview.newsCache=state().overview?.newsCache||{};localStorage.setItem(k,JSON.stringify(s));}
 const navigate=page=>$(`[data-view="${page}"]`)?.click();
 const DEMO={cash:2800000,positions:[{symbol:'005930.KS',name:'삼성전자',quantity:50,avgCost:70000},{symbol:'000660.KS',name:'SK하이닉스',quantity:10,avgCost:180000},{symbol:'035420.KS',name:'NAVER',quantity:10,avgCost:200000}]};
 const demoQuotes={'005930.KS':{price:72000,prevClose:73000},'000660.KS':{price:190000,prevClose:184000},'035420.KS':{price:210000,prevClose:212000}};
-function portfolio(){const s=state(),o=get();if(['account','broker_holdings'].includes(o.mode))return liveAccount.portfolio;if(o.mode==='demo')return DEMO;if(o.mode==='manual')return o.manualPortfolio||{cash:0,positions:[]};return {cash:s.paper?.cash??10000000,positions:Object.values(s.paper?.holdings||{}).map(h=>({symbol:h.symbol,name:stockName(h.symbol),quantity:h.qty,avgCost:h.avgPrice}))};}
-function metrics(){if(get().mode==='broker_holdings')return holdingsOverview(liveAccount.snapshot);const o=get(),p=portfolio(),q=['account','broker_holdings'].includes(o.mode)?liveAccount.quotes:o.mode==='demo'?Object.fromEntries(Object.entries(demoQuotes).map(([s,x])=>[s,{...x,asOf:'합성 DEMO',source:'예시 가격'}])):{...o.quotes};if(o.mode==='paper')for(const h of Object.values(state().paper?.holdings||{}))if(!q[h.symbol])q[h.symbol]={price:h.lastPrice,prevClose:null,asOf:'모의 거래·검증 시점 가격',source:'기존 모의 잔고'};return portfolioMetrics(p,q);}
+function portfolio(){const s=state(),o=get();if(o.mode==='pending')return {cash:0,positions:[]};if(['account','broker_holdings'].includes(o.mode))return liveAccount.portfolio;if(o.mode==='demo')return DEMO;if(o.mode==='manual')return o.manualPortfolio||{cash:0,positions:[]};return {cash:s.paper?.cash??10000000,positions:Object.values(s.paper?.holdings||{}).map(h=>({symbol:h.symbol,name:stockName(h.symbol),quantity:h.qty,avgCost:h.avgPrice}))};}
+function metrics(){if(get().mode==='pending')return {total:null,cash:null,cashPct:null,pnl:null,returnPct:null,dailyPnl:null,positions:[],complete:false};if(get().mode==='broker_holdings')return holdingsOverview(liveAccount.snapshot);const o=get(),p=portfolio(),q=['account','broker_holdings'].includes(o.mode)?liveAccount.quotes:o.mode==='demo'?Object.fromEntries(Object.entries(demoQuotes).map(([s,x])=>[s,{...x,asOf:'합성 DEMO',source:'예시 가격'}])):{...o.quotes};if(o.mode==='paper')for(const h of Object.values(state().paper?.holdings||{}))if(!q[h.symbol])q[h.symbol]={price:h.lastPrice,prevClose:null,asOf:'모의 거래·검증 시점 가격',source:'기존 모의 잔고'};return portfolioMetrics(p,q);}
 
 // Keep the original home DOM as an integration adapter for the existing modules.
 for(const node of [...$('#home').children])node.classList.add('legacy-home');
@@ -50,14 +51,21 @@ const audit=document.createElement('button');audit.className='secondary';audit.t
 const detail=document.createElement('dialog');detail.id='ov-detail';detail.innerHTML='<div class="panel-head"><h2 id="ov-detail-title"></h2><button id="ov-detail-close" class="text-button">닫기</button></div><div id="ov-detail-body"></div>';document.body.append(detail);$('#ov-detail-close').onclick=()=>detail.close();
 let currentMetrics,selectedSymbol=null,newsBusy=false,newsEpoch=0,simResult=null;
 function render(){
-  if(!key())return;const o=get(),p=portfolio();currentMetrics=metrics();const m=currentMetrics,r=evaluatePrinciples(o.mode==='broker_holdings'?{...m,positions:m.positions.map(p=>({...p,weightPct:null})),cashPct:null}:m,o.principles);
+  if(!key())return;const o=get(),p=portfolio();
+  const connected=o.mode!=='pending';root.classList.toggle('account-pending',!connected);
+  $('#ov-mode').hidden=true;$('#ov-manage').hidden=true;$('#ov-editor').hidden=true;
+  $('#ov-demo').hidden=true;$('#ov-input').hidden=true;
+  if(!connected){currentMetrics=null;$('#ov-source').textContent='토스증권 계좌 · 연결 상태 확인';$('#ov-empty').hidden=false;$('#ov-empty h2').textContent=connectionState==='loading'?'보유 주식 확인 중':'계좌 연결 확인';$('#ov-empty p').textContent=connectionState==='loading'?'PC에 등록한 토스 키로 보유 주식을 조회하고 있습니다.':'실제 계좌를 조회하면 보유 종목과 평가액이 표시됩니다. 조회 전에는 모의 금액을 표시하지 않습니다.';$('#ov-lab').textContent='연결 설정';$('#ov-lab').onclick=()=>navigate('settings');$('#ov-kpis').replaceChildren();$('#ov-holdings').replaceChildren();$('#ov-briefing').replaceChildren();return;}
+  $('#ov-lab').textContent='Strategy Lab 열기';$('#ov-lab').onclick=()=>navigate('strategy');
+currentMetrics=metrics();const m=currentMetrics,r=evaluatePrinciples(o.mode==='broker_holdings'?{...m,positions:m.positions.map(p=>({...p,weightPct:null})),cashPct:null}:m,o.principles);
   $('#ov-mode').value=o.mode;
   const holdingsOnly=o.mode==='broker_holdings';
   $('#ov-source').textContent=['account','broker_holdings'].includes(o.mode)?`${liveAccount.label} · 금융사 조회 ${liveAccount.fetchedAt} · 현재 화면에만 보관 · 주문 없음${holdingsOnly?' · 현금·총자산·계좌 수익률 미확인':''}`:o.mode==='demo'?'DEMO · 합성 보유 수량·매입가·가격. 실제 계좌나 투자 성과가 아닙니다.':o.mode==='manual'?'직접 입력한 수량·매입가 + 조회 시세 · 계좌 미연결':'브라우저에 저장한 모의 잔고 · 실제 계좌와 별도';
-  $('#ov-empty').hidden=p.positions.length>0;$('#ov-empty p').textContent=o.mode==='paper'?`현재 모의 현금은 ${money(m.cash)}입니다. 실제 보유 주식을 조회하거나 DEMO로 기능을 확인할 수 있습니다.`:'보유 수량·평균 매입가·현금을 입력하면 조회 시세와 함께 손익을 계산합니다.';
+  $('#ov-empty').hidden=p.positions.length>0;$('#ov-empty h2').textContent='조회된 보유 주식 없음';$('#ov-empty p').textContent='계좌 조회는 완료했으며 현재 조회 범위에 보유 주식이 없습니다. 현금이나 다른 상품의 잔고를 의미하지 않습니다.';
   const cards=holdingsOnly?[['조회 보유주식 평가액',money(m.total),'현금 제외 · 총자산 미확인'],['보유분 평가손익',money(m.pnl),m.returnPct===null?'보유 원가 기준':'보유 원가 기준 '+pct(m.returnPct)],['계좌 성과·기여도','미확인','현금·입출금·완전한 평가 이력 필요'],['원칙 점검',r.score===null?'미설정':r.score.toFixed(0)+'%',r.measurable+'개 평가 가능 · 현금 비중 미확인']]:[[o.mode==='paper'?'모의 총자산':o.mode==='demo'?'DEMO 총자산':'총자산',money(m.total),'현금 '+money(m.cash)],['보유 자산 평가손익',money(m.pnl),m.returnPct===null?'보유 원가 기준':pct(m.returnPct)+' · 보유 원가 기준'],['최근 거래일 가격변화 기여',money(m.dailyPnl),'현재 수량 × 전일 대비 가격 차이'],['원칙 충족',r.score===null?'미설정':r.score.toFixed(0)+'%',r.measurable+'개 평가 가능 · 동일 가중치']];
   $('#ov-kpis').innerHTML=cards.map(([a,b,c])=>`<article><span>${a}</span><strong>${b}</strong><small>${c}</small></article>`).join('');
-  $('#ov-holdings').innerHTML=m.positions.map(x=>{const rule=r.evaluations.find(e=>e.symbol===x.symbol);return `<tr><td><button class="stock-link" data-stock="${esc(x.symbol)}">${esc(x.name)}</button><small>${x.quantity}주 · 평단 ${money(x.avgCost)}</small></td><td>${money(x.price)}<small>${pct(x.dailyPct)}</small><small>${esc(x.asOf||'자료 없음')}</small></td><td>${money(x.value)}<small>${x.weightPct===null?'—':x.weightPct.toFixed(1)+'%'}</small></td><td>${money(x.pnl)}<small>${pct(x.returnPct)}</small></td><td>${money(x.dailyPnl)}</td><td>${rule?.status||'미설정'}</td></tr>`;}).join('')||'<tr><td colspan="6" class="empty">보유 종목이 없습니다. 자산을 입력하거나 DEMO로 둘러확인하십시오.</td></tr>';
+  $('#ov-holdings').innerHTML=m.positions.map(x=>{const rule=r.evaluations.find(e=>e.symbol===x.symbol);return `<tr><td><button class="stock-link" data-stock="${esc(x.symbol)}">${esc(x.name)}</button><small>${x.quantity}주 · 평단 ${money(x.avgCost)}</small></td><td>${money(x.price)}<small>${pct(x.dailyPct)}</small><small>${esc(x.asOf||'자료 없음')}</small></td><td>${money(x.value)}<small>${x.weightPct===null?'—':x.weightPct.toFixed(1)+'%'}</small></td><td>${money(x.pnl)}<small>${pct(x.returnPct)}</small></td><td>${money(x.dailyPnl)}</td><td>${rule?.status||'미설정'}</td></tr>`;}).join('')||'<tr><td colspan="6" class="empty">조회 범위에 보유 주식이 없습니다.</td></tr>';
+  $('#ov-allocation').closest('article').querySelector('p.muted').textContent=holdingsOnly?'조회 보유주식 평가액 기준 비중 · 현금 제외':'현금을 포함한 조회 자산 기준 비중';
   $('#ov-allocation').innerHTML=m.total>0?[...m.positions.map(x=>[x.name,x.weightPct]),...(holdingsOnly?[]:[['현금',m.cashPct]])].map(([name,value])=>`<div class="allocation-row"><span>${esc(name)}</span><b>${value.toFixed(1)}%</b><div><i style="width:${Math.min(100,value)}%"></i></div></div>`).join('')+(holdingsOnly?'<p class="muted">조회 보유주식 평가액 안에서의 비중입니다. 현금이 없어 전체 계좌 비중은 미확인입니다.</p>':''):'<p class="muted">모든 종목의 가격을 확인하면 비중을 표시합니다.</p>';
   $('#ov-rules').innerHTML=r.evaluations.length?r.evaluations.map(e=>`<div class="rule-row"><b>${esc(e.label)} · ${e.status}</b><p>${e.actual===null?'가격 자료 부족':`현재 ${e.actual.toFixed(2)}% / ${e.direction==='max'?'최대':'최소'} ${e.threshold}%${e.gap>0?' · '+e.gap.toFixed(2)+'%p '+(e.direction==='max'?'초과':'부족'):''}`}</p>${e.status==='위반'&&e.symbol?`<button class="text-button" data-review="${esc(e.symbol)}">대응 선택지 보기</button>`:''}</div>`).join('')+'<small>원칙 버전 '+esc(o.principles.id)+'</small>':'<p>자산 배분 원칙이 아직 없습니다. 종목별 최대 비중과 최소 현금을 정해확인하십시오.</p>';
   $('#ov-strategy-summary').textContent=state().approved?state().approved.definition.name+' · '+state().approved.definition.entryRule:'아직 승인한 매매 전략이 없습니다. 자산을 먼저 살펴본 뒤 Strategy Lab에서 정해도 가능합니다.';
@@ -120,6 +128,7 @@ function openSim(){const m=metrics();$('#sim-initial').value=Math.round(m.total?
 $('#ov-sim').onclick=openSim;
 function chart(series){return performanceChart(['value','principal'].map(key=>series.map((x,i)=>({date:x.month+'개월',value:x[key]}))),['수익률 가정 적용 자산','납입 원금'],{normalized:false,unit:'원',title:'납입 원금과 가정 자산'});}
 function allocationImpact(args){
+  if(['account','broker_holdings'].includes(get().mode)&&metrics().cash===null)return '<p>시작 금액은 조회한 보유주식 평가액입니다. 현금 자료가 없어 전체 계좌의 비중 변화는 계산하지 않습니다.</p>';
   const m=metrics();if(!m.total||Math.abs(args.initial-m.total)>1)return '<p class="muted">시작 자산을 바꿨으므로 현재 포트폴리오의 비중 비교는 생략했습니다.</p>';
   const total=m.total+args.once;
   return `<details><summary>일회 납입 직후 자산 비중</summary><p class="muted">추가금 전액을 현금으로 보유한 순간의 계산. 이후 종목 매수·가격변화·월 적립 배분은 가정하지 않아요.</p><table><thead><tr><th>자산</th><th>현재</th><th>납입 직후</th></tr></thead><tbody>${[...m.positions.map(p=>[p.name,p.value]),['현금',m.cash]].map(([name,value])=>`<tr><td>${esc(name)}</td><td>${(value/m.total*100).toFixed(2)}%</td><td>${((value+(name==='현금'?args.once:0))/total*100).toFixed(2)}%</td></tr>`).join('')}</tbody></table></details>`;
@@ -147,3 +156,5 @@ window.addEventListener('teamquant:asset-snapshot',event=>{
 });
 
 window.addEventListener('teamquant:asset-clear',()=>{if(get().mode!=='broker_holdings')return;newsEpoch++;liveAccount=null;save({mode:'paper'});$('#ov-mode option[value="broker_holdings"]')?.remove();if(detail.open)detail.close();render();$('#ov-status').textContent='조회 정보를 화면에서 지웠습니다. PC 원본 기록은 유지됩니다.';});
+
+window.addEventListener('teamquant:connection',e=>{connectionState=e.detail.status;render();});
