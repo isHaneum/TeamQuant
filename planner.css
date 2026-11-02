@@ -1,0 +1,45 @@
+#planner{max-width:1600px;margin:auto;color:#17283e;--pl-blue:#245ad1}
+#planner .page-head h1{font-size:30px;font-weight:780;letter-spacing:-.035em}
+#planner p{line-height:1.75;word-break:keep-all;overflow-wrap:break-word}
+#planner .panel{padding:26px;margin-bottom:22px;border:1px solid #dce3ec;border-radius:14px;background:white}
+#planner h2{font-size:20px;font-weight:750;letter-spacing:-.025em;margin-bottom:18px}
+#planner h3{font-size:18px;font-weight:720;letter-spacing:-.02em}
+#planner label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:650;min-width:0}
+#planner input,#planner select,#planner textarea{font:inherit;min-width:0;width:100%;color:#17283e;background:#fff;border:1px solid #b9c5d5;border-radius:7px;padding:11px 12px;line-height:1.4}
+#planner input:disabled{background:#f1f4f8;color:#47566b;opacity:1}
+#planner input[type=checkbox]{width:18px;height:18px;flex-shrink:0;accent-color:var(--pl-blue)}
+#planner button{font-weight:700;white-space:normal;line-height:1.4}
+#planner .pl-intro{display:flex;justify-content:space-between;align-items:center;gap:24px;background:#f0f5ff;border:1px solid #d7e2fa;border-radius:12px;padding:20px 24px;margin-bottom:20px}
+#planner .pl-intro p{margin:5px 0 0;font-size:14px}
+#planner .pl-intro a{flex-shrink:0}
+#planner .pl-toolbar{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:16px 0}
+#planner .pl-toolbar label{flex:1;max-width:430px;min-width:180px}
+#planner .pl-toolbar button{min-height:43px}
+#planner .pl-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 24px;margin:20px 0}
+#planner .pl-status{min-height:24px;font-size:15px;color:#245091;margin:18px 0}
+#planner .pl-error,#planner .pl-warning{color:#8f381b;background:#fff5ee;border:1px solid #f0d6c6;border-radius:8px;padding:12px 16px}
+#planner .pl-help summary{font-weight:700;cursor:pointer}
+#planner .pl-help li{margin:10px 0;line-height:1.7}
+#planner .pl-table{overflow-x:auto;margin:22px 0}
+#planner table{width:100%;min-width:920px;border-collapse:collapse;font-size:14px;table-layout:auto}
+#planner th{background:#f4f6fa;white-space:nowrap;padding:14px;text-align:right;border-bottom:1px solid #d4dce7;font-weight:700}
+#planner td{padding:16px 12px;text-align:right;border-bottom:1px solid #e3e8ef;font-variant-numeric:tabular-nums;vertical-align:middle}
+#planner th:first-child,#planner td:first-child{text-align:left;min-width:205px}
+#planner td small{display:block;color:#65758a;font-size:12px;line-height:1.65;margin-top:5px}
+#planner td input{min-width:95px;width:112px;text-align:right}
+#planner td input[type=date]{min-width:143px;width:143px}
+#planner .pl-confirm{display:flex;flex-direction:row;align-items:center;margin:22px 0;font-weight:550;line-height:1.7}
+#planner .pl-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:28px 0 20px}
+#planner .pl-kpis article{background:#f5f7fb;border-radius:10px;padding:20px}
+#planner .pl-kpis span{display:block;font-size:13px;color:#5e6f86;line-height:1.6;min-height:42px}
+#planner .pl-kpis strong{display:block;font-size:23px;letter-spacing:-.025em;font-variant-numeric:tabular-nums;margin-top:10px;overflow-wrap:anywhere}
+#planner .pl-scenarios{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:25px 0}
+#planner .pl-scenario{border:1px solid #cbd7e9;border-radius:10px;padding:24px;background:#f9fbff}
+#planner .pl-scenario>strong{font-size:23px;font-weight:750;display:block;margin:18px 0}
+#planner #pl-plan-detail{border-top:1px solid #dce3ec;padding-top:24px;margin-top:28px}
+#planner #pl-records details{padding:16px 0;border-top:1px solid #e3e8ef}
+#planner .performance-chart{margin-top:24px}
+#planner .muted{color:#63738a;font-size:13px}
+#planner button:focus-visible,#planner input:focus-visible,#planner select:focus-visible,#planner textarea:focus-visible{outline:3px solid #8bb5ff;outline-offset:2px}
+@media(max-width:1100px){#planner .pl-fields,#planner .pl-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){#planner .pl-fields,#planner .pl-kpis,#planner .pl-scenarios{grid-template-columns:1fr}#planner .pl-intro{display:block}#planner .pl-intro a{display:inline-block;margin-top:14px}#planner .panel{padding:18px}#planner .pl-kpis span{min-height:0}}

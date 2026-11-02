@@ -48,3 +48,16 @@ Spec: https://openapi.tossinvest.com/openapi-docs/latest/openapi.json . Local en
 Order responses may be reused briefly in PC server memory (closed30seconds/open5seconds, up to8queries); same-query in-flight reads deduplicate. No automatic order files are persisted. Rate-limit messages honor a numeric Retry-After when provided.
 
 Validation: all90regression tests pass (10new order-history tests). Synthetic browser verifies45-order pagination, excluding unfilled orders while retaining canceled partial fills, per-currency unknown costs, and sanitized JSON download. The existing real account key successfully read a recent3-month closed-order response through its final page; private order records/IDs/amounts were not written to project files or public artifacts. Initial provider rate limiting cleared on a later request; it must remain a visible error, not an empty-success result.
+
+
+## 2026-11-02 — Goal & Allocation Planner
+
+Build the first complete goal → monthly allocation → approval → paper execution → persisted next-plan loop as separate deterministic modules. Existing holdings, read-only order history, CSV performance, technical-rule backtests and paper workspaces remain intact. Personal goal drafts live only in private PC storage; no user goals, holdings or credentials in public source, deployment or QA artifacts.
+
+Goal projections distinguish future end-of-month contributions, paid-in capital and assumed growth; explicit contribution start supports a future start date. Required return is a mathematical condition, not evidence it is attainable. ETF target weights, cost/risk limits, reference prices, virtual cash and FX require user confirmation. Two buy-only scenarios use new funds, preserve existing cash and frozen unsupported holdings, and expose remaining deviation after lot/cost rounding. Do not present a heuristic as a global integer optimum.
+
+Server approval freezes settings/quotes and recalculated plan hash. Execution rechecks the current revision, month and constraints, records one monthly contribution atomically, and is idempotent for an already executed approval. Settings changes invalidate approval. A future contribution start, stale reference, unresolved cash/position-limit breach or incorrect targets blocks approval. Private per-ledger file locks prevent simultaneous writes. This is PC-authorized storage, not multi-user financial authentication, encrypted storage or tamper-proof auditing.
+
+Defer full performance attribution, historical plan-adherence claims, AI decision synthesis and real trading until their input coverage and execution boundaries are implemented. UI clearly labels the separate monthly paper ledger and synthetic memory-only DEMO. See GOAL_ALLOCATION_SPEC.md for calculation/persistence boundaries and tests.
+
+Validation: 103 regression tests pass (13 new tests, including 200 deterministic lot/currency/cost scenarios). Synthetic browser QA verifies no-ETF goal calculation, two allocation scenarios, separate approval and execution, persistent PC reload and duplicate-month prevention. The test portfolio is synthetic, not a private account.

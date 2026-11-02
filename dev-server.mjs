@@ -1,4 +1,5 @@
 import {localStatus} from './lib/local-status.js';
+import {createInvestmentStore} from './lib/investment-store.js';
 import {createPerformanceStore} from './lib/performance-store.js';
 import {createHistoryStore} from './lib/history-store.js';
 import {createHistoryRecorder} from './lib/history-recorder.js';
@@ -25,14 +26,15 @@ const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=ut
 const historyStore=createHistoryStore({publicRoots:[root]});
 const historyRecorder=createHistoryRecorder({store:historyStore});
 const performanceStore=createPerformanceStore({publicRoots:[root]});
+const investments=createInvestmentStore({publicRoots:[root,join(root,'..')]});
 const fetchTossHoldings=createTossReader({onSnapshot:historyRecorder.snapshot,onFailure:historyRecorder.failure});
-const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
+const bridge=createLocalBridge({port,readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host}`);
     if(url.pathname.startsWith('/api/bridge/')){
       let size=0,raw='',body={};
-      for await(const chunk of request){size+=chunk.length;if(size>(url.pathname==='/api/bridge/performance-import'?4_000_000:4096)){response.writeHead(413);return response.end();}raw+=chunk;}
+      for await(const chunk of request){size+=chunk.length;if(size>(url.pathname==='/api/bridge/performance-import'?4_000_000:url.pathname.startsWith('/api/bridge/investment-')?65536:4096)){response.writeHead(413);return response.end();}raw+=chunk;}
       try{if(raw)body=JSON.parse(raw);}catch{response.writeHead(400);return response.end();}
       const result=await bridge.handle(request,url.pathname.split('/').at(-1),body);
       response.writeHead(result.status,result.headers);return response.end(result.body?JSON.stringify(result.body):'');
@@ -86,7 +88,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");

@@ -4,6 +4,7 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 
 | Work | Files |
 |---|---|
+| Goal / ETF allocation / approved monthly paper ledger | `planner-ui.js`, `planner.css`, `lib/goal-engine.js`, `lib/allocation-planner.js`, `lib/investment-store.js`, `docs/GOAL_ALLOCATION_SPEC.md`, `test/investment.test.js` |
 | CSV parsing / returns / trade basis | `lib/performance-import.js`, `lib/performance-math.js`, `test/performance.test.js` |
 | Private dataset persistence | `lib/performance-store.js`; API dispatch in `lib/local-bridge.js` |
 | My Performance UI / benchmark | `performance-ui.js`, `performance-view-ui.js`, `lib/performance-benchmark.js` |

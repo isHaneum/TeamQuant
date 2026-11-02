@@ -12,6 +12,7 @@ import "/asset-hub-ui.js";
 import "/help-ui.js";
 import "/performance-ui.js";
 import "/orders-ui.js";
+import "/planner-ui.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
