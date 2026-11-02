@@ -41,9 +41,9 @@ let wasActive=false,visit=0;
 window.addEventListener('teamquant:page',()=>{
  const page=document.querySelector('.view.active')?.dataset.page,active=page==='toss'||page==='home';
  const thisVisit=++visit;
- if(active&&!wasActive&&onPc&&!$('#app').hidden&&sessionStorage.getItem('teamQuantSession')){
+ if(active&&!wasActive&&!$('#app').hidden&&sessionStorage.getItem('teamQuantSession')){
   const owner=sessionStorage.getItem('teamQuantSession');
-  readiness.then(d=>{
+  (onPc?readiness:privateRead('status').catch(()=>null)).then(d=>{
    if(thisVisit!==visit||d?.keyFile!=='ready'||owner!==sessionStorage.getItem('teamQuantSession')||$('#app').hidden)return;
    if(snapshotOwner!==owner||Date.now()-lastSuccess>=60000)void $('#toss-refresh').onclick();
   });

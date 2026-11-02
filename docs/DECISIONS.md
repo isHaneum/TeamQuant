@@ -71,3 +71,10 @@ See AUTH_UI_ARCHITECTURE.md for six requested design deliverables and official p
 
 ## 2026-11-02 — Personal asset home release review
 BAZE execution finished local work; parent review corrected native USD amounts displayed as KRW, removed invented zero cash from broker input, deferred whole-account concentration/cash rules, prevented broker news from entering browser persistence or public news requests, and cleared home observations on disconnect. Dedicated holdings-overview pure adapter retains unknown cash/returns/FX. Actual acquisition FX returns are not inferred. Home has PC goal/paper-plan summary and native-currency observed holdings history with explicit scope. Existing single-owner bridge and ephemeral remote pairing stay unchanged. No MFA, multi-user finance authorization, perpetual device pairing or real orders are claimed. 105 regression tests pass, including two new FX/unknown-data tests. Deployment uses the explicit source package with no keys, private intent, financial records or BAZE task logs.
+
+## 2026-11-02 Remembered personal browser
+- Explicit first pairing code registers a P-256 public key on the private PC for 30 days. The non-extractable private CryptoKey lives in browser IndexedDB; bearer sessions remain memory-only and last one hour.
+- Fresh one-use 60-second challenges authorize reconnect, including after PC restart. Origin, device and profile are bound; revoke blocks existing sessions. PC settings can revoke all browsers.
+- Optional profile retention saves only profile name and expiry. It is not financial authentication. Logout revokes the short session; explicit connection removal revokes remembered trust.
+- Same-origin script/XSS and compromised device remain risks. This is a single-owner PC bridge, not multi-user account isolation, MFA or cloud authentication. Browser storage deletion requires pairing again. PC must remain running.
+- No brokerage keys or financial snapshots are persisted in the browser by this feature. No cross-site cookie dependence, cloud custody or trading permission added.
