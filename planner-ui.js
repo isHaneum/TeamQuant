@@ -1,3 +1,4 @@
+import {manwon} from '/lib/investor-tools.js';
 import '/overview-ui.js';
 import {privateRead,installBridgeUi} from '/bridge-client.js';
 import {goalProjection,monthOf} from '/lib/goal-engine.js';
@@ -28,7 +29,7 @@ const page=document.createElement('section');page.id='planner';page.className='v
 <div id="pl-comparison"></div><div id="pl-records"></div>`;
 document.querySelector('main').append(page);const $=s=>page.querySelector(s);
 let book=null,demo=false,assets=[],approval=null,plans=[],epoch=0,busy=false,owner=sessionStorage.getItem('teamQuantSession'),loaded=false;
-const today=()=>new Date().toISOString().slice(0,10),money=(v,c=book?.currency||$('#pl-currency').value)=>v==null?'—':new Intl.NumberFormat('ko-KR',{style:'currency',currency:c,maximumFractionDigits:c==='KRW'?0:2}).format(v),pct=v=>`${v>=0?'+':''}${v.toFixed(2)}%p`;
+const today=()=>new Date().toISOString().slice(0,10),money=(v,c=book?.currency||$('#pl-currency').value)=>v==null?'—':c==='KRW'?manwon(v):new Intl.NumberFormat('ko-KR',{style:'currency',currency:c,maximumFractionDigits:c==='KRW'?0:2}).format(v),pct=v=>`${v>=0?'+':''}${v.toFixed(2)}%p`;
 const val=id=>{const x=$('#pl-'+id).value;if(x.trim()==='')throw new Error('빈 입력란을 확인하십시오. 현금·비용이 0인 경우에도 0을 직접 입력하십시오.');return Number(x);};
 function status(text,error=false){$('#pl-status').textContent=text;$('#pl-status').classList.toggle('pl-error',error);}
 function invalidate(){approval=null;plans=[];$('#pl-comparison').replaceChildren();$('#pl-goal').replaceChildren();}

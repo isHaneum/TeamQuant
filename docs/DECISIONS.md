@@ -83,3 +83,15 @@ BAZE execution finished local work; parent review corrected native USD amounts d
 - Asset home now waits for an actual account snapshot; no demo, default paper cash or silent fallback. Successful empty holdings are distinct from failure. Real cash/account returns remain unknown when not provided.
 - Reused private owned-basket comparison and paper panels in Strategy Lab, preserving their IDs, live snapshot and approved strategy. Legacy independent research/paper controls remain collapsed. No real positions are written to browser storage by this integration.
 - Strategy version changes clear prior checks/comparisons; paper copies remain distinct and require an explicit copy operation. Profile retention can be enabled in Settings for the current browser profile.
+
+
+## 2026-11-04 — Investor flow and review follow-up
+- Won remains the internal money/storage unit. Visible capital/contribution fields use manwon adapters; existing saved plans and approved strategy definitions are preserved.
+- Holdings and owned-basket comparisons have a combined KRW view. Historical comparisons use an explicitly fixed current FX assumption; no historical FX return claim. Exports retain that FX and combined series. Virtual FX transfers are recorded in the paper ledger; per-currency returns after transfers are not presented as investment returns.
+- Purchase basis/current value are displayed from the broker response. Closed-order fee/tax fields are fetched automatically; missing amounts stay unknown. Future costs use general brokerage fee + slippage assumptions, excluding taxes, FX and personal promotions. They are not actual paid costs.
+- Five-year OHLC retrieval (provider permitting), daily/weekly/monthly aggregation, range/zoom and average purchase line added. Missing OHLC is rejected, not fabricated.
+- Approved rules drive next-action explanations and link to paper review. Failed/loading connection or saved observations cannot generate new present-tense strategy judgments.
+- Authenticated PC history is a fallback when the brokerage read fails. Only an unambiguous single-account history is selected, original time and FX retained. Same-tab authorized data survives transient failures; private data is never written to browser storage or Vercel. Cold start with PC OFF is NOT supported; safe offline storage remains future scope.
+- Goals/history remain visible on the pending home. Loaded plan summaries survive transient refresh failure. Duplicate context cards reduced; Lab has a four-step path and optional news/research tools.
+- Remaining: formal identity/MFA, full cash-flow account performance, canonical actual-plan reconciliation, cold-start offline cache and real orders are not implemented. These require separate data/auth boundaries; paper books are not silently merged into actual holdings.
+- Validation: 117 automated tests passed, using synthetic data only. Earlier UI checks covered manwon→won conversion, 5-year weekly chart zoom, cost display and rule evaluation; final release UI checks tracked separately.

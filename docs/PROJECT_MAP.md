@@ -4,6 +4,8 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 
 | Work | Files |
 |---|---|
+| Investor units, costs, candles, next actions | `investor-ui.js`, `lib/investor-tools.js`, `lib/candlestick-view.js`, `test/investor-tools.test.js` |
+| Saved observation fallback | `lib/last-observation.js`, `toss-ui.js`, `test/last-observation.test.js` |
 | Two-menu composition / future authentication | `workspace-ui.js`, `connected-workspace-ui.js`, `lib/account-view.js`, `workspace.css`, `lib/holdings-overview.js`, `test/holdings-overview.test.js`, `docs/AUTH_UI_ARCHITECTURE.md` |
 | Goal / ETF allocation / approved monthly paper ledger | `planner-ui.js`, `planner.css`, `lib/goal-engine.js`, `lib/allocation-planner.js`, `lib/investment-store.js`, `docs/GOAL_ALLOCATION_SPEC.md`, `test/investment.test.js` |
 | CSV parsing / returns / trade basis | `lib/performance-import.js`, `lib/performance-math.js`, `test/performance.test.js` |

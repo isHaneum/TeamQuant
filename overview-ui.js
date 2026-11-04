@@ -1,3 +1,4 @@
+import {manwon} from '/lib/investor-tools.js';
 import {accountView} from '/lib/account-view.js';
 import {holdingsOverview} from '/lib/holdings-overview.js';
 import {privateRead} from '/bridge-client.js';
@@ -5,7 +6,7 @@ import {performanceChart,wireCharts} from '/lib/performance-view.js';
 import {stockName,resolveStockInput} from '/lib/instruments.js';
 import {portfolioMetrics,evaluatePrinciples,simulateContributions,rebalanceOptions} from '/lib/portfolio.js';
 import {briefingQuery,relevantArticles} from '/lib/briefing.js';
-const $=s=>document.querySelector(s),money=v=>v===null?'—':Math.round(v).toLocaleString('ko-KR')+'원';
+const $=s=>document.querySelector(s),money=manwon;
 const pct=v=>v===null?'—':(v>0?'+':'')+v.toFixed(2)+'%',esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key=()=>sessionStorage.getItem('teamQuantSession')?'teamQuant:user:'+sessionStorage.getItem('teamQuantSession'):null;
 const state=()=>{try{return JSON.parse(localStorage.getItem(key())||'{}');}catch{return {};}};
@@ -60,7 +61,7 @@ function render(){
 currentMetrics=metrics();const m=currentMetrics,r=evaluatePrinciples(o.mode==='broker_holdings'?{...m,positions:m.positions.map(p=>({...p,weightPct:null})),cashPct:null}:m,o.principles);
   $('#ov-mode').value=o.mode;
   const holdingsOnly=o.mode==='broker_holdings';
-  $('#ov-source').textContent=['account','broker_holdings'].includes(o.mode)?`${liveAccount.label} · 금융사 조회 ${liveAccount.fetchedAt} · 현재 화면에만 보관 · 주문 없음${holdingsOnly?' · 현금·총자산·계좌 수익률 미확인':''}`:o.mode==='demo'?'DEMO · 합성 보유 수량·매입가·가격. 실제 계좌나 투자 성과가 아닙니다.':o.mode==='manual'?'직접 입력한 수량·매입가 + 조회 시세 · 계좌 미연결':'브라우저에 저장한 모의 잔고 · 실제 계좌와 별도';
+  $('#ov-source').textContent=['account','broker_holdings'].includes(o.mode)?`${connectionState!=='connected'||liveAccount.snapshot?.provenance?.kind==='saved_observation'?'마지막 조회 자료 · 최신 연결 확인 필요 · ':''}${liveAccount.label} · 금융사 조회 ${liveAccount.fetchedAt} · 현재 화면에만 보관 · 주문 없음${holdingsOnly?' · 현금·총자산·계좌 수익률 미확인':''}`:o.mode==='demo'?'DEMO · 합성 보유 수량·매입가·가격. 실제 계좌나 투자 성과가 아닙니다.':o.mode==='manual'?'직접 입력한 수량·매입가 + 조회 시세 · 계좌 미연결':'브라우저에 저장한 모의 잔고 · 실제 계좌와 별도';
   $('#ov-empty').hidden=p.positions.length>0;$('#ov-empty h2').textContent='조회된 보유 주식 없음';$('#ov-empty p').textContent='계좌 조회는 완료했으며 현재 조회 범위에 보유 주식이 없습니다. 현금이나 다른 상품의 잔고를 의미하지 않습니다.';
   const cards=holdingsOnly?[['조회 보유주식 평가액',money(m.total),'현금 제외 · 총자산 미확인'],['보유분 평가손익',money(m.pnl),m.returnPct===null?'보유 원가 기준':'보유 원가 기준 '+pct(m.returnPct)],['계좌 성과·기여도','미확인','현금·입출금·완전한 평가 이력 필요'],['원칙 점검',r.score===null?'미설정':r.score.toFixed(0)+'%',r.measurable+'개 평가 가능 · 현금 비중 미확인']]:[[o.mode==='paper'?'모의 총자산':o.mode==='demo'?'DEMO 총자산':'총자산',money(m.total),'현금 '+money(m.cash)],['보유 자산 평가손익',money(m.pnl),m.returnPct===null?'보유 원가 기준':pct(m.returnPct)+' · 보유 원가 기준'],['최근 거래일 가격변화 기여',money(m.dailyPnl),'현재 수량 × 전일 대비 가격 차이'],['원칙 충족',r.score===null?'미설정':r.score.toFixed(0)+'%',r.measurable+'개 평가 가능 · 동일 가중치']];
   $('#ov-kpis').innerHTML=cards.map(([a,b,c])=>`<article><span>${a}</span><strong>${b}</strong><small>${c}</small></article>`).join('');

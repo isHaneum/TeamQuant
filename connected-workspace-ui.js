@@ -9,7 +9,7 @@ let snapshot=null,owner=null,strategyId=null;
 const panels={compare:$('[data-asset-panel="compare"]'),paper:$('[data-asset-panel="paper"]')};
 for(const [kind,page,title] of [['compare','comparison','다른 상품·연구 조건으로 검증'],['paper','assets','기존 독립 모의 장부']]){
  const host=$('#'+page),legacy=document.createElement('details');legacy.className='panel legacy-research';legacy.innerHTML='<summary>'+title+'</summary>';
- for(const child of [...host.children])if(!child.classList.contains('page-head'))legacy.append(child);
+ for(const child of [...host.children])if(!child.classList.contains('page-head')&&!child.classList.contains('lab-flow'))legacy.append(child);
  host.append(panels[kind],legacy);panels[kind].hidden=true;
 }
 $('#asset-hub .workspace-tabs').hidden=true;
