@@ -6,6 +6,7 @@ import '/planner-ui.js';
 import '/performance-ui.js';
 import '/orders-ui.js';
 import '/help-ui.js';
+import {tip} from '/tooltip-ui.js';
 import '/lab-ui.js';
 import '/portfolio-ui.js';
 const $=s=>document.querySelector(s);
@@ -24,7 +25,7 @@ main.append(moreMenu);document.addEventListener('click',e=>{if(moreMenu.open&&!m
 navigation.prepend(main);navigation.append(hiddenNav);
 for(const d of document.querySelectorAll('.sidebar details'))if(!d.querySelector('button'))d.hidden=true; // 버튼을 옮긴 뒤 빈 '고급 도구' 묶음
 // Settings is a separate view so connection forms retain their original handlers.
-const settings=document.createElement('section');settings.className='view';settings.dataset.page='settings';settings.id='workspace-settings';settings.innerHTML='<div class="page-head"><div><h1>설정</h1><p>프로필, 증권사 연결, 보안 안내와 데이터 관리</p></div></div><article class="panel"><h2>체험 프로필 · 정식 회원 인증 미연결</h2><p>현재 프로필은 전략과 모의 기록을 구분하는 브라우저 설정입니다. 4자리 PIN은 금융정보 접근 인증이 아닙니다. 실제 자산은 별도의 PC 연결 권한으로 조회합니다. 같은 PC의 장부를 프로필별로 격리하지 않습니다.</p><div id="workspace-profile"></div></article><article class="panel"><h2>증권사·개인 PC 연결</h2><p>최초 코드 승인 시 이 브라우저를 30일 동안 기억할 수 있습니다. 이후 PC 서버가 실행 중이면 자동으로 재연결됩니다. 토스 API 키는 PC에만 보관합니다. 공용 PC에서는 기억 기능을 사용하지 마십시오. 로그아웃은 현재 세션을 종료하며, 아래 연결 해제 버튼은 기억된 권한도 삭제합니다.</p><div id="workspace-connections"></div></article><article class="panel"><h2>데이터 관리·도움말</h2><p>기존 브라우저 프로필 기록과 PC 저장 장부는 그대로 유지됩니다. 회원 계정으로의 자동 이전·계정 삭제 기능은 아직 제공하지 않습니다. JSON 내보내기는 각 자료 화면에서 이용할 수 있습니다.</p><div id="workspace-data"></div></article>';
+const settings=document.createElement('section');settings.className='view';settings.dataset.page='settings';settings.id='workspace-settings';settings.innerHTML='<div class="page-head"><div><h1>설정</h1><p>프로필 · 계좌 연결 · 데이터</p></div></div><article class="panel"><h2>프로필 '+tip('현재 프로필은 전략과 모의 기록을 구분하는 브라우저 설정입니다. 4자리 PIN은 금융정보 접근 인증이 아니며, 실제 자산은 별도의 PC 연결 권한으로 조회합니다. 정식 회원 인증은 아직 없습니다.')+'</h2><div id="workspace-profile"></div></article><article class="panel"><h2>증권사·개인 PC 연결 '+tip('처음 코드를 승인할 때 이 브라우저를 30일 동안 기억할 수 있습니다. 이후 PC 서버가 켜져 있으면 자동으로 다시 연결됩니다. 토스 API 키는 PC에만 둡니다. 공용 PC에서는 기억 기능을 쓰지 마십시오. 연결 해제는 기억된 권한도 지웁니다.')+'</h2><div id="workspace-connections"></div></article><article class="panel"><h2>데이터 관리·도움말 '+tip('브라우저 프로필 기록과 PC 저장 장부는 그대로 유지됩니다. JSON 내보내기는 각 자료 화면에 있습니다.')+'</h2><div id="workspace-data"></div></article>';
 document.querySelector('main').append(settings);
 const settingButton=document.createElement('button');settingButton.className='nav-button workspace-settings-button';settingButton.dataset.view='settings';settingButton.textContent='설정';$('.top-actions').append(settingButton);
 $('#workspace-profile').append($('#user-name'),$('#logout'));
@@ -74,3 +75,6 @@ for(const [page] of steps){const bar=document.createElement('nav');bar.className
 $('#ov-strategy-summary').closest('article').hidden=true;
 $('#strategy .verification-entry')?.remove();
 $('#overview .page-head #ov-refresh').hidden=true;
+// 2026-11-05: 머리말 정리. 상단 보안 문구는 설정의 ⓘ로, 홈의 '과거 투자 성과'는 더보기로 일원화.
+note.hidden=true;
+for(const b of document.querySelectorAll('#overview .page-head .ov-actions button'))if(b.textContent==='과거 투자 성과')b.hidden=true;

@@ -197,3 +197,21 @@ i.mkt{background:var(--mkt)}i.own,i.stk{background:var(--own)}i.mark{background:
 .hm-dialog{max-width:none!important;width:min(960px,calc(100% - 24px))!important}
 .hm-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#d0d5dd;margin-right:8px;vertical-align:1px}.hm-dot.good{background:#12b76a}.hm-dot.bad{background:#f79009}
 .hm-detail .rp-chart .stk{stroke-dasharray:none;stroke-dashoffset:0;animation:none}
+
+/* 2026-11-05 c: 연결 안내 · 예시 모드 · 툴팁형 설명 */
+.hm-connect{grid-column:1/-1;border:1px solid #e6e8ec;border-radius:20px;background:#fff;padding:32px 36px}
+.hm-connect h2{margin:0 0 20px;font-size:24px;letter-spacing:-.02em}
+.hm-steps{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:s}
+.hm-steps li{counter-increment:s;background:#f6f7f9;border-radius:14px;padding:16px 18px;display:grid;gap:4px}
+.hm-steps li::before{content:counter(s);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#14171c;color:#fff;font-size:13px;font-weight:700;margin-bottom:6px}
+.hm-steps b{font-size:15px}.hm-steps span{font-size:13px;color:#5b6573}
+.hm-connect-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.hm-connect-actions a{font-size:13px;color:#5b6573}
+.hm-connect-state{margin:14px 0 0;font-size:12.5px;color:#8a93a1}
+.hm.hm-state-connect>.hm-main,.hm.hm-state-connect>.hm-side{display:none}
+.hm-demo,.pf .hm-demo{grid-column:1/-1;display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#fff8e6;border:1px solid #f5dfa8;border-radius:12px;padding:10px 16px;font-size:13.5px}
+.hm-demo b{color:#8a5a12}.hm-demo span{color:#5b4a2a;flex:1}
+.hm-demo[hidden],.hm-connect[hidden]{display:none!important}
+.hm-card>header h3,.hm-side-head h3{display:flex;align-items:center}
+.hm-kv{grid-template-columns:minmax(150px,240px) 1fr!important}
+@media(max-width:920px){.hm-steps{grid-template-columns:1fr}.hm-connect{padding:22px}}
+#overview.hm-home:has(.hm-state-connect)>p.muted[role="status"]{display:none}

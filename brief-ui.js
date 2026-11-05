@@ -11,6 +11,8 @@ import { buildAssetTimeline, koreaDay } from '/lib/asset-timeline.js';
 import { reviewTrades } from '/lib/trade-review.js';
 import { marketReasons, marketQuery } from '/lib/market-reasons.js';
 import { privateRead } from '/bridge-client.js';
+import { tip } from '/tooltip-ui.js';
+import '/demo-ui.js';
 import { stockName } from '/lib/instruments.js';
 
 const $ = s => root?.querySelector(s) || document.querySelector(s); // 홈에 붙기 전에도 리포트 영역 안에서 찾는다.
@@ -28,26 +30,32 @@ const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '
 
 const root = document.createElement('section'); root.className = 'hm'; root.id = 'report';
 root.innerHTML = `
+<div class="hm-connect" id="hm-connect" hidden>
+  <div class="hm-connect-main"><h2>계좌를 연결하면 내 자산이 여기에 보입니다</h2>
+    <ol class="hm-steps"><li><b>PC에서 TeamQuant 실행</b><span>start-personal-server.cmd ${tip('토스 API 키는 내 PC에만 둡니다. 처음이라면 아래 PC 패키지를 받아 START-HERE.md 순서대로 설정합니다.')}</span></li><li><b>PC 화면에서 6자리 코드 받기</b><span>설정 → 증권사·개인 PC 연결</span></li><li><b>이 화면에 코드 입력</b><span>한 번 입력하면 30일 동안 기억</span></li></ol>
+    <div class="hm-connect-actions"><button type="button" class="primary" id="hm-connect-go">코드 입력하기</button><button type="button" class="secondary" data-demo-start>예시 자산으로 둘러보기</button><a class="text-button" href="/downloads/TeamQuant-PC.zip" download>PC 패키지 받기</a></div>
+    <p class="hm-connect-state" id="hm-connect-state" role="status"></p></div>
+</div>
+<div class="hm-demo" id="hm-demo" hidden><b>예시 자산</b><span>공개 시세로 만든 가짜 보유 종목입니다. 실제 계좌가 아닙니다.</span><button type="button" class="text-button" data-demo-stop>예시 끄기</button></div>
 <div class="hm-main">
-  <div class="hm-kpis" id="hm-kpis">${['지금 평가액', '넣은 돈 (매입 원금)', '평가 손익', '오늘 변동'].map(l => `<div><span>${l}</span><b class="shimmer">&nbsp;</b><small>&nbsp;</small></div>`).join('')}</div>
+  <div class="hm-kpis" id="hm-kpis">${['지금 평가액', '넣은 돈', '평가 손익', '오늘 변동'].map(l => `<div><span>${l}</span><b class="shimmer">&nbsp;</b><small>&nbsp;</small></div>`).join('')}</div>
   <article class="hm-card" id="hm-trend">
-    <header><div><h3>월별 주식 자산</h3><p>막대는 월말 평가액, 선은 그때까지 넣은 돈입니다. 막대가 선보다 높으면 이익입니다.</p></div></header>
-    <div id="hm-trend-chart" class="hm-chart"><p class="hm-note">계좌를 불러오면 최근 1년 체결 내역으로 월별 자산을 계산합니다.</p></div>
+    <header><h3>월별 주식 자산 ${tip('막대는 월말 평가액, 선은 그때까지 넣은 돈(매입 원금)입니다. 막대가 선보다 높으면 이익입니다. 최근 1년 실제 체결을 거꾸로 되돌려 계산하며 현금은 넣지 않습니다. 달러 종목은 그 달 환율을 씁니다.')}</h3></header>
+    <div id="hm-trend-chart" class="hm-chart"><p class="hm-note">계좌를 불러오면 계산합니다.</p></div>
     <p class="hm-note" id="hm-trend-note"></p>
   </article>
   <article class="hm-card" id="hm-why">
-    <header><div><h3>오늘 시장은 왜 움직였나</h3><p>장 마감 기사에 실제로 나온 이유를 모았습니다. 제목을 누르면 원문이 열립니다.</p></div></header>
-    <div class="hm-why-grid" id="hm-why-body"><p class="hm-note">보유 종목이 있는 시장(국내·미국)의 기사를 찾습니다.</p></div>
+    <header><h3>오늘 시장 ${tip('장 마감 기사에 실제로 나온 이유만 모았습니다. 숫자는 그 이유가 나온 기사 수입니다. 제목을 누르면 원문이 열립니다.')}</h3></header>
+    <div class="hm-why-grid" id="hm-why-body"><p class="hm-note">보유 종목이 있는 시장의 기사를 찾습니다.</p></div>
   </article>
   <article class="hm-card" id="hm-grade">
-    <header><div><h3>내 매매 성적표</h3><p>최근 1년 동안 실제로 사고판 것이 잘한 선택이었는지, 같은 날 시장 지수를 샀을 때와 비교합니다.</p></div></header>
-    <div id="hm-grade-body"><p class="hm-note">계좌를 불러오면 자동으로 채점합니다.</p></div>
+    <header><h3>매매 성적표 ${tip('최근 1년 동안 산 것과 판 것을, 같은 날 시장 지수를 샀을 때와 비교합니다. 매수는 산 가격 대비 지금 수익률, 매도는 판 뒤 그 종목이 지수보다 더 올랐는지를 봅니다. 배당과 환율 변화는 넣지 않았습니다.')}</h3></header>
+    <div id="hm-grade-body"><p class="hm-note">계좌를 불러오면 채점합니다.</p></div>
   </article>
 </div>
 <aside class="hm-side">
-  <div class="hm-side-head"><h3>보유 종목</h3><span id="hm-count"></span></div>
+  <div class="hm-side-head"><h3>보유 종목 ${tip('누르면 오늘 움직인 이유, 투자 지표, 맞았던 매매 방식, 기사·공시를 한 곳에서 봅니다. 아래 표시는 내 투자 성향 기준의 판단입니다.')}</h3><span id="hm-count"></span></div>
   <ol id="hm-list" class="hm-list"><li class="hm-empty">계좌를 불러오는 중입니다.</li></ol>
-  <p class="hm-note">종목을 누르면 오늘 움직인 이유, 실적, 공시를 봅니다.</p>
 </aside>`;
 const dialog = document.createElement('dialog'); dialog.className = 'hm-dialog'; dialog.innerHTML = '<div class="hm-dialog-head"><div><strong id="hm-d-title"></strong><small id="hm-d-sub"></small></div><button type="button" class="text-button" id="hm-d-close">닫기 ✕</button></div><div id="hm-d-body" class="rp"></div>';
 document.body.append(dialog);
@@ -162,7 +170,7 @@ function renderKpis(positions) {
   const when = snapshot?.fetchedAt ? new Date(snapshot.fetchedAt).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }) : '';
   const tiles = [
     ['지금 평가액', won(value), cashInfo ? `현금 포함 총자산 ${won(value + cashInfo.amount)}` : `${positions.length}종목 · ${when} 조회 · 현금 제외`, ''],
-    ['넣은 돈 (매입 원금)', won(cost), positions.some(p => p.currency === 'USD') ? '달러 종목은 현재 환율로 환산' : '지금 보유 종목을 산 금액', ''],
+    ['넣은 돈 (매입 원금)', won(cost), '지금 보유 종목을 산 금액', ''],
     ['평가 손익', signedWon(gain), cost ? `수익률 ${pct(gain / cost * 100)}` : '', toneClass(gain)],
     ['오늘 변동', Number.isFinite(daily) ? signedWon(daily) : Number.isFinite(dayPct) ? pct(dayPct) : '계산 중…', Number.isFinite(daily) ? pct(dayPct) : '보유 비중 기준', toneClass(Number.isFinite(daily) ? daily : dayPct)]
   ];
@@ -213,7 +221,7 @@ async function openDetail(symbol) {
   if (!funds.has(symbol)) { try { funds.set(symbol, await fundamentals(symbol)); } catch (e) { funds.set(symbol, { error: e.message }); } draw(); }
   if (!fitCache.has(symbol)) { try { const d = await candles(symbol, b.currency), idx = await sharedIndex(d.index[0]).catch(() => null); fitCache.set(symbol, findBestFit(d.candles, idx?.candles || [], periodStart(today(), 12))); } catch (e) { fitCache.set(symbol, { available: false, message: e.message }); } draw(); }
 }
-const ROW = (label, value, note, t = 0) => `<div class="hm-kv"><span><i class="hm-dot ${t > 0 ? 'good' : t < 0 ? 'bad' : ''}"></i>${label}</span><b>${value}</b><small>${note}</small></div>`;
+const ROW = (label, value, note, t = 0) => `<div class="hm-kv"><span><i class="hm-dot ${t > 0 ? 'good' : t < 0 ? 'bad' : ''}"></i>${label}${note ? tip(note) : ''}</span><b>${value}</b></div>`;
 
 function detailHtml(b, p) {
   const f = funds.get(b.symbol), fund = f && !f.error ? f : null, r = reasons[scopeOf(b.currency)], style = getStyle();
@@ -224,17 +232,16 @@ function detailHtml(b, p) {
   const marketArticles = e.marketLed && r?.available ? r.articles.slice(0, 2).map(a => ({ title: a.title, link: a.link, source: a.sourceHost, label: `${b.marketName} 마감 기사`, fit: 'match' })) : [];
   const allNews = (b.allNews || []).filter(n => !e.evidence.some(x => x.link === n.link));
   return `<div class="hm-detail">
-    ${j ? `<section class="hm-verdict-box ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}"><span class="pf-stance ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}">${esc(j.label)}</span><p>${esc(j.summary)}${j.notes.length ? ' ' + esc(j.notes.join(' ')) : ''}</p><small>${esc(j.styleLabel)} 성향 기준 · 성향은 "포트폴리오" 화면에서 바꿀 수 있습니다.</small></section>` : fund === null && !f ? '<p class="hm-note">투자 지표를 불러오는 중…</p>' : ''}
-    <section><h4>오늘 왜 움직였나</h4><p class="hm-conclusion">${esc(e.conclusion)}</p>${decompositionBar(b.move)}
+    ${j ? `<section class="hm-verdict-box ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}"><span class="pf-stance ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}">${esc(j.label)}</span><p>${esc(j.summary)}${j.notes.length ? ' ' + esc(j.notes.join(' ')) : ''}</p><small>${esc(j.styleLabel)} 성향 기준 ${tip('투자 성향은 포트폴리오 화면에서 바꿉니다. 판단 규칙도 그곳의 ⓘ에 있습니다.')}</small></section>` : fund === null && !f ? '<p class="hm-note">투자 지표를 불러오는 중…</p>' : ''}
+    <section><h4>오늘 왜 움직였나 ${tip(b.caveat + ' 매수·매도 권유가 아닙니다.')}</h4><p class="hm-conclusion">${esc(e.conclusion)}</p>${decompositionBar(b.move)}
       ${[...marketArticles, ...e.evidence].length ? `<ul class="hm-evidence">${[...marketArticles, ...e.evidence].map(x => `<li><span class="hm-fit ${FIT[x.fit][1]}">${FIT[x.fit][0]}</span><div><small>${esc(x.label)}</small>${safeUrl(x.link) ? `<a href="${esc(safeUrl(x.link))}" target="_blank" rel="noopener noreferrer">${esc(x.title)}</a>` : `<b>${esc(x.title)}</b>`}</div></li>`).join('')}</ul>` : ''}</section>
-    <section><h4>투자 지표 ${fund ? `<small>${esc(fund.sector || '')}${fund.annual?.year ? ` · ${esc(fund.annual.year)} 실적` : ''}</small>` : ''}</h4>
-      ${fund ? `${fund.business ? `<p class="hm-biz">${esc(fund.business)}</p>` : ''}<div class="hm-kvs">${(j?.factors || []).map(x => ROW(esc(x.label), esc(x.value), esc(x.text), x.tone)).join('')}${Number.isFinite(fund.pbr) ? ROW('PBR', `${fund.pbr}배`, fund.pbr < 1 ? '장부상 자산보다 싸게 거래됩니다.' : '장부상 자산 대비 주가 수준입니다.', 0) : ''}</div>${fund.peers?.length ? `<p class="hm-note">비슷한 회사: ${esc(fund.peers.join(', '))}</p>` : ''}<p class="hm-note">출처: ${esc(fund.source)}</p>` : f?.error ? `<p class="hm-note">투자 지표를 불러오지 못했습니다 (${esc(f.error)}).</p>` : '<div class="shimmer rp-line"></div>'}</section>
-    <section><h4>이 종목에 맞았던 매매 방식</h4>${!fit ? '<div class="shimmer rp-line short"></div>' : !fit.available ? `<p class="hm-note">${esc(fit.message)}</p>` : `<p>${esc(fit.advice)}</p><div class="hm-fit-rows">${fit.rows.map(x => `<span>${esc(x.title)} <b class="${toneClass(x.edge)}">${x.edge > 0 ? '+' : ''}${x.edge}%p</b></span>`).join('')}</div><p class="hm-note">숫자는 그냥 들고 있기 대비 차이(최근 1년, 비용 포함). ${esc(fit.caveat)}</p>`}</section>
+    <section><h4>투자 지표 ${fund ? tip('출처: ' + fund.source + '. 초록 점은 좋음, 주황 점은 주의입니다. 각 항목의 ⓘ에 뜻이 있습니다.') : ''} ${fund ? `<small>${esc(fund.sector || '')}${fund.annual?.year ? ` · ${esc(fund.annual.year)} 실적` : ''}</small>` : ''}</h4>
+      ${fund ? `${fund.business ? `<p class="hm-biz">${esc(fund.business)}</p>` : ''}<div class="hm-kvs">${(j?.factors || []).map(x => ROW(esc(x.label), esc(x.value), esc(x.text), x.tone)).join('')}${Number.isFinite(fund.pbr) ? ROW('PBR', `${fund.pbr}배`, fund.pbr < 1 ? '장부상 자산보다 싸게 거래됩니다.' : '장부상 자산 대비 주가 수준입니다.', 0) : ''}</div>${fund.peers?.length ? `<p class="hm-note">비슷한 회사: ${esc(fund.peers.join(', '))}</p>` : ''}` : f?.error ? `<p class="hm-note">투자 지표를 불러오지 못했습니다 (${esc(f.error)}).</p>` : '<div class="shimmer rp-line"></div>'}</section>
+    <section><h4>이 종목에 맞았던 매매 방식 ${tip('4가지 방식을 지난 1년에 적용해 그냥 들고 있기와 비교한 차이(비용 포함)입니다. 지난 결과에 맞춘 것이라 앞으로도 같다는 보장은 없습니다.')}</h4>${!fit ? '<div class="shimmer rp-line short"></div>' : !fit.available ? `<p class="hm-note">${esc(fit.message)}</p>` : `<p>${esc(fit.advice)}</p><div class="hm-fit-rows">${fit.rows.map(x => `<span>${esc(x.title)} <b class="${toneClass(x.edge)}">${x.edge > 0 ? '+' : ''}${x.edge}%p</b></span>`).join('')}</div>`}</section>
     <section><h4>최근 흐름</h4>${chart(b, b.candles || [], b.indexCandles || [], p?.avgCost)}<div class="hm-kvs">${b.context.map(x => ROW(esc(x.label), esc(x.value), '', x.tone)).join('')}</div></section>
     ${b.financials ? `<section><h4>분기 실적</h4>${finTable(b.financials)}</section>` : ''}
     ${b.disclosures.length || allNews.length ? `<section><h4>최근 공시·기사</h4><ul class="hm-news">${b.disclosures.map(d => `<li><span class="rp-tag d">공시</span><small>${esc(d.date)}</small>${safeUrl(d.link) ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>` : esc(d.title)}</li>`).join('')}${allNews.slice(0, 8).map(n => `<li><span class="rp-tag n">${esc(n.categoryLabel)}</span><small>${esc(n.date)}</small>${safeUrl(n.link) ? `<a href="${esc(safeUrl(n.link))}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>` : esc(n.title)}</li>`).join('')}</ul></section>` : ''}
     <section><h4>지금 점검할 것</h4><ol class="hm-checks">${b.checks.map(x => `<li>${esc(x)}</li>`).join('')}</ol></section>
-    <p class="hm-note">${esc(b.caveat)} 매수·매도 권유가 아닙니다.</p>
   </div>`;
 }
 
@@ -266,7 +273,11 @@ async function loadReasons(positions, run, signal) {
       const [idx, news] = await Promise.all([indexSeries(sym, signal).catch(() => null), getJson(`/api/news?query=${encodeURIComponent(marketQuery(s))}&sort=date`, signal)]);
       const c = idx?.candles || [], change = c.length > 1 ? (c.at(-1).close / c.at(-2).close - 1) * 100 : null;
       if (run !== epoch) return;
-      reasons[s] = { name, change, asOf: c.at(-1)?.date, ...marketReasons(news.items, { scope: s, direction: Math.sign(change || 0) }) };
+      let found = marketReasons(news.items, { scope: s, direction: Math.sign(change || 0) });
+      // 마감 기사가 최신 20건에 없으면 더 넓은 검색어로 한 번 더 찾는다.
+      if (!found.available) { const more = await getJson(`/api/news?query=${encodeURIComponent(s === 'KR' ? '코스피' : '뉴욕증시')}&sort=sim`, signal).catch(() => null); if (more) found = marketReasons(more.items, { scope: s, direction: Math.sign(change || 0) }); }
+      if (run !== epoch) return;
+      reasons[s] = { name, change, asOf: c.at(-1)?.date, ...found };
     } catch (e) { if (e.name === 'AbortError' || run !== epoch) return; reasons[s] = { name, error: `기사를 불러오지 못했습니다 (${e.message}).`, themes: [] }; }
   }));
   if (run !== epoch) return;
@@ -302,12 +313,8 @@ function renderTrend(t, report) {
   const out = $('#hm-readout'), def = out.textContent;
   box.querySelectorAll('.hit').forEach(h => { const show = () => { out.textContent = readout(t.points[+h.dataset.i]); box.querySelectorAll('.hit').forEach(x => x.classList.toggle('on', x === h)); };
     h.addEventListener('mouseenter', show); h.addEventListener('focus', show); h.addEventListener('mouseleave', () => { out.textContent = def; h.classList.remove('on'); }); });
-  const notes = [];
-  if (Number.isFinite(t.periodGain) && t.from) notes.push(`${t.from.slice(0, 7).replace('-', '년 ')}월 말 이후 투자 손익 <b class="${toneClass(t.periodGain)}">${signedWon(t.periodGain)}</b> (넣고 뺀 돈은 빼고 계산)`);
-  notes.push(`최근 1년 체결 ${t.fills}건으로 계산 · 현금 제외 · 달러 종목은 그 달 환율 적용`);
-  if (!report.paginationComplete) notes.push('주문이 많아 일부만 조회되어 앞쪽 달은 비워 두었습니다.');
-  notes.push(...t.warnings.map(esc));
-  $('#hm-trend-note').innerHTML = notes.join(' · ');
+  const extra = [`최근 1년 체결 ${t.fills}건으로 계산했습니다.`, report.paginationComplete ? '' : '주문이 많아 일부만 조회되어 앞쪽 달은 비워 두었습니다.', ...t.warnings].filter(Boolean).join(' ');
+  $('#hm-trend-note').innerHTML = Number.isFinite(t.periodGain) && t.from ? `${t.from.slice(0, 7).replace('-', '년 ')}월 말 이후 투자 손익 <b class="${toneClass(t.periodGain)}">${signedWon(t.periodGain)}</b> ${tip('넣고 뺀 돈은 빼고, 가격 변화로 번 돈만 계산했습니다. ' + extra)}` : esc(extra);
 }
 
 // ── 매매 성적표 ──────────────────────────────────────────────
@@ -321,14 +328,13 @@ function renderGrade(r) {
   <div class="hm-grade-grid">${tile('매수', r.buys, '지수보다 더 오른 매수')}${tile('매도', r.sells, '판 뒤 지수보다 덜 오른 매도')}<div><span>수수료·세금</span><b>${won(r.fees)}</b><small>최근 1년 체결 합계</small></div></div>
   <ul class="hm-lines">${r.lines.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
   <ul class="hm-picks">${pick('가장 잘한 매수', r.best, 'up')}${r.worst && r.worst !== r.best && r.worst.edge < 0 ? pick('가장 아쉬운 매수', r.worst, 'down') : ''}${pick('가장 잘한 매도', r.goodSell, 'up')}${pick('가장 아쉬운 매도', r.regret, 'down')}</ul>
-  <details class="hm-trades"><summary>체결별 채점 보기 (${r.rows.length}건${r.pending ? ` · 최근 ${r.pending}건 보류` : ''})</summary><div class="table-wrap"><table><thead><tr><th>날짜</th><th>종목</th><th>매매</th><th>체결가 → 지금</th><th>같은 기간 지수</th><th>판정</th></tr></thead><tbody>${sortedRows.map(x => `<tr><td>${esc(x.date)}</td><td>${esc(nameOf(x.symbol))}</td><td>${x.side === 'BUY' ? '매수' : '매도'}</td><td class="${toneClass(x.stock)}">${pct(x.stock)}</td><td>${pct(x.market)}</td><td class="${toneClass(x.edge)}">${x.edge === null ? '—' : x.edge > 0 ? (x.side === 'BUY' ? '잘 샀음' : '잘 팔았음') : (x.side === 'BUY' ? '지수가 나았음' : '판 뒤 더 오름')}</td></tr>`).join('')}</tbody></table></div>
-  <p class="hm-note">매수는 "산 가격 → 지금 가격"을 같은 날 시장 지수를 샀을 때와 비교합니다. 매도는 판 뒤에 그 종목이 지수보다 더 올랐으면 아쉬운 매도로 봅니다. 배당과 환율 변화는 넣지 않았습니다.</p></details>`;
+  <details class="hm-trades"><summary>체결별 채점 보기 (${r.rows.length}건${r.pending ? ` · 최근 ${r.pending}건 보류` : ''})</summary><div class="table-wrap"><table><thead><tr><th>날짜</th><th>종목</th><th>매매</th><th>체결가 → 지금</th><th>같은 기간 지수</th><th>판정</th></tr></thead><tbody>${sortedRows.map(x => `<tr><td>${esc(x.date)}</td><td>${esc(nameOf(x.symbol))}</td><td>${x.side === 'BUY' ? '매수' : '매도'}</td><td class="${toneClass(x.stock)}">${pct(x.stock)}</td><td>${pct(x.market)}</td><td class="${toneClass(x.edge)}">${x.edge === null ? '—' : x.edge > 0 ? (x.side === 'BUY' ? '잘 샀음' : '잘 팔았음') : (x.side === 'BUY' ? '지수가 나았음' : '판 뒤 더 오름')}</td></tr>`).join('')}</tbody></table></div></details>`;
 }
 
 async function loadHistory(positions, run, signal) {
   const to = today(), from = new Date(Date.parse(to) - 365 * 86400000).toISOString().slice(0, 10);
   let report;
-  try { report = await privateRead('order-history', { from, to, status: 'CLOSED', symbol: '' }, { signal }); }
+  try { report = snapshot?.demo ? snapshot.demoOrders : await privateRead('order-history', { from, to, status: 'CLOSED', symbol: '' }, { signal }); }
   catch (e) {
     if (e.name === 'AbortError' || run !== epoch) return;
     const msg = `<p class="hm-note">주문 이력을 불러오지 못해 계산하지 못했습니다 (${esc(e.message)}). 설정에서 PC 연결을 확인하십시오.</p>`;
@@ -419,3 +425,16 @@ async function loadFunds(positions, run) {
 window.addEventListener('teamquant:open-stock', e => { const s = e.detail?.symbol; if (s) void openDetail(s); });
 window.addEventListener('teamquant:cash', e => { cashInfo = e.detail; if (snapshot) renderKpis(current()); });
 window.addEventListener('teamquant:style', () => { if (snapshot) renderList(current()); });
+
+// ── 연결 상태: 계좌가 없으면 빈 화면 대신 연결 안내와 예시 둘러보기를 보여 준다.
+let connection = 'unknown';
+function syncState() {
+  const none = !snapshot && connection === 'error';
+  $('#hm-connect').hidden = !none; root.classList.toggle('hm-state-connect', none);
+  $('#hm-demo').hidden = !snapshot?.demo;
+  if (none) $('#hm-connect-state').textContent = document.querySelector('#toss-status')?.textContent || '';
+}
+$('#hm-connect-go').onclick = () => { document.querySelector('[data-view="settings"]')?.click(); setTimeout(() => { const i = document.querySelector('#workspace-connections input:not([type="checkbox"])'); i?.focus(); i?.scrollIntoView({ block: 'center' }); }, 200); };
+window.addEventListener('teamquant:connection', e => { connection = e.detail?.status || 'unknown'; syncState(); });
+window.addEventListener('teamquant:asset-snapshot', syncState);
+window.addEventListener('teamquant:asset-clear', () => { connection = 'error'; syncState(); });
