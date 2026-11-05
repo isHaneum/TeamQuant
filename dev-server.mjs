@@ -14,6 +14,7 @@ import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchMarketSeries, fetchHeldMarketSeries } from "./lib/market.js";
 import { fetchNews } from "./lib/news.js";
+import { fetchCompanyBrief } from "./lib/dart.js";
 import { fetchKisAccount } from "./lib/kis.js";
 import { getResearchStatus, startResearchRefresh } from "./lib/research-job.js";
 
@@ -54,6 +55,11 @@ http.createServer(async (request, response) => {
       const data=await searchStocks(url.searchParams.get('q'),url.searchParams.get('code'));
       response.writeHead(200,{'Content-Type':'application/json; charset=utf-8'});return response.end(JSON.stringify(data));
     }
+    if (url.pathname === '/api/dart') {
+      if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
+      try { const data = await fetchCompanyBrief(url.searchParams.get('code') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(data)); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+    }
     if (url.pathname === '/api/news') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       const data = await fetchNews(url.searchParams.get('query'), url.searchParams.get('sort') || 'date');
@@ -89,7 +95,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|lib\/(?:backtest|oos-validation|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|brief-ui\.js|brief\.css|lib\/(?:backtest|oos-validation|market-brief|trading-habits|dca-advisor|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");
