@@ -1,6 +1,8 @@
 import {createDeviceStore} from './lib/device-store.js';
 import {localStatus} from './lib/local-status.js';
 import {createInvestmentStore} from './lib/investment-store.js';
+import {createCashStore} from './lib/cash-store.js';
+import {fetchFundamentals} from './lib/fundamentals.js';
 import {createPerformanceStore} from './lib/performance-store.js';
 import {createHistoryStore} from './lib/history-store.js';
 import {createHistoryRecorder} from './lib/history-recorder.js';
@@ -29,8 +31,9 @@ const historyStore=createHistoryStore({publicRoots:[root]});
 const historyRecorder=createHistoryRecorder({store:historyStore});
 const performanceStore=createPerformanceStore({publicRoots:[root]});
 const investments=createInvestmentStore({publicRoots:[root,join(root,'..')]});
+const cashStore=createCashStore({publicRoots:[root,join(root,'..')]});
 const fetchTossHoldings=createTossReader({onSnapshot:historyRecorder.snapshot,onFailure:historyRecorder.failure});
-const bridge=createLocalBridge({port,devices:createDeviceStore({publicRoots:[root,join(root,'..')]}),readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
+const bridge=createLocalBridge({port,devices:createDeviceStore({publicRoots:[root,join(root,'..')]}),readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,cash:cashStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host}`);
@@ -58,6 +61,11 @@ http.createServer(async (request, response) => {
     if (url.pathname === '/api/dart') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       try { const data = await fetchCompanyBrief(url.searchParams.get('code') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(data)); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+    }
+    if (url.pathname === '/api/fundamentals') {
+      if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
+      try { const data = await fetchFundamentals(url.searchParams.get('symbol') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'private, max-age=600'}); return response.end(JSON.stringify(data)); }
       catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
     }
     if (url.pathname === '/api/news') {
@@ -95,7 +103,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|brief-ui\.js|brief\.css|lab-ui\.js|lab\.css|lib\/(?:strategy-lab|backtest|oos-validation|market-brief|asset-timeline|trade-review|market-reasons|trading-habits|dca-advisor|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|brief-ui\.js|brief\.css|lab-ui\.js|lab\.css|portfolio-ui\.js|lib\/(?:client-data|strategy-lab|stock-score|move-explain|portfolio-advice|backtest|oos-validation|market-brief|asset-timeline|trade-review|market-reasons|trading-habits|dca-advisor|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");

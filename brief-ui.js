@@ -1,7 +1,12 @@
 // 내 자산 홈: 왼쪽은 숫자 요약 · 월별 자산 · 오늘 시장 이유 · 매매 성적표, 오른쪽은 보유 종목.
 // 실제 보유·주문 자료는 이 탭의 메모리에서만 쓰고 저장·전송하지 않는다(시세·뉴스·공시 조회에는 종목 이름·코드만 보낸다).
 import { composeBrief } from '/lib/market-brief.js';
-import { adviseDca } from '/lib/dca-advisor.js';
+import { classifyHeadline, relevantTo } from '/lib/market-brief.js';
+import { explainMove } from '/lib/move-explain.js';
+import { scoreStock } from '/lib/stock-score.js';
+import { TARGETS } from '/lib/portfolio-advice.js';
+import { findBestFit, periodStart } from '/lib/strategy-lab.js';
+import { fundamentals, candles, indexSeries as sharedIndex, getStyle } from '/lib/client-data.js';
 import { buildAssetTimeline, koreaDay } from '/lib/asset-timeline.js';
 import { reviewTrades } from '/lib/trade-review.js';
 import { marketReasons, marketQuery } from '/lib/market-reasons.js';
@@ -66,7 +71,8 @@ if (!mount()) {
 }
 window.addEventListener('teamquant:page', () => { if (root.isConnected) mount(); });
 
-let snapshot = null, briefs = new Map(), epoch = 0, reasons = {}, dca = null;
+let snapshot = null, briefs = new Map(), epoch = 0, reasons = {}, funds = new Map(), cashInfo = null;
+const fitCache = new Map();
 const series = new Map();
 
 async function getJson(url, signal) {
@@ -155,7 +161,7 @@ function renderKpis(positions) {
   const dayPct = Number.isFinite(daily) && value ? daily / (value - daily) * 100 : weighted;
   const when = snapshot?.fetchedAt ? new Date(snapshot.fetchedAt).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }) : '';
   const tiles = [
-    ['지금 평가액', won(value), `${positions.length}종목 · ${when} 조회 · 현금 제외`, ''],
+    ['지금 평가액', won(value), cashInfo ? `현금 포함 총자산 ${won(value + cashInfo.amount)}` : `${positions.length}종목 · ${when} 조회 · 현금 제외`, ''],
     ['넣은 돈 (매입 원금)', won(cost), positions.some(p => p.currency === 'USD') ? '달러 종목은 현재 환율로 환산' : '지금 보유 종목을 산 금액', ''],
     ['평가 손익', signedWon(gain), cost ? `수익률 ${pct(gain / cost * 100)}` : '', toneClass(gain)],
     ['오늘 변동', Number.isFinite(daily) ? signedWon(daily) : Number.isFinite(dayPct) ? pct(dayPct) : '계산 중…', Number.isFinite(daily) ? pct(dayPct) : '보유 비중 기준', toneClass(Number.isFinite(daily) ? daily : dayPct)]
@@ -164,56 +170,74 @@ function renderKpis(positions) {
 }
 
 // ── 보유 종목(오른쪽) ────────────────────────────────────────
-function oneLiner(b) {
+
+function oneLiner(b, p) {
   if (!b) return '<span class="hm-muted">오늘 움직임 분석 중…</span>';
   if (!b.available) return esc(b.headline);
-  const c = b.causes[0], r = reasons[scopeOf(b.currency)], theme = r?.themes?.slice(0, 2).map(t => t.label).join(', ');
-  if (b.price.moveRatio !== null && b.price.moveRatio < 0.6) return '평소 범위의 작은 움직임';
-  if (c?.kind === 'market') return `${esc(b.marketName)} ${pct(b.move.market)} 흐름에 따라 ${b.price.dayReturn < 0 ? '하락' : '상승'}${theme ? ` · 시장 이유: <b>${esc(theme)}</b>` : ''}`;
-  if (c && c.kind !== 'unknown' && c.fits !== false && c.confidence !== 'low') return esc(c.title.replace(/^\d{4}-\d{2}-\d{2} /, ''));
-  return '시장과 따로 움직임 · 같은 시점의 관련 기사·공시 없음';
+  const f = funds.get(b.symbol), e = explainMove(b, { market: reasons[scopeOf(b.currency)], sectorName: f?.sector, sectorToday: f?.sectorToday });
+  const theme = reasons[scopeOf(b.currency)]?.themes?.slice(0, 2).map(t => t.label).join(', ');
+  if (e.size === 'small') return '평소보다 작은 움직임';
+  if (e.marketLed) return `${esc(b.marketName)} ${pct(b.move.market)} 흐름을 따라 ${b.price.dayReturn < 0 ? '하락' : '상승'}${theme ? ` · 시장 이유: <b>${esc(theme)}</b>` : ''}`;
+  if (e.sectorLed) return `${esc(f.sector)} 업종 전체 ${pct(f.sectorToday)} 흐름`;
+  const fit = e.evidence.find(x => x.fit === 'match');
+  if (fit) return `${esc(fit.kind === 'disclosure' ? '공시' : fit.label.replace(/ 관련 기사 \d+건$/, '') + ' 기사')}: ${esc(fit.title).slice(0, 40)}`;
+  return e.size === 'normal' ? '평소 범위의 움직임 · 특별한 원인 없음' : '평소보다 큰 움직임 · 방향이 맞는 기사·공시 없음';
 }
 function renderList(positions) {
-  const list = [...positions].sort((a, b) => (b.valueKrw || 0) - (a.valueKrw || 0));
-  const verdicts = new Map((dca?.items || []).map(x => [x.symbol, x]));
+  const list = [...positions].sort((a, b) => (b.valueKrw || 0) - (a.valueKrw || 0)), style = getStyle();
   $('#hm-count').textContent = `${list.length}종목`;
   $('#hm-list').innerHTML = list.map((p, i) => {
-    const b = briefs.get(p.symbol), day = b?.available ? b.price.dayReturn : null, v = verdicts.get(p.symbol);
+    const b = briefs.get(p.symbol), day = b?.available ? b.price.dayReturn : null, f = funds.get(p.symbol);
+    const j = f && !f.error ? scoreStock(f, { style, price: p.price, brief: b, weightPct: p.weightPct, weightLimit: TARGETS[style].single }) : null;
     return `<li style="--i:${i}"><button type="button" data-symbol="${esc(p.symbol)}">
       <div class="hm-row"><strong>${esc(p.name)}</strong><span class="hm-day ${toneClass(day)}">${day === null ? '' : pct(day)}</span></div>
       <div class="hm-row hm-sub"><span>${won(p.valueKrw)}</span><span class="${toneClass(p.returnPct)}">내 수익 ${pct(p.returnPct)}</span></div>
       <div class="hm-weight" title="보유 비중"><i style="--w:${Math.max(2, p.weightPct || 0).toFixed(1)}%"></i><small>${Number.isFinite(p.weightPct) ? p.weightPct.toFixed(0) + '%' : ''}</small></div>
-      <p class="hm-reason">${oneLiner(b)}</p>
-      ${v ? `<span class="hm-tag v-${v.verdict}">적립: ${esc(v.label)}</span>` : ''}
+      <p class="hm-reason">${oneLiner(b, p)}</p>
+      ${j ? `<span class="pf-stance ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}">${esc(j.label)}</span>` : ''}
     </button></li>`;
   }).join('') || '<li class="hm-empty">보유 주식이 없습니다.</li>';
   $('#hm-list').querySelectorAll('button[data-symbol]').forEach(btn => btn.onclick = () => openDetail(btn.dataset.symbol));
 }
 
+
 // ── 종목 상세(대화상자) ──────────────────────────────────────
-function openDetail(symbol) {
-  const b = briefs.get(symbol), p = snapshot?.positions?.find(x => x.symbol === symbol);
-  $('#hm-d-title').textContent = p?.name || symbol;
+let detailRun = 0;
+async function openDetail(symbol) {
+  const run = ++detailRun, b = briefs.get(symbol), p = snapshot?.positions?.find(x => x.symbol === symbol);
+  $('#hm-d-title').textContent = p?.name || nameOf(symbol);
   $('#hm-d-sub').textContent = `${symbol}${b?.available ? ` · 오늘 ${pct(b.price.dayReturn)}` : ''}${p ? ` · 내 수익 ${pct(p.returnPct)}` : ''}`;
-  $('#hm-d-body').innerHTML = !b ? '<p class="hm-note">아직 분석 중입니다. 잠시 뒤 다시 눌러 주십시오.</p>' : !b.available ? `<p class="hm-note">${esc(b.headline)}</p>` : detailHtml(b, p);
-  $('#hm-d-body').querySelectorAll('[data-count]').forEach(countUp);
-  if (!dialog.open) dialog.showModal();
+  const draw = () => { if (run !== detailRun) return; $('#hm-d-body').innerHTML = !b ? '<p class="hm-note">아직 분석 중입니다. 잠시 뒤 다시 눌러 주십시오.</p>' : !b.available ? `<p class="hm-note">${esc(b.headline)}</p>` : detailHtml(b, p); };
+  draw(); if (!dialog.open) dialog.showModal();
+  if (!b?.available) return;
+  if (!funds.has(symbol)) { try { funds.set(symbol, await fundamentals(symbol)); } catch (e) { funds.set(symbol, { error: e.message }); } draw(); }
+  if (!fitCache.has(symbol)) { try { const d = await candles(symbol, b.currency), idx = await sharedIndex(d.index[0]).catch(() => null); fitCache.set(symbol, findBestFit(d.candles, idx?.candles || [], periodStart(today(), 12))); } catch (e) { fitCache.set(symbol, { available: false, message: e.message }); } draw(); }
 }
+const ROW = (label, value, note, t = 0) => `<div class="hm-kv"><span><i class="hm-dot ${t > 0 ? 'good' : t < 0 ? 'bad' : ''}"></i>${label}</span><b>${value}</b><small>${note}</small></div>`;
+
 function detailHtml(b, p) {
-  const r = reasons[scopeOf(b.currency)], v = dca?.items?.find(x => x.symbol === b.symbol);
-  const marketBox = b.causes[0]?.kind === 'market' && r?.available ? `<div class="hm-mkt-box"><b>${esc(b.marketName)}가 ${pct(b.move.market)} 움직인 이유 · 장 마감 기사</b><p>${esc(r.summary)}</p>${r.articles.slice(0, 2).map(a => safeUrl(a.link) ? `<a href="${esc(safeUrl(a.link))}" target="_blank" rel="noopener noreferrer">${esc(a.title)}</a>` : '').join('')}</div>` : '';
-  return `<article class="rp-card open hm-detail-card"><div class="rp-detail"><div class="rp-detail-inner">
-    <h4>오늘 움직임 나누기</h4>${decompositionBar(b.move)}${gauge(b.price)}
-    <h4>왜 움직였나</h4>${marketBox}<ul class="rp-causes">${b.causes.map(c => `<li class="c-${c.confidence}"><span class="rp-conf">${CONF[c.confidence]}</span><div><b>${esc(c.title)}</b><p>${esc(c.detail)}</p>${c.link && safeUrl(c.link) ? `<a href="${esc(safeUrl(c.link))}" target="_blank" rel="noopener noreferrer">${c.kind === 'disclosure' ? '공시 원문' : '기사 보기'}${c.source ? ' · ' + esc(c.source) : ''}</a>` : ''}</div></li>`).join('') || '<li><div><b>시장과 비슷하게 움직였습니다</b></div></li>'}</ul>
-    ${chart(b, b.candles || [], b.indexCandles || [], p?.avgCost)}
-    <h4>큰 흐름</h4><div class="rp-context">${b.context.map(x => `<div class="${toneClass(x.tone)}"><span>${esc(x.label)}</span><b>${esc(x.value)}</b></div>`).join('')}</div>
-    <h4>실적</h4>${finTable(b.financials)}
-    ${b.disclosures.length || b.news.length ? `<h4>최근 공시·기사</h4><ul class="rp-list">${b.disclosures.map(d => `<li><span class="rp-tag d">공시</span>${esc(d.date)} ${safeUrl(d.link) ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>` : esc(d.title)}</li>`).join('')}${b.news.map(n => `<li><span class="rp-tag n">${esc(n.categoryLabel)}</span>${esc(n.date)} ${safeUrl(n.link) ? `<a href="${esc(safeUrl(n.link))}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>` : esc(n.title)}</li>`).join('')}</ul>` : ''}
-    ${v ? `<h4>적립식이라면: ${esc(v.label)}</h4><ul class="hm-lines">${v.reasons.map(x => `<li class="${toneClass(x.tone)}">${esc(x.text)}</li>`).join('')}</ul>` : ''}
-    <div class="rp-checks"><h4>지금 점검할 것</h4><ol>${b.checks.map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>
-    <p class="rp-muted">${esc(b.caveat)}</p>
-  </div></div></article>`;
+  const f = funds.get(b.symbol), fund = f && !f.error ? f : null, r = reasons[scopeOf(b.currency)], style = getStyle();
+  const e = explainMove(b, { market: r, sectorName: fund?.sector, sectorToday: fund?.sectorToday });
+  const j = fund ? scoreStock(fund, { style, price: p?.price, brief: b, weightPct: p ? current().find(x => x.symbol === p.symbol)?.weightPct : null, weightLimit: TARGETS[style].single }) : null;
+  const fit = fitCache.get(b.symbol);
+  const FIT = { match: ['같은 방향', 'up'], opposite: ['반대 방향', 'down'], neutral: ['방향 무관', 'flat'] };
+  const marketArticles = e.marketLed && r?.available ? r.articles.slice(0, 2).map(a => ({ title: a.title, link: a.link, source: a.sourceHost, label: `${b.marketName} 마감 기사`, fit: 'match' })) : [];
+  const allNews = (b.allNews || []).filter(n => !e.evidence.some(x => x.link === n.link));
+  return `<div class="hm-detail">
+    ${j ? `<section class="hm-verdict-box ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}"><span class="pf-stance ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}">${esc(j.label)}</span><p>${esc(j.summary)}${j.notes.length ? ' ' + esc(j.notes.join(' ')) : ''}</p><small>${esc(j.styleLabel)} 성향 기준 · 성향은 "포트폴리오" 화면에서 바꿀 수 있습니다.</small></section>` : fund === null && !f ? '<p class="hm-note">투자 지표를 불러오는 중…</p>' : ''}
+    <section><h4>오늘 왜 움직였나</h4><p class="hm-conclusion">${esc(e.conclusion)}</p>${decompositionBar(b.move)}
+      ${[...marketArticles, ...e.evidence].length ? `<ul class="hm-evidence">${[...marketArticles, ...e.evidence].map(x => `<li><span class="hm-fit ${FIT[x.fit][1]}">${FIT[x.fit][0]}</span><div><small>${esc(x.label)}</small>${safeUrl(x.link) ? `<a href="${esc(safeUrl(x.link))}" target="_blank" rel="noopener noreferrer">${esc(x.title)}</a>` : `<b>${esc(x.title)}</b>`}</div></li>`).join('')}</ul>` : ''}</section>
+    <section><h4>투자 지표 ${fund ? `<small>${esc(fund.sector || '')}${fund.annual?.year ? ` · ${esc(fund.annual.year)} 실적` : ''}</small>` : ''}</h4>
+      ${fund ? `${fund.business ? `<p class="hm-biz">${esc(fund.business)}</p>` : ''}<div class="hm-kvs">${(j?.factors || []).map(x => ROW(esc(x.label), esc(x.value), esc(x.text), x.tone)).join('')}${Number.isFinite(fund.pbr) ? ROW('PBR', `${fund.pbr}배`, fund.pbr < 1 ? '장부상 자산보다 싸게 거래됩니다.' : '장부상 자산 대비 주가 수준입니다.', 0) : ''}</div>${fund.peers?.length ? `<p class="hm-note">비슷한 회사: ${esc(fund.peers.join(', '))}</p>` : ''}<p class="hm-note">출처: ${esc(fund.source)}</p>` : f?.error ? `<p class="hm-note">투자 지표를 불러오지 못했습니다 (${esc(f.error)}).</p>` : '<div class="shimmer rp-line"></div>'}</section>
+    <section><h4>이 종목에 맞았던 매매 방식</h4>${!fit ? '<div class="shimmer rp-line short"></div>' : !fit.available ? `<p class="hm-note">${esc(fit.message)}</p>` : `<p>${esc(fit.advice)}</p><div class="hm-fit-rows">${fit.rows.map(x => `<span>${esc(x.title)} <b class="${toneClass(x.edge)}">${x.edge > 0 ? '+' : ''}${x.edge}%p</b></span>`).join('')}</div><p class="hm-note">숫자는 그냥 들고 있기 대비 차이(최근 1년, 비용 포함). ${esc(fit.caveat)}</p>`}</section>
+    <section><h4>최근 흐름</h4>${chart(b, b.candles || [], b.indexCandles || [], p?.avgCost)}<div class="hm-kvs">${b.context.map(x => ROW(esc(x.label), esc(x.value), '', x.tone)).join('')}</div></section>
+    ${b.financials ? `<section><h4>분기 실적</h4>${finTable(b.financials)}</section>` : ''}
+    ${b.disclosures.length || allNews.length ? `<section><h4>최근 공시·기사</h4><ul class="hm-news">${b.disclosures.map(d => `<li><span class="rp-tag d">공시</span><small>${esc(d.date)}</small>${safeUrl(d.link) ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>` : esc(d.title)}</li>`).join('')}${allNews.slice(0, 8).map(n => `<li><span class="rp-tag n">${esc(n.categoryLabel)}</span><small>${esc(n.date)}</small>${safeUrl(n.link) ? `<a href="${esc(safeUrl(n.link))}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>` : esc(n.title)}</li>`).join('')}</ul></section>` : ''}
+    <section><h4>지금 점검할 것</h4><ol class="hm-checks">${b.checks.map(x => `<li>${esc(x)}</li>`).join('')}</ol></section>
+    <p class="hm-note">${esc(b.caveat)} 매수·매도 권유가 아닙니다.</p>
+  </div>`;
 }
+
 function countUp(node) {
   const target = Number(node.dataset.count); if (!Number.isFinite(target) || reduceMotion) return;
   const t0 = performance.now(), dur = 700;
@@ -342,15 +366,17 @@ async function loadBriefs(positions, run, signal) {
       const b = composeBrief({ name: p.name, symbol: p.symbol, currency: p.currency, marketName: data.index[1], candles: data.candles, indexCandles: idx?.candles || [],
         news: news?.items || [], disclosures: Array.isArray(dart?.disclosures) ? dart.disclosures : [], financials: dart?.financials && !dart.financials.error ? dart.financials : null,
         holding: { weightPct: p.weightPct, returnPct: p.returnPct, avgCost: p.avgCost, quantity: p.quantity } });
-      Object.assign(b, { marketName: data.index[1], candles: data.candles, indexCandles: idx?.candles || [], errors });
+      // 뉴스 종합: 제목에 회사 이름이 있는 최근 기사 전체의 분위기(좋은 소식/나쁜 소식)를 센다.
+      const allNews = (news?.items || []).filter(n => n?.title && n.publishedAt && relevantTo(p.name, n.title)).map(n => ({ ...n, date: n.publishedAt.slice(0, 10), ...classifyHeadline(n.title, n.description) }));
+      Object.assign(b, { marketName: data.index[1], candles: data.candles, indexCandles: idx?.candles || [], errors, allNews, newsTone: allNews.map(n => n.tone) });
       briefs.set(p.symbol, b);
+      window.dispatchEvent(new CustomEvent('teamquant:brief', { detail: { symbol: p.symbol, brief: b } }));
     } catch (e) {
       if (e.name === 'AbortError' || run !== epoch) return;
       briefs.set(p.symbol, { name: p.name, symbol: p.symbol, available: false, headline: `시세를 가져오지 못했습니다 (${e.message}).` });
     }
   });
   for (let k = 0; k < tasks.length; k += 3) { await Promise.all(tasks.slice(k, k + 3).map(t => t())); if (run !== epoch) return; renderList(positions); }
-  dca = adviseDca(positions, Object.fromEntries(briefs), null);
   renderList(positions); renderKpis(positions);
 }
 
@@ -366,20 +392,30 @@ function current() {
 async function build() {
   if (!snapshot?.positions) return;
   const run = ++epoch, controller = new AbortController(); build.controller?.abort(); build.controller = controller;
-  briefs = new Map(); reasons = {}; dca = null;
+  briefs = new Map(); reasons = {};
   const positions = current();
   document.querySelector('#overview')?.classList.add('hm-loaded');
   renderKpis(positions); renderList(positions);
   $('#hm-trend-chart').innerHTML = '<div class="shimmer hm-chart-skel"></div>'; $('#hm-grade-body').innerHTML = '<div class="shimmer rp-line"></div><div class="shimmer rp-line short"></div>';
   $('#hm-why-body').innerHTML = '<div class="shimmer rp-line"></div><div class="shimmer rp-line short"></div>';
   if (!positions.length) return;
-  await Promise.allSettled([loadBriefs(positions, run, controller.signal), loadReasons(positions, run, controller.signal), loadHistory(positions, run, controller.signal)]);
+  await Promise.allSettled([loadBriefs(positions, run, controller.signal), loadReasons(positions, run, controller.signal), loadHistory(positions, run, controller.signal), loadFunds(positions, run)]);
 }
 
 window.addEventListener('teamquant:asset-snapshot', e => { snapshot = e.detail; void build(); });
 window.addEventListener('teamquant:asset-clear', () => {
-  epoch++; build.controller?.abort(); snapshot = null; briefs = new Map(); reasons = {}; dca = null; series.clear();
+  epoch++; build.controller?.abort(); snapshot = null; briefs = new Map(); reasons = {}; cashInfo = null; series.clear();
   document.querySelector('#overview')?.classList.remove('hm-loaded'); if (dialog.open) dialog.close();
   $('#hm-list').innerHTML = '<li class="hm-empty">화면의 자산 정보를 지웠습니다.</li>'; $('#hm-count').textContent = '';
   $('#hm-trend-chart').replaceChildren(); $('#hm-trend-note').replaceChildren(); $('#hm-grade-body').replaceChildren(); $('#hm-why-body').replaceChildren();
 });
+
+async function loadFunds(positions, run) {
+  for (let k = 0; k < positions.length; k += 3) {
+    await Promise.all(positions.slice(k, k + 3).map(async p => { if (funds.has(p.symbol) && !funds.get(p.symbol).error) return; try { funds.set(p.symbol, await fundamentals(p.symbol)); } catch (e) { funds.set(p.symbol, { error: e.message }); } }));
+    if (run !== epoch) return; renderList(current());
+  }
+}
+window.addEventListener('teamquant:open-stock', e => { const s = e.detail?.symbol; if (s) void openDetail(s); });
+window.addEventListener('teamquant:cash', e => { cashInfo = e.detail; if (snapshot) renderKpis(current()); });
+window.addEventListener('teamquant:style', () => { if (snapshot) renderList(current()); });

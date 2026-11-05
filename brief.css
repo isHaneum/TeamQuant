@@ -173,3 +173,27 @@ i.mkt{background:var(--mkt)}i.own,i.stk{background:var(--own)}i.mark{background:
 @media(prefers-reduced-motion:reduce){.hm-chart .bar,.hm-kpis>div,.hm-list li{animation:none}}
 @media(max-width:1180px){.hm{grid-template-columns:minmax(0,1fr) 320px}.hm-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:920px){.hm{display:flex;flex-direction:column;gap:16px}.hm-main{display:contents}#hm-kpis{order:1}.hm-side{order:2;position:static;max-height:none}#hm-trend{order:3}#hm-why{order:4}#hm-grade{order:5}.hm-grade-grid{grid-template-columns:1fr}.hm-kpis b{font-size:20px}.hm-card{padding:16px}}
+
+/* 2026-11-05 b: 넓은 화면 활용 + 종목 상세 정리 */
+#overview.hm-home{max-width:1840px}
+@media(min-width:1600px){.hm{grid-template-columns:minmax(0,1fr) 420px}}
+.hm .pf-stance{margin-top:6px}
+.hm-detail{padding:4px 24px 20px}.hm-detail section{padding:16px 0;border-bottom:1px solid #eef0f3}.hm-detail section:last-of-type{border-bottom:0}
+.hm-detail h4{margin:0 0 10px;font-size:15px;font-weight:700}.hm-detail h4 small{font-weight:400;color:#5b6573;font-size:12.5px;margin-left:6px}
+.hm-verdict-box{display:grid;gap:6px;padding:14px 16px!important;border-radius:14px;border:0!important;margin-top:12px}.hm-verdict-box p{margin:0;font-size:14px;color:#14171c;line-height:1.6}.hm-verdict-box small{color:#5b6573;font-size:12px}
+.hm-verdict-box.s-buy{background:#fff5f5}.hm-verdict-box.s-hold{background:#f6f7f9}.hm-verdict-box.s-trim{background:#f3f7ff}.hm-verdict-box.s-unknown{background:#f6f7f9}.hm-verdict-box .pf-stance{justify-self:start;background:#fff}
+.hm-conclusion{margin:0 0 12px;font-size:15px;line-height:1.7}
+.hm-evidence{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}.hm-evidence li{display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:start}
+.hm-fit{font-size:11px;font-weight:700;text-align:center;border-radius:6px;padding:3px 0;background:#f4f4f5;color:#52525b}.hm-fit.up{background:#fdecec;color:#b42318}.hm-fit.down{background:#e8f0fe;color:#1d4fb8}
+.hm-evidence small{display:block;font-size:11.5px;color:#5b6573}.hm-evidence a,.hm-evidence b{font-size:13.5px;color:#14171c;line-height:1.5;font-weight:500}
+.hm-kvs{display:grid}.hm-kv{display:grid;grid-template-columns:170px 160px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid #f1f3f5;align-items:baseline}.hm-kv:last-child{border-bottom:0}
+.hm-kv span{font-size:13px;color:#5b6573}.hm-kv b{font-size:14px;font-weight:650;font-variant-numeric:tabular-nums;color:#14171c}.hm-kv b.up{color:#d92d20}.hm-kv b.down{color:#1d4fb8}.hm-kv small{font-size:12.5px;color:#5b6573;line-height:1.5}
+.hm-biz{font-size:13px;color:#3b4350;line-height:1.6;margin:0 0 8px}
+.hm-fit-rows{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.hm-fit-rows span{font-size:12.5px;background:#f6f7f9;border-radius:8px;padding:5px 9px}.hm-fit-rows .up{color:#d92d20}.hm-fit-rows .down{color:#1d4fb8}
+.hm-news{list-style:none;margin:0;padding:0;display:grid;gap:7px}.hm-news li{display:flex;gap:8px;align-items:baseline;font-size:13.5px}.hm-news small{color:#8a93a1;font-size:11.5px;white-space:nowrap}.hm-news a{color:#14171c}
+.hm-checks{margin:0;padding-left:20px;display:grid;gap:4px;font-size:14px;line-height:1.6}
+.hm-detail .rp-chart{max-width:none}
+@media(max-width:640px){.hm-detail{padding:4px 14px 16px}.hm-kv{grid-template-columns:1fr auto}.hm-kv small{grid-column:1/-1}.hm-evidence li{grid-template-columns:1fr}}
+.hm-dialog{max-width:none!important;width:min(960px,calc(100% - 24px))!important}
+.hm-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#d0d5dd;margin-right:8px;vertical-align:1px}.hm-dot.good{background:#12b76a}.hm-dot.bad{background:#f79009}
+.hm-detail .rp-chart .stk{stroke-dasharray:none;stroke-dashoffset:0;animation:none}

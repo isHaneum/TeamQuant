@@ -1,6 +1,6 @@
 // 전략 테스트 한 화면: ① 방식 → ② 종목 → ③ 기간 → 결과(그냥 들고 있기·시장과 비교).
 // 기존 4단계 화면(원칙 승인·과거 검증·투자금 계산·모의 운용)은 지우지 않고 "더보기"에서 연다.
-import { PRESETS, CUSTOM_EXAMPLES, strategyConfig, periodStart, runLabTest } from '/lib/strategy-lab.js';
+import { PRESETS, CUSTOM_EXAMPLES, strategyConfig, periodStart, runLabTest, findBestFit, josa } from '/lib/strategy-lab.js';
 import { resolveStockInput, stockName } from '/lib/instruments.js';
 
 const $ = s => document.querySelector(s);
@@ -15,6 +15,7 @@ const nav = document.createElement('button'); nav.className = 'nav-button'; nav.
 const page = document.createElement('section'); page.className = 'view'; page.dataset.page = 'quicktest'; page.id = 'quicktest';
 page.innerHTML = `
 <div class="page-head"><div><h1>전략 테스트</h1><p>"이 방식대로 사고팔았다면 얼마였을까?"를 과거 시세로 확인합니다. 실제 주문은 하지 않습니다.</p></div></div>
+<p class="lt-guide"><b>무엇을 살지</b>는 "포트폴리오" 화면의 종목 성적표(PER·ROE·배당 등)로, <b>언제 사고팔지</b>는 여기서 정합니다. 방식이 고민되면 종목을 고른 뒤 <b>4가지 방식 한 번에 비교</b>를 누르십시오.</p>
 <div class="lt">
   <form class="lt-form" id="lt-form">
     <fieldset><legend><b>1</b> 어떻게 사고팔까요?</legend>
@@ -33,6 +34,7 @@ page.innerHTML = `
       <div class="lt-seg" role="radiogroup">${[[3, '최근 3개월'], [6, '6개월'], [12, '1년']].map(([m, l], i) => `<label><input type="radio" name="lt-period" value="${m}" ${i === 2 ? 'checked' : ''}><span>${l}</span></label>`).join('')}</div>
     </fieldset>
     <button class="primary lt-run" id="lt-run" type="submit">테스트하기</button>
+    <button class="secondary lt-run lt-compare" id="lt-compare" type="button">4가지 방식 한 번에 비교</button>
     <p class="lt-status" id="lt-status" role="status"></p>
   </form>
   <div class="lt-result" id="lt-result">
@@ -129,12 +131,21 @@ function renderAll(rows, s) {
 }
 
 async function start(job) {
-  const id = ++run; $('#lt-run').disabled = true; $('#lt-status').textContent = '과거 시세로 계산 중…';
+  const id = ++run; $('#lt-run').disabled = true; $('#lt-compare').disabled = true; $('#lt-status').textContent = '과거 시세로 계산 중…';
   $('#lt-result').innerHTML = '<div class="lt-card"><div class="shimmer lt-skel"></div><div class="shimmer lt-skel short"></div></div>';
   try { await job(id); if (id === run) $('#lt-status').textContent = ''; }
   catch (e) { if (id === run) { $('#lt-status').textContent = e.message; $('#lt-result').innerHTML = `<div class="lt-card"><p class="lt-warn">${esc(e.message)}</p></div>`; } }
-  finally { if (id === run) $('#lt-run').disabled = false; }
+  finally { if (id === run) { $('#lt-run').disabled = false; $('#lt-compare').disabled = false; } }
 }
+function renderFit(stock, fit, months) {
+  if (!fit.available) throw new Error(fit.message);
+  $('#lt-result').innerHTML = `<article class="lt-card"><p class="lt-eyebrow">${esc(stock.name)} · 4가지 방식 비교 · 최근 ${months}개월</p>
+    <h3 class="lt-verdict ${fit.fitsHold ? 'flat' : 'up'}">${fit.fitsHold ? '이 종목은 그냥 들고 있기가 가장 나았습니다.' : `"${esc(fit.best.title)}"${josa(fit.best.title, '이', '가')} 가장 잘 맞았습니다.`}</h3><p class="lt-sub">${esc(fit.advice)}</p>
+    <div class="table-wrap"><table class="lt-table"><thead><tr><th>방식</th><th>수익률</th><th>그냥 보유 대비</th><th>매매</th><th>지금 상태</th></tr></thead><tbody>${fit.rows.map(r => `<tr><td>${esc(r.title)}</td><td class="${tone(r.return)}">${pct(r.return)}</td><td class="${tone(r.edge)}"><b>${pp(r.edge)}</b></td><td>${r.trades}번</td><td>${r.holding ? '매수 상태' : '관망'}</td></tr>`).join('')}<tr><td>그냥 들고 있기</td><td class="${tone(fit.best.hold)}">${pct(fit.best.hold)}</td><td>기준</td><td>—</td><td>보유</td></tr></tbody></table></div>
+    <p class="lt-muted">${esc(fit.caveat)} 방식 하나를 골라 왼쪽에서 "테스트하기"를 누르면 사고판 날까지 자세히 볼 수 있습니다.</p></article>`;
+}
+$('#lt-compare').onclick = () => void start(async id => { const months = Number(page.querySelector('[name="lt-period"]:checked').value), stock = await chosenSymbol(), data = await candlesFor(stock.symbol), idx = await indexFor(data.index[0]).catch(() => null);
+  const fit = findBestFit(data.candles, idx?.candles || [], periodStart(today(), months)); if (id === run) renderFit(stock, fit, months); });
 $('#lt-form').onsubmit = e => { e.preventDefault(); void start(async id => { const s = setup(), stock = await chosenSymbol(), t = await testOne(stock, s); if (id === run) renderOne(t, s); }); };
 async function runAll() {
   await start(async id => { const s = setup(), rows = [];

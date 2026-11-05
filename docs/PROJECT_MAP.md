@@ -21,6 +21,7 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 | Home dashboard (KPIs, monthly assets, market reasons, trade grade, holdings list, stock modal) | `brief-ui.js`, `brief.css`, `lib/asset-timeline.js`, `lib/trade-review.js`, `lib/market-reasons.js`, `lib/market-brief.js`, `lib/dca-advisor.js`, `lib/dart.js` + `api/dart.js`, `test/home-dashboard.test.js`, `test/market-brief.test.js` |
 | Top menu (flat + 더보기) | `workspace-ui.js`, `workspace.css` |
 | One-screen strategy test (preset or sentence → stock → period → vs. buy-and-hold) | `lab-ui.js`, `lab.css`, `lib/strategy-lab.js` (uses `lib/backtest.js`, `lib/natural-language.js`), `test/strategy-lab.test.js` |
+| Investment metrics, stock verdict, cash, portfolio direction | `lib/fundamentals.js` + `api/fundamentals.js`, `lib/stock-score.js`, `lib/move-explain.js`, `lib/portfolio-advice.js`, `lib/cash-store.js` (bridge `cash-get`/`cash-set`), `lib/client-data.js`, `portfolio-ui.js`, `test/portfolio-insight.test.js` |
 | Out-of-sample split / tuning ledger (CAP-04) | `lib/oos-validation.js`, wiring in `app.js` (`runApprovedBacktest`, `renderOosHistory`), `test/oos-validation.test.js` |
 | Three-month counterfactual | `journey-ui.js`, `lib/comparison.js` |
 | Manual/demo/paper portfolio | `lib/portfolio.js`; presentation in `overview-ui.js` |
