@@ -24,3 +24,5 @@ main{min-width:0;padding:48px clamp(24px,5vw,72px) 100px}.view{display:none;max-
 .flow-wrap{position:sticky;top:70px;z-index:18}#comparison-result,#rule-review{scroll-margin-top:205px}
 
 .account-dev-tools{margin-top:32px;font-size:12px;color:#666}.account-dev-tools>summary{cursor:pointer;padding:12px 0}.account-dev-tools>button{padding:9px 12px;margin:12px 0;background:#fff;border:1px solid #bbb;border-radius:6px}
+
+/* CAP-04 표본 외 검증 */#verify-result .metrics{grid-template-columns:repeat(2,1fr)}#verify-result .metrics>div:nth-child(2n){border-right:0}#verify-result .metrics>div:nth-child(-n+2){border-bottom:1px solid var(--line)}#oos-history-box{margin:12px 0}#oos-history-box summary{cursor:pointer;font-weight:600;padding:8px 0}#oos-history .table-scroll{overflow-x:auto}#oos-history table{width:100%;min-width:640px;border-collapse:collapse;font-size:12px}#oos-history th,#oos-history td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;font-variant-numeric:tabular-nums}

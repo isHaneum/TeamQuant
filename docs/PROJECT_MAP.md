@@ -18,6 +18,7 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 | PC authorization | `lib/local-bridge.js`, `lib/device-store.js`, `lib/trusted-device.js`, `bridge-client.js`, `test/device-auth.test.js`, `test/local-bridge.test.js` |
 | Real holdings display | `toss-ui.js`; copied paper workspace / owned-basket tests: `asset-hub-ui.js`, `lib/asset-workspace.js` |
 | Strategy input | `lib/natural-language.js`, `lib/backtest.js`; approval wiring in `app.js` |
+| Out-of-sample split / tuning ledger (CAP-04) | `lib/oos-validation.js`, wiring in `app.js` (`runApprovedBacktest`, `renderOosHistory`), `test/oos-validation.test.js` |
 | Three-month counterfactual | `journey-ui.js`, `lib/comparison.js` |
 | Manual/demo/paper portfolio | `lib/portfolio.js`; presentation in `overview-ui.js` |
 | Price / products | `lib/market.js`, `lib/instruments.js`, `lib/product-catalog.js`, `lib/stocks.js` |
