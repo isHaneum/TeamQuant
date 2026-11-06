@@ -6,7 +6,8 @@ import { topPct, rankWord, driverText, symKey } from '/lib/company-lab.js';
 
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const p0 = v => Number.isFinite(v) ? `${v > 0 ? '+' : ''}${(v * 100).toFixed(0)}%` : '—';
-let O = null, L = null, snapshot = null;
+let O = null, L = null, S = null, snapshot = null;
+const pp = v => Number.isFinite(v) ? `${v > 0 ? '+' : ''}${(v * 100).toFixed(1)}%p` : '—', pc = v => Number.isFinite(v) ? `${v > 0 ? '+' : ''}${(v * 100).toFixed(0)}%` : '—';
 const card = document.createElement('article'); card.className = 'pf-card gr-card'; card.id = 'pf-growth';
 card.innerHTML = '<header><h3>성장 전망 (모델) <span id="gr-tip"></span></h3><p class="pf-muted" id="gr-sub">불러오는 중…</p></header><div id="gr-body"><p class="pf-muted">계좌를 불러오면 표시합니다.</p></div>';
 const $ = s => card.querySelector(s);
@@ -14,7 +15,8 @@ const $ = s => card.querySelector(s);
 function mount() { const main = document.querySelector('#portfolio .pf-main'); if (!main) return false; if (!card.isConnected) main.querySelector('.pf-card')?.after(card); return card.isConnected; }
 if (!mount()) { const mo = new MutationObserver(() => { if (mount()) mo.disconnect(); }); mo.observe(document.body, { childList: true, subtree: true }); }
 
-Promise.all([fetch('/data/growth-outlook.json?v=G2').then(r => r.ok ? r.json() : null), fetch('/data/growth-ledger.json?v=G2').then(r => r.ok ? r.json() : null)]).then(([o, l]) => { O = o; L = l; head(); render(); }).catch(() => { $('#gr-sub').textContent = '성장 전망 자료를 불러오지 못했습니다.'; });
+const get = f => fetch(`/data/${f}.json?v=G2S1`).then(r => r.ok ? r.json() : null).catch(() => null);
+Promise.all([get('growth-outlook'), get('growth-ledger'), get('growth-strategy')]).then(([o, l, st]) => { O = o; L = l; S = st; head(); render(); }).catch(() => { $('#gr-sub').textContent = '성장 전망 자료를 불러오지 못했습니다.'; });
 
 function head() {
   if (!O) return;
@@ -24,8 +26,16 @@ function head() {
     + `검증(2021~2025 표본 외, 같은 달·같은 시장 순위 상관): 이 모델 ${v.growth.ic} (95% ${v.growth.ci95.join('~')}), '올해 성장률 그대로' ${v.persist.ic}. 영업이익 성장 ${v.oi?.ic ?? '—'}. 연도별 ${Object.entries(v.byYear).filter(([y]) => y >= 2021).map(([y, x]) => `${y} ${x}`).join(' · ')}.\n`
     + `재무만 쓰면 ${v.financialOnly.ic}로 단순 기준과 차이가 없었습니다. 우위의 상당 부분은 주가에 담긴 시장의 기대(PSR·주가 흐름)라서, 이 전망이 좋다고 주가가 오른다는 뜻이 아닙니다(초과수익 예측 ${v.excess.ic}).\n`
     + `범위: 2021~2025년 같은 시장에서 같은 순위 구간(5등분)이던 기업들의 실제 1년 매출 성장 중앙값과 가운데 절반.\n`
-    + `기록부: 판단 ${L?.entries?.length ?? 0}건을 바꾸지 않고 남겨 두고, 결과가 공개되면 채웁니다. 지금까지 결과 확인 ${done.length}건${done.length ? `, 가운데 절반 범위 안 ${hit}건` : ''}.`);
-  $('#gr-sub').textContent = `${asOf} 기준 · 주가 판단은 하지 않음 · 연구 기업 98개 안의 순위`;
+    + `기록부: 판단 ${L?.entries?.length ?? 0}건을 바꾸지 않고 남겨 두고, 결과가 공개되면 채웁니다. 지금까지 결과 확인 ${done.length}건${done.length ? `, 가운데 절반 범위 안 ${hit}건` : ''}.`
+    + (S ? strategyText(S) : ''));
+  $('#gr-sub').textContent = `${asOf} 기준 · 매매 신호 아님 · 연구 기업 98개 안의 순위`;
+}
+// 이 전망으로 종목을 골랐다면(growth-strategy.mjs, 실행 전에 고정한 가설) → 화면에 '매매 신호 아님'을 쓰는 근거
+function strategyText(S) {
+  const c = S.combined?.check, p = S.combined?.pick, us = S.markets?.US?.check?.y2022, span = S.markets?.US?.check?.span;
+  if (!c?.H1_TOP_ALL || !span) return '';
+  return `\n전략 검증(${span[0]}~${span[1]}, 매월 교체, 배당·거래 비용 포함, 한국·미국 평균): 성장 상위 20%만 보유하면 같은 시장 연구 기업 전체보다 연 ${pp(c.H1_TOP_ALL.annual)}(95% ${pp(c.H1_TOP_ALL.ci95[0])}~${pp(c.H1_TOP_ALL.ci95[1])}), 하위 20%를 빼면 ${pp(c.H2_EXBOT_ALL.annual)}로 둘 다 0과 구별되지 않았습니다. `
+    + `2017~2020년에는 상위 20%가 연 ${pp(p?.H1_TOP_ALL?.annual)} 앞섰지만 그 뒤 사라졌습니다. 하락장에서는 성장 상위가 더 빠졌습니다(2022년 미국 ${pc(us?.TOP)}, 전체 ${pc(us?.ALL)}). 그래서 이 전망으로 종목을 고르거나 팔지 않습니다.`;
 }
 function render() {
   if (!O) return;

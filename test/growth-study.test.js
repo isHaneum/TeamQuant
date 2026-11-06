@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { knownAt, outcomeAfter, sharesAt, capAt, rankIn, driverText, symKey } from '../lib/company-lab.js';
 
 const read = f => JSON.parse(readFileSync(new URL(`../data/${f}`, import.meta.url), 'utf8'));
-const hist = read('company-history.json'), study = read('growth-study.json'), outlook = read('growth-outlook.json'), ledger = read('growth-ledger.json'), universe = read('growth-universe.json');
+const hist = read('company-history.json'), study = read('growth-study.json'), outlook = read('growth-outlook.json'), ledger = read('growth-ledger.json'), universe = read('growth-universe.json'), strategy = read('growth-strategy.json');
 
 // ── 시점 기준 계산(합성 자료) ──
 const Q = (end, avail, rev) => [end, avail, rev, rev / 10, rev / 20, rev * 2];
@@ -91,4 +91,12 @@ test('지금 전망과 기록부: 기준일·모델 버전·비교 집단이 있
   for (const e of ledger.entries) { assert.ok(e.asOf && e.modelVersion && e.group && e.trainedOnOutcomesThrough); if (e.actual) assert.ok(e.actual.knownAt <= e.actual.filledAt); }
   // 범위 보정표는 순위가 높을수록 실제 성장 중앙값이 높아야 의미가 있다
   for (const m of ['KR', 'US']) assert.ok(outlook.calibration[m][4].p50 > outlook.calibration[m][0].p50);
+});
+
+test('성장 전망으로 종목 고르기는 표본 외에서 수익이 없다(화면의 "매매 신호 아님" 근거)', () => {
+  const c = strategy.combined.check;
+  assert.equal(strategy.modelVersion, hist.model.version, '같은 모델 판단으로 검증');
+  assert.ok(c.months >= 60 && c.H1_TOP_ALL.ci95[0] < 0 && c.H2_EXBOT_ALL.ci95[0] < 0, '상위 보유·하위 제외 모두 0과 구별되지 않음');
+  assert.ok(strategy.markets.US.check.y2022.TOP < strategy.markets.US.check.y2022.ALL, '2022년 미국 성장 상위가 더 빠짐');
+  for (const m of ['KR', 'US']) assert.ok(Math.abs(strategy.markets[m].check.drawdownRisk.afterVolT) < 1.96, `${m}: 낙폭 정보는 지난 변동성을 넘지 않음`);
 });
