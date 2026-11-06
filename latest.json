@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-06T22:48:21.627Z",
+ "updatedAt": "2026-11-06T23:11:12.216Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -121,20 +121,20 @@
   }
  ],
  "spikes": {
-  "war": 0.2,
-  "politics": 0.7,
-  "rates": 1.1,
-  "trade": -0.8,
+  "war": 0.8,
+  "politics": 0.6,
+  "rates": 1.6,
+  "trade": -0.4,
   "fx": -0.2,
-  "energy": 1.2,
-  "market": 0.2,
+  "energy": 1.4,
+  "market": 0.3,
   "credit": 0,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 1.7,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
@@ -144,12 +144,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 2,
+   "rate": 2.4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 1.5,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 5.9,
+   "rate": 6.1,
    "saturated": 2,
    "queries": 3
   },
@@ -224,8 +224,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 67,
-    "spike": 0.7,
+    "score": 66,
+    "spike": 0.6,
     "news": true,
     "reaction": {
      "symbol": "KRW=X",
@@ -237,64 +237,6 @@
     "why": [
      "핵심 단어",
      "원/달러 +1.76%(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "e6iupy",
-   "title": "[뉴욕마감] 기술주 반등에 나스닥 1.09%↑…저가 매수세 유입",
-   "firstSeen": "2026-11-06T14:56:00.000Z",
-   "lastSeen": "2026-11-06T22:46:00.000Z",
-   "count": 10,
-   "sources": 9,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "뉴욕증시, AI 투매 진정에 기술주 반등⋯다우는 하락 [상보]",
-     "link": "https://www.etoday.co.kr/news/view/2645264",
-     "host": "etoday.co.kr",
-     "at": "2026-11-06T22:46:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI 투매 진정에 혼조⋯나스닥 1.09%↑[종합]",
-     "link": "https://www.etoday.co.kr/news/view/2645267",
-     "host": "etoday.co.kr",
-     "at": "2026-11-06T22:46:00.000Z"
-    },
-    {
-     "title": "[오늘의 글로벌마켓] 뉴욕증시, 혼조 양상 마감...기술주는 일제히 반등",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=146795",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-06T22:40:00.000Z"
-    },
-    {
-     "title": "폭락했던 AI 기술주 반등…나스닥 1.1% ↑ [뉴욕증시 브리핑]",
-     "link": "https://www.hankyung.com/article/2026110719317",
-     "host": "hankyung.com",
-     "at": "2026-11-06T22:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 65,
-    "spike": 0.2,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.2배)"
     ]
    }
   },
@@ -324,7 +266,48 @@
     "level": "watch",
     "label": "관찰",
     "score": 61,
-    "spike": 0.7,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.76,
+     "unit": "%",
+     "z": 2.8
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 +1.76%(평소의 2.8배)"
+    ]
+   }
+  },
+  {
+   "id": "weturr",
+   "title": "이란 혁명수비대 \"호르무즈서 유조선 2척 기뢰 충돌해 화재\"",
+   "firstSeen": "2026-11-06T08:59:00.000Z",
+   "lastSeen": "2026-11-06T08:59:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "이란 혁명수비대 \"호르무즈서 유조선 2척 기뢰 충돌해 화재\"",
+     "link": "https://www.news1.kr/world/middleeast-africa/6346120",
+     "host": "news1.kr",
+     "at": "2026-11-06T08:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 61,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -365,48 +348,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 61,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 1.76,
-     "unit": "%",
-     "z": 2.8
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 +1.76%(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "weturr",
-   "title": "이란 혁명수비대 \"호르무즈서 유조선 2척 기뢰 충돌해 화재\"",
-   "firstSeen": "2026-11-06T08:59:00.000Z",
-   "lastSeen": "2026-11-06T08:59:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "이란 혁명수비대 \"호르무즈서 유조선 2척 기뢰 충돌해 화재\"",
-     "link": "https://www.news1.kr/world/middleeast-africa/6346120",
-     "host": "news1.kr",
-     "at": "2026-11-06T08:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 57,
-    "spike": 0.2,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -445,8 +387,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 57,
-    "spike": 0.2,
+    "score": 61,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -462,12 +404,70 @@
    }
   },
   {
+   "id": "am38ah",
+   "title": "뉴욕증시, AI 기술주 투매에 급락…머스크 관련주 ‘폭락’",
+   "firstSeen": "2026-11-06T10:03:00.000Z",
+   "lastSeen": "2026-11-06T23:02:00.000Z",
+   "count": 5,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[데일리 머니마켓] 뉴욕증시 혼조",
+     "link": "https://www.bigtanews.co.kr/article/view/big202611070001",
+     "host": "bigtanews.co.kr",
+     "at": "2026-11-06T23:02:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 투매 진정에 기술주 반등⋯다우는 하락 [상보]",
+     "link": "https://www.etoday.co.kr/news/view/2645264",
+     "host": "etoday.co.kr",
+     "at": "2026-11-06T22:46:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 투매 진정에 혼조⋯나스닥 1.09%↑[종합]",
+     "link": "https://www.etoday.co.kr/news/view/2645267",
+     "host": "etoday.co.kr",
+     "at": "2026-11-06T22:46:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 관련주 대폭락 후 저가매수세 '뚜렷'... 나스닥 1.1% 반등",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886349",
+     "host": "getnews.co.kr",
+     "at": "2026-11-06T22:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 58,
+    "spike": 0.3,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
    "id": "1e2jc2i",
    "title": "원/달러 환율 1357원 급등, AI 규제 쇼크에 출렁",
    "firstSeen": "2026-11-06T05:46:00.000Z",
    "lastSeen": "2026-11-06T22:02:00.000Z",
-   "count": 14,
-   "sources": 13,
+   "count": 13,
+   "sources": 12,
    "topics": [
     "politics",
     "fx",
@@ -495,17 +495,17 @@
      "at": "2026-11-06T09:20:00.000Z"
     },
     {
-     "title": "‘블루웨이브 여파’ 원달러 환율 14.5원↑…한 달 만에 1360원대 터치",
-     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/06/20261106500308?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-06T08:16:00.000Z"
+     "title": "원·달러 환율 14원 이상 '급등'…美 AI 규제 쇼크에 원화 '직격탄'",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=579136&class=18&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-06T08:12:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 53,
-    "spike": 0.7,
+    "score": 52,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -516,6 +516,107 @@
     },
     "why": [
      "원/달러 +1.76%(평소의 2.8배)"
+    ]
+   }
+  },
+  {
+   "id": "z3pu38",
+   "title": "[종합] 美 10월 고용 16만5000명 '깜짝 증가'…12월 금리 인상 전망 강화",
+   "firstSeen": "2026-11-06T13:32:00.000Z",
+   "lastSeen": "2026-11-06T22:42:00.000Z",
+   "count": 11,
+   "sources": 11,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886355",
+     "host": "getnews.co.kr",
+     "at": "2026-11-06T22:42:00.000Z"
+    },
+    {
+     "title": "美 10월 고용, 시장 전망 2배 웃돌아 … 12월 금리 인상 베팅 78%로",
+     "link": "https://www.newdaily.co.kr/site/data/html/2026/11/07/2026110700001.html",
+     "host": "newdaily.co.kr",
+     "at": "2026-11-06T16:52:00.000Z"
+    },
+    {
+     "title": "미국 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
+     "link": "https://news.mtn.co.kr/article/2026110701045951496",
+     "host": "news.mtn.co.kr",
+     "at": "2026-11-06T16:06:00.000Z"
+    },
+    {
+     "title": "美 10월 고용 16만5000명 '깜짝 증가'…연준 12월 금리인상 전망 강화",
+     "link": "https://www.nocutnews.co.kr/news/6603535?utm_source=naver&utm_medium=article&utm_campaign=20261107004504",
+     "host": "nocutnews.co.kr",
+     "at": "2026-11-06T15:46:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 51,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "4oxptk",
+   "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
+   "firstSeen": "2026-11-06T08:39:00.000Z",
+   "lastSeen": "2026-11-06T09:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[마감 시황] '검은 금요일'의 공포… 코스피, 서킷브레이커·사이드카 연...",
+     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=280719",
+     "host": "businesskorea.co.kr",
+     "at": "2026-11-06T09:02:00.000Z"
+    },
+    {
+     "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
+     "link": "https://www.khan.co.kr/article/202611061739001",
+     "host": "khan.co.kr",
+     "at": "2026-11-06T08:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 51,
+    "spike": 0.3,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.2배)"
     ]
    }
   },
@@ -561,8 +662,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
-    "spike": 0.7,
+    "score": 50,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -577,199 +678,25 @@
    }
   },
   {
-   "id": "4oxptk",
-   "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
-   "firstSeen": "2026-11-06T08:39:00.000Z",
-   "lastSeen": "2026-11-06T09:02:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[마감 시황] '검은 금요일'의 공포… 코스피, 서킷브레이커·사이드카 연...",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=280719",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-06T09:02:00.000Z"
-    },
-    {
-     "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
-     "link": "https://www.khan.co.kr/article/202611061739001",
-     "host": "khan.co.kr",
-     "at": "2026-11-06T08:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 51,
-    "spike": 0.2,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1snx309",
-   "title": "'코스피 폭락' 긴급 회의 여는 민주당 \"경제 '체력' 문제 아냐, 입법·예...",
-   "firstSeen": "2026-11-06T06:51:00.000Z",
-   "lastSeen": "2026-11-06T07:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "'코스피 폭락' 긴급 회의 여는 민주당 \"경제 '체력' 문제 아냐, 입법·예...",
-     "link": "https://news.jtbc.co.kr/article/NB12326861?influxDiv=NAVER",
-     "host": "news.jtbc.co.kr",
-     "at": "2026-11-06T07:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1xf7ol8",
-   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-   "firstSeen": "2026-11-06T16:45:00.000Z",
-   "lastSeen": "2026-11-06T16:45:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
-     "host": "donga.com",
-     "at": "2026-11-06T16:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "z3pu38",
-   "title": "美 10월 비농업 고용 16만 5000명 '깜짝 증가'…실업률 4.1%(종합)",
-   "firstSeen": "2026-11-06T13:32:00.000Z",
-   "lastSeen": "2026-11-06T22:42:00.000Z",
-   "count": 13,
-   "sources": 13,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886355",
-     "host": "getnews.co.kr",
-     "at": "2026-11-06T22:42:00.000Z"
-    },
-    {
-     "title": "美 10월 고용, 시장 전망 2배 웃돌아 … 12월 금리 인상 베팅 78%로",
-     "link": "https://www.newdaily.co.kr/site/data/html/2026/11/07/2026110700001.html",
-     "host": "newdaily.co.kr",
-     "at": "2026-11-06T16:52:00.000Z"
-    },
-    {
-     "title": "미국 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
-     "link": "https://news.mtn.co.kr/article/2026110701045951496",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-06T16:06:00.000Z"
-    },
-    {
-     "title": "美 10월 고용 16만5000명 '깜짝 증가'…연준 12월 금리인상 전망 강화",
-     "link": "https://www.nocutnews.co.kr/news/6603535?utm_source=naver&utm_medium=article&utm_campaign=20261107004504",
-     "host": "nocutnews.co.kr",
-     "at": "2026-11-06T15:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 47,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
    "id": "1aveb0n",
    "title": "AI 기술주도 '블루 쓰나미'...트럼프 패배 파장 확산 [뉴스UP]",
    "firstSeen": "2026-11-05T23:28:00.000Z",
-   "lastSeen": "2026-11-06T19:30:00.000Z",
-   "count": 6,
-   "sources": 4,
+   "lastSeen": "2026-11-06T20:24:00.000Z",
+   "count": 7,
+   "sources": 5,
    "topics": [
     "politics",
+    "market",
     "policy"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[박근종 칼럼] 미국 '블루 쓰나미'에 주가 폭락, 반도체 일극 경제에 대...",
+     "link": "https://www.mhns.co.kr/news/articleView.html?idxno=768053",
+     "host": "mhns.co.kr",
+     "at": "2026-11-06T20:24:00.000Z"
+    },
     {
      "title": "[오늘의 1면 사진] 코스피 장중 5000 붕괴",
      "link": "https://www.hankookilbo.com/news/article/A2026110621200005504?did=NA",
@@ -777,29 +704,23 @@
      "at": "2026-11-06T19:30:00.000Z"
     },
     {
-     "title": "코스피, AI 쇼크… 장중 5000 붕괴",
-     "link": "https://www.chosun.com/economy/stock-finance/2026/11/07/27CXDOBX5BDJPIXAPSTMSQTBNU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-06T15:41:00.000Z"
+     "title": "[사설] 코스피 장중 5000 붕괴…‘반도체 쏠림’ 넘을 성장 전략 서둘러...",
+     "link": "https://www.sedaily.com/article/20111343?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-06T15:02:00.000Z"
     },
     {
      "title": "코스피 장중 5000 붕괴, 5059.69 마감…AI 투자 변곡점 맞나",
      "link": "https://www.goodkyung.com/news/articleView.html?idxno=293212",
      "host": "goodkyung.com",
      "at": "2026-11-06T08:18:00.000Z"
-    },
-    {
-     "title": "코스피 덮친 '블루 쓰나미'...장중 5,000 붕괴 [이슈ON]",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611061714362397",
-     "host": "ytn.co.kr",
-     "at": "2026-11-06T08:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 47,
-    "spike": 0.7,
+    "score": 49,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -850,8 +771,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 1.2,
+    "score": 49,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -866,63 +787,145 @@
    }
   },
   {
-   "id": "1nf5p56",
-   "title": "뉴욕증시 프리뷰, 美 나스닥 선물 반등…AI주 폭락 하루 만에 반도체주...",
-   "firstSeen": "2026-11-05T21:34:00.000Z",
-   "lastSeen": "2026-11-06T22:13:00.000Z",
-   "count": 6,
-   "sources": 5,
+   "id": "1snx309",
+   "title": "'코스피 폭락' 긴급 회의 여는 민주당 \"경제 '체력' 문제 아냐, 입법·예...",
+   "firstSeen": "2026-11-06T06:51:00.000Z",
+   "lastSeen": "2026-11-06T07:26:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "fx",
     "market"
    ],
-   "critical": [],
+   "critical": [
+    "rates"
+   ],
    "links": [
     {
-     "title": "AI發 패닉 하루 만에 나스닥 반등...AMD 11%·파이어플라이 36%↑",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579155&class=53&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-06T22:13:00.000Z"
-    },
-    {
-     "title": "테슬라, 하루 만에 4%대 상승 전환… 급락 충격 딛고 투자심리 회복 조...",
-     "link": "https://www.jemin.com/news/articleView.html?idxno=846375",
-     "host": "jemin.com",
-     "at": "2026-11-06T22:02:00.000Z"
-    },
-    {
-     "title": "美 증시, 하루 만에 반발 매수···반도체 4.2% 반등 속 '혼조 마감'",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41492",
-     "host": "globale.co.kr",
-     "at": "2026-11-06T22:02:00.000Z"
-    },
-    {
-     "title": "AI주 투매 하루 만에 반등한 나스닥…AI 반도체·데이터센터주 저가 매...",
-     "link": "https://www.ddaily.co.kr/page/view/2026110706341294675",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-06T21:35:00.000Z"
+     "title": "'코스피 폭락' 긴급 회의 여는 민주당 \"경제 '체력' 문제 아냐, 입법·예...",
+     "link": "https://news.jtbc.co.kr/article/NB12326861?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-06T07:26:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
-    "spike": 0.2,
+    "score": 48,
+    "spike": 0.3,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 1.76,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
      "unit": "%",
-     "z": 2.8
+     "z": -2.2
     },
     "why": [
-     "원/달러 +1.76%(평소의 2.8배)"
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1xf7ol8",
+   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+   "firstSeen": "2026-11-06T16:45:00.000Z",
+   "lastSeen": "2026-11-06T16:45:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
+     "host": "donga.com",
+     "at": "2026-11-06T16:45:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "v31sr0",
+   "title": "[GAM]미국 슈퍼 리치 열광하는 RH ① 부동산 침체 돌파한 하이엔드 가구",
+   "firstSeen": "2026-11-06T23:00:00.000Z",
+   "lastSeen": "2026-11-06T23:01:00.000Z",
+   "count": 2,
+   "sources": 1,
+   "topics": [
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "[GAM]미국 슈퍼 리치 열광하는 RH ② '팬데믹 수혜주' 부활...53% 뛴다",
+     "link": "https://www.newspim.com/news/view/20261106000658",
+     "host": "newspim.com",
+     "at": "2026-11-06T23:01:00.000Z"
+    },
+    {
+     "title": "[GAM]미국 슈퍼 리치 열광하는 RH ① 부동산 침체 돌파한 하이엔드 가구",
+     "link": "https://www.newspim.com/news/view/20261106000657",
+     "host": "newspim.com",
+     "at": "2026-11-06T23:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.2배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-06T23:11:12.216Z",
+   "id": "am38ah",
+   "level": "caution",
+   "title": "뉴욕증시, AI 기술주 투매에 급락…머스크 관련주 ‘폭락’",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.02%(평소의 2.2배)"
+   ],
+   "link": "https://www.bigtanews.co.kr/article/view/big202611070001",
+   "delivered": false
+  },
   {
    "at": "2026-11-06T22:48:21.627Z",
    "id": "e6iupy",
@@ -1144,17 +1147,6 @@
     "S&P 500 -4.36%(평소의 6.5배)"
    ],
    "link": "https://www.g-enews.com/view.php?ud=202611061756328123e7e8286d56_1",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T12:48:10.144Z",
-   "id": "22nz",
-   "level": "caution",
-   "title": "中YMTC, 신규 낸드공장 장비 최대 70% 국산화 추진",
-   "why": [
-    "S&P 500 -4.36%(평소의 6.5배)"
-   ],
-   "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611060150&t=NN",
    "delivered": false
   }
  ],
