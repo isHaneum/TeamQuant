@@ -3,6 +3,8 @@ import {localStatus} from './lib/local-status.js';
 import {createInvestmentStore} from './lib/investment-store.js';
 import {createCashStore} from './lib/cash-store.js';
 import {fetchFundamentals} from './lib/fundamentals.js';
+import {readIssueFeed} from './lib/issue-feed.js';
+import {fetchQuote} from './lib/quote-check.js';
 import {createPerformanceStore} from './lib/performance-store.js';
 import {createHistoryStore} from './lib/history-store.js';
 import {createHistoryRecorder} from './lib/history-recorder.js';
@@ -68,6 +70,16 @@ http.createServer(async (request, response) => {
       try { const data = await fetchFundamentals(url.searchParams.get('symbol') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'private, max-age=600'}); return response.end(JSON.stringify(data)); }
       catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
     }
+    if (url.pathname === '/api/quote') {
+      if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
+      try { const q = await fetchQuote(url.searchParams.get('symbol') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(q)); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+    }
+    if (url.pathname === '/api/issues') {
+      if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
+      try { const { data } = await readIssueFeed(url.searchParams, { localDir: join(root, '.issue-data') }); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(data === null ? { available: false } : { available: true, ...(Array.isArray(data) ? { items: data } : data) })); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+    }
     if (url.pathname === '/api/news') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       const data = await fetchNews(url.searchParams.get('query'), url.searchParams.get('sort') || 'date');
@@ -103,7 +115,7 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|brief-ui\.js|brief\.css|lab-ui\.js|lab\.css|portfolio-ui\.js|tooltip-ui\.js|demo-ui\.js|lib\/(?:client-data|strategy-lab|stock-score|move-explain|portfolio-advice|backtest|oos-validation|market-brief|asset-timeline|trade-review|market-reasons|trading-habits|dca-advisor|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|brief-ui\.js|brief\.css|lab-ui\.js|lab\.css|portfolio-ui\.js|tooltip-ui\.js|demo-ui\.js|issues-ui\.js|issues\.css|response-ui\.js|lib\/(?:client-data|situation|situation-strategies|issue-bot|risk-models|shock-analogs|market-response|strategy-lab|stock-score|move-explain|portfolio-advice|backtest|oos-validation|market-brief|asset-timeline|trade-review|market-reasons|trading-habits|dca-advisor|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names|situation-stats|shock-study|risk-model-report)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");

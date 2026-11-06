@@ -5,7 +5,8 @@ import { classifyHeadline, relevantTo } from '/lib/market-brief.js';
 import { explainMove } from '/lib/move-explain.js';
 import { scoreStock } from '/lib/stock-score.js';
 import { TARGETS } from '/lib/portfolio-advice.js';
-import { findBestFit, periodStart } from '/lib/strategy-lab.js';
+import { findBestFit, periodStart, josa } from '/lib/strategy-lab.js';
+import { currentSituation, groupOf, GROUPS, SITUATION_VERSION } from '/lib/situation.js';
 import { fundamentals, candles, indexSeries as sharedIndex, getStyle } from '/lib/client-data.js';
 import { buildAssetTimeline, koreaDay } from '/lib/asset-timeline.js';
 import { reviewTrades } from '/lib/trade-review.js';
@@ -219,8 +220,22 @@ async function openDetail(symbol) {
   draw(); if (!dialog.open) dialog.showModal();
   if (!b?.available) return;
   if (!funds.has(symbol)) { try { funds.set(symbol, await fundamentals(symbol)); } catch (e) { funds.set(symbol, { error: e.message }); } draw(); }
-  if (!fitCache.has(symbol)) { try { const d = await candles(symbol, b.currency), idx = await sharedIndex(d.index[0]).catch(() => null); fitCache.set(symbol, findBestFit(d.candles, idx?.candles || [], periodStart(today(), 12))); } catch (e) { fitCache.set(symbol, { available: false, message: e.message }); } draw(); }
+  if (!fitCache.has(symbol)) { try { const d = await candles(symbol, b.currency), idx = await sharedIndex(d.index[0]).catch(() => null); fitCache.set(symbol, findBestFit(d.candles, idx?.candles || [], periodStart(today(), 12))); sitCache.set(symbol, { now: currentSituation(d.candles, idx?.candles || []), group: groupOf({ symbol: d.symbol, currency: d.currency, instrumentType: d.instrumentType }) }); } catch (e) { fitCache.set(symbol, { available: false, message: e.message }); } await loadSitStats(); draw(); }
 }
+// 지금 상황(과열·급락 등)과 같은 상태 이후 통계. 정의·숫자는 전략 테스트 화면과 같은 파일에서 온다.
+const sitCache = new Map(); let sitStats = null;
+async function loadSitStats() { if (sitStats) return; try { const r = await fetch('/data/situation-stats.json?v=' + encodeURIComponent(SITUATION_VERSION)); if (r.ok) sitStats = await r.json(); } catch {} }
+const ppText = v => Number.isFinite(v) ? `${v > 0 ? '+' : ''}${v.toFixed(1)}%p` : '—';
+function situationSection(symbol) {
+  const s = sitCache.get(symbol); if (!s?.now?.available) return '';
+  const v = sitStats?.states?.[s.group]?.[s.now.state], base = sitStats?.baseline?.[s.group]?.f60, rule = sitStats?.rule?.[s.group]?.[s.now.state];
+  const ruled = rule && rule !== 'hold' ? sitStats.strategies.find(x => x.id === rule)?.title : null;
+  return `<section><h4>지금 상황 ${tip(`${s.now.rule}
+정의 ${s.now.version} · 정해진 규칙으로만 판단합니다.`)}</h4><p class="hm-sit"><span class="lt-badge b-${s.now.state}">${esc(s.now.label)}</span> <span>${esc(s.now.signs.join(' · ') || '뚜렷한 신호 없음')}</span></p>
+    ${v ? `<p>${esc(GROUPS[s.group])}${josa(GROUPS[s.group], '이', '가')} 같은 상태였던 뒤 60거래일 동안 지수 대비 평균 <b>${ppText(v.f60.mean)}</b>(평소 대비 ${ppText(v.f60.mean - (base?.mean ?? 0))}), 오른 비율 ${v.f60.hit}%였습니다. ${ruled ? `과거엔 ${esc(ruled)}${josa(ruled, '이', '가')} 보유보다 나았습니다.` : '이 상태에서 그냥 보유보다 확실히 나은 매매 방식은 없었습니다.'}</p>` : ''}
+    <button type="button" class="text-button" data-sit-open="${esc(symbol)}">전략 테스트에서 자세히 보기</button></section>`;
+}
+dialog.addEventListener('click', e => { const b = e.target.closest?.('[data-sit-open]'); if (!b) return; const p = snapshot?.positions?.find(x => x.symbol === b.dataset.sitOpen); dialog.close(); window.dispatchEvent(new CustomEvent('teamquant:study', { detail: { symbol: b.dataset.sitOpen, name: p?.name || nameOf(b.dataset.sitOpen) } })); document.querySelector('[data-view="quicktest"]')?.click(); });
 const ROW = (label, value, note, t = 0) => `<div class="hm-kv"><span><i class="hm-dot ${t > 0 ? 'good' : t < 0 ? 'bad' : ''}"></i>${label}${note ? tip(note) : ''}</span><b>${value}</b></div>`;
 
 function detailHtml(b, p) {
@@ -238,6 +253,7 @@ function detailHtml(b, p) {
     <section><h4>투자 지표 ${fund ? tip('출처: ' + fund.source + '. 초록 점은 좋음, 주황 점은 주의입니다. 각 항목의 ⓘ에 뜻이 있습니다.') : ''} ${fund ? `<small>${esc(fund.sector || '')}${fund.annual?.year ? ` · ${esc(fund.annual.year)} 실적` : ''}</small>` : ''}</h4>
       ${fund ? `${fund.business ? `<p class="hm-biz">${esc(fund.business)}</p>` : ''}<div class="hm-kvs">${(j?.factors || []).map(x => ROW(esc(x.label), esc(x.value), esc(x.text), x.tone)).join('')}${Number.isFinite(fund.pbr) ? ROW('PBR', `${fund.pbr}배`, fund.pbr < 1 ? '장부상 자산보다 싸게 거래됩니다.' : '장부상 자산 대비 주가 수준입니다.', 0) : ''}</div>${fund.peers?.length ? `<p class="hm-note">비슷한 회사: ${esc(fund.peers.join(', '))}</p>` : ''}` : f?.error ? `<p class="hm-note">투자 지표를 불러오지 못했습니다 (${esc(f.error)}).</p>` : '<div class="shimmer rp-line"></div>'}</section>
     <section><h4>이 종목에 맞았던 매매 방식 ${tip('4가지 방식을 지난 1년에 적용해 그냥 들고 있기와 비교한 차이(비용 포함)입니다. 지난 결과에 맞춘 것이라 앞으로도 같다는 보장은 없습니다.')}</h4>${!fit ? '<div class="shimmer rp-line short"></div>' : !fit.available ? `<p class="hm-note">${esc(fit.message)}</p>` : `<p>${esc(fit.advice)}</p><div class="hm-fit-rows">${fit.rows.map(x => `<span>${esc(x.title)} <b class="${toneClass(x.edge)}">${x.edge > 0 ? '+' : ''}${x.edge}%p</b></span>`).join('')}</div>`}</section>
+    ${situationSection(b.symbol)}
     <section><h4>최근 흐름</h4>${chart(b, b.candles || [], b.indexCandles || [], p?.avgCost)}<div class="hm-kvs">${b.context.map(x => ROW(esc(x.label), esc(x.value), '', x.tone)).join('')}</div></section>
     ${b.financials ? `<section><h4>분기 실적</h4>${finTable(b.financials)}</section>` : ''}
     ${b.disclosures.length || allNews.length ? `<section><h4>최근 공시·기사</h4><ul class="hm-news">${b.disclosures.map(d => `<li><span class="rp-tag d">공시</span><small>${esc(d.date)}</small>${safeUrl(d.link) ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>` : esc(d.title)}</li>`).join('')}${allNews.slice(0, 8).map(n => `<li><span class="rp-tag n">${esc(n.categoryLabel)}</span><small>${esc(n.date)}</small>${safeUrl(n.link) ? `<a href="${esc(safeUrl(n.link))}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>` : esc(n.title)}</li>`).join('')}</ul></section>` : ''}

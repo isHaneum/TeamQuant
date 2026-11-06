@@ -21,6 +21,12 @@ Start here; read only the relevant row's files. Most UI modules contain their ow
 | Home dashboard (KPIs, monthly assets, market reasons, trade grade, holdings list, stock modal) | `brief-ui.js`, `brief.css`, `lib/asset-timeline.js`, `lib/trade-review.js`, `lib/market-reasons.js`, `lib/market-brief.js`, `lib/dca-advisor.js`, `lib/dart.js` + `api/dart.js`, `test/home-dashboard.test.js`, `test/market-brief.test.js` |
 | Top menu (flat + 더보기) | `workspace-ui.js`, `workspace.css` |
 | One-screen strategy test (preset or sentence → stock → period → vs. buy-and-hold) | `lab-ui.js`, `lab.css`, `lib/strategy-lab.js` (uses `lib/backtest.js`, `lib/natural-language.js`), `test/strategy-lab.test.js` |
+| Situation states, situation strategies, same-state statistics | `lib/situation.js`, `lib/situation-strategies.js`, `lib/situation-study.js`, `scripts/build-situation-stats.mjs` → `data/situation-stats.json`, `test/situation.test.js` |
+| Real-time issue bot (collect → cluster → severity → briefing/alerts → event log) | `lib/issue-bot.js`, `scripts/issue-bot.mjs`, `.github/workflows/issue-bot.yml` (data on the `issue-data` branch), `lib/issue-feed.js`, `api/issues.js`, `issues-ui.js`, `issues.css`, `test/issue-bot.test.js` |
+| Pre-trade safety checks for future paper trading (not wired to orders) | `lib/order-guard.js`, `test/order-guard.test.js` |
+| Time-series risk models (EWMA, GARCH, HMM, FHS VaR/ES, Monte Carlo) and their out-of-sample report | `lib/risk-models.js`, `scripts/build-market-research.mjs` → `data/risk-model-report.json`, `test/risk-models.test.js` |
+| Past shock conditions and response rules; today's market response (index + holdings) | `lib/shock-analogs.js` → `data/shock-study.json`, `lib/market-response.js`, `response-ui.js` (mounted on the 시장/issues page) |
+| Live quote cross-check (Naver) | `lib/quote-check.js`, `api/quote.js` |
 | Investment metrics, stock verdict, cash, portfolio direction | `lib/fundamentals.js` + `api/fundamentals.js`, `lib/stock-score.js`, `lib/move-explain.js`, `lib/portfolio-advice.js`, `lib/cash-store.js` (bridge `cash-get`/`cash-set`), `lib/client-data.js`, `portfolio-ui.js`, `test/portfolio-insight.test.js` |
 | Tooltips, connect card, demo assets | `tooltip-ui.js` (`tip()`), `demo-ui.js`, connect/demo state in `brief-ui.js` and `portfolio-ui.js` |
 | Out-of-sample split / tuning ledger (CAP-04) | `lib/oos-validation.js`, wiring in `app.js` (`runApprovedBacktest`, `renderOosHistory`), `test/oos-validation.test.js` |

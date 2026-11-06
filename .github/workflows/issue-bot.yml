@@ -1,0 +1,61 @@
+# 실시간 이슈 봇: 20분마다 감시, 하루 3번(한국 08:30·16:00·22:00) 브리핑.
+# 결과는 issue-data 브랜치에 JSON으로 쌓는다(이 브랜치는 Vercel 배포 안 함). 화면은 /api/issues로 읽는다.
+# 선택: 저장소 Secrets에 TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID를 넣으면 긴급·주의 알림과 브리핑을 텔레그램으로 보낸다.
+name: issue-bot
+on:
+  schedule:
+    - cron: '30 23 * * *'
+    - cron: '0 7 * * *'
+    - cron: '0 13 * * *'
+    - cron: '5,25,45 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'watch 또는 briefing'
+        required: true
+        default: 'watch'
+permissions:
+  contents: write
+concurrency:
+  group: issue-bot
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 데이터 브랜치 준비
+        run: |
+          if git ls-remote --exit-code --heads origin issue-data >/dev/null; then
+            git fetch -q origin issue-data:issue-data
+            git worktree add -q .issue-data issue-data
+          else
+            git worktree add -q --detach .issue-data
+            cd .issue-data && git checkout -q --orphan issue-data && git rm -rfq . && cd ..
+          fi
+      - name: 실행
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MODE_INPUT: ${{ github.event.inputs.mode }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          MODE="$MODE_INPUT"
+          if [ -z "$MODE" ]; then
+            if [ "$SCHEDULE" = "5,25,45 * * * *" ]; then MODE=watch; else MODE=briefing; fi
+          fi
+          node scripts/issue-bot.mjs --mode "$MODE" --data .issue-data
+      - name: 결과 올리기
+        run: |
+          cd .issue-data
+          git config user.name "teamquant-issue-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -q -m "issue-bot $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git push -q origin issue-data && exit 0; git pull -q --rebase origin issue-data || true; done
+          exit 1
