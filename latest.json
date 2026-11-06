@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-06T12:19:44.650Z",
+ "updatedAt": "2026-11-06T12:31:37.475Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 1359.260009765625,
-   "change": 1.43,
-   "z": 2.3,
+   "last": 1358.56005859375,
+   "change": 1.38,
+   "z": 2.2,
    "sd": 0.6176982973747167,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 90.8499984741211,
-   "change": 0.36,
-   "z": 0.1,
+   "last": 90.94000244140625,
+   "change": 0.46,
+   "z": 0.2,
    "sd": 2.8548001618285164,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 4076.300048828125,
-   "change": -0.9,
-   "z": -0.7,
+   "last": 4078,
+   "change": -0.86,
+   "z": -0.6,
    "sd": 1.3579224099994356,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 26.81999969482422,
-   "change": -4.83,
+   "last": 26.850000381469727,
+   "change": -4.72,
    "z": -0.4,
    "sd": 11.277582247268505,
    "source": "Yahoo",
@@ -119,16 +119,16 @@
   }
  ],
  "spikes": {
-  "war": -2,
+  "war": -1.9,
   "politics": -0.5,
-  "rates": -1.8,
-  "trade": -2.1,
-  "fx": -1.2,
-  "energy": -1.6,
+  "rates": -1.7,
+  "trade": -2,
+  "fx": -1.3,
+  "energy": -2.1,
   "market": -1,
   "credit": -0.5,
   "disaster": 0,
-  "policy": -1.7
+  "policy": -1.9
  },
  "rates": {
   "war": {
@@ -147,17 +147,17 @@
    "queries": 3
   },
   "trade": {
-   "rate": 3,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 1.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   },
@@ -177,19 +177,78 @@
    "queries": 1
   },
   "policy": {
-   "rate": 3,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
+   "id": "1d5qjm",
+   "title": "'검은 금요일'…코스피, 6%대 급락한 5,000선 턱걸이 마감",
+   "firstSeen": "2026-11-06T06:38:00.000Z",
+   "lastSeen": "2026-11-06T12:16:00.000Z",
+   "count": 11,
+   "sources": 11,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'AI 패닉셀'에 검은 금요일…9개월 만에 장중 5000선 붕괴",
+     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/06/2026110690258.html",
+     "host": "news.tvchosun.com",
+     "at": "2026-11-06T12:16:00.000Z"
+    },
+    {
+     "title": "미 선거 충격에 ‘검은 금요일’…9달 전으로 돌아간 코스피",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706282&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-06T12:01:00.000Z"
+    },
+    {
+     "title": "코스피 6% 폭락…5000선 턱걸이 '검은 금요일'",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=107789",
+     "host": "newskr.kr",
+     "at": "2026-11-06T11:24:00.000Z"
+    },
+    {
+     "title": "블루 웨이브에 '검은 금요일'…18만 전자·118만 닉스 급락",
+     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1542936",
+     "host": "obsnews.co.kr",
+     "at": "2026-11-06T11:22:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 75,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
+     "unit": "%",
+     "z": -6.5
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -4.36%(평소의 6.5배)"
+    ]
+   }
+  },
+  {
    "id": "1g4akl4",
    "title": "코스피 장중 5000 붕괴, 5059.69 마감…AI 투자 변곡점 맞나",
    "firstSeen": "2026-11-06T07:30:00.000Z",
-   "lastSeen": "2026-11-06T11:00:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "lastSeen": "2026-11-06T12:03:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "market"
    ],
@@ -197,6 +256,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "[그래픽] 코스피 6.02% 급락 5000 턱걸이 마감…외인 2.7조원 순매도",
+     "link": "https://www.newsis.com/view/NISI20261106_0002285388",
+     "host": "newsis.com",
+     "at": "2026-11-06T12:03:00.000Z"
+    },
     {
      "title": "코스피 장중 5천선 붕괴…108배 하며 “원금만이라도”",
      "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000558812",
@@ -214,18 +279,12 @@
      "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=89064",
      "host": "industrynews.co.kr",
      "at": "2026-11-06T09:08:00.000Z"
-    },
-    {
-     "title": "코스피 장중 5000 붕괴, 5059.69 마감…AI 투자 변곡점 맞나",
-     "link": "https://www.goodkyung.com/news/articleView.html?idxno=293212",
-     "host": "goodkyung.com",
-     "at": "2026-11-06T08:18:00.000Z"
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 67,
+    "level": "caution",
+    "label": "주의",
+    "score": 70,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -237,7 +296,8 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -4.36%(평소의 6.5배)"
+     "S&P 500 -4.36%(평소의 6.5배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -312,52 +372,6 @@
      "link": "https://www.ajunews.com/view/20261106161918069",
      "host": "ajunews.com",
      "at": "2026-11-06T07:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 61,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -4.36,
-     "unit": "%",
-     "z": -6.5
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -4.36%(평소의 6.5배)"
-    ]
-   }
-  },
-  {
-   "id": "4oxptk",
-   "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
-   "firstSeen": "2026-11-06T08:39:00.000Z",
-   "lastSeen": "2026-11-06T09:02:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[마감 시황] '검은 금요일'의 공포… 코스피, 서킷브레이커·사이드카 연...",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=280719",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-06T09:02:00.000Z"
-    },
-    {
-     "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
-     "link": "https://www.khan.co.kr/article/202611061739001",
-     "host": "khan.co.kr",
-     "at": "2026-11-06T08:39:00.000Z"
     }
    ],
    "assess": {
@@ -506,6 +520,46 @@
    }
   },
   {
+   "id": "4oxptk",
+   "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
+   "firstSeen": "2026-11-06T08:39:00.000Z",
+   "lastSeen": "2026-11-06T08:39:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
+     "link": "https://www.khan.co.kr/article/202611061739001",
+     "host": "khan.co.kr",
+     "at": "2026-11-06T08:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
+     "unit": "%",
+     "z": -6.5
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -4.36%(평소의 6.5배)"
+    ]
+   }
+  },
+  {
    "id": "1363fma",
    "title": "올해만 11차례 서킷브레이커...외부 충격 '직격탄'",
    "firstSeen": "2026-11-06T08:56:00.000Z",
@@ -627,6 +681,63 @@
    }
   },
   {
+   "id": "1aveb0n",
+   "title": "AI 기술주도 '블루 쓰나미'...트럼프 패배 파장 확산 [뉴스UP]",
+   "firstSeen": "2026-11-05T23:28:00.000Z",
+   "lastSeen": "2026-11-06T12:27:00.000Z",
+   "count": 9,
+   "sources": 6,
+   "topics": [
+    "politics",
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[뉴스더] '블루 쓰나미'에 휘청이는 AI 산업…'3년치 완판' K반도체도 불...",
+     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/06/2026110690268.html",
+     "host": "news.tvchosun.com",
+     "at": "2026-11-06T12:27:00.000Z"
+    },
+    {
+     "title": "[이슈빡] '블루 쓰나미'가 덮친 코스피…장중 5000 붕괴",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008834680&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-06T10:59:00.000Z"
+    },
+    {
+     "title": "코스피, 이틀 만에 11% 폭락…국내 증시야말로 '블루 쓰나미'",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=325502",
+     "host": "thepublic.kr",
+     "at": "2026-11-06T10:26:00.000Z"
+    },
+    {
+     "title": "코스피 덮친 '블루 쓰나미'...장중 5,000 붕괴 [이슈ON]",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611061714362397",
+     "host": "ytn.co.kr",
+     "at": "2026-11-06T08:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
+     "unit": "%",
+     "z": -6.5
+    },
+    "why": [
+     "S&P 500 -4.36%(평소의 6.5배)"
+    ]
+   }
+  },
+  {
    "id": "1lo5km0",
    "title": "미·이란 충돌 재개 80%…맥널리, CNBC서 유가 100달러 전망",
    "firstSeen": "2026-11-06T05:18:00.000Z",
@@ -658,76 +769,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 51,
+    "score": 49,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": 1.43,
+     "change": 1.38,
      "unit": "%",
-     "z": 2.3
+     "z": 2.2
     },
     "why": [
      "핵심 단어",
-     "원/달러 +1.43%(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1aveb0n",
-   "title": "AI 기술주도 '블루 쓰나미'...트럼프 패배 파장 확산 [뉴스UP]",
-   "firstSeen": "2026-11-05T23:28:00.000Z",
-   "lastSeen": "2026-11-06T10:59:00.000Z",
-   "count": 8,
-   "sources": 5,
-   "topics": [
-    "politics",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[이슈빡] '블루 쓰나미'가 덮친 코스피…장중 5000 붕괴",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008834680&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-06T10:59:00.000Z"
-    },
-    {
-     "title": "코스피, 이틀 만에 11% 폭락…국내 증시야말로 '블루 쓰나미'",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=325502",
-     "host": "thepublic.kr",
-     "at": "2026-11-06T10:26:00.000Z"
-    },
-    {
-     "title": "코스피 덮친 '블루 쓰나미'...장중 5,000 붕괴 [이슈ON]",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611061714362397",
-     "host": "ytn.co.kr",
-     "at": "2026-11-06T08:14:00.000Z"
-    },
-    {
-     "title": "개장 3분 만에 '오천피' 내줬다…증시 덮친 '블루 쓰나미' [짤e몽땅]",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5229460",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-06T08:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -4.36,
-     "unit": "%",
-     "z": -6.5
-    },
-    "why": [
-     "S&P 500 -4.36%(평소의 6.5배)"
+     "원/달러 +1.38%(평소의 2.2배)"
     ]
    }
   },
@@ -775,62 +829,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 48,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -4.36,
-     "unit": "%",
-     "z": -6.5
-    },
-    "why": [
-     "S&P 500 -4.36%(평소의 6.5배)"
-    ]
-   }
-  },
-  {
-   "id": "1d5qjm",
-   "title": "'검은 금요일'…코스피, 6%대 급락한 5,000선 턱걸이 마감",
-   "firstSeen": "2026-11-06T06:38:00.000Z",
-   "lastSeen": "2026-11-06T12:01:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미 선거 충격에 ‘검은 금요일’…9달 전으로 돌아간 코스피",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706282&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-06T12:01:00.000Z"
-    },
-    {
-     "title": "코스피 6% 폭락…5000선 턱걸이 '검은 금요일'",
-     "link": "http://www.newskr.kr/news/articleView.html?idxno=107789",
-     "host": "newskr.kr",
-     "at": "2026-11-06T11:24:00.000Z"
-    },
-    {
-     "title": "블루 웨이브에 '검은 금요일'…18만 전자·118만 닉스 급락",
-     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1542936",
-     "host": "obsnews.co.kr",
-     "at": "2026-11-06T11:22:00.000Z"
-    },
-    {
-     "title": "외국인의 투매에 '검은 금요일' 몸서리",
-     "link": "http://www.econotelling.com/news/articleView.html?idxno=21586",
-     "host": "econotelling.com",
-     "at": "2026-11-06T10:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 47,
     "spike": 0,
     "news": false,
     "reaction": {
