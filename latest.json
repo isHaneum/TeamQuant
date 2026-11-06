@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-06T08:29:53.177Z",
+ "updatedAt": "2026-11-06T08:47:39.061Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 1354.780029296875,
-   "change": 1.1,
+   "last": 1354.5999755859375,
+   "change": 1.08,
    "z": 1.8,
    "sd": 0.6176982973747167,
    "source": "Yahoo"
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 90.36000061035156,
-   "change": -0.18,
-   "z": -0.1,
+   "last": 89.83999633789062,
+   "change": -0.75,
+   "z": -0.3,
    "sd": 2.8548001618285164,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 4075.10009765625,
-   "change": -0.93,
-   "z": -0.7,
+   "last": 4078.10009765625,
+   "change": -0.86,
+   "z": -0.6,
    "sd": 1.3579224099994356,
    "source": "Yahoo"
   },
@@ -97,11 +97,11 @@
    "label": "VIX 변동성",
    "unit": "%",
    "available": true,
-   "date": "2026-11-05",
-   "last": 28.18000030517578,
-   "change": 69.66,
-   "z": 10.1,
-   "sd": 6.881991413374188,
+   "date": "2026-11-06",
+   "last": 27.110000610351562,
+   "change": -3.8,
+   "z": -0.3,
+   "sd": 11.277582247268505,
    "source": "Yahoo",
    "checked": true
   },
@@ -121,14 +121,14 @@
  "spikes": {
   "war": -0.2,
   "politics": 0.1,
-  "rates": 1.3,
-  "trade": 0.8,
-  "fx": 1.8,
-  "energy": 0.7,
+  "rates": 1.1,
+  "trade": 0,
+  "fx": 1.7,
+  "energy": 0.1,
   "market": 0,
-  "credit": -0.3,
+  "credit": -0.4,
   "disaster": 0,
-  "policy": -1.2
+  "policy": -1.7
  },
  "rates": {
   "war": {
@@ -142,22 +142,22 @@
    "queries": 3
   },
   "rates": {
-   "rate": 2.3,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 6.5,
+   "rate": 6,
    "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 4,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 3.7,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
@@ -167,7 +167,7 @@
    "queries": 3
   },
   "credit": {
-   "rate": 0.3,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 2
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 3.7,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   }
@@ -216,66 +216,77 @@
     "level": "caution",
     "label": "주의",
     "score": 75,
-    "spike": 1.8,
+    "spike": 1.7,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
   {
-   "id": "1lo5km0",
-   "title": "미·이란 충돌 재개 80%…맥널리, CNBC서 유가 100달러 전망",
-   "firstSeen": "2026-11-06T05:18:00.000Z",
-   "lastSeen": "2026-11-06T05:52:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "107me4z",
+   "title": "증시 급락에 긴급 처방…신용융자 담보비율 의무 3개월 면제",
+   "firstSeen": "2026-11-06T02:46:00.000Z",
+   "lastSeen": "2026-11-06T08:40:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
-    "war",
-    "fx",
-    "energy"
+    "market",
+    "policy"
    ],
    "critical": [
-    "energy"
+    "policy"
    ],
    "links": [
     {
-     "title": "호르무즈서 유조선 3척 피격...유가 100달러 초읽기",
-     "link": "https://www.g-enews.com/view.php?ud=202611061446468139e250e8e188_1",
-     "host": "g-enews.com",
-     "at": "2026-11-06T05:52:00.000Z"
+     "title": "정부, 증시 급락에 반대매매 완화 조치...신용융자 담보비율 140% 규제 3...",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=354054",
+     "host": "greened.kr",
+     "at": "2026-11-06T08:40:00.000Z"
     },
     {
-     "title": "미·이란 충돌 재개 80%…맥널리, CNBC서 유가 100달러 전망",
-     "link": "https://www.tokenpost.kr/news/international/433888",
-     "host": "tokenpost.kr",
-     "at": "2026-11-06T05:18:00.000Z"
+     "title": "정부, '반대매매 방지' 긴급조치…신용융자 담보비율 140% 의무 3개월 면...",
+     "link": "http://www.4th.kr/news/articleView.html?idxno=2121342",
+     "host": "4th.kr",
+     "at": "2026-11-06T08:38:00.000Z"
+    },
+    {
+     "title": "F4 긴급회동 \"증권사 신용융자 담보비율 140% 유지의무 3개월간 면제\"",
+     "link": "https://www.busan.com/view/busan/view.php?code=2026110617331248063",
+     "host": "busan.com",
+     "at": "2026-11-06T08:34:00.000Z"
+    },
+    {
+     "title": "증시 급락에 반대매매 안전판 마련…증권사 담보비율 규제 3개월 유예",
+     "link": "https://www.jemin.com/news/articleView.html?idxno=846342",
+     "host": "jemin.com",
+     "at": "2026-11-06T05:24:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 75,
-    "spike": 1.8,
+    "level": "urgent",
+    "label": "긴급",
+    "score": 71,
+    "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
@@ -319,31 +330,85 @@
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
+    "level": "caution",
+    "label": "주의",
     "score": 67,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
   {
-   "id": "1kdj6j8",
-   "title": "원·달러 환율 장중 15원 가량 급등, 블루웨이브발 AI 규제 우려",
-   "firstSeen": "2026-11-06T00:22:00.000Z",
+   "id": "1t216c2",
+   "title": "'검은 금요일' 코스피 이틀 새 11% ↓…삼성전자·SK하이닉스 동반 추락",
+   "firstSeen": "2026-11-06T07:44:00.000Z",
+   "lastSeen": "2026-11-06T08:46:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'검은 금요일'…코스피, 6%대 급락한 5,000선 턱걸이 마감",
+     "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=268541",
+     "host": "whitepaper.co.kr",
+     "at": "2026-11-06T08:46:00.000Z"
+    },
+    {
+     "title": "시가총액 267조 증발한 ‘검은 금요일’… 美 증시 대폭락에 외국인 투...",
+     "link": "https://weekly.donga.com/3/all/11/6449170/1",
+     "host": "weekly.donga.com",
+     "at": "2026-11-06T08:30:00.000Z"
+    },
+    {
+     "title": "'검은 금요일' 코스피 이틀 새 11% ↓…삼성전자·SK하이닉스 동반 추락",
+     "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=50397",
+     "host": "smarttimes.co.kr",
+     "at": "2026-11-06T08:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 64,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
+     "unit": "%",
+     "z": -6.5
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -4.36%(평소의 6.5배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
+   "id": "y1di1o",
+   "title": "'블루쓰나미'에 외환시장도 요동…원/달러 환율, 15원가량 급등",
+   "firstSeen": "2026-11-05T23:45:00.000Z",
    "lastSeen": "2026-11-06T08:12:00.000Z",
-   "count": 12,
-   "sources": 11,
+   "count": 9,
+   "sources": 7,
    "topics": [
     "politics",
     "fx",
@@ -380,113 +445,74 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 64,
-    "spike": 1.8,
+    "score": 63,
+    "spike": 1.7,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
   {
-   "id": "1pdfbcm",
-   "title": "'블루웨이브 쇼크' 서킷브레이커 발동… 장중 5천피마저 붕괴·이틀간 1...",
-   "firstSeen": "2026-11-06T04:18:00.000Z",
-   "lastSeen": "2026-11-06T08:06:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1qpezcn",
+   "title": "1,360원대로 급등한 달러-원…'DXY·증시·선물' 압력에 한 달 만에 최고...",
+   "firstSeen": "2026-11-06T05:38:00.000Z",
+   "lastSeen": "2026-11-06T08:16:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
+    "fx",
     "market"
    ],
-   "critical": [
-    "market"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "美 ‘블루웨이브’ 충격에 5천선 턱걸이…코스피 연이틀 폭락",
-     "link": "https://www.globalepic.co.kr/view.php?ud=2026110617025947537cc35ccc5c_29",
-     "host": "globalepic.co.kr",
-     "at": "2026-11-06T08:06:00.000Z"
+     "title": "‘블루웨이브 여파’ 원달러 환율 14.5원↑…한 달 만에 1360원대 터치",
+     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/06/20261106500308?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-06T08:16:00.000Z"
     },
     {
-     "title": "코스피, 장중 5천피 붕괴·이틀간 11% 폭락...연이틀 '블루웨이브' 충격",
-     "link": "https://www.delighti.co.kr/news/articleView.html?idxno=124534",
-     "host": "delighti.co.kr",
+     "title": "코스피, 5개월 만에 9000 → 5000",
+     "link": "http://www.sisafocus.co.kr/news/articleView.html?idxno=367293",
+     "host": "sisafocus.co.kr",
      "at": "2026-11-06T08:04:00.000Z"
     },
     {
-     "title": "'블루웨이브 쇼크' 서킷브레이커 발동… 장중 5천피마저 붕괴·이틀간 1...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=397239",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-06T07:56:00.000Z"
+     "title": "美 반도체주 폭락에 환율 14.5원 급등…6개월 만에 최대폭",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=06054886645643096&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-06T07:13:00.000Z"
+    },
+    {
+     "title": "환율도 ‘블루웨이브 쇼크’…6개월 만에 최대폭 급등",
+     "link": "https://www.sedaily.com/article/20111224?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-06T07:11:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 64,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
-     "unit": "%",
-     "z": 10.1
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "hdm7v7",
-   "title": "코스피, 장 초반 5천 선 깨져‥정부 '긴급 회의'",
-   "firstSeen": "2026-11-06T06:16:00.000Z",
-   "lastSeen": "2026-11-06T06:16:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "trade",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "코스피, 장 초반 5천 선 깨져‥정부 '긴급 회의'",
-     "link": "https://imnews.imbc.com/replay/2026/nw1400/article/6863713_36974.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-06T06:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 64,
-    "spike": 0.8,
+    "score": 60,
+    "spike": 1.7,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
@@ -521,15 +547,15 @@
     "spike": 0.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
@@ -562,15 +588,57 @@
     "spike": 0.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
+    ]
+   }
+  },
+  {
+   "id": "hdm7v7",
+   "title": "코스피, 장 초반 5천 선 깨져‥정부 '긴급 회의'",
+   "firstSeen": "2026-11-06T06:16:00.000Z",
+   "lastSeen": "2026-11-06T06:16:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "trade",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "코스피, 장 초반 5천 선 깨져‥정부 '긴급 회의'",
+     "link": "https://imnews.imbc.com/replay/2026/nw1400/article/6863713_36974.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-06T06:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 59,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
+     "unit": "%",
+     "z": -6.5
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
@@ -604,55 +672,57 @@
     "spike": 0.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
   {
-   "id": "14wg9no",
-   "title": "서킷·사이드카 몸살 앓던 코스피 5059.69 마감…연기금 소방수 나섰나",
-   "firstSeen": "2026-11-06T08:24:00.000Z",
-   "lastSeen": "2026-11-06T08:24:00.000Z",
+   "id": "964fvb",
+   "title": "닛케이 3643엔 '뚝'…'블랙먼데이' 이후 역대 3위 하락폭",
+   "firstSeen": "2026-11-06T08:46:00.000Z",
+   "lastSeen": "2026-11-06T08:46:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "market"
+    "politics",
+    "market",
+    "policy"
    ],
    "critical": [
     "market"
    ],
    "links": [
     {
-     "title": "서킷·사이드카 몸살 앓던 코스피 5059.69 마감…연기금 소방수 나섰나",
-     "link": "https://www.hani.co.kr/arti/economy/finance/1286169.html",
-     "host": "hani.co.kr",
-     "at": "2026-11-06T08:24:00.000Z"
+     "title": "닛케이 3643엔 '뚝'…'블랙먼데이' 이후 역대 3위 하락폭",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=06441926645643096&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-06T08:46:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 0,
+    "score": 59,
+    "spike": 0.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
@@ -684,195 +754,150 @@
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
   {
-   "id": "11jr5zj",
-   "title": "금시세·금값 6일",
-   "firstSeen": "2026-11-06T00:12:00.000Z",
-   "lastSeen": "2026-11-06T05:42:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "4oxptk",
+   "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요",
+   "firstSeen": "2026-11-06T08:39:00.000Z",
+   "lastSeen": "2026-11-06T08:39:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "fx",
-    "energy",
     "market"
    ],
-   "critical": [],
+   "critical": [
+    "market"
+   ],
    "links": [
     {
-     "title": "오늘 금시세(금값) 급락... 원·달러 환율 올랐는데 국내 금가격이 떨어...",
-     "link": "https://www.wikitree.co.kr/articles/1172454",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-06T05:42:00.000Z"
-    },
-    {
-     "title": "[오늘 금시세]증시 급락에 환율 '껑충'…국내 금값 1.81% ↑",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=928396",
-     "host": "namdonews.com",
-     "at": "2026-11-06T00:18:00.000Z"
-    },
-    {
-     "title": "금시세·금값 6일",
-     "link": "https://www.bntnews.co.kr/article/view/bnt202611060128",
-     "host": "bntnews.co.kr",
-     "at": "2026-11-06T00:12:00.000Z"
+     "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요",
+     "link": "https://www.khan.co.kr/article/202611061739001",
+     "host": "khan.co.kr",
+     "at": "2026-11-06T08:39:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 53,
-    "spike": 1.8,
+    "score": 58,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
      "unit": "%",
-     "z": 10.1
+     "z": -6.5
     },
     "why": [
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "핵심 단어",
+     "S&P 500 -4.36%(평소의 6.5배)"
     ]
    }
   },
   {
-   "id": "1qpezcn",
-   "title": "1,360원대로 급등한 달러-원…'DXY·증시·선물' 압력에 한 달 만에 최고...",
-   "firstSeen": "2026-11-06T05:38:00.000Z",
-   "lastSeen": "2026-11-06T08:16:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1lo5km0",
+   "title": "미·이란 충돌 재개 80%…맥널리, CNBC서 유가 100달러 전망",
+   "firstSeen": "2026-11-06T05:18:00.000Z",
+   "lastSeen": "2026-11-06T05:52:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
+    "war",
     "fx",
-    "market"
+    "energy"
    ],
-   "critical": [],
+   "critical": [
+    "energy"
+   ],
    "links": [
     {
-     "title": "‘블루웨이브 여파’ 원달러 환율 14.5원↑…한 달 만에 1360원대 터치",
-     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/06/20261106500308?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-06T08:16:00.000Z"
+     "title": "호르무즈서 유조선 3척 피격...유가 100달러 초읽기",
+     "link": "https://www.g-enews.com/view.php?ud=202611061446468139e250e8e188_1",
+     "host": "g-enews.com",
+     "at": "2026-11-06T05:52:00.000Z"
     },
     {
-     "title": "'블루웨이브 쇼크' 원/달러 환율 한 달 만에 1,360원대 터치",
-     "link": "https://www.yna.co.kr/view/AKR20261106136200002?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-06T07:10:00.000Z"
-    },
-    {
-     "title": "1,360원대로 급등한 달러-원…'DXY·증시·선물' 압력에 한 달 만에 최고...",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443506",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-06T05:38:00.000Z"
+     "title": "미·이란 충돌 재개 80%…맥널리, CNBC서 유가 100달러 전망",
+     "link": "https://www.tokenpost.kr/news/international/433888",
+     "host": "tokenpost.kr",
+     "at": "2026-11-06T05:18:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 53,
-    "spike": 1.8,
-    "news": false,
+    "score": 57,
+    "spike": 1.7,
+    "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.08,
      "unit": "%",
-     "z": 10.1
+     "z": 1.8
     },
     "why": [
-     "VIX 변동성 +69.66%(평소의 10.1배)"
+     "핵심 단어",
+     "원/달러 +1.08%"
     ]
    }
   },
   {
-   "id": "uvlj3b",
-   "title": "[채권/외환] 美 국채 금리 급락·달러 보합…AI 투자 우려에 안전자산 선...",
-   "firstSeen": "2026-11-05T22:21:00.000Z",
-   "lastSeen": "2026-11-06T02:15:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "월가 공포지수 하루 만에 70% 폭등… 빅테크 투매에 안전자산 랠리·국채...",
-     "link": "https://biz.chosun.com/international/international_economy/2026/11/06/GKDANJM7JVAHJAOW6DJ42FMEYE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-06T02:15:00.000Z"
-    },
-    {
-     "title": "[채권/외환] 美 국채 금리 급락·달러 보합…AI 투자 우려에 안전자산 선...",
-     "link": "https://www.newspim.com/news/view/20261106000041",
-     "host": "newspim.com",
-     "at": "2026-11-05T22:21:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 50,
-    "spike": 1.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 69.66,
-     "unit": "%",
-     "z": 10.1
-    },
-    "why": [
-     "VIX 변동성 +69.66%(평소의 10.1배)"
-    ]
-   }
-  },
-  {
-   "id": "r8rf8b",
-   "title": "美 민주당 의회 장악에 부채한도 충돌 우려…국가신용등급 강등 경고",
-   "firstSeen": "2026-11-05T11:46:00.000Z",
-   "lastSeen": "2026-11-06T05:30:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "arwuaq",
+   "title": "'블루 쓰나미'에 AI 규제 우려...장중 5천 선 붕괴 [뉴스나우]",
+   "firstSeen": "2026-11-05T07:05:00.000Z",
+   "lastSeen": "2026-11-06T08:44:00.000Z",
+   "count": 10,
+   "sources": 8,
    "topics": [
     "politics",
-    "fx"
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "美 민주당 의회 장악에 원전사업 불확실성…100억달러 선급금 연내 이전...",
-     "link": "https://biz.heraldcorp.com/article/10928625?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-06T05:30:00.000Z"
+     "title": "'블루 쓰나미' 덮친 증시… 코스피 5000선 간신히 방어 [MTN 리포트-선거...",
+     "link": "https://news.mtn.co.kr/article/2026110616204788829",
+     "host": "news.mtn.co.kr",
+     "at": "2026-11-06T08:44:00.000Z"
     },
     {
-     "title": "美 민주당 의회 장악에 부채한도 충돌 우려…국가신용등급 강등 경고",
-     "link": "https://www.g-enews.com/view.php?ud=2026110608185663109a1f309431_1",
-     "host": "g-enews.com",
-     "at": "2026-11-05T23:22:00.000Z"
+     "title": "[머니워치] 美 '블루 쓰나미'에 휩쓸린 코스피…6% 급락 마감",
+     "link": "http://www.newswatch.kr/news/articleView.html?idxno=81813",
+     "host": "newswatch.kr",
+     "at": "2026-11-06T08:42:00.000Z"
+    },
+    {
+     "title": "美 AI 데이터센터 규제 공포에 코스피 6% 폭락…5000선 가까스로 지켰다",
+     "link": "https://www.kbmaeil.com/article/20261106500198",
+     "host": "kbmaeil.com",
+     "at": "2026-11-06T08:32:00.000Z"
+    },
+    {
+     "title": "코스피 장중 5000 붕괴, 5059.69 마감…AI 투자 변곡점 맞나",
+     "link": "https://www.goodkyung.com/news/articleView.html?idxno=293212",
+     "host": "goodkyung.com",
+     "at": "2026-11-06T08:18:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 50,
-    "spike": 1.8,
+    "level": "caution",
+    "label": "주의",
+    "score": 51,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -888,6 +913,31 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-06T08:47:39.061Z",
+   "id": "107me4z",
+   "level": "urgent",
+   "title": "증시 급락에 긴급 처방…신용융자 담보비율 의무 3개월 면제",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -4.36%(평소의 6.5배)"
+   ],
+   "link": "https://www.greened.kr/news/articleView.html?idxno=354054",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-06T08:47:39.061Z",
+   "id": "1t216c2",
+   "level": "caution",
+   "title": "'검은 금요일' 코스피 이틀 새 11% ↓…삼성전자·SK하이닉스 동반 추락",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -4.36%(평소의 6.5배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=268541",
+   "delivered": false
+  },
   {
    "at": "2026-11-06T08:29:53.177Z",
    "id": "rzrl1a",
@@ -1103,32 +1153,6 @@
     "VIX 변동성 +69.66%(평소의 10.1배)"
    ],
    "link": "https://www.youthdaily.co.kr/news/article.html?no=229497",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T07:14:45.394Z",
-   "id": "1o7ladg",
-   "level": "caution",
-   "title": "日증시 덮친 'AI 쇼크' 닛케이 6% 넘게 폭락",
-   "why": [
-    "기사 급증(평소 대비 3σ)",
-    "VIX 변동성 +69.66%(평소의 10.1배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902245",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T07:04:59.906Z",
-   "id": "5kcris",
-   "level": "urgent",
-   "title": "코스피 5000마저 무너졌다",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 3σ)",
-    "VIX 변동성 +69.66%(평소의 10.1배)"
-   ],
-   "link": "https://www.ziksir.com/news/articleView.html?idxno=152367",
    "delivered": false
   }
  ],
