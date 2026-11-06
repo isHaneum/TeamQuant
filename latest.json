@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-06T13:27:31.691Z",
+ "updatedAt": "2026-11-06T13:48:10.826Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 1357.47998046875,
-   "change": 1.3,
-   "z": 2.1,
+   "last": 1358.1500244140625,
+   "change": 1.35,
+   "z": 2.2,
    "sd": 0.6176982973747167,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 90.77999877929688,
-   "change": 0.29,
-   "z": 0.1,
+   "last": 91.13999938964844,
+   "change": 0.68,
+   "z": 0.2,
    "sd": 2.8548001618285164,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 4069.10009765625,
-   "change": -1.08,
-   "z": -0.8,
+   "last": 4058.800048828125,
+   "change": -1.33,
+   "z": -1,
    "sd": 1.3579224099994356,
    "source": "Yahoo"
   },
@@ -98,12 +98,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-06",
-   "last": 27.71,
-   "change": -1.67,
-   "z": -0.1,
+   "last": 26.809999465942383,
+   "change": -4.86,
+   "z": -0.4,
    "sd": 11.277582247268505,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -111,25 +110,25 @@
    "label": "미 10년 금리",
    "unit": "bp",
    "available": true,
-   "date": "2026-11-05",
-   "last": 4.836999893188477,
-   "change": -5.7,
-   "z": -1.1,
-   "sd": 5.144537352111136,
+   "date": "2026-11-06",
+   "last": 4.8979997634887695,
+   "change": 6.1,
+   "z": 1.2,
+   "sd": 5.203169906885028,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -1.8,
+  "war": -1.7,
   "politics": -0.6,
-  "rates": -1.4,
-  "trade": -1.5,
+  "rates": -1.3,
+  "trade": -1.4,
   "fx": -0.9,
-  "energy": -1.6,
-  "market": -0.4,
+  "energy": -1.5,
+  "market": -0.3,
   "credit": -0.4,
   "disaster": 0,
-  "policy": -3.4
+  "policy": -2.8
  },
  "rates": {
   "war": {
@@ -143,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.2,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
@@ -163,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 6.3,
+   "rate": 6.4,
    "saturated": 2,
    "queries": 3
   },
@@ -332,6 +331,54 @@
    }
   },
   {
+   "id": "12plb1s",
+   "title": "팬데믹 후 최대 급락 본 트럼프 “민주당이 이긴 때문…스스로를 탓하라...",
+   "firstSeen": "2026-11-06T08:17:00.000Z",
+   "lastSeen": "2026-11-06T13:28:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "market",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "증시 폭락에 트럼프 “멍청한 민주당 때문…이들에 투표한 스스로를 탓...",
+     "link": "https://www.mk.co.kr/article/12200996",
+     "host": "mk.co.kr",
+     "at": "2026-11-06T13:28:00.000Z"
+    },
+    {
+     "title": "팬데믹 후 최대 급락 본 트럼프 “민주당이 이긴 때문…스스로를 탓하라...",
+     "link": "https://www.sedaily.com/article/20111265?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-06T08:17:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 61,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
+     "unit": "%",
+     "z": -6.5
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -4.36%(평소의 6.5배)"
+    ]
+   }
+  },
+  {
    "id": "4oxptk",
    "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
    "firstSeen": "2026-11-06T08:39:00.000Z",
@@ -462,48 +509,6 @@
    }
   },
   {
-   "id": "12plb1s",
-   "title": "팬데믹 후 최대 급락 본 트럼프 “민주당이 이긴 때문…스스로를 탓하라...",
-   "firstSeen": "2026-11-06T08:17:00.000Z",
-   "lastSeen": "2026-11-06T08:17:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "market",
-    "disaster"
-   ],
-   "critical": [
-    "disaster"
-   ],
-   "links": [
-    {
-     "title": "팬데믹 후 최대 급락 본 트럼프 “민주당이 이긴 때문…스스로를 탓하라...",
-     "link": "https://www.sedaily.com/article/20111265?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-06T08:17:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -4.36,
-     "unit": "%",
-     "z": -6.5
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -4.36%(평소의 6.5배)"
-    ]
-   }
-  },
-  {
    "id": "1363fma",
    "title": "올해만 11차례 서킷브레이커...외부 충격 '직격탄'",
    "firstSeen": "2026-11-06T08:56:00.000Z",
@@ -522,46 +527,6 @@
      "link": "https://www.ytn.co.kr/_ln/0102_202611061756413921",
      "host": "ytn.co.kr",
      "at": "2026-11-06T08:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -4.36,
-     "unit": "%",
-     "z": -6.5
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -4.36%(평소의 6.5배)"
-    ]
-   }
-  },
-  {
-   "id": "1tr1avz",
-   "title": "당정, 5천피 장중 붕괴에 긴급회의…이형일 \"신용융자 담보비율 유지 면...",
-   "firstSeen": "2026-11-06T10:57:00.000Z",
-   "lastSeen": "2026-11-06T10:57:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "당정, 5천피 장중 붕괴에 긴급회의…이형일 \"신용융자 담보비율 유지 면...",
-     "link": "https://www.pressian.com/pages/articles/2026110618033655782?utm_source=naver&utm_medium=search",
-     "host": "pressian.com",
-     "at": "2026-11-06T10:57:00.000Z"
     }
    ],
    "assess": {
@@ -686,21 +651,15 @@
    "id": "1aveb0n",
    "title": "AI 기술주도 '블루 쓰나미'...트럼프 패배 파장 확산 [뉴스UP]",
    "firstSeen": "2026-11-05T23:28:00.000Z",
-   "lastSeen": "2026-11-06T12:27:00.000Z",
-   "count": 9,
-   "sources": 6,
+   "lastSeen": "2026-11-06T10:59:00.000Z",
+   "count": 8,
+   "sources": 5,
    "topics": [
     "politics",
     "policy"
    ],
    "critical": [],
    "links": [
-    {
-     "title": "[뉴스더] '블루 쓰나미'에 휘청이는 AI 산업…'3년치 완판' K반도체도 불...",
-     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/06/2026110690268.html",
-     "host": "news.tvchosun.com",
-     "at": "2026-11-06T12:27:00.000Z"
-    },
     {
      "title": "[이슈빡] '블루 쓰나미'가 덮친 코스피…장중 5000 붕괴",
      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008834680&plink=ORI&cooper=NAVER",
@@ -718,12 +677,18 @@
      "link": "https://www.ytn.co.kr/_ln/0102_202611061714362397",
      "host": "ytn.co.kr",
      "at": "2026-11-06T08:14:00.000Z"
+    },
+    {
+     "title": "개장 3분 만에 '오천피' 내줬다…증시 덮친 '블루 쓰나미' [짤e몽땅]",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5229460",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-06T08:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
+    "score": 48,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -904,9 +869,123 @@
      "시장 반응만 있는 사건이 이미 2건"
     ]
    }
+  },
+  {
+   "id": "1szwq1u",
+   "title": "파라과이 대통령, 비리 의혹 실각…남미 '블루타이드' 비상(종합)",
+   "firstSeen": "2026-11-05T18:48:00.000Z",
+   "lastSeen": "2026-11-06T05:30:00.000Z",
+   "count": 5,
+   "sources": 4,
+   "topics": [
+    "politics",
+    "credit"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "파라과이 대통령, 부실은행 비리 의혹 실각…남미 ‘블루타이드’ 약화",
+     "link": "https://www.segye.com/newsView/20261106510126?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-06T05:30:00.000Z"
+    },
+    {
+     "title": "파라과이 대통령, 비리 의혹 실각…남미 '블루타이드' 비상(종합2보)",
+     "link": "https://www.yna.co.kr/view/AKR20261106004851087?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-05T22:47:00.000Z"
+    },
+    {
+     "title": "파라과이 대통령, 은행 비리 의혹으로 중도 사임...남미 '블루타이드' 비...",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611060521371197",
+     "host": "ytn.co.kr",
+     "at": "2026-11-05T20:21:00.000Z"
+    },
+    {
+     "title": "파라과이 대통령, 비리 의혹 실각…남미 '블루타이드' 빨간불",
+     "link": "https://www.nocutnews.co.kr/news/6602986?utm_source=naver&utm_medium=article&utm_campaign=20261106050954",
+     "host": "nocutnews.co.kr",
+     "at": "2026-11-05T20:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -4.36,
+     "unit": "%",
+     "z": -6.5
+    },
+    "why": [
+     "S&P 500 -4.36%(평소의 6.5배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-06T13:48:10.826Z",
+   "id": "py3wul",
+   "level": "caution",
+   "title": "호르무즈서 유조선 3척 피격...유가 100달러 초읽기",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -4.36%(평소의 6.5배)"
+   ],
+   "link": "https://www.news1.kr/world/middleeast-africa/6346120",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-06T13:48:10.826Z",
+   "id": "1snx309",
+   "level": "caution",
+   "title": "민주 \"증시 충격, 경제 체력 문제 아냐…입법·예산 뒷받침\"",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -4.36%(평소의 6.5배)"
+   ],
+   "link": "https://news.jtbc.co.kr/article/NB12326861?influxDiv=NAVER",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-06T13:48:10.826Z",
+   "id": "12plb1s",
+   "level": "caution",
+   "title": "팬데믹 후 최대 급락 본 트럼프 “민주당이 이긴 때문…스스로를 탓하라...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -4.36%(평소의 6.5배)"
+   ],
+   "link": "https://www.mk.co.kr/article/12200996",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-06T13:48:10.826Z",
+   "id": "22nz",
+   "level": "caution",
+   "title": "中YMTC, 신규 낸드공장 장비 최대 70% 국산화 추진",
+   "why": [
+    "S&P 500 -4.36%(평소의 6.5배)"
+   ],
+   "link": "https://sateconomy.co.kr/news/view/1065617573418460",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-06T13:48:10.826Z",
+   "id": "rl9ymo",
+   "level": "caution",
+   "title": "'검은 금요일' 5천피도 위태…하루 만에 267조 증발",
+   "why": [
+    "S&P 500 -4.36%(평소의 6.5배)"
+   ],
+   "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/06/2026110690258.html",
+   "delivered": false
+  },
   {
    "at": "2026-11-06T13:27:31.691Z",
    "id": "1g4akl4",
@@ -1083,64 +1162,6 @@
     "S&P 500 -4.36%(평소의 6.5배)"
    ],
    "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611060150&t=NN",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T11:47:47.806Z",
-   "id": "1cawzph",
-   "level": "caution",
-   "title": "與, 증시 급락에 긴급 간담회…\"불공정 거래 엄정 대응\"",
-   "why": [
-    "S&P 500 -4.36%(평소의 6.5배)"
-   ],
-   "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2311977",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T11:27:21.922Z",
-   "id": "1e2jc2i",
-   "level": "caution",
-   "title": "원/달러 환율 1357원 급등, AI 규제 쇼크에 출렁",
-   "why": [
-    "S&P 500 -4.36%(평소의 6.5배)"
-   ],
-   "link": "https://www.betanews.net/article/view/beta202611060113",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T11:12:55.382Z",
-   "id": "1lo5km0",
-   "level": "caution",
-   "title": "미·이란 충돌 재개 80%…맥널리, CNBC서 유가 100달러 전망",
-   "why": [
-    "핵심 단어",
-    "원/달러 +1.1%"
-   ],
-   "link": "https://www.g-enews.com/view.php?ud=202611061446468139e250e8e188_1",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T11:12:55.382Z",
-   "id": "11kgrx0",
-   "level": "caution",
-   "title": "민주 \"증시 충격, 경제 체력 문제 아냐…입법·예산 뒷받침\"",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -4.36%(평소의 6.5배)"
-   ],
-   "link": "https://news.jtbc.co.kr/article/NB12326861?influxDiv=NAVER",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T11:12:55.382Z",
-   "id": "4oxptk",
-   "level": "caution",
-   "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -4.36%(평소의 6.5배)"
-   ],
-   "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=280719",
    "delivered": false
   }
  ],
