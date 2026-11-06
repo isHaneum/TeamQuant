@@ -133,3 +133,25 @@
 @media(max-width:1200px){.pf-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:980px){.lt{grid-template-columns:minmax(0,1fr)}}
 .lt-right{grid-template-columns:minmax(0,1fr)}
+
+/* 과거 기업 분석 (2026-11-06 d) */
+.ch{margin:8px 0 18px}.ch-card{max-width:none}
+.ch-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:12px}.ch-head h3{margin:0;font-size:18px;display:flex;align-items:center}.ch-head p{margin:4px 0 0}
+.ch-form{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.ch-form input{min-width:200px}
+.ch-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}.ch-grid h4{margin:0 0 10px;font-size:15px}.ch-grid h4 small{font-weight:400;color:var(--sub);font-size:12px;margin-left:6px}
+.ch .hm-kvs{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}.ch .hm-kv{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid #f0f2f5;padding:6px 0;font-size:13.5px}.ch .hm-kv span{color:var(--sub);display:inline-flex;align-items:center}.ch .hm-kv b{font-variant-numeric:tabular-nums}
+.ch-q{margin-top:10px}.ch-q summary{cursor:pointer;font-size:13px;color:var(--sub)}
+.ch-verdict{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px}.ch-verdict td{padding:8px 6px;border-bottom:1px solid #f0f2f5;vertical-align:top}.ch-verdict td:first-child{color:var(--sub);white-space:nowrap;width:40%}.ch-verdict small{display:block;color:var(--sub);font-size:12px}
+.ch-judge{font-size:14px;line-height:1.7;margin:10px 0 0}
+@media(max-width:900px){.ch-grid{grid-template-columns:1fr}.ch .hm-kvs{grid-template-columns:1fr}}
+.ch-head>div{min-width:0}.ch-form{width:100%;max-width:720px}.ch-form input{min-width:0;flex:1 1 150px}.ch-form button{flex:0 0 auto}.ch .table-wrap{overflow:auto}.ch-verdict td:first-child{white-space:normal}
+@media(max-width:600px){.ch-form button{flex:1 1 100%}.ch-verdict td:first-child{width:36%}}
+
+/* 성장 전망(포트폴리오) G2 */
+.gr-card header p{margin:4px 0 0}.gr-table td{vertical-align:top}.gr-table td small{display:block;color:var(--sub);font-size:12px;margin-top:2px}
+.gr-why span,.gr-flags span{display:block;font-size:12.5px;line-height:1.55}.gr-flags span{color:#9a5b00}.gr-out{margin-top:10px}
+.ch-grid>section{min-width:0}.ch-verdict td{overflow-wrap:anywhere}
+.gr-table th,.gr-table td{text-align:left;white-space:normal}.gr-table .gr-why{min-width:210px}.gr-table .gr-flags{min-width:200px;max-width:280px}
+@media(max-width:600px){.ch-verdict,.ch-verdict tbody,.ch-verdict tr,.ch-verdict td{display:block;width:auto!important}.ch-verdict td:first-child{padding-bottom:2px;border-bottom:0}.ch-verdict td:last-child{text-align:left;padding-top:0}}
+.ch-verdict td{white-space:normal}.ch-verdict td:last-child{text-align:right}@media(max-width:600px){.ch-verdict td:last-child{text-align:left}}
+.ch-verdict{min-width:0}

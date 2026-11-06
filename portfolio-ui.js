@@ -16,7 +16,7 @@ const won = v => { if (!Number.isFinite(v)) return '—'; const a = Math.abs(v),
 const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' }).format(new Date());
 const STANCE_CLASS = { buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' };
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/lab.css?v=20261105b'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/lab.css?v=20261106g2'; document.head.append(css);
 
 const root = document.createElement('section'); root.className = 'pf'; root.id = 'portfolio';
 root.innerHTML = `

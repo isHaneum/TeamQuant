@@ -1,0 +1,5214 @@
+{
+ "version": "G2-2026-11-06",
+ "generatedAt": "2026-11-06T09:15:53.133379+00:00",
+ "rows": 10816,
+ "companies": 98,
+ "companiesByMarket": {
+  "KR": 49,
+  "US": 49
+ },
+ "variants": {
+  "A0": [
+   "revG",
+   "revGPrev",
+   "accel",
+   "oiG",
+   "niG",
+   "margin",
+   "marginChg",
+   "roe",
+   "ocfMargin",
+   "ey",
+   "psr",
+   "logCap",
+   "mom",
+   "vol",
+   "dd52"
+  ],
+  "A1": [
+   "revG",
+   "revGPrev",
+   "accel",
+   "oiG",
+   "niG",
+   "margin",
+   "marginChg",
+   "roe",
+   "ocfMargin",
+   "ey",
+   "psr",
+   "logCap",
+   "mom",
+   "vol",
+   "dd52"
+  ],
+  "A2": [
+   "revG",
+   "revGPrev",
+   "accel",
+   "oiG",
+   "niG",
+   "margin",
+   "marginChg",
+   "roe",
+   "ocfMargin",
+   "ey",
+   "psr",
+   "logCap",
+   "mom",
+   "vol",
+   "dd52"
+  ],
+  "B": [
+   "revG",
+   "revGPrev",
+   "accel",
+   "oiG",
+   "niG",
+   "margin",
+   "marginChg",
+   "roe",
+   "ocfMargin",
+   "mom",
+   "vol",
+   "dd52"
+  ],
+  "C": [
+   "revG",
+   "revGPrev",
+   "accel",
+   "oiG",
+   "niG",
+   "margin",
+   "marginChg",
+   "roe",
+   "ocfMargin",
+   "eyPit",
+   "psrPit",
+   "logCapPit",
+   "mom",
+   "vol",
+   "dd52"
+  ],
+  "D": [
+   "revG",
+   "revGPrev",
+   "accel",
+   "oiG",
+   "niG",
+   "margin",
+   "marginChg",
+   "roe",
+   "ocfMargin"
+  ]
+ },
+ "years": [
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "pickEnd": 2020,
+ "checkStart": 2021,
+ "targets": {
+  "fwdRevG": {
+   "label": "다음 1년 매출 성장",
+   "models": {
+    "persist": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 39.8,
+      "ic": 0.293,
+      "tNaive": 16.11,
+      "tNW": 6.92,
+      "positive": 81,
+      "topMinusAll": 11.7,
+      "topHit": 72
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 35.8,
+      "ic": 0.378,
+      "tNaive": 13.3,
+      "tNW": 12.91,
+      "positive": 88,
+      "topMinusAll": 14.4,
+      "topHit": 80
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.6,
+      "ic": 0.235,
+      "tNaive": 10.55,
+      "tNW": 3.87,
+      "positive": 76,
+      "topMinusAll": 9.8,
+      "topHit": 67
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.141,
+        "tNaive": 3.82,
+        "tNW": 1.98,
+        "positive": 70,
+        "topMinusAll": 4.5,
+        "topHit": 56
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 39.6,
+        "ic": 0.155,
+        "tNaive": 6.22,
+        "tNW": 2.82,
+        "positive": 71,
+        "topMinusAll": 10.8,
+        "topHit": 64
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.4,
+        "ic": 0.54,
+        "tNaive": 31.32,
+        "tNW": 14.04,
+        "positive": 100,
+        "topMinusAll": 21.3,
+        "topHit": 96
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.313,
+        "tNaive": 9.24,
+        "tNW": 3.22,
+        "positive": 81,
+        "topMinusAll": 8.9,
+        "topHit": 71
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.39,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.376,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.351,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2020": {
+       "ic": 0.4,
+       "sections": 24,
+       "avgCompanies": 41.6
+      },
+      "2021": {
+       "ic": 0.24,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.177,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.068,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.292,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.42,
+       "sections": 21,
+       "avgCompanies": 43.2
+      }
+     }
+    },
+    "A0": {
+     "all": {
+      "sections": 200,
+      "months": 122,
+      "avgCompanies": 40.0,
+      "ic": 0.46,
+      "tNaive": 35.12,
+      "tNW": 14.86,
+      "positive": 100,
+      "topMinusAll": 14.4,
+      "topHit": 81
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.55,
+      "tNaive": 30.26,
+      "tNW": 24.66,
+      "positive": 100,
+      "topMinusAll": 17.2,
+      "topHit": 89
+     },
+     "check": {
+      "sections": 119,
+      "months": 69,
+      "avgCompanies": 42.6,
+      "ic": 0.398,
+      "tNaive": 25.0,
+      "tNW": 12.07,
+      "positive": 100,
+      "topMinusAll": 12.5,
+      "topHit": 76
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.424,
+        "tNaive": 17.54,
+        "tNW": 8.57,
+        "positive": 100,
+        "topMinusAll": 11.7,
+        "topHit": 77
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.34,
+        "tNaive": 27.11,
+        "tNW": 16.58,
+        "positive": 100,
+        "topMinusAll": 14.0,
+        "topHit": 73
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.637,
+        "tNaive": 37.84,
+        "tNW": 18.7,
+        "positive": 100,
+        "topMinusAll": 21.0,
+        "topHit": 98
+       },
+       "check": {
+        "sections": 61,
+        "months": 61,
+        "avgCompanies": 45.0,
+        "ic": 0.453,
+        "tNaive": 16.79,
+        "tNW": 6.31,
+        "positive": 100,
+        "topMinusAll": 11.0,
+        "topHit": 79
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.602,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.524,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.563,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.534,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.366,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.281,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.379,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.466,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.495,
+       "sections": 22,
+       "avgCompanies": 43.9
+      },
+      "2026": {
+       "ic": 0.633,
+       "sections": 1,
+       "avgCompanies": 22.0
+      }
+     }
+    },
+    "A1": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.458,
+      "tNaive": 34.82,
+      "tNW": 14.69,
+      "positive": 100,
+      "topMinusAll": 14.4,
+      "topHit": 81
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.55,
+      "tNaive": 30.26,
+      "tNW": 24.66,
+      "positive": 100,
+      "topMinusAll": 17.2,
+      "topHit": 89
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.394,
+      "tNaive": 24.78,
+      "tNW": 12.6,
+      "positive": 100,
+      "topMinusAll": 12.5,
+      "topHit": 76
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.424,
+        "tNaive": 17.54,
+        "tNW": 8.57,
+        "positive": 100,
+        "topMinusAll": 11.7,
+        "topHit": 77
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.34,
+        "tNaive": 27.11,
+        "tNW": 16.58,
+        "positive": 100,
+        "topMinusAll": 14.0,
+        "topHit": 73
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.637,
+        "tNaive": 37.84,
+        "tNW": 18.7,
+        "positive": 100,
+        "topMinusAll": 21.0,
+        "topHit": 98
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.446,
+        "tNaive": 16.26,
+        "tNW": 6.19,
+        "positive": 100,
+        "topMinusAll": 10.9,
+        "topHit": 78
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.602,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.524,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.563,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.534,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.366,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.281,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.379,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.466,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.487,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "A2": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.45,
+      "tNaive": 31.58,
+      "tNW": 12.44,
+      "positive": 99,
+      "topMinusAll": 13.5,
+      "topHit": 79
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.544,
+      "tNaive": 27.38,
+      "tNW": 17.37,
+      "positive": 100,
+      "topMinusAll": 16.1,
+      "topHit": 86
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.385,
+      "tNaive": 22.0,
+      "tNW": 9.78,
+      "positive": 99,
+      "topMinusAll": 11.6,
+      "topHit": 75
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.389,
+        "tNaive": 13.56,
+        "tNW": 5.72,
+        "positive": 100,
+        "topMinusAll": 9.4,
+        "topHit": 71
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.318,
+        "tNaive": 21.76,
+        "tNW": 13.68,
+        "positive": 100,
+        "topMinusAll": 12.2,
+        "topHit": 71
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.651,
+        "tNaive": 52.78,
+        "tNW": 26.29,
+        "positive": 100,
+        "topMinusAll": 20.8,
+        "topHit": 96
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.452,
+        "tNaive": 15.44,
+        "tNW": 5.66,
+        "positive": 98,
+        "topMinusAll": 11.1,
+        "topHit": 80
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.663,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.502,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.594,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.472,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.32,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.232,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.389,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.504,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.497,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "A2_ridge": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.467,
+      "tNaive": 29.31,
+      "tNW": 10.43,
+      "positive": 98,
+      "topMinusAll": 14.2,
+      "topHit": 80
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.577,
+      "tNaive": 25.64,
+      "tNW": 13.41,
+      "positive": 100,
+      "topMinusAll": 16.7,
+      "topHit": 87
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.392,
+      "tNaive": 20.39,
+      "tNW": 8.0,
+      "positive": 97,
+      "topMinusAll": 12.5,
+      "topHit": 76
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.379,
+        "tNaive": 13.87,
+        "tNW": 6.23,
+        "positive": 100,
+        "topMinusAll": 10.4,
+        "topHit": 72
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.311,
+        "tNaive": 19.06,
+        "tNW": 7.63,
+        "positive": 100,
+        "topMinusAll": 13.9,
+        "topHit": 71
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.713,
+        "tNaive": 60.55,
+        "tNW": 31.37,
+        "positive": 100,
+        "topMinusAll": 21.0,
+        "topHit": 97
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.472,
+        "tNaive": 15.02,
+        "tNW": 5.38,
+        "positive": 95,
+        "topMinusAll": 11.1,
+        "topHit": 80
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.746,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.571,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.582,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.492,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.312,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.204,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.41,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.507,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.547,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "B": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.383,
+      "tNaive": 23.77,
+      "tNW": 10.41,
+      "positive": 91,
+      "topMinusAll": 11.5,
+      "topHit": 75
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.463,
+      "tNaive": 19.31,
+      "tNW": 13.41,
+      "positive": 96,
+      "topMinusAll": 13.3,
+      "topHit": 82
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.328,
+      "tNaive": 16.22,
+      "tNW": 6.86,
+      "positive": 88,
+      "topMinusAll": 10.2,
+      "topHit": 70
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.255,
+        "tNaive": 9.31,
+        "tNW": 4.84,
+        "positive": 91,
+        "topMinusAll": 7.3,
+        "topHit": 65
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.314,
+        "tNaive": 17.46,
+        "tNW": 9.52,
+        "positive": 98,
+        "topMinusAll": 13.0,
+        "topHit": 71
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.606,
+        "tNaive": 40.03,
+        "tNW": 25.46,
+        "positive": 100,
+        "topMinusAll": 17.5,
+        "topHit": 93
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.342,
+        "tNaive": 9.48,
+        "tNW": 3.4,
+        "positive": 78,
+        "topMinusAll": 7.4,
+        "topHit": 70
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.558,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.395,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.441,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.497,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.303,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.188,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.255,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.506,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.399,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "C": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.458,
+      "tNaive": 31.21,
+      "tNW": 14.31,
+      "positive": 100,
+      "topMinusAll": 13.4,
+      "topHit": 79
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.526,
+      "tNaive": 22.85,
+      "tNW": 15.68,
+      "positive": 100,
+      "topMinusAll": 15.5,
+      "topHit": 83
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.411,
+      "tNaive": 23.01,
+      "tNW": 10.75,
+      "positive": 100,
+      "topMinusAll": 12.0,
+      "topHit": 77
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.308,
+        "tNaive": 14.96,
+        "tNW": 9.93,
+        "positive": 100,
+        "topMinusAll": 9.7,
+        "topHit": 67
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.33,
+        "tNaive": 20.98,
+        "tNW": 10.46,
+        "positive": 100,
+        "topMinusAll": 12.9,
+        "topHit": 72
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.676,
+        "tNaive": 55.39,
+        "tNW": 31.05,
+        "positive": 100,
+        "topMinusAll": 19.5,
+        "topHit": 93
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.49,
+        "tNaive": 17.28,
+        "tNW": 6.11,
+        "positive": 100,
+        "topMinusAll": 11.0,
+        "topHit": 82
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.664,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.462,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.539,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.501,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.312,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.287,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.441,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.524,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.502,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "C_ridge": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.459,
+      "tNaive": 28.37,
+      "tNW": 10.46,
+      "positive": 97,
+      "topMinusAll": 13.5,
+      "topHit": 79
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.561,
+      "tNaive": 23.7,
+      "tNW": 12.65,
+      "positive": 99,
+      "topMinusAll": 16.2,
+      "topHit": 86
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.389,
+      "tNaive": 19.9,
+      "tNW": 7.94,
+      "positive": 96,
+      "topMinusAll": 11.5,
+      "topHit": 74
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.351,
+        "tNaive": 12.46,
+        "tNW": 5.78,
+        "positive": 97,
+        "topMinusAll": 10.3,
+        "topHit": 71
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.306,
+        "tNaive": 15.54,
+        "tNW": 6.35,
+        "positive": 97,
+        "topMinusAll": 12.5,
+        "topHit": 70
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.705,
+        "tNaive": 57.31,
+        "tNW": 31.89,
+        "positive": 100,
+        "topMinusAll": 20.3,
+        "topHit": 96
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.471,
+        "tNaive": 15.61,
+        "tNW": 5.56,
+        "positive": 95,
+        "topMinusAll": 10.6,
+        "topHit": 79
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.736,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.538,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.577,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.476,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.29,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.215,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.428,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.491,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.541,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "D": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.269,
+      "tNaive": 16.01,
+      "tNW": 6.52,
+      "positive": 83,
+      "topMinusAll": 9.1,
+      "topHit": 70
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.369,
+      "tNaive": 14.64,
+      "tNW": 16.62,
+      "positive": 90,
+      "topMinusAll": 12.4,
+      "topHit": 78
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.199,
+      "tNaive": 9.91,
+      "tNW": 3.59,
+      "positive": 78,
+      "topMinusAll": 6.9,
+      "topHit": 65
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.158,
+        "tNaive": 4.89,
+        "tNW": 2.77,
+        "positive": 76,
+        "topMinusAll": 5.4,
+        "topHit": 62
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.148,
+        "tNaive": 6.93,
+        "tNW": 3.35,
+        "positive": 74,
+        "topMinusAll": 8.1,
+        "topHit": 63
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.515,
+        "tNaive": 33.55,
+        "tNW": 16.55,
+        "positive": 100,
+        "topMinusAll": 17.2,
+        "topHit": 89
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.249,
+        "tNaive": 7.61,
+        "tNW": 2.67,
+        "positive": 81,
+        "topMinusAll": 5.7,
+        "topHit": 66
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.402,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.325,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.417,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.344,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.251,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.115,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.027,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.34,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.27,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "D_ridge": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.251,
+      "tNaive": 13.62,
+      "tNW": 6.22,
+      "positive": 78,
+      "topMinusAll": 9.2,
+      "topHit": 71
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.351,
+      "tNaive": 11.59,
+      "tNW": 7.92,
+      "positive": 81,
+      "topMinusAll": 13.0,
+      "topHit": 82
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.182,
+      "tNaive": 8.69,
+      "tNW": 4.5,
+      "positive": 75,
+      "topMinusAll": 6.6,
+      "topHit": 64
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.062,
+        "tNaive": 2.05,
+        "tNW": 1.06,
+        "positive": 55,
+        "topMinusAll": 3.9,
+        "topHit": 61
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.103,
+        "tNaive": 4.17,
+        "tNW": 1.83,
+        "positive": 72,
+        "topMinusAll": 7.1,
+        "topHit": 60
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.549,
+        "tNaive": 45.22,
+        "tNW": 21.77,
+        "positive": 100,
+        "topMinusAll": 19.3,
+        "topHit": 96
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.259,
+        "tNaive": 8.47,
+        "tNW": 3.0,
+        "positive": 78,
+        "topMinusAll": 6.1,
+        "topHit": 68
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.467,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.441,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.317,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.248,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.107,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.136,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.121,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.253,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.309,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    },
+    "lgbm": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 40.1,
+      "ic": 0.458,
+      "tNaive": 31.21,
+      "tNW": 14.31,
+      "positive": 100,
+      "topMinusAll": 13.4,
+      "topHit": 79
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 36.1,
+      "ic": 0.526,
+      "tNaive": 22.85,
+      "tNW": 15.68,
+      "positive": 100,
+      "topMinusAll": 15.5,
+      "topHit": 83
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 42.8,
+      "ic": 0.411,
+      "tNaive": 23.01,
+      "tNW": 10.75,
+      "positive": 100,
+      "topMinusAll": 12.0,
+      "topHit": 77
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 37.9,
+        "ic": 0.308,
+        "tNaive": 14.96,
+        "tNW": 9.93,
+        "positive": 100,
+        "topMinusAll": 9.7,
+        "topHit": 67
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 40.0,
+        "ic": 0.33,
+        "tNaive": 20.98,
+        "tNW": 10.46,
+        "positive": 100,
+        "topMinusAll": 12.9,
+        "topHit": 72
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 34.9,
+        "ic": 0.676,
+        "tNaive": 55.39,
+        "tNW": 31.05,
+        "positive": 100,
+        "topMinusAll": 19.5,
+        "topHit": 93
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 45.6,
+        "ic": 0.49,
+        "tNaive": 17.28,
+        "tNW": 6.11,
+        "positive": 100,
+        "topMinusAll": 11.0,
+        "topHit": 82
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.664,
+       "sections": 12,
+       "avgCompanies": 32.4
+      },
+      "2018": {
+       "ic": 0.462,
+       "sections": 21,
+       "avgCompanies": 31.3
+      },
+      "2019": {
+       "ic": 0.539,
+       "sections": 24,
+       "avgCompanies": 36.7
+      },
+      "2020": {
+       "ic": 0.501,
+       "sections": 24,
+       "avgCompanies": 41.7
+      },
+      "2021": {
+       "ic": 0.312,
+       "sections": 24,
+       "avgCompanies": 42.9
+      },
+      "2022": {
+       "ic": 0.287,
+       "sections": 24,
+       "avgCompanies": 42.1
+      },
+      "2023": {
+       "ic": 0.441,
+       "sections": 24,
+       "avgCompanies": 41.8
+      },
+      "2024": {
+       "ic": 0.524,
+       "sections": 24,
+       "avgCompanies": 43.1
+      },
+      "2025": {
+       "ic": 0.502,
+       "sections": 21,
+       "avgCompanies": 44.3
+      }
+     }
+    }
+   },
+   "importance": {
+    "A0": {
+     "revG": 138,
+     "revGPrev": 186,
+     "accel": 69,
+     "oiG": 91,
+     "niG": 61,
+     "margin": 140,
+     "marginChg": 145,
+     "roe": 145,
+     "ocfMargin": 47,
+     "ey": 176,
+     "psr": 214,
+     "logCap": 159,
+     "mom": 74,
+     "vol": 54,
+     "dd52": 101
+    },
+    "A1": {
+     "revG": 138,
+     "revGPrev": 186,
+     "accel": 69,
+     "oiG": 91,
+     "niG": 61,
+     "margin": 140,
+     "marginChg": 145,
+     "roe": 145,
+     "ocfMargin": 47,
+     "ey": 176,
+     "psr": 214,
+     "logCap": 159,
+     "mom": 74,
+     "vol": 54,
+     "dd52": 101
+    },
+    "A2": {
+     "revG": 153,
+     "revGPrev": 129,
+     "accel": 91,
+     "oiG": 65,
+     "niG": 52,
+     "margin": 124,
+     "marginChg": 134,
+     "roe": 161,
+     "ocfMargin": 31,
+     "ey": 162,
+     "psr": 235,
+     "logCap": 189,
+     "mom": 93,
+     "vol": 76,
+     "dd52": 105
+    },
+    "B": {
+     "revG": 238,
+     "revGPrev": 153,
+     "accel": 121,
+     "oiG": 82,
+     "niG": 87,
+     "margin": 238,
+     "marginChg": 208,
+     "roe": 208,
+     "ocfMargin": 33,
+     "mom": 129,
+     "vol": 137,
+     "dd52": 166
+    },
+    "C": {
+     "revG": 171,
+     "revGPrev": 135,
+     "accel": 103,
+     "oiG": 70,
+     "niG": 50,
+     "margin": 133,
+     "marginChg": 148,
+     "roe": 150,
+     "ocfMargin": 11,
+     "eyPit": 162,
+     "psrPit": 221,
+     "logCapPit": 171,
+     "mom": 85,
+     "vol": 76,
+     "dd52": 114
+    },
+    "D": {
+     "revG": 289,
+     "revGPrev": 238,
+     "accel": 175,
+     "oiG": 159,
+     "niG": 105,
+     "margin": 300,
+     "marginChg": 229,
+     "roe": 256,
+     "ocfMargin": 49
+    }
+   },
+   "chosen": "C",
+   "bootstrapCheck": {
+    "rows": 4985,
+    "reps": 1000,
+    "models": {
+     "persist": {
+      "ic": 0.231,
+      "ci95": [
+       0.138,
+       0.324
+      ]
+     },
+     "A2": {
+      "ic": 0.377,
+      "ci95": [
+       0.295,
+       0.455
+      ],
+      "minusPersist": {
+       "mean": 0.147,
+       "ci95": [
+        0.056,
+        0.231
+       ],
+       "shareAbove": 100
+      }
+     },
+     "B": {
+      "ic": 0.323,
+      "ci95": [
+       0.24,
+       0.397
+      ],
+      "minusPersist": {
+       "mean": 0.092,
+       "ci95": [
+        0.024,
+        0.162
+       ],
+       "shareAbove": 99
+      }
+     },
+     "C": {
+      "ic": 0.403,
+      "ci95": [
+       0.329,
+       0.477
+      ],
+      "minusPersist": {
+       "mean": 0.172,
+       "ci95": [
+        0.086,
+        0.25
+       ],
+       "shareAbove": 100
+      }
+     },
+     "D": {
+      "ic": 0.194,
+      "ci95": [
+       0.106,
+       0.273
+      ],
+      "minusPersist": {
+       "mean": -0.037,
+       "ci95": [
+        -0.118,
+        0.044
+       ],
+       "shareAbove": 18
+      }
+     },
+     "C_ridge": {
+      "ic": 0.382,
+      "ci95": [
+       0.309,
+       0.458
+      ],
+      "minusPersist": {
+       "mean": 0.152,
+       "ci95": [
+        0.075,
+        0.225
+       ],
+       "shareAbove": 100
+      }
+     }
+    }
+   },
+   "sectorCheck": {
+    "sectorNeutralIc": 0.441,
+    "sectorOnlyIc": 0.097,
+    "topPicksBySector": {
+     "정보기술": {
+      "picks": 292,
+      "hit": 89
+     },
+     "커뮤니케이션": {
+      "picks": 174,
+      "hit": 82
+     },
+     "헬스케어": {
+      "picks": 144,
+      "hit": 78
+     },
+     "산업재": {
+      "picks": 120,
+      "hit": 64
+     },
+     "소재": {
+      "picks": 102,
+      "hit": 62
+     },
+     "경기소비재": {
+      "picks": 84,
+      "hit": 74
+     },
+     "금융": {
+      "picks": 17,
+      "hit": 65
+     },
+     "필수소비재": {
+      "picks": 10,
+      "hit": 30
+     },
+     "에너지": {
+      "picks": 6,
+      "hit": 100
+     },
+     "유틸리티": {
+      "picks": 3,
+      "hit": 100
+     }
+    },
+    "persist": {
+     "sectorNeutralIc": 0.245,
+     "sectorOnlyIc": 0.097,
+     "topPicksBySector": {
+      "정보기술": {
+       "picks": 240,
+       "hit": 78
+      },
+      "헬스케어": {
+       "picks": 162,
+       "hit": 65
+      },
+      "커뮤니케이션": {
+       "picks": 160,
+       "hit": 80
+      },
+      "소재": {
+       "picks": 115,
+       "hit": 67
+      },
+      "산업재": {
+       "picks": 103,
+       "hit": 44
+      },
+      "에너지": {
+       "picks": 68,
+       "hit": 38
+      },
+      "경기소비재": {
+       "picks": 64,
+       "hit": 64
+      },
+      "금융": {
+       "picks": 25,
+       "hit": 92
+      },
+      "유틸리티": {
+       "picks": 12,
+       "hit": 100
+      },
+      "필수소비재": {
+       "picks": 3,
+       "hit": 100
+      }
+     }
+    }
+   },
+   "annualSnapshots": {
+    "persist": [
+     {
+      "market": "KR",
+      "date": "2021-06-30",
+      "n": 39,
+      "ic": 0.0
+     },
+     {
+      "market": "KR",
+      "date": "2022-06-30",
+      "n": 39,
+      "ic": 0.369
+     },
+     {
+      "market": "KR",
+      "date": "2023-06-30",
+      "n": 40,
+      "ic": 0.169
+     },
+     {
+      "market": "KR",
+      "date": "2024-06-28",
+      "n": 40,
+      "ic": 0.024
+     },
+     {
+      "market": "KR",
+      "date": "2025-06-30",
+      "n": 40,
+      "ic": 0.222
+     },
+     {
+      "market": "US",
+      "date": "2021-06-30",
+      "n": 46,
+      "ic": 0.216
+     },
+     {
+      "market": "US",
+      "date": "2022-06-30",
+      "n": 44,
+      "ic": 0.07
+     },
+     {
+      "market": "US",
+      "date": "2023-06-30",
+      "n": 43,
+      "ic": 0.028
+     },
+     {
+      "market": "US",
+      "date": "2024-06-28",
+      "n": 46,
+      "ic": 0.557
+     },
+     {
+      "market": "US",
+      "date": "2025-06-30",
+      "n": 47,
+      "ic": 0.531
+     }
+    ],
+    "C": [
+     {
+      "market": "KR",
+      "date": "2021-06-30",
+      "n": 39,
+      "ic": 0.123
+     },
+     {
+      "market": "KR",
+      "date": "2022-06-30",
+      "n": 39,
+      "ic": 0.251
+     },
+     {
+      "market": "KR",
+      "date": "2023-06-30",
+      "n": 40,
+      "ic": 0.376
+     },
+     {
+      "market": "KR",
+      "date": "2024-06-28",
+      "n": 40,
+      "ic": 0.45
+     },
+     {
+      "market": "KR",
+      "date": "2025-06-30",
+      "n": 40,
+      "ic": 0.347
+     },
+     {
+      "market": "US",
+      "date": "2021-06-30",
+      "n": 46,
+      "ic": 0.275
+     },
+     {
+      "market": "US",
+      "date": "2022-06-30",
+      "n": 44,
+      "ic": 0.098
+     },
+     {
+      "market": "US",
+      "date": "2023-06-30",
+      "n": 43,
+      "ic": 0.574
+     },
+     {
+      "market": "US",
+      "date": "2024-06-28",
+      "n": 46,
+      "ic": 0.786
+     },
+     {
+      "market": "US",
+      "date": "2025-06-30",
+      "n": 47,
+      "ic": 0.649
+     }
+    ]
+   }
+  },
+  "fwdOiG": {
+   "label": "다음 1년 영업이익 성장",
+   "models": {
+    "persist": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 31.3,
+      "ic": 0.094,
+      "tNaive": 5.84,
+      "tNW": 2.48,
+      "positive": 65,
+      "topMinusAll": 14.1,
+      "topHit": 60
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 28.6,
+      "ic": 0.1,
+      "tNaive": 4.24,
+      "tNW": 3.49,
+      "positive": 67,
+      "topMinusAll": 18.3,
+      "topHit": 64
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 33.1,
+      "ic": 0.09,
+      "tNaive": 4.11,
+      "tNW": 1.39,
+      "positive": 63,
+      "topMinusAll": 11.1,
+      "topHit": 57
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 32.9,
+        "ic": -0.075,
+        "tNaive": -2.75,
+        "tNW": -1.85,
+        "positive": 27,
+        "topMinusAll": 1.4,
+        "topHit": 45
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 35.1,
+        "ic": 0.064,
+        "tNaive": 2.5,
+        "tNW": 1.2,
+        "positive": 60,
+        "topMinusAll": 5.5,
+        "topHit": 54
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 25.7,
+        "ic": 0.22,
+        "tNaive": 10.05,
+        "tNW": 5.81,
+        "positive": 94,
+        "topMinusAll": 29.9,
+        "topHit": 77
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.116,
+        "tNaive": 3.28,
+        "tNW": 1.08,
+        "positive": 66,
+        "topMinusAll": 16.6,
+        "topHit": 60
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.113,
+       "sections": 12,
+       "avgCompanies": 24.6
+      },
+      "2018": {
+       "ic": 0.136,
+       "sections": 21,
+       "avgCompanies": 26.3
+      },
+      "2019": {
+       "ic": 0.041,
+       "sections": 24,
+       "avgCompanies": 29.4
+      },
+      "2020": {
+       "ic": 0.12,
+       "sections": 24,
+       "avgCompanies": 32.0
+      },
+      "2021": {
+       "ic": -0.056,
+       "sections": 24,
+       "avgCompanies": 34.8
+      },
+      "2022": {
+       "ic": -0.071,
+       "sections": 24,
+       "avgCompanies": 34.2
+      },
+      "2023": {
+       "ic": 0.048,
+       "sections": 24,
+       "avgCompanies": 31.6
+      },
+      "2024": {
+       "ic": 0.265,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2025": {
+       "ic": 0.289,
+       "sections": 21,
+       "avgCompanies": 31.6
+      }
+     }
+    },
+    "A0": {
+     "all": {
+      "sections": 200,
+      "months": 122,
+      "avgCompanies": 32.3,
+      "ic": 0.349,
+      "tNaive": 26.5,
+      "tNW": 12.34,
+      "positive": 96,
+      "topMinusAll": 56.7,
+      "topHit": 71
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.36,
+      "tNaive": 15.67,
+      "tNW": 7.2,
+      "positive": 94,
+      "topMinusAll": 79.1,
+      "topHit": 75
+     },
+     "check": {
+      "sections": 119,
+      "months": 69,
+      "avgCompanies": 34.1,
+      "ic": 0.342,
+      "tNaive": 21.74,
+      "tNW": 11.78,
+      "positive": 98,
+      "topMinusAll": 41.5,
+      "topHit": 67
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.316,
+        "tNaive": 11.05,
+        "tNW": 6.24,
+        "positive": 94,
+        "topMinusAll": 46.3,
+        "topHit": 69
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.279,
+        "tNaive": 13.08,
+        "tNW": 7.99,
+        "positive": 97,
+        "topMinusAll": 34.6,
+        "topHit": 65
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.391,
+        "tNaive": 11.85,
+        "tNW": 5.44,
+        "positive": 94,
+        "topMinusAll": 101.7,
+        "topHit": 80
+       },
+       "check": {
+        "sections": 61,
+        "months": 61,
+        "avgCompanies": 30.6,
+        "ic": 0.401,
+        "tNaive": 19.68,
+        "tNW": 8.63,
+        "positive": 100,
+        "topMinusAll": 48.1,
+        "topHit": 70
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.444,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.223,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.28,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.519,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.307,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.314,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": 0.344,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": 0.439,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": 0.298,
+       "sections": 22,
+       "avgCompanies": 32.5
+      },
+      "2026": {
+       "ic": 0.4,
+       "sections": 1,
+       "avgCompanies": 11.0
+      }
+     }
+    },
+    "A2": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 32.5,
+      "ic": 0.352,
+      "tNaive": 26.88,
+      "tNW": 10.48,
+      "positive": 98,
+      "topMinusAll": 53.1,
+      "topHit": 72
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.377,
+      "tNaive": 16.28,
+      "tNW": 6.08,
+      "positive": 99,
+      "topMinusAll": 68.2,
+      "topHit": 78
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 34.4,
+      "ic": 0.336,
+      "tNaive": 22.02,
+      "tNW": 13.45,
+      "positive": 97,
+      "topMinusAll": 42.6,
+      "topHit": 68
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.327,
+        "tNaive": 14.04,
+        "tNW": 8.82,
+        "positive": 100,
+        "topMinusAll": 48.8,
+        "topHit": 72
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.279,
+        "tNaive": 13.75,
+        "tNW": 8.49,
+        "positive": 95,
+        "topMinusAll": 34.9,
+        "topHit": 63
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.412,
+        "tNaive": 11.76,
+        "tNW": 4.63,
+        "positive": 98,
+        "topMinusAll": 81.5,
+        "topHit": 82
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.391,
+        "tNaive": 19.18,
+        "tNW": 10.13,
+        "positive": 100,
+        "topMinusAll": 50.1,
+        "topHit": 72
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.599,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.311,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.199,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.502,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.36,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.336,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": 0.298,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": 0.393,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": 0.284,
+       "sections": 21,
+       "avgCompanies": 33.0
+      }
+     }
+    },
+    "A2_ridge": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 32.5,
+      "ic": 0.371,
+      "tNaive": 23.54,
+      "tNW": 8.9,
+      "positive": 95,
+      "topMinusAll": 54.5,
+      "topHit": 71
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.378,
+      "tNaive": 13.07,
+      "tNW": 4.7,
+      "positive": 94,
+      "topMinusAll": 82.2,
+      "topHit": 73
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 34.4,
+      "ic": 0.367,
+      "tNaive": 20.65,
+      "tNW": 11.54,
+      "positive": 97,
+      "topMinusAll": 35.4,
+      "topHit": 69
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.362,
+        "tNaive": 12.57,
+        "tNW": 5.9,
+        "positive": 97,
+        "topMinusAll": 63.1,
+        "topHit": 74
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.32,
+        "tNaive": 12.91,
+        "tNW": 7.07,
+        "positive": 93,
+        "topMinusAll": 35.5,
+        "topHit": 67
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.389,
+        "tNaive": 8.68,
+        "tNW": 3.45,
+        "positive": 92,
+        "topMinusAll": 95.3,
+        "topHit": 73
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.413,
+        "tNaive": 17.08,
+        "tNW": 7.79,
+        "positive": 100,
+        "topMinusAll": 35.3,
+        "topHit": 71
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.548,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.184,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.227,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.614,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.361,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.396,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": 0.349,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": 0.462,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": 0.252,
+       "sections": 21,
+       "avgCompanies": 33.0
+      }
+     }
+    },
+    "C": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 32.5,
+      "ic": 0.375,
+      "tNaive": 26.72,
+      "tNW": 10.73,
+      "positive": 96,
+      "topMinusAll": 57.8,
+      "topHit": 73
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.408,
+      "tNaive": 16.98,
+      "tNW": 6.48,
+      "positive": 96,
+      "topMinusAll": 78.9,
+      "topHit": 79
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 34.4,
+      "ic": 0.352,
+      "tNaive": 21.08,
+      "tNW": 12.71,
+      "positive": 96,
+      "topMinusAll": 43.2,
+      "topHit": 68
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.35,
+        "tNaive": 13.37,
+        "tNW": 7.41,
+        "positive": 100,
+        "topMinusAll": 54.0,
+        "topHit": 74
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.265,
+        "tNaive": 12.72,
+        "tNW": 7.06,
+        "positive": 91,
+        "topMinusAll": 33.8,
+        "topHit": 61
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.448,
+        "tNaive": 12.64,
+        "tNW": 5.32,
+        "positive": 94,
+        "topMinusAll": 96.0,
+        "topHit": 83
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.438,
+        "tNaive": 21.07,
+        "tNW": 10.44,
+        "positive": 100,
+        "topMinusAll": 52.4,
+        "topHit": 75
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.581,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.35,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.218,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.563,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.36,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.401,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": 0.327,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": 0.377,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": 0.288,
+       "sections": 21,
+       "avgCompanies": 33.0
+      }
+     }
+    },
+    "C_ridge": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 32.5,
+      "ic": 0.387,
+      "tNaive": 23.88,
+      "tNW": 8.81,
+      "positive": 95,
+      "topMinusAll": 55.1,
+      "topHit": 70
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.39,
+      "tNaive": 13.09,
+      "tNW": 4.69,
+      "positive": 94,
+      "topMinusAll": 83.1,
+      "topHit": 74
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 34.4,
+      "ic": 0.385,
+      "tNaive": 21.16,
+      "tNW": 10.96,
+      "positive": 97,
+      "topMinusAll": 35.8,
+      "topHit": 68
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.364,
+        "tNaive": 12.28,
+        "tNW": 5.64,
+        "positive": 97,
+        "topMinusAll": 64.7,
+        "topHit": 76
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.312,
+        "tNaive": 12.42,
+        "tNW": 6.89,
+        "positive": 93,
+        "topMinusAll": 31.4,
+        "topHit": 64
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.409,
+        "tNaive": 8.86,
+        "tNW": 3.53,
+        "positive": 92,
+        "topMinusAll": 95.8,
+        "topHit": 72
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.457,
+        "tNaive": 19.92,
+        "tNW": 8.8,
+        "positive": 100,
+        "topMinusAll": 40.1,
+        "topHit": 72
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.57,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.191,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.222,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.644,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.395,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.427,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": 0.381,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": 0.455,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": 0.25,
+       "sections": 21,
+       "avgCompanies": 33.0
+      }
+     }
+    },
+    "D": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 32.5,
+      "ic": 0.134,
+      "tNaive": 9.94,
+      "tNW": 4.03,
+      "positive": 72,
+      "topMinusAll": 35.5,
+      "topHit": 60
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.237,
+      "tNaive": 12.32,
+      "tNW": 6.57,
+      "positive": 88,
+      "topMinusAll": 60.0,
+      "topHit": 66
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 34.4,
+      "ic": 0.063,
+      "tNaive": 4.06,
+      "tNW": 2.31,
+      "positive": 61,
+      "topMinusAll": 18.5,
+      "topHit": 55
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.136,
+        "tNaive": 4.35,
+        "tNW": 2.23,
+        "positive": 70,
+        "topMinusAll": 30.9,
+        "topHit": 59
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.021,
+        "tNaive": 1.01,
+        "tNW": 0.51,
+        "positive": 45,
+        "topMinusAll": 17.4,
+        "topHit": 49
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.307,
+        "tNaive": 16.32,
+        "tNW": 11.62,
+        "positive": 100,
+        "topMinusAll": 80.0,
+        "topHit": 71
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.105,
+        "tNaive": 4.72,
+        "tNW": 2.45,
+        "positive": 76,
+        "topMinusAll": 19.6,
+        "topHit": 61
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.289,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.288,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.094,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.309,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.192,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.069,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": -0.04,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": 0.084,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": 0.005,
+       "sections": 21,
+       "avgCompanies": 33.0
+      }
+     }
+    },
+    "D_ridge": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 32.5,
+      "ic": 0.113,
+      "tNaive": 7.4,
+      "tNW": 2.57,
+      "positive": 63,
+      "topMinusAll": 29.3,
+      "topHit": 61
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.188,
+      "tNaive": 7.17,
+      "tNW": 3.47,
+      "positive": 77,
+      "topMinusAll": 51.9,
+      "topHit": 70
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 34.4,
+      "ic": 0.061,
+      "tNaive": 3.62,
+      "tNW": 1.06,
+      "positive": 54,
+      "topMinusAll": 13.7,
+      "topHit": 55
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.059,
+        "tNaive": 1.29,
+        "tNW": 0.6,
+        "positive": 45,
+        "topMinusAll": 22.6,
+        "topHit": 55
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.042,
+        "tNaive": 1.72,
+        "tNW": 0.73,
+        "positive": 52,
+        "topMinusAll": -1.7,
+        "topHit": 53
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.277,
+        "tNaive": 11.47,
+        "tNW": 4.61,
+        "positive": 98,
+        "topMinusAll": 72.0,
+        "topHit": 80
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.08,
+        "tNaive": 3.41,
+        "tNW": 1.43,
+        "positive": 56,
+        "topMinusAll": 28.8,
+        "topHit": 56
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.155,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.125,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.073,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.374,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.131,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.102,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": 0.195,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": -0.073,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": -0.064,
+       "sections": 21,
+       "avgCompanies": 33.0
+      }
+     }
+    },
+    "lgbm": {
+     "all": {
+      "sections": 198,
+      "months": 120,
+      "avgCompanies": 32.5,
+      "ic": 0.375,
+      "tNaive": 26.72,
+      "tNW": 10.73,
+      "positive": 96,
+      "topMinusAll": 57.8,
+      "topHit": 73
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 29.7,
+      "ic": 0.408,
+      "tNaive": 16.98,
+      "tNW": 6.48,
+      "positive": 96,
+      "topMinusAll": 78.9,
+      "topHit": 79
+     },
+     "check": {
+      "sections": 117,
+      "months": 67,
+      "avgCompanies": 34.4,
+      "ic": 0.352,
+      "tNaive": 21.08,
+      "tNW": 12.71,
+      "positive": 96,
+      "topMinusAll": 43.2,
+      "topHit": 68
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 34.2,
+        "ic": 0.35,
+        "tNaive": 13.37,
+        "tNW": 7.41,
+        "positive": 100,
+        "topMinusAll": 54.0,
+        "topHit": 74
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 37.7,
+        "ic": 0.265,
+        "tNaive": 12.72,
+        "tNW": 7.06,
+        "positive": 91,
+        "topMinusAll": 33.8,
+        "topHit": 61
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 26.6,
+        "ic": 0.448,
+        "tNaive": 12.64,
+        "tNW": 5.32,
+        "positive": 94,
+        "topMinusAll": 96.0,
+        "topHit": 83
+       },
+       "check": {
+        "sections": 59,
+        "months": 59,
+        "avgCompanies": 31.2,
+        "ic": 0.438,
+        "tNaive": 21.07,
+        "tNW": 10.44,
+        "positive": 100,
+        "topMinusAll": 52.4,
+        "topHit": 75
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.581,
+       "sections": 12,
+       "avgCompanies": 26.5
+      },
+      "2018": {
+       "ic": 0.35,
+       "sections": 21,
+       "avgCompanies": 27.2
+      },
+      "2019": {
+       "ic": 0.218,
+       "sections": 24,
+       "avgCompanies": 30.1
+      },
+      "2020": {
+       "ic": 0.563,
+       "sections": 24,
+       "avgCompanies": 32.9
+      },
+      "2021": {
+       "ic": 0.36,
+       "sections": 24,
+       "avgCompanies": 35.8
+      },
+      "2022": {
+       "ic": 0.401,
+       "sections": 24,
+       "avgCompanies": 35.6
+      },
+      "2023": {
+       "ic": 0.327,
+       "sections": 24,
+       "avgCompanies": 33.0
+      },
+      "2024": {
+       "ic": 0.377,
+       "sections": 24,
+       "avgCompanies": 34.4
+      },
+      "2025": {
+       "ic": 0.288,
+       "sections": 21,
+       "avgCompanies": 33.0
+      }
+     }
+    }
+   },
+   "importance": {
+    "A0": {
+     "revG": 83,
+     "revGPrev": 147,
+     "accel": 90,
+     "oiG": 83,
+     "niG": 88,
+     "margin": 248,
+     "marginChg": 188,
+     "roe": 86,
+     "ocfMargin": 28,
+     "ey": 162,
+     "psr": 185,
+     "logCap": 150,
+     "mom": 104,
+     "vol": 50,
+     "dd52": 108
+    },
+    "A2": {
+     "revG": 118,
+     "revGPrev": 160,
+     "accel": 77,
+     "oiG": 85,
+     "niG": 118,
+     "margin": 220,
+     "marginChg": 170,
+     "roe": 123,
+     "ocfMargin": 18,
+     "ey": 118,
+     "psr": 195,
+     "logCap": 127,
+     "mom": 97,
+     "vol": 58,
+     "dd52": 116
+    },
+    "C": {
+     "revG": 130,
+     "revGPrev": 163,
+     "accel": 74,
+     "oiG": 94,
+     "niG": 115,
+     "margin": 191,
+     "marginChg": 162,
+     "roe": 112,
+     "ocfMargin": 20,
+     "eyPit": 116,
+     "psrPit": 217,
+     "logCapPit": 146,
+     "mom": 100,
+     "vol": 44,
+     "dd52": 116
+    },
+    "D": {
+     "revG": 273,
+     "revGPrev": 211,
+     "accel": 175,
+     "oiG": 196,
+     "niG": 175,
+     "margin": 315,
+     "marginChg": 206,
+     "roe": 203,
+     "ocfMargin": 46
+    }
+   },
+   "chosen": "C",
+   "bootstrapCheck": {
+    "rows": 3871,
+    "reps": 1000,
+    "models": {
+     "persist": {
+      "ic": 0.087,
+      "ci95": [
+       -0.019,
+       0.189
+      ]
+     },
+     "A2": {
+      "ic": 0.329,
+      "ci95": [
+       0.252,
+       0.405
+      ],
+      "minusPersist": {
+       "mean": 0.242,
+       "ci95": [
+        0.116,
+        0.368
+       ],
+       "shareAbove": 100
+      }
+     },
+     "C": {
+      "ic": 0.35,
+      "ci95": [
+       0.278,
+       0.422
+      ],
+      "minusPersist": {
+       "mean": 0.263,
+       "ci95": [
+        0.143,
+        0.387
+       ],
+       "shareAbove": 100
+      }
+     },
+     "D": {
+      "ic": 0.065,
+      "ci95": [
+       -0.02,
+       0.15
+      ],
+      "minusPersist": {
+       "mean": -0.023,
+       "ci95": [
+        -0.164,
+        0.106
+       ],
+       "shareAbove": 39
+      }
+     },
+     "C_ridge": {
+      "ic": 0.381,
+      "ci95": [
+       0.312,
+       0.451
+      ],
+      "minusPersist": {
+       "mean": 0.294,
+       "ci95": [
+        0.176,
+        0.414
+       ],
+       "shareAbove": 100
+      }
+     }
+    }
+   },
+   "sectorCheck": {
+    "sectorNeutralIc": 0.403,
+    "sectorOnlyIc": 0.076,
+    "topPicksBySector": {
+     "정보기술": {
+      "picks": 206,
+      "hit": 81
+     },
+     "산업재": {
+      "picks": 116,
+      "hit": 61
+     },
+     "커뮤니케이션": {
+      "picks": 86,
+      "hit": 60
+     },
+     "소재": {
+      "picks": 83,
+      "hit": 47
+     },
+     "경기소비재": {
+      "picks": 75,
+      "hit": 51
+     },
+     "필수소비재": {
+      "picks": 71,
+      "hit": 65
+     },
+     "헬스케어": {
+      "picks": 70,
+      "hit": 94
+     },
+     "금융": {
+      "picks": 11,
+      "hit": 82
+     },
+     "에너지": {
+      "picks": 11,
+      "hit": 73
+     },
+     "유틸리티": {
+      "picks": 2,
+      "hit": 0
+     }
+    },
+    "persist": {
+     "sectorNeutralIc": 0.075,
+     "sectorOnlyIc": 0.076,
+     "topPicksBySector": {
+      "정보기술": {
+       "picks": 231,
+       "hit": 67
+      },
+      "헬스케어": {
+       "picks": 115,
+       "hit": 67
+      },
+      "소재": {
+       "picks": 112,
+       "hit": 57
+      },
+      "커뮤니케이션": {
+       "picks": 88,
+       "hit": 60
+      },
+      "산업재": {
+       "picks": 81,
+       "hit": 36
+      },
+      "경기소비재": {
+       "picks": 55,
+       "hit": 47
+      },
+      "에너지": {
+       "picks": 29,
+       "hit": 7
+      },
+      "금융": {
+       "picks": 15,
+       "hit": 60
+      },
+      "유틸리티": {
+       "picks": 3,
+       "hit": 100
+      },
+      "필수소비재": {
+       "picks": 2,
+       "hit": 0
+      }
+     }
+    }
+   },
+   "annualSnapshots": {
+    "persist": [
+     {
+      "market": "KR",
+      "date": "2021-06-30",
+      "n": 37,
+      "ic": -0.201
+     },
+     {
+      "market": "KR",
+      "date": "2022-06-30",
+      "n": 37,
+      "ic": 0.112
+     },
+     {
+      "market": "KR",
+      "date": "2023-06-30",
+      "n": 35,
+      "ic": 0.191
+     },
+     {
+      "market": "KR",
+      "date": "2024-06-28",
+      "n": 36,
+      "ic": 0.259
+     },
+     {
+      "market": "KR",
+      "date": "2025-06-30",
+      "n": 31,
+      "ic": 0.106
+     },
+     {
+      "market": "US",
+      "date": "2021-06-30",
+      "n": 33,
+      "ic": -0.076
+     },
+     {
+      "market": "US",
+      "date": "2022-06-30",
+      "n": 31,
+      "ic": -0.37
+     },
+     {
+      "market": "US",
+      "date": "2023-06-30",
+      "n": 28,
+      "ic": 0.06
+     },
+     {
+      "market": "US",
+      "date": "2024-06-28",
+      "n": 31,
+      "ic": 0.374
+     },
+     {
+      "market": "US",
+      "date": "2025-06-30",
+      "n": 32,
+      "ic": 0.476
+     }
+    ],
+    "C": [
+     {
+      "market": "KR",
+      "date": "2021-06-30",
+      "n": 37,
+      "ic": 0.381
+     },
+     {
+      "market": "KR",
+      "date": "2022-06-30",
+      "n": 37,
+      "ic": 0.302
+     },
+     {
+      "market": "KR",
+      "date": "2023-06-30",
+      "n": 35,
+      "ic": 0.055
+     },
+     {
+      "market": "KR",
+      "date": "2024-06-28",
+      "n": 36,
+      "ic": 0.32
+     },
+     {
+      "market": "KR",
+      "date": "2025-06-30",
+      "n": 31,
+      "ic": 0.203
+     },
+     {
+      "market": "US",
+      "date": "2021-06-30",
+      "n": 33,
+      "ic": 0.427
+     },
+     {
+      "market": "US",
+      "date": "2022-06-30",
+      "n": 31,
+      "ic": 0.369
+     },
+     {
+      "market": "US",
+      "date": "2023-06-30",
+      "n": 28,
+      "ic": 0.572
+     },
+     {
+      "market": "US",
+      "date": "2024-06-28",
+      "n": 31,
+      "ic": 0.699
+     },
+     {
+      "market": "US",
+      "date": "2025-06-30",
+      "n": 32,
+      "ic": 0.563
+     }
+    ]
+   }
+  },
+  "fwdEx12": {
+   "label": "다음 1년 지수 대비 초과수익",
+   "models": {
+    "persist": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": 0.042,
+      "tNaive": 2.62,
+      "tNW": 1.35,
+      "positive": 55,
+      "topMinusAll": 1.9,
+      "topHit": 50
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.09,
+      "tNaive": 3.46,
+      "tNW": 1.78,
+      "positive": 62,
+      "topMinusAll": 8.4,
+      "topHit": 57
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": 0.008,
+      "tNaive": 0.41,
+      "tNW": 0.1,
+      "positive": 50,
+      "topMinusAll": -2.6,
+      "topHit": 46
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": -0.069,
+        "tNaive": -2.46,
+        "tNW": -1.93,
+        "positive": 42,
+        "topMinusAll": 3.1,
+        "topHit": 52
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": 0.012,
+        "tNaive": 0.51,
+        "tNW": 0.27,
+        "positive": 50,
+        "topMinusAll": -2.7,
+        "topHit": 44
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.199,
+        "tNaive": 6.46,
+        "tNW": 3.36,
+        "positive": 75,
+        "topMinusAll": 11.9,
+        "topHit": 61
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": 0.004,
+        "tNaive": 0.12,
+        "tNW": 0.06,
+        "positive": 50,
+        "topMinusAll": -2.6,
+        "topHit": 47
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.397,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.055,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.1,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.054,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.13,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": 0.055,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": 0.067,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": 0.165,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.141,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "A0": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.007,
+      "tNaive": -0.4,
+      "tNW": 0.17,
+      "positive": 48,
+      "topMinusAll": -0.7,
+      "topHit": 48
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.122,
+      "tNaive": 4.82,
+      "tNW": 2.44,
+      "positive": 70,
+      "topMinusAll": 9.4,
+      "topHit": 58
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.097,
+      "tNaive": -5.26,
+      "tNW": -2.41,
+      "positive": 33,
+      "topMinusAll": -7.8,
+      "topHit": 41
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": -0.008,
+        "tNaive": -0.3,
+        "tNW": -0.15,
+        "positive": 58,
+        "topMinusAll": 11.5,
+        "topHit": 54
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.027,
+        "tNaive": -1.94,
+        "tNW": -1.45,
+        "positive": 38,
+        "topMinusAll": -5.4,
+        "topHit": 42
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.212,
+        "tNaive": 6.4,
+        "tNW": 2.86,
+        "positive": 79,
+        "topMinusAll": 8.0,
+        "topHit": 60
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.167,
+        "tNaive": -5.26,
+        "tNW": -2.01,
+        "positive": 28,
+        "topMinusAll": -10.1,
+        "topHit": 40
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.314,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.055,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.204,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.1,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.23,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": -0.005,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.03,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.068,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.163,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "A2": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.029,
+      "tNaive": -1.72,
+      "tNW": -0.35,
+      "positive": 37,
+      "topMinusAll": -1.9,
+      "topHit": 46
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.113,
+      "tNaive": 4.54,
+      "tNW": 2.5,
+      "positive": 62,
+      "topMinusAll": 6.3,
+      "topHit": 53
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.128,
+      "tNaive": -7.27,
+      "tNW": -3.41,
+      "positive": 20,
+      "topMinusAll": -7.7,
+      "topHit": 40
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": -0.06,
+        "tNaive": -3.21,
+        "tNW": -3.28,
+        "positive": 33,
+        "topMinusAll": 6.5,
+        "topHit": 46
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.113,
+        "tNaive": -7.92,
+        "tNW": -4.68,
+        "positive": 14,
+        "topMinusAll": -9.4,
+        "topHit": 41
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.232,
+        "tNaive": 7.84,
+        "tNW": 3.56,
+        "positive": 81,
+        "topMinusAll": 6.2,
+        "topHit": 58
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.143,
+        "tNaive": -4.42,
+        "tNW": -1.83,
+        "positive": 26,
+        "topMinusAll": -6.0,
+        "topHit": 40
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.307,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": 0.004,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.21,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.014,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.245,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": -0.007,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.086,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.102,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.216,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "A2_ridge": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.037,
+      "tNaive": -2.03,
+      "tNW": -0.44,
+      "positive": 39,
+      "topMinusAll": 1.6,
+      "topHit": 49
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.131,
+      "tNaive": 4.87,
+      "tNW": 2.07,
+      "positive": 64,
+      "topMinusAll": 13.3,
+      "topHit": 62
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.155,
+      "tNaive": -8.52,
+      "tNW": -4.52,
+      "positive": 21,
+      "topMinusAll": -6.5,
+      "topHit": 40
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": 0.078,
+        "tNaive": 2.12,
+        "tNW": 1.03,
+        "positive": 52,
+        "topMinusAll": 15.4,
+        "topHit": 63
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.158,
+        "tNaive": -9.13,
+        "tNW": -4.16,
+        "positive": 10,
+        "topMinusAll": -2.9,
+        "topHit": 44
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.168,
+        "tNaive": 4.52,
+        "tNW": 2.12,
+        "positive": 73,
+        "topMinusAll": 11.8,
+        "topHit": 62
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.153,
+        "tNaive": -4.74,
+        "tNW": -1.88,
+        "positive": 31,
+        "topMinusAll": -10.1,
+        "topHit": 36
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.291,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.128,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.295,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.116,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.263,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": -0.063,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.173,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.142,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.13,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "C": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.06,
+      "tNaive": -4.06,
+      "tNW": -1.43,
+      "positive": 34,
+      "topMinusAll": -3.0,
+      "topHit": 46
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.041,
+      "tNaive": 1.85,
+      "tNW": 1.01,
+      "positive": 53,
+      "topMinusAll": 3.8,
+      "topHit": 52
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.13,
+      "tNaive": -7.82,
+      "tNW": -3.76,
+      "positive": 21,
+      "topMinusAll": -7.7,
+      "topHit": 41
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": -0.069,
+        "tNaive": -2.76,
+        "tNW": -1.49,
+        "positive": 27,
+        "topMinusAll": 4.0,
+        "topHit": 47
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.103,
+        "tNaive": -7.59,
+        "tNW": -4.41,
+        "positive": 19,
+        "topMinusAll": -8.7,
+        "topHit": 42
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.117,
+        "tNaive": 4.06,
+        "tNW": 1.69,
+        "positive": 71,
+        "topMinusAll": 3.8,
+        "topHit": 55
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.157,
+        "tNaive": -5.21,
+        "tNW": -2.17,
+        "positive": 22,
+        "topMinusAll": -6.7,
+        "topHit": 41
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.063,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.112,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.148,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.058,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.222,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": -0.021,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.107,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.14,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.166,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "C_ridge": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.046,
+      "tNaive": -2.38,
+      "tNW": -0.55,
+      "positive": 39,
+      "topMinusAll": 1.0,
+      "topHit": 47
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.127,
+      "tNaive": 4.49,
+      "tNW": 1.85,
+      "positive": 68,
+      "topMinusAll": 12.4,
+      "topHit": 60
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.166,
+      "tNaive": -8.74,
+      "tNW": -4.77,
+      "positive": 19,
+      "topMinusAll": -7.0,
+      "topHit": 39
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": 0.077,
+        "tNaive": 1.87,
+        "tNW": 0.81,
+        "positive": 67,
+        "topMinusAll": 10.6,
+        "topHit": 56
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.153,
+        "tNaive": -7.2,
+        "tNW": -3.17,
+        "positive": 16,
+        "topMinusAll": -3.9,
+        "topHit": 41
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.162,
+        "tNaive": 4.24,
+        "tNW": 1.92,
+        "positive": 69,
+        "topMinusAll": 13.6,
+        "topHit": 62
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.18,
+        "tNaive": -5.67,
+        "tNW": -2.23,
+        "positive": 22,
+        "topMinusAll": -10.0,
+        "topHit": 37
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.28,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.169,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.254,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.183,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.277,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": -0.074,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.203,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.121,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.155,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "D": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.044,
+      "tNaive": -2.96,
+      "tNW": -1.01,
+      "positive": 37,
+      "topMinusAll": -1.7,
+      "topHit": 48
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.043,
+      "tNaive": 2.12,
+      "tNW": 1.39,
+      "positive": 48,
+      "topMinusAll": 4.2,
+      "topHit": 55
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.104,
+      "tNaive": -5.58,
+      "tNW": -2.31,
+      "positive": 28,
+      "topMinusAll": -5.8,
+      "topHit": 43
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": -0.083,
+        "tNaive": -6.93,
+        "tNW": -6.98,
+        "positive": 15,
+        "topMinusAll": 1.0,
+        "topHit": 46
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.041,
+        "tNaive": -3.21,
+        "tNW": -2.39,
+        "positive": 33,
+        "topMinusAll": -7.4,
+        "topHit": 44
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.13,
+        "tNaive": 4.78,
+        "tNW": 2.02,
+        "positive": 71,
+        "topMinusAll": 6.4,
+        "topHit": 61
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.168,
+        "tNaive": -5.04,
+        "tNW": -1.96,
+        "positive": 24,
+        "topMinusAll": -4.1,
+        "topHit": 42
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.114,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.078,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.136,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.021,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.265,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": 0.015,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.034,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.13,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.108,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "D_ridge": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.042,
+      "tNaive": -2.42,
+      "tNW": -0.75,
+      "positive": 44,
+      "topMinusAll": 1.6,
+      "topHit": 50
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.086,
+      "tNaive": 3.62,
+      "tNW": 1.6,
+      "positive": 63,
+      "topMinusAll": 11.5,
+      "topHit": 62
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.132,
+      "tNaive": -6.31,
+      "tNW": -2.64,
+      "positive": 31,
+      "topMinusAll": -5.3,
+      "topHit": 42
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": 0.084,
+        "tNaive": 2.59,
+        "tNW": 1.71,
+        "positive": 67,
+        "topMinusAll": 8.3,
+        "topHit": 58
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.07,
+        "tNaive": -2.64,
+        "tNW": -1.03,
+        "positive": 43,
+        "topMinusAll": -1.9,
+        "topHit": 45
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.088,
+        "tNaive": 2.61,
+        "tNW": 1.14,
+        "positive": 60,
+        "topMinusAll": 13.6,
+        "topHit": 65
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.194,
+        "tNaive": -6.38,
+        "tNW": -2.5,
+        "positive": 19,
+        "topMinusAll": -8.8,
+        "topHit": 39
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.167,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.104,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.211,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.087,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.228,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": -0.069,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.205,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.194,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": 0.069,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    },
+    "lgbm": {
+     "all": {
+      "sections": 197,
+      "months": 119,
+      "avgCompanies": 41.6,
+      "ic": -0.044,
+      "tNaive": -2.96,
+      "tNW": -1.01,
+      "positive": 37,
+      "topMinusAll": -1.7,
+      "topHit": 48
+     },
+     "pick": {
+      "sections": 81,
+      "months": 53,
+      "avgCompanies": 37.9,
+      "ic": 0.043,
+      "tNaive": 2.12,
+      "tNW": 1.39,
+      "positive": 48,
+      "topMinusAll": 4.2,
+      "topHit": 55
+     },
+     "check": {
+      "sections": 116,
+      "months": 66,
+      "avgCompanies": 44.3,
+      "ic": -0.104,
+      "tNaive": -5.58,
+      "tNW": -2.31,
+      "positive": 28,
+      "topMinusAll": -5.8,
+      "topHit": 43
+     },
+     "byMarket": {
+      "KR": {
+       "pick": {
+        "sections": 33,
+        "months": 33,
+        "avgCompanies": 39.2,
+        "ic": -0.083,
+        "tNaive": -6.93,
+        "tNW": -6.98,
+        "positive": 15,
+        "topMinusAll": 1.0,
+        "topHit": 46
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 42.8,
+        "ic": -0.041,
+        "tNaive": -3.21,
+        "tNW": -2.39,
+        "positive": 33,
+        "topMinusAll": -7.4,
+        "topHit": 44
+       }
+      },
+      "US": {
+       "pick": {
+        "sections": 48,
+        "months": 48,
+        "avgCompanies": 36.9,
+        "ic": 0.13,
+        "tNaive": 4.78,
+        "tNW": 2.02,
+        "positive": 71,
+        "topMinusAll": 6.4,
+        "topHit": 61
+       },
+       "check": {
+        "sections": 58,
+        "months": 58,
+        "avgCompanies": 45.7,
+        "ic": -0.168,
+        "tNaive": -5.04,
+        "tNW": -1.96,
+        "positive": 24,
+        "topMinusAll": -4.1,
+        "topHit": 42
+       }
+      }
+     },
+     "byYear": {
+      "2017": {
+       "ic": 0.114,
+       "sections": 12,
+       "avgCompanies": 38.3
+      },
+      "2018": {
+       "ic": -0.078,
+       "sections": 21,
+       "avgCompanies": 33.0
+      },
+      "2019": {
+       "ic": 0.136,
+       "sections": 24,
+       "avgCompanies": 37.2
+      },
+      "2020": {
+       "ic": 0.021,
+       "sections": 24,
+       "avgCompanies": 42.6
+      },
+      "2021": {
+       "ic": -0.265,
+       "sections": 24,
+       "avgCompanies": 44.2
+      },
+      "2022": {
+       "ic": 0.015,
+       "sections": 24,
+       "avgCompanies": 43.6
+      },
+      "2023": {
+       "ic": -0.034,
+       "sections": 24,
+       "avgCompanies": 43.3
+      },
+      "2024": {
+       "ic": -0.13,
+       "sections": 24,
+       "avgCompanies": 45.0
+      },
+      "2025": {
+       "ic": -0.108,
+       "sections": 20,
+       "avgCompanies": 45.5
+      }
+     }
+    }
+   },
+   "importance": {
+    "A0": {
+     "revG": 164,
+     "revGPrev": 140,
+     "accel": 123,
+     "oiG": 60,
+     "niG": 144,
+     "margin": 152,
+     "marginChg": 112,
+     "roe": 95,
+     "ocfMargin": 68,
+     "ey": 147,
+     "psr": 200,
+     "logCap": 194,
+     "mom": 67,
+     "vol": 81,
+     "dd52": 53
+    },
+    "A2": {
+     "revG": 137,
+     "revGPrev": 146,
+     "accel": 142,
+     "oiG": 60,
+     "niG": 121,
+     "margin": 114,
+     "marginChg": 88,
+     "roe": 168,
+     "ocfMargin": 45,
+     "ey": 177,
+     "psr": 178,
+     "logCap": 224,
+     "mom": 58,
+     "vol": 74,
+     "dd52": 68
+    },
+    "C": {
+     "revG": 156,
+     "revGPrev": 136,
+     "accel": 135,
+     "oiG": 59,
+     "niG": 114,
+     "margin": 124,
+     "marginChg": 76,
+     "roe": 174,
+     "ocfMargin": 41,
+     "eyPit": 149,
+     "psrPit": 192,
+     "logCapPit": 235,
+     "mom": 69,
+     "vol": 78,
+     "dd52": 62
+    },
+    "D": {
+     "revG": 253,
+     "revGPrev": 266,
+     "accel": 232,
+     "oiG": 143,
+     "niG": 176,
+     "margin": 230,
+     "marginChg": 137,
+     "roe": 297,
+     "ocfMargin": 66
+    }
+   },
+   "chosen": "D",
+   "bootstrapCheck": {
+    "rows": 5137,
+    "reps": 1000,
+    "models": {
+     "persist": {
+      "ic": 0.007,
+      "ci95": [
+       -0.069,
+       0.077
+      ]
+     },
+     "A2": {
+      "ic": -0.126,
+      "ci95": [
+       -0.204,
+       -0.047
+      ],
+      "minusPersist": {
+       "mean": -0.133,
+       "ci95": [
+        -0.256,
+        -0.014
+       ],
+       "shareAbove": 1
+      }
+     },
+     "C": {
+      "ic": -0.128,
+      "ci95": [
+       -0.214,
+       -0.044
+      ],
+      "minusPersist": {
+       "mean": -0.135,
+       "ci95": [
+        -0.265,
+        -0.013
+       ],
+       "shareAbove": 2
+      }
+     },
+     "D": {
+      "ic": -0.103,
+      "ci95": [
+       -0.177,
+       -0.026
+      ],
+      "minusPersist": {
+       "mean": -0.11,
+       "ci95": [
+        -0.225,
+        0.006
+       ],
+       "shareAbove": 3
+      }
+     },
+     "D_ridge": {
+      "ic": -0.13,
+      "ci95": [
+       -0.201,
+       -0.057
+      ],
+      "minusPersist": {
+       "mean": -0.137,
+       "ci95": [
+        -0.247,
+        -0.022
+       ],
+       "shareAbove": 1
+      }
+     }
+    }
+   },
+   "sectorCheck": {
+    "sectorNeutralIc": -0.052,
+    "sectorOnlyIc": 0.022,
+    "topPicksBySector": {
+     "커뮤니케이션": {
+      "picks": 240,
+      "hit": 28
+     },
+     "정보기술": {
+      "picks": 238,
+      "hit": 53
+     },
+     "헬스케어": {
+      "picks": 112,
+      "hit": 35
+     },
+     "경기소비재": {
+      "picks": 91,
+      "hit": 43
+     },
+     "산업재": {
+      "picks": 91,
+      "hit": 78
+     },
+     "소재": {
+      "picks": 82,
+      "hit": 29
+     },
+     "에너지": {
+      "picks": 43,
+      "hit": 16
+     },
+     "금융": {
+      "picks": 35,
+      "hit": 66
+     },
+     "필수소비재": {
+      "picks": 28,
+      "hit": 36
+     },
+     "유틸리티": {
+      "picks": 8,
+      "hit": 38
+     }
+    },
+    "persist": {
+     "sectorNeutralIc": 0.046,
+     "sectorOnlyIc": 0.022,
+     "topPicksBySector": {
+      "정보기술": {
+       "picks": 170,
+       "hit": 54
+      },
+      "산업재": {
+       "picks": 166,
+       "hit": 64
+      },
+      "경기소비재": {
+       "picks": 141,
+       "hit": 38
+      },
+      "커뮤니케이션": {
+       "picks": 139,
+       "hit": 31
+      },
+      "소재": {
+       "picks": 118,
+       "hit": 42
+      },
+      "헬스케어": {
+       "picks": 101,
+       "hit": 51
+      },
+      "필수소비재": {
+       "picks": 61,
+       "hit": 28
+      },
+      "에너지": {
+       "picks": 45,
+       "hit": 40
+      },
+      "금융": {
+       "picks": 17,
+       "hit": 41
+      },
+      "유틸리티": {
+       "picks": 10,
+       "hit": 40
+      }
+     }
+    }
+   },
+   "annualSnapshots": {
+    "persist": [
+     {
+      "market": "KR",
+      "date": "2021-06-30",
+      "n": 42,
+      "ic": -0.096
+     },
+     {
+      "market": "KR",
+      "date": "2022-06-30",
+      "n": 42,
+      "ic": 0.34
+     },
+     {
+      "market": "KR",
+      "date": "2023-06-30",
+      "n": 43,
+      "ic": -0.13
+     },
+     {
+      "market": "KR",
+      "date": "2024-06-28",
+      "n": 44,
+      "ic": 0.26
+     },
+     {
+      "market": "KR",
+      "date": "2025-06-30",
+      "n": 44,
+      "ic": -0.275
+     },
+     {
+      "market": "US",
+      "date": "2021-06-30",
+      "n": 46,
+      "ic": -0.411
+     },
+     {
+      "market": "US",
+      "date": "2022-06-30",
+      "n": 44,
+      "ic": -0.013
+     },
+     {
+      "market": "US",
+      "date": "2023-06-30",
+      "n": 43,
+      "ic": 0.403
+     },
+     {
+      "market": "US",
+      "date": "2024-06-28",
+      "n": 46,
+      "ic": 0.073
+     },
+     {
+      "market": "US",
+      "date": "2025-06-30",
+      "n": 47,
+      "ic": -0.21
+     }
+    ],
+    "D": [
+     {
+      "market": "KR",
+      "date": "2021-06-30",
+      "n": 42,
+      "ic": -0.049
+     },
+     {
+      "market": "KR",
+      "date": "2022-06-30",
+      "n": 42,
+      "ic": -0.014
+     },
+     {
+      "market": "KR",
+      "date": "2023-06-30",
+      "n": 43,
+      "ic": -0.152
+     },
+     {
+      "market": "KR",
+      "date": "2024-06-28",
+      "n": 44,
+      "ic": -0.079
+     },
+     {
+      "market": "KR",
+      "date": "2025-06-30",
+      "n": 44,
+      "ic": -0.034
+     },
+     {
+      "market": "US",
+      "date": "2021-06-30",
+      "n": 46,
+      "ic": -0.421
+     },
+     {
+      "market": "US",
+      "date": "2022-06-30",
+      "n": 44,
+      "ic": 0.155
+     },
+     {
+      "market": "US",
+      "date": "2023-06-30",
+      "n": 43,
+      "ic": -0.008
+     },
+     {
+      "market": "US",
+      "date": "2024-06-28",
+      "n": 46,
+      "ic": -0.179
+     },
+     {
+      "market": "US",
+      "date": "2025-06-30",
+      "n": 47,
+      "ic": -0.239
+     }
+    ]
+   }
+  }
+ },
+ "notes": [
+  "IC: 같은 달·같은 시장의 기업들 사이에서 예측 순위와 실제 순위의 상관(스피어만). 한 달의 한 시장 = 단면 1개. 단면 IC를 평균.",
+  "상위 20% 적중: 예측 상위 1/5 기업 중 실제 값이 같은 단면(같은 달·같은 시장, 결과가 있는 기업) 중앙값보다 큰 비율.",
+  "상위 20% − 전체: 같은 단면의 실제 값을 5~95% 범위로 자른 뒤 상위 1/5 평균 − 전체 평균(%p).",
+  "완결 단면: 그 단면 기업의 80% 이상이 결과(다음 4개 분기 재무)를 공개한 경우만 평가. 2026년 단면은 결과 미공개로 평가에서 빠짐.",
+  "금지 구간: 해마다 1월 1일에 다시 학습하며, 그 시점까지 결과가 실제로 공개된 행만 학습(한국은 법정 기한, 미국은 SEC 제출일 기준).",
+  "신뢰구간: 기업 단위 부트스트랩(시장별로 기업을 복원 추출, 1,000회). t(NW): 월별 IC 평균의 뉴이-웨스트 t(시차 11). 같은 기업의 이웃한 달은 목표 기간이 겹쳐 독립 표본이 아님.",
+  "종목군: 2026년에 고른 98개 기업(한국 49·미국 49)이라 생존 편향·선택 편향이 남아 있음(꺾인 기업을 넣어 줄였지만 상장폐지 기업은 없음). IC는 이 98개 안의 상대 순위 구분력.",
+  "한국 재무는 2015년부터라 한국 단면은 2018년부터."
+ ],
+ "valuationCombo": {
+  "growthOnly": {
+   "pick": {
+    "sections": 81,
+    "months": 53,
+    "avgCompanies": 33.9,
+    "ic": 0.192,
+    "tNaive": 5.95,
+    "tNW": 2.91,
+    "positive": 67,
+    "topMinusAll": 13.2,
+    "topHit": 60
+   },
+   "check": {
+    "sections": 116,
+    "months": 66,
+    "avgCompanies": 41.3,
+    "ic": -0.026,
+    "tNaive": -1.13,
+    "tNW": -0.49,
+    "positive": 53,
+    "topMinusAll": -0.8,
+    "topHit": 50
+   }
+  },
+  "cheapOnly": {
+   "pick": {
+    "sections": 81,
+    "months": 53,
+    "avgCompanies": 33.9,
+    "ic": -0.125,
+    "tNaive": -3.59,
+    "tNW": -1.39,
+    "positive": 25,
+    "topMinusAll": 1.3,
+    "topHit": 52
+   },
+   "check": {
+    "sections": 116,
+    "months": 66,
+    "avgCompanies": 41.3,
+    "ic": 0.068,
+    "tNaive": 3.39,
+    "tNW": 1.19,
+    "positive": 57,
+    "topMinusAll": 1.9,
+    "topHit": 51
+   }
+  },
+  "growthAndCheap": {
+   "pick": {
+    "sections": 81,
+    "months": 53,
+    "avgCompanies": 33.9,
+    "ic": 0.074,
+    "tNaive": 2.54,
+    "tNW": 1.26,
+    "positive": 53,
+    "topMinusAll": 6.7,
+    "topHit": 50
+   },
+   "check": {
+    "sections": 116,
+    "months": 66,
+    "avgCompanies": 41.3,
+    "ic": 0.033,
+    "tNaive": 2.16,
+    "tNW": 1.1,
+    "positive": 59,
+    "topMinusAll": 6.3,
+    "topHit": 52
+   }
+  }
+ },
+ "manifest": {
+  "inputs": {
+   "growth-panel.csv": "cff2808b8ce59bdc",
+   "factor-data.json": "a6e9ebbcf2e89bb6",
+   "shares-pit.json": "8ae7c3efada51910"
+  },
+  "software": {
+   "python": "3.12.14",
+   "lightgbm": "4.7.0",
+   "sklearn": "1.9.1",
+   "pandas": "3.0.1",
+   "numpy": "2.3.5"
+  },
+  "lgbmParams": {
+   "n_estimators": 300,
+   "learning_rate": 0.03,
+   "num_leaves": 7,
+   "min_child_samples": 40,
+   "subsample": 0.8,
+   "subsample_freq": 1,
+   "colsample_bytree": 0.8,
+   "reg_lambda": 5.0,
+   "verbose": -1,
+   "random_state": 7
+  },
+  "ridgeAlpha": 10.0,
+  "bootstrap": {
+   "reps": 1000,
+   "seed": 11
+  },
+  "refit": "해마다 1월 1일",
+  "panelDates": [
+   "2014-01-31",
+   "2026-10-30"
+  ],
+  "rebuild": [
+   "node scripts/research/build-factor-data.mjs",
+   "node scripts/research/build-shares.mjs",
+   "node scripts/research/build-growth-panel.mjs",
+   ".venv-ml/Scripts/python.exe scripts/research/growth-model.py"
+  ]
+ }
+}

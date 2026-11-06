@@ -1,0 +1,518 @@
+{
+ "version": "U1-2026-11-06",
+ "note": "SEC frames 연간(가장 나중 제출값). 매출 ≥ 5천만 달러. 특징은 재무만. 학습: 그 전 해 특징까지. 단면 = 한 해의 모든 기업.",
+ "minRevenue": 50000000.0,
+ "firmYears": 40816,
+ "firms": 6227,
+ "models": {
+  "lgbm": {
+   "byYear": {
+    "2013": {
+     "n": 2788,
+     "ic": 0.455,
+     "topHit": 81,
+     "topMinusAll": 14.4,
+     "stoppedTop": 5.0,
+     "stoppedBottom": 8.2,
+     "stoppedAll": 6.8
+    },
+    "2014": {
+     "n": 2736,
+     "ic": 0.433,
+     "topHit": 77,
+     "topMinusAll": 13.1,
+     "stoppedTop": 9.2,
+     "stoppedBottom": 8.9,
+     "stoppedAll": 8.5
+    },
+    "2015": {
+     "n": 2660,
+     "ic": 0.495,
+     "topHit": 80,
+     "topMinusAll": 13.1,
+     "stoppedTop": 7.6,
+     "stoppedBottom": 11.5,
+     "stoppedAll": 8.7
+    },
+    "2016": {
+     "n": 2610,
+     "ic": 0.298,
+     "topHit": 76,
+     "topMinusAll": 10.0,
+     "stoppedTop": 6.2,
+     "stoppedBottom": 9.8,
+     "stoppedAll": 7.2
+    },
+    "2017": {
+     "n": 2956,
+     "ic": 0.416,
+     "topHit": 75,
+     "topMinusAll": 11.0,
+     "stoppedTop": 4.6,
+     "stoppedBottom": 8.9,
+     "stoppedAll": 6.0
+    },
+    "2018": {
+     "n": 2997,
+     "ic": 0.308,
+     "topHit": 71,
+     "topMinusAll": 10.2,
+     "stoppedTop": 6.7,
+     "stoppedBottom": 11.0,
+     "stoppedAll": 6.9
+    },
+    "2019": {
+     "n": 2995,
+     "ic": 0.36,
+     "topHit": 71,
+     "topMinusAll": 13.3,
+     "stoppedTop": 4.2,
+     "stoppedBottom": 11.0,
+     "stoppedAll": 6.3
+    },
+    "2020": {
+     "n": 3129,
+     "ic": 0.089,
+     "topHit": 71,
+     "topMinusAll": 11.0,
+     "stoppedTop": 5.6,
+     "stoppedBottom": 6.9,
+     "stoppedAll": 5.9
+    },
+    "2021": {
+     "n": 3194,
+     "ic": 0.3,
+     "topHit": 71,
+     "topMinusAll": 13.1,
+     "stoppedTop": 4.6,
+     "stoppedBottom": 7.5,
+     "stoppedAll": 5.8
+    },
+    "2022": {
+     "n": 3141,
+     "ic": 0.268,
+     "topHit": 68,
+     "topMinusAll": 7.7,
+     "stoppedTop": 6.7,
+     "stoppedBottom": 8.0,
+     "stoppedAll": 6.6
+    },
+    "2023": {
+     "n": 3115,
+     "ic": 0.375,
+     "topHit": 71,
+     "topMinusAll": 7.8,
+     "stoppedTop": 5.6,
+     "stoppedBottom": 7.3,
+     "stoppedAll": 5.6
+    },
+    "2024": {
+     "n": 3019,
+     "ic": 0.443,
+     "topHit": 80,
+     "topMinusAll": 10.4,
+     "stoppedTop": 7.0,
+     "stoppedBottom": 9.7,
+     "stoppedAll": 6.8
+    }
+   },
+   "pick": {
+    "years": 7,
+    "avgCompanies": 2820,
+    "ic": 0.395,
+    "icMin": 0.298,
+    "icMax": 0.495,
+    "t": 13.95,
+    "topHit": 76,
+    "topMinusAll": 12.2,
+    "stoppedTop": 6.2,
+    "stoppedBottom": 9.9
+   },
+   "check": {
+    "years": 5,
+    "avgCompanies": 3119,
+    "ic": 0.295,
+    "icMin": 0.089,
+    "icMax": 0.443,
+    "t": 4.93,
+    "topHit": 72,
+    "topMinusAll": 10.0,
+    "stoppedTop": 5.9,
+    "stoppedBottom": 7.9
+   }
+  },
+  "ridge": {
+   "byYear": {
+    "2013": {
+     "n": 2788,
+     "ic": 0.466,
+     "topHit": 82,
+     "topMinusAll": 15.2,
+     "stoppedTop": 5.0,
+     "stoppedBottom": 8.4,
+     "stoppedAll": 6.8
+    },
+    "2014": {
+     "n": 2736,
+     "ic": 0.439,
+     "topHit": 75,
+     "topMinusAll": 13.2,
+     "stoppedTop": 9.5,
+     "stoppedBottom": 8.5,
+     "stoppedAll": 8.5
+    },
+    "2015": {
+     "n": 2660,
+     "ic": 0.485,
+     "topHit": 75,
+     "topMinusAll": 12.2,
+     "stoppedTop": 7.4,
+     "stoppedBottom": 10.0,
+     "stoppedAll": 8.7
+    },
+    "2016": {
+     "n": 2610,
+     "ic": 0.263,
+     "topHit": 74,
+     "topMinusAll": 10.1,
+     "stoppedTop": 6.0,
+     "stoppedBottom": 9.6,
+     "stoppedAll": 7.2
+    },
+    "2017": {
+     "n": 2956,
+     "ic": 0.41,
+     "topHit": 75,
+     "topMinusAll": 12.1,
+     "stoppedTop": 6.2,
+     "stoppedBottom": 9.4,
+     "stoppedAll": 6.0
+    },
+    "2018": {
+     "n": 2997,
+     "ic": 0.279,
+     "topHit": 68,
+     "topMinusAll": 9.0,
+     "stoppedTop": 5.9,
+     "stoppedBottom": 9.2,
+     "stoppedAll": 6.9
+    },
+    "2019": {
+     "n": 2995,
+     "ic": 0.324,
+     "topHit": 69,
+     "topMinusAll": 12.9,
+     "stoppedTop": 4.5,
+     "stoppedBottom": 9.7,
+     "stoppedAll": 6.3
+    },
+    "2020": {
+     "n": 3129,
+     "ic": 0.066,
+     "topHit": 69,
+     "topMinusAll": 11.6,
+     "stoppedTop": 5.9,
+     "stoppedBottom": 6.6,
+     "stoppedAll": 5.9
+    },
+    "2021": {
+     "n": 3194,
+     "ic": 0.282,
+     "topHit": 70,
+     "topMinusAll": 12.4,
+     "stoppedTop": 4.9,
+     "stoppedBottom": 7.8,
+     "stoppedAll": 5.8
+    },
+    "2022": {
+     "n": 3141,
+     "ic": 0.243,
+     "topHit": 66,
+     "topMinusAll": 7.0,
+     "stoppedTop": 7.7,
+     "stoppedBottom": 7.1,
+     "stoppedAll": 6.6
+    },
+    "2023": {
+     "n": 3115,
+     "ic": 0.337,
+     "topHit": 68,
+     "topMinusAll": 7.2,
+     "stoppedTop": 5.2,
+     "stoppedBottom": 6.1,
+     "stoppedAll": 5.6
+    },
+    "2024": {
+     "n": 3019,
+     "ic": 0.406,
+     "topHit": 76,
+     "topMinusAll": 10.3,
+     "stoppedTop": 6.5,
+     "stoppedBottom": 8.8,
+     "stoppedAll": 6.8
+    }
+   },
+   "pick": {
+    "years": 7,
+    "avgCompanies": 2820,
+    "ic": 0.381,
+    "icMin": 0.263,
+    "icMax": 0.485,
+    "t": 11.06,
+    "topHit": 74,
+    "topMinusAll": 12.1,
+    "stoppedTop": 6.4,
+    "stoppedBottom": 9.3
+   },
+   "check": {
+    "years": 5,
+    "avgCompanies": 3119,
+    "ic": 0.267,
+    "icMin": 0.066,
+    "icMax": 0.406,
+    "t": 4.66,
+    "topHit": 70,
+    "topMinusAll": 9.7,
+    "stoppedTop": 6.0,
+    "stoppedBottom": 7.3
+   }
+  },
+  "persist": {
+   "byYear": {
+    "2011": {
+     "n": 2723,
+     "ic": 0.277,
+     "topHit": 67,
+     "topMinusAll": 7.6,
+     "stoppedTop": 8.3,
+     "stoppedBottom": 9.8,
+     "stoppedAll": 8.3
+    },
+    "2012": {
+     "n": 2753,
+     "ic": 0.405,
+     "topHit": 75,
+     "topMinusAll": 11.6,
+     "stoppedTop": 7.3,
+     "stoppedBottom": 10.6,
+     "stoppedAll": 8.4
+    },
+    "2013": {
+     "n": 2788,
+     "ic": 0.453,
+     "topHit": 80,
+     "topMinusAll": 15.3,
+     "stoppedTop": 4.3,
+     "stoppedBottom": 9.5,
+     "stoppedAll": 6.8
+    },
+    "2014": {
+     "n": 2736,
+     "ic": 0.413,
+     "topHit": 73,
+     "topMinusAll": 12.9,
+     "stoppedTop": 9.7,
+     "stoppedBottom": 9.4,
+     "stoppedAll": 8.5
+    },
+    "2015": {
+     "n": 2660,
+     "ic": 0.51,
+     "topHit": 76,
+     "topMinusAll": 13.0,
+     "stoppedTop": 7.0,
+     "stoppedBottom": 11.5,
+     "stoppedAll": 8.7
+    },
+    "2016": {
+     "n": 2610,
+     "ic": 0.274,
+     "topHit": 73,
+     "topMinusAll": 10.4,
+     "stoppedTop": 6.0,
+     "stoppedBottom": 8.5,
+     "stoppedAll": 7.2
+    },
+    "2017": {
+     "n": 2956,
+     "ic": 0.428,
+     "topHit": 75,
+     "topMinusAll": 12.3,
+     "stoppedTop": 5.6,
+     "stoppedBottom": 9.7,
+     "stoppedAll": 6.0
+    },
+    "2018": {
+     "n": 2997,
+     "ic": 0.259,
+     "topHit": 66,
+     "topMinusAll": 8.3,
+     "stoppedTop": 5.0,
+     "stoppedBottom": 10.0,
+     "stoppedAll": 6.9
+    },
+    "2019": {
+     "n": 2995,
+     "ic": 0.327,
+     "topHit": 68,
+     "topMinusAll": 12.9,
+     "stoppedTop": 4.5,
+     "stoppedBottom": 9.7,
+     "stoppedAll": 6.3
+    },
+    "2020": {
+     "n": 3129,
+     "ic": 0.063,
+     "topHit": 69,
+     "topMinusAll": 10.6,
+     "stoppedTop": 5.1,
+     "stoppedBottom": 7.8,
+     "stoppedAll": 5.9
+    },
+    "2021": {
+     "n": 3194,
+     "ic": 0.282,
+     "topHit": 70,
+     "topMinusAll": 14.0,
+     "stoppedTop": 4.4,
+     "stoppedBottom": 8.4,
+     "stoppedAll": 5.8
+    },
+    "2022": {
+     "n": 3141,
+     "ic": 0.233,
+     "topHit": 63,
+     "topMinusAll": 5.9,
+     "stoppedTop": 7.0,
+     "stoppedBottom": 7.6,
+     "stoppedAll": 6.6
+    },
+    "2023": {
+     "n": 3115,
+     "ic": 0.35,
+     "topHit": 70,
+     "topMinusAll": 7.8,
+     "stoppedTop": 5.0,
+     "stoppedBottom": 7.4,
+     "stoppedAll": 5.6
+    },
+    "2024": {
+     "n": 3019,
+     "ic": 0.409,
+     "topHit": 77,
+     "topMinusAll": 10.6,
+     "stoppedTop": 5.9,
+     "stoppedBottom": 9.1,
+     "stoppedAll": 6.8
+    }
+   },
+   "pick": {
+    "years": 7,
+    "avgCompanies": 2820,
+    "ic": 0.381,
+    "icMin": 0.259,
+    "icMax": 0.51,
+    "t": 10.58,
+    "topHit": 73,
+    "topMinusAll": 12.2,
+    "stoppedTop": 6.0,
+    "stoppedBottom": 9.8
+   },
+   "check": {
+    "years": 5,
+    "avgCompanies": 3119,
+    "ic": 0.267,
+    "icMin": 0.063,
+    "icMax": 0.409,
+    "t": 4.52,
+    "topHit": 70,
+    "topMinusAll": 9.8,
+    "stoppedTop": 5.5,
+    "stoppedBottom": 8.1
+   }
+  }
+ },
+ "bootstrapCheck": {
+  "p_lgbm": {
+   "ci95": [
+    0.278,
+    0.312
+   ]
+  },
+  "p_ridge": {
+   "ci95": [
+    0.247,
+    0.284
+   ]
+  },
+  "p_persist": {
+   "ci95": [
+    0.247,
+    0.284
+   ]
+  },
+  "lgbmMinusPersist": {
+   "mean": 0.028,
+   "ci95": [
+    0.02,
+    0.036
+   ]
+  }
+ },
+ "sameMethod98US": {
+  "lgbm": {
+   "years": 5,
+   "avgCompanies": 49,
+   "ic": 0.267,
+   "icMin": -0.088,
+   "icMax": 0.575,
+   "t": 2.47,
+   "topHit": 74,
+   "topMinusAll": 7.3,
+   "stoppedTop": 0.0,
+   "stoppedBottom": 0.0,
+   "pick": {
+    "years": 7,
+    "avgCompanies": 44,
+    "ic": 0.666,
+    "icMin": 0.491,
+    "icMax": 0.846,
+    "t": 14.42,
+    "topHit": 98,
+    "topMinusAll": 19.5,
+    "stoppedTop": 0.0,
+    "stoppedBottom": 1.8
+   }
+  },
+  "persist": {
+   "years": 5,
+   "avgCompanies": 49,
+   "ic": 0.322,
+   "icMin": -0.152,
+   "icMax": 0.675,
+   "t": 2.39,
+   "topHit": 76,
+   "topMinusAll": 10.0,
+   "stoppedTop": 0.0,
+   "stoppedBottom": 0.0,
+   "pick": {
+    "years": 7,
+    "avgCompanies": 44,
+    "ic": 0.655,
+    "icMin": 0.483,
+    "icMax": 0.911,
+    "t": 12.29,
+    "topHit": 95,
+    "topMinusAll": 20.6,
+    "stoppedTop": 0.0,
+    "stoppedBottom": 1.8
+   }
+  }
+ },
+ "restatement": {
+  "firmYears": 744,
+  "over1pct": 12.1,
+  "over5pct": 7.5,
+  "median": 0.0
+ }
+}

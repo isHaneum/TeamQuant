@@ -23,7 +23,7 @@ const CONCEPTS = [
   ['생존 편향', '지금 살아남은 종목만 골라 연구하면 결과가 실제보다 좋게 나옵니다. 상장폐지·급락 후 사라진 종목이 빠지기 때문입니다.']
 ];
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/lab.css?v=20261106'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/lab.css?v=20261106g2'; document.head.append(css);
 const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = 'quicktest'; nav.textContent = '전략 테스트'; $('.overview-nav nav').append(nav);
 const page = document.createElement('section'); page.className = 'view'; page.dataset.page = 'quicktest'; page.id = 'quicktest';
 const option = (value, title, help, checked) => `<label class="lt-preset"><input type="radio" name="lt-preset" value="${value}" ${checked ? 'checked' : ''}><span><strong>${esc(title)}${tip(help)}</strong></span></label>`;
