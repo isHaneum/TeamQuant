@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T08:16:09.925Z",
+ "updatedAt": "2026-11-07T08:27:16.977Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -125,7 +125,7 @@
   "trade": 0.4,
   "fx": -0.7,
   "energy": -0.7,
-  "market": 0.2,
+  "market": 0.1,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.4
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 6,
+   "rate": 5.9,
    "saturated": 2,
    "queries": 3
   },
@@ -227,8 +227,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 55,
-    "spike": 0.2,
+    "score": 54,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -273,90 +273,9 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 49,
-    "spike": 0.2,
+    "score": 48,
+    "spike": 0.1,
     "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1xf7ol8",
-   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-   "firstSeen": "2026-11-06T16:45:00.000Z",
-   "lastSeen": "2026-11-06T16:45:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
-     "host": "donga.com",
-     "at": "2026-11-06T16:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "7yn7e4",
-   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-   "firstSeen": "2026-11-06T19:47:00.000Z",
-   "lastSeen": "2026-11-07T00:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
-     "host": "cbci.co.kr",
-     "at": "2026-11-07T00:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0.2,
-    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -453,6 +372,46 @@
    }
   },
   {
+   "id": "1xf7ol8",
+   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+   "firstSeen": "2026-11-06T16:45:00.000Z",
+   "lastSeen": "2026-11-06T16:45:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
+     "host": "donga.com",
+     "at": "2026-11-06T16:45:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "v31sr0",
    "title": "[GAM]미국 슈퍼 리치 열광하는 RH ② '팬데믹 수혜주' 부활...53% 뛴다",
    "firstSeen": "2026-11-06T23:00:00.000Z",
@@ -478,6 +437,47 @@
     "label": "관찰",
     "score": 45,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "7yn7e4",
+   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+   "firstSeen": "2026-11-06T19:47:00.000Z",
+   "lastSeen": "2026-11-07T00:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
+     "host": "cbci.co.kr",
+     "at": "2026-11-07T00:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -629,12 +629,12 @@
    }
   },
   {
-   "id": "pxjx4y",
-   "title": "“세계 증시 시총 4800조원 증발” AI주 매도세 확산",
-   "firstSeen": "2026-11-07T03:21:00.000Z",
-   "lastSeen": "2026-11-07T08:08:00.000Z",
-   "count": 18,
-   "sources": 18,
+   "id": "38nbcw",
+   "title": "[마켓펄스] \"너무 빠졌나\"...나스닥, 'AI 쇼크' 딛고 하루 만에 1%대 반등",
+   "firstSeen": "2026-11-07T00:28:00.000Z",
+   "lastSeen": "2026-11-07T08:21:00.000Z",
+   "count": 24,
+   "sources": 24,
    "topics": [
     "politics",
     "market",
@@ -642,6 +642,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[글로벌 마켓 뷰]하루 새 4천800조원 증발…美 민주당, '블루웨이브 쇼...",
+     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8189",
+     "host": "moneystorm.kr",
+     "at": "2026-11-07T08:21:00.000Z"
+    },
     {
      "title": "전 세계 시총 하루 만에 4800조원 증발...미국 중간선거 후폭풍",
      "link": "https://www.chosun.com/economy/tech_it/2026/11/07/WAK7OMEVYBFLZECCVIVGWQLDVM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
@@ -655,23 +661,17 @@
      "at": "2026-11-07T07:54:00.000Z"
     },
     {
-     "title": "AI 규제 우려 속 세계 시총 하루 4773조원 증발",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026110716343823523",
-     "host": "newsway.co.kr",
-     "at": "2026-11-07T07:36:00.000Z"
-    },
-    {
-     "title": "블루웨이브 여파에 세계 증시 시총 4800조원 증발",
-     "link": "https://www.mediapen.com/news/view/1135974",
-     "host": "mediapen.com",
-     "at": "2026-11-07T07:22:00.000Z"
+     "title": "하루 만에 4800조 날아갔다…세계 증시 덮친 '블루쓰나미' 쇼크",
+     "link": "https://www.hankyung.com/article/2026110722767",
+     "host": "hankyung.com",
+     "at": "2026-11-07T07:51:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 0.2,
+    "score": 37,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -726,8 +726,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 0.2,
+    "score": 37,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -838,8 +838,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 36,
-    "spike": 0.2,
+    "score": 35,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
