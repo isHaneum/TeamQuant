@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T20:47:55.742Z",
+ "updatedAt": "2026-11-07T21:10:47.211Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": -1,
-  "politics": -0.8,
-  "rates": -0.8,
-  "trade": -1.3,
+  "war": -0.6,
+  "politics": 0.4,
+  "rates": -0.4,
+  "trade": -0.3,
   "fx": -0.5,
-  "energy": -0.5,
-  "market": -1.8,
-  "credit": -0.2,
+  "energy": 0.4,
+  "market": -0.5,
+  "credit": 0.1,
   "disaster": 0,
-  "policy": -0.6
+  "policy": -0.5
  },
  "rates": {
   "war": {
-   "rate": 0.3,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.6,
-   "saturated": 0,
+   "rate": 2.4,
+   "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 0.2,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 0.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 2
   },
@@ -157,17 +157,17 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.7,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.3,
-   "saturated": 0,
+   "rate": 3.8,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
-   "rate": 0,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 2
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -227,8 +227,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 57,
-    "spike": 0,
+    "score": 60,
+    "spike": 0.4,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -280,9 +280,91 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 51,
-    "spike": 0,
+    "score": 54,
+    "spike": 0.4,
     "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "7yn7e4",
+   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+   "firstSeen": "2026-11-06T19:47:00.000Z",
+   "lastSeen": "2026-11-07T00:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
+     "host": "cbci.co.kr",
+     "at": "2026-11-07T00:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "r80q6h",
+   "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
+   "firstSeen": "2026-11-07T09:02:00.000Z",
+   "lastSeen": "2026-11-07T09:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16270743",
+     "host": "topstarnews.net",
+     "at": "2026-11-07T09:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 0.4,
+    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -344,99 +426,64 @@
    }
   },
   {
-   "id": "7yn7e4",
-   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-   "firstSeen": "2026-11-06T19:47:00.000Z",
-   "lastSeen": "2026-11-07T00:00:00.000Z",
+   "id": "xrd5kk",
+   "title": "사이드카·서킷 울린 한 주…수익률 톱 ETF는?",
+   "firstSeen": "2026-11-07T21:02:00.000Z",
+   "lastSeen": "2026-11-07T21:02:00.000Z",
    "count": 1,
    "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "사이드카·서킷 울린 한 주…수익률 톱 ETF는?",
+     "link": "https://news.mtn.co.kr/article/2026110715515111080",
+     "host": "news.mtn.co.kr",
+     "at": "2026-11-07T21:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "pxjx4y",
+   "title": "블루웨이브 여파에 세계 증시 시총 4800조원 증발",
+   "firstSeen": "2026-11-07T03:21:00.000Z",
+   "lastSeen": "2026-11-07T14:00:00.000Z",
+   "count": 12,
+   "sources": 12,
    "topics": [
     "politics",
     "market"
    ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
-     "host": "cbci.co.kr",
-     "at": "2026-11-07T00:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "r80q6h",
-   "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
-   "firstSeen": "2026-11-07T09:02:00.000Z",
-   "lastSeen": "2026-11-07T09:02:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16270743",
-     "host": "topstarnews.net",
-     "at": "2026-11-07T09:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1d3tncj",
-   "title": "반도체 ‘블루웨이브 쇼크’…대미투자 불확실성도↑",
-   "firstSeen": "2026-11-06T15:10:00.000Z",
-   "lastSeen": "2026-11-07T12:52:00.000Z",
-   "count": 9,
-   "sources": 9,
-   "topics": [
-    "market"
-   ],
    "critical": [],
    "links": [
+    {
+     "title": "\"'블루웨이브' 쇼크에 AI주 급락… 세계 증시 시총 하루 새 4800조 증발\"...",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3446817",
+     "host": "newscj.com",
+     "at": "2026-11-07T14:00:00.000Z"
+    },
     {
      "title": "[아주경제 오늘의 뉴스 종합] 美 '블루웨이브' 충격에 세계 증시 시총 하...",
      "link": "https://www.ajunews.com/view/20261107184701988",
@@ -454,76 +501,13 @@
      "link": "https://www.tfmedia.co.kr/news/article.html?no=208708",
      "host": "tfmedia.co.kr",
      "at": "2026-11-07T12:32:00.000Z"
-    },
-    {
-     "title": "닛케이 \"'블루웨이브'에 세계 시총 하루만에 4800조원 증발\"",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=285400",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-07T09:32:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 36,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "10unipy",
-   "title": "美 민주당 압승에 AI주 폭락…세계 증시 시총 하루 새 4800조 '증발'",
-   "firstSeen": "2026-11-07T05:40:00.000Z",
-   "lastSeen": "2026-11-07T14:00:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "politics",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"'블루웨이브' 쇼크에 AI주 급락… 세계 증시 시총 하루 새 4800조 증발\"...",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3446817",
-     "host": "newscj.com",
-     "at": "2026-11-07T14:00:00.000Z"
-    },
-    {
-     "title": "하루 새 전 세계 시총 '4774조 원' 증발… 美 민주 압승 여파",
-     "link": "https://www.hankookilbo.com/news/article/A2026110718220004692?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-07T09:57:00.000Z"
-    },
-    {
-     "title": "[글로벌 마켓 뷰]하루 새 4천800조원 증발…美 민주당, '블루웨이브 쇼...",
-     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8189",
-     "host": "moneystorm.kr",
-     "at": "2026-11-07T08:21:00.000Z"
-    },
-    {
-     "title": "전 세계 시총 하루 만에 4800조원 증발...미국 중간선거 후폭풍",
-     "link": "https://www.chosun.com/economy/tech_it/2026/11/07/WAK7OMEVYBFLZECCVIVGWQLDVM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-07T08:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 0,
+    "score": 40,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -572,61 +556,6 @@
      "link": "https://www.m-economynews.com/news/article.html?no=72714",
      "host": "m-economynews.com",
      "at": "2026-11-07T01:44:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "cluv0t",
-   "title": "美 하원 위원장 3인, 젠슨 황에 \"中 스파이 의혹 인물과 관계 해명하라...",
-   "firstSeen": "2026-11-07T08:12:00.000Z",
-   "lastSeen": "2026-11-07T13:42:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "FT \"미국 정부, 젠슨 황 엔비디아 CEO가 '중국 스파이 의혹' 여성과 연인...",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261107010002714",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-07T13:42:00.000Z"
-    },
-    {
-     "title": "FT \"미, 젠슨 황 '스파이 의혹' 여성과 연인 관계 판단\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611072217307259",
-     "host": "ytn.co.kr",
-     "at": "2026-11-07T13:17:00.000Z"
-    },
-    {
-     "title": "젠슨 황, 중국 스파이와 연인?…의혹 일파만파",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835382&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-07T11:22:00.000Z"
-    },
-    {
-     "title": "FT \"美, 젠슨 황과 中 스파이 여성 연인 관계로 판단\" 보도",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03739206645643424&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-07T11:10:00.000Z"
     }
    ],
    "assess": {
@@ -703,40 +632,40 @@
    }
   },
   {
-   "id": "1a2e8ll",
-   "title": "나스닥, 저가매수에 1% 반등...고용 호조에 금리인상 확률 ↑ [데일리국...",
-   "firstSeen": "2026-11-06T15:36:00.000Z",
-   "lastSeen": "2026-11-07T00:17:00.000Z",
+   "id": "1feas5x",
+   "title": "美 증시, 하루 만에 반발 매수···반도체 4.2% 반등 속 '혼조 마감'",
+   "firstSeen": "2026-11-06T21:18:00.000Z",
+   "lastSeen": "2026-11-07T07:22:00.000Z",
    "count": 4,
    "sources": 4,
    "topics": [
-    "rates"
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "예상치 웃돈 美 10월 고용…16만5000명 '깜짝 증가'",
-     "link": "https://biz.sbs.co.kr/article_hub/20000344902?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-07T00:17:00.000Z"
+     "title": "세계 증시 하루 만에 4,800조 증발.. AI 규제 우려에 '와르르'",
+     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67369?feed=na",
+     "host": "jibs.co.kr",
+     "at": "2026-11-07T07:22:00.000Z"
     },
     {
-     "title": "美 10월 고용 16만5천명 '깜짝 증가'…12월 금리인상 전망 강화",
-     "link": "https://www.tfmedia.co.kr/news/article.html?no=208698",
-     "host": "tfmedia.co.kr",
-     "at": "2026-11-06T23:36:00.000Z"
+     "title": "AI 규제 우려 속 나스닥 반등, 반도체 주식 매수 기회 포착",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=884559",
+     "host": "gokorea.kr",
+     "at": "2026-11-07T01:02:00.000Z"
     },
     {
-     "title": "美 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886355",
-     "host": "getnews.co.kr",
-     "at": "2026-11-06T22:42:00.000Z"
+     "title": "[마켓펄스] \"너무 빠졌나\"...나스닥, 'AI 쇼크' 딛고 하루 만에 1%대 반등",
+     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130695",
+     "host": "ntoday.co.kr",
+     "at": "2026-11-07T00:28:00.000Z"
     },
     {
-     "title": "나스닥, 저가매수에 1% 반등...고용 호조에 금리인상 확률 ↑ [데일리국...",
-     "link": "https://www.sedaily.com/article/20111395?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-06T21:59:00.000Z"
+     "title": "美 증시, 하루 만에 반발 매수···반도체 4.2% 반등 속 '혼조 마감'",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41492",
+     "host": "globale.co.kr",
+     "at": "2026-11-06T22:02:00.000Z"
     }
    ],
    "assess": {
@@ -758,95 +687,46 @@
    }
   },
   {
-   "id": "jrlknp",
-   "title": "[NZSI INDEX] 2026년 10월 23일… 코스피 +0.30% 반등에도 글로벌 증시는...",
-   "firstSeen": "2026-11-07T14:26:00.000Z",
-   "lastSeen": "2026-11-07T14:26:00.000Z",
-   "count": 7,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[NZSI INDEX] 2026년 10월 29일… 코스피 -1.24% 하락하며 6,000선 이탈",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93251",
-     "host": "the-today.com",
-     "at": "2026-11-07T14:26:00.000Z"
-    },
-    {
-     "title": "[NZSI INDEX] 2026년 10월 21일… 코스피 +3.29% 반등… 대세 상승 이후 하...",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93245",
-     "host": "the-today.com",
-     "at": "2026-11-07T14:26:00.000Z"
-    },
-    {
-     "title": "[NZSI INDEX] 2026년 10월 30일… 코스피 -3.48% 급락… 글로벌 증시 동반...",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93253",
-     "host": "the-today.com",
-     "at": "2026-11-07T14:26:00.000Z"
-    },
-    {
-     "title": "[NZSI INDEX] 2026년 10월 28일… 코스피 +6.63% 폭등하며 6,000선 돌파…...",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93250",
-     "host": "the-today.com",
-     "at": "2026-11-07T14:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 26,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "inzu3t",
-   "title": "가계대출 증가폭 다시 커졌나…금통위 의사록도 공개[한은 미리보기]",
-   "firstSeen": "2026-11-06T21:02:00.000Z",
-   "lastSeen": "2026-11-07T06:00:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1nbwm2c",
+   "title": "美 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
+   "firstSeen": "2026-11-06T14:40:00.000Z",
+   "lastSeen": "2026-11-07T21:01:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[N위크] 금융사 지배구조 개선안 나온다...금융권 가계대출 다시 늘었나",
-     "link": "https://www.tfmedia.co.kr/news/article.html?no=208706",
+     "title": "고용·가계대출 동향은...美 10월 물가 촉각[한동훈의 위클리전망대]",
+     "link": "https://www.sedaily.com/article/20111480?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-07T21:01:00.000Z"
+    },
+    {
+     "title": "예상치 웃돈 美 10월 고용…16만5000명 '깜짝 증가'",
+     "link": "https://biz.sbs.co.kr/article_hub/20000344902?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-07T00:17:00.000Z"
+    },
+    {
+     "title": "美 10월 고용 16만5천명 '깜짝 증가'…12월 금리인상 전망 강화",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=208698",
      "host": "tfmedia.co.kr",
-     "at": "2026-11-07T06:00:00.000Z"
+     "at": "2026-11-06T23:36:00.000Z"
     },
     {
-     "title": "[다음주 경제] 금융권 가계대출 다시 늘었나",
-     "link": "https://www.yna.co.kr/view/AKR20261107017800002?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-07T00:02:00.000Z"
-    },
-    {
-     "title": "가계대출 증가폭 다시 커졌나…금통위 의사록도 공개[한은 미리보기]",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01453046645643424&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-06T21:02:00.000Z"
+     "title": "美 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886355",
+     "host": "getnews.co.kr",
+     "at": "2026-11-06T22:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -862,40 +742,46 @@
    }
   },
   {
-   "id": "1feas5x",
-   "title": "美 증시, 하루 만에 반발 매수···반도체 4.2% 반등 속 '혼조 마감'",
-   "firstSeen": "2026-11-06T21:18:00.000Z",
-   "lastSeen": "2026-11-07T05:58:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "psoqwf",
+   "title": "FT \"美, 젠슨 황과 中 스파이 여성 연인 관계로 판단\" 보도",
+   "firstSeen": "2026-11-07T04:17:00.000Z",
+   "lastSeen": "2026-11-07T20:55:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "rates"
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "국고채 금리 일제히 하락…3년물 연 3.613% 마감",
-     "link": "http://www.kjdaily.com/article.php?aid=1794031020691500276",
-     "host": "kjdaily.com",
-     "at": "2026-11-07T05:58:00.000Z"
+     "title": "젠슨 황 장녀 매디슨 황, 방한 하루 앞두고 전격 취소…中 스파이 의혹...",
+     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8190",
+     "host": "moneystorm.kr",
+     "at": "2026-11-07T20:55:00.000Z"
     },
     {
-     "title": "[오늘의 글로벌마켓] 뉴욕증시, 혼조 양상 마감...기술주는 일제히 반등",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=146795",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-06T22:40:00.000Z"
+     "title": "FT \"미국 정부, 젠슨 황 엔비디아 CEO가 '중국 스파이 의혹' 여성과 연인...",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261107010002714",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-07T13:42:00.000Z"
     },
     {
-     "title": "美 증시, 하루 만에 반발 매수···반도체 4.2% 반등 속 '혼조 마감'",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41492",
-     "host": "globale.co.kr",
-     "at": "2026-11-06T22:02:00.000Z"
+     "title": "FT \"미, 젠슨 황 '스파이 의혹' 여성과 연인 관계 판단\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611072217307259",
+     "host": "ytn.co.kr",
+     "at": "2026-11-07T13:17:00.000Z"
+    },
+    {
+     "title": "FT \"美, 젠슨 황과 中 스파이 여성 연인 관계로 판단\" 보도",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03739206645643424&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-07T11:10:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -911,10 +797,10 @@
    }
   },
   {
-   "id": "111yt0r",
-   "title": "미국발 AI 투자 불안에 코스피 11.7% 급락…반도체 쏠림이 낙폭 키웠다",
-   "firstSeen": "2026-11-07T07:42:00.000Z",
-   "lastSeen": "2026-11-07T20:42:00.000Z",
+   "id": "1j1bg0r",
+   "title": "[주간증시전망] 코스피 일주일 새 11.7% 급락⋯5000선 사수, 美 물가·외...",
+   "firstSeen": "2026-11-06T23:08:00.000Z",
+   "lastSeen": "2026-11-07T21:00:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
@@ -923,22 +809,22 @@
    "critical": [],
    "links": [
     {
-     "title": "증권가 \"코스피 폭락 속 이번주 급락 여진 유의해야\"",
-     "link": "https://www.jasm.co.kr/news/view/324494/?sc=Naver",
-     "host": "jasm.co.kr",
-     "at": "2026-11-07T20:42:00.000Z"
+     "title": "'블루 쓰나미' 덮친 코스피…5000선 사수, 외국인·AI에 달렸다",
+     "link": "https://www.news1.kr/finance/market-exr/6346081",
+     "host": "news1.kr",
+     "at": "2026-11-07T21:00:00.000Z"
     },
     {
-     "title": "코스피 급락에 증권가 \"낙폭 과도\"…추가 하락 전망은 엇갈려",
-     "link": "http://www.kjdaily.com/article.php?aid=1794064280691509276",
-     "host": "kjdaily.com",
-     "at": "2026-11-07T15:14:00.000Z"
+     "title": "5000선 턱밑까지 밀린 코스피…美 물가·AI 실적에 달린 반등 [증시전망...",
+     "link": "https://www.dt.co.kr/article/12093673?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-07T20:03:00.000Z"
     },
     {
-     "title": "미국발 AI 투자 불안에 코스피 11.7% 급락…반도체 쏠림이 낙폭 키웠다",
-     "link": "https://bizhankook.com/articles/kospi-plunges-on-ai-investment-fears.html",
-     "host": "bizhankook.com",
-     "at": "2026-11-07T07:42:00.000Z"
+     "title": "[주간증시전망] 코스피 일주일 새 11.7% 급락⋯5000선 사수, 美 물가·외...",
+     "link": "https://www.etoday.co.kr/news/view/2645176",
+     "host": "etoday.co.kr",
+     "at": "2026-11-06T23:08:00.000Z"
     }
    ],
    "assess": {
@@ -946,6 +832,93 @@
     "label": "관찰",
     "score": 26,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1bpa3ul",
+   "title": "미 중간 선거 '블루 쓰나미' 후폭풍...흔들리는 코스피",
+   "firstSeen": "2026-11-07T01:44:00.000Z",
+   "lastSeen": "2026-11-07T21:00:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'블루 쓰나미'에 휘청 코스피, 美증시 반등에 충격 벗어날까",
+     "link": "https://www.yna.co.kr/view/AKR20261107025700008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-07T21:00:00.000Z"
+    },
+    {
+     "title": "미 중간 선거 '블루 쓰나미' 후폭풍...흔들리는 코스피",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611071044059228",
+     "host": "ytn.co.kr",
+     "at": "2026-11-07T01:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 26,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "25yyvh",
+   "title": "트럼프 '큰 합의' 기대…우크라, 아부다비 협상 우선순위 제시",
+   "firstSeen": "2026-11-07T06:24:00.000Z",
+   "lastSeen": "2026-11-07T06:34:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "러·미·우 회담 재개…우크라 \"큰 진전 기대 안 해\"",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=93229",
+     "host": "the-today.com",
+     "at": "2026-11-07T06:34:00.000Z"
+    },
+    {
+     "title": "트럼프 '큰 합의' 기대…우크라, 아부다비 협상 우선순위 제시",
+     "link": "https://www.tokenpost.kr/news/international/434418",
+     "host": "tokenpost.kr",
+     "at": "2026-11-07T06:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 26,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
