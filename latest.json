@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T09:47:44.124Z",
+ "updatedAt": "2026-11-07T10:12:04.293Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": -1.2,
-  "politics": -0.3,
-  "rates": -1,
+  "war": -1,
+  "politics": -0.2,
+  "rates": -1.1,
   "trade": -0.8,
   "fx": -0.7,
   "energy": -1,
-  "market": -0.6,
+  "market": -0.5,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.6
  },
  "rates": {
   "war": {
-   "rate": 0.7,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.2,
+   "rate": 2.3,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 0.2,
+   "rate": 0.1,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 4.9,
+   "rate": 5,
    "saturated": 1,
    "queries": 3
   },
@@ -225,8 +225,8 @@
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
+    "level": "caution",
+    "label": "주의",
     "score": 54,
     "spike": 0,
     "news": true,
@@ -247,9 +247,9 @@
    "id": "st39n2",
    "title": "트럼프, 중간선거 참패 사흘 만에 이란 공습…“방공시설 무력화”",
    "firstSeen": "2026-11-07T06:13:00.000Z",
-   "lastSeen": "2026-11-07T08:46:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "lastSeen": "2026-11-07T09:39:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "war",
     "politics"
@@ -258,6 +258,12 @@
     "war"
    ],
    "links": [
+    {
+     "title": "미 중간선거 '참패' 트럼프 \"이란에 소규모 공격 실시\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611071839345699",
+     "host": "ytn.co.kr",
+     "at": "2026-11-07T09:39:00.000Z"
+    },
     {
      "title": "美, 이란 방공시설 공습…중간선거 후 첫 군사행동",
      "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443605",
@@ -272,9 +278,9 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 48,
+    "level": "urgent",
+    "label": "긴급",
+    "score": 51,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -494,6 +500,47 @@
    }
   },
   {
+   "id": "n5njkw",
+   "title": "美 이란 공습에도 비트코인 '버티기'…리플 급락 속 지캐시·퀀트 급등",
+   "firstSeen": "2026-11-07T09:52:00.000Z",
+   "lastSeen": "2026-11-07T09:52:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "market"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "美 이란 공습에도 비트코인 '버티기'…리플 급락 속 지캐시·퀀트 급등",
+     "link": "http://coinreaders.com/268286",
+     "host": "coinreaders.com",
+     "at": "2026-11-07T09:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "xl5ep5",
    "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
    "firstSeen": "2026-11-07T06:20:00.000Z",
@@ -534,12 +581,12 @@
    }
   },
   {
-   "id": "pxjx4y",
-   "title": "美 ‘블루웨이브’ 쇼크에 전 세계 시총 4773조원 증발…AI 기술주 폭락",
-   "firstSeen": "2026-11-07T03:21:00.000Z",
+   "id": "1krbmtj",
+   "title": "반도체 ‘블루웨이브 쇼크’…대미투자 불확실성도↑",
+   "firstSeen": "2026-11-06T11:14:00.000Z",
    "lastSeen": "2026-11-07T09:32:00.000Z",
-   "count": 20,
-   "sources": 20,
+   "count": 16,
+   "sources": 16,
    "topics": [
     "politics",
     "market",
@@ -592,9 +639,9 @@
   },
   {
    "id": "psoqwf",
-   "title": "“미국, 젠슨 황과 中스파이 의심 여성 연인관계로 판단”-FT",
+   "title": "FT \"美정보당국, 젠슨 황과 中스파이 의혹 여성 연인 관계로 판단\"",
    "firstSeen": "2026-11-07T04:17:00.000Z",
-   "lastSeen": "2026-11-07T09:17:00.000Z",
+   "lastSeen": "2026-11-07T10:02:00.000Z",
    "count": 14,
    "sources": 14,
    "topics": [
@@ -602,6 +649,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "“젠슨 황과 연인관계”…美 정부 메모 파장",
+     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000558887",
+     "host": "ichannela.com",
+     "at": "2026-11-07T10:02:00.000Z"
+    },
     {
      "title": "“젠슨 황 ‘스파이 의혹’ 중국 여성과 연인 관계”···미 정보당국 ...",
      "link": "https://weekly.khan.co.kr/article/202611071817001",
@@ -619,12 +672,6 @@
      "link": "https://www.insight.co.kr/news/581059",
      "host": "insight.co.kr",
      "at": "2026-11-07T07:54:00.000Z"
-    },
-    {
-     "title": "英 FT \"미국 정부, 젠슨 황 '中스파이 의혹' 여성과 연인 관계로 판단\"",
-     "link": "https://www.jasm.co.kr/news/view/324531/?sc=Naver",
-     "host": "jasm.co.kr",
-     "at": "2026-11-07T07:24:00.000Z"
     }
    ],
    "assess": {
@@ -649,9 +696,9 @@
    "id": "1zfm07",
    "title": "뉴욕증시 프리뷰, 美 나스닥 선물 반등…AI주 폭락 하루 만에 반도체주...",
    "firstSeen": "2026-11-06T07:13:00.000Z",
-   "lastSeen": "2026-11-07T07:23:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "lastSeen": "2026-11-07T01:02:00.000Z",
+   "count": 10,
+   "sources": 10,
    "topics": [
     "fx",
     "market",
@@ -659,18 +706,6 @@
    ],
    "critical": [],
    "links": [
-    {
-     "title": "뉴욕증시 반등, AI 기술주 폭락 후 저가 매수세…나스닥 1.1% 상승",
-     "link": "https://news.jtbc.co.kr/article/NB12326976?influxDiv=NAVER",
-     "host": "news.jtbc.co.kr",
-     "at": "2026-11-07T07:23:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI 반도체주 반등에 나스닥 1.09% 상승",
-     "link": "https://www.m-economynews.com/news/article.html?no=72714",
-     "host": "m-economynews.com",
-     "at": "2026-11-07T01:44:00.000Z"
-    },
     {
      "title": "AI 규제 우려 속 나스닥 반등, 반도체 주식 매수 기회 포착",
      "link": "https://www.gokorea.kr/news/articleView.html?idxno=884559",
@@ -682,6 +717,18 @@
      "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130695",
      "host": "ntoday.co.kr",
      "at": "2026-11-07T00:28:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 기술주 중심으로 반등…저가 매수세 유입[투자360]",
+     "link": "https://biz.heraldcorp.com/article/10929102?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-07T00:06:00.000Z"
+    },
+    {
+     "title": "[뉴욕마켓워치] 폭락 뒤 저가 매수로 한숨 돌린 증시…채권↓달러↑",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443600",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-07T00:02:00.000Z"
     }
    ],
    "assess": {
@@ -707,8 +754,8 @@
    "title": "미국 10월 고용 16.5만 명 증가...금리 인상 전망 강화",
    "firstSeen": "2026-11-06T13:32:00.000Z",
    "lastSeen": "2026-11-07T00:17:00.000Z",
-   "count": 10,
-   "sources": 10,
+   "count": 9,
+   "sources": 9,
    "topics": [
     "rates"
    ],
@@ -742,7 +789,62 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
+    "score": 36,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "emi621",
+   "title": "美블루쓰나미 덮쳤다…글로벌 증시, 하루 만에 4774조원 증발",
+   "firstSeen": "2026-11-07T04:09:00.000Z",
+   "lastSeen": "2026-11-07T07:51:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "하루 만에 4800조 날아갔다…세계 증시 덮친 '블루쓰나미' 쇼크",
+     "link": "https://www.hankyung.com/article/2026110722767",
+     "host": "hankyung.com",
+     "at": "2026-11-07T07:51:00.000Z"
+    },
+    {
+     "title": "세계 증시 하루 만에 4,800조 증발.. AI 규제 우려에 '와르르'",
+     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67369?feed=na",
+     "host": "jibs.co.kr",
+     "at": "2026-11-07T07:22:00.000Z"
+    },
+    {
+     "title": "‘美 블루쓰나미’로 하루 만에 4774조원 증발…세계 증시 강타",
+     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000558858",
+     "host": "ichannela.com",
+     "at": "2026-11-07T06:38:00.000Z"
+    },
+    {
+     "title": "美 '블루 쓰나미'에 글로벌 증시 직격탄…하루 새 4774조 원 증발",
+     "link": "https://news.tf.co.kr/read/world/2386040.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-07T05:17:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -811,121 +913,21 @@
      "원/달러 +1.21%(평소의 2배)"
     ]
    }
-  },
-  {
-   "id": "99orxu",
-   "title": "與, 증시 급락에 긴급 간담회…\"불공정 거래 엄정 대응\"",
-   "firstSeen": "2026-11-06T09:02:00.000Z",
-   "lastSeen": "2026-11-06T12:55:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "與 \"불공정 거래 대응\"…野 \"억지부양에 반토막\"",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261106215435z0d",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-06T12:55:00.000Z"
-    },
-    {
-     "title": "민주당, 증시 급락 대응 논의… \"불공정 거래 엄정 대응\"",
-     "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2311977",
-     "host": "daejonilbo.com",
-     "at": "2026-11-06T10:23:00.000Z"
-    },
-    {
-     "title": "민주당, 증시 급락에 긴급 간담회…\"불공정 거래 엄정 대응\"",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008834704&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-06T10:17:00.000Z"
-    },
-    {
-     "title": "“주가 급락 국민 자산 안정성과 직결”…與, 불공정 거래 엄정 대응 한...",
-     "link": "https://www.mk.co.kr/article/12200802",
-     "host": "mk.co.kr",
-     "at": "2026-11-06T10:09:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1992wb4",
-   "title": "AI 규제 공포에 뉴욕 증시 폭락…트럼프 “멍청한 민주당 탓”",
-   "firstSeen": "2026-11-06T12:07:00.000Z",
-   "lastSeen": "2026-11-07T09:36:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "politics",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "삼성전자·SK하이닉스 주가 13~19% 폭락…미국 민주당 AI 규제 놓고 충돌...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16270758",
-     "host": "topstarnews.net",
-     "at": "2026-11-07T09:36:00.000Z"
-    },
-    {
-     "title": "미국 민주당 승리하자 AI 업체들 주가 폭락... 데이터센터 규제 강화 공...",
-     "link": "https://www.betanews.net/article/view/beta202611070008",
-     "host": "betanews.net",
-     "at": "2026-11-07T08:12:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 폭락에 트럼프 \"민주당의 AI 규제 때문\" 맹비난…나스닥 5.52% ...",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=131239",
-     "host": "pennmike.com",
-     "at": "2026-11-07T05:18:00.000Z"
-    },
-    {
-     "title": "美 AI 규제 공포에 코스피 이틀 새 11% 급락…외국인 6조원 팔았다",
-     "link": "https://www.segye.com/newsView/20261107504844?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-07T05:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-07T10:12:04.293Z",
+   "id": "st39n2",
+   "level": "urgent",
+   "title": "트럼프, 중간선거 참패 사흘 만에 이란 공습…“방공시설 무력화”",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.02%(평소의 2.1배)"
+   ],
+   "link": "https://www.ytn.co.kr/_ln/0104_202611071839345699",
+   "delivered": false
+  },
   {
    "at": "2026-11-07T09:27:42.105Z",
    "id": "1h4hqdc",
@@ -1152,17 +1154,6 @@
     "코스피 -6.02%(평소의 2.2배)"
    ],
    "link": "https://www.sedaily.com/article/20111262?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T23:31:56.604Z",
-   "id": "1a0do2v",
-   "level": "caution",
-   "title": "美베선트, 中허리펑에 \"부산합의 즉각 이행\"…희토류등 불만표출",
-   "why": [
-    "원/달러 +1.76%(평소의 2.8배)"
-   ],
-   "link": "https://www.mt.co.kr/world/2026/11/07/2026110708212981479",
    "delivered": false
   }
  ],
