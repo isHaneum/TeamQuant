@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T03:14:33.528Z",
+ "updatedAt": "2026-11-07T03:27:59.551Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": 0.3,
+  "war": -0.1,
   "politics": -0.1,
-  "rates": 0.1,
-  "trade": -0.1,
+  "rates": -0.2,
+  "trade": -0.5,
   "fx": 0.5,
-  "energy": -0.7,
+  "energy": -0.9,
   "market": 0,
   "credit": -0.2,
   "disaster": 0,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 2,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.6,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 2.8,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 5.6,
+   "rate": 5.7,
    "saturated": 2,
    "queries": 3
   },
@@ -184,9 +184,9 @@
  },
  "issues": [
   {
-   "id": "1b53kpd",
+   "id": "1h4hqdc",
    "title": "\"코스피보다 더 하네\"…코스닥, 계엄 당시 수준으로 회귀",
-   "firstSeen": "2026-11-06T00:22:00.000Z",
+   "firstSeen": "2026-11-06T22:00:00.000Z",
    "lastSeen": "2026-11-07T00:34:00.000Z",
    "count": 3,
    "sources": 3,
@@ -307,8 +307,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 47,
-    "spike": 0.3,
+    "score": 45,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -348,8 +348,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 47,
-    "spike": 0.3,
+    "score": 45,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -401,46 +401,6 @@
     "why": [
      "핵심 단어",
      "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "2wok4o",
-   "title": "러시아군 우크라이나 구호시설 공습 사망자 53명으로 늘어",
-   "firstSeen": "2026-11-06T20:28:00.000Z",
-   "lastSeen": "2026-11-06T20:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "러시아군 우크라이나 구호시설 공습 사망자 53명으로 늘어",
-     "link": "https://www.voakorea.com/a/us-russia-ukraine-110626/8219806.html",
-     "host": "voakorea.com",
-     "at": "2026-11-06T20:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 1.21,
-     "unit": "%",
-     "z": 2
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 +1.21%(평소의 2배)"
     ]
    }
   },
@@ -526,6 +486,46 @@
    }
   },
   {
+   "id": "2wok4o",
+   "title": "러시아군 우크라이나 구호시설 공습 사망자 53명으로 늘어",
+   "firstSeen": "2026-11-06T20:28:00.000Z",
+   "lastSeen": "2026-11-06T20:28:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "러시아군 우크라이나 구호시설 공습 사망자 53명으로 늘어",
+     "link": "https://www.voakorea.com/a/us-russia-ukraine-110626/8219806.html",
+     "host": "voakorea.com",
+     "at": "2026-11-06T20:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 +1.21%(평소의 2배)"
+    ]
+   }
+  },
+  {
    "id": "1zfm07",
    "title": "美 반도체주 폭락에 환율 14.5원 급등…6개월 만에 최대폭",
    "firstSeen": "2026-11-06T07:13:00.000Z",
@@ -584,30 +584,74 @@
    }
   },
   {
-   "id": "z3pu38",
-   "title": "美, 10월 고용 16만5000명 깜짝 증가…실업률도 하락",
-   "firstSeen": "2026-11-06T13:32:00.000Z",
-   "lastSeen": "2026-11-07T02:49:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "id": "m4np7v",
+   "title": "뉴욕 증시 반등...반도체주 중심 저가 매수세",
+   "firstSeen": "2026-11-06T23:26:00.000Z",
+   "lastSeen": "2026-11-07T03:14:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
-    "rates",
-    "market"
+    "fx",
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "뉴욕증시 급락세 진정‥10월 고용 '깜짝 증가'",
-     "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6863894_36967.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-07T02:49:00.000Z"
+     "title": "美반도체주 저가 매수세 유입…나스닥 1.1%↑",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=880875",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-07T03:14:00.000Z"
     },
     {
-     "title": "뉴욕증시 급락세 진정…미 10월 고용 ‘깜짝증가’",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706628&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-07T00:30:00.000Z"
+     "title": "AI 규제 우려 속 나스닥 반등, 반도체 주식 매수 기회 포착",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=884559",
+     "host": "gokorea.kr",
+     "at": "2026-11-07T01:02:00.000Z"
     },
+    {
+     "title": "뉴욕증시, AI 기술주 중심으로 반등…저가 매수세 유입",
+     "link": "https://biz.heraldcorp.com/article/10929102?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-07T00:06:00.000Z"
+    },
+    {
+     "title": "[뉴욕마켓워치] 폭락 뒤 저가 매수로 한숨 돌린 증시…채권↓달러↑",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443600",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-07T00:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "z3pu38",
+   "title": "美, 10월 고용 16만5000명 깜짝 증가…실업률도 하락",
+   "firstSeen": "2026-11-06T13:32:00.000Z",
+   "lastSeen": "2026-11-07T00:17:00.000Z",
+   "count": 10,
+   "sources": 10,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
     {
      "title": "예상치 웃돈 美 10월 고용…16만5000명 '깜짝 증가'",
      "link": "https://biz.sbs.co.kr/article_hub/20000344902?division=NAVER",
@@ -619,13 +663,25 @@
      "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/07/2026110700012.html",
      "host": "biz.newdaily.co.kr",
      "at": "2026-11-07T00:00:00.000Z"
+    },
+    {
+     "title": "美 10월 고용 16만5천명 '깜짝 증가'…12월 금리인상 전망 강화",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=208698",
+     "host": "tfmedia.co.kr",
+     "at": "2026-11-06T23:36:00.000Z"
+    },
+    {
+     "title": "美 10월 고용 16만5000명 증가…12월 금리인상 전망 강화",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886355",
+     "host": "getnews.co.kr",
+     "at": "2026-11-06T22:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 37,
-    "spike": 0.1,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -636,6 +692,61 @@
     },
     "why": [
      "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1d3tncj",
+   "title": "반도체 ‘블루웨이브 쇼크’…대미 투자 불확실성도↑",
+   "firstSeen": "2026-11-06T12:05:00.000Z",
+   "lastSeen": "2026-11-07T03:18:00.000Z",
+   "count": 8,
+   "sources": 7,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "블루웨이브 쇼크…닛케이 \"세계증시 하루만에 4800조 증발\"",
+     "link": "https://view.asiae.co.kr/article/2026110712184646990",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-07T03:18:00.000Z"
+    },
+    {
+     "title": "닛케이 “‘블루웨이브 쇼크’로 세계 시총 4800조원 증발”",
+     "link": "https://biz.heraldcorp.com/article/10929170?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-07T03:03:00.000Z"
+    },
+    {
+     "title": "'블루웨이브 쇼크' 받은 전세계...하루만에 3조 5천억 달러 증발",
+     "link": "https://www.radiokorea.com/news/article.php?uid=509041",
+     "host": "radiokorea.com",
+     "at": "2026-11-07T03:00:00.000Z"
+    },
+    {
+     "title": "하루 만에 4800조 '증발' ... '블루웨이브 쇼크'에 글로벌 시총 허공으로",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886377",
+     "host": "getnews.co.kr",
+     "at": "2026-11-07T02:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "원/달러 +1.21%(평소의 2배)"
     ]
    }
   },
@@ -679,8 +790,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 0.3,
+    "score": 35,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -695,127 +806,15 @@
    }
   },
   {
-   "id": "m4np7v",
-   "title": "뉴욕 증시 반등...반도체주 중심 저가 매수세",
-   "firstSeen": "2026-11-06T23:26:00.000Z",
-   "lastSeen": "2026-11-07T00:06:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시, AI 기술주 중심으로 반등…저가 매수세 유입",
-     "link": "https://biz.heraldcorp.com/article/10929102?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-07T00:06:00.000Z"
-    },
-    {
-     "title": "[뉴욕마켓워치] 폭락 뒤 저가 매수로 한숨 돌린 증시…채권↓달러↑",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443600",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-07T00:02:00.000Z"
-    },
-    {
-     "title": "미 증시, 저가 매수세에 반등…나스닥 1.09% 상승",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611070009",
-     "host": "sentv.co.kr",
-     "at": "2026-11-07T00:00:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 반도체주 저가 매수에 대체로 반등…나스닥 1.09%↑",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1730801",
-     "host": "ebn.co.kr",
-     "at": "2026-11-06T23:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 37,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1d3tncj",
-   "title": "반도체 ‘블루웨이브 쇼크’…대미 투자 불확실성도↑",
-   "firstSeen": "2026-11-06T12:05:00.000Z",
-   "lastSeen": "2026-11-07T03:03:00.000Z",
-   "count": 7,
-   "sources": 6,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "닛케이 “‘블루웨이브 쇼크’로 세계 시총 4800조원 증발”",
-     "link": "https://biz.heraldcorp.com/article/10929170?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-07T03:03:00.000Z"
-    },
-    {
-     "title": "'블루웨이브 쇼크' 받은 전세계...하루만에 3조 5천억 달러 증발",
-     "link": "https://www.radiokorea.com/news/article.php?uid=509041",
-     "host": "radiokorea.com",
-     "at": "2026-11-07T03:00:00.000Z"
-    },
-    {
-     "title": "하루 만에 4800조 '증발' ... '블루웨이브 쇼크'에 글로벌 시총 허공으로",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=886377",
-     "host": "getnews.co.kr",
-     "at": "2026-11-07T02:50:00.000Z"
-    },
-    {
-     "title": "[속보]\"'블루웨이브 쇼크'에 세계증시 시총 하루만에 4800조 원 증발\"",
-     "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20261107.99099002105",
-     "host": "kookje.co.kr",
-     "at": "2026-11-07T02:44:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 1.21,
-     "unit": "%",
-     "z": 2
-    },
-    "why": [
-     "원/달러 +1.21%(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "38nbcw",
-   "title": "美 뉴욕증시, AI 투매 진정…나스닥 1%대 반등, 반도체·데이터센터주 ...",
-   "firstSeen": "2026-11-06T21:35:00.000Z",
+   "id": "1zfm07",
+   "title": "뉴욕증시 프리뷰, 美 나스닥 선물 반등…AI주 폭락 하루 만에 반도체주...",
+   "firstSeen": "2026-11-06T07:13:00.000Z",
    "lastSeen": "2026-11-07T02:24:00.000Z",
    "count": 8,
    "sources": 8,
    "topics": [
     "rates",
-    "market",
-    "policy"
+    "market"
    ],
    "critical": [],
    "links": [
@@ -838,17 +837,17 @@
      "at": "2026-11-07T01:24:00.000Z"
     },
     {
-     "title": "AI 규제 우려 속 나스닥 반등, 반도체 주식 매수 기회 포착",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=884559",
-     "host": "gokorea.kr",
-     "at": "2026-11-07T01:02:00.000Z"
+     "title": "뉴욕증시, 반도체주 반등에 나스닥 1.09% 상승-다우는 하락",
+     "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=94718",
+     "host": "mediafine.co.kr",
+     "at": "2026-11-07T00:54:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 35,
-    "spike": 0.1,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -867,8 +866,8 @@
    "title": "美 AI 데이터센터 규제 공포에 코스피 6% 폭락…5000선 가까스로 지켰다",
    "firstSeen": "2026-11-06T08:32:00.000Z",
    "lastSeen": "2026-11-07T02:58:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "politics",
     "market",
@@ -883,28 +882,28 @@
      "at": "2026-11-07T02:58:00.000Z"
     },
     {
-     "title": "트럼프 \"초지능은 황금\"… '데이터센터 규제' 민주당에 반격",
-     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003282657&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
-     "host": "ohmynews.com",
-     "at": "2026-11-07T01:51:00.000Z"
-    },
-    {
      "title": "[주간증시온도계]美 AI 규제 공포에 증시 급랭…코스피 5000선도 겨우 사...",
      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=730894",
      "host": "the-biz.co.kr",
      "at": "2026-11-07T01:00:00.000Z"
     },
     {
-     "title": "[천지일보 이슈종합] AI 규제 강화 우려·미국·한국증시 급락·세계날씨...",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3446660",
-     "host": "newscj.com",
-     "at": "2026-11-06T22:02:00.000Z"
+     "title": "[AI 블루쇼크①]데이터센터 규제 우려에 나스닥 급락…AI 거품 터지나",
+     "link": "https://www.newsis.com/view/NISX20261106_0003858191",
+     "host": "newsis.com",
+     "at": "2026-11-06T21:00:00.000Z"
+    },
+    {
+     "title": "AI 규제 공포에 뉴욕 증시 폭락…트럼프 “멍청한 민주당 탓”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706285&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-06T12:07:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
+    "score": 32,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -921,6 +920,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-07T03:27:59.551Z",
+   "id": "1h4hqdc",
+   "level": "urgent",
+   "title": "\"코스피보다 더 하네\"…코스닥, 계엄 당시 수준으로 회귀",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.02%(평소의 2.1배)"
+   ],
+   "link": "https://www.kmib.co.kr/article/20261107500021",
+   "delivered": false
+  },
   {
    "at": "2026-11-07T03:14:33.528Z",
    "id": "y35dai",
@@ -1143,17 +1154,6 @@
     "원/달러 +1.6%(평소의 2.6배)"
    ],
    "link": "https://www.news1.kr/world/middleeast-africa/6346120",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T14:47:18.567Z",
-   "id": "1f8mb9k",
-   "level": "caution",
-   "title": "5천피 겨우 지켰다…블루 쓰나미발 '검은 금요일'",
-   "why": [
-    "원/달러 +1.6%(평소의 2.6배)"
-   ],
-   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706469&ref=A",
    "delivered": false
   }
  ],
