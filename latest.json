@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T04:14:53.815Z",
+ "updatedAt": "2026-11-07T04:27:37.660Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": -0.2,
-  "rates": -0.8,
-  "trade": -1,
+  "war": -0.5,
+  "politics": -0.4,
+  "rates": -0.9,
+  "trade": -0.7,
   "fx": 0.2,
   "energy": -1.2,
-  "market": 0.2,
+  "market": 0.1,
   "credit": -0.2,
   "disaster": 0,
-  "policy": -0.8
+  "policy": -0.9
  },
  "rates": {
   "war": {
-   "rate": 1.2,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.3,
-   "saturated": 1,
+   "rate": 2.2,
+   "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.7,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 1.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 5.9,
+   "rate": 5.8,
    "saturated": 2,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   }
@@ -187,17 +187,24 @@
    "id": "1h4hqdc",
    "title": "\"코스피보다 더 하네\"…코스닥, 계엄 당시 수준으로 회귀",
    "firstSeen": "2026-11-06T22:00:00.000Z",
-   "lastSeen": "2026-11-07T00:34:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-07T01:46:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "politics"
+    "politics",
+    "market"
    ],
    "critical": [
     "war",
     "politics"
    ],
    "links": [
+    {
+     "title": "[11월 첫째 주 세계경제동향 브리핑] 코스피·코스닥 11%대 동반 폭락…...",
+     "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3040119",
+     "host": "kihoilbo.co.kr",
+     "at": "2026-11-07T01:46:00.000Z"
+    },
     {
      "title": "‘640대’ 코스닥 어쩌나…계엄 직후보다 더 낮아졌다",
      "link": "https://www.kmib.co.kr/article/20261107500021",
@@ -220,8 +227,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 51,
-    "spike": 0,
+    "score": 54,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -266,90 +273,9 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 49,
-    "spike": 0.2,
+    "score": 48,
+    "spike": 0.1,
     "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1xf7ol8",
-   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-   "firstSeen": "2026-11-06T16:45:00.000Z",
-   "lastSeen": "2026-11-06T16:45:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
-     "host": "donga.com",
-     "at": "2026-11-06T16:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "7yn7e4",
-   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-   "firstSeen": "2026-11-06T19:47:00.000Z",
-   "lastSeen": "2026-11-07T00:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
-     "host": "cbci.co.kr",
-     "at": "2026-11-07T00:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0.2,
-    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -446,6 +372,46 @@
    }
   },
   {
+   "id": "1xf7ol8",
+   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+   "firstSeen": "2026-11-06T16:45:00.000Z",
+   "lastSeen": "2026-11-06T16:45:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
+     "host": "donga.com",
+     "at": "2026-11-06T16:45:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "v31sr0",
    "title": "[GAM]미국 슈퍼 리치 열광하는 RH ② '팬데믹 수혜주' 부활...53% 뛴다",
    "firstSeen": "2026-11-06T23:00:00.000Z",
@@ -471,6 +437,47 @@
     "label": "관찰",
     "score": 45,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "7yn7e4",
+   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+   "firstSeen": "2026-11-06T19:47:00.000Z",
+   "lastSeen": "2026-11-07T00:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
+     "host": "cbci.co.kr",
+     "at": "2026-11-07T00:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -601,6 +608,61 @@
    }
   },
   {
+   "id": "1d3tncj",
+   "title": "반도체 ‘블루웨이브 쇼크’…대미 투자 불확실성도↑",
+   "firstSeen": "2026-11-06T12:05:00.000Z",
+   "lastSeen": "2026-11-07T04:27:00.000Z",
+   "count": 12,
+   "sources": 11,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "세계 증시 '블루웨이브 쇼크'…\"하루 만에 4800조 원 증발\"",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5229550",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-07T04:27:00.000Z"
+    },
+    {
+     "title": "‘블루웨이브’에 흔들린 세계 증시…하루 새 시총 4800조 원 증발",
+     "link": "https://www.g-enews.com/view.php?ud=20261107130717971724debea800_1",
+     "host": "g-enews.com",
+     "at": "2026-11-07T04:16:00.000Z"
+    },
+    {
+     "title": "'블루웨이브 쇼크'에 세계 시총 하루 만에 \"4천8백조 원 증발\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611071314120721",
+     "host": "ytn.co.kr",
+     "at": "2026-11-07T04:14:00.000Z"
+    },
+    {
+     "title": "'블루웨이브 쇼크' 세계증시 시총 하루 만에 4800조 증발",
+     "link": "https://news.mtn.co.kr/article/2026110712332692728",
+     "host": "news.mtn.co.kr",
+     "at": "2026-11-07T03:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "원/달러 +1.21%(평소의 2배)"
+    ]
+   }
+  },
+  {
    "id": "z3pu38",
    "title": "美, 10월 고용 16만5000명 깜짝 증가…실업률도 하락",
    "firstSeen": "2026-11-06T13:32:00.000Z",
@@ -652,61 +714,6 @@
     },
     "why": [
      "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1d3tncj",
-   "title": "반도체 ‘블루웨이브 쇼크’…대미 투자 불확실성도↑",
-   "firstSeen": "2026-11-06T12:05:00.000Z",
-   "lastSeen": "2026-11-07T03:34:00.000Z",
-   "count": 9,
-   "sources": 8,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'블루웨이브 쇼크' 세계증시 시총 하루 만에 4800조 증발",
-     "link": "https://news.mtn.co.kr/article/2026110712332692728",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-07T03:34:00.000Z"
-    },
-    {
-     "title": "블루웨이브 쇼크…닛케이 \"세계증시 하루만에 4800조 증발\"",
-     "link": "https://view.asiae.co.kr/article/2026110712184646990",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-07T03:18:00.000Z"
-    },
-    {
-     "title": "닛케이 “‘블루웨이브 쇼크’로 세계 시총 4800조원 증발”",
-     "link": "https://biz.heraldcorp.com/article/10929170?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-07T03:03:00.000Z"
-    },
-    {
-     "title": "'블루웨이브 쇼크' 받은 전세계...하루만에 3조 5천억 달러 증발",
-     "link": "https://www.radiokorea.com/news/article.php?uid=509041",
-     "host": "radiokorea.com",
-     "at": "2026-11-07T03:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 1.21,
-     "unit": "%",
-     "z": 2
-    },
-    "why": [
-     "원/달러 +1.21%(평소의 2배)"
     ]
    }
   },
@@ -863,8 +870,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0.2,
+    "score": 32,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -879,48 +886,49 @@
    }
   },
   {
-   "id": "3u54u5",
-   "title": "코스피 덮친 '블루 쓰나미'...장중 5,000 붕괴 [이슈ON]",
-   "firstSeen": "2026-11-06T02:50:00.000Z",
-   "lastSeen": "2026-11-07T02:02:00.000Z",
-   "count": 5,
+   "id": "1pkr2t7",
+   "title": "'증시' 덮친 중간선거...민주당, 진짜 AI 규제 나설까? [2pm]",
+   "firstSeen": "2026-11-06T04:51:00.000Z",
+   "lastSeen": "2026-11-07T00:36:00.000Z",
+   "count": 4,
    "sources": 4,
    "topics": [
     "politics",
-    "market"
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[판으로 읽는 경제] 美 '블루 쓰나미'에 코스피 붕괴…왜 한국이 더 아팠...",
-     "link": "https://news.mtn.co.kr/article/2026110709474749771",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-07T02:02:00.000Z"
+     "title": "美 중간선거 이후 코스피 급락…삼전닉스 덮친 AI 투자 한파",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=325454",
+     "host": "thepublic.kr",
+     "at": "2026-11-07T00:36:00.000Z"
     },
     {
-     "title": "미 중간 선거 '블루 쓰나미' 후폭풍...흔들리는 코스피",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611071044059228",
+     "title": "[위클리 PICK 3] 美 중간선거 민주당 승리부터 코스피-코스닥 동시 폭락...",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=146744",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-07T00:00:00.000Z"
+    },
+    {
+     "title": "[투자 노하우] 미 중간선거, 민주당 상·하원 장악 '블루 웨이브'",
+     "link": "https://biz.sbs.co.kr/article_hub/20000344831?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-06T08:03:00.000Z"
+    },
+    {
+     "title": "'증시' 덮친 중간선거...민주당, 진짜 AI 규제 나설까? [2pm]",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611061351322320",
      "host": "ytn.co.kr",
-     "at": "2026-11-07T01:44:00.000Z"
-    },
-    {
-     "title": "美 휩쓴 '블루 쓰나미', 한미 통상 관계 여파 폭풍전야?",
-     "link": "http://weekly.chosun.com/news/articleView.html?idxno=56908",
-     "host": "weekly.chosun.com",
-     "at": "2026-11-06T23:00:00.000Z"
-    },
-    {
-     "title": "[박근종 칼럼] 미국 '블루 쓰나미'에 주가 폭락, 반도체 일극 경제에 대...",
-     "link": "https://www.mhns.co.kr/news/articleView.html?idxno=768053",
-     "host": "mhns.co.kr",
-     "at": "2026-11-06T20:24:00.000Z"
+     "at": "2026-11-06T04:51:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 0.2,
+    "score": 29,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
