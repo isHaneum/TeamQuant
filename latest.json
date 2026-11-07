@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T08:47:56.288Z",
+ "updatedAt": "2026-11-07T09:12:40.875Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
+  "war": -0.5,
   "politics": -0.3,
-  "rates": -1,
-  "trade": 0.1,
+  "rates": -1.1,
+  "trade": -0.3,
   "fx": -0.7,
   "energy": -1,
-  "market": 0.1,
+  "market": -0.6,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 1.4,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.3,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.3,
+   "rate": 2.5,
    "saturated": 0,
    "queries": 2
   },
@@ -162,8 +162,8 @@
    "queries": 1
   },
   "market": {
-   "rate": 5.8,
-   "saturated": 2,
+   "rate": 4.9,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -228,53 +228,7 @@
     "level": "urgent",
     "label": "긴급",
     "score": 54,
-    "spike": 0.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "y35dai",
-   "title": "[마감 시황] '검은 금요일'의 공포… 코스피, 서킷브레이커·사이드카 연...",
-   "firstSeen": "2026-11-06T09:02:00.000Z",
-   "lastSeen": "2026-11-06T09:49:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "5천피 겨우 지켰다…블루 쓰나미발 '검은 금요일'",
-     "link": "https://news.jtbc.co.kr/article/NB12326865?influxDiv=NAVER",
-     "host": "news.jtbc.co.kr",
-     "at": "2026-11-06T09:49:00.000Z"
-    },
-    {
-     "title": "[마감 시황] '검은 금요일'의 공포… 코스피, 서킷브레이커·사이드카 연...",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=280719",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-06T09:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 48,
-    "spike": 0.1,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -323,47 +277,6 @@
     "score": 48,
     "spike": 0,
     "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "weturr",
-   "title": "이란 혁명수비대 \"호르무즈서 유조선 2척 기뢰 충돌해 화재\"",
-   "firstSeen": "2026-11-06T08:59:00.000Z",
-   "lastSeen": "2026-11-06T08:59:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "이란 혁명수비대 \"호르무즈서 유조선 2척 기뢰 충돌해 화재\"",
-     "link": "https://www.news1.kr/world/middleeast-africa/6346120",
-     "host": "news1.kr",
-     "at": "2026-11-06T08:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 0,
-    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -443,7 +356,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 45,
-    "spike": 0.1,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -524,7 +437,48 @@
     "level": "watch",
     "label": "관찰",
     "score": 45,
-    "spike": 0.1,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "r80q6h",
+   "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
+   "firstSeen": "2026-11-07T09:02:00.000Z",
+   "lastSeen": "2026-11-07T09:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16270743",
+     "host": "topstarnews.net",
+     "at": "2026-11-07T09:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -580,12 +534,12 @@
    }
   },
   {
-   "id": "38nbcw",
-   "title": "[마켓펄스] \"너무 빠졌나\"...나스닥, 'AI 쇼크' 딛고 하루 만에 1%대 반등",
-   "firstSeen": "2026-11-07T00:28:00.000Z",
-   "lastSeen": "2026-11-07T08:21:00.000Z",
-   "count": 22,
-   "sources": 22,
+   "id": "1d3tncj",
+   "title": "반도체 ‘블루웨이브 쇼크’…대미 투자 불확실성도↑",
+   "firstSeen": "2026-11-06T12:05:00.000Z",
+   "lastSeen": "2026-11-07T08:54:00.000Z",
+   "count": 25,
+   "sources": 24,
    "topics": [
     "politics",
     "market",
@@ -594,35 +548,92 @@
    "critical": [],
    "links": [
     {
+     "title": "'블루웨이브 쇼크' 세계증시 시총 하루만에 4천800조원 증발",
+     "link": "https://www.kbsm.net/news/view.php?idx=540710",
+     "host": "kbsm.net",
+     "at": "2026-11-07T08:54:00.000Z"
+    },
+    {
      "title": "[글로벌 마켓 뷰]하루 새 4천800조원 증발…美 민주당, '블루웨이브 쇼...",
      "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8189",
      "host": "moneystorm.kr",
      "at": "2026-11-07T08:21:00.000Z"
     },
     {
+     "title": "세계 증시 덮친 블루웨이브…하루만에 시총 4800조원 증발",
+     "link": "http://www.segyebiz.com/newsView/20261107505882?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-07T08:12:00.000Z"
+    },
+    {
      "title": "전 세계 시총 하루 만에 4800조원 증발...미국 중간선거 후폭풍",
      "link": "https://www.chosun.com/economy/tech_it/2026/11/07/WAK7OMEVYBFLZECCVIVGWQLDVM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
      "host": "chosun.com",
      "at": "2026-11-07T08:08:00.000Z"
-    },
-    {
-     "title": "AI주 투매에 세계 증시 하루 새 4800조원 증발",
-     "link": "https://monthly.chosun.com/news/articleView.html?idxno=71915",
-     "host": "monthly.chosun.com",
-     "at": "2026-11-07T07:54:00.000Z"
-    },
-    {
-     "title": "하루 만에 4800조 날아갔다…세계 증시 덮친 '블루쓰나미' 쇼크",
-     "link": "https://www.hankyung.com/article/2026110722767",
-     "host": "hankyung.com",
-     "at": "2026-11-07T07:51:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 37,
-    "spike": 0.1,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1zfm07",
+   "title": "뉴욕증시 프리뷰, 美 나스닥 선물 반등…AI주 폭락 하루 만에 반도체주...",
+   "firstSeen": "2026-11-06T07:13:00.000Z",
+   "lastSeen": "2026-11-07T07:23:00.000Z",
+   "count": 12,
+   "sources": 12,
+   "topics": [
+    "fx",
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시 반등, AI 기술주 폭락 후 저가 매수세…나스닥 1.1% 상승",
+     "link": "https://news.jtbc.co.kr/article/NB12326976?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-07T07:23:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 반도체주 반등에 나스닥 1.09% 상승",
+     "link": "https://www.m-economynews.com/news/article.html?no=72714",
+     "host": "m-economynews.com",
+     "at": "2026-11-07T01:44:00.000Z"
+    },
+    {
+     "title": "AI 규제 우려 속 나스닥 반등, 반도체 주식 매수 기회 포착",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=884559",
+     "host": "gokorea.kr",
+     "at": "2026-11-07T01:02:00.000Z"
+    },
+    {
+     "title": "[마켓펄스] \"너무 빠졌나\"...나스닥, 'AI 쇼크' 딛고 하루 만에 1%대 반등",
+     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130695",
+     "host": "ntoday.co.kr",
+     "at": "2026-11-07T00:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -677,63 +688,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 37,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1zfm07",
-   "title": "뉴욕증시 프리뷰, 美 나스닥 선물 반등…AI주 폭락 하루 만에 반도체주...",
-   "firstSeen": "2026-11-06T07:13:00.000Z",
-   "lastSeen": "2026-11-07T07:23:00.000Z",
-   "count": 10,
-   "sources": 10,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시 반등, AI 기술주 폭락 후 저가 매수세…나스닥 1.1% 상승",
-     "link": "https://news.jtbc.co.kr/article/NB12326976?influxDiv=NAVER",
-     "host": "news.jtbc.co.kr",
-     "at": "2026-11-07T07:23:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI 반도체주 반등에 나스닥 1.09% 상승",
-     "link": "https://www.m-economynews.com/news/article.html?no=72714",
-     "host": "m-economynews.com",
-     "at": "2026-11-07T01:44:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI 기술주 중심으로 반등…저가 매수세 유입[투자360]",
-     "link": "https://biz.heraldcorp.com/article/10929102?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-07T00:06:00.000Z"
-    },
-    {
-     "title": "[뉴욕마켓워치] 폭락 뒤 저가 매수로 한숨 돌린 증시…채권↓달러↑",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443600",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-07T00:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 37,
-    "spike": 0.1,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -752,8 +707,8 @@
    "title": "미국 10월 고용 16.5만 명 증가...금리 인상 전망 강화",
    "firstSeen": "2026-11-06T13:32:00.000Z",
    "lastSeen": "2026-11-07T00:17:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "count": 10,
+   "sources": 10,
    "topics": [
     "rates"
    ],
@@ -787,7 +742,7 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 36,
+    "score": 37,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -803,57 +758,57 @@
    }
   },
   {
-   "id": "pxjx4y",
-   "title": "美 민주당 ’블루쓰나미’, 글로벌 증시 4800조원 증발했다",
-   "firstSeen": "2026-11-07T03:21:00.000Z",
-   "lastSeen": "2026-11-07T08:12:00.000Z",
+   "id": "1nxryu3",
+   "title": "\"美밴스, 이란과 휴전·핵협상 재개 물밑 주도\"",
+   "firstSeen": "2026-11-07T00:04:00.000Z",
+   "lastSeen": "2026-11-07T04:14:00.000Z",
    "count": 7,
    "sources": 7,
    "topics": [
-    "market"
+    "war"
    ],
    "critical": [],
    "links": [
     {
-     "title": "세계 증시 덮친 블루웨이브…하루만에 시총 4800조원 증발",
-     "link": "http://www.segyebiz.com/newsView/20261107505882?OutUrl=naver",
-     "host": "segyebiz.com",
-     "at": "2026-11-07T08:12:00.000Z"
+     "title": "美 밴스 부통령, 이란과 휴전·핵협상 재개 논의 주도",
+     "link": "https://www.newspost.kr/news/articleView.html?idxno=227159",
+     "host": "newspost.kr",
+     "at": "2026-11-07T04:14:00.000Z"
     },
     {
-     "title": "블루웨이브 여파에 세계 증시 시총 4800조원 증발",
-     "link": "https://www.mediapen.com/news/view/1135974",
-     "host": "mediapen.com",
-     "at": "2026-11-07T07:22:00.000Z"
+     "title": "밴스 美 부통령, 이란 휴전·핵 협상 재개 위한 간접 협상 참여",
+     "link": "https://news.tf.co.kr/read/world/2386033.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-07T02:45:00.000Z"
     },
     {
-     "title": "‘블루웨이브 쇼크’에 하루만에 세계증시 시총 4800조원 증발",
-     "link": "https://weekly.khan.co.kr/article/202611071525001",
-     "host": "weekly.khan.co.kr",
-     "at": "2026-11-07T06:25:00.000Z"
+     "title": "미·이란 전쟁 끝날까…\"밴스, 휴전·핵협상 재개 물밑 주도\"",
+     "link": "https://www.dailian.co.kr/news/view/1712044/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-07T02:16:00.000Z"
     },
     {
-     "title": "'블루웨이브 쇼크'에 세계증시 시총 4800조원 증발…AI주 급락",
-     "link": "http://www.inews24.com/view/2023693",
-     "host": "inews24.com",
-     "at": "2026-11-07T05:41:00.000Z"
+     "title": "\"밴스 美부통령, 이란 간접 협상 직접 관여…중재국과 매일 통화\"",
+     "link": "https://www.newsis.com/view/NISX20261107_0003858807",
+     "host": "newsis.com",
+     "at": "2026-11-07T02:06:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 0.1,
+    "score": 32,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
      "unit": "%",
-     "z": -2.1
+     "z": 2
     },
     "why": [
-     "코스피 -6.02%(평소의 2.1배)"
+     "원/달러 +1.21%(평소의 2배)"
     ]
    }
   },
@@ -898,7 +853,63 @@
     "level": "watch",
     "label": "관찰",
     "score": 32,
-    "spike": 0.1,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "ktto7z",
+   "title": "코스피 6% 폭락속 환율도 급등…美 증시 충격에 원·달러 1360원 돌파",
+   "firstSeen": "2026-11-06T08:12:00.000Z",
+   "lastSeen": "2026-11-06T23:22:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[뉴욕환시] 달러 급등…기술주 회복 속 美 '깜짝' 고용",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443597",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-06T23:22:00.000Z"
+    },
+    {
+     "title": "요동치는 외환시장…원·달러 환율, 앞으로 향방은",
+     "link": "http://www.segyebiz.com/newsView/20261107500291?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-06T22:02:00.000Z"
+    },
+    {
+     "title": "[다음주 환율전망] 美 증시 급락에 원·달러 환율 급등…다음 주 1350원대...",
+     "link": "https://www.goodkyung.com/news/articleView.html?idxno=293205",
+     "host": "goodkyung.com",
+     "at": "2026-11-06T22:00:00.000Z"
+    },
+    {
+     "title": "코스피 6% 폭락속 환율도 급등…美 증시 충격에 원·달러 1360원 돌파",
+     "link": "https://www.betanews.net/article/view/beta202611060113",
+     "host": "betanews.net",
+     "at": "2026-11-06T09:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 29,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
