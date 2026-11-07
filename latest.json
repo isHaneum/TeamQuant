@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T06:19:53.445Z",
+ "updatedAt": "2026-11-07T06:31:44.241Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.4,
+  "war": -0.1,
   "politics": -0.2,
   "rates": -1.2,
   "trade": 0.4,
   "fx": -0.7,
   "energy": -0.8,
-  "market": 0.4,
+  "market": 0.3,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 1.3,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 6.2,
+   "rate": 6.1,
    "saturated": 2,
    "queries": 3
   },
@@ -227,8 +227,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 57,
-    "spike": 0.4,
+    "score": 56,
+    "spike": 0.3,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -273,90 +273,9 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 51,
-    "spike": 0.4,
+    "score": 50,
+    "spike": 0.3,
     "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1xf7ol8",
-   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-   "firstSeen": "2026-11-06T16:45:00.000Z",
-   "lastSeen": "2026-11-06T16:45:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
-     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
-     "host": "donga.com",
-     "at": "2026-11-06T16:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "7yn7e4",
-   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-   "firstSeen": "2026-11-06T19:47:00.000Z",
-   "lastSeen": "2026-11-07T00:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
-     "host": "cbci.co.kr",
-     "at": "2026-11-07T00:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0.4,
-    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -397,6 +316,87 @@
     "label": "관찰",
     "score": 48,
     "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1xf7ol8",
+   "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+   "firstSeen": "2026-11-06T16:45:00.000Z",
+   "lastSeen": "2026-11-06T16:45:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "개장 3분만에 서킷브레이커… 이틀간 삼전 13%-하이닉스 17% 빠져",
+     "link": "https://www.donga.com/news/Economy/article/all/20261107/134982636/2",
+     "host": "donga.com",
+     "at": "2026-11-06T16:45:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "7yn7e4",
+   "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+   "firstSeen": "2026-11-06T19:47:00.000Z",
+   "lastSeen": "2026-11-07T00:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[뉴욕증시 대폭락] \"내 401k 어쩔거야\"…트럼프가 증시 폭락하자 민주당...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624002",
+     "host": "cbci.co.kr",
+     "at": "2026-11-07T00:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -534,9 +534,9 @@
    }
   },
   {
-   "id": "12tnaod",
+   "id": "st39n2",
    "title": "트럼프, 중간선거 참패 사흘 만에 이란 공습…“방공시설 무력화”",
-   "firstSeen": "2026-11-06T02:12:00.000Z",
+   "firstSeen": "2026-11-07T06:13:00.000Z",
    "lastSeen": "2026-11-07T06:13:00.000Z",
    "count": 1,
    "sources": 1,
@@ -575,10 +575,50 @@
    }
   },
   {
-   "id": "i6lsuc",
-   "title": "젠슨 황, 중국 스파이 의심 여성과 연인 관계였나···미 정보당국 메모...",
-   "firstSeen": "2026-11-07T04:41:00.000Z",
-   "lastSeen": "2026-11-07T06:16:00.000Z",
+   "id": "xl5ep5",
+   "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
+   "firstSeen": "2026-11-07T06:20:00.000Z",
+   "lastSeen": "2026-11-07T06:20:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
+     "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=424870",
+     "host": "sisajournal-e.com",
+     "at": "2026-11-07T06:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 +1.21%(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "psoqwf",
+   "title": "FT \"미, 젠슨 황 '스파이 의혹' 여성과 연인 관계 판단\"",
+   "firstSeen": "2026-11-07T04:17:00.000Z",
+   "lastSeen": "2026-11-07T06:30:00.000Z",
    "count": 17,
    "sources": 17,
    "topics": [
@@ -587,28 +627,28 @@
    "critical": [],
    "links": [
     {
-     "title": "“美당국, 젠슨 황과 ‘中스파이 의혹’ 여성 연인관계로 판단”…FT 보...",
-     "link": "https://www.kyeonggi.com/article/20261107580090",
-     "host": "kyeonggi.com",
-     "at": "2026-11-07T06:16:00.000Z"
+     "title": "“美 정보당국, 젠슨 황-中 스파이 의심 여성 연인 관계 판단”",
+     "link": "https://www.donga.com/news/Inter/article/all/20261107/134983402/1",
+     "host": "donga.com",
+     "at": "2026-11-07T06:30:00.000Z"
     },
     {
-     "title": "[속보] '중국 스파이'가 젠슨 황과 연인 관계였다고...FT 보도",
-     "link": "https://economist.co.kr/article/view/ecn202611070007",
-     "host": "economist.co.kr",
-     "at": "2026-11-07T06:10:00.000Z"
+     "title": "\"젠슨 황, 中 스파이와 연인 관계였나…美 정보당국 판단\"",
+     "link": "https://www.newsis.com/view/NISX20261107_0003858921",
+     "host": "newsis.com",
+     "at": "2026-11-07T06:29:00.000Z"
     },
     {
-     "title": "FT \"美정보당국, 젠슨 황과 中스파이 의혹 여성 연인 관계로 판단\"",
-     "link": "http://www.inews24.com/view/2023696",
-     "host": "inews24.com",
-     "at": "2026-11-07T06:06:00.000Z"
+     "title": "“미국 정부, 젠슨 황과 '중국 스파이 의혹' 여성 연인 관계로 판단”",
+     "link": "https://www.wikitree.co.kr/articles/1172671",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-07T06:28:00.000Z"
     },
     {
-     "title": "“미국, 젠슨 황과 中스파이 의심 여성 연인관계로 판단”-FT",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000558856",
-     "host": "ichannela.com",
-     "at": "2026-11-07T06:04:00.000Z"
+     "title": "FT “美, 젠슨 황·中 스파이 의심 여성 ‘연인 관계’ 판단”",
+     "link": "https://www.kukinews.com/article/view/kuk202611070018",
+     "host": "kukinews.com",
+     "at": "2026-11-07T06:26:00.000Z"
     }
    ],
    "assess": {
@@ -633,15 +673,21 @@
    "id": "3dbb64",
    "title": "블루웨이브 쇼크…닛케이 \"세계증시 하루만에 4800조 증발\"",
    "firstSeen": "2026-11-07T02:42:00.000Z",
-   "lastSeen": "2026-11-07T06:12:00.000Z",
-   "count": 15,
-   "sources": 15,
+   "lastSeen": "2026-11-07T06:25:00.000Z",
+   "count": 16,
+   "sources": 16,
    "topics": [
     "politics",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "‘블루웨이브 쇼크’에 하루만에 세계증시 시총 4800조원 증발",
+     "link": "https://weekly.khan.co.kr/article/202611071525001",
+     "host": "weekly.khan.co.kr",
+     "at": "2026-11-07T06:25:00.000Z"
+    },
     {
      "title": "블루웨이브 쇼크에…세계증시 시총, 하루 만에 4773조원 증발",
      "link": "https://www.hani.co.kr/arti/economy/finance/1286230.html",
@@ -659,19 +705,13 @@
      "link": "https://www.dailian.co.kr/news/view/1712061/?sc=Naver",
      "host": "dailian.co.kr",
      "at": "2026-11-07T05:39:00.000Z"
-    },
-    {
-     "title": "'블루웨이브 쇼크'에 세계시총 4,800조 원 증발...삼전닉스도 3,000조 원...",
-     "link": "https://www.ikbc.co.kr/article/view/kbc202611070027",
-     "host": "ikbc.co.kr",
-     "at": "2026-11-07T05:37:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
-    "spike": 0.4,
+    "score": 39,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -728,8 +768,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
-    "spike": 0.4,
+    "score": 39,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -784,64 +824,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 39,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "pxjx4y",
-   "title": "“하루 새 4800조원 증발”…세계 증시 AI 열기 끝나나",
-   "firstSeen": "2026-11-07T03:21:00.000Z",
-   "lastSeen": "2026-11-07T05:40:00.000Z",
-   "count": 9,
-   "sources": 9,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美민주당 압승에 세계 시총 ‘4774조원’ 증발…반도체주 녹았다",
-     "link": "https://www.donga.com/news/Economy/article/all/20261107/134983383/1",
-     "host": "donga.com",
-     "at": "2026-11-07T05:40:00.000Z"
-    },
-    {
-     "title": "美 ‘블루웨이브’ 충격…글로벌 시총 하루 새 3조5000억불 증발",
-     "link": "https://www.sedaily.com/article/20111445?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-07T05:34:00.000Z"
-    },
-    {
-     "title": "'블루웨이브' 충격…세계 증시 하루 새 4800조원 증발",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000080453",
-     "host": "jnilbo.com",
-     "at": "2026-11-07T05:15:00.000Z"
-    },
-    {
-     "title": "美 민주당 ’블루쓰나미’, 글로벌 증시 4800조원 증발했다",
-     "link": "https://www.kmib.co.kr/article/20261107500044",
-     "host": "kmib.co.kr",
-     "at": "2026-11-07T05:05:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 39,
-    "spike": 0.4,
+    "score": 38,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -912,6 +896,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-07T06:31:44.241Z",
+   "id": "y35dai",
+   "level": "caution",
+   "title": "[마감 시황] '검은 금요일'의 공포… 코스피, 서킷브레이커·사이드카 연...",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.02%(평소의 2.1배)"
+   ],
+   "link": "https://news.jtbc.co.kr/article/NB12326865?influxDiv=NAVER",
+   "delivered": false
+  },
   {
    "at": "2026-11-07T05:48:00.566Z",
    "id": "1h4hqdc",
@@ -1136,18 +1132,6 @@
     "원/달러 +1.76%(평소의 2.8배)"
    ],
    "link": "https://www.sedaily.com/article/20111262?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-06T22:12:31.314Z",
-   "id": "4oxptk",
-   "level": "caution",
-   "title": "서킷브레이커와 사이드카는 무엇일까요? -김상민의 알고싶어요 [뉴스뷰...",
-   "why": [
-    "핵심 단어",
-    "코스피 -6.02%(평소의 2.2배)"
-   ],
-   "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=280719",
    "delivered": false
   }
  ],
