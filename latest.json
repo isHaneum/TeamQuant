@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T13:47:55.023Z",
+ "updatedAt": "2026-11-07T14:11:50.469Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,10 +119,10 @@
   }
  ],
  "spikes": {
-  "war": -1.6,
-  "politics": -1.4,
+  "war": -1.7,
+  "politics": -1.5,
   "rates": -0.9,
-  "trade": -0.8,
+  "trade": -0.9,
   "fx": -0.6,
   "energy": -0.9,
   "market": -2,
@@ -132,12 +132,12 @@
  },
  "rates": {
   "war": {
-   "rate": 0.1,
+   "rate": 0,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.4,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 1.5,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.2,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
@@ -550,15 +550,21 @@
    "id": "3dbb64",
    "title": "세계증시 덮친 美 '블루쓰나미' 하루만에 시총 4800조원 증발 … AI 관련...",
    "firstSeen": "2026-11-07T02:42:00.000Z",
-   "lastSeen": "2026-11-07T13:21:00.000Z",
-   "count": 15,
-   "sources": 15,
+   "lastSeen": "2026-11-07T14:00:00.000Z",
+   "count": 16,
+   "sources": 16,
    "topics": [
     "politics",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "\"'블루웨이브' 쇼크에 AI주 급락… 세계 증시 시총 하루 새 4800조 증발\"...",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3446817",
+     "host": "newscj.com",
+     "at": "2026-11-07T14:00:00.000Z"
+    },
     {
      "title": "'블루웨이브 쇼크'에 세계 시총 하루 만에 \"4천8백조 원 증발\"",
      "link": "https://www.ytn.co.kr/_ln/0104_202611072221500801",
@@ -576,12 +582,6 @@
      "link": "http://www.seouleconews.com/news/articleView.html?idxno=94862",
      "host": "seouleconews.com",
      "at": "2026-11-07T12:40:00.000Z"
-    },
-    {
-     "title": "\"'블루웨이브 쇼크'에 세계증시 시총 하루만에 4천800조원 증발\"",
-     "link": "https://www.tfmedia.co.kr/news/article.html?no=208708",
-     "host": "tfmedia.co.kr",
-     "at": "2026-11-07T12:32:00.000Z"
     }
    ],
    "assess": {
@@ -942,6 +942,18 @@
  ],
  "alerts": [
   {
+   "at": "2026-11-07T14:11:50.469Z",
+   "id": "1h4hqdc",
+   "level": "caution",
+   "title": "\"코스피보다 더 하네\"…코스닥, 계엄 당시 수준으로 회귀",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.02%(평소의 2.1배)"
+   ],
+   "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3040119",
+   "delivered": false
+  },
+  {
    "at": "2026-11-07T13:47:55.023Z",
    "id": "st39n2",
    "level": "urgent",
@@ -1167,18 +1179,6 @@
     "코스피 -6.02%(평소의 2.1배)"
    ],
    "link": "https://news.jtbc.co.kr/article/NB12326865?influxDiv=NAVER",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-07T04:47:15.510Z",
-   "id": "1h4hqdc",
-   "level": "urgent",
-   "title": "\"코스피보다 더 하네\"…코스닥, 계엄 당시 수준으로 회귀",
-   "why": [
-    "핵심 단어",
-    "코스피 -6.02%(평소의 2.1배)"
-   ],
-   "link": "https://www.kmib.co.kr/article/20261107500021",
    "delivered": false
   }
  ],
