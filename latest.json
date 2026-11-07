@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-07T10:47:08.567Z",
+ "updatedAt": "2026-11-07T11:10:45.690Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,10 +119,10 @@
   }
  ],
  "spikes": {
-  "war": -1.3,
+  "war": -1.2,
   "politics": -0.2,
   "rates": -1.2,
-  "trade": -1,
+  "trade": -0.9,
   "fx": -0.6,
   "energy": -1.2,
   "market": -1.3,
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 1.3,
+   "rate": 1.5,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.9,
+   "rate": 3.8,
    "saturated": 0,
    "queries": 3
   },
@@ -293,6 +293,53 @@
     "why": [
      "핵심 단어",
      "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "xl5ep5",
+   "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
+   "firstSeen": "2026-11-07T06:20:00.000Z",
+   "lastSeen": "2026-11-07T10:53:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war",
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "휴전 협상 중이라더니…미국, 또 호르무즈서 미사일 발사",
+     "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5229602",
+     "host": "mbn.co.kr",
+     "at": "2026-11-07T10:53:00.000Z"
+    },
+    {
+     "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
+     "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=424870",
+     "host": "sisajournal-e.com",
+     "at": "2026-11-07T06:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 46,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 +1.21%(평소의 2배)"
     ]
    }
   },
@@ -541,46 +588,6 @@
    }
   },
   {
-   "id": "xl5ep5",
-   "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
-   "firstSeen": "2026-11-07T06:20:00.000Z",
-   "lastSeen": "2026-11-07T06:20:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
-     "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=424870",
-     "host": "sisajournal-e.com",
-     "at": "2026-11-07T06:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 1.21,
-     "unit": "%",
-     "z": 2
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 +1.21%(평소의 2배)"
-    ]
-   }
-  },
-  {
    "id": "pxjx4y",
    "title": "美 ‘블루웨이브’ 쇼크에 전 세계 시총 4773조원 증발…AI 기술주 폭락",
    "firstSeen": "2026-11-07T03:21:00.000Z",
@@ -617,6 +624,61 @@
      "link": "https://www.kbsm.net/news/view.php?idx=540710",
      "host": "kbsm.net",
      "at": "2026-11-07T08:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "psoqwf",
+   "title": "“미국 정부, 젠슨 황과 '중국 스파이 의혹' 여성 연인 관계로 판단”",
+   "firstSeen": "2026-11-07T04:17:00.000Z",
+   "lastSeen": "2026-11-07T11:10:00.000Z",
+   "count": 12,
+   "sources": 12,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황, 中스파이 여성과 연인 관계였나…\"美 정보당국 판단\"",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03739206645643424&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-07T11:10:00.000Z"
+    },
+    {
+     "title": "“젠슨 황 ‘스파이 의혹’ 중국 여성과 연인 관계”···미 정보당국 ...",
+     "link": "https://weekly.khan.co.kr/article/202611071817001",
+     "host": "weekly.khan.co.kr",
+     "at": "2026-11-07T09:17:00.000Z"
+    },
+    {
+     "title": "美 하원 위원장 3인, 젠슨 황에 \"中 스파이 의혹 인물과 관계 해명하라...",
+     "link": "https://www.pennmike.com/news/articleView.html?idxno=131256",
+     "host": "pennmike.com",
+     "at": "2026-11-07T08:12:00.000Z"
+    },
+    {
+     "title": "\"젠슨 황의 여자친구\"...美정보당국이 中스파이로 의심한 여성 정체",
+     "link": "https://www.insight.co.kr/news/581059",
+     "host": "insight.co.kr",
+     "at": "2026-11-07T07:54:00.000Z"
     }
    ],
    "assess": {
@@ -750,61 +812,6 @@
    }
   },
   {
-   "id": "psoqwf",
-   "title": "“美당국, 젠슨 황과 ‘中스파이 의혹’ 여성 연인관계로 판단”…FT 보...",
-   "firstSeen": "2026-11-07T04:17:00.000Z",
-   "lastSeen": "2026-11-07T10:18:00.000Z",
-   "count": 13,
-   "sources": 13,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황과 중국 여성의 수상한 만남…AI 패권전쟁에 등장한 '미인계'",
-     "link": "https://www.dongponews.net/news/articleView.html?idxno=61526",
-     "host": "dongponews.net",
-     "at": "2026-11-07T10:18:00.000Z"
-    },
-    {
-     "title": "“젠슨 황과 연인관계”…美 정부 메모 파장",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000558887",
-     "host": "ichannela.com",
-     "at": "2026-11-07T10:02:00.000Z"
-    },
-    {
-     "title": "“젠슨 황 ‘스파이 의혹’ 중국 여성과 연인 관계”···미 정보당국 ...",
-     "link": "https://weekly.khan.co.kr/article/202611071817001",
-     "host": "weekly.khan.co.kr",
-     "at": "2026-11-07T09:17:00.000Z"
-    },
-    {
-     "title": "美 하원 위원장 3인, 젠슨 황에 \"中 스파이 의혹 인물과 관계 해명하라...",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=131256",
-     "host": "pennmike.com",
-     "at": "2026-11-07T08:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 1.21,
-     "unit": "%",
-     "z": 2
-    },
-    "why": [
-     "원/달러 +1.21%(평소의 2배)"
-    ]
-   }
-  },
-  {
    "id": "1nxryu3",
    "title": "\"美밴스, 이란과 휴전·핵협상 재개 물밑 주도\"",
    "firstSeen": "2026-11-07T00:04:00.000Z",
@@ -860,48 +867,46 @@
    }
   },
   {
-   "id": "1992wb4",
-   "title": "AI 규제 공포에 뉴욕 증시 폭락…트럼프 “멍청한 민주당 탓”",
-   "firstSeen": "2026-11-06T12:07:00.000Z",
-   "lastSeen": "2026-11-07T09:36:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "38nbcw",
+   "title": "美 뉴욕증시, AI 투매 진정…나스닥 1%대 반등, 반도체·데이터센터주 ...",
+   "firstSeen": "2026-11-06T21:35:00.000Z",
+   "lastSeen": "2026-11-07T10:58:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "politics",
-    "market",
-    "policy"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "삼성전자·SK하이닉스 주가 13~19% 폭락…미국 민주당 AI 규제 놓고 충돌...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16270758",
-     "host": "topstarnews.net",
-     "at": "2026-11-07T09:36:00.000Z"
+     "title": "미 뉴욕증시 소폭 반등…오픈AI \"AI 인프라 투자 계속\"",
+     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1542999",
+     "host": "obsnews.co.kr",
+     "at": "2026-11-07T10:58:00.000Z"
     },
     {
-     "title": "미국 민주당 승리하자 AI 업체들 주가 폭락... 데이터센터 규제 강화 공...",
-     "link": "https://www.betanews.net/article/view/beta202611070008",
-     "host": "betanews.net",
-     "at": "2026-11-07T08:12:00.000Z"
+     "title": "'폭락한 AI 기술주' 다시 사들였다…나스닥 1.1% 반등",
+     "link": "https://news.jtbc.co.kr/article/NB12326986?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-07T10:44:00.000Z"
     },
     {
-     "title": "뉴욕증시 폭락에 트럼프 \"민주당의 AI 규제 때문\" 맹비난…나스닥 5.52% ...",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=131239",
-     "host": "pennmike.com",
-     "at": "2026-11-07T05:18:00.000Z"
+     "title": "뉴욕증시, AI 반도체주 반등에 나스닥 1.09% 상승",
+     "link": "https://www.m-economynews.com/news/article.html?no=72714",
+     "host": "m-economynews.com",
+     "at": "2026-11-07T01:44:00.000Z"
     },
     {
-     "title": "AI 규제 공포에 뉴욕 증시 폭락…트럼프 “멍청한 민주당 탓”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706285&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-06T12:07:00.000Z"
+     "title": "뉴욕증시, 반도체 반등에 나스닥 1.1% 상승",
+     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54431",
+     "host": "koreareport.co.kr",
+     "at": "2026-11-07T01:24:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
+    "score": 32,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -918,6 +923,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-07T11:10:45.690Z",
+   "id": "xl5ep5",
+   "level": "caution",
+   "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
+   "why": [
+    "핵심 단어",
+    "원/달러 +1.21%(평소의 2배)"
+   ],
+   "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5229602",
+   "delivered": false
+  },
   {
    "at": "2026-11-07T10:27:57.290Z",
    "id": "1h4hqdc",
@@ -1144,18 +1161,6 @@
     "코스피 -6.02%(평소의 2.2배)"
    ],
    "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706549&ref=A",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-07T00:32:00.897Z",
-   "id": "am38ah",
-   "level": "caution",
-   "title": "뉴욕증시, AI 기술주 투매에 급락…머스크 관련주 ‘폭락’",
-   "why": [
-    "핵심 단어",
-    "코스피 -6.02%(평소의 2.2배)"
-   ],
-   "link": "https://biz.heraldcorp.com/article/10929102?ref=naver",
    "delivered": false
   }
  ],
