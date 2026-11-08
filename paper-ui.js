@@ -1,0 +1,186 @@
+// 모의투자 화면: 실제로 투자할 때 거치는 절차를 돈 없이 그대로 밟는다.
+//   계획 비중 → (주 1회·급할 때) 오늘 점검 → 할 일마다 매매 전 확인 → 통과한 주문만 다음 거래일 시가 체결 → 날마다 평가 → 그냥 보유·지수와 비교.
+// 계산은 모두 이 브라우저에서 한다(lib/paper-trading.js). 서버에는 종목 코드로 시세만 묻는다. 실제 주문은 없다.
+// '오늘부터 모의투자 시작'은 시작일·자금·종목·규칙만 저장하고, 볼 때마다 시작일부터 오늘까지 같은 절차를 다시 재생한다(결정론적이라 장부를 따로 둘 필요가 없다).
+import { rehearse, forwardRange, PAPER_VERSION } from '/lib/paper-trading.js';
+import { normalizeRules, RULES_VERSION } from '/lib/core-rules.js';
+import { candles as fetchCandles } from '/lib/client-data.js';
+import { resolveStockInput, stockName, stockNames } from '/lib/instruments.js';
+import { tip } from '/tooltip-ui.js';
+
+const $ = s => document.querySelector(s);
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const won = v => Number.isFinite(v) ? `${Math.round(v).toLocaleString('ko-KR')}원` : '—';
+const swon = v => Number.isFinite(v) ? `${v > 0 ? '+' : v < 0 ? '−' : ''}${Math.round(Math.abs(v)).toLocaleString('ko-KR')}원` : '—';
+const pct = (v, d = 1) => Number.isFinite(v) ? `${v > 0 ? '+' : ''}${(v * 100).toFixed(d)}%` : '—';
+const pp = (v, d = 1) => Number.isFinite(v) ? `${v > 0 ? '+' : ''}${v.toFixed(d)}%p` : '—';
+const tone = v => v > 0 ? 'up' : v < 0 ? 'down' : '';
+const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' }).format(new Date());
+const daysAgo = n => new Date(Date.now() - n * 864e5 + 9 * 3600e3).toISOString().slice(0, 10);
+const session = () => sessionStorage.getItem('teamQuantSession') || 'guest';
+const DEMO = [['005930', '삼성전자', 'KRW'], ['000660', 'SK하이닉스', 'KRW'], ['069500', 'KODEX 200', 'KRW'], ['NVDA', '엔비디아', 'USD'], ['KO', '코카콜라', 'USD'], ['035420', 'NAVER', 'KRW']].map(([symbol, name, currency]) => ({ symbol, name, currency }));
+const CHECK_LABEL = { maxTrades30: '30일 매매 횟수', dailyLoss: '하루 손실 한도', volTarget: '계획 비중·200일선', minCash: '현금 최소 비중', maxSingle: '한 종목 최대 비중', cash: '현금 충분', noLeverage: '레버리지 금지', input: '입력값' };
+
+const style = document.createElement('style'); style.textContent = `
+#core-paper .cr-main,#core-paper .cr-side{grid-template-columns:minmax(0,1fr)}#core-paper .cr-card{overflow:hidden;min-width:0;max-width:100%}#core-paper .rp-tiles>div{min-width:0}#core-paper .rp-tiles b{overflow-wrap:anywhere}
+.pp-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 14px}.pp-form label,#pp-custom-wrap{display:grid;gap:4px;font-size:13px;color:var(--ck-sub);min-width:0}.pp-form input,.pp-form select,#pp-custom-wrap input{font-size:15px;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.pp-scroll{overflow-x:auto;max-width:100%}
+#pp-custom-wrap{margin-top:10px}
+.pp-steps{margin:0;padding-left:22px;display:grid;gap:8px;font-size:14px;line-height:1.5}.pp-steps li small{display:block;color:var(--ck-sub);font-size:12.5px}
+.pp-live{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.pp-live b{font-size:17px}
+.pp-act{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--ck-sub);margin:10px 0 4px}.pp-act b{color:var(--ck-ink)}
+.pp-chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.pp-chips button{font-size:12.5px;border:1px solid var(--ck-line);background:#fff;border-radius:999px;padding:3px 10px;cursor:pointer}.pp-chips button.on{border-color:var(--ck-ink);font-weight:700}
+.pp-journal{width:100%;border-collapse:collapse;font-size:13px}.pp-journal td{padding:6px 8px;border-bottom:1px solid var(--ck-line);vertical-align:top;line-height:1.45}.pp-journal td:first-child{white-space:nowrap;color:var(--ck-sub);font-variant-numeric:tabular-nums}.pp-journal td:nth-child(2){white-space:nowrap;font-weight:600}
+.pp-journal tr.차단 td:nth-child(2){color:var(--ck-bad)}.pp-journal tr.체결 td:nth-child(2){color:var(--ck-ok)}.pp-journal tr.손실 td:nth-child(2){color:var(--ck-bad)}
+.pp-range{background:var(--ck-soft);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.6}.pp-range b{font-size:16px}
+.pp-ref{width:100%;border-collapse:collapse;font-size:12.5px}.pp-ref th,.pp-ref td{padding:5px 6px;border-bottom:1px solid var(--ck-line);text-align:right;white-space:nowrap}.pp-ref th:first-child,.pp-ref td:first-child{text-align:left}.pp-ref th{color:var(--ck-sub);font-weight:600}
+.rp-chart .l-bench{stroke:#c0821a;stroke-dasharray:2 3}
+@media(max-width:760px){.pp-form{grid-template-columns:1fr}#core-paper .rp-tiles{grid-template-columns:1fr}.pp-live{display:grid}}`; document.head.append(style);
+
+const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
+const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = 'paper'; nav.textContent = '모의투자'; navHost?.append(nav);
+const page = document.createElement('section'); page.className = 'view'; page.dataset.page = 'paper'; page.id = 'core-paper';
+page.innerHTML = `<div class="page-head"><div><h1>모의투자 ${tip('실제로 투자할 때 거치는 절차를 돈 없이 그대로 밟습니다. 규칙 화면의 내 규칙으로 계획 비중을 정하고, 주 1회(급할 때는 바로) 오늘 점검이 낸 할 일을 매매 전 확인에 통과시킨 뒤, 통과한 주문만 다음 거래일 시가에 체결합니다(시가보다 0.1% 불리하게, 편도 비용 0.2%, 국내 주식은 1주 단위). 같은 기간 그냥 보유·지수와 비교합니다. 공개 일봉으로 계산하며 실제 주문은 없습니다. 실제 매매는 체결 지연·부분 체결·감정 때문에 이보다 나쁠 수 있고, 과거 결과가 앞으로를 보장하지 않습니다.')}</h1><p>점검 → 매매 전 확인 → 다음 거래일 시가 체결 → 날마다 평가 → 그냥 보유·지수와 비교</p></div></div>
+<div class="cr-grid"><div class="cr-main">
+<div class="cr-card" id="pp-setup"><header><h3>설정</h3><span class="cr-muted" id="pp-rules"></span></header>
+<div class="pp-form"><label>시작 자금 (원)<input id="pp-capital" type="number" value="10000000" min="100000" step="100000"></label>
+<label>종목<select id="pp-basket"><option value="demo">예시 6종목 (국내 4 · 미국 2)</option><option value="mine" disabled>내 보유 종목 (계좌 연결 또는 예시 자산 필요)</option><option value="custom">직접 입력</option></select></label>
+<label>리허설 기간<select id="pp-range"><option value="91">최근 3개월</option><option value="182" selected>최근 6개월</option><option value="365">최근 1년</option><option value="540">최근 18개월</option></select></label></div>
+<label id="pp-custom-wrap" hidden>종목 (쉼표로 구분 · 이름 또는 코드)<input id="pp-custom" placeholder="삼성전자, 069500, AAPL"></label>
+<div class="cr-actions"><button id="pp-run" class="primary">절차 리허설</button><button id="pp-start" class="secondary">오늘부터 모의투자 시작</button><span id="pp-state" class="cr-err" role="status"></span></div></div>
+<div class="cr-card" id="pp-live" hidden></div>
+<div id="pp-result"></div>
+</div><div class="cr-side">
+<div class="cr-card"><h3>절차</h3><ol class="pp-steps"><li>계획 비중<small>규칙의 한 종목 상한·현금 최소 비중 안에서 종목마다 균등</small></li><li>오늘 점검<small>주 마지막 거래일 종가(급할 때는 그날)에 규칙과 비교해 할 일을 냄</small></li><li>매매 전 확인<small>할 일마다 현금·비중·하루 손실 한도·매매 횟수를 확인, 하나라도 어기면 주문하지 않음</small></li><li>체결<small>다음 거래일 시가에 0.1% 불리하게, 편도 비용 0.2%, 국내 주식 1주 단위</small></li><li>평가와 비교<small>날마다 원화 환산, 같은 계획을 한 번 사서 둔 경우·지수와 비교</small></li></ol></div>
+<div class="cr-card" id="pp-ref"><h3>같은 절차를 지난 기간에 돌렸다면 ${tip('scripts/paper-rehearsal.mjs가 공개 일봉으로 네 가지 포트폴리오·아홉 기간(최근 12개월·6개월·올해·2020~2025년 각각)에 같은 절차를 돌린 결과입니다. 2012~2019 자료로 고른 규칙을 그 뒤 기간에 적용한 것이지만, 규칙 자체는 2026-11-06에 확정했으므로 완전한 표본 외 검증은 오늘 이후의 모의투자부터입니다.')}</h3><div id="pp-ref-body"><p class="cr-muted">불러오는 중…</p></div></div>
+</div></div>`;
+document.querySelector('main').append(page);
+
+// ── 상태 ─────────────────────────────────────────────────────
+const S = { mine: [], run: 0, last: null, journalFilter: '전체', journalAll: false };
+const liveKey = () => `teamQuantPaper:${session()}`;
+function currentRules() { try { const v = JSON.parse(localStorage.getItem(`teamQuantRules:${session()}`) || 'null'); return normalizeRules(v?.rules || {}).rules; } catch { return normalizeRules({}).rules; } }
+function loadLive() { try { const v = JSON.parse(localStorage.getItem(liveKey()) || 'null'); return v?.startDate && Array.isArray(v.basket) ? v : null; } catch { return null; } }
+function saveLive(v) { try { if (v) localStorage.setItem(liveKey(), JSON.stringify(v)); else localStorage.removeItem(liveKey()); } catch {} }
+function rulesLine(r) { return `규칙 ${RULES_VERSION} · 한 종목 ${r.maxSingle}% · 현금 ${r.minCash}% · 하루 손실 ${r.dailyLoss}% · 30일 ${r.maxTrades30}회${r.trendUS ? ' · 미국 200일선' : ''}${r.perAssetVol ? ` · 종목 변동성 ${r.volTarget}%` : ''}`; }
+$('#pp-rules').textContent = rulesLine(currentRules());
+
+window.addEventListener('teamquant:asset-snapshot', e => { const ps = (e.detail?.positions || []).filter(p => p.symbol); S.mine = ps.map(p => ({ symbol: p.symbol, name: p.name || stockName(p.symbol), currency: p.currency || 'KRW' })); const o = $('#pp-basket option[value="mine"]'); o.disabled = !S.mine.length; o.textContent = S.mine.length ? `내 보유 종목 ${S.mine.length}개${e.detail?.demo ? ' (예시 자산)' : ''}` : '내 보유 종목 (계좌 연결 또는 예시 자산 필요)'; });
+window.addEventListener('teamquant:asset-clear', () => { S.mine = []; const o = $('#pp-basket option[value="mine"]'); o.disabled = true; if ($('#pp-basket').value === 'mine') $('#pp-basket').value = 'demo'; });
+$('#pp-basket').onchange = () => { $('#pp-custom-wrap').hidden = $('#pp-basket').value !== 'custom'; };
+
+async function basketOf() {
+  const kind = $('#pp-basket').value;
+  if (kind === 'demo') return DEMO;
+  if (kind === 'mine') { if (!S.mine.length) throw new Error('보유 종목이 없습니다. 계좌를 연결하거나 예시 자산을 켜십시오.'); return S.mine.slice(0, 12); }
+  const parts = $('#pp-custom').value.split(/[,\n]/).map(s => s.trim()).filter(Boolean);
+  if (!parts.length) throw new Error('종목을 하나 이상 입력하십시오.');
+  if (parts.length > 12) throw new Error('종목은 12개까지입니다.');
+  const out = [];
+  for (const p of parts) {
+    // 이름·6자리 코드는 서버 조회 없이도 풀 수 있게 이름 사전으로 먼저 찾는다(시세 조회가 코스피→코스닥 순으로 시장을 정한다).
+    const byName = /^\d{6}$/.test(p) ? p : Object.keys(stockNames).find(k => stockNames[k].replace(/\s/g, '').toLowerCase() === p.replace(/\s/g, '').toLowerCase());
+    let symbol = byName || null;
+    if (!symbol) { try { symbol = await resolveStockInput(p); } catch { if (/^[A-Z][A-Z.\-]{0,6}$/i.test(p)) symbol = p.toUpperCase(); else throw new Error(`'${p}'을(를) 찾지 못했습니다. 이름·6자리 코드·미국 티커로 입력하십시오.`); } }
+    const code = symbol.split('.')[0], currency = /^\d{6}$/.test(code) ? 'KRW' : 'USD';
+    if (!out.some(b => b.symbol === symbol)) out.push({ symbol, name: stockName(symbol) === symbol && currency === 'KRW' ? p : stockName(symbol), currency });
+  }
+  return out;
+}
+async function loadCandles(basket) {
+  const out = {}, failed = [];
+  await Promise.all(basket.map(async b => { try { out[b.symbol] = (await fetchCandles(b.symbol, b.currency, '2y')).candles; } catch (e) { failed.push(`${b.name}(${e.message})`); } }));
+  return { candles: out, failed };
+}
+
+async function run({ live = null } = {}) {
+  const id = ++S.run, state = $('#pp-state'), result = $('#pp-result'); state.textContent = '';
+  try {
+    const capital = live ? live.capitalKrw : Number($('#pp-capital').value);
+    if (!(capital >= 100000)) throw new Error('시작 자금은 10만원 이상이어야 합니다.');
+    const basket = live ? live.basket : await basketOf(), rules = live ? normalizeRules(live.rules || {}).rules : currentRules();
+    const from = live ? live.startDate : daysAgo(Number($('#pp-range').value));
+    result.innerHTML = '<div class="cr-card"><div class="shimmer ct-skel"></div><div class="shimmer ct-skel"></div><p class="cr-muted">시세를 받아 절차를 재생하는 중…</p></div>';
+    const krw = basket.filter(b => b.currency === 'KRW').length, benchDef = krw * 2 >= basket.length ? { symbol: '069500', name: 'KODEX 200', currency: 'KRW' } : { symbol: 'SPY', name: 'S&P500 ETF', currency: 'USD' };
+    const [{ candles, failed }, fx, bench] = await Promise.all([loadCandles(basket), fetchCandles('KRW=X', 'USD', '2y').then(d => d.candles).catch(() => []), fetchCandles(benchDef.symbol, benchDef.currency, '2y').then(d => d.candles).catch(() => null)]);
+    if (id !== S.run) return;
+    await new Promise(r => setTimeout(r, 0));
+    const r = rehearse({ basket, capitalKrw: capital, rules, candlesBySymbol: candles, fxCandles: fx, from, to: today(), benchmark: bench ? { ...benchDef, candles: bench } : null, label: live ? '모의투자' : '리허설' });
+    if (id !== S.run) return;
+    if (!r.ok) { result.innerHTML = `<div class="cr-card"><p class="cr-muted">${esc(r.reason)}${live ? ' 시작일 다음 거래일부터 체결이 기록됩니다.' : ''}</p></div>`; return; }
+    const fr = forwardRange({ positions: r.end.positions, cashKrw: r.end.cash, candlesBySymbol: candles, fxCandles: fx });
+    S.last = { r, fr, failed, live: !!live }; S.journalFilter = '전체'; S.journalAll = false;
+    render();
+  } catch (e) { if (id === S.run) { state.textContent = e.message; result.innerHTML = ''; } }
+}
+
+function lineSvg(series, hasBench) {
+  const W = 720, H = 220, L = 40, R = 10, T = 10, B = 24, keys = [['rule', '절차대로'], ['hold', '그냥 보유'], ...(hasBench ? [['bench', '지수']] : [])];
+  const vals = series.flatMap(p => keys.map(([k]) => p[k])).filter(Number.isFinite), lo = Math.min(...vals) * 0.995, hi = Math.max(...vals) * 1.005;
+  const X = i => L + i / Math.max(1, series.length - 1) * (W - L - R), Y = v => T + (hi - v) / (hi - lo || 1) * (H - T - B);
+  const path = k => series.map((p, i) => Number.isFinite(p[k]) ? `${X(i).toFixed(1)},${Y(p[k]).toFixed(1)}` : '').filter(Boolean).join(' ');
+  return `<div class="rp-chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="절차대로·그냥 보유·지수(시작=100)">${[lo, (lo + hi) / 2, hi].map(v => `<line class="g" x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text x="${L - 6}" y="${Y(v) + 4}" text-anchor="end">${v.toFixed(0)}</text>`).join('')}<line class="b" x1="${L}" x2="${W - R}" y1="${Y(100)}" y2="${Y(100)}"/>${keys.map(([k]) => `<polyline class="l-${k === 'rule' ? 'actual' : k}" points="${path(k)}"/>`).join('')}<text x="${L}" y="${H - 6}">${series[0].date}</text><text x="${W - R}" y="${H - 6}" text-anchor="end">${series.at(-1).date}</text></svg>
+  <div class="rp-legend">${keys.map(([k, l]) => `<span><i class="l-${k === 'rule' ? 'actual' : k}"></i>${l}</span>`).join('')}<span class="cr-muted">시작=100 · 원화</span></div></div>`;
+}
+
+function render() {
+  const { r, fr, failed, live } = S.last, m = r.metrics, a = r.activity, body = $('#pp-result');
+  const better = r.diff.vsHoldPct, mddBetter = r.diff.mddVsHoldPct;
+  const verdict = `절차대로 <b class="${tone(m.rule.ret)}">${pct(m.rule.ret)}</b> · 그냥 보유 ${pct(m.hold.ret)}${m.bench ? ` · ${esc(r.benchmark.name)} ${pct(m.bench.ret)}` : ''}<br><span class="cr-muted">보유보다 수익률 ${pp(better)}, 최대 손실은 ${Math.abs(mddBetter) < 0.05 ? '같음' : mddBetter > 0 ? `${mddBetter.toFixed(1)}%p 작음` : `${(-mddBetter).toFixed(1)}%p 큼`}</span>`;
+  const tile = (label, mm, me = false) => `<div class="${me ? 'me' : ''}"><span class="cr-muted">${label}</span><br><b>${won(mm.end)}</b><br><span class="${tone(mm.ret)}">${pct(mm.ret)}</span> · 최대 손실 ${pct(mm.mdd)}</div>`;
+  const blocked = Object.entries(a.blocked).sort((x, y) => y[1] - x[1]).map(([k, v]) => `${CHECK_LABEL[k] || k} ${v}건`).join(', ');
+  const steps = ['전체', '점검', '주문', '체결', '차단', '미체결', '손실'];
+  const rows = r.journal.filter(j => S.journalFilter === '전체' || j.step === S.journalFilter), shown = S.journalAll ? rows : rows.slice(0, 60);
+  const holdRows = r.end.positions.filter(p => p.qty > 0).sort((x, y) => y.valueKrw - x.valueKrw).map(p => `<tr><td>${esc(p.name)}</td><td>${p.currency === 'USD' ? p.qty.toFixed(4) : p.qty.toLocaleString('ko-KR')}</td><td>${won(p.valueKrw)}</td><td>${p.weightPct.toFixed(1)}%</td><td class="${tone(p.pnlKrw)}">${swon(p.pnlKrw)}</td></tr>`).join('');
+  body.innerHTML = `<div class="cr-card"><header><h3>${live ? '모의투자 현황' : '리허설 결과'} <span class="cr-muted">${r.from} ~ ${r.to} · ${r.days}거래일</span></h3></header>
+  <p class="rp-verdict">${verdict}</p>
+  <div class="rp-tiles">${tile('절차대로', m.rule, true)}${tile('그냥 보유', m.hold)}${m.bench ? tile(esc(r.benchmark.name), m.bench) : '<div><span class="cr-muted">지수</span><br><b>—</b></div>'}</div>
+  <div class="pp-act"><span>점검 <b>${a.decisionDays}</b>회${a.urgentDays ? ` (급한 날 ${a.urgentDays})` : ''}</span><span>체결 <b>${a.trades}</b>회</span><span>매매 전 확인에서 막힘 <b>${a.blockedTotal}</b>건${blocked ? ` <small>(${esc(blocked)})</small>` : ''}</span><span>1주 미만·현금 부족으로 못 산 주문 <b>${a.unfilled}</b>건</span><span>비용 <b>${won(a.feesKrw + a.slippageKrw)}</b> (자금의 ${a.costPct.toFixed(2)}%)</span><span>현금 평균 <b>${a.cashAvgPct.toFixed(0)}%</b></span><span>하루 ${r.rules.dailyLoss}% 넘게 잃은 날 <b>${a.breaches}</b>일 (${a.breachPct.toFixed(1)}%)</span></div>
+  ${lineSvg(r.series, !!m.bench)}
+  ${failed.length ? `<p class="cr-note">시세를 받지 못한 종목: ${esc(failed.join(', '))}</p>` : ''}${r.missing.length ? `<p class="cr-note">시세가 없어 뺀 종목: ${esc(r.missing.join(', '))}</p>` : ''}</div>
+  <div class="cr-card"><header><h3>지금 장부 <span class="cr-muted">${r.to} 종가</span></h3><span class="cr-muted">총 ${won(r.end.total)} · 현금 ${won(r.end.cash)} (${(r.end.cash / r.end.total * 100).toFixed(0)}%)</span></header>
+  ${holdRows ? `<div class="pp-scroll"><table class="cr-table"><thead><tr><th>종목</th><th>수량</th><th>평가액</th><th>비중</th><th>손익</th></tr></thead><tbody>${holdRows}</tbody></table></div>` : '<p class="cr-muted">보유 종목 없음(전부 현금)</p>'}
+  <div class="pp-range" style="margin-top:12px">${fr.ok ? `앞으로 ${fr.horizon}거래일(약 3개월) 범위 ${tip('지금 보유 비중의 원화 일간 수익률(최근 2년)에 GARCH 변동성 모형을 맞추고 잔차를 다시 뽑아 2,000개 경로를 만든 뒤 5%·50%·95% 지점을 보여줍니다. 추세(평균)는 넣지 않으므로 오를지 내릴지의 예측이 아니라 흔들림의 크기입니다. 규칙에 따른 중간 매매는 반영하지 않습니다.')}<br><b>${swon(fr.p05Krw)} ~ ${swon(fr.p95Krw)}</b> <span class="cr-muted">(가운데 ${swon(fr.medianKrw)} · 10% 넘게 빠질 확률 ${(fr.probDown10 * 100).toFixed(0)}% · 투자 비중 ${fr.investedPct.toFixed(0)}% · 예측 변동성 연 ${(fr.annualVol * 100).toFixed(0)}%)</span>` : `<span class="cr-muted">앞으로 범위: ${esc(fr.reason)}</span>`}</div></div>
+  <div class="cr-card"><header><h3>절차 기록 <span class="cr-muted">${r.journal.length}건</span></h3></header>
+  <div class="pp-chips">${steps.map(s => `<button type="button" data-jf="${s}" class="${S.journalFilter === s ? 'on' : ''}">${s}${s === '전체' ? '' : ` ${r.journal.filter(j => j.step === s).length}`}</button>`).join('')}</div>
+  <table class="pp-journal" style="table-layout:fixed;width:100%"><colgroup><col style="width:92px"><col style="width:58px"><col></colgroup><tbody>${shown.map(j => `<tr class="${esc(j.step)}"><td>${j.date}</td><td>${esc(j.step)}</td><td>${esc(j.text)}</td></tr>`).join('') || '<tr><td colspan="3" class="cr-muted">기록 없음</td></tr>'}</tbody></table>
+  ${rows.length > shown.length ? `<div class="cr-actions"><button type="button" class="secondary" id="pp-more">나머지 ${rows.length - shown.length}건 더 보기</button></div>` : ''}
+  <p class="cr-muted" style="margin-top:10px">공개 일봉으로 계산한 모의 결과이며 실제 주문·수익 보증이 아닙니다. 체결은 다음 거래일 시가에 ${(r.slippage * 100).toFixed(1)}% 불리하게, 편도 비용 ${(r.cost * 100).toFixed(1)}%로 가정했습니다. 실제 매매는 체결 지연·부분 체결·감정 때문에 이보다 나쁠 수 있습니다. 엔진 ${PAPER_VERSION}.</p></div>`;
+  body.querySelectorAll('[data-jf]').forEach(b => b.onclick = () => { S.journalFilter = b.dataset.jf; S.journalAll = false; render(); });
+  const more = $('#pp-more'); if (more) more.onclick = () => { S.journalAll = true; render(); };
+}
+
+// ── 오늘부터 모의투자 ─────────────────────────────────────────
+function renderLive() {
+  const live = loadLive(), card = $('#pp-live'); card.hidden = !live; $('#pp-start').textContent = live ? '새 모의투자로 바꾸기' : '오늘부터 모의투자 시작';
+  if (!live) return;
+  card.innerHTML = `<div class="pp-live"><div><b>모의투자 진행 중</b><br><span class="cr-muted">시작 ${live.startDate} · 자금 ${won(live.capitalKrw)} · 종목 ${live.basket.length}개 (${esc(live.basket.map(b => b.name).join(', '))})<br>${esc(rulesLine(normalizeRules(live.rules || {}).rules))} — 시작할 때의 규칙으로 고정</span></div><div class="cr-actions"><button type="button" class="primary" id="pp-live-run">오늘까지 다시 계산</button><button type="button" class="secondary" id="pp-live-stop">끝내기</button></div></div>`;
+  $('#pp-live-run').onclick = () => void run({ live });
+  $('#pp-live-stop').onclick = () => { saveLive(null); S.last = null; $('#pp-result').innerHTML = ''; renderLive(); $('#pp-state').textContent = '모의투자를 끝냈습니다. 기록은 이 브라우저에서 지워졌습니다.'; };
+}
+$('#pp-run').onclick = () => void run();
+$('#pp-start').onclick = async () => {
+  try {
+    const capital = Number($('#pp-capital').value); if (!(capital >= 100000)) throw new Error('시작 자금은 10만원 이상이어야 합니다.');
+    const basket = await basketOf();
+    if (loadLive() && !confirm('진행 중인 모의투자를 지우고 오늘부터 새로 시작합니다. 계속하시겠습니까?')) return;
+    const live = { version: PAPER_VERSION, startDate: today(), startedAt: new Date().toISOString(), capitalKrw: capital, basket, rules: currentRules() };
+    saveLive(live); renderLive(); void run({ live });
+    $('#pp-state').textContent = `${live.startDate}부터 시작. 볼 때마다 시작일부터 오늘까지 같은 절차를 다시 재생합니다.`;
+  } catch (e) { $('#pp-state').textContent = e.message; }
+};
+window.addEventListener('teamquant:page', () => { if (document.querySelector('.view.active')?.dataset.page !== 'paper') return; $('#pp-rules').textContent = rulesLine(currentRules()); renderLive(); const live = loadLive(); if (live && !S.last) void run({ live }); });
+window.addEventListener('teamquant:state', () => { S.last = null; renderLive(); });
+renderLive();
+
+// ── 참고: 같은 절차를 지난 기간에 돌렸다면 ───────────────────
+(async () => {
+  const el = $('#pp-ref-body');
+  try {
+    const d = await (await fetch('/data/paper-rehearsal.json')).json(), s = d.summary, p = d.portfolios.demo, ws = d.windows;
+    const row = w => { const x = p.windows[w.id]; if (!x?.ok) return ''; return `<tr><td>${esc(w.label)}</td><td class="${tone(x.metrics.rule.ret)}">${pct(x.metrics.rule.ret)}</td><td>${pct(x.metrics.hold.ret)}</td><td>${x.metrics.bench ? pct(x.metrics.bench.ret) : '—'}</td><td>${pct(x.metrics.rule.mdd, 0)} / ${pct(x.metrics.hold.mdd, 0)}</td></tr>`; };
+    el.innerHTML = `<p class="cr-muted">네 포트폴리오 × 아홉 기간(${s.cells}칸), 자금 ${won(d.capitalKrw)}, ${d.generatedAt.slice(0, 10)} 계산.</p>
+    <ul class="ct-actions" style="margin:6px 0 10px"><li>수익률은 그냥 보유보다 중앙값 <b>${pp(s.medianRetDiffVsHoldPct)}</b> (보유를 이긴 칸 ${(s.shareBetterRetThanHold * 100).toFixed(0)}%)</li><li>최대 손실은 중앙값 <b>${s.medianMddDiffVsHoldPct.toFixed(1)}%p</b> 작음 (더 작은 칸 ${(s.shareSmallerMddThanHold * 100).toFixed(0)}%)</li><li>지수보다 ${pp(s.medianRetDiffVsBenchPct)} · 비용 자금의 ${s.medianCostPct.toFixed(2)}% · 매매 연 ${s.medianTradesPerYear.toFixed(0)}회 · 현금 평균 ${s.medianCashAvgPct.toFixed(0)}%</li></ul>
+    <p class="cr-muted" style="margin:0 0 6px">${esc(p.label)} (지수 ${esc(p.benchmark.name)})</p><div class="pp-scroll"><table class="pp-ref"><thead><tr><th>기간</th><th>절차</th><th>보유</th><th>지수</th><th>최대 손실 절차/보유</th></tr></thead><tbody>${ws.map(row).join('')}</tbody></table></div>`;
+  } catch { el.innerHTML = '<p class="cr-muted">참고 자료를 불러오지 못했습니다.</p>'; }
+})();
