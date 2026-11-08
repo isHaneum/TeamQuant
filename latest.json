@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-08T02:28:29.438Z",
+ "updatedAt": "2026-11-08T02:47:24.395Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,8 +119,8 @@
   }
  ],
  "spikes": {
-  "war": 1,
-  "politics": 0.9,
+  "war": 0.5,
+  "politics": 0.7,
   "rates": 0.3,
   "trade": 0.7,
   "fx": -0.5,
@@ -128,16 +128,16 @@
   "market": 0.9,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 0
+  "policy": 0.2
  },
  "rates": {
   "war": {
-   "rate": 2.1,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.8,
+   "rate": 2.7,
    "saturated": 1,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 3.8,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 2
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   }
@@ -226,9 +226,56 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 62,
-    "spike": 1,
+    "score": 59,
+    "spike": 0.7,
     "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "r80q6h",
+   "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
+   "firstSeen": "2026-11-07T09:02:00.000Z",
+   "lastSeen": "2026-11-07T23:30:00.000Z",
+   "count": 2,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271002",
+     "host": "topstarnews.net",
+     "at": "2026-11-07T23:30:00.000Z"
+    },
+    {
+     "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16270743",
+     "host": "topstarnews.net",
+     "at": "2026-11-07T09:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 51,
+    "spike": 0.7,
+    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -273,8 +320,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 54,
-    "spike": 1,
+    "score": 50,
+    "spike": 0.5,
     "news": true,
     "reaction": {
      "symbol": "KRW=X",
@@ -290,38 +337,48 @@
    }
   },
   {
-   "id": "r80q6h",
-   "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
-   "firstSeen": "2026-11-07T09:02:00.000Z",
-   "lastSeen": "2026-11-07T23:30:00.000Z",
-   "count": 2,
-   "sources": 1,
+   "id": "vxm4i5",
+   "title": "오세훈 \"국민연금으로 주식도박…정부 오만함이 지옥문 열어\"",
+   "firstSeen": "2026-11-08T01:16:00.000Z",
+   "lastSeen": "2026-11-08T02:42:00.000Z",
+   "count": 12,
+   "sources": 12,
    "topics": [
-    "war",
-    "politics"
+    "politics",
+    "market"
    ],
-   "critical": [
-    "war"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271002",
-     "host": "topstarnews.net",
-     "at": "2026-11-07T23:30:00.000Z"
+     "title": "[속보] 오세훈 “지방선거용 주식 도박…선거 후 폭락 거듭, 우연의 일...",
+     "link": "https://www.seoul.co.kr/news/politics/2026/11/08/20261108500027?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-08T02:42:00.000Z"
     },
     {
-     "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16270743",
-     "host": "topstarnews.net",
-     "at": "2026-11-07T09:02:00.000Z"
+     "title": "오세훈 “시장 마음대로 움직일 수 있단 이재명 정부 오만, 지옥문 열었...",
+     "link": "https://www.hani.co.kr/arti/politics/politics_general/1286268.html",
+     "host": "hani.co.kr",
+     "at": "2026-11-08T02:38:00.000Z"
+    },
+    {
+     "title": "오세훈 \"시장 움직일 수 있다는 오만, 지옥문 열었다\"",
+     "link": "https://www.viewsnnews.com/article?q=239559",
+     "host": "viewsnnews.com",
+     "at": "2026-11-08T02:32:00.000Z"
+    },
+    {
+     "title": "오세훈 \"지방선거용 주식 도박…李정부 오만, 지옥문 열어\"",
+     "link": "https://www.sisajournal.com/news/articleView.html?idxno=393228",
+     "host": "sisajournal.com",
+     "at": "2026-11-08T02:28:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 54,
-    "spike": 1,
+    "score": 44,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -331,7 +388,6 @@
      "z": -2.1
     },
     "why": [
-     "핵심 단어",
      "코스피 -6.02%(평소의 2.1배)"
     ]
    }
@@ -376,119 +432,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "vxm4i5",
-   "title": "오세훈 \"李대통령 '국민연금으로 주식도박' 사과해야...한가롭게 SNS\"",
-   "firstSeen": "2026-11-08T01:16:00.000Z",
-   "lastSeen": "2026-11-08T02:17:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "오세훈 “국민연금 동원해 증시 부양”…이재명 대통령 사과·개인투자...",
-     "link": "https://www.kwnews.co.kr/article/20261108500454",
-     "host": "kwnews.co.kr",
-     "at": "2026-11-08T02:17:00.000Z"
-    },
-    {
-     "title": "오세훈 \"국민연금으로 지방선거용 주식도박...李대통령 사과해야\"",
-     "link": "https://www.ikbc.co.kr/article/view/kbc202611080014",
-     "host": "ikbc.co.kr",
-     "at": "2026-11-08T02:06:00.000Z"
-    },
-    {
-     "title": "오세훈 \"국민연금으로 주식 도박판 키워…국민 지옥문 열어\"",
-     "link": "https://www.jasm.co.kr/news/view/324571/?sc=Naver",
-     "host": "jasm.co.kr",
-     "at": "2026-11-08T02:04:00.000Z"
-    },
-    {
-     "title": "오세훈, 증시 폭락에 맹비난 \"이재명 정부 오만함이 지옥문 열었다\"",
-     "link": "https://www.newspim.com/news/view/20261108000027",
-     "host": "newspim.com",
-     "at": "2026-11-08T01:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 40,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "z61eor",
-   "title": "“살아남은 종목 찾기가 더 어렵다”...상장사 844곳 올해 최저가",
-   "firstSeen": "2026-11-08T01:08:00.000Z",
-   "lastSeen": "2026-11-08T01:49:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국내 증시 추락에 상장사 3곳 중 1곳 올해 최저가",
-     "link": "https://www.chosun.com/economy/money/2026/11/08/TVIMAUBYHVFRBCTEBGSHTMIJ74/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-08T01:49:00.000Z"
-    },
-    {
-     "title": "지난주 상장사 3개 중 1개가 ‘올해 최저가’…급락장에 줄줄이 추락",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706872&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-08T01:31:00.000Z"
-    },
-    {
-     "title": "코스피 급락 후폭풍 업종 안 가려..상장사 3곳 중 1곳 올해 최저가",
-     "link": "https://kpenews.com/View.aspx?No=4302367",
-     "host": "kpenews.com",
-     "at": "2026-11-08T01:26:00.000Z"
-    },
-    {
-     "title": "“살아남은 종목 찾기가 더 어렵다”...상장사 844곳 올해 최저가",
-     "link": "https://www.ekn.kr/web/view.php?key=20261108027226760",
-     "host": "ekn.kr",
-     "at": "2026-11-08T01:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0.9,
+    "score": 39,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -517,14 +462,14 @@
    "critical": [],
    "links": [
     {
-     "title": "美 중간선거 뒤 데이터센터 규제 리스크 부상…AI·반도체 투자도 긴장",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=325540",
+     "title": "美 AI 규제 우려에 코스피 6% 급락…9개월 만에 장중 5000선 붕괴",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=325539",
      "host": "thepublic.kr",
      "at": "2026-11-08T01:40:00.000Z"
     },
     {
-     "title": "美 AI 규제 우려에 코스피 6% 급락…9개월 만에 장중 5000선 붕괴",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=325539",
+     "title": "美 중간선거 뒤 데이터센터 규제 리스크 부상…AI·반도체 투자도 긴장",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=325540",
      "host": "thepublic.kr",
      "at": "2026-11-08T01:40:00.000Z"
     },
@@ -560,42 +505,99 @@
    }
   },
   {
-   "id": "25yyvh",
-   "title": "트럼프 '큰 합의' 기대…우크라, 아부다비 협상 우선순위 제시",
-   "firstSeen": "2026-11-07T06:24:00.000Z",
-   "lastSeen": "2026-11-08T00:35:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1q8q3w9",
+   "title": "외국인, 삼성전자·SK하이닉스 7.6조 '투매'…보유율도 금융위기 수준으...",
+   "firstSeen": "2026-11-07T21:10:00.000Z",
+   "lastSeen": "2026-11-08T02:20:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "war",
-    "politics"
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "美·러·우크라 10~11일 아부다비 회담…에너지·흑해·포로 교환",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01262806645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-08T00:35:00.000Z"
+     "title": "이러다 국장에 개미만…삼전닉스 7.6조원 판 외국인, 보유율 '뚝'",
+     "link": "https://www.sisajournal.com/news/articleView.html?idxno=393226",
+     "host": "sisajournal.com",
+     "at": "2026-11-08T02:20:00.000Z"
     },
     {
-     "title": "러·미·우 회담 재개…우크라 \"큰 진전 기대 안 해\"",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93229",
-     "host": "the-today.com",
-     "at": "2026-11-07T06:34:00.000Z"
+     "title": "‘삼전닉스’ 7.6조 던진 외국인…삼성전자 보유율 17년 만에 최저 [이런...",
+     "link": "https://www.sedaily.com/article/20111527?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-08T02:17:00.000Z"
     },
     {
-     "title": "트럼프 '큰 합의' 기대…우크라, 아부다비 협상 우선순위 제시",
-     "link": "https://www.tokenpost.kr/news/international/434418",
-     "host": "tokenpost.kr",
-     "at": "2026-11-07T06:24:00.000Z"
+     "title": "외국인 삼성전자 보유율, 글로벌 금융위기 이후 17년 만에 최저",
+     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/08/2026110890032.html",
+     "host": "news.tvchosun.com",
+     "at": "2026-11-08T01:52:00.000Z"
+    },
+    {
+     "title": "외국인, 반도체 투톱 7.6조 던졌다…삼성전자 보유율 17년래 최저",
+     "link": "https://www.ajunews.com/view/20261108102206184",
+     "host": "ajunews.com",
+     "at": "2026-11-08T01:28:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 1,
+    "score": 33,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "vui497",
+   "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
+   "firstSeen": "2026-11-07T21:02:00.000Z",
+   "lastSeen": "2026-11-08T02:34:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "energy",
+    "market",
+    "credit"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'블루 웨이브' 여파 계속될까?…美 물가·코어위브 실적 주목",
+     "link": "https://www.mt.co.kr/stock/2026/11/08/2026110811240385851",
+     "host": "mt.co.kr",
+     "at": "2026-11-08T02:34:00.000Z"
+    },
+    {
+     "title": "'블루 웨이브 쇼크'에 휘청인 코스피…반등 열쇠는 [주간전망]",
+     "link": "https://www.hankyung.com/article/2026110609346",
+     "host": "hankyung.com",
+     "at": "2026-11-07T23:01:00.000Z"
+    },
+    {
+     "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/08/ZIV2LEUPO5BDVN7IKZPX2H3CMQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-07T21:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -711,35 +713,34 @@
    }
   },
   {
-   "id": "19iwzek",
-   "title": "오세훈 \"지방선거용 주식 도박, 지옥문 열어…역사적 범죄 책임 물어야...",
-   "firstSeen": "2026-11-08T00:46:00.000Z",
-   "lastSeen": "2026-11-08T02:20:00.000Z",
+   "id": "1v0anpk",
+   "title": "코스피 급락 후폭풍 업종 안 가려..상장사 3곳 중 1곳 올해 최저가",
+   "firstSeen": "2026-11-08T01:26:00.000Z",
+   "lastSeen": "2026-11-08T01:49:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "politics",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[속보] 오세훈 \"국민연금으로 주식 도박...李정부 오만이 지옥문 열어\"",
-     "link": "https://www.kyeonggi.com/article/20261108580045",
-     "host": "kyeonggi.com",
-     "at": "2026-11-08T02:20:00.000Z"
+     "title": "국내 증시 추락에 상장사 3곳 중 1곳 올해 최저가",
+     "link": "https://www.chosun.com/economy/money/2026/11/08/TVIMAUBYHVFRBCTEBGSHTMIJ74/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-08T01:49:00.000Z"
     },
     {
-     "title": "오세훈 \"지방선거용 주식 도박\"…코스피 급락에 국민연금 투자 확대 비...",
-     "link": "https://www.kizmom.com/news/articleView.html?idxno=113825",
-     "host": "kizmom.com",
-     "at": "2026-11-08T02:17:00.000Z"
+     "title": "지난주 상장사 3개 중 1개가 ‘올해 최저가’…급락장에 줄줄이 추락",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706872&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-08T01:31:00.000Z"
     },
     {
-     "title": "오세훈 \"지방선거용 주식 도박, 지옥문 열어…역사적 범죄 책임 물어야...",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261108104354wP3",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-08T01:44:00.000Z"
+     "title": "코스피 급락 후폭풍 업종 안 가려..상장사 3곳 중 1곳 올해 최저가",
+     "link": "https://kpenews.com/View.aspx?No=4302367",
+     "host": "kpenews.com",
+     "at": "2026-11-08T01:26:00.000Z"
     }
    ],
    "assess": {
@@ -761,37 +762,92 @@
    }
   },
   {
-   "id": "1bqow20",
-   "title": "5000선 턱밑까지 밀린 코스피…美 물가·AI 실적에 달린 반등",
-   "firstSeen": "2026-11-06T22:02:00.000Z",
-   "lastSeen": "2026-11-08T01:18:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "gwdqod",
+   "title": "오세훈 \"선거 앞두고 국민연금으로 증시 띄워…李 사과하라\"",
+   "firstSeen": "2026-11-08T00:27:00.000Z",
+   "lastSeen": "2026-11-08T02:38:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "war",
-    "rates",
-    "energy"
+    "politics",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[주간증시전망] 5000선 턱걸이한 코스피, ‘AI 수익성·美 물가’가 반등...",
-     "link": "https://www.viva100.com/article/20261107500018",
-     "host": "viva100.com",
-     "at": "2026-11-08T01:18:00.000Z"
+     "title": "李 저격한 오세훈 \"선거 전 주가 띄워 도박판... 'SNS 왜 자주 하는지' ...",
+     "link": "https://www.hankookilbo.com/news/article/A2026110811100002594?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-08T02:38:00.000Z"
     },
     {
-     "title": "5000선 턱밑까지 밀린 코스피…美 물가·AI 실적에 달린 반등",
-     "link": "https://www.dt.co.kr/article/12093673?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-07T20:03:00.000Z"
+     "title": "[속보] \"선거 전 국민연금으로 판 키워\"…오세훈, '증시 폭락' 직격",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611080020&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-08T02:31:00.000Z"
+    },
+    {
+     "title": "오세훈 \"선거 앞두고 국민연금으로 증시 띄워…李 사과하라\"",
+     "link": "https://www.hankyung.com/article/2026110828007",
+     "host": "hankyung.com",
+     "at": "2026-11-08T01:51:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "25yyvh",
+   "title": "트럼프 '큰 합의' 기대…우크라, 아부다비 협상 우선순위 제시",
+   "firstSeen": "2026-11-07T06:24:00.000Z",
+   "lastSeen": "2026-11-08T00:35:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美·러·우크라 10~11일 아부다비 회담…에너지·흑해·포로 교환",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01262806645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-08T00:35:00.000Z"
+    },
+    {
+     "title": "러·미·우 회담 재개…우크라 \"큰 진전 기대 안 해\"",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=93229",
+     "host": "the-today.com",
+     "at": "2026-11-07T06:34:00.000Z"
+    },
+    {
+     "title": "트럼프 '큰 합의' 기대…우크라, 아부다비 협상 우선순위 제시",
+     "link": "https://www.tokenpost.kr/news/international/434418",
+     "host": "tokenpost.kr",
+     "at": "2026-11-07T06:24:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 31,
-    "spike": 1,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -834,8 +890,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 1,
+    "score": 30,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -850,72 +906,30 @@
    }
   },
   {
-   "id": "cluv0t",
-   "title": "젠슨 황에 접근한 中 여성, 스파이 의혹 파문…AI 패권전쟁의 이면",
-   "firstSeen": "2026-11-07T08:12:00.000Z",
-   "lastSeen": "2026-11-08T01:44:00.000Z",
+   "id": "1j1bg0r",
+   "title": "'블루 쓰나미' 덮친 코스피…5000선 사수, 외국인·AI에 달렸다",
+   "firstSeen": "2026-11-06T23:08:00.000Z",
+   "lastSeen": "2026-11-08T02:14:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
-    "war",
-    "politics"
+    "rates",
+    "market",
+    "credit"
    ],
    "critical": [],
    "links": [
     {
-     "title": "젠슨 황 불륜설에 미국 의회까지 움직였다…'중국 스파이 의혹' 여성과...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271071",
-     "host": "topstarnews.net",
-     "at": "2026-11-08T01:44:00.000Z"
+     "title": "'블루 쓰나미'에 외국인 삼성·SK하이닉스 7.6조 팔아치워",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3446851",
+     "host": "newscj.com",
+     "at": "2026-11-08T02:14:00.000Z"
     },
     {
-     "title": "젠슨 황에 접근한 中 여성, 스파이 의혹 파문…AI 패권전쟁의 이면",
-     "link": "https://www.sisajournal.com/news/articleView.html?idxno=392995",
-     "host": "sisajournal.com",
-     "at": "2026-11-07T23:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1silqpo",
-   "title": "[뉴욕증시 전망] 美 물가지표·AI 기업 실적 주목",
-   "firstSeen": "2026-11-07T15:00:00.000Z",
-   "lastSeen": "2026-11-08T00:00:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 중간선거 후폭풍에 AI 투자 불확실성 확대…코어위브 실적 주목",
-     "link": "https://daily.hankooki.com/news/articleView.html?idxno=1422755",
-     "host": "daily.hankooki.com",
-     "at": "2026-11-08T00:00:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시 전망] 美 물가지표·AI 기업 실적 주목",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=93391",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-07T15:00:00.000Z"
+     "title": "'블루 쓰나미' 덮친 코스피…5000선 사수, 외국인·AI에 달렸다",
+     "link": "https://www.news1.kr/finance/market-exr/6346081",
+     "host": "news1.kr",
+     "at": "2026-11-07T21:00:00.000Z"
     }
    ],
    "assess": {
