@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-08T09:14:17.874Z",
+ "updatedAt": "2026-11-08T09:27:43.254Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,16 +119,16 @@
   }
  ],
  "spikes": {
-  "war": 0.6,
+  "war": 0.5,
   "politics": 0.5,
   "rates": -0.3,
-  "trade": -0.3,
+  "trade": -0.1,
   "fx": -0.5,
   "energy": 0,
   "market": 0.3,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 0.2
+  "policy": 0
  },
  "rates": {
   "war": {
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 2,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 5.7,
+   "rate": 5.6,
    "saturated": 2,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   }
@@ -216,8 +216,49 @@
     "level": "caution",
     "label": "주의",
     "score": 52,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "tg5dpy",
+   "title": "헛바퀴 정책에 수급도 메말라…코스닥, 계엄 때보다 낮아졌다",
+   "firstSeen": "2026-11-07T00:34:00.000Z",
+   "lastSeen": "2026-11-08T09:17:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "헛바퀴 정책에 수급도 메말라…코스닥, 계엄 때보다 낮아졌다",
+     "link": "https://www.sedaily.com/article/20111654?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-08T09:17:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 0.5,
+    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -256,8 +297,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
-    "spike": 0.6,
+    "score": 47,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -277,8 +318,8 @@
    "title": "급락장에 상장사 1/3 연중 최저가…ETF순자산 400조 깨져",
    "firstSeen": "2026-11-07T21:25:00.000Z",
    "lastSeen": "2026-11-08T09:01:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "market"
    ],
@@ -291,12 +332,6 @@
      "at": "2026-11-08T09:01:00.000Z"
     },
     {
-     "title": "급락장에 줄줄이 추락… 상장사 3개 중 1개 연중 최저가",
-     "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1109695",
-     "host": "ccdn.co.kr",
-     "at": "2026-11-08T08:56:00.000Z"
-    },
-    {
      "title": "증시 급락에 상장사 31% ‘올해 최저가’",
      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706938&ref=A",
      "host": "news.kbs.co.kr",
@@ -307,13 +342,76 @@
      "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005957467",
      "host": "mbnmoney.mbn.co.kr",
      "at": "2026-11-08T06:46:00.000Z"
+    },
+    {
+     "title": "상장사 3분의 1이 연중 최저가…외국인 줄매도에 휘청이는 코스피",
+     "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611081336324120098",
+     "host": "dnews.co.kr",
+     "at": "2026-11-08T05:40:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
+    "score": 34,
     "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1ck81wd",
+   "title": "미 중간선거 여파에 환율 급등",
+   "firstSeen": "2026-11-07T05:06:00.000Z",
+   "lastSeen": "2026-11-08T05:15:00.000Z",
+   "count": 8,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "미국 민주당 의회 장악에 환율 급등",
+     "link": "https://www.news1.kr/photos/8202775",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "환율 급등…6개월 만에 최대폭",
+     "link": "https://www.news1.kr/photos/8202776",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "달러·원 환율 급등…6개월 만에 최대폭",
+     "link": "https://www.news1.kr/photos/8202770",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "‘블루쓰나미’에 1360원대로 뛴 환율",
+     "link": "https://www.news1.kr/photos/8202777",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -527,49 +625,41 @@
    }
   },
   {
-   "id": "12iebq3",
-   "title": "‘블루쓰나미’에 1360원대로 뛴 환율",
-   "firstSeen": "2026-11-06T08:59:00.000Z",
-   "lastSeen": "2026-11-08T05:15:00.000Z",
-   "count": 5,
-   "sources": 1,
+   "id": "1bpa3ul",
+   "title": "'블루 쓰나미'에 휘청 코스피, 美증시 반등에 충격 벗어날까",
+   "firstSeen": "2026-11-07T01:44:00.000Z",
+   "lastSeen": "2026-11-08T09:24:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "politics",
-    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "미 중간선거 여파에 환율 급등",
-     "link": "https://www.news1.kr/photos/8202774",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
+     "title": "'블루 쓰나미'에 휘청인 코스피…이번 주 반등할까",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261108182348Za4",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-08T09:24:00.000Z"
     },
     {
-     "title": "美 중간선거 여파에 달러·원 환율 '껑충'",
-     "link": "https://www.news1.kr/photos/8202769",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
+     "title": "'블루 쓰나미' 쇼크에 5천피 턱걸이… 폭락 후 반등 꾀하는 코스피",
+     "link": "https://www.kgnews.co.kr/news/article.html?no=918625",
+     "host": "kgnews.co.kr",
+     "at": "2026-11-08T05:52:00.000Z"
     },
     {
-     "title": "美 중간선거 여파에 환율 '껑충'",
-     "link": "https://www.news1.kr/photos/8202779",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "美 중간선거 충격에 환율 1360원대 급등",
-     "link": "https://www.news1.kr/photos/8202773",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
+     "title": "'블루 쓰나미'에 휘청 코스피, 美증시 반등에 충격 벗어날까",
+     "link": "https://www.yna.co.kr/view/AKR20261107025700008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-07T21:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 28,
-    "spike": 0.5,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -788,63 +878,6 @@
    }
   },
   {
-   "id": "12iebq3",
-   "title": "미국 민주당 의회 장악에 환율 급등",
-   "firstSeen": "2026-11-06T08:59:00.000Z",
-   "lastSeen": "2026-11-08T05:15:00.000Z",
-   "count": 4,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美민주 상·하원 장악에 달러·원 환율 1360원 돌파",
-     "link": "https://www.news1.kr/photos/8202772",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "달러·원 환율 급등…6개월 만에 최대폭",
-     "link": "https://www.news1.kr/photos/8202770",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "환율 급등…6개월 만에 최대폭",
-     "link": "https://www.news1.kr/photos/8202776",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "미국 민주당 의회 장악에 환율 급등",
-     "link": "https://www.news1.kr/photos/8202775",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 27,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "1ndl9e7",
    "title": "‘블루 쓰나미’에 ETF 시장도 와르르…순자산 400조 붕괴",
    "firstSeen": "2026-11-08T00:05:00.000Z",
@@ -869,50 +902,6 @@
      "link": "https://www.dt.co.kr/article/12093692?ref=naver",
      "host": "dt.co.kr",
      "at": "2026-11-08T00:05:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 27,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "155ulr4",
-   "title": "트럼프·미국 증시 흔들리자 코스피 5000선 턱걸이 ‘패닉’",
-   "firstSeen": "2026-11-08T01:38:00.000Z",
-   "lastSeen": "2026-11-08T08:06:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 중간선거 후폭풍…코스피 5000선 턱걸이",
-     "link": "https://www.incheonilbo.com/news/articleView.html?idxno=1336240",
-     "host": "incheonilbo.com",
-     "at": "2026-11-08T08:06:00.000Z"
-    },
-    {
-     "title": "트럼프·미국 증시 흔들리자 코스피 5000선 턱걸이 ‘패닉’",
-     "link": "http://www.breaknews.com/1249206",
-     "host": "breaknews.com",
-     "at": "2026-11-08T01:38:00.000Z"
     }
    ],
    "assess": {
