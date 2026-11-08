@@ -1,0 +1,439 @@
+{
+ "id": "2026-11-08-us",
+ "version": "I1-2026-11-06",
+ "slot": "us",
+ "title": "미국 장 브리핑",
+ "at": "2026-11-08T13:05:53.260Z",
+ "headline": "S&P 500 +0.31%, 나스닥 +1.09%, 원/달러 +1.21% · 주요 이슈: 전쟁·지정학, 선거·정치, 증시 급변",
+ "markets": [
+  {
+   "symbol": "^GSPC",
+   "label": "S&P 500",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 7376.85986328125,
+   "change": 0.31,
+   "z": 0.4,
+   "sd": 0.8730796089234166,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "^IXIC",
+   "label": "나스닥",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 24579.4296875,
+   "change": 1.09,
+   "z": 0.9,
+   "sd": 1.2493450618967445,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "KRW=X",
+   "label": "원/달러",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 1356.3399658203125,
+   "change": 1.21,
+   "z": 2,
+   "sd": 0.6176982973747167,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "CL=F",
+   "label": "WTI 유가",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 90.83000183105469,
+   "change": 0.34,
+   "z": 0.1,
+   "sd": 2.8548001618285164,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "^VIX",
+   "label": "VIX 변동성",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 25.639999389648438,
+   "change": -9.01,
+   "z": -0.8,
+   "sd": 11.277582247268505,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "^TNX",
+   "label": "미 10년 금리",
+   "unit": "bp",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 4.859000205993652,
+   "change": 2.2,
+   "z": 0.4,
+   "sd": 5.203169906885028,
+   "source": "Yahoo"
+  }
+ ],
+ "unusual": [
+  "코스피 -6.02% — 평소 하루 움직임의 2.1배",
+  "원/달러 +1.21% — 평소 하루 움직임의 2배"
+ ],
+ "issues": [
+  {
+   "id": "r80q6h",
+   "title": "밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변...",
+   "firstSeen": "2026-11-07T09:02:00.000Z",
+   "lastSeen": "2026-11-08T08:45:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "밴스, 이란과 물밑협상 주도 트럼프는 호르무즈 또 공습",
+     "link": "https://www.mk.co.kr/article/12201912",
+     "host": "mk.co.kr",
+     "at": "2026-11-08T08:45:00.000Z"
+    },
+    {
+     "title": "밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271002",
+     "host": "topstarnews.net",
+     "at": "2026-11-07T23:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 49,
+    "spike": 0.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "tg5dpy",
+   "title": "헛바퀴 정책에 수급도 메말라…코스닥, 계엄 때보다 낮아졌다",
+   "firstSeen": "2026-11-07T00:34:00.000Z",
+   "lastSeen": "2026-11-08T09:17:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "헛바퀴 정책에 수급도 메말라…코스닥, 계엄 때보다 낮아졌다",
+     "link": "https://www.sedaily.com/article/20111654?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-08T09:17:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1qn4vgf",
+   "title": "[증시 예보] 5천피 붕괴·서킷브레이커 발동…더 조심해야 할 게 있어?",
+   "firstSeen": "2026-11-08T11:40:00.000Z",
+   "lastSeen": "2026-11-08T11:40:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[증시 예보] 5천피 붕괴·서킷브레이커 발동…더 조심해야 할 게 있어?",
+     "link": "https://biz.heraldcorp.com/article/10929180?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-08T11:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "ka5739",
+   "title": "급락장에 상장사 1/3 연중 최저가…ETF순자산 400조 깨져",
+   "firstSeen": "2026-11-07T21:25:00.000Z",
+   "lastSeen": "2026-11-08T12:44:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "급락장에 줄줄이 휘청…지난주 국내 상장사 3곳 중 1곳 '연중 최저가'",
+     "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=564751",
+     "host": "idaegu.co.kr",
+     "at": "2026-11-08T12:44:00.000Z"
+    },
+    {
+     "title": "급락장에 상장사 3곳 중 1곳 꼴로 ‘올해 최저가’",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8706977&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-08T12:15:00.000Z"
+    },
+    {
+     "title": "코스피 5천선 아슬아슬⋯상장사 3곳 중 1곳 '올해 최저가'",
+     "link": "http://www.inews24.com/view/2023823",
+     "host": "inews24.com",
+     "at": "2026-11-08T12:07:00.000Z"
+    },
+    {
+     "title": "개미 덮친 증시 한파…국내 상장사 3곳 중 1곳 연중 최저가",
+     "link": "https://www.donga.com/news/Economy/article/all/20261108/134986134/1",
+     "host": "donga.com",
+     "at": "2026-11-08T12:05:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 34,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "vui497",
+   "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
+   "firstSeen": "2026-11-07T21:02:00.000Z",
+   "lastSeen": "2026-11-08T09:24:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'블루 쓰나미'에 휘청인 코스피…이번 주 반등할까",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261108182348Za4",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-08T09:24:00.000Z"
+    },
+    {
+     "title": "'블루 쓰나미' 쇼크에 5천피 턱걸이… 폭락 후 반등 꾀하는 코스피",
+     "link": "https://www.kgnews.co.kr/news/article.html?no=918625",
+     "host": "kgnews.co.kr",
+     "at": "2026-11-08T05:52:00.000Z"
+    },
+    {
+     "title": "‘블루 웨이브 쇼크’에 코스피 5000선도 아슬아슬···이번 주 관건은...",
+     "link": "https://www.khan.co.kr/article/202611081447001",
+     "host": "khan.co.kr",
+     "at": "2026-11-08T05:47:00.000Z"
+    },
+    {
+     "title": "'블루 웨이브' 쇼크에...환율, 1,360원대까지 상승",
+     "link": "https://www.news1.kr/photos/8202771",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "15f6evk",
+   "title": "미 중간선거 이후 'AI 규제론'…우리 증시 영향은?",
+   "firstSeen": "2026-11-08T00:00:00.000Z",
+   "lastSeen": "2026-11-08T09:34:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "politics",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[사설]미국서 제동 걸린 AI 데이터센터, 한국 속도전만 할 건가",
+     "link": "https://www.khan.co.kr/article/202611081834001",
+     "host": "khan.co.kr",
+     "at": "2026-11-08T09:34:00.000Z"
+    },
+    {
+     "title": "美 중간선거에 뒤집힌 'AI 인프라 지도'…데이터센터 잇따라 제동",
+     "link": "https://www.hankookilbo.com/news/article/A2026110810540001360?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-08T08:27:00.000Z"
+    },
+    {
+     "title": "美 블루웨이브에 AI 데이터센터 제동 현실화…삼전닉스에 영향은?",
+     "link": "https://www.g-enews.com/view.php?ud=20261106133909544027fa31d75c_1",
+     "host": "g-enews.com",
+     "at": "2026-11-08T06:00:00.000Z"
+    },
+    {
+     "title": "미 중간선거 이후 'AI 규제론'…우리 증시 영향은?",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261108134240dEQ",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-08T04:43:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  }
+ ],
+ "alerts": [
+  {
+   "id": "r80q6h",
+   "title": "밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변...",
+   "firstSeen": "2026-11-07T09:02:00.000Z",
+   "lastSeen": "2026-11-08T08:45:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "밴스, 이란과 물밑협상 주도 트럼프는 호르무즈 또 공습",
+     "link": "https://www.mk.co.kr/article/12201912",
+     "host": "mk.co.kr",
+     "at": "2026-11-08T08:45:00.000Z"
+    },
+    {
+     "title": "밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271002",
+     "host": "topstarnews.net",
+     "at": "2026-11-07T23:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 49,
+    "spike": 0.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  }
+ ],
+ "text": "[미국 장 브리핑] 2026-11-08 22시\nS&P 500 +0.31%, 나스닥 +1.09%, 원/달러 +1.21% · 주요 이슈: 전쟁·지정학, 선거·정치, 증시 급변\n· 코스피 -6.02% — 평소 하루 움직임의 2.1배\n· 원/달러 +1.21% — 평소 하루 움직임의 2배\n1. [주의] 밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변... (2곳 보도)\n   https://www.mk.co.kr/article/12201912\n2. 헛바퀴 정책에 수급도 메말라…코스닥, 계엄 때보다 낮아졌다 (1곳 보도)\n   https://www.sedaily.com/article/20111654?ref=naver\n3. [증시 예보] 5천피 붕괴·서킷브레이커 발동…더 조심해야 할 게 있어? (1곳 보도)\n   https://biz.heraldcorp.com/article/10929180?ref=naver\n4. 급락장에 상장사 1/3 연중 최저가…ETF순자산 400조 깨져 (7곳 보도)\n   https://www.idaegu.co.kr/news/articleView.html?idxno=564751\n5. [주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ... (6곳 보도)\n   http://www.yonhapnewstv.co.kr/news/MYH20261108182348Za4\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+ "delivered": false
+}
