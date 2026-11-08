@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-08T08:27:00.132Z",
+ "updatedAt": "2026-11-08T08:48:10.749Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": 0.9,
+  "war": 0.7,
   "politics": 0.3,
-  "rates": -0.4,
-  "trade": -0.6,
+  "rates": -0.6,
+  "trade": -0.5,
   "fx": -0.5,
-  "energy": 0.3,
+  "energy": 0,
   "market": 0.3,
   "credit": -0.2,
   "disaster": 0,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 2,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.6,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 1.5,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 5.7,
+   "rate": 5.6,
    "saturated": 2,
    "queries": 3
   },
@@ -187,22 +187,35 @@
    "id": "r80q6h",
    "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
    "firstSeen": "2026-11-07T09:02:00.000Z",
-   "lastSeen": "2026-11-08T07:20:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "lastSeen": "2026-11-08T08:45:00.000Z",
+   "count": 4,
+   "sources": 3,
    "topics": [
     "war",
     "politics"
    ],
    "critical": [
-    "war"
+    "war",
+    "energy"
    ],
    "links": [
+    {
+     "title": "밴스, 이란과 물밑협상 주도 트럼프는 호르무즈 또 공습",
+     "link": "https://www.mk.co.kr/article/12201912",
+     "host": "mk.co.kr",
+     "at": "2026-11-08T08:45:00.000Z"
+    },
     {
      "title": "트럼프, 이란 전쟁 결단 임박…참모진 강경·협상파 분열",
      "link": "https://www.edaily.co.kr/News/Read?newsId=01938486645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
      "host": "edaily.co.kr",
      "at": "2026-11-08T07:20:00.000Z"
+    },
+    {
+     "title": "밴스, '이란 전쟁 탓' 트럼프와 차별화…백악관 균열에 조기 레임덕 변...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271002",
+     "host": "topstarnews.net",
+     "at": "2026-11-07T23:30:00.000Z"
     },
     {
      "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
@@ -214,50 +227,9 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 55,
-    "spike": 0.9,
+    "score": 57,
+    "spike": 0.7,
     "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "st39n2",
-   "title": "美, 이란 방공시설 공습…중간선거 후 첫 군사행동",
-   "firstSeen": "2026-11-07T06:13:00.000Z",
-   "lastSeen": "2026-11-07T08:46:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "美, 이란 방공시설 공습…중간선거 후 첫 군사행동",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443605",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-07T08:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 52,
-    "spike": 0.9,
-    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -296,8 +268,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
-    "spike": 0.9,
+    "score": 49,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -309,62 +281,6 @@
     "why": [
      "핵심 단어",
      "원/달러 +1.21%(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1h0ucvv",
-   "title": "\"중국 스파이 의혹 영향?\"…젠슨 황 장녀, 방한 돌연 취소",
-   "firstSeen": "2026-11-07T20:55:00.000Z",
-   "lastSeen": "2026-11-08T04:10:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[엔비디아] 젠슨 황의 연인, 알고 보니 중국 스파이였다고?...미국 정보...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=624412",
-     "host": "cbci.co.kr",
-     "at": "2026-11-08T04:10:00.000Z"
-    },
-    {
-     "title": "“미국, 젠슨 황 中스파이 의심 여성과 연인 관계였다고 판단”⋯장녀 ...",
-     "link": "https://www.etoday.co.kr/news/view/2645405",
-     "host": "etoday.co.kr",
-     "at": "2026-11-08T02:08:00.000Z"
-    },
-    {
-     "title": "젠슨 황 '중국 스파이 접촉설'로 번진 미중 기술전쟁…K반도체 영향은?",
-     "link": "https://www.newsis.com/view/NISX20261108_0003859234",
-     "host": "newsis.com",
-     "at": "2026-11-08T01:58:00.000Z"
-    },
-    {
-     "title": "'中스파이 의혹' 휩싸인 젠슨 황 … 장녀 방한 취소에 부총리 면담도 무...",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/08/2026110800023.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-08T01:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
     ]
    }
   },
@@ -521,94 +437,6 @@
     "label": "관찰",
     "score": 31,
     "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "st39n2",
-   "title": "미 중간선거 '참패' 트럼프 \"이란에 소규모 공격 실시\"",
-   "firstSeen": "2026-11-07T06:13:00.000Z",
-   "lastSeen": "2026-11-08T01:58:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프, 중간선거 참패 후 공화당 장악력 '흔들'",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01371046645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-08T01:58:00.000Z"
-    },
-    {
-     "title": "미 중간선거 '참패' 트럼프 \"이란에 소규모 공격 실시\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611071839345699",
-     "host": "ytn.co.kr",
-     "at": "2026-11-07T09:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "18hw0yw",
-   "title": "“트럼프 패배는 우리의 승리”…기세등등 이란, 종전협상서 더 큰 양보...",
-   "firstSeen": "2026-11-08T06:59:00.000Z",
-   "lastSeen": "2026-11-08T07:30:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 선거 패배에 강경해진 이란..\"미국에 더 많은 양보 요구\"",
-     "link": "http://www.4th.kr/news/articleView.html?idxno=2121386",
-     "host": "4th.kr",
-     "at": "2026-11-08T07:30:00.000Z"
-    },
-    {
-     "title": "“트럼프 패배는 우리의 승리”…기세등등 이란, 종전협상서 더 큰 양보...",
-     "link": "https://biz.heraldcorp.com/article/10929693?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-08T06:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -824,6 +652,188 @@
    }
   },
   {
+   "id": "15f6evk",
+   "title": "미 중간선거 이후 'AI 규제론'…우리 증시 영향은?",
+   "firstSeen": "2026-11-08T00:00:00.000Z",
+   "lastSeen": "2026-11-08T08:27:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "politics",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 중간선거에 뒤집힌 'AI 인프라 지도'…데이터센터 잇따라 제동",
+     "link": "https://www.hankookilbo.com/news/article/A2026110810540001360?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-08T08:27:00.000Z"
+    },
+    {
+     "title": "美 블루웨이브에 AI 데이터센터 제동 현실화…삼전닉스에 영향은?",
+     "link": "https://www.g-enews.com/view.php?ud=20261106133909544027fa31d75c_1",
+     "host": "g-enews.com",
+     "at": "2026-11-08T06:00:00.000Z"
+    },
+    {
+     "title": "미 중간선거 이후 'AI 규제론'…우리 증시 영향은?",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261108134240dEQ",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-08T04:43:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "st39n2",
+   "title": "미 중간선거 '참패' 트럼프 \"이란에 소규모 공격 실시\"",
+   "firstSeen": "2026-11-07T06:13:00.000Z",
+   "lastSeen": "2026-11-08T01:58:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프, 중간선거 참패 후 공화당 장악력 '흔들'",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01371046645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-08T01:58:00.000Z"
+    },
+    {
+     "title": "미 중간선거 '참패' 트럼프 \"이란에 소규모 공격 실시\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611071839345699",
+     "host": "ytn.co.kr",
+     "at": "2026-11-07T09:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "i6lsuc",
+   "title": "젠슨 황 불륜설에 미국 의회까지 움직였다…'중국 스파이 의혹' 여성과...",
+   "firstSeen": "2026-11-07T04:41:00.000Z",
+   "lastSeen": "2026-11-08T01:58:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황 '중국 스파이 접촉설'로 번진 미중 기술전쟁…K반도체 영향은?",
+     "link": "https://www.newsis.com/view/NISX20261108_0003859234",
+     "host": "newsis.com",
+     "at": "2026-11-08T01:58:00.000Z"
+    },
+    {
+     "title": "젠슨 황 불륜설에 미국 의회까지 움직였다…'중국 스파이 의혹' 여성과...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271071",
+     "host": "topstarnews.net",
+     "at": "2026-11-08T01:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "18hw0yw",
+   "title": "“트럼프 패배는 우리의 승리”…기세등등 이란, 종전협상서 더 큰 양보...",
+   "firstSeen": "2026-11-08T06:59:00.000Z",
+   "lastSeen": "2026-11-08T07:30:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프 선거 패배에 강경해진 이란..\"미국에 더 많은 양보 요구\"",
+     "link": "http://www.4th.kr/news/articleView.html?idxno=2121386",
+     "host": "4th.kr",
+     "at": "2026-11-08T07:30:00.000Z"
+    },
+    {
+     "title": "“트럼프 패배는 우리의 승리”…기세등등 이란, 종전협상서 더 큰 양보...",
+     "link": "https://biz.heraldcorp.com/article/10929693?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-08T06:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "vui497",
    "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
    "firstSeen": "2026-11-07T21:02:00.000Z",
@@ -879,32 +889,41 @@
    }
   },
   {
-   "id": "y8hgx6",
-   "title": "[증시진단] 반 토막 난 ‘1만피의 꿈’…센터장 5인 “과매도, 반등엔 조...",
-   "firstSeen": "2026-11-07T20:38:00.000Z",
-   "lastSeen": "2026-11-07T20:38:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "1h0ucvv",
+   "title": "매디슨 황, '가족 문제'로 방한 취소…\"젠슨 황, 中 스파이와 연인\" 보도...",
+   "firstSeen": "2026-11-07T20:55:00.000Z",
+   "lastSeen": "2026-11-08T02:08:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "war",
-    "rates",
-    "energy",
-    "market"
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[증시진단] 반 토막 난 ‘1만피의 꿈’…센터장 5인 “과매도, 반등엔 조...",
-     "link": "http://www.metroseoul.co.kr/article/20261107500034",
-     "host": "metroseoul.co.kr",
-     "at": "2026-11-07T20:38:00.000Z"
+     "title": "“미국, 젠슨 황 中스파이 의심 여성과 연인 관계였다고 판단”⋯장녀 ...",
+     "link": "https://www.etoday.co.kr/news/view/2645405",
+     "host": "etoday.co.kr",
+     "at": "2026-11-08T02:08:00.000Z"
+    },
+    {
+     "title": "'中스파이 의혹' 휩싸인 젠슨 황 … 장녀 방한 취소에 부총리 면담도 무...",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/08/2026110800023.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-08T01:50:00.000Z"
+    },
+    {
+     "title": "매디슨 황, '가족 문제'로 방한 취소…\"젠슨 황, 中 스파이와 연인\" 보도...",
+     "link": "http://weekly.chosun.com/news/articleView.html?idxno=56949",
+     "host": "weekly.chosun.com",
+     "at": "2026-11-08T01:19:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 0.9,
+    "score": 26,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -920,6 +939,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-08T08:48:10.749Z",
+   "id": "r80q6h",
+   "level": "caution",
+   "title": "미국 이란 전쟁, 평화협상 중 또 공습한 트럼프…카타르 중재에도 이란...",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.02%(평소의 2.1배)"
+   ],
+   "link": "https://www.mk.co.kr/article/12201912",
+   "delivered": false
+  },
   {
    "at": "2026-11-08T07:27:40.878Z",
    "id": "r80q6h",
@@ -1146,18 +1177,6 @@
     "원/달러 +1.21%(평소의 2배)"
    ],
    "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5229602",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-07T14:11:50.469Z",
-   "id": "1h4hqdc",
-   "level": "caution",
-   "title": "\"코스피보다 더 하네\"…코스닥, 계엄 당시 수준으로 회귀",
-   "why": [
-    "핵심 단어",
-    "코스피 -6.02%(평소의 2.1배)"
-   ],
-   "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3040119",
    "delivered": false
   }
  ],
