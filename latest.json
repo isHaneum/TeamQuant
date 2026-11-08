@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-08T10:28:01.993Z",
+ "updatedAt": "2026-11-08T10:47:37.328Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": 0.1,
+  "war": -0.1,
   "politics": 0.7,
   "rates": -0.4,
-  "trade": -0.2,
+  "trade": -0.1,
   "fx": -0.5,
   "energy": -0.3,
   "market": 0.3,
-  "credit": -0.2,
+  "credit": -0.1,
   "disaster": 0,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 1.3,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 2.2,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 2
   },
@@ -297,8 +297,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 44,
-    "spike": 0.1,
+    "score": 43,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -411,63 +411,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 34,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "12iebq3",
-   "title": "미국 민주당 의회 장악에 환율 급등",
-   "firstSeen": "2026-11-06T08:59:00.000Z",
-   "lastSeen": "2026-11-08T05:15:00.000Z",
-   "count": 9,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "달러·원 환율 급등…6개월 만에 최대폭",
-     "link": "https://www.news1.kr/photos/8202770",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "‘블루쓰나미’에 1360원대로 뛴 환율",
-     "link": "https://www.news1.kr/photos/8202777",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "美민주 상·하원 장악에 달러·원 환율 1360원 돌파",
-     "link": "https://www.news1.kr/photos/8202772",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "미 중간선거 여파에 환율 급등",
-     "link": "https://www.news1.kr/photos/8202774",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
     "spike": 0.7,
     "news": false,
     "reaction": {
@@ -692,6 +635,63 @@
    }
   },
   {
+   "id": "12iebq3",
+   "title": "미국 민주당 의회 장악에 환율 급등",
+   "firstSeen": "2026-11-06T08:59:00.000Z",
+   "lastSeen": "2026-11-08T05:15:00.000Z",
+   "count": 4,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美민주 상·하원 장악에 달러·원 환율 1360원 돌파",
+     "link": "https://www.news1.kr/photos/8202772",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "달러·원 환율 급등…6개월 만에 최대폭",
+     "link": "https://www.news1.kr/photos/8202770",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "환율 급등…6개월 만에 최대폭",
+     "link": "https://www.news1.kr/photos/8202776",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "미국 민주당 의회 장악에 환율 급등",
+     "link": "https://www.news1.kr/photos/8202775",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "r7e6h3",
    "title": "[이호연의 D톡스] 美 ‘블루쓰나미’에 금리·유가 하락…한은 긴축 셈...",
    "firstSeen": "2026-11-08T00:01:00.000Z",
@@ -722,55 +722,6 @@
      "link": "https://www.ddaily.co.kr/page/view/2026110617585825405",
      "host": "ddaily.co.kr",
      "at": "2026-11-08T00:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1q8m3ei",
-   "title": "‘빚투’ 반대매매 막으려…신용 담보비율 유지 의무 한시적 면제",
-   "firstSeen": "2026-11-08T03:02:00.000Z",
-   "lastSeen": "2026-11-08T10:17:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "폭락장 반대매매 막아라…신용융자 담보비율 의무 면제(종합)",
-     "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20261109.22014002269",
-     "host": "kookje.co.kr",
-     "at": "2026-11-08T10:17:00.000Z"
-    },
-    {
-     "title": "증권사 신용담보비율 유지 면제…\"변동성 대응\"",
-     "link": "https://www.asiatime.co.kr/article/20261108500035",
-     "host": "asiatime.co.kr",
-     "at": "2026-11-08T04:06:00.000Z"
-    },
-    {
-     "title": "‘빚투’ 반대매매 막으려…신용 담보비율 유지 의무 한시적 면제",
-     "link": "https://www.hani.co.kr/arti/economy/finance/1286270.html",
-     "host": "hani.co.kr",
-     "at": "2026-11-08T03:02:00.000Z"
     }
    ],
    "assess": {
@@ -904,6 +855,50 @@
      "link": "https://www.g-enews.com/view.php?ud=202611061531541758923c501012_1",
      "host": "g-enews.com",
      "at": "2026-11-08T03:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1s95gza",
+   "title": "美 데이터센터 규제 공포 과도, “장기 수요 이상 無”",
+   "firstSeen": "2026-11-08T03:03:00.000Z",
+   "lastSeen": "2026-11-08T09:50:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 중간선거 뒤 AIDC 규제 우려…업계는 \"사업 이상 無\"",
+     "link": "https://www.ajunews.com/view/20261108142446553",
+     "host": "ajunews.com",
+     "at": "2026-11-08T09:50:00.000Z"
+    },
+    {
+     "title": "美 데이터센터 규제 공포 과도, “장기 수요 이상 無”",
+     "link": "https://www.etnews.com/20261108000051",
+     "host": "etnews.com",
+     "at": "2026-11-08T03:03:00.000Z"
     }
    ],
    "assess": {
