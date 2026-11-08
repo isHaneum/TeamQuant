@@ -26,5 +26,27 @@
     "deploymentEnabled": {
       "issue-data": false
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/lib/:name(cash-store|dart|device-store|fundamentals|history-model|history-recorder|history-store|investment-store|issue-feed|kis|local-bridge|local-launcher|local-status|market|news|order-guard|performance-store|private-account|quote-check|research-job|situation-study|stocks|toss-orders|toss).js",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/:file(dev-server|launch-personal-server).mjs",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/docs/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.github/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }

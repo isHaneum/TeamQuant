@@ -4,7 +4,7 @@ import {stockName,resolveStockInput} from "/lib/instruments.js";
 import "/journey-ui.js";
 import { createStrategyDefinition, validateStrategy, runBacktest } from "/lib/backtest.js";
 import { parseNaturalStrategy } from "/lib/natural-language.js";
-import { runSplitValidation, recordTrial } from "/lib/oos-validation.js";
+import { runSplitValidation, recordTrial, overfitWarning } from "/lib/oos-validation.js";
 import "/news-ui.js";
 import "/overview-ui.js";
 import "/account-ui.js";
@@ -93,7 +93,7 @@ function oosSummaryText(entry,error) {
   if(!entry) return `표본 외 검증을 하지 못했습니다: ${error||"자료 부족"}. 전체 수익률만으로 판단하지 마십시오.`;
   const period=`조정 ${entry.tuning.start}~${entry.tuning.end}(${entry.tuning.days}일) · 평가 ${entry.test.start}~${entry.test.end}(${entry.test.days}일)`;
   const status=entry.independent?`독립 표본 외 결과입니다${entry.reproduction?" (같은 조건 재실행)":""}.`:`독립 검증 아님: ${entry.reasons.join(" ")}`;
-  const gap=entry.tuningReturn-entry.testReturn, drift=gap>10?` 평가 구간 수익률이 조정 구간보다 ${gap.toFixed(1)}%p 낮아 과적합 가능성을 확인하십시오.`:"";
+  const warn=overfitWarning(entry.tuningReturn,entry.testReturn), drift=warn?` ${warn}`:"";
   return `${period}. ${status} 이 종목 ${entry.trialNumber}번째 시도.${drift}`;
 }
 function renderOosHistory(ledger=[]) {

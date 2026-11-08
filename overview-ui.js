@@ -7,7 +7,7 @@ import {stockName,resolveStockInput} from '/lib/instruments.js';
 import {portfolioMetrics,evaluatePrinciples,simulateContributions,rebalanceOptions} from '/lib/portfolio.js';
 import {briefingQuery,relevantArticles} from '/lib/briefing.js';
 const $=s=>document.querySelector(s),money=manwon;
-const pct=v=>v===null?'—':(v>0?'+':'')+v.toFixed(2)+'%',esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=v=>!Number.isFinite(v)?'—':(v>0?'+':'')+v.toFixed(2)+'%',esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key=()=>sessionStorage.getItem('teamQuantSession')?'teamQuant:user:'+sessionStorage.getItem('teamQuantSession'):null;
 const state=()=>{try{return JSON.parse(localStorage.getItem(key())||'{}');}catch{return {};}};
 let liveAccount=null,connectionState='idle';

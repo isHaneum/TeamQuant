@@ -105,7 +105,7 @@ function renderSide() {
   $('#pf-mix').innerHTML = `<p class="pf-total">${Number.isFinite(a.cash) ? '현금 포함 총자산' : '주식 평가액'} <b>${won(Number.isFinite(a.cash) ? a.total : a.stocks)}</b></p>
     <div class="pf-bar">${parts.filter(x => x[1] > 0).map(x => `<i class="${x[2]}" style="--w:${(x[1] / total * 100).toFixed(1)}%" title="${x[0]}"></i>`).join('')}</div>
     <ul class="pf-legend">${parts.map(x => `<li><i class="${x[2]}"></i>${x[0]}${x[2] === 'cash' && !Number.isFinite(a.cash) ? '<b>—</b><span>미기록</span>' : `<b>${total ? (x[1] / total * 100).toFixed(0) : 0}%</b><span>${won(x[1])}</span>`}</li>`).join('')}</ul>
-    ${a.sectors.length ? `<h4>업종 (주식 기준)</h4><ul class="pf-sectors">${a.sectors.slice(0, 6).map(s => `<li><span>${esc(s.label)}</span><i style="--w:${s.pct.toFixed(1)}%"></i><b>${s.pct.toFixed(0)}%</b></li>`).join('')}</ul>` : ''}`;
+    ${a.sectors.length ? `<h4>업종 (주식 기준)</h4><ul class="pf-sectors">${a.sectors.filter(s => Number.isFinite(s.pct)).slice(0, 6).map(s => `<li><span>${esc(s.label)}</span><i style="--w:${s.pct.toFixed(1)}%"></i><b>${s.pct.toFixed(0)}%</b></li>`).join('')}</ul>` : ''}`;
   $('#pf-advice-tip').innerHTML = tip(`${STYLES[style].label} 성향 기준: 현금 ${a.targets.cash[0]}~${a.targets.cash[1]}%, 한 종목 ${a.targets.single}% 이하, 한 업종 ${a.targets.sector}% 이하.`);
   $('#pf-advice').innerHTML = `<ol class="pf-actions">${a.actions.map(x => `<li>${esc(x)}</li>`).join('')}</ol><ul class="pf-checks">${a.checks.map(c => `<li class="t-${tone(c.tone)}"><b>${esc(c.title)}</b>${tip(c.text)}</li>`).join('')}</ul>`;
 }
