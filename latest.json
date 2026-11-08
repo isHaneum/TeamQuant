@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-08T05:12:17.082Z",
+ "updatedAt": "2026-11-08T05:27:23.278Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -122,8 +122,8 @@
   "war": -0.5,
   "politics": 0.1,
   "rates": -0.3,
-  "trade": -1,
-  "fx": -0.5,
+  "trade": -0.8,
+  "fx": 2.9,
   "energy": -0.3,
   "market": 0.5,
   "credit": -0.2,
@@ -147,12 +147,12 @@
    "queries": 3
   },
   "trade": {
-   "rate": 1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 2
   },
   "fx": {
-   "rate": 0,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 1
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 6,
+   "rate": 5.9,
    "saturated": 2,
    "queries": 3
   },
@@ -243,6 +243,63 @@
    }
   },
   {
+   "id": "15f6evk",
+   "title": "[이번주 환율] 美 중간선거 후폭풍에 환율 1360원대 터치…AI 투자심리가...",
+   "firstSeen": "2026-11-08T00:00:00.000Z",
+   "lastSeen": "2026-11-08T05:15:00.000Z",
+   "count": 6,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 중간선거 여파에 환율 '껑충'",
+     "link": "https://www.news1.kr/photos/8202779",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "미 중간선거 여파에 환율 급등",
+     "link": "https://www.news1.kr/photos/8202774",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "美 중간선거 여파에 달러·원 환율 '껑충'",
+     "link": "https://www.news1.kr/photos/8202769",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "美 중간선거 충격에 환율 1360원대 급등",
+     "link": "https://www.news1.kr/photos/8202773",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 2.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "1uesnmr",
    "title": "증시 폭락에 사이드카 발동…그런데 왜 나는 주식을 팔 수 있죠? [최소한...",
    "firstSeen": "2026-11-08T04:01:00.000Z",
@@ -279,6 +336,104 @@
     "why": [
      "핵심 단어",
      "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "7zxus5",
+   "title": "美 ‘블루 쓰나미’에 1360원 뚫은 환율…원화 약세 어디까지?",
+   "firstSeen": "2026-11-07T20:29:00.000Z",
+   "lastSeen": "2026-11-08T05:15:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "블루 쓰나미에 AI 불안…환율 1360원 재돌파",
+     "link": "https://www.news1.kr/photos/8202778",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "블루 쓰나미에 AI 불안…환율 1360원 재돌파 촉각[주간외환전망]",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01115206645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-07T22:02:00.000Z"
+    },
+    {
+     "title": "美 ‘블루 쓰나미’에 1360원 뚫은 환율…원화 약세 어디까지?",
+     "link": "https://www.dt.co.kr/article/12093657?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-07T20:29:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 2.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "원/달러 +1.21%(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "vui497",
+   "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
+   "firstSeen": "2026-11-07T21:02:00.000Z",
+   "lastSeen": "2026-11-08T05:15:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'블루 웨이브' 쇼크에...환율, 1,360원대까지 상승",
+     "link": "https://www.news1.kr/photos/8202771",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "'블루 웨이브 쇼크'에 휘청인 코스피…반등 열쇠는 [주간전망]",
+     "link": "https://www.hankyung.com/article/2026110609346",
+     "host": "hankyung.com",
+     "at": "2026-11-07T23:01:00.000Z"
+    },
+    {
+     "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/08/ZIV2LEUPO5BDVN7IKZPX2H3CMQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-07T21:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 2.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "원/달러 +1.21%(평소의 2배)"
     ]
    }
   },
@@ -377,314 +532,37 @@
    }
   },
   {
-   "id": "vxm4i5",
-   "title": "오세훈 \"지방선거용 주식 도박..이재명 대통령, 국민에 사과해야\"",
-   "firstSeen": "2026-11-08T01:16:00.000Z",
-   "lastSeen": "2026-11-08T05:07:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "id": "7gxc8g",
+   "title": "美 민주당 의회 탈환에 증시 촉각… SK하이닉스 다롄 인허가 변수 부상",
+   "firstSeen": "2026-11-08T01:18:00.000Z",
+   "lastSeen": "2026-11-08T05:15:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
     "politics",
+    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "오세훈 \"주식시장 도박판 돼…오만한 이재명 정부, 결국 지옥문 열었다...",
-     "link": "https://www.pressian.com/pages/articles/2026110813511912258?utm_source=naver&utm_medium=search",
-     "host": "pressian.com",
-     "at": "2026-11-08T05:07:00.000Z"
-    },
-    {
-     "title": "오세훈, 증시 상황 두고 “이재명 정부 오만함이 지옥문 열어”",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000558925",
-     "host": "ichannela.com",
-     "at": "2026-11-08T04:34:00.000Z"
-    },
-    {
-     "title": "오세훈, 증시 급락에 “이 대통령 사과해야”",
-     "link": "https://www.kbmaeil.com/article/20261108500235",
-     "host": "kbmaeil.com",
-     "at": "2026-11-08T04:14:00.000Z"
-    },
-    {
-     "title": "오세훈 \"李정부 오만이 지옥문 열어…지방선거용 주식 도박\"",
-     "link": "http://www.sisafocus.co.kr/news/articleView.html?idxno=367313",
-     "host": "sisafocus.co.kr",
-     "at": "2026-11-08T04:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 37,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1h0ucvv",
-   "title": "“매디슨 황, 방한 하루 전 돌연 취소…가족 사유” 젠슨 황 덮친 ‘中...",
-   "firstSeen": "2026-11-07T20:55:00.000Z",
-   "lastSeen": "2026-11-08T02:08:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“미국, 젠슨 황 中스파이 의심 여성과 연인 관계였다고 판단”⋯장녀 ...",
-     "link": "https://www.etoday.co.kr/news/view/2645405",
-     "host": "etoday.co.kr",
-     "at": "2026-11-08T02:08:00.000Z"
-    },
-    {
-     "title": "'中스파이 의혹' 휩싸인 젠슨 황 … 장녀 방한 취소에 부총리 면담도 무...",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/08/2026110800023.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-08T01:50:00.000Z"
-    },
-    {
-     "title": "젠슨 황 불륜설에 미국 의회까지 움직였다…'중국 스파이 의혹' 여성과...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271071",
-     "host": "topstarnews.net",
-     "at": "2026-11-08T01:44:00.000Z"
-    },
-    {
-     "title": "매디슨 황, '가족 문제'로 방한 취소…\"젠슨 황, 中 스파이와 연인\" 보도...",
-     "link": "http://weekly.chosun.com/news/articleView.html?idxno=56949",
-     "host": "weekly.chosun.com",
-     "at": "2026-11-08T01:19:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1bpa3ul",
-   "title": "'블루 쓰나미'에 휘청 코스피, 美증시 반등에 충격 벗어날까",
-   "firstSeen": "2026-11-07T01:44:00.000Z",
-   "lastSeen": "2026-11-08T03:42:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[이번주 증시 전망]코스피 5천선 반등 시험대",
-     "link": "http://www.kjdaily.com/article.php?aid=1794109152691516276",
-     "host": "kjdaily.com",
-     "at": "2026-11-08T03:42:00.000Z"
-    },
-    {
-     "title": "[가상자산 나침반] 비트코인 ‘블루 쓰나미’에 시험대…美 CPI·12월 금...",
-     "link": "https://www.dt.co.kr/article/12093741?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-08T03:30:00.000Z"
-    },
-    {
-     "title": "'블루 쓰나미'에 휘청했던 코스피, 美증시 반등에 회복할까",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261108100804d03",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-08T01:08:00.000Z"
-    },
-    {
-     "title": "'블루 쓰나미'에 휘청 코스피, 美증시 반등에 충격 벗어날까",
-     "link": "https://www.yna.co.kr/view/AKR20261107025700008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-07T21:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "ka5739",
-   "title": "급락장에 상장사 1/3 연중 최저가…ETF순자산 400조 깨져",
-   "firstSeen": "2026-11-07T21:25:00.000Z",
-   "lastSeen": "2026-11-08T04:22:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "지난주 국내 상장사 3분의 1이 ‘올해 최저가’",
-     "link": "https://www.munhwa.com/article/11629628?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-08T04:22:00.000Z"
-    },
-    {
-     "title": "지난주 상장사 3곳 중 1곳 올해 최저가 기록",
-     "link": "https://www.busan.com/view/busan/view.php?code=2026110812474791378",
-     "host": "busan.com",
-     "at": "2026-11-08T03:49:00.000Z"
-    },
-    {
-     "title": "상장사 3곳 중 1곳 연중 최저가...증권가 “바닥 근접”",
-     "link": "https://www.mk.co.kr/article/12201653",
-     "host": "mk.co.kr",
-     "at": "2026-11-08T03:48:00.000Z"
-    },
-    {
-     "title": "급락장에 상장사 1/3 연중 최저가…ETF순자산 400조 깨져",
-     "link": "https://www.nocutnews.co.kr/news/6603626?utm_source=naver&utm_medium=article&utm_campaign=20261108120321",
-     "host": "nocutnews.co.kr",
-     "at": "2026-11-08T03:04:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "163olel",
-   "title": "'블루 쓰나미' 증시 덮쳤지만…K콘텐츠·통신주는 웃었다",
-   "firstSeen": "2026-11-07T21:15:00.000Z",
-   "lastSeen": "2026-11-07T22:38:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "K콘텐츠·통신주 급등, 반도체는 하락…국내 증시 변화의 배경은?",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=884629",
-     "host": "gokorea.kr",
-     "at": "2026-11-07T22:38:00.000Z"
-    },
-    {
-     "title": "반도체 무너질 때 K콘텐츠·통신주는 웃었다…미국 중간선거 이후 희비...",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=502107",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-07T21:36:00.000Z"
-    },
-    {
-     "title": "'블루 쓰나미' 증시 덮쳤지만…K콘텐츠·통신주는 웃었다",
-     "link": "https://www.yna.co.kr/view/AKR20261107022900008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-07T21:15:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1j1bg0r",
-   "title": "물가는 3% 육박, 코스피는 5000선 위태…금리 결정 앞둔 한은 딜레마",
-   "firstSeen": "2026-11-06T23:08:00.000Z",
-   "lastSeen": "2026-11-08T04:40:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[주간증시전망] 폭락장 맞은 코스피…5000선 향방 가를 美 물가·AI 실적",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1730827",
-     "host": "ebn.co.kr",
-     "at": "2026-11-08T04:40:00.000Z"
-    },
-    {
-     "title": "[주간증시전망] 5000선 턱걸이한 코스피, AI 수익성·美 물가에 반등 달...",
-     "link": "https://www.viva100.com/article/20261107500018",
-     "host": "viva100.com",
-     "at": "2026-11-08T01:18:00.000Z"
-    },
-    {
-     "title": "물가는 3% 육박, 코스피는 5000선 위태…금리 결정 앞둔 한은 딜레마",
-     "link": "https://www.news1.kr/economy/trend/6346517",
+     "title": "미국 민주당 의회 장악에 환율 급등",
+     "link": "https://www.news1.kr/photos/8202775",
      "host": "news1.kr",
-     "at": "2026-11-07T22:05:00.000Z"
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "美 민주당 의회 탈환에 증시 촉각… SK하이닉스 다롄 인허가 변수 부상",
+     "link": "https://www.g-enews.com/view.php?ud=202611080947137259fbbec65dfb_1",
+     "host": "g-enews.com",
+     "at": "2026-11-08T01:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.5,
+    "score": 46,
+    "spike": 2.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -699,131 +577,75 @@
    }
   },
   {
-   "id": "1q8m3ei",
-   "title": "‘빚투’ 반대매매 막으려…신용 담보비율 유지 의무 한시적 면제",
-   "firstSeen": "2026-11-08T03:02:00.000Z",
-   "lastSeen": "2026-11-08T03:02:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1zfm07",
+   "title": "환율 급등…6개월 만에 최대폭",
+   "firstSeen": "2026-11-06T07:13:00.000Z",
+   "lastSeen": "2026-11-08T05:15:00.000Z",
+   "count": 2,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "달러·원 환율 급등…6개월 만에 최대폭",
+     "link": "https://www.news1.kr/photos/8202770",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    },
+    {
+     "title": "환율 급등…6개월 만에 최대폭",
+     "link": "https://www.news1.kr/photos/8202776",
+     "host": "news1.kr",
+     "at": "2026-11-08T05:15:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 2.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "코스피 -6.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "13sc83p",
+   "title": "국민 재테크 수단이라더니…ETF 시장 400조원 붕괴, 개인 매수에도 속수...",
+   "firstSeen": "2026-11-07T21:28:00.000Z",
+   "lastSeen": "2026-11-07T21:28:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
     "politics",
-    "market"
+    "trade",
+    "fx"
    ],
    "critical": [],
    "links": [
     {
-     "title": "내일부터 신용거래 담보비율 의무 3개월 면제",
-     "link": "https://www.etoday.co.kr/news/view/2645255",
-     "host": "etoday.co.kr",
-     "at": "2026-11-08T03:02:00.000Z"
-    },
-    {
-     "title": "이틀 새 11% 빠진 코스피에 …금감원, 담보비율 유지 의무 한시 면제",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026110620263487637",
-     "host": "newsway.co.kr",
-     "at": "2026-11-08T03:02:00.000Z"
-    },
-    {
-     "title": "‘빚투’ 반대매매 막으려…신용 담보비율 유지 의무 한시적 면제",
-     "link": "https://www.hani.co.kr/arti/economy/finance/1286270.html",
-     "host": "hani.co.kr",
-     "at": "2026-11-08T03:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "vui497",
-   "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
-   "firstSeen": "2026-11-07T21:02:00.000Z",
-   "lastSeen": "2026-11-07T23:01:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "energy",
-    "market",
-    "credit"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'블루 웨이브 쇼크'에 휘청인 코스피…반등 열쇠는 [주간전망]",
-     "link": "https://www.hankyung.com/article/2026110609346",
-     "host": "hankyung.com",
-     "at": "2026-11-07T23:01:00.000Z"
-    },
-    {
-     "title": "[주간증시전망] ‘블루 웨이브’ 여파 지속… 美 물가·코어위브 실적 ...",
-     "link": "https://biz.chosun.com/stock/stock_general/2026/11/08/ZIV2LEUPO5BDVN7IKZPX2H3CMQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-07T21:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 27,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "코스피 -6.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "g5atvg",
-   "title": "증시 급락에 PEF 투자기업도 주가도 '뚝'…지분 가치 하락 부담",
-   "firstSeen": "2026-11-07T21:30:00.000Z",
-   "lastSeen": "2026-11-07T22:06:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "증시 폭락에 PEF도 비상…투자기업 주가 반토막, 엑시트 '빨간불'",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=502116",
+     "title": "국민 재테크 수단이라더니…ETF 시장 400조원 붕괴, 개인 매수에도 속수...",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=502104",
      "host": "pinpointnews.co.kr",
-     "at": "2026-11-07T22:06:00.000Z"
-    },
-    {
-     "title": "증시 급락에 PEF 투자기업도 주가도 '뚝'…지분 가치 하락 부담",
-     "link": "https://www.yna.co.kr/view/AKR20261106190400008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-07T21:30:00.000Z"
+     "at": "2026-11-07T21:28:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 0.5,
+    "score": 43,
+    "spike": 2.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -838,35 +660,31 @@
    }
   },
   {
-   "id": "1crkmfu",
-   "title": "[주간증시전망]폭락했던 美 나스닥 진정세…코스피, 이번주 반등할까",
-   "firstSeen": "2026-11-07T22:00:00.000Z",
-   "lastSeen": "2026-11-08T05:10:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "fa082f",
+   "title": "'블루쓰나미' 4천800조 하루 새 날아갔다…초대형 투매 파동도",
+   "firstSeen": "2026-11-08T04:55:00.000Z",
+   "lastSeen": "2026-11-08T04:55:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "market"
+    "politics",
+    "fx",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "폭락한 코스피, 이번 주 반등할까…美 증시 회복에 '촉각'",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=928463",
-     "host": "namdonews.com",
-     "at": "2026-11-08T05:10:00.000Z"
-    },
-    {
-     "title": "[주간증시전망]폭락했던 美 나스닥 진정세…코스피, 이번주 반등할까",
-     "link": "https://www.newsis.com/view/NISX20261106_0003858451",
-     "host": "newsis.com",
-     "at": "2026-11-07T22:00:00.000Z"
+     "title": "'블루쓰나미' 4천800조 하루 새 날아갔다…초대형 투매 파동도",
+     "link": "https://economist.co.kr/article/view/ecn202611080006",
+     "host": "economist.co.kr",
+     "at": "2026-11-08T04:55:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 0.5,
+    "score": 43,
+    "spike": 2.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -881,52 +699,179 @@
    }
   },
   {
-   "id": "r7e6h3",
-   "title": "[이호연의 D톡스] 美 ‘블루쓰나미’에 금리·유가 하락…한은 긴축 셈...",
-   "firstSeen": "2026-11-08T00:01:00.000Z",
-   "lastSeen": "2026-11-08T03:30:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "cr4x94",
+   "title": "스테이블코인은 달러패권의 반역자인가 새 외투인가[박태형의 머니인사...",
+   "firstSeen": "2026-11-07T21:01:00.000Z",
+   "lastSeen": "2026-11-07T21:01:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "rates",
-    "energy",
-    "market"
+    "fx"
    ],
    "critical": [],
    "links": [
     {
-     "title": "금리 인상 저울질하는 한은…코스피 폭락 변수되나",
-     "link": "https://news.bizwatch.co.kr/article/finance/2026/11/06/0021",
-     "host": "news.bizwatch.co.kr",
-     "at": "2026-11-08T03:30:00.000Z"
-    },
-    {
-     "title": "[이호연의 D톡스] 美 ‘블루쓰나미’에 금리·유가 하락…한은 긴축 셈...",
-     "link": "https://www.ddaily.co.kr/page/view/2026110617585825405",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-08T00:01:00.000Z"
+     "title": "스테이블코인은 달러패권의 반역자인가 새 외투인가[박태형의 머니인사...",
+     "link": "https://magazine.hankyung.com/business/article/202611032737b",
+     "host": "magazine.hankyung.com",
+     "at": "2026-11-07T21:01:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 0.5,
+    "score": 41,
+    "spike": 2.9,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.02,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
      "unit": "%",
-     "z": -2.1
+     "z": 2
     },
     "why": [
-     "코스피 -6.02%(평소의 2.1배)"
+     "원/달러 +1.21%(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "12iebq3",
+   "title": "1320원서 1350원대로…수출 호조 속 환율 발목 잡은 '외국인 매도'",
+   "firstSeen": "2026-11-06T08:59:00.000Z",
+   "lastSeen": "2026-11-07T22:50:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "1320원서 1350원대로…수출 호조 속 환율 발목 잡은 '외국인 매도'",
+     "link": "https://www.news1.kr/economy/trend/6346266",
+     "host": "news1.kr",
+     "at": "2026-11-07T22:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 2.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "원/달러 +1.21%(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "a91q2i",
+   "title": "[외환-주간] 블루웨이브 충격 지속…'美 CPI·커스터디·달러선물' 주시",
+   "firstSeen": "2026-11-08T04:02:00.000Z",
+   "lastSeen": "2026-11-08T04:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[외환-주간] 블루웨이브 충격 지속…'美 CPI·커스터디·달러선물' 주시",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443636",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-08T04:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 2.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "원/달러 +1.21%(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "v2yp9k",
+   "title": "美 블루웨이브 덮친 외환시장…1360원대 환율 방향 가를 변수는",
+   "firstSeen": "2026-11-08T04:03:00.000Z",
+   "lastSeen": "2026-11-08T04:03:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 블루웨이브 덮친 외환시장…1360원대 환율 방향 가를 변수는",
+     "link": "https://www.mt.co.kr/economy/2026/11/08/2026110810105359621",
+     "host": "mt.co.kr",
+     "at": "2026-11-08T04:03:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 2.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 1.21,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "원/달러 +1.21%(평소의 2배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-08T05:27:23.278Z",
+   "id": "st39n2",
+   "level": "caution",
+   "title": "트럼프, 중간선거 참패 사흘 만에 이란 공습…“방공시설 무력화”",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.02%(평소의 2.1배)"
+   ],
+   "link": "https://www.edaily.co.kr/News/Read?newsId=01371046645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-08T05:27:23.278Z",
+   "id": "xl5ep5",
+   "level": "caution",
+   "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
+   "why": [
+    "핵심 단어",
+    "원/달러 +1.21%(평소의 2배)"
+   ],
+   "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5229602",
+   "delivered": false
+  },
   {
    "at": "2026-11-08T04:27:04.001Z",
    "id": "st39n2",
@@ -1141,30 +1086,6 @@
     "코스피 -6.02%(평소의 2.1배)"
    ],
    "link": "https://www.ytn.co.kr/_ln/0104_202611071839345699",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-07T13:27:15.884Z",
-   "id": "xl5ep5",
-   "level": "caution",
-   "title": "협상 중에도 호르무즈 '일촉즉발'···美·이란 무력 시위",
-   "why": [
-    "핵심 단어",
-    "원/달러 +1.21%(평소의 2배)"
-   ],
-   "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5229602",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-07T13:05:49.103Z",
-   "id": "1h4hqdc",
-   "level": "caution",
-   "title": "\"코스피보다 더 하네\"…코스닥, 계엄 당시 수준으로 회귀",
-   "why": [
-    "핵심 단어",
-    "코스피 -6.02%(평소의 2.1배)"
-   ],
-   "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3040119",
    "delivered": false
   }
  ],
