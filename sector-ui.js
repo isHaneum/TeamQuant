@@ -137,7 +137,7 @@ function renderHome() {
   if (!S.positions.length) { card.hidden = true; return; } card.hidden = false;
   const exp = exposure();
   card.innerHTML = `<header style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h3 style="margin:0;display:flex;align-items:center">내 섹터 분포 ${tip('보유 종목을 섹터로 묶어 어디에 몰려 있는지, 성향별 상한을 넘는 섹터가 있는지, 내 종목에 직접 걸린 정책·정치 이슈가 몇 건인지 봅니다. 자세한 수익률·이슈·국가별 방향은 섹터 화면에 있습니다.')}</h3><button type="button" class="text-button" id="home-sectors-go">섹터 화면</button></header><div style="margin-top:10px">${exposureHtml(exp, { compact: true })}</div>`;
-  $('#home-sectors-go').onclick = () => $('[data-view="sectors"]')?.click();
+  $('#home-sectors-go').onclick = () => { if (exp.top && sectorById(exp.top.id)) { S.sel = exp.top.id; renderTiles(); renderDetail(); } $('[data-view="sectors"]')?.click(); }; // 홈에서 오면 내 가장 큰 섹터를 먼저 보여 준다
 }
 
 // ── 자료·이벤트 ──────────────────────────────────────────────
