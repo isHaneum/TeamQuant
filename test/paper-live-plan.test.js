@@ -41,7 +41,8 @@ test('종목 가설: 등록하면 기본 계획에 한도만큼 얹히고 기본
   assert.throws(() => pl.hypothesis('add', { symbol: '000660', name: 'SK하이닉스', capPct: 20, thesis: 'x' }), /1~10%/);
   assert.throws(() => pl.hypothesis('add', { symbol: '000660', name: 'SK하이닉스', capPct: 5, thesis: '' }), /근거/);
   const h = pl.hypothesis('add', { symbol: '000660', name: 'SK하이닉스', capPct: 5, horizonMonths: 6, thesis: 'HBM 수요로 성장', breakIf: '분기 매출 성장 10% 아래', evidence: ['매출 +65%'] });
-  assert.equal(h.status, 'open'); assert.ok(h.closesAt > h.openedAt);
+  assert.equal(h.status, 'proposed', '등록은 승인 대기'); assert.ok(!(await pl.preview({})).items.some(i => i.symbol === '000660'), '승인 전엔 계획에 없음');
+  pl.hypothesis('approve', { id: h.id }); assert.equal(pl._ledger().hypotheses[0].status, 'open'); assert.ok(h.closesAt > h.openedAt);
   assert.throws(() => pl.hypothesis('add', { symbol: '000660', name: 'SK하이닉스', capPct: 3, thesis: '중복' }), /이미 열려/);
   const pv = await pl.preview({}); const plan = pv.items.map(i => i.symbol);
   assert.ok(plan.includes('000660'), '가설 종목이 할 일에 들어옴: ' + plan.join(','));

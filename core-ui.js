@@ -192,9 +192,12 @@ function cqRender(custom = false) {
 }
 // 허용 손실은 목표이지 보장이 아니다. 모델 추정(지금 보유의 하루 95% 손실 → 월 환산), 기본 계획의 과거 최대 낙폭, 충격 시나리오를 따로 보여 준다.
 let PLAN_DOC_RULES = null; fetch('/data/paper-plan.json').then(r => r.ok ? r.json() : null).then(d => { PLAN_DOC_RULES = d; if (cq.prefs) cqRisk(cq.prefs); }).catch(() => {});
+// 마지막 계산값은 화면 표시용으로만 기억한다(주문 허용 판단은 늘 최신 계산을 쓴다).
+const riskCacheKey = () => `teamQuantRiskCache:${sessionStorage.getItem('teamQuantSession') || 'guest'}:${document.body.dataset.account || 'none'}`;
 function cqRisk(p) {
-  const box = $('#cq-risk'); if (!box) return; const parts = [];
-  try { if (S.positions.length && Object.keys(S.risk).length) { const e = evaluate(state()); if (e.varNow?.ok && e.total > 0) { const d = e.varNow.var95 / e.total * 100; parts.push(`지금 보유의 하루 95% 손실 추정 <b>−${won(e.varNow.var95)}</b> (총자산의 ${d.toFixed(2)}%) → 월 환산 약 ${(d * Math.sqrt(21)).toFixed(1)}% (√21 · 날마다 독립 가정)`); } } } catch { }
+  const box = $('#cq-risk'); if (!box) return; const parts = []; let live = false;
+  try { if (S.positions.length && Object.keys(S.risk).length) { const e = evaluate(state()); if (e.varNow?.ok && e.total > 0) { const d = e.varNow.var95 / e.total * 100; live = true; const txt = `지금 보유의 하루 95% 손실 추정 <b>−${won(e.varNow.var95)}</b> (총자산의 ${d.toFixed(2)}%) → 월 환산 약 ${(d * Math.sqrt(21)).toFixed(1)}% (√21 · 날마다 독립 가정)`; parts.push(txt); try { localStorage.setItem(riskCacheKey(), JSON.stringify({ at: Date.now(), txt })); } catch { } } } } catch { }
+  if (!live) { try { const c = JSON.parse(localStorage.getItem(riskCacheKey()) || 'null'); if (c?.txt) parts.push(`${c.txt} <span class="cr-muted">(마지막 계산 ${new Date(c.at).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false })} · 시세를 받는 대로 갱신)</span>`); } catch { } }
   const v = PLAN_DOC_RULES?.validation; if (v) { const wins = (v.windows || []).filter(x => x.ok && x.plan?.rule), worst = wins.length ? Math.min(...wins.map(x => x.plan.rule.mdd)) : null, sc = v.scenarios || [], worstSc = sc.length ? Math.min(...sc.map(x => x.planPct)) : null; if (worst !== null) parts.push(`기본 계획 ${esc(PLAN_DOC_RULES.version)}의 2020~2026 최대 낙폭 <b>${worst}%</b>`); if (worstSc !== null) parts.push(`충격 시나리오 최악 <b>${worstSc}%</b> (${esc(sc.find(x => x.planPct === worstSc)?.name || '')})`); }
   box.innerHTML = `<p class="cr-muted"><b>한 달 ${p.prefs.lossMonthly}%는 허용 손실(목표)이지 보장이 아닙니다.</b> ${parts.length ? '모델 추정: ' + parts.join(' · ') + '.' : '보유 자료를 불러오면 모델 추정치를 함께 보여 줍니다.'} 급락장에서는 변동성과 상관이 함께 커져 추정보다 클 수 있습니다. 하루 한도는 그 날의 손실을 막는 것이 아니라 다음 날의 비중을 줄이는 장치입니다.</p>`;
 }

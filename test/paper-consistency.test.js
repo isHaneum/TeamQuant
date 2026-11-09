@@ -54,12 +54,12 @@ test('지수+현금: 국내·미국이 섞인 계획은 국가 비중대로 KODE
   const indexes = { KR: { symbol: '069500', name: 'KODEX 200', currency: 'KRW', candles: series['069500'] }, US: { symbol: 'SPY', name: 'S&P500 ETF', currency: 'USD', candles: candles(520, 500, 23) } };
   const from = series['005930'].at(-130).date, to = series['005930'].at(-1).date;
   const r = rehearse({ basket, capitalKrw: 10_000_000, rules, plan: { '005930': 30, SPYX: 50 }, candlesBySymbol: cs, fxCandles: series['KRW=X'], from, to, benchmark: indexes.KR, indexes });
-  assert.ok(r.ok); assert.equal(r.mix.name, 'KODEX 200 30% + S&P500 ETF 50% + 현금'); assert.ok(Math.abs(r.mix.share - 0.8) < 1e-9);
+  assert.ok(r.ok); assert.equal(r.mix.name, '국가 비중·현금 일치 지수 투자 (KODEX 200 30% + S&P500 ETF 50% + 현금 20%)'); assert.ok(Math.abs(r.mix.share - 0.8) < 1e-9);
   // 경로 검산: 첫날 100, 마지막 = 20 + 30×KODEX비율 + 50×(S&P500×환율)비율
   const kr = series['069500'], usx = indexes.US.candles, fx = series['KRW=X'], at = (arr, d) => arr.filter(c => c.date <= d).at(-1).close;
   const d0 = r.from, d1 = r.to, want = 20 + 30 * at(kr, d1) / at(kr, d0) + 50 * (at(usx, d1) * at(fx, d1)) / (at(usx, d0) * at(fx, d0));
   assert.ok(Math.abs(r.series.at(-1).mix - want) < 1e-6, `${r.series.at(-1).mix} vs ${want}`); assert.ok(Math.abs(r.series[0].mix - 100) < 1e-9);
   // 미국 지수가 없으면 국내 지수로 모은다
   const r2 = rehearse({ basket, capitalKrw: 10_000_000, rules, plan: { '005930': 30, SPYX: 50 }, candlesBySymbol: cs, fxCandles: series['KRW=X'], from, to, benchmark: indexes.KR, indexes: { KR: indexes.KR } });
-  assert.equal(r2.mix.name, 'KODEX 200 80% + 현금');
+  assert.equal(r2.mix.name, '국가 비중·현금 일치 지수 투자 (KODEX 200 80% + 현금 20%)');
 });
