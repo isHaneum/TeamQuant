@@ -68,7 +68,7 @@ test('점검 주기: 월 1회는 금요일에 보내지 않고 그 달 처음에
   pl = createPaperLive({ client: b.client, store: createLedgerStore(dir), readMarket, now: () => friday() + 7 * 864e5, defaultPlan: () => base, defaultPlanVersion: () => 'PP1' });
   const r2 = await pl.autoRun(); assert.equal(r2.ran, false);
   // 월 1회: 그 달 첫 확인에 보낸다(월간 점검), 같은 달 금요일엔 다시 안 보낸다
-  pl.setPrefs({ rules: {}, cadence: 'monthly' });
+  pl.setPrefs({ rules: {}, cadence: 'monthly', reason: '테스트: 월 1회로 바꿈' });
   const r3 = await pl.autoRun(); assert.ok(r3.ran && /월간 점검|계획 변경/.test(r3.reason), JSON.stringify(r3));
   pl = createPaperLive({ client: b.client, store: createLedgerStore(dir), readMarket, now: () => friday() + 14 * 864e5, defaultPlan: () => base, defaultPlanVersion: () => 'PP1' });
   const r4 = await pl.autoRun(); assert.equal(r4.ran, false, JSON.stringify(r4));

@@ -63,7 +63,7 @@ async function loadAll() {
   }));
   await Promise.all([ordersP, cashP]);
   if (epoch !== S.epoch) return;
-  renderToday(); renderRules(); renderPrecheckChips(); if ($('.view.active')?.dataset.page === 'report') void renderReport();
+  renderToday(); renderRules(); renderPrecheckChips(); if (cq.prefs) cqRisk(cq.prefs); if ($('.view.active')?.dataset.page === 'report') void renderReport();
 }
 
 window.addEventListener('teamquant:asset-snapshot', e => {
@@ -130,6 +130,8 @@ const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>�
       <div class="cq-q"><span>3. 얼마나 자주 보겠습니까?</span><div class="cp-seg" role="radiogroup"><label><input type="radio" name="cq-cad" value="weekly"><span>주 1회</span></label><label><input type="radio" name="cq-cad" value="monthly"><span>월 1회</span></label><label><input type="radio" name="cq-cad" value="urgent"><span>급할 때만</span></label></div><small class="cr-muted" id="cq-cad-d"></small></div>
     </div>
     <ul class="cq-explain" id="cq-explain"></ul>
+    <div class="cq-risk" id="cq-risk"></div>
+    <div class="pp-form" style="margin-top:10px"><label class="ck-field"><span>바꾸는 근거 (PC 적용 때 · 처음은 비워도 됨)</span><input id="cq-reason" placeholder="예: 11월 기록에서 하루 한도 초과일 3/15 · 허용 손실 한 단계 낮춤"></label><label class="ck-field"><span>기대 효과</span><input id="cq-expect" placeholder="예: 한도 초과일 10% 아래"></label></div>
     <div class="cr-actions"><button type="button" class="primary" id="cq-apply">이 규칙으로 저장</button><button type="button" class="secondary" id="cq-pc">PC 모의계좌에도 적용</button><span class="cr-muted" id="cq-pc-state"></span></div></article>
   <article class="cr-card"><header><h3>규칙 (세부) ${tip('세 질문으로 정한 뒤 숫자를 직접 손볼 수 있습니다. 손보면 위 선택은 "직접 조정"으로 표시됩니다.')}</h3><span class="cr-muted" id="cr-saved"></span></header><form id="cr-form" class="cr-rules"></form>
     <details class="cr-adv"><summary>추가 규칙</summary><div id="cr-adv"></div></details>
@@ -186,11 +188,20 @@ function cqRender(custom = false) {
   $('#cq-loss-d').textContent = LOSS_OPTIONS.find(o => o.id === p.prefs.lossMonthly)?.desc || ''; $('#cq-sec-d').textContent = SECTOR_OPTIONS.find(o => o.id === p.prefs.sectors)?.desc || ''; $('#cq-cad-d').textContent = CADENCE_OPTIONS.find(o => o.id === p.prefs.cadence)?.desc || '';
   $('#cq-explain').innerHTML = p.explain.map(t => `<li>${esc(t)}</li>`).join('');
   $('#cr-quick-state').textContent = custom ? '지금 규칙은 직접 조정한 값입니다' : '';
+  cqRisk(p);
+}
+// 허용 손실은 목표이지 보장이 아니다. 모델 추정(지금 보유의 하루 95% 손실 → 월 환산), 기본 계획의 과거 최대 낙폭, 충격 시나리오를 따로 보여 준다.
+let PLAN_DOC_RULES = null; fetch('/data/paper-plan.json').then(r => r.ok ? r.json() : null).then(d => { PLAN_DOC_RULES = d; if (cq.prefs) cqRisk(cq.prefs); }).catch(() => {});
+function cqRisk(p) {
+  const box = $('#cq-risk'); if (!box) return; const parts = [];
+  try { if (S.positions.length && Object.keys(S.risk).length) { const e = evaluate(state()); if (e.varNow?.ok && e.total > 0) { const d = e.varNow.var95 / e.total * 100; parts.push(`지금 보유의 하루 95% 손실 추정 <b>−${won(e.varNow.var95)}</b> (총자산의 ${d.toFixed(2)}%) → 월 환산 약 ${(d * Math.sqrt(21)).toFixed(1)}% (√21 · 날마다 독립 가정)`); } } } catch { }
+  const v = PLAN_DOC_RULES?.validation; if (v) { const wins = (v.windows || []).filter(x => x.ok && x.plan?.rule), worst = wins.length ? Math.min(...wins.map(x => x.plan.rule.mdd)) : null, sc = v.scenarios || [], worstSc = sc.length ? Math.min(...sc.map(x => x.planPct)) : null; if (worst !== null) parts.push(`기본 계획 ${esc(PLAN_DOC_RULES.version)}의 2020~2026 최대 낙폭 <b>${worst}%</b>`); if (worstSc !== null) parts.push(`충격 시나리오 최악 <b>${worstSc}%</b> (${esc(sc.find(x => x.planPct === worstSc)?.name || '')})`); }
+  box.innerHTML = `<p class="cr-muted"><b>한 달 ${p.prefs.lossMonthly}%는 허용 손실(목표)이지 보장이 아닙니다.</b> ${parts.length ? '모델 추정: ' + parts.join(' · ') + '.' : '보유 자료를 불러오면 모델 추정치를 함께 보여 줍니다.'} 급락장에서는 변동성과 상관이 함께 커져 추정보다 클 수 있습니다. 하루 한도는 그 날의 손실을 막는 것이 아니라 다음 날의 비중을 줄이는 장치입니다.</p>`;
 }
 function cqInit() { const saved = loadSaved(); const n = saved?.prefs?.lossMonthly ? { ...saved.prefs, custom: false } : nearestPreset(current().rules); cqSet(n); cqRender(n.custom); }
 rulesPage.querySelectorAll('[name="cq-loss"],[name="cq-sec"],[name="cq-cad"]').forEach(r => r.onchange = () => cqRender(false));
 $('#cq-apply').onclick = () => { const p = cq.prefs || presetRules(cqRead()); const saved = loadSaved(); if (!save({ rules: p.rules, plan: saved?.plan || null, prefs: { ...p.prefs, sectorCap: p.sectorCap, cadence: p.cadence } })) { $('#cr-err').textContent = '이 브라우저에 저장하지 못했습니다.'; return; } $('#cr-quick-state').textContent = '저장했습니다'; renderRules(); renderToday(); };
-$('#cq-pc').onclick = async () => { const p = cq.prefs || presetRules(cqRead()), st = $('#cq-pc-state'); st.textContent = 'PC에 보내는 중…'; try { const r = await privateRead('paper-live-prefs', { rules: p.rules, cadence: p.cadence, sectorCap: p.sectorCap, prefs: p.prefs }); st.textContent = `PC 모의계좌 규칙 저장 ${String(r.savedAt).slice(0, 16).replace('T', ' ')} · 점검 ${CADENCE_OPTIONS.find(o => o.id === r.cadence)?.label || r.cadence}`; } catch (e) { st.textContent = e?.status === 503 ? 'PC에 모의투자 키가 없습니다.' : (e?.message || 'PC 연결이 필요합니다(설정에서 연결).'); } };
+$('#cq-pc').onclick = async () => { const p = cq.prefs || presetRules(cqRead()), st = $('#cq-pc-state'); st.textContent = 'PC에 보내는 중…'; try { const r = await privateRead('paper-live-prefs', { rules: p.rules, cadence: p.cadence, sectorCap: p.sectorCap, prefs: p.prefs, reason: $('#cq-reason')?.value.trim() || '', expected: $('#cq-expect')?.value.trim() || '' }); st.textContent = `PC 모의계좌 규칙 저장 ${String(r.savedAt).slice(0, 16).replace('T', ' ')} · 점검 ${CADENCE_OPTIONS.find(o => o.id === r.cadence)?.label || r.cadence}${r.changed?.length && !r.changed.includes('init') ? ' · 변경 ' + r.changed.join(', ') + ' (이력에 기록)' : ''}`; void renderReview(); } catch (e) { st.textContent = e?.status === 503 ? 'PC에 모의투자 키가 없습니다.' : (e?.message || 'PC 연결이 필요합니다(설정에서 연결).'); } };
 // ── 기록으로 점검 ──
 async function renderReview() {
   const box = $('#cr-review-body'); if (!box) return;
@@ -198,7 +209,7 @@ async function renderReview() {
     const st = await privateRead('paper-live-status'); let indexPct = null;
     try { const m0 = st.marks?.[0]; if (m0) { const d = await fetchCandles('069500', 'KRW', '1y'); const c = (d.candles || []).filter(x => x.close > 0), base = c.find(x => x.date >= m0.date) || c[0]; indexPct = base ? c.at(-1).close / base.close - 1 : null; } } catch { }
     const r = reviewRules(st, current().rules, { indexPct });
-    box.innerHTML = `<p class="cr-muted">모의계좌 ${esc(st.account || '')} · 운용 ${r.days}일 · 규칙 ${st.prefs?.savedAt ? 'PC 저장 ' + String(st.prefs.savedAt).slice(0, 10) : '기본값'} · 점검 ${CADENCE_OPTIONS.find(o => o.id === (st.prefs?.cadence || 'weekly'))?.label || ''}</p>
+    box.innerHTML = `<p class="cr-muted">모의계좌 ${esc(st.label || st.account || '')} · 운용 ${r.days}일 · 규칙 ${st.prefs?.savedAt ? 'PC 저장 ' + String(st.prefs.savedAt).slice(0, 10) : '기본값'} · 점검 ${CADENCE_OPTIONS.find(o => o.id === (st.prefs?.cadence || 'weekly'))?.label || ''}</p>
       <ul class="cr-find">${r.findings.map(f => `<li><span class="ct-chip ${f.tone > 0 ? 'ok' : f.tone < 0 ? 'bad' : 'na'}">${f.tone > 0 ? '좋음' : f.tone < 0 ? '주의' : '참고'}</span><div><b>${esc(f.text)}</b>${f.suggest ? `<small>${esc(f.suggest)}</small>` : ''}</div></li>`).join('')}</ul>
       ${r.findings.some(f => f.suggest) ? '<p class="cr-muted">제안은 지난 기록의 측정에서 나온 것이고, 바꾸려면 위 세 질문에서 고르고 "PC 모의계좌에도 적용"을 누르십시오.</p>' : ''}`;
   } catch (e) { box.innerHTML = `<p class="cr-muted">${esc(e?.status === 503 ? 'PC에 모의투자 키가 없어 기록이 없습니다.' : 'PC 모의계좌에 연결되어 있지 않습니다. 설정에서 PC를 연결하면 기록으로 점검합니다.')}</p>`; }

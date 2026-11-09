@@ -2,7 +2,7 @@
  "version": "PUB1-2026-11-09",
  "engine": "L4-2026-11-09",
  "label": "한투 모의계좌 (팀 공용)",
- "asOf": "2026-11-09T08:55:54.726Z",
+ "asOf": "2026-11-09T08:56:46.966Z",
  "mode": "vps",
  "public": true,
  "since": "2026-11-09",
@@ -20,8 +20,8 @@
   "US": {
    "open": false,
    "reason": "미국 장 시작 전입니다(09:30 ET = 한국 23:30).",
-   "openAt": "2026-11-09T14:30:00.723Z",
-   "closeAt": "2026-11-09T21:00:00.723Z",
+   "openAt": "2026-11-09T14:30:00.964Z",
+   "closeAt": "2026-11-09T21:00:00.964Z",
    "market": "US"
   }
  },
@@ -43,7 +43,7 @@
   "duplicateWindowMin": 10,
   "allowLive": false
  },
- "fx": 1350.0699462890625,
+ "fx": 1349.97998046875,
  "balance": {
   "cash": 62669084,
   "cashUsd": 0,
@@ -882,7 +882,110 @@
   "orders": 17
  },
  "prefsHistory": [],
- "baseline": null,
+ "baseline": {
+  "at": "2026-11-09T08:56:21.860Z",
+  "from": "2026-11-09",
+  "capitalKrw": 99378704,
+  "plan": {
+   "105560": {
+    "pct": 5.5,
+    "name": "KB금융",
+    "currency": "KRW"
+   },
+   "207940": {
+    "pct": 3,
+    "name": "삼성바이오로직스",
+    "currency": "KRW"
+   },
+   "329180": {
+    "pct": 3.5,
+    "name": "HD현대중공업",
+    "currency": "KRW"
+   },
+   "005930": {
+    "pct": 2.5,
+    "name": "삼성전자",
+    "currency": "KRW"
+   },
+   "000660": {
+    "pct": 2,
+    "name": "SK하이닉스",
+    "currency": "KRW"
+   },
+   "005380": {
+    "pct": 4,
+    "name": "현대차",
+    "currency": "KRW"
+   },
+   "012450": {
+    "pct": 3,
+    "name": "한화에어로스페이스",
+    "currency": "KRW"
+   },
+   "035420": {
+    "pct": 4.5,
+    "name": "NAVER",
+    "currency": "KRW"
+   },
+   "069500": {
+    "pct": 3,
+    "name": "KODEX 200",
+    "currency": "KRW"
+   },
+   "SPY": {
+    "pct": 8,
+    "name": "S&P500 ETF",
+    "currency": "USD"
+   },
+   "QQQ": {
+    "pct": 5.5,
+    "name": "나스닥100 ETF",
+    "currency": "USD"
+   },
+   "MSFT": {
+    "pct": 5,
+    "name": "마이크로소프트",
+    "currency": "USD"
+   },
+   "NVDA": {
+    "pct": 3.5,
+    "name": "엔비디아",
+    "currency": "USD"
+   },
+   "JNJ": {
+    "pct": 6.5,
+    "name": "존슨앤드존슨",
+    "currency": "USD"
+   },
+   "JPM": {
+    "pct": 6.5,
+    "name": "JP모건",
+    "currency": "USD"
+   },
+   "LMT": {
+    "pct": 4.5,
+    "name": "록히드마틴",
+    "currency": "USD"
+   },
+   "TLT": {
+    "pct": 14.5,
+    "name": "미국 장기채 ETF",
+    "currency": "USD"
+   }
+  },
+  "rules": {
+   "maxSingle": 25,
+   "minCash": 10,
+   "dailyLoss": 2.5,
+   "volTarget": 15,
+   "perAssetVol": false,
+   "trendUS": true,
+   "letWinnersRun": true,
+   "noLeverage": true,
+   "maxTrades30": 8
+  },
+  "planVersion": "PP1-2026-11-09"
+ },
  "planVersionNow": "PP1-2026-11-09",
  "defaultPlanVersion": "PP1-2026-11-09",
  "hasDefaultPlan": true,
