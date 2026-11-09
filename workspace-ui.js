@@ -13,6 +13,7 @@ import '/issues-ui.js';
 import '/response-ui.js';
 import '/core-ui.js';
 import '/paper-ui.js';
+import '/paper-account-ui.js';
 import '/sector-ui.js';
 import '/company-ui.js';
 import '/growth-ui.js';

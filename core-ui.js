@@ -33,7 +33,7 @@ function addView(id, label, html) {
 
 // ── 상태 ─────────────────────────────────────────────────────
 const S = { snap: null, positions: [], fx: null, cash: null, cashSource: '', orders: null, candles: {}, risk: {}, series: {}, fxCandles: [], loading: null, epoch: 0 };
-const profileKey = () => `teamQuantRules:${sessionStorage.getItem('teamQuantSession') || 'guest'}${S.snap?.demo ? ':demo' : ''}`;
+const profileKey = () => `teamQuantRules:${sessionStorage.getItem('teamQuantSession') || 'guest'}${S.snap?.paper ? ':paper' : S.snap?.demo ? ':demo' : ''}`;
 function loadSaved() { try { const v = JSON.parse(localStorage.getItem(profileKey()) || 'null'); if (v?.rules) return v; } catch {} return null; }
 function save(v) { try { localStorage.setItem(profileKey(), JSON.stringify({ ...v, version: RULES_VERSION, savedAt: new Date().toISOString() })); return true; } catch { return false; } }
 function current() {
@@ -55,7 +55,7 @@ async function loadAll() {
   for (const [s, v] of Object.entries(plan)) if (!want.has(s)) want.set(s, { symbol: s, name: v?.name || stockName(s), currency: v?.currency || 'KRW' });
   const fxP = fetchCandles('KRW=X', 'USD', '2y').then(d => { S.fxCandles = d.candles; }).catch(() => {});
   const ordersP = (async () => { try { S.orders = S.snap?.demo ? S.snap.demoOrders.orders : (await privateRead('order-history', { from: daysAgo(190), to: today(), status: 'CLOSED', symbol: '' })).orders; } catch { S.orders = null; } })();
-  const cashP = (async () => { if (S.snap?.demo) { S.cash = S.snap.demoCash; S.cashSource = '예시'; return; } if (Number.isFinite(S.cash)) return; try { const c = await privateRead('cash-get'); if (Number.isFinite(c?.latest?.amount)) { S.cash = c.latest.amount; S.cashSource = 'PC 기록 ' + String(c.latest.recordedAt || '').slice(0, 10); } } catch {} })();
+  const cashP = (async () => { if (S.snap?.demo) { S.cash = S.snap.demoCash; S.cashSource = S.snap.paper ? '모의계좌 예수금' : '예시'; return; } if (Number.isFinite(S.cash)) return; try { const c = await privateRead('cash-get'); if (Number.isFinite(c?.latest?.amount)) { S.cash = c.latest.amount; S.cashSource = 'PC 기록 ' + String(c.latest.recordedAt || '').slice(0, 10); } } catch {} })();
   await fxP;
   await Promise.all([...want.values()].map(async p => {
     try { const d = await fetchCandles(p.symbol, p.currency, '2y'); S.candles[p.symbol] = d.candles; S.risk[p.symbol] = assetRisk(d.candles, { market: marketOf(p) }); S.series[p.symbol] = krwReturns(d.candles, p.currency, S.fxCandles); }
@@ -69,11 +69,11 @@ async function loadAll() {
 window.addEventListener('teamquant:asset-snapshot', e => {
   const snap = e.detail || {}; S.snap = snap; S.fx = snap.fx?.midRate || null;
   S.positions = (snap.positions || []).map(p => ({ symbol: p.symbol, name: p.name, currency: p.currency, quantity: p.quantity, valueKrw: p.currency === 'USD' ? (S.fx ? p.value * S.fx : null) : p.value })).filter(p => Number.isFinite(p.valueKrw));
-  if (!snap.demo && S.cashSource === '예시') { S.cash = null; S.cashSource = ''; }
+  if (!snap.demo && /^(예시|모의계좌)/.test(S.cashSource)) { S.cash = null; S.cashSource = ''; }
   S.loading = loadAll();
 });
 window.addEventListener('teamquant:asset-clear', () => { Object.assign(S, { snap: null, positions: [], cash: null, cashSource: '', orders: null, risk: {}, series: {}, candles: {} }); renderToday(); renderRules(); });
-window.addEventListener('teamquant:cash', e => { if (Number.isFinite(e.detail?.amount)) { S.cash = e.detail.amount; S.cashSource = 'PC 기록'; renderToday(); renderRules(); } });
+window.addEventListener('teamquant:cash', e => { if (Number.isFinite(e.detail?.amount)) { S.cash = e.detail.amount; S.cashSource = e.detail.note || 'PC 기록'; renderToday(); renderRules(); } });
 
 // ── ② 오늘 점검(홈) ──────────────────────────────────────────
 const CHECK_TIP = '정해 둔 규칙과 계획 비중으로 지금 계좌를 점검합니다.\n맞추는 때: 그 주 마지막 거래일 종가(주 1회). 하루 손실이 한도의 1.25배를 넘거나, 레버리지 상품이 있거나, 한 종목이 상한의 1.2배를 넘으면 바로.\n계획 금액의 10% 넘게 차이 날 때만 맞춥니다.\n2012~2026 네 가지 포트폴리오에서 같은 엔진으로 따랐을 때: 최대 손실은 그냥 보유의 절반 안팎, 위험 대비 수익은 비슷하거나 높음, 수익률은 낮아짐(규칙 화면의 근거 참고).';
@@ -213,7 +213,7 @@ function renderCash() {
   box.innerHTML = `${Number.isFinite(S.cash) ? `<p class="cr-cash-now"><b>${won(S.cash)}</b><small>${esc(S.cashSource)}</small></p>` : '<p class="cr-muted">기록된 현금이 없습니다. 현금 규칙은 확인할 수 없습니다.</p>'}
     <form id="cr-cash-form" class="cr-addrow"><input id="cr-cash-in" type="number" min="0" step="any" inputmode="numeric" placeholder="지금 현금(원)"><button type="submit" class="secondary">기록</button></form><p class="cr-muted" id="cr-cash-state" role="status"></p>`;
   $('#cr-cash-form').onsubmit = async ev => { ev.preventDefault(); const amount = Number($('#cr-cash-in').value); if (!(amount >= 0)) return;
-    if (S.snap?.demo) { S.cash = amount; S.cashSource = '예시(저장 안 함)'; renderRules(); renderToday(); return; }
+    if (S.snap?.demo) { S.cash = amount; S.cashSource = `${S.snap.paper ? '모의계좌' : '예시'}(저장 안 함)`; renderRules(); renderToday(); return; }
     try { const c = await privateRead('cash-set', { amount, note: '규칙 화면' }); S.cash = c?.latest?.amount ?? amount; S.cashSource = 'PC 기록'; window.dispatchEvent(new CustomEvent('teamquant:cash', { detail: { amount: S.cash, recordedAt: new Date().toISOString() } })); renderRules(); renderToday(); }
     catch (e2) { $('#cr-cash-state').textContent = `PC에 기록하지 못했습니다: ${e2.message}`; } };
 }

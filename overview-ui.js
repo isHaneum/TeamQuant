@@ -151,7 +151,7 @@ window.addEventListener('teamquant:account-snapshot',event=>{
 window.addEventListener('teamquant:account-disconnect',()=>{liveAccount=null;save({mode:'paper'});$('#ov-mode option[value="account"]')?.remove();render();$('#ov-status').textContent='조회 계좌의 현재 화면 데이터를 삭제했습니다.';});
 window.addEventListener('teamquant:asset-snapshot',event=>{
  const d=event.detail;if(!Array.isArray(d?.positions))return;
- liveAccount={snapshot:d,newsCache:{},owner:key(),label:'토스증권 보유주식 · 조회 전용',fetchedAt:d.fetchedAt,portfolio:{cash:null,positions:d.positions.map(p=>({symbol:p.symbol,name:p.name,quantity:p.quantity,avgCost:p.avgCost}))},quotes:Object.fromEntries(d.positions.map(p=>[p.symbol,{price:p.price,prevClose:null,asOf:d.fetchedAt,source:'토스증권 보유주식 조회'}]))};
+ liveAccount={snapshot:d,newsCache:{},owner:key(),label:d.paper?'한투 모의계좌 (공용) · 실제 돈 아님':'토스증권 보유주식 · 조회 전용',fetchedAt:d.fetchedAt,portfolio:{cash:null,positions:d.positions.map(p=>({symbol:p.symbol,name:p.name,quantity:p.quantity,avgCost:p.avgCost}))},quotes:Object.fromEntries(d.positions.map(p=>[p.symbol,{price:p.price,prevClose:null,asOf:d.fetchedAt,source:'토스증권 보유주식 조회'}]))};
  if(!$('#ov-mode option[value="broker_holdings"]')){const option=document.createElement('option');option.value='broker_holdings';option.textContent='토스 조회 보유주식';$('#ov-mode').append(option);}
  save({mode:'broker_holdings'});render();fetchBriefing();$('#ov-status').textContent='조회 보유주식만 표시합니다. 현금·총자산·입출금·계좌 수익률·손익 기여도는 자료 범위 밖이라 미확인입니다. CSV 계좌 성과 또는 목표·ETF 적립에서 상세 자료를 이어갈 수 있습니다.';
 });

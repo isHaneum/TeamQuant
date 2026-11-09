@@ -115,7 +115,7 @@ async function recomputeLive(s) {
 }
 
 // ── 내 섹터 분포(홈·섹터 화면 공용) ─────────────────────────
-function prefCap() { try { const ses = sessionStorage.getItem('teamQuantSession') || 'guest'; for (const k of [`teamQuantRules:${ses}:demo`, `teamQuantRules:${ses}`]) { const v = JSON.parse(localStorage.getItem(k) || 'null'); if (v?.prefs?.sectorCap > 0) return v.prefs.sectorCap; } } catch { } return null; }
+function prefCap() { try { const ses = sessionStorage.getItem('teamQuantSession') || 'guest'; const suf = S.kind === 'paper' ? ':paper' : S.kind === 'demo' ? ':demo' : ''; for (const k of [`teamQuantRules:${ses}${suf}`, `teamQuantRules:${ses}`]) { const v = JSON.parse(localStorage.getItem(k) || 'null'); if (v?.prefs?.sectorCap > 0) return v.prefs.sectorCap; } } catch { } return null; }
 function exposure() { return sectorExposure(S.positions.map(p => ({ ...p, hint: S.hints.get(p.symbol) || '' })), { cashKrw: S.cash, style: getStyle(), cap: prefCap() }); }
 function exposureHtml(exp, { compact = false } = {}) {
   if (!exp.rows.length) return '<p class="cr-muted">계좌를 연결하거나 예시 자산을 켜면 보유 종목을 섹터로 묶어 보여 줍니다.</p>';
@@ -149,12 +149,12 @@ async function loadHints() { // 분류 못 한 종목만 지표 API의 업종 �
   renderTiles(); renderMine();
 }
 window.addEventListener('teamquant:asset-snapshot', e => {
-  const snap = e.detail || {}; S.fx = snap.fx?.midRate || null;
+  const snap = e.detail || {}; S.fx = snap.fx?.midRate || null; S.kind = snap.paper ? 'paper' : snap.demo ? 'demo' : 'real';
   S.positions = (snap.positions || []).filter(p => p.symbol).map(p => ({ symbol: p.symbol, name: p.name || p.symbol, currency: p.currency, valueKrw: p.currency === 'USD' ? (S.fx ? p.value * S.fx : null) : p.value })).filter(p => Number.isFinite(p.valueKrw) && p.valueKrw > 0);
   if (snap.demo && Number.isFinite(snap.demoCash)) S.cash = snap.demoCash; else if (!snap.demo) S.cash = null;
   renderTiles(); renderDetail(); renderMine(); void loadHints();
 });
-window.addEventListener('teamquant:asset-clear', () => { S.positions = []; S.cash = null; renderTiles(); renderDetail(); renderMine(); });
+window.addEventListener('teamquant:asset-clear', () => { S.positions = []; S.cash = null; S.kind = 'none'; renderTiles(); renderDetail(); renderMine(); });
 window.addEventListener('teamquant:cash', e => { if (Number.isFinite(e.detail?.amount)) { S.cash = e.detail.amount; renderMine(); } });
 window.addEventListener('teamquant:style', () => { renderTiles(); renderMine(); });
 window.addEventListener('teamquant:state', () => renderMine());

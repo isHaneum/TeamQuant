@@ -119,12 +119,12 @@ function renderCash() {
   $('#pf-cash-log').innerHTML = cash.entries.slice(-5).reverse().map(e => `<li><span>${new Date(e.recordedAt).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric' })}</span><b>${won(e.amount)}</b><small>${esc(e.note || '')}</small></li>`).join('');
   window.dispatchEvent(new CustomEvent('teamquant:cash', { detail: l ? { amount: l.amount, recordedAt: l.recordedAt } : null }));
 }
-async function loadCash() { if (snapshot?.demo) { cash = { latest: { amount: snapshot.demoCash, note: '예시', recordedAt: new Date().toISOString() }, entries: [] }; renderCash(); renderSide(); return; } try { cash = await privateRead('cash-get'); renderCash(); renderSide(); } catch (e) { $('#pf-cash-state').textContent = `현금 기록을 불러오지 못했습니다: ${e.message}`; } }
+async function loadCash() { if (snapshot?.demo) { cash = { latest: { amount: snapshot.demoCash, note: snapshot.paper ? '모의계좌 예수금' : '예시', recordedAt: new Date().toISOString() }, entries: [] }; renderCash(); renderSide(); return; } try { cash = await privateRead('cash-get'); renderCash(); renderSide(); } catch (e) { $('#pf-cash-state').textContent = `현금 기록을 불러오지 못했습니다: ${e.message}`; } }
 $('#pf-cash').addEventListener('input', e => { const d = e.target.value.replace(/[^\d]/g, ''); e.target.value = d ? Number(d).toLocaleString('ko-KR') : ''; });
 $('#pf-cash-form').onsubmit = async e => {
   e.preventDefault(); const amount = Number($('#pf-cash').value.replace(/[^\d]/g, ''));
   if (!$('#pf-cash').value.trim()) { $('#pf-cash-state').textContent = '금액을 적어 주십시오.'; return; }
-  if (snapshot?.demo) { cash = { latest: { amount, note: '예시', recordedAt: new Date().toISOString() }, entries: [] }; renderCash(); renderSide(); return; }
+  if (snapshot?.demo) { cash = { latest: { amount, note: snapshot.paper ? '모의계좌(저장 안 함)' : '예시', recordedAt: new Date().toISOString() }, entries: [] }; renderCash(); renderSide(); return; }
   try { cash = await privateRead('cash-set', { amount, note: $('#pf-cash-note').value.trim() }); $('#pf-cash').value = ''; $('#pf-cash-note').value = ''; renderCash(); renderSide(); }
   catch (err) { $('#pf-cash-state').textContent = `저장하지 못했습니다: ${err.message}`; }
 };

@@ -11,6 +11,9 @@ import { attachStockSearch } from '/stock-search-ui.js';
 import { fundamentals } from '/lib/client-data.js';
 import { returnsFrom } from '/lib/sectors.js';
 import { privateRead } from '/bridge-client.js';
+import { loadMockAccount } from '/paper-account-ui.js';
+import { planBasketFrom, heldBasketFrom } from '/lib/paper-public.js';
+import { compareRuleSets } from '/lib/strategy-review.js';
 
 const $ = s => document.querySelector(s);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -45,6 +48,8 @@ const style = document.createElement('style'); style.textContent = `
 #pp-kis-actions{flex-wrap:wrap}.pp-picked{margin-top:8px}.pp-picked button i{font-style:normal;margin-left:4px;opacity:.7}
 .pp-badge{font-size:11px;font-weight:700;color:#7a4e0c;background:var(--ck-bad-bg);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}#pp-kis-actions button{white-space:nowrap}
 .pp-kis-plan{margin:10px 0}.pp-kis-plan>summary{cursor:pointer;font-size:13px;font-weight:600;color:#1849a8}.pp-kis-plan h4{margin:12px 0 6px}.pp-kis-plan .pp-ref td,.pp-kis-plan .pp-ref th{font-size:12px}.pp-kis-plan .up{color:var(--ck-up)}.pp-kis-plan .down{color:var(--ck-down)}
+.pp-rv{width:100%;border-collapse:collapse;font-size:12.5px}.pp-rv th,.pp-rv td{padding:6px 6px;border-bottom:1px solid var(--ck-line);text-align:right;white-space:nowrap;vertical-align:top}.pp-rv th:first-child,.pp-rv td:first-child{text-align:left;white-space:normal;min-width:170px}.pp-rv th{color:var(--ck-sub);font-weight:600}.pp-rv th small{display:block;font-weight:400}.pp-rv td small{display:block;color:var(--ck-sub);font-size:11.5px}.pp-rv tr.me td{background:var(--ck-soft)}.pp-rv .up{color:var(--ck-up);font-weight:700}.pp-rv .down{color:var(--ck-down);font-weight:700}.pp-rv button{font-size:12px;margin-top:6px;padding:4px 10px}
+.pp-order{margin:0;padding-left:20px;font-size:13.5px;line-height:1.55;display:grid;gap:7px}.pp-order small{display:block;color:var(--ck-sub);font-size:12.5px}.pp-ro{font-size:12.5px;color:#1849a8;background:#eef4ff;border-radius:8px;padding:6px 10px;margin:0 0 8px;line-height:1.5}
 @media(max-width:760px){.pp-form{grid-template-columns:1fr}#core-paper .rp-tiles{grid-template-columns:1fr}.pp-live{display:grid}}`; document.head.append(style);
 
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
@@ -52,9 +57,9 @@ const nav = document.createElement('button'); nav.className = 'nav-button'; nav.
 const page = document.createElement('section'); page.className = 'view ck'; page.dataset.page = 'paper'; page.id = 'core-paper';
 page.innerHTML = `<div class="page-head"><div><h1>모의투자 ${tip('실제로 투자할 때 거치는 절차를 돈 없이 그대로 밟습니다. 규칙 화면의 내 규칙으로 계획 비중을 정하고, 주 1회(급할 때는 바로) 오늘 점검이 낸 할 일을 매매 전 확인에 통과시킨 뒤, 통과한 주문만 다음 거래일 시가에 체결합니다(시가보다 0.1% 불리하게, 편도 비용 0.2%, 국내 주식은 1주 단위). 같은 기간 그냥 보유·지수와 비교합니다. 공개 일봉으로 계산하며 실제 주문은 없습니다. 실제 매매는 체결 지연·부분 체결·감정 때문에 이보다 나쁠 수 있고, 과거 결과가 앞으로를 보장하지 않습니다.')}</h1><p>점검 → 매매 전 확인 → 다음 거래일 시가 체결 → 날마다 평가 → 그냥 보유·지수와 비교</p></div></div>
 <div class="cr-grid"><div class="cr-main">
-<div class="cr-card" id="pp-setup"><header><h3>과거 데이터 시뮬 ${tip('공개 일봉으로 지난 기간을 다시 재생해 "그때 이 절차대로 했다면"을 계산합니다. 증권사 주문은 없고, 과거 자료라 좋아 보이게 만들기 쉽습니다. 실제 검증은 오른쪽 실시간 모의계좌의 기록입니다.')}</h3><span class="cr-muted" id="pp-rules"></span></header>
+<div class="cr-card" id="pp-setup"><header><h3>과거 데이터 시뮬 ${tip('공개 일봉으로 지난 기간을 다시 재생해 "그때 이 절차대로 했다면"을 계산합니다. 증권사 주문은 없고, 과거 자료라 좋아 보이게 만들기 쉽습니다. 기본값은 실시간 모의계좌의 계획·규칙을 그대로 넣어 "6개월 전에 이 계좌를 가지고 있었다면"을 보는 것입니다. 그냥 보유·지수와 비교하고, 아래 전략 검토에서 규칙만 바꿔 다시 돌려 봅니다. 실제 검증은 오른쪽 실시간 모의계좌의 기록입니다.')}</h3><span class="cr-muted" id="pp-rules"></span></header>
 <div class="pp-form"><label class="ck-field unit"><span>시작 자금</span><input id="pp-capital" type="number" value="10000000" min="100000" step="100000" inputmode="numeric"><i>원</i></label>
-<label class="ck-field"><span>종목</span><select id="pp-basket"><option value="demo">예시 6종목 (국내 4 · 미국 2)</option><option value="mine" disabled>내 보유 종목 (계좌 연결 또는 예시 자산 필요)</option><option value="custom">직접 입력</option></select></label>
+<label class="ck-field"><span>종목</span><select id="pp-basket"><option value="mockplan">모의계좌 기본 계획 (비중 그대로)</option><option value="mockheld">모의계좌 지금 보유 종목</option><option value="demo">예시 6종목 (국내 4 · 미국 2)</option><option value="mine" disabled>내 보유 종목 (계좌 연결 또는 예시 자산 필요)</option><option value="custom">직접 입력</option></select></label>
 <label class="ck-field"><span>기간</span><select id="pp-range"><option value="91">최근 3개월</option><option value="182" selected>최근 6개월</option><option value="365">최근 1년</option><option value="540">최근 18개월</option></select></label></div>
 <div class="ck-field" id="pp-custom-wrap" hidden><span>종목 찾아 추가 (최대 12개)</span><input id="pp-custom" placeholder="이름·코드·티커 (예: 현대, 005380, NVDA)" autocomplete="off"><div class="cp-chips pp-picked" id="pp-picked"></div></div>
 <div class="cr-actions"><button id="pp-run" class="primary">시뮬 실행</button><button id="pp-start" class="secondary">오늘부터 시뮬 기록(증권사 없이)</button><span id="pp-state" class="cr-err" role="status"></span></div></div>
@@ -70,6 +75,7 @@ page.innerHTML = `<div class="page-head"><div><h1>모의투자 ${tip('실제로 
   </details></div>
 <div id="pp-result"></div>
 </div><div class="cr-side"><article class="cr-card" id="pp-kis" hidden><header><h3>실시간 모의계좌 (한투) <span class="pp-badge">모의 · 실제 돈 아님</span> ${tip('이 PC 에 설정한 한국투자증권 모의투자 키로, 규칙 화면의 내 규칙·계획 비중에 따라 오늘 할 일을 정하고, 매매 전 확인과 주문 보호(1회·하루 한도, 호가 폭, 중복 방지)를 모두 통과한 주문만 모의계좌에 지정가로 보냅니다. 실전 계좌로는 보내지 않습니다. 장이 닫혔거나 시세·잔고를 못 읽으면 보류합니다. 장부는 PC 에만 남습니다.')}</h3><button type="button" class="text-button" id="pp-kis-refresh">새로고침</button></header><div id="pp-kis-body"><p class="cr-muted">PC 서버 연결을 확인하는 중…</p></div><div class="cr-actions" id="pp-kis-actions" hidden><button type="button" class="secondary" id="pp-kis-preview">오늘 할 일 미리보기</button><button type="button" class="primary" id="pp-kis-run" disabled>모의계좌에 주문 보내기</button><button type="button" class="text-button" id="pp-kis-kill">전체 정지</button><label class="cr-muted" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px"><input type="checkbox" id="pp-kis-rebal"> 재조정 ${tip('계획까지 맞추는 묶음 주문입니다. 오른 종목 두기 규칙을 끄고, 이 묶음은 30일 매매 횟수에 1회로 셉니다. 계획을 바꿨거나 처음 운용할 때 켭니다.')}</label></div><p class="cr-err" id="pp-kis-state" role="status"></p><div id="pp-kis-result"></div></article>
+<div class="cr-card" id="pp-howto"><h3>전략 세우는 순서 ${tip('이 서비스의 정체성입니다. 예측하지 않고, 규칙을 잘 세워 감정 없이 이행하고, 기록으로 규칙을 고칩니다. 모의계좌는 가상 돈이라 누구나 같은 계좌로 연습할 수 있습니다.')}</h3><ol class="pp-order"><li><b>세 질문</b>으로 허용 손실·분산·점검 주기를 숫자로<small>규칙 화면 · 한 달 손실 5/10/20% → 하루 한도·현금 최소·종목 상한</small></li><li>종목은 <b>가설</b>로만<small>왜·언제까지·깨지는 조건·한도를 적어 등록</small></li><li><b>과거 데이터 시뮬</b>로 보유·지수와 비교<small>한 기간이 아니라 3·6·12·18개월 모두에서 손실이 작은 규칙을 고름</small></li><li><b>실시간 모의계좌</b>로 앞으로 검증<small>같은 규칙·계획을 한투 모의계좌가 자동 이행</small></li><li><b>기록으로 점검</b><small>한도 넘은 날·매매 횟수·막힌 이유로 규칙을 고침</small></li></ol><div class="cr-actions"><button type="button" class="secondary" data-core-go="rules">규칙 화면</button></div></div>
 <div class="cr-card"><h3>절차</h3><ol class="pp-steps"><li>계획 비중<small>규칙의 한 종목 상한·현금 최소 비중 안에서 종목마다 균등</small></li><li>오늘 점검<small>주 마지막 거래일 종가(급할 때는 그날)에 규칙과 비교해 할 일을 냄</small></li><li>매매 전 확인<small>할 일마다 현금·비중·하루 손실 한도·매매 횟수를 확인, 하나라도 어기면 주문하지 않음</small></li><li>체결<small>다음 거래일 시가에 0.1% 불리하게, 편도 비용 0.2%, 국내 주식 1주 단위</small></li><li>평가와 비교<small>날마다 원화 환산, 같은 계획을 한 번 사서 둔 경우·지수와 비교</small></li></ol></div>
 <div class="cr-card" id="pp-ref"><h3>같은 절차를 지난 기간에 돌렸다면 ${tip('scripts/paper-rehearsal.mjs가 공개 일봉으로 네 가지 포트폴리오·아홉 기간(최근 12개월·6개월·올해·2020~2025년 각각)에 같은 절차를 돌린 결과입니다. 2012~2019 자료로 고른 규칙을 그 뒤 기간에 적용한 것이지만, 규칙 자체는 2026-11-06에 확정했으므로 완전한 표본 외 검증은 오늘 이후의 모의투자부터입니다.')}</h3><div id="pp-ref-body"><p class="cr-muted">불러오는 중…</p></div></div>
 </div></div>`;
@@ -84,7 +90,7 @@ function saveLive(v) { try { if (v) localStorage.setItem(liveKey(), JSON.stringi
 function rulesLine(r) { return `규칙 ${RULES_VERSION} · 한 종목 ${r.maxSingle}% · 현금 ${r.minCash}% · 하루 손실 ${r.dailyLoss}% · 30일 ${r.maxTrades30}회${r.trendUS ? ' · 미국 200일선' : ''}${r.perAssetVol ? ` · 종목 변동성 ${r.volTarget}%` : ''}`; }
 $('#pp-rules').textContent = rulesLine(currentRules());
 
-window.addEventListener('teamquant:asset-snapshot', e => { const ps = (e.detail?.positions || []).filter(p => p.symbol); S.mine = ps.map(p => ({ symbol: p.symbol, name: p.name || stockName(p.symbol), currency: p.currency || 'KRW' })); const o = $('#pp-basket option[value="mine"]'); o.disabled = !S.mine.length; o.textContent = S.mine.length ? `내 보유 종목 ${S.mine.length}개${e.detail?.demo ? ' (예시 자산)' : ''}` : '내 보유 종목 (계좌 연결 또는 예시 자산 필요)'; });
+window.addEventListener('teamquant:asset-snapshot', e => { const ps = (e.detail?.positions || []).filter(p => p.symbol); S.mine = ps.map(p => ({ symbol: p.symbol, name: p.name || stockName(p.symbol), currency: p.currency || 'KRW' })); const o = $('#pp-basket option[value="mine"]'); o.disabled = !S.mine.length; o.textContent = S.mine.length ? `내 보유 종목 ${S.mine.length}개${e.detail?.paper ? ' (모의계좌)' : e.detail?.demo ? ' (예시 자산)' : ''}` : '내 보유 종목 (계좌 연결 또는 예시 자산 필요)'; });
 window.addEventListener('teamquant:asset-clear', () => { S.mine = []; const o = $('#pp-basket option[value="mine"]'); o.disabled = true; if ($('#pp-basket').value === 'mine') $('#pp-basket').value = 'demo'; });
 $('#pp-basket').onchange = () => { $('#pp-custom-wrap').hidden = $('#pp-basket').value !== 'custom'; };
 // 직접 입력: 공용 검색 제안으로 고르고 칩으로 쌓는다(쉼표 입력도 그대로 받는다)
@@ -93,9 +99,27 @@ function renderPicked() { const box = $('#pp-picked'); if (!box) return; box.inn
 attachStockSearch($('#pp-custom'), { clearOnPick: true, exclude: () => new Set(S.custom.map(o => o.symbol)), onPick: o => { if (S.custom.length >= 12) { $('#pp-state').textContent = '종목은 12개까지입니다.'; return; } if (!S.custom.some(x => x.symbol === o.symbol)) S.custom.push(o); renderPicked(); } });
 renderPicked();
 
+// ── 모의계좌(PC 실시간 또는 저장소 공개 파일)의 계획·보유를 시뮬 입력으로. 있으면 기본 선택이다 ──
+S.mock = null;
+function applyMockOptions(pub) {
+  S.mock = pub || null; const pb = planBasketFrom(pub), held = heldBasketFrom(pub), o1 = $('#pp-basket option[value="mockplan"]'), o2 = $('#pp-basket option[value="mockheld"]');
+  o1.disabled = !pb.basket.length; o1.textContent = pb.basket.length ? `모의계좌 기본 계획 ${pb.version || ''} · ${pb.basket.length}종목 · 현금 ${pb.cashPct}% (비중 그대로)` : '모의계좌 기본 계획 (자료 없음)';
+  o2.disabled = !held.length; o2.textContent = held.length ? `모의계좌 지금 보유 ${held.length}종목 (균등)` : '모의계좌 지금 보유 종목 (없음)';
+  if (/^mock/.test($('#pp-basket').value) && $('#pp-basket').selectedOptions[0]?.disabled) $('#pp-basket').value = o1.disabled ? (o2.disabled ? 'demo' : 'mockheld') : 'mockplan';
+  $('#pp-rules').textContent = rulesLine(simRules()) + ' · ' + rulesSource();
+}
+async function loadMock() { try { applyMockOptions(await loadMockAccount({ fresh: true })); } catch { applyMockOptions(null); } return S.mock; }
+function mockRules() { const r = S.mock?.prefs?.rules; return r ? normalizeRules(r).rules : null; }
+const usingMock = () => /^mock/.test($('#pp-basket').value) && !!mockRules();
+function simRules() { return usingMock() ? mockRules() : currentRules(); }
+function rulesSource() { return usingMock() ? `모의계좌 PC 저장 규칙 (${String(S.mock.prefs.savedAt || '').slice(0, 10)})` : '규칙 화면의 내 규칙'; }
+function planOf() { return $('#pp-basket').value === 'mockplan' && S.mock ? planBasketFrom(S.mock).plan : null; }
+$('#pp-basket').addEventListener('change', () => { $('#pp-rules').textContent = rulesLine(simRules()) + ' · ' + rulesSource(); });
+
 async function basketOf() {
   const kind = $('#pp-basket').value;
   if (kind === 'demo') return DEMO;
+  if (kind === 'mockplan' || kind === 'mockheld') { if (!S.mock) await loadMock(); const b = kind === 'mockplan' ? planBasketFrom(S.mock).basket : heldBasketFrom(S.mock); if (!b.length) throw new Error('모의계좌 자료가 없습니다. PC 서버를 켜거나 저장소의 공개 파일이 올라올 때까지 기다리십시오.'); return b.slice(0, 24); }
   if (kind === 'mine') { if (!S.mine.length) throw new Error('보유 종목이 없습니다. 계좌를 연결하거나 예시 자산을 켜십시오.'); return S.mine.slice(0, 12); }
   if (S.custom.length && !$('#pp-custom').value.trim()) return S.custom.map(o => ({ symbol: o.symbol, name: o.name, currency: o.currency }));
   const parts = [...S.custom.map(o => o.symbol), ...$('#pp-custom').value.split(/[,\n]/).map(s => s.trim()).filter(Boolean)];
@@ -123,19 +147,19 @@ async function run({ live = null } = {}) {
   try {
     const capital = live ? live.capitalKrw : Number($('#pp-capital').value);
     if (!(capital >= 100000)) throw new Error('시작 자금은 10만원 이상이어야 합니다.');
-    const basket = live ? live.basket : await basketOf(), rules = live ? normalizeRules(live.rules || {}).rules : currentRules();
+    const basket = live ? live.basket : await basketOf(), rules = live ? normalizeRules(live.rules || {}).rules : simRules(), plan = live ? (live.plan || null) : planOf(), rulesFrom = live ? '시작할 때 고정한 규칙' : rulesSource();
     const from = live ? live.startDate : daysAgo(Number($('#pp-range').value));
     result.innerHTML = '<div class="cr-card"><div class="shimmer ct-skel"></div><div class="shimmer ct-skel"></div><p class="cr-muted">시세를 받아 절차를 재생하는 중…</p></div>';
     const krw = basket.filter(b => b.currency === 'KRW').length, benchDef = krw * 2 >= basket.length ? { symbol: '069500', name: 'KODEX 200', currency: 'KRW' } : { symbol: 'SPY', name: 'S&P500 ETF', currency: 'USD' };
     const [{ candles, failed }, fx, bench] = await Promise.all([loadCandles(basket), fetchCandles('KRW=X', 'USD', '2y').then(d => d.candles).catch(() => []), fetchCandles(benchDef.symbol, benchDef.currency, '2y').then(d => d.candles).catch(() => null)]);
     if (id !== S.run) return;
     await new Promise(r => setTimeout(r, 0));
-    const r = rehearse({ basket, capitalKrw: capital, rules, candlesBySymbol: candles, fxCandles: fx, from, to: today(), benchmark: bench ? { ...benchDef, candles: bench } : null, label: live ? '모의투자' : '리허설' });
+    const r = rehearse({ basket, capitalKrw: capital, rules, plan, candlesBySymbol: candles, fxCandles: fx, from, to: today(), benchmark: bench ? { ...benchDef, candles: bench } : null, label: live ? '시뮬 기록' : '과거 데이터 시뮬' });
     if (id !== S.run) return;
     if (!r.ok) { result.innerHTML = `<div class="cr-card"><p class="cr-muted">${esc(r.reason)}${live ? ' 시작일 다음 거래일부터 체결이 기록됩니다.' : ''}</p></div>`; return; }
     const fr = forwardRange({ positions: r.end.positions, cashKrw: r.end.cash, candlesBySymbol: candles, fxCandles: fx });
-    S.last = { r, fr, failed, live: !!live }; S.journalFilter = '전체'; S.journalAll = false;
-    render();
+    S.last = { r, fr, failed, live: !!live, rulesFrom, inputs: { basket, plan, capital, candles, fx, benchmark: bench ? { ...benchDef, candles: bench } : null, rules } }; S.journalFilter = '전체'; S.journalAll = false; S.review = null;
+    render(); scheduleReview();
   } catch (e) { if (id === S.run) { state.textContent = e.message; result.innerHTML = ''; } }
 }
 
@@ -159,6 +183,7 @@ function render() {
   const holdRows = r.end.positions.filter(p => p.qty > 0).sort((x, y) => y.valueKrw - x.valueKrw).map(p => `<tr><td>${esc(p.name)}</td><td>${p.currency === 'USD' ? p.qty.toFixed(4) : p.qty.toLocaleString('ko-KR')}</td><td>${won(p.valueKrw)}</td><td>${p.weightPct.toFixed(1)}%</td><td class="${tone(p.pnlKrw)}">${swon(p.pnlKrw)}</td></tr>`).join('');
   body.innerHTML = `<div class="cr-card"><header><h3>${live ? '시뮬 기록(증권사 없이)' : '시뮬 결과'} <span class="cr-muted">${r.from} ~ ${r.to} · ${r.days}거래일</span></h3></header>
   <p class="rp-verdict">${verdict}</p>
+  <p class="cr-muted" style="margin:-4px 0 10px">종목 ${Object.keys(r.plan).length}개 · 계획 비중 합 ${Object.values(r.plan).reduce((a, b) => a + b, 0).toFixed(0)}% (나머지 현금) · 규칙: ${esc(S.last.rulesFrom || '')} · 자금 ${won(r.capitalKrw)}</p>
   <div class="rp-tiles">${tile('절차대로', m.rule, true)}${tile('그냥 보유', m.hold)}${m.bench ? tile(esc(r.benchmark.name), m.bench) : '<div><span class="cr-muted">지수</span><br><b>—</b></div>'}</div>
   <div class="pp-act"><span>점검 <b>${a.decisionDays}</b>회${a.urgentDays ? ` (급한 날 ${a.urgentDays})` : ''}</span><span>체결 <b>${a.trades}</b>회</span><span>매매 전 확인에서 막힘 <b>${a.blockedTotal}</b>건${blocked ? ` <small>(${esc(blocked)})</small>` : ''}</span><span>1주 미만·현금 부족으로 못 산 주문 <b>${a.unfilled}</b>건</span><span>비용 <b>${won(a.feesKrw + a.slippageKrw)}</b> (자금의 ${a.costPct.toFixed(2)}%)</span><span>현금 평균 <b>${a.cashAvgPct.toFixed(0)}%</b></span><span>하루 ${r.rules.dailyLoss}% 넘게 잃은 날 <b>${a.breaches}</b>일 (${a.breachPct.toFixed(1)}%)</span></div>
   ${lineSvg(r.series, !!m.bench)}
@@ -173,6 +198,25 @@ function render() {
   <p class="cr-muted" style="margin-top:10px">공개 일봉으로 계산한 모의 결과이며 실제 주문·수익 보증이 아닙니다. 체결은 다음 거래일 시가에 ${(r.slippage * 100).toFixed(1)}% 불리하게, 편도 비용 ${(r.cost * 100).toFixed(1)}%로 가정했습니다. 실제 매매는 체결 지연·부분 체결·감정 때문에 이보다 나쁠 수 있습니다. 엔진 ${PAPER_VERSION}.</p></div>`;
   body.querySelectorAll('[data-jf]').forEach(b => b.onclick = () => { S.journalFilter = b.dataset.jf; S.journalAll = false; render(); });
   const more = $('#pp-more'); if (more) more.onclick = () => { S.journalAll = true; render(); };
+  body.insertAdjacentHTML('beforeend', '<div id="pp-review"></div>'); renderReview();
+}
+
+// ── 전략 검토: 같은 종목·네 기간에 규칙만 바꿔 다시 돌린다(측정이지 예측이 아니다) ──
+function scheduleReview() { const id = S.run; setTimeout(() => { if (id !== S.run || !S.last?.inputs) return; try { const i = S.last.inputs; S.review = compareRuleSets({ basket: i.basket, plan: i.plan, capitalKrw: i.capital, candlesBySymbol: i.candles, fxCandles: i.fx, benchmark: i.benchmark, to: today(), current: { label: `지금 쓴 규칙`, rules: i.rules } }); } catch (e) { S.review = { error: e.message }; } renderReview(); }, 30); }
+function renderReview() {
+  const box = $('#pp-review'); if (!box) return; const v = S.review;
+  if (!v) { box.innerHTML = `<div class="cr-card"><header><h3>전략 검토 — 규칙을 바꿨다면</h3></header><div class="shimmer ct-skel"></div><p class="cr-muted">같은 종목·네 기간에 규칙 네 가지를 다시 돌리는 중…</p></div>`; return; }
+  if (v.error) { box.innerHTML = `<div class="cr-card"><header><h3>전략 검토</h3></header><p class="cr-muted">${esc(v.error)}</p></div>`; return; }
+  const ws = v.windows.filter(w => v.hold[w.id]), sp = x => `${x > 0 ? '+' : ''}${x}%`;
+  const cellHtml = c => c?.ok ? `<span class="${c.ret >= 0 ? 'up' : 'down'}">${sp(c.ret)}</span><small>보유 대비 ${c.vsHold > 0 ? '+' : ''}${c.vsHold}%p · 최대 손실 ${c.mdd}%</small><small>매매 ${c.trades}회 · 막힘 ${c.blocked}건 · 현금 ${c.cashAvg}%</small>` : `<span class="cr-muted">—</span><small>${esc(c?.reason || '')}</small>`;
+  const sig = r => ws.map(w => JSON.stringify(r.cells[w.id])).join('|'), cur = v.rows.find(r => r.id === 'current'), twin = cur ? v.rows.find(r => r.id !== 'current' && sig(r) === sig(cur)) : null;
+  const rows = v.rows.map(r => `<tr class="${r.id === 'current' ? 'me' : ''}"><td><b>${esc(r.label)}</b>${r.id === 'current' && twin ? `<small>${esc(twin.label)}과 결과 같음</small>` : ''}<small>하루 ${r.rules.dailyLoss}% · 종목 ${r.rules.maxSingle}% · 현금 ${r.rules.minCash}% · 30일 ${r.rules.maxTrades30}회</small>${r.prefs ? `<button type="button" class="secondary" data-rv-use="${esc(r.id)}">이 규칙을 세 질문에 넣기</button>` : ''}</td>${ws.map(w => `<td>${cellHtml(r.cells[w.id])}</td>`).join('')}</tr>`).join('');
+  const hold = `<tr><td><b>그냥 보유</b><small>같은 비중을 한 번 사서 둠</small></td>${ws.map(w => `<td><span class="${v.hold[w.id].ret >= 0 ? 'up' : 'down'}">${sp(v.hold[w.id].ret)}</span><small>최대 손실 ${v.hold[w.id].mdd}%</small></td>`).join('')}</tr>`;
+  const bn = ws.map(w => v.bench[w.id]?.name).find(Boolean), bench = bn ? `<tr><td><b>${esc(bn)}</b><small>지수를 샀다면</small></td>${ws.map(w => v.bench[w.id] ? `<td><span class="${v.bench[w.id].ret >= 0 ? 'up' : 'down'}">${sp(v.bench[w.id].ret)}</span><small>최대 손실 ${v.bench[w.id].mdd}%</small></td>` : '<td>—</td>').join('')}</tr>` : '';
+  box.innerHTML = `<div class="cr-card"><header><h3>전략 검토 — 규칙을 바꿨다면 ${tip('같은 종목·같은 계획 비중에 규칙만 바꿔 네 기간(3·6·12·18개월, 오늘까지)을 다시 돌린 결과입니다. 계획 비중은 각 규칙의 현금 최소·한 종목 상한에 맞춰 줄였습니다. 한 기간의 1등을 고르면 그 기간에 맞춘 규칙이 됩니다. 예측이 아니라 측정입니다.')}</h3><span class="cr-muted">끝 ${v.to} · 자금 ${won(S.last.inputs.capital)}</span></header>
+  <div class="pp-scroll"><table class="pp-rv"><thead><tr><th>규칙</th>${ws.map(w => `<th>${w.label}<small>${w.from} ~</small></th>`).join('')}</tr></thead><tbody>${rows}${hold}${bench}</tbody></table></div>
+  <ul class="ct-actions" style="margin:10px 0 0">${v.findings.map(f => `<li${f.key === 'caution' ? ' class="cr-muted"' : ''}>${esc(f.text)}</li>`).join('')}</ul></div>`;
+  box.querySelectorAll('[data-rv-use]').forEach(b => b.onclick = () => { const row = v.rows.find(r => r.id === b.dataset.rvUse); if (!row?.prefs) return; const k = document.body.dataset.account, key = `teamQuantRules:${session()}${k === 'paper' ? ':paper' : k === 'demo' ? ':demo' : ''}`; let saved = null; try { saved = JSON.parse(localStorage.getItem(key) || 'null'); } catch { } try { localStorage.setItem(key, JSON.stringify({ rules: row.rules, plan: saved?.plan || null, prefs: row.prefs, version: RULES_VERSION, savedAt: new Date().toISOString() })); } catch { } $('#pp-state').textContent = `${row.label} 규칙을 세 질문에 넣었습니다. 규칙 화면에서 확인하고 PC 모의계좌에도 적용할 수 있습니다.`; $('[data-view="rules"]')?.click(); });
 }
 
 // ── 오늘부터 모의투자 ─────────────────────────────────────────
@@ -189,12 +233,12 @@ $('#pp-start').onclick = async () => {
     const capital = Number($('#pp-capital').value); if (!(capital >= 100000)) throw new Error('시작 자금은 10만원 이상이어야 합니다.');
     const basket = await basketOf();
     if (loadLive() && !confirm('진행 중인 모의투자를 지우고 오늘부터 새로 시작합니다. 계속하시겠습니까?')) return;
-    const live = { version: PAPER_VERSION, startDate: today(), startedAt: new Date().toISOString(), capitalKrw: capital, basket, rules: currentRules() };
+    const live = { version: PAPER_VERSION, startDate: today(), startedAt: new Date().toISOString(), capitalKrw: capital, basket, plan: planOf(), rules: simRules(), rulesFrom: rulesSource() };
     saveLive(live); renderLive(); void run({ live });
     $('#pp-state').textContent = `${live.startDate}부터 시작. 볼 때마다 시작일부터 오늘까지 같은 절차를 다시 재생합니다.`;
   } catch (e) { $('#pp-state').textContent = e.message; }
 };
-window.addEventListener('teamquant:page', () => { if (document.querySelector('.view.active')?.dataset.page !== 'paper') return; $('#pp-rules').textContent = rulesLine(currentRules()); renderLive(); const live = loadLive(); if (live && !S.last) void run({ live }); });
+window.addEventListener('teamquant:page', () => { if (document.querySelector('.view.active')?.dataset.page !== 'paper') return; void loadMock(); renderLive(); const live = loadLive(); if (live && !S.last) void run({ live }); });
 window.addEventListener('teamquant:state', () => { S.last = null; renderLive(); });
 renderLive();
 
@@ -226,13 +270,19 @@ function planDocHtml(d) { if (!d) return ''; const w = Object.values(d.weights).
   <h4>같은 규칙으로 과거에 돌렸다면 ${tip('이 계획을 규칙 C3 대로 운용했을 때(주 1회 점검·매매 전 확인·다음 시가 체결·비용 포함)의 수익률과 최대 손실. 그냥 보유는 같은 비중을 한 번 사서 둔 경우. 2020~2025는 규칙 확정 이전 구간이라 완전한 표본 외가 아닙니다. 상승장에서 보유보다 낮은 것은 이 규칙의 알려진 비용입니다.')}</h4><div class="pp-scroll"><table class="pp-ref"><thead><tr><th>기간</th><th>계획(규칙)</th><th>최대 손실</th><th>계획(보유)</th><th>KODEX 200</th><th>S&P500</th></tr></thead><tbody>${wins.map(row).join('')}</tbody></table></div>
   <h4>충격 시나리오 ${tip('섹터·통화별 충격을 비중에 곱한 즉시 손실(%)입니다. 과거 비슷한 크기: 2022 반도체 −35~−45%, 2020-03 코스피 −35%, 2022 S&P −25%, 2022 장기채 −31%. 예측이 아니라 노출의 크기입니다.')}</h4><div class="pp-scroll"><table class="pp-ref"><thead><tr><th>시나리오</th><th>이 계획</th><th>균등 비중</th><th>코스피200만</th><th>지금 모의계좌</th></tr></thead><tbody>${sc.map(x => `<tr><td>${esc(x.name)}</td><td class="down">${x.planPct}%</td><td>${x.equalPct}%</td><td>${x.kodexOnlyPct}%</td><td>${x.currentPct}%</td></tr>`).join('')}</tbody></table></div>
   <p class="cr-muted">${esc(v.note || '')}</p></details>`; }
-function kisSummary(s) { const b = s.balance; return `<div class="pp-kis-sum"><span>계좌 <b>${esc(s.account || '—')}</b></span><span>장 <b>${s.market?.open ? '열림' : '닫힘'}</b>${s.market?.open ? '' : ` <span class="cr-muted">(${esc(s.market?.reason || '')})</span>`}</span>${b ? `<span>예수금 <b>${won(b.cash)}</b></span><span>평가 <b>${won(b.total)}</b></span><span>보유 <b>${b.positions.length}종목</b></span>` : ''}<span>킬 스위치 <b class="${s.killSwitch ? 'on' : ''}">${s.killSwitch ? '켜짐' : '꺼짐'}</b></span><span>한도 1회 <b>${won(s.limits?.maxOrderKrw)}</b> · 하루 <b>${won(s.limits?.maxDailyKrw)}</b></span></div>`; }
+function holdingsTable(s) { const ps = (s.balance?.positions || []).filter(p => p.qty > 0).sort((a, b) => (b.valueKrw || 0) - (a.valueKrw || 0)); if (!ps.length) return ''; return `<details class="pp-kis-plan" open><summary>보유 ${ps.length}종목</summary><div class="pp-scroll"><table class="pp-ref"><thead><tr><th>종목</th><th>수량</th><th>평가액</th><th>비중</th></tr></thead><tbody>${ps.map(p => `<tr><td>${esc(p.name)}<br><small class="cr-muted">${esc(p.symbol)} · ${esc(p.currency)}</small></td><td>${p.qty}</td><td>${won(p.valueKrw)}</td><td>${Number.isFinite(p.weightPct) ? p.weightPct.toFixed(1) + '%' : '—'}</td></tr>`).join('')}</tbody></table></div></details>`; }
+function kisSummary(s) { const b = s.balance; return `<div class="pp-kis-sum"><span><b>${esc(s.label || '한투 모의계좌')}</b>${s.live ? '' : ' <span class="cr-muted">(공개 파일)</span>'}</span><span>장 <b>${s.market?.open ? '열림' : '닫힘'}</b>${s.market?.open ? '' : ` <span class="cr-muted">(${esc(s.market?.reason || '')})</span>`}</span>${b ? `<span>예수금 <b>${won(b.cash)}</b></span><span>평가 <b>${won(b.total)}</b></span><span>보유 <b>${b.positions.length}종목</b></span>` : ''}<span>킬 스위치 <b class="${s.killSwitch ? 'on' : ''}">${s.killSwitch ? '켜짐' : '꺼짐'}</b></span><span>한도 1회 <b>${won(s.limits?.maxOrderKrw)}</b> · 하루 <b>${won(s.limits?.maxDailyKrw)}</b></span></div>`; }
 function kisOrdersTable(list, title) { if (!list?.length) return ''; return `<h4>${esc(title)}</h4><div class="pp-scroll"><table class="pp-journal"><tbody>${list.slice().reverse().map(o => `<tr class="${o.status === 'filled' ? '체결' : /rejected|not_found/.test(o.status) ? '차단' : ''}"><td>${esc(String(o.at).slice(11, 19))}</td><td>${o.side === 'BUY' ? '매수' : '매도'}</td><td>${esc(o.name)} ${o.qty}주 @${o.currency === 'USD' ? '$' + Number(o.price).toFixed(2) : won(o.price)}${o.filledQty ? ` · 체결 ${o.filledQty}주` : ''}<br><small class="cr-muted">${esc(o.status)}${o.odno ? ' #' + esc(o.odno) : ''}${o.error ? ' · ' + esc(o.error) : ''}${o.note ? ' · ' + esc(o.note) : ''}</small></td></tr>`).join('')}</tbody></table></div>`; }
 function kisItems(r) { const lab = r.planSource === 'default' && PLAN_DOC ? `검증된 기본 계획 ${PLAN_DOC.version}` : planForKis().label; return `<p class="pp-kis-note">${esc(String(r.at).slice(0, 16).replace('T', ' '))} 기준 · 계획: ${esc(lab)} · 규칙 ${r.evaluation.okCount}/${r.evaluation.known} 충족 · 할 일 ${r.items.length}건${r.skipped?.length ? ` · 해외 종목은 뺌(${esc(r.skipped.join(', '))})` : ''}${r.noData?.length ? ` · 시세 부족: ${esc(r.noData.join(', '))}` : ''}</p>${r.items.length ? `<ul class="pp-kis-items">${r.items.map(i => `<li class="${i.ok ? 'ok' : 'bad'}"><span class="st">${i.ok ? '통과' : '차단'}</span> · ${esc(i.name)} ${i.side === 'BUY' ? '매수' : '매도'} ${i.qty ?? '—'}주 @${i.currency === 'USD' ? '$' + (i.price ?? 0).toFixed(2) : won(i.price)} = ${won(i.amountKrw)}<small>${esc(i.why)}</small>${i.blocks.length ? `<small>${i.blocks.map(esc).join(' · ')}</small>` : ''}${i.warnings?.length ? `<small>! ${i.warnings.map(esc).join(' · ')}</small>` : ''}</li>`).join('')}</ul>` : '<p class="cr-muted">오늘은 규칙상 할 일이 없습니다.</p>'}${r.sent?.length ? kisOrdersTable(r.sent, '방금 보낸 주문') : ''}`; }
 async function kisRefresh() {
   const card = $('#pp-kis'), body = $('#pp-kis-body'); if (!card) return;
-  try { const s = await privateRead('paper-live-status'); if (s.planDoc) PLAN_DOC = s.planDoc; else await loadPlanDoc(); K.status = s; card.hidden = false; $('#pp-kis-actions').hidden = false; const pl = planForKis(); const m0 = s.marks?.[0], m1 = s.marks?.at(-1); const prog = m0 && m1 && s.marks.length > 1 ? `<p class="pp-kis-note">운용 ${s.marks.length}일 · 시작 ${won(m0.total)} → 지금 ${won(m1.total)} (${pct(m1.total / m0.total - 1)})</p>` : ''; body.innerHTML = kisSummary(s) + (s.error ? `<p class="cr-err">${esc(s.error)}</p>` : '') + `<p class="pp-kis-note">계획: ${esc(pl.label)}${s.markets?.US ? ` · 미국 장 ${s.markets.US.open ? '열림' : '닫힘'}` : ''}</p>` + prog + planDocHtml(pl.source === 'default' ? PLAN_DOC : null) + kisOrdersTable(s.ordersToday, '오늘 주문'); $('#pp-kis-kill').textContent = s.killSwitch ? '정지 해제' : '전체 정지'; renderHyp(s.hypotheses || []); }
-  catch (e) { if (e?.status === 503) { card.hidden = false; $('#pp-kis-actions').hidden = true; body.innerHTML = `<p class="cr-muted">${esc(e.message || '이 PC 에 모의투자 키가 없습니다.')}</p>`; } else card.hidden = true; renderHyp(null); }
+  // PC(실시간)가 안 되면 저장소의 공개 파일을 읽기 전용으로 보여 준다. 모의계좌는 가상 돈이라 누가 봐도 괜찮다.
+  let s; try { s = await loadMockAccount({ fresh: true, maxAge: 0 }); } catch (e) { card.hidden = false; $('#pp-kis-actions').hidden = true; body.innerHTML = `<p class="cr-muted">${esc(e.message)}</p>`; renderHyp(null); return; }
+  applyMockOptions(s); if (s.planDoc) PLAN_DOC = s.planDoc; else await loadPlanDoc(); K.status = s; card.hidden = false; $('#pp-kis-actions').hidden = !s.live;
+  const pl = planForKis(), m0 = s.marks?.[0], m1 = s.marks?.at(-1), prog = m0 && m1 && s.marks.length > 1 ? `<p class="pp-kis-note">운용 ${s.marks.length}일 · 시작 ${won(m0.total)} → 지금 ${won(m1.total)} (${pct(m1.total / m0.total - 1)})</p>` : '';
+  const ro = s.live ? '' : `<p class="pp-ro">읽기 전용 · 저장소에 올린 공개 파일 (${esc(String(s.asOf || '').slice(0, 16).replace('T', ' '))}) · 주문·가설 등록은 모의투자 키가 있는 PC 에 연결했을 때만 됩니다.</p>`;
+  body.innerHTML = ro + kisSummary(s) + (s.error ? `<p class="cr-err">${esc(s.error)}</p>` : '') + `<p class="pp-kis-note">계획: ${esc(pl.label)}${s.markets?.US ? ` · 미국 장 ${s.markets.US.open ? '열림' : '닫힘'}` : ''}</p>` + prog + holdingsTable(s) + planDocHtml(pl.source === 'default' ? PLAN_DOC : null) + kisOrdersTable(s.live ? s.ordersToday : s.recentOrders, s.live ? '오늘 주문' : '최근 주문');
+  $('#pp-kis-kill').textContent = s.killSwitch ? '정지 해제' : '전체 정지'; renderHyp(s.hypotheses || [], !s.live);
 }
 async function kisPreview() { const st = $('#pp-kis-state'); st.textContent = '잔고·시세를 읽고 할 일을 정하는 중…'; K.armed = false; $('#pp-kis-run').textContent = '모의계좌에 주문 보내기'; try { const { plan } = planForKis(); const r = await privateRead('paper-live-preview', { rules: currentRules(), rebalance: $('#pp-kis-rebal')?.checked === true, ...(plan ? { plan } : {}) }); K.preview = r; $('#pp-kis-result').innerHTML = kisItems(r); const n = r.items.filter(i => i.ok).length; $('#pp-kis-run').disabled = n === 0; st.textContent = n ? `통과 ${n}건. "모의계좌에 주문 보내기"를 두 번 누르면 보냅니다.` : (r.items.length ? '통과한 주문이 없어 보낼 것이 없습니다.' : ''); } catch (e) { st.textContent = e?.message || '미리보기에 실패했습니다.'; } }
 async function kisRun() { const st = $('#pp-kis-state'), btn = $('#pp-kis-run'); if (!K.preview) return; if (!K.armed) { K.armed = true; btn.textContent = `정말 보내기 (${K.preview.items.filter(i => i.ok).length}건)`; st.textContent = '한 번 더 누르면 모의계좌에 지정가 주문이 나갑니다. 실전 계좌가 아닙니다.'; return; } K.armed = false; btn.disabled = true; btn.textContent = '보내는 중…'; try { const { plan } = planForKis(); const r = await privateRead('paper-live-run', { rules: currentRules(), rebalance: $('#pp-kis-rebal')?.checked === true, ...(plan ? { plan } : {}) }); K.preview = null; $('#pp-kis-result').innerHTML = kisItems(r); st.textContent = `보냄 ${r.sent.filter(o => o.status === 'sent').length}건 · 거부 ${r.sent.filter(o => o.status === 'rejected').length}건 · 미확인 ${r.sent.filter(o => o.status === 'unknown').length}건${r.note ? ' · ' + r.note : ''}`; await kisRefresh(); } catch (e) { st.textContent = e?.message || '주문에 실패했습니다.'; } finally { btn.textContent = '모의계좌에 주문 보내기'; } }
@@ -253,13 +303,13 @@ async function phFill(o) {
 }
 attachStockSearch($('#ph-sym'), { onPick: o => { phPick = o; void phFill(o); } });
 function phStatusLabel(h) { return h.status === 'open' ? (h.expired ? '기한 지남 · 종료 필요' : '진행 중') : h.status === 'broken' ? '깨짐' : h.verdict === 'right' ? '종료 · 맞음' : h.verdict === 'wrong' ? '종료 · 틀림' : '종료'; }
-function renderHyp(list) {
-  const box = $('#pp-hyp-list'); if (!box) return; if (!list) { box.innerHTML = '<p class="cr-muted">PC 모의계좌에 연결되면 가설 목록이 보입니다.</p>'; return; }
+function renderHyp(list, readOnly = false) {
+  const box = $('#pp-hyp-list'); if (!box) return; const sum = $('#pp-hyp-new summary'); if (sum) sum.textContent = readOnly ? '가설 추가 (모의투자 키가 있는 PC 연결 필요)' : '가설 추가'; if (!list) { box.innerHTML = '<p class="cr-muted">모의계좌 자료를 불러오면 가설 목록이 보입니다.</p>'; return; }
   if (!list.length) { box.innerHTML = '<p class="cr-muted">등록된 가설이 없습니다. 지금 모의계좌는 기본 계획(지수·채권·섹터 대표주)만 들고 있습니다.</p>'; return; }
   box.innerHTML = [...list].sort((a, b) => (a.status === 'open' ? 0 : 1) - (b.status === 'open' ? 0 : 1) || b.openedAt.localeCompare(a.openedAt)).map(h => `<div class="ph-item"><header><b>${esc(h.name)} <small class="cr-muted">${esc(h.symbol)} · 한도 ${h.capPct}% · ${h.horizonMonths}개월</small></b><span class="st ${h.status}">${esc(phStatusLabel(h))}</span></header>
     <div class="num">${h.returnPct !== null && h.returnPct !== undefined ? `진입 대비 <b class="${h.returnPct > 0 ? 'up' : h.returnPct < 0 ? 'down' : ''}">${pct(h.returnPct)}</b>` : '아직 체결 없음'}${h.indexPct !== null && h.indexPct !== undefined ? ` · 같은 기간 지수 ${pct(h.indexPct)}` : ''}${h.excessPct !== null && h.excessPct !== undefined ? ` · 지수 대비 <b>${pp(h.excessPct * 100)}</b>` : ''} · ${h.daysOpen}일째</div>
     <p>${esc(h.thesis)}</p>${h.breakIf ? `<p class="cr-muted">깨지는 조건: ${esc(h.breakIf)}</p>` : ''}${h.evidence?.length ? `<p class="cr-muted">등록 때 근거: ${h.evidence.map(esc).join(' · ')}</p>` : ''}${h.closeNote ? `<p class="cr-muted">마감 메모: ${esc(h.closeNote)}</p>` : ''}
-    ${h.status === 'open' ? `<div class="acts"><button type="button" data-ph="break" data-id="${esc(h.id)}">깨짐으로 표시</button><button type="button" data-ph="right" data-id="${esc(h.id)}">종료 · 맞음</button><button type="button" data-ph="wrong" data-id="${esc(h.id)}">종료 · 틀림</button></div>` : ''}</div>`).join('');
+    ${h.status === 'open' && !readOnly ? `<div class="acts"><button type="button" data-ph="break" data-id="${esc(h.id)}">깨짐으로 표시</button><button type="button" data-ph="right" data-id="${esc(h.id)}">종료 · 맞음</button><button type="button" data-ph="wrong" data-id="${esc(h.id)}">종료 · 틀림</button></div>` : ''}</div>`).join('');
   box.querySelectorAll('[data-ph]').forEach(b => b.onclick = async () => { const kind = b.dataset.ph, note = prompt(kind === 'break' ? '무엇이 깨졌습니까? (한 줄)' : '마감 메모 (선택)') ?? ''; try { await privateRead('paper-live-hypothesis', { op: kind === 'break' ? 'break' : 'close', item: { id: b.dataset.id, note, verdict: kind === 'right' ? 'right' : kind === 'wrong' ? 'wrong' : undefined } }); $('#pp-hyp-state').textContent = '가설을 닫았습니다. 다음 자동 실행에서 계획이 바뀝니다.'; await kisRefresh(); } catch (e) { $('#pp-hyp-state').textContent = e?.message || '처리하지 못했습니다.'; } });
 }
 $('#ph-add').onclick = async () => { const err = $('#ph-err'); err.textContent = ''; if (!phPick) { err.textContent = '종목을 먼저 고르십시오.'; return; }

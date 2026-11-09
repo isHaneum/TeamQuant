@@ -3,6 +3,7 @@
 //   node scripts/kis-paper.mjs preview --plan 005930:20,000660:20,069500:20,035420:20   (보내지 않음)
 //   node scripts/kis-paper.mjs run --plan ... --yes [--rebalance]                       (통과한 주문만 모의계좌에 지정가로 보냄 · --rebalance: 계획까지 맞추는 재조정 묶음)
 //   node scripts/kis-paper.mjs kill on|off · cancel
+//   node scripts/kis-paper.mjs publish [--push]   (켜져 있는 PC 서버에 공개 스냅샷을 쓰게 한다 · --push: 저장소에 커밋·푸시)
 // 규칙은 --rules '{"maxSingle":25,...}' 로 바꿀 수 있고 기본은 lib/core-rules DEFAULT_RULES. 한도는 PAPER_LIVE_LIMITS(JSON) 환경 변수.
 import { join, resolve, dirname } from 'node:path';
 import { readFileSync } from 'node:fs';
@@ -49,4 +50,5 @@ if (cmd === 'status') {
   if (!dry) { console.log(`보냄 ${r.sent.length}건${r.note ? ' · ' + r.note : ''}`); for (const o of r.sent) console.log(`  ${o.name} ${o.side} ${o.qty}주 @${o.currency === 'USD' ? '$' + Number(o.price).toFixed(2) : won(o.price)} → ${o.status}${o.odno ? ' #' + o.odno : ''}${o.error ? ' · ' + o.error : ''}`); }
 } else if (cmd === 'kill') { const r = await pl.kill(args[1] !== 'off'); console.log(`킬 스위치 ${r.killSwitch ? '켜짐' : '꺼짐'} · 취소 ${r.cancelled.length}건`); }
 else if (cmd === 'cancel') { const r = await pl.cancelOpen(); console.log(`취소 요청 ${r.length}건`, r); }
-else console.log('사용: status | preview --plan ... | run --plan ... --yes | kill on|off | cancel');
+else if (cmd === 'publish') { const port = process.env.PORT || 8766; const r = await fetch(`http://127.0.0.1:${port}/api/bridge/paper-live-public`, { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: `http://127.0.0.1:${port}`, 'X-TeamQuant-Action': 'bridge-local' }, body: JSON.stringify({ push: args.includes('--push') }) }).catch(() => { throw new Error('PC 서버가 켜져 있어야 합니다(start-personal-server.cmd).'); }); const d = await r.json(); if (!r.ok) throw new Error(d.error || '실패'); console.log(`공개 스냅샷 ${d.asOf} · 보유 ${d.balance?.positions?.length ?? 0}종목 · 기록 ${d.days}일 · 파일 ${d.written}개 · ${d.pushed ? d.pushed.note : '푸시 안 함'}`); }
+else console.log('사용: status | preview --plan ... | run --plan ... --yes | kill on|off | cancel | publish [--push]');

@@ -38,6 +38,7 @@ root.innerHTML = `
     <p class="hm-connect-state" id="hm-connect-state" role="status"></p></div>
 </div>
 <div class="hm-demo" id="hm-demo" hidden><b>예시 자산</b><span>공개 시세로 만든 가짜 보유 종목입니다. 실제 계좌가 아닙니다.</span><button type="button" class="text-button" data-demo-stop>예시 끄기</button></div>
+<div class="hm-demo hm-paper" id="hm-paper" hidden><b>모의계좌 · 실제 돈 아님</b><span id="hm-paper-text">한국투자 모의투자 계좌(팀 공용)</span><button type="button" class="text-button" data-core-go="paper">모의투자 화면</button><button type="button" class="text-button" data-core-go="settings">실제 계좌 연결</button><button type="button" class="text-button" data-demo-start>예시 자산</button></div>
 <div class="hm-main">
   <div class="hm-kpis" id="hm-kpis">${['지금 평가액', '넣은 돈', '평가 손익', '오늘 변동'].map(l => `<div><span>${l}</span><b class="shimmer">&nbsp;</b><small>&nbsp;</small></div>`).join('')}</div>
   <article class="hm-card" id="hm-trend">
@@ -463,10 +464,11 @@ window.addEventListener('teamquant:style', () => { if (snapshot) renderList(curr
 
 // ── 연결 상태: 계좌가 없으면 빈 화면 대신 연결 안내와 예시 둘러보기를 보여 준다.
 let connection = 'unknown';
+function paperText(m, at) { const ret = m.startTotal > 0 && m.total > 0 ? (m.total / m.startTotal - 1) * 100 : null; const when = at ? new Date(at).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }) : ''; return `${m.label || '한투 모의계좌 (팀 공용)'} · 가상 1억 · 운용 ${m.days || 0}일${m.since ? ` (${m.since}부터)` : ''}${ret === null ? '' : ` · 시작 대비 ${pct(ret)}`} · ${m.live ? 'PC 실시간' : '저장소 공개 파일'} ${when} · 실제 계좌를 연결하면 그 자료로 바뀝니다.`; }
 function syncState() {
   const none = !snapshot && connection === 'error';
   $('#hm-connect').hidden = !none; root.classList.toggle('hm-state-connect', none);
-  $('#hm-demo').hidden = !snapshot?.demo;
+  $('#hm-demo').hidden = !(snapshot?.demo && !snapshot?.paper); $('#hm-paper').hidden = !snapshot?.paper; if (snapshot?.paper) $('#hm-paper-text').textContent = paperText(snapshot.paperMeta || {}, snapshot.fetchedAt);
   if (none) $('#hm-connect-state').textContent = document.querySelector('#toss-status')?.textContent || '';
 }
 $('#hm-connect-go').onclick = () => { document.querySelector('[data-view="settings"]')?.click(); setTimeout(() => { const i = document.querySelector('#workspace-connections input:not([type="checkbox"])'); i?.focus(); i?.scrollIntoView({ block: 'center' }); }, 200); };

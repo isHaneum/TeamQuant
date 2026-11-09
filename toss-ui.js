@@ -27,7 +27,7 @@ $('#toss-refresh').onclick=async()=>{
 };
 $('#toss-clear').onclick=()=>{window.dispatchEvent(new Event('teamquant:asset-clear'));generation++;controller?.abort();$('#toss-refresh').disabled=false;$('#toss-result').replaceChildren();$('#toss-status').textContent='화면의 조회 정보를 삭제했습니다. PC에 저장된 이력은 유지됩니다.';};
 
-window.addEventListener('teamquant:page',()=>{const active=document.querySelector('.view.active')?.dataset.page==='toss';document.querySelector('.mode').textContent=active?'실제 자산 조회 · 주문 없음':'모의투자 · 실제 주문 없음';});
+window.addEventListener('teamquant:page',()=>{const active=document.querySelector('.view.active')?.dataset.page==='toss',k=document.body.dataset.account||'none';document.querySelector('.mode').textContent=active?'실제 자산 조회 · 주문 없음':({real:'실계좌 조회 · 주문 없음',paper:'모의계좌 · 실제 돈 아님',demo:'예시 자산 · 가짜 보유'})[k]||'모의투자 · 실제 주문 없음';});
 
 installBridgeUi(panel,()=>$('#toss-refresh').onclick());
 

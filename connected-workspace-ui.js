@@ -31,7 +31,7 @@ function sync(){
  $('#hub-strategy').textContent=a?`${a.definition.name} · ${a.definition.id} · ${a.definition.entryRule}`:'Strategy Lab에서 투자 원칙을 승인하십시오.';
  if(strategyId!==a?.definition.id){strategyId=a?.definition.id||null;window.dispatchEvent(new Event('teamquant:approved-context'));}
  const page=$('.view.active')?.dataset.page;
- $('.mode').textContent=['assets','comparison','simulation'].includes(page)?'가상 검증 · 실제 주문 없음':connected?'토스증권 연결 · 조회 전용':'계좌 연결 확인';
+ const kind=document.body.dataset.account||(connected?'real':'none');$('.mode').textContent=['assets','comparison','simulation'].includes(page)?'가상 검증 · 실제 주문 없음':({real:'실계좌 조회 · 주문 없음',paper:'모의계좌 · 실제 돈 아님',demo:'예시 자산 · 가짜 보유'})[kind]||'계좌 연결 확인';
  const perfDemo=$('#perf-demo');if(perfDemo)perfDemo.hidden=connected;
 }
 window.addEventListener('teamquant:asset-snapshot',e=>{snapshot=e.detail;owner=profile();sync();});
