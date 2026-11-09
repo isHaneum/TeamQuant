@@ -11,6 +11,7 @@ import { privateRead } from '/bridge-client.js';
 import { resolveStockInput, stockName } from '/lib/instruments.js';
 import { tip } from '/tooltip-ui.js';
 import { mountCandles } from '/lib/candlestick-view.js';
+import { attachStockSearch, quoteOf } from '/stock-search-ui.js';
 
 const $ = s => document.querySelector(s);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -201,31 +202,8 @@ async function chosen() {
   const s = await resolveStockInput(t); return { symbol: s.split('.')[0], name: stockName(s), currency: 'KRW' };
 }
 $('#cp-sym').oninput = () => { if ($('#cp-sym').value.trim()) { cpSel = null; renderPrecheckChips(); } };
-// ── 매매 전 확인: 종목 검색 제안(이름·코드·티커) + 오늘 등락 + 1년 차트 ──
-const US_LIST = [['AAPL', '애플'], ['MSFT', '마이크로소프트'], ['NVDA', '엔비디아'], ['AMZN', '아마존'], ['GOOGL', '알파벳'], ['META', '메타'], ['TSLA', '테슬라'], ['BRK-B', '버크셔 해서웨이'], ['JPM', 'JP모건'], ['JNJ', '존슨앤드존슨'], ['KO', '코카콜라'], ['PG', 'P&G'], ['LLY', '일라이 릴리'], ['UNH', '유나이티드헬스'], ['XOM', '엑슨모빌'], ['SPY', 'S&P500 ETF'], ['QQQ', '나스닥100 ETF'], ['VOO', '뱅가드 S&P500 ETF'], ['TLT', '미국 장기채 ETF'], ['SOXX', '반도체 ETF'], ['TSM', 'TSMC'], ['AVGO', '브로드컴'], ['AMD', 'AMD'], ['MU', '마이크론'], ['NFLX', '넷플릭스'], ['COST', '코스트코'], ['WMT', '월마트'], ['LMT', '록히드마틴'], ['RTX', 'RTX'], ['GEV', 'GE 버노바'], ['PLTR', '팔란티어'], ['ISRG', '인튜이티브 서지컬'], ['ASML', 'ASML'], ['V', '비자'], ['MA', '마스터카드'], ['HD', '홈디포'], ['ABBV', '애브비'], ['MRK', '머크'], ['PEP', '펩시코'], ['CSCO', '시스코'], ['ORCL', '오라클'], ['CRM', '세일즈포스'], ['INTC', '인텔'], ['BA', '보잉'], ['GS', '골드만삭스'], ['BAC', '뱅크오브아메리카']];
-const BOOST_UNUSED = new Set(['005930', '000660', '005380', '000270', '012330', '035420', '035720', '105560', '055550', '086790', '207940', '068270', '373220', '006400', '051910', '005490', '012450', '064350', '047810', '079550', '329180', '042660', '010140', '009540', '034020', '015760', '066570', '003550', '017670', '030200', '096770', '028260', '009150', '018260', '032830', '000810', '138040', '069500', '102110', '091160', '091180', '305720', '266420', '449450', '494670', '445290', '247540', '196170', '042700', '003670', '011200', '010130', '034730', '000100', '326030', '259960', '036570']);
-let suggRun = 0, suggTimer = null; const quoteCache = new Map();
-async function quoteOf(symbol) { if (!quoteCache.has(symbol)) quoteCache.set(symbol, getJson(`/api/quote?symbol=${encodeURIComponent(symbol)}`).catch(() => null)); return quoteCache.get(symbol); }
-async function suggest(q) {
-  const run = ++suggRun, box = $('#cp-sugg'); if (!q) { box.hidden = true; box.innerHTML = ''; return; }
-  const up = q.toUpperCase(), out = [];
-  if (/^[A-Za-z][A-Za-z.\-]*$/.test(q)) out.push(...US_LIST.filter(([t, n]) => t.startsWith(up) || n.includes(q)).slice(0, 6).map(([t, n]) => ({ symbol: t, name: n, currency: 'USD', sub: t })));
-  else out.push(...US_LIST.filter(([, n]) => n.includes(q)).slice(0, 3).map(([t, n]) => ({ symbol: t, name: n, currency: 'USD', sub: t })));
-  if (!/^[A-Za-z]/.test(q)) { try { const d = await getJson(`/api/stocks?q=${encodeURIComponent(q)}`); if (run !== suggRun) return;
-    // 서버가 대형주·별칭 우선으로 이미 정렬해 준다(이름 길이로 다시 섞지 않는다)
-    out.push(...(d.items || []).slice(0, 8).map(x => ({ symbol: x.code, name: x.name, currency: 'KRW', sub: x.code }))); } catch { } }
-  if (run !== suggRun) return;
-  if (!out.length) { box.hidden = false; box.innerHTML = '<div class="cp-sugg-empty">찾는 종목이 없습니다. 코드(6자리)나 미국 티커로 적어 보십시오.</div>'; return; }
-  box.hidden = false; box.innerHTML = out.map(o => `<button type="button" role="option" data-symbol="${esc(o.symbol)}" data-name="${esc(o.name)}" data-cur="${o.currency}"><b>${esc(o.name)}</b><small>${esc(o.sub)}</small><span class="q" data-q="${esc(o.symbol)}">…</span></button>`).join('');
-  box.querySelectorAll('button').forEach(b => b.onclick = () => { cpSel = { symbol: b.dataset.symbol, name: b.dataset.name, currency: b.dataset.cur }; $('#cp-sym').value = b.dataset.name; box.hidden = true; renderPrecheckChips(); void showStockPanel(cpSel); });
-  // 오늘 등락(지연 시세)은 상위 6개만, 늦게 와도 그 행에만 채운다
-  await Promise.all(out.slice(0, 6).map(async o => { const qv = await quoteOf(o.symbol); if (run !== suggRun) return; const el = box.querySelector(`[data-q="${CSS.escape(o.symbol)}"]`); if (!el) return; if (qv && Number.isFinite(qv.pct)) { el.textContent = `${qv.pct > 0 ? '+' : ''}${qv.pct.toFixed(2)}%`; el.className = `q ${qv.pct > 0 ? 'up' : qv.pct < 0 ? 'down' : ''}`; } else el.textContent = ''; }));
-}
-$('#cp-sym').addEventListener('input', () => { clearTimeout(suggTimer); const v = $('#cp-sym').value.trim(); suggTimer = setTimeout(() => void suggest(v), 180); });
-$('#cp-sym').addEventListener('focus', () => { const v = $('#cp-sym').value.trim(); if (v && !cpSel) void suggest(v); });
-document.addEventListener('click', e => { if (!e.target.closest('.cp-search')) { const b = $('#cp-sugg'); if (b) b.hidden = true; } });
-$('#cp-sym').addEventListener('keydown', e => { if (e.key === 'Escape') $('#cp-sugg').hidden = true; if (e.key === 'ArrowDown') { const f = $('#cp-sugg button'); if (f) { e.preventDefault(); f.focus(); } } });
-$('#cp-sugg').addEventListener('keydown', e => { const items = [...$('#cp-sugg').querySelectorAll('button')], i = items.indexOf(document.activeElement); if (e.key === 'ArrowDown' && items[i + 1]) { e.preventDefault(); items[i + 1].focus(); } if (e.key === 'ArrowUp') { e.preventDefault(); (items[i - 1] || $('#cp-sym')).focus(); } });
+// 매매 전 확인: 종목 검색 제안은 공용 모듈(stock-search-ui.js). 고르면 오늘 등락·1년 차트 패널을 연다.
+attachStockSearch($('#cp-sym'), { onPick: o => { cpSel = o; renderPrecheckChips(); void showStockPanel(o); } });
 let panelRun = 0;
 async function showStockPanel(o) {
   const host = $('#cp-stock'); if (!host || !o) return; const run = ++panelRun;

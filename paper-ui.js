@@ -7,6 +7,7 @@ import { normalizeRules, RULES_VERSION } from '/lib/core-rules.js';
 import { candles as fetchCandles } from '/lib/client-data.js';
 import { resolveStockInput, stockName, stockNames } from '/lib/instruments.js';
 import { tip } from '/tooltip-ui.js';
+import { attachStockSearch } from '/stock-search-ui.js';
 import { privateRead } from '/bridge-client.js';
 
 const $ = s => document.querySelector(s);
@@ -39,7 +40,8 @@ const style = document.createElement('style'); style.textContent = `
 .pp-kis-sum{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--ck-sub);margin:0 0 10px}.pp-kis-sum b{color:var(--ck-ink)}.pp-kis-sum .on{color:var(--ck-bad);font-weight:700}
 .pp-kis-items{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}.pp-kis-items li{border:1px solid var(--ck-line);border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.5}.pp-kis-items li.ok{border-color:#abefc6;background:var(--ck-ok-bg)}.pp-kis-items li.bad{background:var(--ck-soft)}.pp-kis-items small{display:block;color:var(--ck-sub)}.pp-kis-items .st{font-weight:700}
 .pp-kis-note{font-size:12.5px;color:var(--ck-sub);line-height:1.6;margin:8px 0 0}
-#pp-kis-actions{flex-wrap:wrap}.pp-badge{font-size:11px;font-weight:700;color:#7a4e0c;background:var(--ck-bad-bg);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}#pp-kis-actions button{white-space:nowrap}
+#pp-kis-actions{flex-wrap:wrap}.pp-picked{margin-top:8px}.pp-picked button i{font-style:normal;margin-left:4px;opacity:.7}
+.pp-badge{font-size:11px;font-weight:700;color:#7a4e0c;background:var(--ck-bad-bg);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}#pp-kis-actions button{white-space:nowrap}
 .pp-kis-plan{margin:10px 0}.pp-kis-plan>summary{cursor:pointer;font-size:13px;font-weight:600;color:#1849a8}.pp-kis-plan h4{margin:12px 0 6px}.pp-kis-plan .pp-ref td,.pp-kis-plan .pp-ref th{font-size:12px}.pp-kis-plan .up{color:var(--ck-up)}.pp-kis-plan .down{color:var(--ck-down)}
 @media(max-width:760px){.pp-form{grid-template-columns:1fr}#core-paper .rp-tiles{grid-template-columns:1fr}.pp-live{display:grid}}`; document.head.append(style);
 
@@ -52,7 +54,7 @@ page.innerHTML = `<div class="page-head"><div><h1>모의투자 ${tip('실제로 
 <div class="pp-form"><label class="ck-field unit"><span>시작 자금</span><input id="pp-capital" type="number" value="10000000" min="100000" step="100000" inputmode="numeric"><i>원</i></label>
 <label class="ck-field"><span>종목</span><select id="pp-basket"><option value="demo">예시 6종목 (국내 4 · 미국 2)</option><option value="mine" disabled>내 보유 종목 (계좌 연결 또는 예시 자산 필요)</option><option value="custom">직접 입력</option></select></label>
 <label class="ck-field"><span>기간</span><select id="pp-range"><option value="91">최근 3개월</option><option value="182" selected>최근 6개월</option><option value="365">최근 1년</option><option value="540">최근 18개월</option></select></label></div>
-<label class="ck-field" id="pp-custom-wrap" hidden><span>종목 (쉼표로 구분 · 이름 또는 코드)</span><input id="pp-custom" placeholder="삼성전자, 069500, AAPL" autocomplete="off"></label>
+<div class="ck-field" id="pp-custom-wrap" hidden><span>종목 찾아 추가 (최대 12개)</span><input id="pp-custom" placeholder="이름·코드·티커 (예: 현대, 005380, NVDA)" autocomplete="off"><div class="cp-chips pp-picked" id="pp-picked"></div></div>
 <div class="cr-actions"><button id="pp-run" class="primary">시뮬 실행</button><button id="pp-start" class="secondary">오늘부터 시뮬 기록(증권사 없이)</button><span id="pp-state" class="cr-err" role="status"></span></div></div>
 <div class="cr-card" id="pp-live" hidden></div>
 <div id="pp-result"></div>
@@ -74,13 +76,19 @@ $('#pp-rules').textContent = rulesLine(currentRules());
 window.addEventListener('teamquant:asset-snapshot', e => { const ps = (e.detail?.positions || []).filter(p => p.symbol); S.mine = ps.map(p => ({ symbol: p.symbol, name: p.name || stockName(p.symbol), currency: p.currency || 'KRW' })); const o = $('#pp-basket option[value="mine"]'); o.disabled = !S.mine.length; o.textContent = S.mine.length ? `내 보유 종목 ${S.mine.length}개${e.detail?.demo ? ' (예시 자산)' : ''}` : '내 보유 종목 (계좌 연결 또는 예시 자산 필요)'; });
 window.addEventListener('teamquant:asset-clear', () => { S.mine = []; const o = $('#pp-basket option[value="mine"]'); o.disabled = true; if ($('#pp-basket').value === 'mine') $('#pp-basket').value = 'demo'; });
 $('#pp-basket').onchange = () => { $('#pp-custom-wrap').hidden = $('#pp-basket').value !== 'custom'; };
+// 직접 입력: 공용 검색 제안으로 고르고 칩으로 쌓는다(쉼표 입력도 그대로 받는다)
+S.custom = [];
+function renderPicked() { const box = $('#pp-picked'); if (!box) return; box.innerHTML = S.custom.map(o => `<button type="button" class="on" data-rm="${esc(o.symbol)}" title="빼기">${esc(o.name)} <i aria-hidden="true">×</i></button>`).join('') || '<span class="cr-muted">아직 고른 종목이 없습니다.</span>'; box.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { S.custom = S.custom.filter(o => o.symbol !== b.dataset.rm); renderPicked(); }); }
+attachStockSearch($('#pp-custom'), { clearOnPick: true, exclude: () => new Set(S.custom.map(o => o.symbol)), onPick: o => { if (S.custom.length >= 12) { $('#pp-state').textContent = '종목은 12개까지입니다.'; return; } if (!S.custom.some(x => x.symbol === o.symbol)) S.custom.push(o); renderPicked(); } });
+renderPicked();
 
 async function basketOf() {
   const kind = $('#pp-basket').value;
   if (kind === 'demo') return DEMO;
   if (kind === 'mine') { if (!S.mine.length) throw new Error('보유 종목이 없습니다. 계좌를 연결하거나 예시 자산을 켜십시오.'); return S.mine.slice(0, 12); }
-  const parts = $('#pp-custom').value.split(/[,\n]/).map(s => s.trim()).filter(Boolean);
-  if (!parts.length) throw new Error('종목을 하나 이상 입력하십시오.');
+  if (S.custom.length && !$('#pp-custom').value.trim()) return S.custom.map(o => ({ symbol: o.symbol, name: o.name, currency: o.currency }));
+  const parts = [...S.custom.map(o => o.symbol), ...$('#pp-custom').value.split(/[,\n]/).map(s => s.trim()).filter(Boolean)];
+  if (!parts.length) throw new Error('종목을 하나 이상 골라 주십시오.');
   if (parts.length > 12) throw new Error('종목은 12개까지입니다.');
   const out = [];
   for (const p of parts) {
