@@ -29,6 +29,7 @@ export function attachStockSearch(input, { onPick, clearOnPick = false, exclude 
   const hide = () => { box.hidden = true; };
   async function suggest(q) {
     const my = ++run; if (!q) { hide(); box.innerHTML = ''; return; }
+    box.hidden = false; box.innerHTML = '<div class="cp-sugg-empty">찾는 중…</div>'; // 이전 검색어의 목록을 남겨 두지 않는다
     const skip = exclude(), out = (await searchStocks(q)).filter(o => !skip.has(o.symbol));
     if (my !== run) return;
     if (!out.length) { box.hidden = false; box.innerHTML = '<div class="cp-sugg-empty">찾는 종목이 없습니다. 6자리 코드나 미국 티커로 적어 보십시오.</div>'; return; }
