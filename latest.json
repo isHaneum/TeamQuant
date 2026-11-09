@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-09T14:28:14.908Z",
+ "updatedAt": "2026-11-09T14:47:48.076Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -36,12 +36,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 7376.86,
-   "change": 0,
-   "z": 0,
-   "sd": 0.8730796089234166,
-   "source": "네이버 현재가",
-   "live": false,
+   "last": 7488.31005859375,
+   "change": 1.51,
+   "z": 1.7,
+   "sd": 0.8693468928426498,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -50,12 +49,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 24579.43,
-   "change": 0,
-   "z": 0,
-   "sd": 1.2493450618967445,
-   "source": "네이버 현재가",
-   "live": false,
+   "last": 25059.109375,
+   "change": 1.95,
+   "z": 1.6,
+   "sd": 1.253472597457243,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -64,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 1345.6500244140625,
-   "change": -0.79,
+   "last": 1345.8299560546875,
+   "change": -0.77,
    "z": -1.2,
    "sd": 0.6401283221834233,
    "source": "Yahoo"
@@ -76,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 86.86000061035156,
-   "change": -4.37,
-   "z": -1.5,
+   "last": 87.61000061035156,
+   "change": -3.55,
+   "z": -1.3,
    "sd": 2.8342734377460372,
    "source": "Yahoo"
   },
@@ -88,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 4136.60009765625,
-   "change": 1.51,
-   "z": 1.1,
+   "last": 4124.5,
+   "change": 1.22,
+   "z": 0.9,
    "sd": 1.3566648164944195,
    "source": "Yahoo"
   },
@@ -100,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 23.190000534057617,
-   "change": -9.56,
-   "z": -0.8,
+   "last": 23.139999389648438,
+   "change": -9.75,
+   "z": -0.9,
    "sd": 11.348304491643647,
    "source": "Yahoo",
    "checked": true
@@ -122,11 +120,11 @@
  ],
  "spikes": {
   "war": -0.3,
-  "politics": -0.7,
+  "politics": -1,
   "rates": -1,
-  "trade": 0,
+  "trade": -0.1,
   "fx": -0.5,
-  "energy": -0.4,
+  "energy": -0.7,
   "market": -1.2,
   "credit": -0.2,
   "disaster": 0,
@@ -139,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.9,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -149,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 2.7,
+   "rate": 2.5,
    "saturated": 0,
    "queries": 2
   },
@@ -159,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.7,
+   "rate": 2.6,
    "saturated": 0,
    "queries": 3
   },
@@ -185,128 +183,6 @@
   }
  },
  "issues": [
-  {
-   "id": "1hg4n5e",
-   "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
-   "firstSeen": "2026-11-08T23:28:00.000Z",
-   "lastSeen": "2026-11-08T23:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38415",
-     "host": "junggi.co.kr",
-     "at": "2026-11-08T23:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "WTI 유가 -4.37%"
-    ]
-   }
-  },
-  {
-   "id": "tmw0m6",
-   "title": "美, 민주 양원 장악 '호르무즈' 숨통···'유가·해운비' 내려가나",
-   "firstSeen": "2026-11-09T06:01:00.000Z",
-   "lastSeen": "2026-11-09T06:01:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "美, 민주 양원 장악 '호르무즈' 숨통···'유가·해운비' 내려가나",
-     "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2489969",
-     "host": "enewstoday.co.kr",
-     "at": "2026-11-09T06:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "WTI 유가 -4.37%"
-    ]
-   }
-  },
-  {
-   "id": "1dkh4ny",
-   "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
-   "firstSeen": "2026-11-09T06:58:00.000Z",
-   "lastSeen": "2026-11-09T06:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
-     "link": "https://www.joongang.co.kr/article/25476994",
-     "host": "joongang.co.kr",
-     "at": "2026-11-09T06:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "WTI 유가 -4.37%"
-    ]
-   }
-  },
   {
    "id": "1t1cefu",
    "title": "[심양섭의 정론직격] 국민연금 182조 평가손실, 李정부가 답해야 할 질문...",
@@ -337,19 +213,141 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 31,
+    "score": 42,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.56,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -0.8
+     "z": 1.7
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 -9.56%"
+     "S&P 500 +1.51%"
+    ]
+   }
+  },
+  {
+   "id": "1hg4n5e",
+   "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
+   "firstSeen": "2026-11-08T23:28:00.000Z",
+   "lastSeen": "2026-11-08T23:28:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38415",
+     "host": "junggi.co.kr",
+     "at": "2026-11-08T23:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
+     "unit": "%",
+     "z": 1.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.51%"
+    ]
+   }
+  },
+  {
+   "id": "x7gi8w",
+   "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+   "firstSeen": "2026-11-08T23:48:00.000Z",
+   "lastSeen": "2026-11-08T23:48:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+     "link": "https://www.raonnews.com/news/article.html?no=62579",
+     "host": "raonnews.com",
+     "at": "2026-11-08T23:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
+     "unit": "%",
+     "z": 1.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.51%"
+    ]
+   }
+  },
+  {
+   "id": "1dkh4ny",
+   "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
+   "firstSeen": "2026-11-09T06:58:00.000Z",
+   "lastSeen": "2026-11-09T06:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
+     "link": "https://www.joongang.co.kr/article/25476994",
+     "host": "joongang.co.kr",
+     "at": "2026-11-09T06:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
+     "unit": "%",
+     "z": 1.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.51%"
     ]
    }
   },
@@ -378,19 +376,114 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
+    "score": 39,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
+     "unit": "%",
+     "z": 1.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.51%"
+    ]
+   }
+  },
+  {
+   "id": "tmw0m6",
+   "title": "美, 민주 양원 장악 '호르무즈' 숨통···'유가·해운비' 내려가나",
+   "firstSeen": "2026-11-09T06:01:00.000Z",
+   "lastSeen": "2026-11-09T06:01:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "美, 민주 양원 장악 '호르무즈' 숨통···'유가·해운비' 내려가나",
+     "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2489969",
+     "host": "enewstoday.co.kr",
+     "at": "2026-11-09T06:01:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "CL=F",
+     "label": "WTI 유가",
+     "change": -3.55,
+     "unit": "%",
+     "z": -1.3
+    },
+    "why": [
+     "핵심 단어",
+     "WTI 유가 -3.55%"
+    ]
+   }
+  },
+  {
+   "id": "11ktnmd",
+   "title": "트럼프 \"이민 정책도 중간선거 참패 요인…너무 강경했다\"",
+   "firstSeen": "2026-11-09T02:23:00.000Z",
+   "lastSeen": "2026-11-09T09:53:00.000Z",
+   "count": 13,
+   "sources": 13,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프 “이민 정책 너무 강경했다”… 중간선거 패인 중 하나로 인정",
+     "link": "https://www.kmib.co.kr/article/20261109501699",
+     "host": "kmib.co.kr",
+     "at": "2026-11-09T09:53:00.000Z"
+    },
+    {
+     "title": "트럼프 \"이민 정책 너무 강경\"…밈코인도 최저가",
+     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200414",
+     "host": "mstoday.co.kr",
+     "at": "2026-11-09T07:06:00.000Z"
+    },
+    {
+     "title": "중간선거 참패에 한발 물러선 트럼프 \"이민정책 너무 강경했다\"",
+     "link": "https://www.hankyung.com/article/2026110951467",
+     "host": "hankyung.com",
+     "at": "2026-11-09T05:55:00.000Z"
+    },
+    {
+     "title": "트럼프 “이민정책 너무 강경했다”…중간선거 참패 요인 첫 인정[1일1트...",
+     "link": "https://biz.heraldcorp.com/article/10930826?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-09T05:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
     "score": 31,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.79,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -1.2
+     "z": 1.7
     },
     "why": [
-     "핵심 단어",
-     "원/달러 -0.79%"
+     "S&P 500 +1.51%"
     ]
    }
   },
@@ -398,17 +491,22 @@
    "id": "1fjs7vv",
    "title": "[머니버스] '불륜' 시인한 젠슨 황…반도체 시장 영향은?",
    "firstSeen": "2026-11-09T07:04:00.000Z",
-   "lastSeen": "2026-11-09T13:50:00.000Z",
-   "count": 10,
-   "sources": 9,
+   "lastSeen": "2026-11-09T14:34:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
     "war",
     "politics",
-    "market",
-    "policy"
+    "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[속보] 뉴욕증시 상승 출발...젠슨황 불륜 이슈에 엔비디아 주가는↓",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3747008",
+     "host": "gukjenews.com",
+     "at": "2026-11-09T14:34:00.000Z"
+    },
     {
      "title": "[미디어 이슈] 젠슨 황 불륜 파문 일파만파... 美 의회 조사에 국내도 ‘...",
      "link": "https://www.mediawatch.kr/news/article.html?no=261670",
@@ -422,12 +520,6 @@
      "at": "2026-11-09T13:04:00.000Z"
     },
     {
-     "title": "[김종석의 왜]‘깐부’ 젠슨 황의 그녀는 中 스파이?",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000559149",
-     "host": "ichannela.com",
-     "at": "2026-11-09T13:00:00.000Z"
-    },
-    {
      "title": "젠슨 황, 중 기업인과 불륜 인정…미·중 ‘반도체 전쟁’ 새 뇌관",
      "link": "https://www.khan.co.kr/article/202611092129015",
      "host": "khan.co.kr",
@@ -437,58 +529,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -1.5
+     "z": 1.7
     },
     "why": [
-     "WTI 유가 -4.37%"
-    ]
-   }
-  },
-  {
-   "id": "x7gi8w",
-   "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
-   "firstSeen": "2026-11-08T23:48:00.000Z",
-   "lastSeen": "2026-11-08T23:48:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
-     "link": "https://www.raonnews.com/news/article.html?no=62579",
-     "host": "raonnews.com",
-     "at": "2026-11-08T23:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.56,
-     "unit": "%",
-     "z": -0.8
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 -9.56%"
+     "S&P 500 +1.51%"
     ]
    }
   },
@@ -533,56 +585,112 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 25,
+    "score": 28,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -1.5
+     "z": 1.7
     },
     "why": [
-     "WTI 유가 -4.37%"
+     "S&P 500 +1.51%"
     ]
    }
   },
   {
-   "id": "11ktnmd",
-   "title": "트럼프 \"이민 정책도 중간선거 참패 요인…너무 강경했다\"",
-   "firstSeen": "2026-11-09T02:23:00.000Z",
-   "lastSeen": "2026-11-09T09:53:00.000Z",
-   "count": 13,
-   "sources": 13,
+   "id": "nxlz6b",
+   "title": "씨티 \"주가 하락에도 이달 기준금리 인상⋯반도체 급락시엔 내년 '피벗...",
+   "firstSeen": "2026-11-09T01:32:00.000Z",
+   "lastSeen": "2026-11-09T08:39:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"반도체 수출 꺾이면 내년 기준금리 내릴것\"",
+     "link": "https://www.mk.co.kr/article/12202743",
+     "host": "mk.co.kr",
+     "at": "2026-11-09T08:39:00.000Z"
+    },
+    {
+     "title": "반도체 업황 꺾이면 내년 하반기 금리 인하할 수도 … 씨티銀 \"한은 통...",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/09/2026110900236.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-09T06:14:00.000Z"
+    },
+    {
+     "title": "씨티 \"반도체 수출 꺾일 땐 내년 하반기 금리 인하\"",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611090066&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-09T03:59:00.000Z"
+    },
+    {
+     "title": "씨티 \"반도체 꺾이면, 내년 하반기 금리인하…2028년 연 2.5%까지 낮출 수...",
+     "link": "https://www.newsis.com/view/NISX20261109_0003860136",
+     "host": "newsis.com",
+     "at": "2026-11-09T01:53:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 26,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
+     "unit": "%",
+     "z": 1.7
+    },
+    "why": [
+     "S&P 500 +1.51%"
+    ]
+   }
+  },
+  {
+   "id": "19wd1ah",
+   "title": "헤그세스 탄핵안 놓고 트럼프·민주당 정면충돌…공화당 이탈표 주시",
+   "firstSeen": "2026-11-08T22:27:00.000Z",
+   "lastSeen": "2026-11-09T00:50:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "트럼프 “이민 정책 너무 강경했다”… 중간선거 패인 중 하나로 인정",
-     "link": "https://www.kmib.co.kr/article/20261109501699",
-     "host": "kmib.co.kr",
-     "at": "2026-11-09T09:53:00.000Z"
+     "title": "민주당·트럼프, 탄핵·수사로 정면충돌…마가 지지층은 패배 책임 놓고...",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261109010003113",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-09T00:50:00.000Z"
     },
     {
-     "title": "트럼프 \"이민 정책 너무 강경\"…밈코인도 최저가",
-     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200414",
-     "host": "mstoday.co.kr",
-     "at": "2026-11-09T07:06:00.000Z"
+     "title": "트럼프·민주당, 헤그세스 국방장관 탄핵안 놓고 첫 정면충돌",
+     "link": "https://www.m-economynews.com/news/article.html?no=72748",
+     "host": "m-economynews.com",
+     "at": "2026-11-08T23:18:00.000Z"
     },
     {
-     "title": "중간선거 참패에 한발 물러선 트럼프 \"이민정책 너무 강경했다\"",
-     "link": "https://www.hankyung.com/article/2026110951467",
-     "host": "hankyung.com",
-     "at": "2026-11-09T05:55:00.000Z"
+     "title": "美민주, 이번주 헤그세스 탄핵 추진… 트럼프와 첫 정면충돌",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3446998",
+     "host": "newscj.com",
+     "at": "2026-11-08T23:10:00.000Z"
     },
     {
-     "title": "트럼프 “이민정책 너무 강경했다”…중간선거 참패 요인 첫 인정[1일1트...",
-     "link": "https://biz.heraldcorp.com/article/10930826?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-09T05:39:00.000Z"
+     "title": "헤그세스 탄핵안 놓고 트럼프·민주당 정면충돌…공화당 이탈표 주시",
+     "link": "https://www.dt.co.kr/article/12093861?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-08T22:35:00.000Z"
     }
    ],
    "assess": {
@@ -592,14 +700,70 @@
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.79,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -1.2
+     "z": 1.7
     },
     "why": [
-     "원/달러 -0.79%"
+     "S&P 500 +1.51%"
+    ]
+   }
+  },
+  {
+   "id": "1h0qcfr",
+   "title": "'반대매매' 도미노 막는다…금융당국, 3개월간 담보비율 규제 유예",
+   "firstSeen": "2026-11-08T22:48:00.000Z",
+   "lastSeen": "2026-11-09T04:28:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "증시 급락에 담보비율 유지의무 면제… \"반대매매 숨통\" vs \"잠재리스크...",
+     "link": "https://www.ekoreanews.co.kr/news/articleView.html?idxno=89094",
+     "host": "ekoreanews.co.kr",
+     "at": "2026-11-09T04:28:00.000Z"
+    },
+    {
+     "title": "요동치는 증시…당국은 \"반대매매 유예\" 실효성은?",
+     "link": "https://www.mediapen.com/news/view/1136168",
+     "host": "mediapen.com",
+     "at": "2026-11-09T02:56:00.000Z"
+    },
+    {
+     "title": "[특징주] 담보비율 하향·반대매매 유예…주요 증권주 일제히 약세",
+     "link": "https://www.etoday.co.kr/news/view/2645618",
+     "host": "etoday.co.kr",
+     "at": "2026-11-09T00:28:00.000Z"
+    },
+    {
+     "title": "'반대매매' 도미노 막는다…금융당국, 3개월간 담보비율 규제 유예",
+     "link": "https://www.g-enews.com/view.php?ud=202611090725493159923c501012_1",
+     "host": "g-enews.com",
+     "at": "2026-11-08T22:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
+     "unit": "%",
+     "z": 1.7
+    },
+    "why": [
+     "S&P 500 +1.51%"
     ]
    }
   },
@@ -644,173 +808,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
+    "score": 23,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -1.5
+     "z": 1.7
     },
     "why": [
-     "WTI 유가 -4.37%"
-    ]
-   }
-  },
-  {
-   "id": "z27sz1",
-   "title": "환율, 달러 강세에도 1,340원대로…4거래일만에 하락",
-   "firstSeen": "2026-11-09T07:41:00.000Z",
-   "lastSeen": "2026-11-09T10:36:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "1363원에 출발한 환율, 1347원으로 하락…달러 강세에도 원화 반등",
-     "link": "https://www.betanews.net/article/view/beta202611090163",
-     "host": "betanews.net",
-     "at": "2026-11-09T10:36:00.000Z"
-    },
-    {
-     "title": "원·달러 환율 1347원으로 하락…4거래일 만에 상승세 꺾여",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000081043",
-     "host": "jnilbo.com",
-     "at": "2026-11-09T08:18:00.000Z"
-    },
-    {
-     "title": "원·달러 환율 9.5원 내린 1347원…4거래일 만에 하락",
-     "link": "https://www.kado.net/news/articleView.html?idxno=2083616",
-     "host": "kado.net",
-     "at": "2026-11-09T08:12:00.000Z"
-    },
-    {
-     "title": "환율, 4거래일 만에 하락…위험선호심리 반등 영향",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345192?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-09T08:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 19,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.79,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "원/달러 -0.79%"
-    ]
-   }
-  },
-  {
-   "id": "m9pt32",
-   "title": "금시세(금값) 상승",
-   "firstSeen": "2026-11-09T01:20:00.000Z",
-   "lastSeen": "2026-11-09T11:22:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "李대통령 지지율 충청권만 10% 상승",
-     "link": "http://www.cctimes.kr/news/articleView.html?idxno=936367",
-     "host": "cctimes.kr",
-     "at": "2026-11-09T11:22:00.000Z"
-    },
-    {
-     "title": "[도쿄증시-마감] 美 증시 반등·日 기업 실적 기대에 2%대 상승",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443814",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-09T08:50:00.000Z"
-    },
-    {
-     "title": "금시세(금값) 상승",
-     "link": "http://www.kjdaily.com/article.php?aid=1794187152691632227",
-     "host": "kjdaily.com",
-     "at": "2026-11-09T01:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "WTI 유가 -4.37%"
-    ]
-   }
-  },
-  {
-   "id": "14sj54d",
-   "title": "석유 최고가격제 손실 '정산 D-day' 임박… 7조 손실 놓고 정부·업계 '이...",
-   "firstSeen": "2026-11-09T06:28:00.000Z",
-   "lastSeen": "2026-11-09T13:37:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "김정관 “석유 최고가격제 쉽게 중단 못해”…이달 말 정유사 손실 첫 ...",
-     "link": "https://www.seoul.co.kr/news/politics/2026/11/09/20261109500402?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-09T13:37:00.000Z"
-    },
-    {
-     "title": "석유 최고가격제 첫 정산 임박…정부·정유업계 '셈법' 충돌",
-     "link": "https://www.mediaus.co.kr/news/articleView.html?idxno=318900",
-     "host": "mediaus.co.kr",
-     "at": "2026-11-09T09:26:00.000Z"
-    },
-    {
-     "title": "석유 최고가격제 손실 '정산 D-day' 임박… 7조 손실 놓고 정부·업계 '이...",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/09/2026110900203.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-09T06:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.37,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "WTI 유가 -4.37%"
+     "S&P 500 +1.51%"
     ]
    }
   },
@@ -819,8 +828,8 @@
    "title": "“美 반도체 급등에도 코스피는 뒷걸음질”…5000선 턱걸이, 외국인 매...",
    "firstSeen": "2026-11-09T07:00:00.000Z",
    "lastSeen": "2026-11-09T12:36:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "count": 4,
+   "sources": 4,
    "topics": [
     "market"
    ],
@@ -845,82 +854,76 @@
      "at": "2026-11-09T08:42:00.000Z"
     },
     {
-     "title": "[마감 시황] 외국인·개인 '팔자'에 코스피 5,018선 턱걸이 마감…삼성전...",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=280833",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-09T08:18:00.000Z"
+     "title": "“美 반도체 급등에도 코스피는 뒷걸음질”…5000선 턱걸이, 외국인 매...",
+     "link": "https://www.ddaily.co.kr/page/view/2026110915554224921",
+     "host": "ddaily.co.kr",
+     "at": "2026-11-09T07:09:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 23,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.56,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -0.8
+     "z": 1.7
     },
     "why": [
-     "VIX 변동성 -9.56%"
+     "S&P 500 +1.51%"
     ]
    }
   },
   {
    "id": "19wd1ah",
-   "title": "헤그세스 탄핵안 놓고 트럼프·민주당 정면충돌…공화당 이탈표 주시",
+   "title": "트럼프-민주, 금주 '헤그세스 탄핵안' 1라운드 충돌…與반란표 주목",
    "firstSeen": "2026-11-08T22:27:00.000Z",
-   "lastSeen": "2026-11-09T00:50:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "lastSeen": "2026-11-08T23:52:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "민주당·트럼프, 탄핵·수사로 정면충돌…마가 지지층은 패배 책임 놓고...",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261109010003113",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-09T00:50:00.000Z"
+     "title": "트럼프-민주, 이번 주 '헤그세스 탄핵안' 충돌…공화 이탈표 규모는?",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008836599&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-08T23:52:00.000Z"
     },
     {
-     "title": "트럼프·민주당, 헤그세스 국방장관 탄핵안 놓고 첫 정면충돌",
-     "link": "https://www.m-economynews.com/news/article.html?no=72748",
-     "host": "m-economynews.com",
-     "at": "2026-11-08T23:18:00.000Z"
+     "title": "트럼프-민주, 중간선거 뒤 첫 격돌...'헤그세스 탄핵안' 표결 나서나",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=562179",
+     "host": "joongangenews.com",
+     "at": "2026-11-08T23:52:00.000Z"
     },
     {
-     "title": "美민주, 이번주 헤그세스 탄핵 추진… 트럼프와 첫 정면충돌",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3446998",
-     "host": "newscj.com",
-     "at": "2026-11-08T23:10:00.000Z"
-    },
-    {
-     "title": "헤그세스 탄핵안 놓고 트럼프·민주당 정면충돌…공화당 이탈표 주시",
-     "link": "https://www.dt.co.kr/article/12093861?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-08T22:35:00.000Z"
+     "title": "트럼프-민주, 금주 '헤그세스 탄핵안' 1라운드 충돌…與반란표 주목",
+     "link": "https://www.yna.co.kr/view/AKR20261109010300071?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-08T22:27:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 20,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.79,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.51,
      "unit": "%",
-     "z": -1.2
+     "z": 1.7
     },
     "why": [
-     "원/달러 -0.79%"
+     "S&P 500 +1.51%"
     ]
    }
   }
