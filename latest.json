@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-09T02:47:44.687Z",
+ "updatedAt": "2026-11-09T03:18:11.634Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 5155.5400390625,
-   "change": 1.89,
-   "z": 0.6,
+   "last": 5127.2,
+   "change": 1.33,
+   "z": 0.5,
    "sd": 2.948375135524748,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,8 +24,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 655.1400146484375,
-   "change": 1.69,
+   "last": 655.75,
+   "change": 1.78,
    "z": 0.7,
    "sd": 2.520234572375647,
    "source": "Yahoo",
@@ -62,9 +63,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 1353.97998046875,
-   "change": -0.17,
-   "z": -0.3,
+   "last": 1355.8399658203125,
+   "change": -0.04,
+   "z": -0.1,
    "sd": 0.6401283221834233,
    "source": "Yahoo"
   },
@@ -74,9 +75,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 90.76000213623047,
-   "change": -0.08,
-   "z": 0,
+   "last": 91.26000213623047,
+   "change": 0.47,
+   "z": 0.2,
    "sd": 2.8342734377460372,
    "source": "Yahoo"
   },
@@ -86,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 4136.2998046875,
-   "change": 1.51,
-   "z": 1.1,
+   "last": 4126.7001953125,
+   "change": 1.27,
+   "z": 0.9,
    "sd": 1.3566648164944195,
    "source": "Yahoo"
   },
@@ -119,35 +120,35 @@
   }
  ],
  "spikes": {
-  "war": 2,
-  "politics": 2.1,
-  "rates": 3.2,
-  "trade": 1.3,
+  "war": 1.5,
+  "politics": 1.5,
+  "rates": 2.8,
+  "trade": 1.1,
   "fx": -0.5,
-  "energy": 1.3,
+  "energy": 2.7,
   "market": 1,
-  "credit": 0.3,
+  "credit": 0.1,
   "disaster": 0,
-  "policy": 0.3
+  "policy": 0.6
  },
  "rates": {
   "war": {
-   "rate": 3.3,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 3.8,
+   "rate": 3.4,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 4.3,
+   "rate": 4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 4.5,
+   "rate": 4.3,
    "saturated": 1,
    "queries": 2
   },
@@ -157,7 +158,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 1
   },
@@ -167,7 +168,7 @@
    "queries": 3
   },
   "credit": {
-   "rate": 0.3,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 2
   },
@@ -177,220 +178,18 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "17vlv6k",
-   "title": "밴스-헤그세스-루비오, 이란전 다른 목소리… “전쟁 끝내야” vs “공습...",
-   "firstSeen": "2026-11-08T19:33:00.000Z",
-   "lastSeen": "2026-11-08T19:33:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "밴스-헤그세스-루비오, 이란전 다른 목소리… “전쟁 끝내야” vs “공습...",
-     "link": "https://www.donga.com/news/Inter/article/all/20261109/134988310/2",
-     "host": "donga.com",
-     "at": "2026-11-08T19:33:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.51,
-     "unit": "%",
-     "z": 1.1
-    },
-    "why": [
-     "핵심 단어",
-     "금 +1.51%"
-    ]
-   }
-  },
-  {
-   "id": "1hg4n5e",
-   "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
-   "firstSeen": "2026-11-08T23:28:00.000Z",
-   "lastSeen": "2026-11-08T23:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38415",
-     "host": "junggi.co.kr",
-     "at": "2026-11-08T23:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.51,
-     "unit": "%",
-     "z": 1.1
-    },
-    "why": [
-     "핵심 단어",
-     "금 +1.51%"
-    ]
-   }
-  },
-  {
-   "id": "418r3m",
-   "title": "“전면전 없지만 폭격은 할 수도”…트럼프, 이란에 또 경고",
-   "firstSeen": "2026-11-08T22:52:00.000Z",
-   "lastSeen": "2026-11-09T00:12:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "“전면전 없지만 폭격은 할 수도”…트럼프, 이란에 또 경고",
-     "link": "https://www.ekn.kr/web/view.php?key=20261109021006964",
-     "host": "ekn.kr",
-     "at": "2026-11-09T00:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.51,
-     "unit": "%",
-     "z": 1.1
-    },
-    "why": [
-     "핵심 단어",
-     "금 +1.51%"
-    ]
-   }
-  },
-  {
-   "id": "dktuvd",
-   "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
-   "firstSeen": "2026-11-09T02:01:00.000Z",
-   "lastSeen": "2026-11-09T02:01:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
-     "link": "https://www.seoul.co.kr/news/international/middleeast-africa/2026/11/09/20261109500086?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-09T02:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.51,
-     "unit": "%",
-     "z": 1.1
-    },
-    "why": [
-     "핵심 단어",
-     "금 +1.51%"
-    ]
-   }
-  },
-  {
-   "id": "j3wmvg",
-   "title": "3자 종전협상 앞둔 우크라전 전황은?…지상전 교착·공습전 격화",
-   "firstSeen": "2026-11-09T02:25:00.000Z",
-   "lastSeen": "2026-11-09T02:25:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "3자 종전협상 앞둔 우크라전 전황은?…지상전 교착·공습전 격화",
-     "link": "https://www.news1.kr/world/europe/6347485",
-     "host": "news1.kr",
-     "at": "2026-11-09T02:25:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.51,
-     "unit": "%",
-     "z": 1.1
-    },
-    "why": [
-     "핵심 단어",
-     "금 +1.51%"
-    ]
-   }
-  },
-  {
-   "id": "1ahgmc7",
-   "title": "‘블루쓰나미’에 1360원대로 뛴 환율",
+   "id": "1prjekc",
+   "title": "미국 민주당 의회 장악에 환율 급등",
    "firstSeen": "2026-11-08T05:15:00.000Z",
    "lastSeen": "2026-11-09T01:24:00.000Z",
-   "count": 9,
+   "count": 12,
    "sources": 5,
    "topics": [
     "politics",
@@ -429,65 +228,308 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 2.1,
+    "score": 42,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.51,
+     "change": 1.27,
      "unit": "%",
-     "z": 1.1
+     "z": 0.9
     },
     "why": [
-     "금 +1.51%"
+     "금 +1.27%"
     ]
    }
   },
   {
-   "id": "1gwgqvo",
-   "title": "금리 인상 저울질하는 한은…코스피 폭락 변수되나",
-   "firstSeen": "2026-11-08T03:30:00.000Z",
-   "lastSeen": "2026-11-09T00:38:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "17vlv6k",
+   "title": "밴스-헤그세스-루비오, 이란전 다른 목소리… “전쟁 끝내야” vs “공습...",
+   "firstSeen": "2026-11-08T19:33:00.000Z",
+   "lastSeen": "2026-11-08T19:33:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "rates",
-    "market"
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "밴스-헤그세스-루비오, 이란전 다른 목소리… “전쟁 끝내야” vs “공습...",
+     "link": "https://www.donga.com/news/Inter/article/all/20261109/134988310/2",
+     "host": "donga.com",
+     "at": "2026-11-08T19:33:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.27,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 +1.27%"
+    ]
+   }
+  },
+  {
+   "id": "1hg4n5e",
+   "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
+   "firstSeen": "2026-11-08T23:28:00.000Z",
+   "lastSeen": "2026-11-08T23:28:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38415",
+     "host": "junggi.co.kr",
+     "at": "2026-11-08T23:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.27,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 +1.27%"
+    ]
+   }
+  },
+  {
+   "id": "418r3m",
+   "title": "“전면전 없지만 폭격은 할 수도”…트럼프, 이란에 또 경고",
+   "firstSeen": "2026-11-08T22:52:00.000Z",
+   "lastSeen": "2026-11-09T00:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "“전면전 없지만 폭격은 할 수도”…트럼프, 이란에 또 경고",
+     "link": "https://www.ekn.kr/web/view.php?key=20261109021006964",
+     "host": "ekn.kr",
+     "at": "2026-11-09T00:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.27,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 +1.27%"
+    ]
+   }
+  },
+  {
+   "id": "dktuvd",
+   "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
+   "firstSeen": "2026-11-09T02:01:00.000Z",
+   "lastSeen": "2026-11-09T02:01:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
+     "link": "https://www.seoul.co.kr/news/international/middleeast-africa/2026/11/09/20261109500086?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-09T02:01:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.27,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 +1.27%"
+    ]
+   }
+  },
+  {
+   "id": "j3wmvg",
+   "title": "3자 종전협상 앞둔 우크라전 전황은?…지상전 교착·공습전 격화",
+   "firstSeen": "2026-11-09T02:25:00.000Z",
+   "lastSeen": "2026-11-09T02:25:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "3자 종전협상 앞둔 우크라전 전황은?…지상전 교착·공습전 격화",
+     "link": "https://www.news1.kr/world/europe/6347485",
+     "host": "news1.kr",
+     "at": "2026-11-09T02:25:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.27,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 +1.27%"
+    ]
+   }
+  },
+  {
+   "id": "jm24db",
+   "title": "[굿모닝 오늘의 증시] 젠슨황 불륜 인정…미 반등에 찬물 끼얹나",
+   "firstSeen": "2026-11-08T21:19:00.000Z",
+   "lastSeen": "2026-11-09T03:16:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "war",
+    "politics",
+    "fx",
+    "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "NH투자증권 \"증시 급락에도 한은 금리 올릴 듯\"",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345036?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-09T00:38:00.000Z"
+     "title": "[숏폼] '불륜 인정' 젠슨황, 반도체 황제 침실로 파고든 中 스파이?",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=754137",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-09T03:16:00.000Z"
     },
     {
-     "title": "[더벨][Korean Corporate Global IR 2026] 미국 금리 추가 인상에 무게…중...",
-     "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051555595320105624",
-     "host": "thebell.co.kr",
-     "at": "2026-11-08T22:52:00.000Z"
+     "title": "불륜 인정한 젠슨 황…이혼하면 '100조' 재산분할 가능성",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902403",
+     "host": "newsworks.co.kr",
+     "at": "2026-11-09T03:14:00.000Z"
     },
     {
-     "title": "증시 급락에 한은 금리 인상 셈법 복잡…추가 긴축 부담 가중",
-     "link": "https://www.ajunews.com/view/20261108154553699",
-     "host": "ajunews.com",
-     "at": "2026-11-08T06:56:00.000Z"
+     "title": "불륜 인정한 젠슨 황, 中 스파이 연루 의혹에 리더십 '흔들'",
+     "link": "https://zdnet.co.kr/view/?no=20261109112712",
+     "host": "zdnet.co.kr",
+     "at": "2026-11-09T02:42:00.000Z"
     },
     {
-     "title": "금리 인상 저울질하는 한은…코스피 폭락 변수되나",
-     "link": "https://news.bizwatch.co.kr/article/finance/2026/11/06/0021",
-     "host": "news.bizwatch.co.kr",
-     "at": "2026-11-08T03:30:00.000Z"
+     "title": "젠슨 황, '중국 스파이 의심' 여성과 불륜 인정…독립 조사 쟁점은?",
+     "link": "https://www.ekoreanews.co.kr/news/articleView.html?idxno=89090",
+     "host": "ekoreanews.co.kr",
+     "at": "2026-11-09T02:24:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 3.2,
-    "news": true,
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 2.7,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.27,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "금 +1.27%"
+    ]
+   }
+  },
+  {
+   "id": "1nzp3y5",
+   "title": "[마켓 프리뷰] 장중 5000선마저 붕괴…연이틀 매도 사이드카 발동",
+   "firstSeen": "2026-11-08T22:34:00.000Z",
+   "lastSeen": "2026-11-08T22:34:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[마켓 프리뷰] 장중 5000선마저 붕괴…연이틀 매도 사이드카 발동",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345005?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-08T22:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 1,
+    "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
@@ -496,7 +538,7 @@
      "z": -0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.2σ)",
+     "핵심 단어",
      "VIX 변동성 -9.01%"
     ]
    }
@@ -540,11 +582,11 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 3.2,
-    "news": true,
+    "level": "watch",
+    "label": "관찰",
+    "score": 34,
+    "spike": 2.8,
+    "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
@@ -553,7 +595,105 @@
      "z": -0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.2σ)",
+     "VIX 변동성 -9.01%"
+    ]
+   }
+  },
+  {
+   "id": "1rmd0yz",
+   "title": "뉴욕증시 이번주 CPI·AI 기업 실적 시험대…12월 금리인상 확률 80%",
+   "firstSeen": "2026-11-08T22:00:00.000Z",
+   "lastSeen": "2026-11-09T01:28:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[뉴욕 주간 프리뷰] AI 관련주 분수령...CPI와 네오클라우드 실적 초점",
+     "link": "https://www.newspim.com/news/view/20261109000412",
+     "host": "newspim.com",
+     "at": "2026-11-09T01:28:00.000Z"
+    },
+    {
+     "title": "外人 반도체 투매에 무너진 코스피…美 물가·AI 실적 시험대",
+     "link": "https://www.imaeil.com/page/view/2026110909553517453",
+     "host": "imaeil.com",
+     "at": "2026-11-09T01:10:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 이번주 CPI·AI 기업 실적 시험대…12월 금리인상 확률 80%",
+     "link": "https://www.news1.kr/world/international-economy/6347039",
+     "host": "news1.kr",
+     "at": "2026-11-08T22:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.33,
+     "unit": "%",
+     "z": 0.5
+    },
+    "why": [
+     "코스피 +1.33%"
+    ]
+   }
+  },
+  {
+   "id": "38x3ee",
+   "title": "[모닝 리포트] \"증시 급락에도 한은 금리인상 전망...이달 0.25%p↑ 예상...",
+   "firstSeen": "2026-11-08T23:36:00.000Z",
+   "lastSeen": "2026-11-09T00:38:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "NH투자증권 \"증시 급락에도 한은 금리 올릴 듯\"",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345036?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-09T00:38:00.000Z"
+    },
+    {
+     "title": "NH증권 \"증시 급락에도 한은 피벗 기대는 시기상조…이달 인상\"",
+     "link": "https://www.yna.co.kr/view/AKR20261109022900008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-08T23:51:00.000Z"
+    },
+    {
+     "title": "[모닝 리포트] \"증시 급락에도 한은 금리인상 전망...이달 0.25%p↑ 예상...",
+     "link": "https://www.newspim.com/news/view/20261109000103",
+     "host": "newspim.com",
+     "at": "2026-11-08T23:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -9.01,
+     "unit": "%",
+     "z": -0.8
+    },
+    "why": [
      "VIX 변동성 -9.01%"
     ]
    }
@@ -591,50 +731,49 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 36,
-    "spike": 3.2,
-    "news": true,
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 2.8,
+    "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.51,
+     "change": 1.27,
      "unit": "%",
-     "z": 1.1
+     "z": 0.9
     },
     "why": [
-     "기사 급증(평소 대비 3.2σ)",
-     "금 +1.51%"
+     "금 +1.27%"
     ]
    }
   },
   {
-   "id": "1nzp3y5",
-   "title": "[마켓 프리뷰] 장중 5000선마저 붕괴…연이틀 매도 사이드카 발동",
-   "firstSeen": "2026-11-08T22:34:00.000Z",
-   "lastSeen": "2026-11-08T22:34:00.000Z",
+   "id": "x7gi8w",
+   "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+   "firstSeen": "2026-11-08T23:48:00.000Z",
+   "lastSeen": "2026-11-08T23:48:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "market"
+    "credit"
    ],
    "critical": [
-    "market"
+    "credit"
    ],
    "links": [
     {
-     "title": "[마켓 프리뷰] 장중 5000선마저 붕괴…연이틀 매도 사이드카 발동",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345005?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-08T22:34:00.000Z"
+     "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+     "link": "https://www.raonnews.com/news/article.html?no=62579",
+     "host": "raonnews.com",
+     "at": "2026-11-08T23:48:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 36,
-    "spike": 1,
+    "score": 29,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -690,86 +829,28 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 2.1,
+    "score": 28,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.51,
+     "change": 1.27,
      "unit": "%",
-     "z": 1.1
+     "z": 0.9
     },
     "why": [
-     "금 +1.51%"
+     "금 +1.27%"
     ]
    }
   },
   {
-   "id": "jm24db",
-   "title": "[굿모닝 오늘의 증시] 젠슨황 불륜 인정…미 반등에 찬물 끼얹나",
-   "firstSeen": "2026-11-08T21:19:00.000Z",
-   "lastSeen": "2026-11-09T02:42:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "war",
-    "politics",
-    "fx",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "불륜 인정한 젠슨 황, 中 스파이 연루 의혹에 리더십 '흔들'",
-     "link": "https://zdnet.co.kr/view/?no=20261109112712",
-     "host": "zdnet.co.kr",
-     "at": "2026-11-09T02:42:00.000Z"
-    },
-    {
-     "title": "젠슨 황, '중국 스파이 의심' 여성과 불륜 인정…독립 조사 쟁점은?",
-     "link": "https://www.ekoreanews.co.kr/news/articleView.html?idxno=89090",
-     "host": "ekoreanews.co.kr",
-     "at": "2026-11-09T02:24:00.000Z"
-    },
-    {
-     "title": "엔비디아 젠슨 황 불륜 인정에 美 정·재계 발칵…\"보호해야\" vs \"책임 물...",
-     "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=713722",
-     "host": "digitaltoday.co.kr",
-     "at": "2026-11-09T02:20:00.000Z"
-    },
-    {
-     "title": "젠슨 황 \"불륜 인정\"…엔비디아, 中 정보기관 표적 의혹 조사",
-     "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=89115",
-     "host": "industrynews.co.kr",
-     "at": "2026-11-09T02:04:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.51,
-     "unit": "%",
-     "z": 1.1
-    },
-    "why": [
-     "금 +1.51%"
-    ]
-   }
-  },
-  {
-   "id": "38x3ee",
-   "title": "[모닝 리포트] \"증시 급락에도 한은 금리인상 전망...이달 0.25%p↑ 예상...",
-   "firstSeen": "2026-11-08T23:36:00.000Z",
-   "lastSeen": "2026-11-09T01:32:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "r7e6h3",
+   "title": "증시 급락에 한은 금리 인상 셈법 복잡…추가 긴축 부담 가중",
+   "firstSeen": "2026-11-08T00:01:00.000Z",
+   "lastSeen": "2026-11-08T22:52:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
     "rates",
     "market"
@@ -777,30 +858,24 @@
    "critical": [],
    "links": [
     {
-     "title": "씨티 \"주가 하락에도 이달 기준금리 인상⋯반도체 급락시엔 내년 '피벗...",
-     "link": "https://www.etoday.co.kr/news/view/2645676",
-     "host": "etoday.co.kr",
-     "at": "2026-11-09T01:32:00.000Z"
+     "title": "[더벨][Korean Corporate Global IR 2026] 미국 금리 추가 인상에 무게…중...",
+     "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202611051555595320105624",
+     "host": "thebell.co.kr",
+     "at": "2026-11-08T22:52:00.000Z"
     },
     {
-     "title": "NH증권 \"증시 급락에도 한은 피벗 기대는 시기상조…이달 인상\"",
-     "link": "https://www.yna.co.kr/view/AKR20261109022900008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-08T23:51:00.000Z"
-    },
-    {
-     "title": "[모닝 리포트] \"증시 급락에도 한은 금리인상 전망...이달 0.25%p↑ 예상...",
-     "link": "https://www.newspim.com/news/view/20261109000103",
-     "host": "newspim.com",
-     "at": "2026-11-08T23:36:00.000Z"
+     "title": "증시 급락에 한은 금리 인상 셈법 복잡…추가 긴축 부담 가중",
+     "link": "https://www.ajunews.com/view/20261108154553699",
+     "host": "ajunews.com",
+     "at": "2026-11-08T06:56:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 34,
-    "spike": 3.2,
-    "news": true,
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 2.8,
+    "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
@@ -809,109 +884,7 @@
      "z": -0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.2σ)",
      "VIX 변동성 -9.01%"
-    ]
-   }
-  },
-  {
-   "id": "5wc92x",
-   "title": "AI 불안에 중동 리스크까지…환율 1360원대 상승 압력[외환브리핑]",
-   "firstSeen": "2026-11-08T05:15:00.000Z",
-   "lastSeen": "2026-11-08T23:25:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "환율 1360원대 상승 압력…美 금리 인상 우려에 강달러 재점화",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579199&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-08T23:25:00.000Z"
-    },
-    {
-     "title": "AI 불안에 중동 리스크까지…환율 1360원대 상승 압력[외환브리핑]",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=02099206645644080&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-08T23:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
-    "spike": 3.2,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.51,
-     "unit": "%",
-     "z": 1.1
-    },
-    "why": [
-     "기사 급증(평소 대비 3.2σ)",
-     "금 +1.51%"
-    ]
-   }
-  },
-  {
-   "id": "14qsr3k",
-   "title": "[사설] '블루 쓰나미' 충격에도 '조작기소 특검' 목매는 정치권",
-   "firstSeen": "2026-11-08T20:10:00.000Z",
-   "lastSeen": "2026-11-09T02:06:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 블루 쓰나미에 코스피 출렁…김동선, 왜 또 공개매수 나서나",
-     "link": "https://www.newsis.com/view/NISX20261109_0003860208",
-     "host": "newsis.com",
-     "at": "2026-11-09T02:06:00.000Z"
-    },
-    {
-     "title": "美 중간선거 '블루 쓰나미'…에너지 지형 급변하나",
-     "link": "https://www.electimes.com/news/articleView.html?idxno=374503",
-     "host": "electimes.com",
-     "at": "2026-11-09T01:16:00.000Z"
-    },
-    {
-     "title": "[뉴스초점] '블루 쓰나미'에 휘청인 코스피…충격 벗어날까",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261109100840LUU",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-09T01:10:00.000Z"
-    },
-    {
-     "title": "미국 덮친 ‘블루 쓰나미’",
-     "link": "https://www.ilyosisa.co.kr/news/article.html?no=258806",
-     "host": "ilyosisa.co.kr",
-     "at": "2026-11-09T00:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.89,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "코스피 +1.89%"
     ]
    }
   }
