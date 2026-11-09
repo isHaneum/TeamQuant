@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-09T09:30:03.457Z",
+ "updatedAt": "2026-11-09T09:48:02.320Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 1350.260009765625,
-   "change": -0.45,
-   "z": -0.7,
+   "last": 1348.56005859375,
+   "change": -0.57,
+   "z": -0.9,
    "sd": 0.6401283221834233,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 89.81999969482422,
-   "change": -1.11,
-   "z": -0.4,
+   "last": 90.1500015258789,
+   "change": -0.75,
+   "z": -0.3,
    "sd": 2.8342734377460372,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 4103.60009765625,
-   "change": 0.7,
+   "last": 4105,
+   "change": 0.74,
    "z": 0.5,
    "sd": 1.3566648164944195,
    "source": "Yahoo"
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 24.450000762939453,
-   "change": -4.64,
-   "z": -0.4,
+   "last": 24.31999969482422,
+   "change": -5.15,
+   "z": -0.5,
    "sd": 11.348304491643647,
    "source": "Yahoo",
    "checked": true
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": 1.8,
-  "politics": 0.4,
-  "rates": 1,
+  "war": 1.7,
+  "politics": 0.3,
+  "rates": 0.9,
   "trade": 0.8,
   "fx": 1.9,
-  "energy": 0.9,
-  "market": 0.1,
+  "energy": 1.4,
+  "market": 0,
   "credit": 0.3,
   "disaster": 0,
-  "policy": 1.1
+  "policy": 0.9
  },
  "rates": {
   "war": {
-   "rate": 3.4,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.7,
+   "rate": 2.6,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 2.2,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 5.2,
+   "rate": 5,
    "saturated": 2,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   }
@@ -185,11 +185,11 @@
  "issues": [
   {
    "id": "qlb9",
-   "title": "中, 미국산 제품 24% 추가 관세 부과 2개월 유예 연장",
+   "title": "中, 美 보복관세 2개월 더 유예…미·중 관세전쟁 '휴전 연장'",
    "firstSeen": "2026-11-09T05:56:00.000Z",
-   "lastSeen": "2026-11-09T08:29:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "lastSeen": "2026-11-09T09:46:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "war",
     "trade"
@@ -198,6 +198,12 @@
     "trade"
    ],
    "links": [
+    {
+     "title": "中, 대미 24% 추가관세·희토류 통제강화 유예 2개월 연장(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261109087351083?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-09T09:46:00.000Z"
+    },
     {
      "title": "中, 美 선박 항만료 부과 유예 연장…내년 1월10일까지",
      "link": "https://www.newsis.com/view/NISX20261109_0003860806",
@@ -211,12 +217,6 @@
      "at": "2026-11-09T08:11:00.000Z"
     },
     {
-     "title": "中, 美 보복관세 2개월 더 유예…미·중 관세전쟁 '휴전 연장'",
-     "link": "https://www.dailian.co.kr/news/view/1712671/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-09T05:56:00.000Z"
-    },
-    {
      "title": "中, 미국산 제품 24% 추가 관세 부과 2개월 유예 연장",
      "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902438",
      "host": "newsworks.co.kr",
@@ -226,19 +226,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 51,
-    "spike": 1.8,
+    "score": 54,
+    "spike": 1.7,
     "news": true,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.45,
+     "change": -0.57,
      "unit": "%",
-     "z": -0.7
+     "z": -0.9
     },
     "why": [
      "핵심 단어",
-     "원/달러 -0.45%"
+     "원/달러 -0.57%"
     ]
    }
   },
@@ -273,13 +273,13 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.45,
+     "change": -0.57,
      "unit": "%",
-     "z": -0.7
+     "z": -0.9
     },
     "why": [
      "핵심 단어",
-     "원/달러 -0.45%"
+     "원/달러 -0.57%"
     ]
    }
   },
@@ -309,18 +309,18 @@
     "level": "watch",
     "label": "관찰",
     "score": 42,
-    "spike": 1.8,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.45,
+     "change": -0.57,
      "unit": "%",
-     "z": -0.7
+     "z": -0.9
     },
     "why": [
      "핵심 단어",
-     "원/달러 -0.45%"
+     "원/달러 -0.57%"
     ]
    }
   },
@@ -349,18 +349,18 @@
     "level": "watch",
     "label": "관찰",
     "score": 42,
-    "spike": 1.8,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.45,
+     "change": -0.57,
      "unit": "%",
-     "z": -0.7
+     "z": -0.9
     },
     "why": [
      "핵심 단어",
-     "원/달러 -0.45%"
+     "원/달러 -0.57%"
     ]
    }
   },
@@ -388,19 +388,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
-    "spike": 0.9,
+    "score": 39,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.7,
+     "change": 0.74,
      "unit": "%",
      "z": 0.5
     },
     "why": [
      "핵심 단어",
-     "금 +0.7%"
+     "금 +0.74%"
     ]
    }
   },
@@ -446,58 +446,17 @@
     "level": "watch",
     "label": "관찰",
     "score": 31,
-    "spike": 1.8,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.45,
+     "change": -0.57,
      "unit": "%",
-     "z": -0.7
+     "z": -0.9
     },
     "why": [
-     "원/달러 -0.45%"
-    ]
-   }
-  },
-  {
-   "id": "1dkh4ny",
-   "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
-   "firstSeen": "2026-11-09T06:58:00.000Z",
-   "lastSeen": "2026-11-09T06:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
-     "link": "https://www.joongang.co.kr/article/25476994",
-     "host": "joongang.co.kr",
-     "at": "2026-11-09T06:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.45,
-     "unit": "%",
-     "z": -0.7
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 -0.45%"
+     "원/달러 -0.57%"
     ]
    }
   },
@@ -529,15 +488,15 @@
     "spike": 0.3,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 0.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -5.15,
      "unit": "%",
-     "z": 0.4
+     "z": -0.5
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +0.31%"
+     "VIX 변동성 -5.15%"
     ]
    }
   },
@@ -569,15 +528,56 @@
     "spike": 0.3,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 0.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -5.15,
      "unit": "%",
-     "z": 0.4
+     "z": -0.5
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +0.31%"
+     "VIX 변동성 -5.15%"
+    ]
+   }
+  },
+  {
+   "id": "1dkh4ny",
+   "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
+   "firstSeen": "2026-11-09T06:58:00.000Z",
+   "lastSeen": "2026-11-09T06:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "코스피보다 심각한 코스닥…600선 추락, 계엄 당시 수준으로",
+     "link": "https://www.joongang.co.kr/article/25476994",
+     "host": "joongang.co.kr",
+     "at": "2026-11-09T06:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.57,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.57%"
     ]
    }
   },
@@ -585,21 +585,15 @@
    "id": "1nn4x1c",
    "title": "[원자재 시황] 미 고용 호조에 금·코인 하락",
    "firstSeen": "2026-11-08T23:52:00.000Z",
-   "lastSeen": "2026-11-09T08:28:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "lastSeen": "2026-11-09T06:00:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "rates",
     "energy"
    ],
    "critical": [],
    "links": [
-    {
-     "title": "[채권마감] 5거래일만 약세, 미 고용 호조…주가 하락에 전약후강",
-     "link": "https://www.etoday.co.kr/news/view/2645948",
-     "host": "etoday.co.kr",
-     "at": "2026-11-09T08:28:00.000Z"
-    },
     {
      "title": "美 고용 호조에 커진 긴축 경계…이번주 물가가 분수령",
      "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611091334218360211",
@@ -617,23 +611,238 @@
      "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443745",
      "host": "news.einfomax.co.kr",
      "at": "2026-11-09T02:36:00.000Z"
+    },
+    {
+     "title": "[오늘 금시세] 금 한돈 66만6,713원 0.6% 상승…미국 고용 호조에 국제 ...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271701",
+     "host": "topstarnews.net",
+     "at": "2026-11-09T00:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 26,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 0.74,
+     "unit": "%",
+     "z": 0.5
+    },
+    "why": [
+     "금 +0.74%"
+    ]
+   }
+  },
+  {
+   "id": "9gmhe0",
+   "title": "[경제 포커스] 뉴욕 증시 출렁여도 달러는 강세… “AI 주도 美 경제로...",
+   "firstSeen": "2026-11-09T06:42:00.000Z",
+   "lastSeen": "2026-11-09T07:54:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "원/달러 환율 다시 1340원대로…추가 하락 가능성도",
+     "link": "https://www.mt.co.kr/economy/2026/11/09/2026110916344025735",
+     "host": "mt.co.kr",
+     "at": "2026-11-09T07:54:00.000Z"
+    },
+    {
+     "title": "환율, 달러 강세에도 1,340원대로…4거래일만에 하락",
+     "link": "https://www.yna.co.kr/view/AKR20261109121300002?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-09T07:41:00.000Z"
+    },
+    {
+     "title": "[경제 포커스] 뉴욕 증시 출렁여도 달러는 강세… “AI 주도 美 경제로...",
+     "link": "https://biz.chosun.com/policy/policy_sub/2026/11/09/YGLKD45VUBDKVGMTHIFKLRXNBI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-09T06:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 24,
-    "spike": 1,
+    "spike": 1.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.57,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "원/달러 -0.57%"
+    ]
+   }
+  },
+  {
+   "id": "15y4uk7",
+   "title": "환율, 4거래일 만에 하락…위험선호심리 반등 영향",
+   "firstSeen": "2026-11-09T07:33:00.000Z",
+   "lastSeen": "2026-11-09T08:18:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "원·달러 환율 1347원으로 하락…4거래일 만에 상승세 꺾여",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000081043",
+     "host": "jnilbo.com",
+     "at": "2026-11-09T08:18:00.000Z"
+    },
+    {
+     "title": "원·달러 환율 9.5원 내린 1347원…4거래일 만에 하락",
+     "link": "https://www.kado.net/news/articleView.html?idxno=2083616",
+     "host": "kado.net",
+     "at": "2026-11-09T08:12:00.000Z"
+    },
+    {
+     "title": "환율, 4거래일 만에 하락…위험선호심리 반등 영향",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345192?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-09T08:08:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 24,
+    "spike": 1.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.57,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "원/달러 -0.57%"
+    ]
+   }
+  },
+  {
+   "id": "9spraw",
+   "title": "\"원자재만 치솟고 지갑은 닫혔다\"… 中 생산자물가 4년 만에 최고, 소비...",
+   "firstSeen": "2026-11-09T03:38:00.000Z",
+   "lastSeen": "2026-11-09T05:33:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "中 생산자물가 4년 만에 최대 상승… 소비 부진에 원가 압박 커져",
+     "link": "https://biz.chosun.com/international/international_general/2026/11/09/HD3GCRTZYREKFCOW6LCTMOTZ6A/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-09T05:33:00.000Z"
+    },
+    {
+     "title": "中 생산자물가 4년여 만에 최고…내수는 여전히 '냉랭'",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026110914142986539",
+     "host": "newsway.co.kr",
+     "at": "2026-11-09T05:18:00.000Z"
+    },
+    {
+     "title": "중국, 10월 생산자물가 5.7% 급등⋯4년 4개월 만에 최고",
+     "link": "https://www.etoday.co.kr/news/view/2645805",
+     "host": "etoday.co.kr",
+     "at": "2026-11-09T04:54:00.000Z"
+    },
+    {
+     "title": "\"원자재만 치솟고 지갑은 닫혔다\"… 中 생산자물가 4년 만에 최고, 소비...",
+     "link": "https://www.g-enews.com/view.php?ud=2026110913124675690c8c1c064d_1",
+     "host": "g-enews.com",
+     "at": "2026-11-09T04:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.7,
+     "change": 0.74,
      "unit": "%",
      "z": 0.5
     },
     "why": [
-     "금 +0.7%"
+     "금 +0.74%"
+    ]
+   }
+  },
+  {
+   "id": "11ktnmd",
+   "title": "트럼프 \"이민 정책도 중간선거 참패 요인…너무 강경했다\"",
+   "firstSeen": "2026-11-09T02:23:00.000Z",
+   "lastSeen": "2026-11-09T07:06:00.000Z",
+   "count": 12,
+   "sources": 12,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프 \"이민 정책 너무 강경\"…밈코인도 최저가",
+     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200414",
+     "host": "mstoday.co.kr",
+     "at": "2026-11-09T07:06:00.000Z"
+    },
+    {
+     "title": "중간선거 참패에 한발 물러선 트럼프 \"이민정책 너무 강경했다\"",
+     "link": "https://www.hankyung.com/article/2026110951467",
+     "host": "hankyung.com",
+     "at": "2026-11-09T05:55:00.000Z"
+    },
+    {
+     "title": "트럼프 “이민정책 너무 강경했다”…중간선거 참패 요인 첫 인정[1일1트...",
+     "link": "https://biz.heraldcorp.com/article/10930826?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-09T05:39:00.000Z"
+    },
+    {
+     "title": "“불법 이민자 추방, A+ 받을 만하다” 자신하던 트럼프…중간선거 참패...",
+     "link": "https://www.sedaily.com/article/20111953?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-09T05:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.57,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "원/달러 -0.57%"
     ]
    }
   },
@@ -678,232 +887,35 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 24,
-    "spike": 1.1,
+    "score": 22,
+    "spike": 0.9,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 0.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -5.15,
      "unit": "%",
-     "z": 0.4
+     "z": -0.5
     },
     "why": [
-     "S&P 500 +0.31%"
-    ]
-   }
-  },
-  {
-   "id": "9gmhe0",
-   "title": "[경제 포커스] 뉴욕 증시 출렁여도 달러는 강세… “AI 주도 美 경제로...",
-   "firstSeen": "2026-11-09T06:42:00.000Z",
-   "lastSeen": "2026-11-09T07:54:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "원/달러 환율 다시 1340원대로…추가 하락 가능성도",
-     "link": "https://www.mt.co.kr/economy/2026/11/09/2026110916344025735",
-     "host": "mt.co.kr",
-     "at": "2026-11-09T07:54:00.000Z"
-    },
-    {
-     "title": "환율, 달러 강세에도 1,340원대로…4거래일만에 하락",
-     "link": "https://www.yna.co.kr/view/AKR20261109121300002?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-09T07:41:00.000Z"
-    },
-    {
-     "title": "[경제 포커스] 뉴욕 증시 출렁여도 달러는 강세… “AI 주도 美 경제로...",
-     "link": "https://biz.chosun.com/policy/policy_sub/2026/11/09/YGLKD45VUBDKVGMTHIFKLRXNBI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-09T06:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 24,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.45,
-     "unit": "%",
-     "z": -0.7
-    },
-    "why": [
-     "원/달러 -0.45%"
-    ]
-   }
-  },
-  {
-   "id": "15y4uk7",
-   "title": "환율, 4거래일 만에 하락…위험선호심리 반등 영향",
-   "firstSeen": "2026-11-09T07:33:00.000Z",
-   "lastSeen": "2026-11-09T08:18:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "원·달러 환율 1347원으로 하락…4거래일 만에 상승세 꺾여",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000081043",
-     "host": "jnilbo.com",
-     "at": "2026-11-09T08:18:00.000Z"
-    },
-    {
-     "title": "원·달러 환율 9.5원 내린 1347원…4거래일 만에 하락",
-     "link": "https://www.kado.net/news/articleView.html?idxno=2083616",
-     "host": "kado.net",
-     "at": "2026-11-09T08:12:00.000Z"
-    },
-    {
-     "title": "환율, 4거래일 만에 하락…위험선호심리 반등 영향",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345192?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-09T08:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 24,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.45,
-     "unit": "%",
-     "z": -0.7
-    },
-    "why": [
-     "원/달러 -0.45%"
-    ]
-   }
-  },
-  {
-   "id": "11ktnmd",
-   "title": "트럼프 \"이민 정책도 중간선거 참패 요인…너무 강경했다\"",
-   "firstSeen": "2026-11-09T02:23:00.000Z",
-   "lastSeen": "2026-11-09T07:06:00.000Z",
-   "count": 12,
-   "sources": 12,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 \"이민 정책 너무 강경\"…밈코인도 최저가",
-     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200414",
-     "host": "mstoday.co.kr",
-     "at": "2026-11-09T07:06:00.000Z"
-    },
-    {
-     "title": "중간선거 참패에 한발 물러선 트럼프 \"이민정책 너무 강경했다\"",
-     "link": "https://www.hankyung.com/article/2026110951467",
-     "host": "hankyung.com",
-     "at": "2026-11-09T05:55:00.000Z"
-    },
-    {
-     "title": "트럼프 “이민정책 너무 강경했다”…중간선거 참패 요인 첫 인정[1일1트...",
-     "link": "https://biz.heraldcorp.com/article/10930826?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-09T05:39:00.000Z"
-    },
-    {
-     "title": "“불법 이민자 추방, A+ 받을 만하다” 자신하던 트럼프…중간선거 참패...",
-     "link": "https://www.sedaily.com/article/20111953?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-09T05:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 23,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.45,
-     "unit": "%",
-     "z": -0.7
-    },
-    "why": [
-     "원/달러 -0.45%"
-    ]
-   }
-  },
-  {
-   "id": "nxlz6b",
-   "title": "씨티 \"주가 하락에도 이달 기준금리 인상⋯반도체 급락시엔 내년 '피벗...",
-   "firstSeen": "2026-11-09T01:32:00.000Z",
-   "lastSeen": "2026-11-09T08:39:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"반도체 수출 꺾이면 내년 기준금리 내릴것\"",
-     "link": "https://www.mk.co.kr/article/12202743",
-     "host": "mk.co.kr",
-     "at": "2026-11-09T08:39:00.000Z"
-    },
-    {
-     "title": "반도체 업황 꺾이면 내년 하반기 금리 인하할 수도 … 씨티銀 \"한은 통...",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/09/2026110900236.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-09T06:14:00.000Z"
-    },
-    {
-     "title": "씨티 \"반도체 수출 꺾일 땐 내년 하반기 금리 인하\"",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611090066&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-09T03:59:00.000Z"
-    },
-    {
-     "title": "씨티 \"반도체 꺾이면, 내년 하반기 금리인하…2028년 연 2.5%까지 낮출 수...",
-     "link": "https://www.newsis.com/view/NISX20261109_0003860136",
-     "host": "newsis.com",
-     "at": "2026-11-09T01:53:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 23,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 0.31,
-     "unit": "%",
-     "z": 0.4
-    },
-    "why": [
-     "S&P 500 +0.31%"
+     "VIX 변동성 -5.15%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-09T09:48:02.320Z",
+   "id": "qlb9",
+   "level": "caution",
+   "title": "中, 美 보복관세 2개월 더 유예…미·중 관세전쟁 '휴전 연장'",
+   "why": [
+    "핵심 단어",
+    "원/달러 -0.57%"
+   ],
+   "link": "https://www.yna.co.kr/view/AKR20261109087351083?input=1195m",
+   "delivered": false
+  },
   {
    "at": "2026-11-09T08:47:11.122Z",
    "id": "1t1cefu",
@@ -1130,18 +1142,6 @@
     "금 +1.51%"
    ],
    "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443745",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-09T02:19:13.759Z",
-   "id": "1gwgqvo",
-   "level": "caution",
-   "title": "금리 인상 저울질하는 한은…코스피 폭락 변수되나",
-   "why": [
-    "기사 급증(평소 대비 3.9σ)",
-    "VIX 변동성 -9.01%"
-   ],
-   "link": "https://biz.sbs.co.kr/article_hub/20000345036?division=NAVER",
    "delivered": false
   }
  ],
