@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-09T01:15:31.934Z",
+ "updatedAt": "2026-11-09T01:27:24.759Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 5078.1201171875,
-   "change": 0.36,
+   "last": 5070.89,
+   "change": 0.22,
    "z": 0.1,
    "sd": 2.948375135524748,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 637.24,
-   "change": -1.09,
-   "z": -0.4,
+   "last": 636.68,
+   "change": -1.18,
+   "z": -0.5,
    "sd": 2.520234572375647,
    "source": "네이버 현재가",
    "live": true,
@@ -63,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 1360.1800537109375,
-   "change": 0.28,
-   "z": 0.4,
+   "last": 1360.6800537109375,
+   "change": 0.32,
+   "z": 0.5,
    "sd": 0.6401283221834233,
    "source": "Yahoo"
   },
@@ -75,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 90.5,
-   "change": -0.36,
+   "last": 90.45999908447266,
+   "change": -0.41,
    "z": -0.1,
    "sd": 2.8342734377460372,
    "source": "Yahoo"
@@ -87,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 4115.89990234375,
-   "change": 1.01,
-   "z": 0.7,
+   "last": 4116.60009765625,
+   "change": 1.02,
+   "z": 0.8,
    "sd": 1.3566648164944195,
    "source": "Yahoo"
   },
@@ -120,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 3.2,
-  "politics": 1.8,
-  "rates": 3.3,
+  "war": 3.1,
+  "politics": 1.5,
+  "rates": 3.5,
   "trade": 1.5,
   "fx": -0.2,
-  "energy": 2.6,
+  "energy": 3.2,
   "market": 1,
   "credit": 0.1,
   "disaster": 0,
@@ -133,17 +134,17 @@
  },
  "rates": {
   "war": {
-   "rate": 4.2,
+   "rate": 4.1,
    "saturated": 1,
    "queries": 3
   },
   "politics": {
-   "rate": 3.6,
+   "rate": 3.4,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 3.9,
+   "rate": 4.2,
    "saturated": 0,
    "queries": 3
   },
@@ -158,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4,
+   "rate": 4.7,
    "saturated": 0,
    "queries": 1
   },
@@ -209,19 +210,19 @@
     "level": "watch",
     "label": "관찰",
     "score": 53,
-    "spike": 3.2,
+    "spike": 3.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
      "unit": "%",
-     "z": -0.8
+     "z": 0.8
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.2σ)",
-     "VIX 변동성 -9.01%"
+     "기사 급증(평소 대비 3.1σ)",
+     "금 +1.02%"
     ]
    }
   },
@@ -251,19 +252,19 @@
     "level": "watch",
     "label": "관찰",
     "score": 53,
-    "spike": 3.2,
+    "spike": 3.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
      "unit": "%",
-     "z": -0.8
+     "z": 0.8
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.2σ)",
-     "VIX 변동성 -9.01%"
+     "기사 급증(평소 대비 3.1σ)",
+     "금 +1.02%"
     ]
    }
   },
@@ -293,34 +294,92 @@
     "level": "watch",
     "label": "관찰",
     "score": 53,
-    "spike": 3.2,
+    "spike": 3.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
      "unit": "%",
-     "z": -0.8
+     "z": 0.8
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.2σ)",
-     "VIX 변동성 -9.01%"
+     "기사 급증(평소 대비 3.1σ)",
+     "금 +1.02%"
     ]
    }
   },
   {
-   "id": "l5mdq8",
-   "title": "美 중간선거 여파에 달러·원 환율 '껑충'",
+   "id": "1ahgmc7",
+   "title": "‘블루쓰나미’에 1360원대로 뛴 환율",
    "firstSeen": "2026-11-08T05:15:00.000Z",
-   "lastSeen": "2026-11-08T23:22:00.000Z",
+   "lastSeen": "2026-11-09T01:24:00.000Z",
    "count": 10,
-   "sources": 7,
+   "sources": 6,
    "topics": [
-    "war",
     "politics",
     "fx",
-    "market"
+    "energy",
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "원달러 환율 1360원대…국제 금 4100달러 웃돌아",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38417",
+     "host": "junggi.co.kr",
+     "at": "2026-11-09T01:24:00.000Z"
+    },
+    {
+     "title": "[위클리오늘] 코스피 5000선 출발···환율 1360원대",
+     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=801381",
+     "host": "weeklytoday.com",
+     "at": "2026-11-09T00:38:00.000Z"
+    },
+    {
+     "title": "美 고용 서프라이즈에 달러 강세…환율. 1360원대 상승",
+     "link": "https://www.ajunews.com/view/20261109091942488",
+     "host": "ajunews.com",
+     "at": "2026-11-09T00:24:00.000Z"
+    },
+    {
+     "title": "[오늘 금시세]AI 규제 우려에 환율 '껑충'…국내 금값 1.86% ↑",
+     "link": "https://www.namdonews.com/news/articleView.html?idxno=928558",
+     "host": "namdonews.com",
+     "at": "2026-11-09T00:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 45,
+    "spike": 3.2,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
+     "unit": "%",
+     "z": 0.8
+    },
+    "why": [
+     "기사 급증(평소 대비 3.2σ)",
+     "금 +1.02%"
+    ]
+   }
+  },
+  {
+   "id": "f9rpwk",
+   "title": "이란 외무 \"美 중간선거 여파로 중재국 활동 멈춰…시간 필요\"",
+   "firstSeen": "2026-11-08T18:38:00.000Z",
+   "lastSeen": "2026-11-08T23:22:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "war",
+    "politics"
    ],
    "critical": [],
    "links": [
@@ -352,77 +411,78 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 45,
-    "spike": 3.2,
+    "score": 41,
+    "spike": 3.1,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
      "unit": "%",
-     "z": -0.8
+     "z": 0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.2σ)",
-     "VIX 변동성 -9.01%"
+     "기사 급증(평소 대비 3.1σ)",
+     "금 +1.02%"
     ]
    }
   },
   {
-   "id": "1ahgmc7",
-   "title": "‘블루쓰나미’에 1360원대로 뛴 환율",
-   "firstSeen": "2026-11-08T05:15:00.000Z",
-   "lastSeen": "2026-11-09T00:38:00.000Z",
+   "id": "jm24db",
+   "title": "[굿모닝 오늘의 증시] 젠슨황 불륜 인정…미 반등에 찬물 끼얹나",
+   "firstSeen": "2026-11-08T21:19:00.000Z",
+   "lastSeen": "2026-11-09T01:18:00.000Z",
    "count": 6,
-   "sources": 6,
+   "sources": 5,
    "topics": [
     "war",
-    "rates",
-    "fx"
+    "politics",
+    "fx",
+    "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[위클리오늘] 코스피 5000선 출발···환율 1360원대",
-     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=801381",
-     "host": "weeklytoday.com",
-     "at": "2026-11-09T00:38:00.000Z"
+     "title": "젠슨 황, '중국 스파이' 연루 의혹 속 불륜 인정·공개 사과…엔비디아...",
+     "link": "https://www.aitimes.kr/news/articleView.html?idxno=42645",
+     "host": "aitimes.kr",
+     "at": "2026-11-09T01:18:00.000Z"
     },
     {
-     "title": "美 고용 서프라이즈에 달러 강세…환율. 1360원대 상승",
-     "link": "https://www.ajunews.com/view/20261109091942488",
-     "host": "ajunews.com",
-     "at": "2026-11-09T00:24:00.000Z"
+     "title": "불륜 인정한 '반도체 깐부' 젠슨 황...우리 반도체 기업 영향은? [이슈톺...",
+     "link": "https://www.ytn.co.kr/_ln/0134_202611090952062668",
+     "host": "ytn.co.kr",
+     "at": "2026-11-09T00:52:00.000Z"
     },
     {
-     "title": "환율 1360원대 상승 압력…美 금리 인상 우려에 강달러 재점화",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579199&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-08T23:25:00.000Z"
+     "title": "불륜 인정한 젠슨 황…엔비디아 CEO 교체 가능성까지",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000080748",
+     "host": "jnilbo.com",
+     "at": "2026-11-09T00:51:00.000Z"
     },
     {
-     "title": "美 고용 '서프라이즈'에 강달러… 원/달러 환율, 1360원대 중반대 전망",
-     "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=730930",
-     "host": "the-biz.co.kr",
-     "at": "2026-11-08T23:12:00.000Z"
+     "title": "“젠슨 황 불륜·中 스파이 의혹”…美 증시 반등에도 코스피, 장중 500...",
+     "link": "https://www.ddaily.co.kr/page/view/2026110909172951419",
+     "host": "ddaily.co.kr",
+     "at": "2026-11-09T00:20:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 41,
-    "spike": 3.3,
+    "spike": 3.2,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
      "unit": "%",
-     "z": -0.8
+     "z": 0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
-     "VIX 변동성 -9.01%"
+     "기사 급증(평소 대비 3.2σ)",
+     "금 +1.02%"
     ]
    }
   },
@@ -430,9 +490,9 @@
    "id": "1j6xqlk",
    "title": "코스피, 장초반 0.38% 내려 5040선...삼성전자·SK하이닉스 상승에도 약...",
    "firstSeen": "2026-11-08T02:58:00.000Z",
-   "lastSeen": "2026-11-09T01:12:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "lastSeen": "2026-11-09T01:04:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "rates",
     "market",
@@ -440,12 +500,6 @@
    ],
    "critical": [],
    "links": [
-    {
-     "title": "하락 출발 코스피 장 초반 상승 전환...삼성전자 1.8%, SK하이닉스 2.7% ...",
-     "link": "https://www.chosun.com/economy/money/2026/11/09/NIHDMEXVGVAS3LRU7CZXDBJ3AU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-09T01:12:00.000Z"
-    },
     {
      "title": "[특징주] 저가 매수세 유입에 삼성전자·SK하이닉스 반등",
      "link": "https://www.newspim.com/news/view/20261109000327",
@@ -463,13 +517,19 @@
      "link": "https://www.g-enews.com/view.php?ud=20261109093823377444093b5d4e_1",
      "host": "g-enews.com",
      "at": "2026-11-09T00:48:00.000Z"
+    },
+    {
+     "title": "[특징주]삼성전자·SK하이닉스, 장 초반 강보합…美 반도체주 반등에 투...",
+     "link": "https://www.viva100.com/article/20261109500180",
+     "host": "viva100.com",
+     "at": "2026-11-09T00:28:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 41,
-    "spike": 3.3,
+    "score": 40,
+    "spike": 3.5,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -479,53 +539,7 @@
      "z": -0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
-     "VIX 변동성 -9.01%"
-    ]
-   }
-  },
-  {
-   "id": "1qn4vgf",
-   "title": "[증시 예보] 5천피 붕괴·서킷브레이커 발동…더 조심해야 할 게 있어?",
-   "firstSeen": "2026-11-08T11:40:00.000Z",
-   "lastSeen": "2026-11-08T22:34:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[마켓 프리뷰] 장중 5000선마저 붕괴…연이틀 매도 사이드카 발동",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345005?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-08T22:34:00.000Z"
-    },
-    {
-     "title": "[증시 예보] 5천피 붕괴·서킷브레이커 발동…더 조심해야 할 게 있어?",
-     "link": "https://biz.heraldcorp.com/article/10929180?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-08T11:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 39,
-    "spike": 1,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
-     "unit": "%",
-     "z": -0.8
-    },
-    "why": [
-     "핵심 단어",
+     "기사 급증(평소 대비 3.5σ)",
      "VIX 변동성 -9.01%"
     ]
    }
@@ -572,7 +586,7 @@
     "level": "caution",
     "label": "주의",
     "score": 37,
-    "spike": 3.3,
+    "spike": 3.5,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -582,63 +596,48 @@
      "z": -0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.5σ)",
      "VIX 변동성 -9.01%"
     ]
    }
   },
   {
-   "id": "jm24db",
-   "title": "[굿모닝 오늘의 증시] 젠슨황 불륜 인정…미 반등에 찬물 끼얹나",
-   "firstSeen": "2026-11-08T21:19:00.000Z",
-   "lastSeen": "2026-11-09T01:15:00.000Z",
-   "count": 15,
-   "sources": 14,
+   "id": "1nzp3y5",
+   "title": "[마켓 프리뷰] 장중 5000선마저 붕괴…연이틀 매도 사이드카 발동",
+   "firstSeen": "2026-11-08T22:34:00.000Z",
+   "lastSeen": "2026-11-08T22:34:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "politics"
+    "market"
    ],
-   "critical": [],
+   "critical": [
+    "market"
+   ],
    "links": [
     {
-     "title": "[속보] '젠슨황 불륜 인정·中스파이' 논란 美 '발칵'…트럼프 \"그는 훌...",
-     "link": "https://www.pressian.com/pages/articles/2026110910141128681?utm_source=naver&utm_medium=search",
-     "host": "pressian.com",
-     "at": "2026-11-09T01:15:00.000Z"
-    },
-    {
-     "title": "젠슨 황, 중국 정보기관 연루 의혹 여성과 외도 인정…엔비디아 독립 조...",
-     "link": "https://www.ppss.kr/news/articleView.html?idxno=319771",
-     "host": "ppss.kr",
-     "at": "2026-11-09T01:13:00.000Z"
-    },
-    {
-     "title": "젠슨 황, 中 정보기관 연계 의심 여성과 관계 인정…이사회 독립위, 조...",
-     "link": "https://www.nextdaily.co.kr/news/articleView.html?idxno=254679",
-     "host": "nextdaily.co.kr",
-     "at": "2026-11-09T01:08:00.000Z"
-    },
-    {
-     "title": "엔비디아 젠슨 황 CEO, 불륜 인정…이사회 독립 조사 착수",
-     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3745903",
-     "host": "gukjenews.com",
-     "at": "2026-11-09T01:06:00.000Z"
+     "title": "[마켓 프리뷰] 장중 5000선마저 붕괴…연이틀 매도 사이드카 발동",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345005?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-08T22:34:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 1.8,
+    "score": 36,
+    "spike": 1,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 0.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -9.01,
      "unit": "%",
-     "z": 0.4
+     "z": -0.8
     },
     "why": [
-     "S&P 500 +0.31%"
+     "핵심 단어",
+     "VIX 변동성 -9.01%"
     ]
    }
   },
@@ -677,7 +676,7 @@
     "level": "caution",
     "label": "주의",
     "score": 34,
-    "spike": 3.3,
+    "spike": 3.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -687,64 +686,8 @@
      "z": 0.4
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.5σ)",
      "S&P 500 +0.31%"
-    ]
-   }
-  },
-  {
-   "id": "155ulr4",
-   "title": "트럼프·미국 증시 흔들리자 코스피 5000선 턱걸이 ‘패닉’",
-   "firstSeen": "2026-11-08T01:38:00.000Z",
-   "lastSeen": "2026-11-09T00:48:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 오전 장중 보합권 등락 반복",
-     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=314899",
-     "host": "straightnews.co.kr",
-     "at": "2026-11-09T00:48:00.000Z"
-    },
-    {
-     "title": "'5천피' 코스피, 장 초반 보합권 등락…외국인 7거래일째 순매도",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=780109",
-     "host": "slist.kr",
-     "at": "2026-11-09T00:46:00.000Z"
-    },
-    {
-     "title": "코스피, 장 초반 5000선 놓고 줄다리기",
-     "link": "https://news.mtn.co.kr/article/2026110909452979504",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-09T00:46:00.000Z"
-    },
-    {
-     "title": "코스피, 장 초반 5000선 안팎 보합권 등락",
-     "link": "https://www.mediapen.com/news/view/1136124",
-     "host": "mediapen.com",
-     "at": "2026-11-09T00:44:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 1.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
-     "unit": "%",
-     "z": -0.8
-    },
-    "why": [
-     "VIX 변동성 -9.01%"
     ]
    }
   },
@@ -778,18 +721,18 @@
     "level": "watch",
     "label": "관찰",
     "score": 31,
-    "spike": 3.2,
+    "spike": 3.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
      "unit": "%",
-     "z": -0.8
+     "z": 0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.2σ)",
-     "VIX 변동성 -9.01%"
+     "기사 급증(평소 대비 3.1σ)",
+     "금 +1.02%"
     ]
    }
   },
@@ -822,18 +765,64 @@
     "level": "watch",
     "label": "관찰",
     "score": 31,
-    "spike": 3.2,
+    "spike": 3.1,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
      "unit": "%",
-     "z": -0.8
+     "z": 0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.2σ)",
-     "VIX 변동성 -9.01%"
+     "기사 급증(평소 대비 3.1σ)",
+     "금 +1.02%"
+    ]
+   }
+  },
+  {
+   "id": "ufl8gp",
+   "title": "AI 불안에 중동 리스크까지…환율 1360원대 상승 압력[외환브리핑]",
+   "firstSeen": "2026-11-07T22:02:00.000Z",
+   "lastSeen": "2026-11-08T23:25:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "환율 1360원대 상승 압력…美 금리 인상 우려에 강달러 재점화",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=579199&class=18&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-08T23:25:00.000Z"
+    },
+    {
+     "title": "AI 불안에 중동 리스크까지…환율 1360원대 상승 압력[외환브리핑]",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=02099206645644080&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-08T23:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 3.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.02,
+     "unit": "%",
+     "z": 0.8
+    },
+    "why": [
+     "기사 급증(평소 대비 3.5σ)",
+     "금 +1.02%"
     ]
    }
   },
@@ -867,7 +856,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 31,
-    "spike": 3.3,
+    "spike": 3.5,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -877,59 +866,52 @@
      "z": -0.8
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.5σ)",
      "VIX 변동성 -9.01%"
     ]
    }
   },
   {
-   "id": "1xcnvp3",
-   "title": "금시세·금값 9일",
-   "firstSeen": "2026-11-08T00:02:00.000Z",
-   "lastSeen": "2026-11-09T01:02:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1nn4x1c",
+   "title": "[원자재 시황] 미 고용 호조에 금·코인 하락",
+   "firstSeen": "2026-11-08T23:52:00.000Z",
+   "lastSeen": "2026-11-09T00:26:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "fx",
-    "energy",
-    "policy"
+    "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[뉴욕은 지금] 민주당의 AI 규제 투트랙",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443716",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-09T01:02:00.000Z"
+     "title": "[오늘 금시세] 금 한돈 66만6,713원 0.6% 상승…미국 고용 호조에 국제 ...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16271701",
+     "host": "topstarnews.net",
+     "at": "2026-11-09T00:26:00.000Z"
     },
     {
-     "title": "[오늘 금시세]AI 규제 우려에 환율 '껑충'…국내 금값 1.86% ↑",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=928558",
-     "host": "namdonews.com",
-     "at": "2026-11-09T00:18:00.000Z"
-    },
-    {
-     "title": "금시세·금값 9일",
-     "link": "https://www.bntnews.co.kr/article/view/bnt202611090164",
-     "host": "bntnews.co.kr",
-     "at": "2026-11-09T00:08:00.000Z"
+     "title": "[원자재 시황] 미 고용 호조에 금·코인 하락",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1730857",
+     "host": "ebn.co.kr",
+     "at": "2026-11-08T23:52:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 2.6,
+    "score": 31,
+    "spike": 3.2,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.01,
+     "change": 1.02,
      "unit": "%",
-     "z": 0.7
+     "z": 0.8
     },
     "why": [
-     "금 +1.01%"
+     "기사 급증(평소 대비 3.2σ)",
+     "금 +1.02%"
     ]
    }
   }
