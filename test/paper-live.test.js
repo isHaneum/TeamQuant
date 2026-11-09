@@ -37,7 +37,7 @@ test('장이 닫혀 있으면(주말) 할 일은 나오지만 모두 보류되�
   const r = await pl.run({ rules, plan });
   assert.equal(r.market.open, false); assert.ok(r.items.length >= 1); assert.ok(r.items.every(i => !i.ok && i.blocks.some(t => /주말/.test(t))));
   assert.equal(r.sent.length, 0); assert.equal(b.state.placed.length, 0);
-  assert.deepEqual(r.skipped, ['NVDA']); // 미국 종목은 모의 국내 주문에서 뺀다
+  assert.deepEqual(r.skipped, []); // 미국 종목도 계획에 들어간다(할 일은 200일선 규칙에 따라 없을 수 있음)
 });
 
 test('장중: 통과한 주문만 보내고 장부에 주문번호가 남는다 · 같은 날 다시 실행해도 중복 제출하지 않는다 · 재시작 뒤에도 장부가 남는다', async () => {

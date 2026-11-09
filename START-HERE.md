@@ -73,7 +73,8 @@
     KIS_KEY_FILE=C:/본인경로/hantu.key           (simulappkey=… / simulappsecret=… 줄이 있어야 합니다)
     KIS_PAPER_ACCOUNT_NO=모의계좌8자리
     PAPER_LIVE_LIMITS={"maxOrderKrw":15000000,"maxDailyKrw":60000000}   (주문 보호 한도 · 기본 100만/300만)
+    PAPER_LIVE_AUTO=1                            (자동 실행: 10분마다 확인, 금요일·급함·계획 변경·첫 운용에만 전송)
 
 한투 모의계좌는 홈페이지 [트레이딩]→[모의투자]에서 먼저 신청하고, KIS Developers 에서 **그 모의계좌로** App Key 를 따로 발급합니다(실전 키와 별개). 모의계좌는 3개월마다 다시 신청해야 합니다.
-서버를 켜면 모의투자 화면 오른쪽에 '한투 모의계좌' 카드가 생깁니다. 미리보기는 보내지 않고, 보내기는 두 번 눌러야 나갑니다. 터미널: `node scripts/kis-paper.mjs status | preview --plan 005930:20,... | run --plan ... --yes | kill on|off`.
+서버를 켜면 모의투자 화면 오른쪽에 '한투 모의계좌' 카드가 생깁니다. 계획은 규칙 화면에 저장한 내 계획 → 기본 계획(`data/paper-plan.json`, `node scripts/build-paper-plan.mjs` 로 다시 생성, 카드에서 근거·검증 표를 봅니다) 순으로 씁니다. 미국 종목도 미국 장 시간(23:30~06:00 KST, 서머타임엔 22:30~05:00)에 주문합니다. 미리보기는 보내지 않고, 보내기는 두 번 눌러야 나갑니다. 터미널: `node scripts/kis-paper.mjs status | preview --plan 005930:20,... | run --plan ... --yes | kill on|off`.
 장부는 `%LOCALAPPDATA%/TeamQuant/paper-live/` 에 남고(재시작해도 유지), 응답을 못 받은 주문은 다음 조회에서 증권사 목록과 맞춘 뒤에만 새 주문을 냅니다. 토큰 발급은 1분당 1회라 같은 폴더의 토큰 파일을 재사용합니다.
