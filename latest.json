@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-09T04:17:12.962Z",
+ "updatedAt": "2026-11-09T04:30:32.595Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,8 +10,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 5119.2099609375,
-   "change": 1.18,
+   "last": 5118.259765625,
+   "change": 1.16,
    "z": 0.4,
    "sd": 2.948375135524748,
    "source": "Yahoo",
@@ -23,11 +23,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 655.4199829101562,
-   "change": 1.73,
-   "z": 0.7,
+   "last": 652.76,
+   "change": 1.32,
+   "z": 0.5,
    "sd": 2.520234572375647,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -62,9 +63,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 1355.3800048828125,
-   "change": -0.07,
-   "z": -0.1,
+   "last": 1354.47998046875,
+   "change": -0.14,
+   "z": -0.2,
    "sd": 0.6401283221834233,
    "source": "Yahoo"
   },
@@ -74,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 91.30999755859375,
-   "change": 0.53,
+   "last": 91.3499984741211,
+   "change": 0.57,
    "z": 0.2,
    "sd": 2.8342734377460372,
    "source": "Yahoo"
@@ -86,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 4127.2001953125,
-   "change": 1.28,
-   "z": 0.9,
+   "last": 4130,
+   "change": 1.35,
+   "z": 1,
    "sd": 1.3566648164944195,
    "source": "Yahoo"
   },
@@ -119,36 +120,36 @@
   }
  ],
  "spikes": {
-  "war": 1.1,
-  "politics": 1.3,
-  "rates": 1.5,
-  "trade": 1.1,
+  "war": 1,
+  "politics": 1,
+  "rates": 0.9,
+  "trade": 0.7,
   "fx": -0.5,
-  "energy": 2.3,
-  "market": 0.9,
+  "energy": 2,
+  "market": 0.7,
   "credit": 0.3,
   "disaster": 0,
-  "policy": 0.1
+  "policy": 0.3
  },
  "rates": {
   "war": {
-   "rate": 2.4,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 3.3,
+   "rate": 3.1,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 2.7,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 4.2,
-   "saturated": 1,
+   "rate": 3.7,
+   "saturated": 0,
    "queries": 2
   },
   "fx": {
@@ -157,12 +158,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 6.6,
+   "rate": 6.3,
    "saturated": 2,
    "queries": 3
   },
@@ -177,56 +178,68 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "1ug14g0",
-   "title": "이란戰 향방 고심하는 트럼프…美, 이란 육상조달망도 '차단'",
-   "firstSeen": "2026-11-08T07:14:00.000Z",
-   "lastSeen": "2026-11-09T03:31:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "l5mdq8",
+   "title": "미 중간선거 여파에 환율 급등",
+   "firstSeen": "2026-11-08T05:15:00.000Z",
+   "lastSeen": "2026-11-09T01:24:00.000Z",
+   "count": 11,
+   "sources": 5,
    "topics": [
-    "war",
-    "politics"
+    "politics",
+    "fx",
+    "energy",
+    "market",
+    "policy"
    ],
-   "critical": [
-    "war"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "[이슈] 트럼프, 이란 해법 놓고 고심⋯핵심 참모들도 '협상-재공습-경제...",
-     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748069",
-     "host": "polinews.co.kr",
-     "at": "2026-11-09T03:31:00.000Z"
+     "title": "원달러 환율 1360원대…국제 금 4100달러 웃돌아",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38417",
+     "host": "junggi.co.kr",
+     "at": "2026-11-09T01:24:00.000Z"
     },
     {
-     "title": "이란戰 향방 고심하는 트럼프…美, 이란 육상조달망도 '차단'",
-     "link": "https://www.ajunews.com/view/20261108160131740",
-     "host": "ajunews.com",
-     "at": "2026-11-08T07:14:00.000Z"
+     "title": "[위클리오늘] 코스피 5000선 출발···환율 1360원대",
+     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=801381",
+     "host": "weeklytoday.com",
+     "at": "2026-11-09T00:38:00.000Z"
+    },
+    {
+     "title": "[오늘 금시세]AI 규제 우려에 환율 '껑충'…국내 금값 1.86% ↑",
+     "link": "https://www.namdonews.com/news/articleView.html?idxno=928558",
+     "host": "namdonews.com",
+     "at": "2026-11-09T00:18:00.000Z"
+    },
+    {
+     "title": "美 고용 '서프라이즈'에 강달러… 원/달러 환율, 1360원대 중반대 전망",
+     "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=730930",
+     "host": "the-biz.co.kr",
+     "at": "2026-11-08T23:12:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 41,
-    "spike": 1.3,
-    "news": true,
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 2,
+    "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.28,
+     "change": 1.35,
      "unit": "%",
-     "z": 0.9
+     "z": 1
     },
     "why": [
-     "핵심 단어",
-     "금 +1.28%"
+     "금 +1.35%"
     ]
    }
   },
@@ -255,19 +268,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 1.3,
+    "score": 36,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.28,
+     "change": 1.35,
      "unit": "%",
-     "z": 0.9
+     "z": 1
     },
     "why": [
      "핵심 단어",
-     "금 +1.28%"
+     "금 +1.35%"
     ]
    }
   },
@@ -296,19 +309,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 1.3,
+    "score": 36,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.28,
+     "change": 1.35,
      "unit": "%",
-     "z": 0.9
+     "z": 1
     },
     "why": [
      "핵심 단어",
-     "금 +1.28%"
+     "금 +1.35%"
     ]
    }
   },
@@ -336,19 +349,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 1.1,
+    "score": 36,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.28,
+     "change": 1.35,
      "unit": "%",
-     "z": 0.9
+     "z": 1
     },
     "why": [
      "핵심 단어",
-     "금 +1.28%"
+     "금 +1.35%"
     ]
    }
   },
@@ -376,19 +389,60 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 1.1,
+    "score": 36,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.28,
+     "change": 1.35,
      "unit": "%",
-     "z": 0.9
+     "z": 1
     },
     "why": [
      "핵심 단어",
-     "금 +1.28%"
+     "금 +1.35%"
+    ]
+   }
+  },
+  {
+   "id": "1ug14g0",
+   "title": "[이슈] 트럼프, 이란 해법 놓고 고심⋯핵심 참모들도 '협상-재공습-경제...",
+   "firstSeen": "2026-11-08T07:14:00.000Z",
+   "lastSeen": "2026-11-09T03:31:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "[이슈] 트럼프, 이란 해법 놓고 고심⋯핵심 참모들도 '협상-재공습-경제...",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748069",
+     "host": "polinews.co.kr",
+     "at": "2026-11-09T03:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.35,
+     "unit": "%",
+     "z": 1
+    },
+    "why": [
+     "핵심 단어",
+     "금 +1.35%"
     ]
    }
   },
@@ -416,8 +470,48 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
-    "spike": 0.9,
+    "score": 34,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -9.01,
+     "unit": "%",
+     "z": -0.8
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 -9.01%"
+    ]
+   }
+  },
+  {
+   "id": "x7gi8w",
+   "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+   "firstSeen": "2026-11-08T23:48:00.000Z",
+   "lastSeen": "2026-11-08T23:48:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+     "link": "https://www.raonnews.com/news/article.html?no=62579",
+     "host": "raonnews.com",
+     "at": "2026-11-08T23:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -474,232 +568,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 2.3,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.28,
-     "unit": "%",
-     "z": 0.9
-    },
-    "why": [
-     "금 +1.28%"
-    ]
-   }
-  },
-  {
-   "id": "jm24db",
-   "title": "[굿모닝 오늘의 증시] 젠슨황 불륜 인정…미 반등에 찬물 끼얹나",
-   "firstSeen": "2026-11-08T21:19:00.000Z",
-   "lastSeen": "2026-11-09T03:35:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war",
-    "politics",
-    "fx",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황 불륜 인정에 中 '허니 트랩' 재조명…정치권서 기술기업까지",
-     "link": "https://www.newsis.com/view/NISX20261109_0003859961",
-     "host": "newsis.com",
-     "at": "2026-11-09T03:35:00.000Z"
-    },
-    {
-     "title": "[숏폼] '불륜 인정' 젠슨황, 반도체 황제 침실로 파고든 中 스파이?",
-     "link": "http://www.newsprime.co.kr/news/article.html?no=754137",
-     "host": "newsprime.co.kr",
-     "at": "2026-11-09T03:16:00.000Z"
-    },
-    {
-     "title": "'반도체 깐부' 젠슨 황, 불륜 인정...시장 영향은? [뉴스UP]",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611090821303361",
-     "host": "ytn.co.kr",
-     "at": "2026-11-08T23:21:00.000Z"
-    },
-    {
-     "title": "[굿모닝 오늘의 증시] 젠슨황 불륜 인정…미 반등에 찬물 끼얹나",
-     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005957842",
-     "host": "mbnmoney.mbn.co.kr",
-     "at": "2026-11-08T22:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 2.3,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.28,
-     "unit": "%",
-     "z": 0.9
-    },
-    "why": [
-     "금 +1.28%"
-    ]
-   }
-  },
-  {
-   "id": "x7gi8w",
-   "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
-   "firstSeen": "2026-11-08T23:48:00.000Z",
-   "lastSeen": "2026-11-08T23:48:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
-     "link": "https://www.raonnews.com/news/article.html?no=62579",
-     "host": "raonnews.com",
-     "at": "2026-11-08T23:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.01,
-     "unit": "%",
-     "z": -0.8
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 -9.01%"
-    ]
-   }
-  },
-  {
-   "id": "l5mdq8",
-   "title": "美 중간선거 여파에 달러·원 환율 '껑충'",
-   "firstSeen": "2026-11-08T05:15:00.000Z",
-   "lastSeen": "2026-11-09T00:18:00.000Z",
-   "count": 7,
-   "sources": 2,
-   "topics": [
-    "politics",
-    "fx",
-    "energy",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[오늘 금시세]AI 규제 우려에 환율 '껑충'…국내 금값 1.86% ↑",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=928558",
-     "host": "namdonews.com",
-     "at": "2026-11-09T00:18:00.000Z"
-    },
-    {
-     "title": "美 중간선거 여파에 환율 '껑충'",
-     "link": "https://www.news1.kr/photos/8202779",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "美 중간선거 충격에 환율 1360원대 급등",
-     "link": "https://www.news1.kr/photos/8202773",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    },
-    {
-     "title": "환율 급등…6개월 만에 최대폭",
-     "link": "https://www.news1.kr/photos/8202776",
-     "host": "news1.kr",
-     "at": "2026-11-08T05:15:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
     "score": 29,
-    "spike": 2.3,
+    "spike": 2,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.28,
+     "change": 1.35,
      "unit": "%",
-     "z": 0.9
+     "z": 1
     },
     "why": [
-     "금 +1.28%"
-    ]
-   }
-  },
-  {
-   "id": "1ahgmc7",
-   "title": "‘블루쓰나미’에 1360원대로 뛴 환율",
-   "firstSeen": "2026-11-08T05:15:00.000Z",
-   "lastSeen": "2026-11-09T01:24:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "war",
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "원달러 환율 1360원대…국제 금 4100달러 웃돌아",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38417",
-     "host": "junggi.co.kr",
-     "at": "2026-11-09T01:24:00.000Z"
-    },
-    {
-     "title": "[위클리오늘] 코스피 5000선 출발···환율 1360원대",
-     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=801381",
-     "host": "weeklytoday.com",
-     "at": "2026-11-09T00:38:00.000Z"
-    },
-    {
-     "title": "환율 1360원대 상승 압력…美 금리 인상 우려에 강달러 재점화",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579199&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-08T23:25:00.000Z"
-    },
-    {
-     "title": "美 고용 '서프라이즈'에 강달러… 원/달러 환율, 1360원대 중반대 전망",
-     "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=730930",
-     "host": "the-biz.co.kr",
-     "at": "2026-11-08T23:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 1.5,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.28,
-     "unit": "%",
-     "z": 0.9
-    },
-    "why": [
-     "금 +1.28%"
+     "금 +1.35%"
     ]
    }
   },
@@ -743,8 +623,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 0.9,
+    "score": 26,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -762,14 +642,26 @@
    "id": "1naz68o",
    "title": "미, 중간선거 트럼프 참패...경제·안보 지형 요동",
    "firstSeen": "2026-11-08T01:12:00.000Z",
-   "lastSeen": "2026-11-09T02:55:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-09T04:25:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
     "politics"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "트럼프 “이민 정책 너무 강경했다”… 중간선거 참패 원인 인정",
+     "link": "https://biz.chosun.com/international/international_general/2026/11/09/ENI27UKJNNDWZEFJ7ZEN5IJL5E/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-09T04:25:00.000Z"
+    },
+    {
+     "title": "\"이민 정책 너무 강경했다\"…트럼프, 중간선거 참패 원인 첫 인정",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000080886",
+     "host": "jnilbo.com",
+     "at": "2026-11-09T04:20:00.000Z"
+    },
     {
      "title": "트럼프 \"이민 정책도 중간선거 참패 요인…너무 강경했다\"",
      "link": "https://biz.sbs.co.kr/article_hub/20000345089?division=NAVER",
@@ -781,35 +673,23 @@
      "link": "https://www.mk.co.kr/article/12202272",
      "host": "mk.co.kr",
      "at": "2026-11-09T02:46:00.000Z"
-    },
-    {
-     "title": "트럼프 “이민 정책 너무 강경했다…중간선거 참패 요인”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8707442&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-09T02:34:00.000Z"
-    },
-    {
-     "title": "트럼프 \"이민 정책도 중간선거 참패 요인…너무 강경했다\"",
-     "link": "https://www.yna.co.kr/view/AKR20261109067200071?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-09T02:23:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 25,
-    "spike": 1.3,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 1.18,
+     "change": 1.16,
      "unit": "%",
      "z": 0.4
     },
     "why": [
-     "코스피 +1.18%"
+     "코스피 +1.16%"
     ]
    }
   },
@@ -854,18 +734,73 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 25,
-    "spike": 1.3,
+    "score": 23,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.28,
+     "change": 1.35,
      "unit": "%",
-     "z": 0.9
+     "z": 1
     },
     "why": [
-     "금 +1.28%"
+     "금 +1.35%"
+    ]
+   }
+  },
+  {
+   "id": "14qsr3k",
+   "title": "[사설] '블루 쓰나미' 충격에도 '조작기소 특검' 목매는 정치권",
+   "firstSeen": "2026-11-08T20:10:00.000Z",
+   "lastSeen": "2026-11-09T02:06:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 블루 쓰나미에 코스피 출렁…김동선, 왜 또 공개매수 나서나",
+     "link": "https://www.newsis.com/view/NISX20261109_0003860208",
+     "host": "newsis.com",
+     "at": "2026-11-09T02:06:00.000Z"
+    },
+    {
+     "title": "美 중간선거 '블루 쓰나미'…에너지 지형 급변하나",
+     "link": "https://www.electimes.com/news/articleView.html?idxno=374503",
+     "host": "electimes.com",
+     "at": "2026-11-09T01:16:00.000Z"
+    },
+    {
+     "title": "[뉴스초점] '블루 쓰나미'에 휘청인 코스피…충격 벗어날까",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261109100840LUU",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-09T01:10:00.000Z"
+    },
+    {
+     "title": "미국 덮친 ‘블루 쓰나미’",
+     "link": "https://www.ilyosisa.co.kr/news/article.html?no=258806",
+     "host": "ilyosisa.co.kr",
+     "at": "2026-11-09T00:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.16,
+     "unit": "%",
+     "z": 0.4
+    },
+    "why": [
+     "코스피 +1.16%"
     ]
    }
   },
@@ -911,8 +846,64 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 25,
-    "spike": 1.3,
+    "score": 23,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -9.01,
+     "unit": "%",
+     "z": -0.8
+    },
+    "why": [
+     "VIX 변동성 -9.01%"
+    ]
+   }
+  },
+  {
+   "id": "144qyce",
+   "title": "증시 급락에 반대매매 부담 낮춘다···금감원, 담보비율 규제 3개월 완...",
+   "firstSeen": "2026-11-08T08:40:00.000Z",
+   "lastSeen": "2026-11-09T04:28:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "증시 급락에 담보비율 유지의무 면제… \"반대매매 숨통\" vs \"잠재리스크...",
+     "link": "https://www.ekoreanews.co.kr/news/articleView.html?idxno=89094",
+     "host": "ekoreanews.co.kr",
+     "at": "2026-11-09T04:28:00.000Z"
+    },
+    {
+     "title": "요동치는 증시…당국은 \"반대매매 유예\" 실효성은?",
+     "link": "https://www.mediapen.com/news/view/1136168",
+     "host": "mediapen.com",
+     "at": "2026-11-09T02:56:00.000Z"
+    },
+    {
+     "title": "증시 급락에 반대매매 완화…증권사 담보비율도 인하",
+     "link": "https://www.mediaus.co.kr/news/articleView.html?idxno=318885",
+     "host": "mediaus.co.kr",
+     "at": "2026-11-09T02:48:00.000Z"
+    },
+    {
+     "title": "[특징주] 담보비율 하향·반대매매 유예…주요 증권주 일제히 약세",
+     "link": "https://www.etoday.co.kr/news/view/2645618",
+     "host": "etoday.co.kr",
+     "at": "2026-11-09T00:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
