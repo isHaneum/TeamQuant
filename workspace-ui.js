@@ -13,14 +13,15 @@ import '/issues-ui.js';
 import '/response-ui.js';
 import '/core-ui.js';
 import '/paper-ui.js';
+import '/sector-ui.js';
 import '/company-ui.js';
 import '/growth-ui.js';
 const $=s=>document.querySelector(s);
 const style=document.createElement('link');style.rel='stylesheet';style.href='/workspace.css';document.head.append(style);
 const navigation=$('.overview-nav nav'),main=document.createElement('div');main.className='workspace-main';main.setAttribute('aria-label','메인 메뉴');
 // 2026-11-05: 두 단계(내 자산/Strategy Lab → 세부 탭) 메뉴를 한 줄로 펼친다. 원래 nav 버튼은 숨겨 두고 그대로 눌러 화면을 바꾼다.
-const names={rules:'규칙',precheck:'매매 전 확인',report:'성적표',paper:'모의투자',issues:'시장 (참고)',quicktest:'전략 테스트·과거 기업 분석',home:'홈',toss:'포트폴리오 (참고)',performance:'과거 투자 성과',planner:'목표·ETF 적립',evidence:'판단 기록',strategy:'원칙 승인·모의 운용 (고급)',comparison:'과거 검증',simulation:'투자금 계산',assets:'모의 운용',news:'시장 뉴스',model:'모델 연구'};
-const primary=[['home','홈'],['precheck','매매 전 확인'],['report','성적표'],['paper','모의투자'],['rules','규칙']],moreViews=['issues','quicktest','toss','news','performance','planner','evidence','strategy','model'],labViews=['quicktest'],advancedViews=['strategy','comparison','simulation','assets'];
+const names={rules:'규칙',precheck:'매매 전 확인',report:'성적표',paper:'모의투자',sectors:'섹터',issues:'시장 (참고)',quicktest:'전략 테스트·과거 기업 분석',home:'홈',toss:'포트폴리오 (참고)',performance:'과거 투자 성과',planner:'목표·ETF 적립',evidence:'판단 기록',strategy:'원칙 승인·모의 운용 (고급)',comparison:'과거 검증',simulation:'투자금 계산',assets:'모의 운용',news:'시장 뉴스',model:'모델 연구'};
+const primary=[['home','홈'],['precheck','매매 전 확인'],['report','성적표'],['paper','모의투자'],['rules','규칙']],moreViews=['sectors','issues','quicktest','toss','news','performance','planner','evidence','strategy','model'],labViews=['quicktest'],advancedViews=['strategy','comparison','simulation','assets'];
 const hiddenNav=document.createElement('div');hiddenNav.hidden=true;hiddenNav.className='workspace-hidden-nav';
 for(const view of Object.keys(names)){const button=document.querySelector(`.sidebar [data-view="${view}"]`);if(button){button.textContent=names[view];hiddenNav.append(button);}}
 const topButtons=new Map();
@@ -28,6 +29,8 @@ for(const [view,label] of primary){const b=document.createElement('button');b.ty
 const moreMenu=document.createElement('details');moreMenu.className='workspace-more';moreMenu.innerHTML='<summary>더보기</summary><div role="menu"></div>';
 for(const view of moreViews){if(!hiddenNav.querySelector(`[data-view="${view}"]`)&&!document.querySelector(`.sidebar [data-view="${view}"]`))continue;const b=document.createElement('button');b.type='button';b.setAttribute('role','menuitem');b.textContent=names[view];b.dataset.workspace=view;b.onclick=()=>{moreMenu.open=false;$(`[data-view="${view}"]`)?.click();};moreMenu.lastElementChild.append(b);}
 main.append(moreMenu);document.addEventListener('click',e=>{if(moreMenu.open&&!moreMenu.contains(e.target))moreMenu.open=false;});
+// 2026-11-09: 열릴 때 메뉴가 화면 밖으로 나가지 않게 왼쪽 위치를 맞춘다(좁은 화면에서 '더보기'가 줄 끝에 있을 때).
+moreMenu.addEventListener('toggle',()=>{const panel=moreMenu.lastElementChild;panel.style.left='';panel.style.right='';if(!moreMenu.open)return;const r=panel.getBoundingClientRect(),vw=document.documentElement.clientWidth;if(r.right>vw-12)panel.style.left=`${Math.round(Math.min(0,vw-12-r.right))}px`;if(r.left<12)panel.style.left=`${Math.round(12-moreMenu.getBoundingClientRect().left)}px`;});
 navigation.prepend(main);navigation.append(hiddenNav);
 for(const d of document.querySelectorAll('.sidebar details'))if(!d.querySelector('button'))d.hidden=true; // 버튼을 옮긴 뒤 빈 '고급 도구' 묶음
 // Settings is a separate view so connection forms retain their original handlers.

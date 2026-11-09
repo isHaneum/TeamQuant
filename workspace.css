@@ -20,3 +20,7 @@
 .workspace-more{position:relative}.workspace-more>summary{list-style:none;cursor:pointer;padding:19px 12px;font-size:17px;font-weight:750;color:#627086;border-bottom:3px solid transparent}.workspace-more>summary::-webkit-details-marker{display:none}.workspace-more.active>summary{color:#17283e;border-color:#245ad1}
 .workspace-more>div{position:absolute;top:100%;left:0;z-index:30;min-width:200px;display:grid;gap:2px;padding:8px;background:#fff;border:1px solid #dce3ec;border-radius:12px;box-shadow:0 12px 30px rgba(20,30,50,.12)}.workspace-more>div button{border:0;background:none;text-align:left;padding:10px 12px;border-radius:8px;font:inherit;font-size:15px;color:#2b3648;cursor:pointer}.workspace-more>div button:hover,.workspace-more>div button[aria-current="page"]{background:#eef3fc}
 @media(max-width:700px){.workspace-main>button,.workspace-more>summary{font-size:15px;padding:14px 6px}.workspace-more>div{left:auto;right:0}}
+
+/* 2026-11-09 더보기 드롭다운: 메뉴 줄(nav)의 overflow:auto가 절대 위치 메뉴를 잘라 보이지 않던 결함 수정. 메뉴 줄은 줄바꿈으로 처리하고 잘라내지 않는다. */
+.overview-nav nav{overflow:visible!important;white-space:normal!important}
+.workspace-more>div{max-width:calc(100vw - 24px)}

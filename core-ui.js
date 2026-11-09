@@ -25,7 +25,7 @@ const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
 function addView(id, label, html) {
   const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = id; nav.textContent = label; navHost.append(nav);
-  const page = document.createElement('section'); page.className = 'view'; page.dataset.page = id; page.id = 'core-' + id; page.innerHTML = html; document.querySelector('main').append(page); return page;
+  const page = document.createElement('section'); page.className = 'view ck'; page.dataset.page = id; page.id = 'core-' + id; page.innerHTML = html; document.querySelector('main').append(page); return page;
 }
 
 // ── 상태 ─────────────────────────────────────────────────────

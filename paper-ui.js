@@ -23,7 +23,7 @@ const CHECK_LABEL = { maxTrades30: '30일 매매 횟수', dailyLoss: '하루 손
 
 const style = document.createElement('style'); style.textContent = `
 #core-paper .cr-main,#core-paper .cr-side{grid-template-columns:minmax(0,1fr)}#core-paper .cr-card{overflow:hidden;min-width:0;max-width:100%}#core-paper .rp-tiles>div{min-width:0}#core-paper .rp-tiles b{overflow-wrap:anywhere}
-.pp-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 14px}.pp-form label,#pp-custom-wrap{display:grid;gap:4px;font-size:13px;color:var(--ck-sub);min-width:0}.pp-form input,.pp-form select,#pp-custom-wrap input{font-size:15px;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.pp-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 14px;align-items:end}
 .pp-scroll{overflow-x:auto;max-width:100%}
 #pp-custom-wrap{margin-top:10px}
 .pp-steps{margin:0;padding-left:22px;display:grid;gap:8px;font-size:14px;line-height:1.5}.pp-steps li small{display:block;color:var(--ck-sub);font-size:12.5px}
@@ -39,14 +39,14 @@ const style = document.createElement('style'); style.textContent = `
 
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
 const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = 'paper'; nav.textContent = '모의투자'; navHost?.append(nav);
-const page = document.createElement('section'); page.className = 'view'; page.dataset.page = 'paper'; page.id = 'core-paper';
+const page = document.createElement('section'); page.className = 'view ck'; page.dataset.page = 'paper'; page.id = 'core-paper';
 page.innerHTML = `<div class="page-head"><div><h1>모의투자 ${tip('실제로 투자할 때 거치는 절차를 돈 없이 그대로 밟습니다. 규칙 화면의 내 규칙으로 계획 비중을 정하고, 주 1회(급할 때는 바로) 오늘 점검이 낸 할 일을 매매 전 확인에 통과시킨 뒤, 통과한 주문만 다음 거래일 시가에 체결합니다(시가보다 0.1% 불리하게, 편도 비용 0.2%, 국내 주식은 1주 단위). 같은 기간 그냥 보유·지수와 비교합니다. 공개 일봉으로 계산하며 실제 주문은 없습니다. 실제 매매는 체결 지연·부분 체결·감정 때문에 이보다 나쁠 수 있고, 과거 결과가 앞으로를 보장하지 않습니다.')}</h1><p>점검 → 매매 전 확인 → 다음 거래일 시가 체결 → 날마다 평가 → 그냥 보유·지수와 비교</p></div></div>
 <div class="cr-grid"><div class="cr-main">
 <div class="cr-card" id="pp-setup"><header><h3>설정</h3><span class="cr-muted" id="pp-rules"></span></header>
-<div class="pp-form"><label>시작 자금 (원)<input id="pp-capital" type="number" value="10000000" min="100000" step="100000"></label>
-<label>종목<select id="pp-basket"><option value="demo">예시 6종목 (국내 4 · 미국 2)</option><option value="mine" disabled>내 보유 종목 (계좌 연결 또는 예시 자산 필요)</option><option value="custom">직접 입력</option></select></label>
-<label>리허설 기간<select id="pp-range"><option value="91">최근 3개월</option><option value="182" selected>최근 6개월</option><option value="365">최근 1년</option><option value="540">최근 18개월</option></select></label></div>
-<label id="pp-custom-wrap" hidden>종목 (쉼표로 구분 · 이름 또는 코드)<input id="pp-custom" placeholder="삼성전자, 069500, AAPL"></label>
+<div class="pp-form"><label class="ck-field unit"><span>시작 자금</span><input id="pp-capital" type="number" value="10000000" min="100000" step="100000" inputmode="numeric"><i>원</i></label>
+<label class="ck-field"><span>종목</span><select id="pp-basket"><option value="demo">예시 6종목 (국내 4 · 미국 2)</option><option value="mine" disabled>내 보유 종목 (계좌 연결 또는 예시 자산 필요)</option><option value="custom">직접 입력</option></select></label>
+<label class="ck-field"><span>리허설 기간</span><select id="pp-range"><option value="91">최근 3개월</option><option value="182" selected>최근 6개월</option><option value="365">최근 1년</option><option value="540">최근 18개월</option></select></label></div>
+<label class="ck-field" id="pp-custom-wrap" hidden><span>종목 (쉼표로 구분 · 이름 또는 코드)</span><input id="pp-custom" placeholder="삼성전자, 069500, AAPL" autocomplete="off"></label>
 <div class="cr-actions"><button id="pp-run" class="primary">절차 리허설</button><button id="pp-start" class="secondary">오늘부터 모의투자 시작</button><span id="pp-state" class="cr-err" role="status"></span></div></div>
 <div class="cr-card" id="pp-live" hidden></div>
 <div id="pp-result"></div>

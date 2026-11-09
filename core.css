@@ -54,3 +54,18 @@
 .rp-chart,.rp-chart svg{width:100%;max-width:none}
 .ct-cash{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}.ct-cash label{font-size:13px;font-weight:700;color:var(--ck-sub);display:inline-flex;align-items:center}.ct-cash input{width:160px}
 .ct-alloc{margin:8px 0 0;padding-left:20px;display:grid;gap:4px;font-size:14px}.ct-alloc small{display:block;color:var(--ck-sub);font-size:12px}
+
+/* 2026-11-09 입력 요소 통일: 핵심 화면(.ck)의 입력·선택 상자는 같은 높이·모서리·초점 표시를 쓴다. 브라우저 기본 모양(화살표·스핀 버튼)은 쓰지 않는다. */
+.ck input:not([type=checkbox]):not([type=radio]),.ck select{height:44px;border:1px solid var(--ck-line);border-radius:12px;padding:0 14px;margin:0;font:inherit;font-size:15px;color:var(--ck-ink);background:#fff;box-sizing:border-box;width:100%;min-width:0;max-width:100%;appearance:none;-webkit-appearance:none;transition:border-color .15s,box-shadow .15s;box-shadow:none}
+.ck input:not([type=checkbox]):not([type=radio]):hover,.ck select:hover{border-color:#c5ccd6}
+.ck input:not([type=checkbox]):not([type=radio]):focus,.ck select:focus{outline:none;border-color:#245ad1;box-shadow:0 0 0 3px rgba(36,90,209,.14)}
+.ck input::placeholder{color:#9aa3af}.ck input:disabled,.ck select:disabled{background:var(--ck-soft);color:var(--ck-sub)}
+.ck select{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%235b6573' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:40px;cursor:pointer}
+.ck input[type=number]{-moz-appearance:textfield}.ck input[type=number]::-webkit-inner-spin-button,.ck input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.ck input[type=checkbox]{width:20px;height:20px;accent-color:var(--ck-ink);margin:0}
+.ck-field{display:grid;gap:6px;min-width:0;position:relative;font-size:13px;color:var(--ck-sub)}.ck-field>span:first-child{font-size:12.5px;font-weight:600;color:var(--ck-sub);display:inline-flex;align-items:center;gap:4px}
+.ck-field.unit input{padding-right:48px;font-variant-numeric:tabular-nums}.ck-field.unit>i{position:absolute;right:14px;bottom:13px;font-style:normal;font-size:13px;color:var(--ck-sub);pointer-events:none}
+.ck .cr-in input{height:36px;border-radius:10px;padding:0 10px;width:92px;font-size:14px;text-align:right}
+.ck .cr-addrow input{height:42px}.ck .cr-addrow button,.ck .ct-cash button{height:42px;border-radius:12px}.ck .ct-cash input{height:40px;width:170px}
+.ck .cp-form input{height:46px}.ck .cp-form button.primary{height:48px;border-radius:12px;font-size:15px;margin-top:6px}
+.ck .cr-actions button,.ck .pp-form~.cr-actions button{height:44px;border-radius:12px;padding:0 18px}
