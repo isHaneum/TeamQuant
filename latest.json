@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-09T13:47:50.476Z",
+ "updatedAt": "2026-11-09T14:15:09.080Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -35,12 +35,13 @@
    "label": "S&P 500",
    "unit": "%",
    "available": true,
-   "date": "2026-11-06",
-   "last": 7376.85986328125,
-   "change": 0.31,
-   "z": 0.4,
+   "date": "2026-11-09",
+   "last": 7376.86,
+   "change": 0,
+   "z": 0,
    "sd": 0.8730796089234166,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -48,12 +49,13 @@
    "label": "나스닥",
    "unit": "%",
    "available": true,
-   "date": "2026-11-06",
-   "last": 24579.4296875,
-   "change": 1.09,
-   "z": 0.9,
+   "date": "2026-11-09",
+   "last": 24579.43,
+   "change": 0,
+   "z": 0,
    "sd": 1.2493450618967445,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -62,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 1347.6199951171875,
-   "change": -0.64,
-   "z": -1,
+   "last": 1347.0899658203125,
+   "change": -0.68,
+   "z": -1.1,
    "sd": 0.6401283221834233,
    "source": "Yahoo"
   },
@@ -74,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 87.12999725341797,
-   "change": -4.07,
-   "z": -1.4,
+   "last": 86.88999938964844,
+   "change": -4.34,
+   "z": -1.5,
    "sd": 2.8342734377460372,
    "source": "Yahoo"
   },
@@ -86,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 4134.39990234375,
-   "change": 1.46,
-   "z": 1.1,
+   "last": 4132.2998046875,
+   "change": 1.41,
+   "z": 1,
    "sd": 1.3566648164944195,
    "source": "Yahoo"
   },
@@ -98,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-09",
-   "last": 23.190000534057617,
-   "change": -9.56,
-   "z": -0.8,
+   "last": 23.079999923706055,
+   "change": -9.98,
+   "z": -0.9,
    "sd": 11.348304491643647,
    "source": "Yahoo",
    "checked": true
@@ -111,63 +113,63 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-09",
-   "last": 4.8470001220703125,
-   "change": -1.2,
-   "z": -0.2,
+   "last": 4.841000080108643,
+   "change": -1.8,
+   "z": -0.3,
    "sd": 5.177230038336907,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -0.2,
-  "politics": -0.2,
-  "rates": -0.9,
-  "trade": 0.3,
-  "fx": -0.2,
-  "energy": -0.2,
-  "market": -0.9,
-  "credit": 0.1,
+  "war": -0.3,
+  "politics": -0.3,
+  "rates": -1,
+  "trade": 0.2,
+  "fx": -0.5,
+  "energy": -0.4,
+  "market": -1.2,
+  "credit": -0.2,
   "disaster": 0,
   "policy": -0.8
  },
  "rates": {
   "war": {
-   "rate": 1.3,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.3,
-   "saturated": 1,
+   "rate": 2.2,
+   "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.1,
+   "rate": 0,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.2,
+   "rate": 3,
    "saturated": 0,
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.2,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
   "credit": {
-   "rate": 0.2,
+   "rate": 0,
    "saturated": 0,
    "queries": 2
   },
@@ -208,59 +210,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
+    "score": 36,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -4.07,
+     "change": -4.34,
      "unit": "%",
-     "z": -1.4
+     "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 -4.07%"
-    ]
-   }
-  },
-  {
-   "id": "dktuvd",
-   "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
-   "firstSeen": "2026-11-09T02:01:00.000Z",
-   "lastSeen": "2026-11-09T02:01:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
-     "link": "https://www.seoul.co.kr/news/international/middleeast-africa/2026/11/09/20261109500086?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-09T02:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.07,
-     "unit": "%",
-     "z": -1.4
-    },
-    "why": [
-     "핵심 단어",
-     "WTI 유가 -4.07%"
+     "WTI 유가 -4.34%"
     ]
    }
   },
@@ -288,19 +250,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
+    "score": 36,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -4.07,
+     "change": -4.34,
      "unit": "%",
-     "z": -1.4
+     "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 -4.07%"
+     "WTI 유가 -4.34%"
     ]
    }
   },
@@ -329,19 +291,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
+    "score": 36,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -4.07,
+     "change": -4.34,
      "unit": "%",
-     "z": -1.4
+     "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 -4.07%"
+     "WTI 유가 -4.34%"
     ]
    }
   },
@@ -375,59 +337,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 32,
-    "spike": 0.1,
+    "score": 31,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -9.56,
+     "change": -9.98,
      "unit": "%",
-     "z": -0.8
+     "z": -0.9
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 -9.56%"
-    ]
-   }
-  },
-  {
-   "id": "x7gi8w",
-   "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
-   "firstSeen": "2026-11-08T23:48:00.000Z",
-   "lastSeen": "2026-11-08T23:48:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
-     "link": "https://www.raonnews.com/news/article.html?no=62579",
-     "host": "raonnews.com",
-     "at": "2026-11-08T23:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.56,
-     "unit": "%",
-     "z": -0.8
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 -9.56%"
+     "VIX 변동성 -9.98%"
     ]
    }
   },
@@ -456,19 +378,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
+    "score": 30,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.64,
+     "change": -0.68,
      "unit": "%",
-     "z": -1
+     "z": -1.1
     },
     "why": [
      "핵심 단어",
-     "원/달러 -0.64%"
+     "원/달러 -0.68%"
     ]
    }
   },
@@ -476,9 +398,9 @@
    "id": "1fjs7vv",
    "title": "[머니버스] '불륜' 시인한 젠슨 황…반도체 시장 영향은?",
    "firstSeen": "2026-11-09T07:04:00.000Z",
-   "lastSeen": "2026-11-09T13:04:00.000Z",
-   "count": 9,
-   "sources": 8,
+   "lastSeen": "2026-11-09T13:50:00.000Z",
+   "count": 10,
+   "sources": 9,
    "topics": [
     "war",
     "politics",
@@ -487,6 +409,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[미디어 이슈] 젠슨 황 불륜 파문 일파만파... 美 의회 조사에 국내도 ‘...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261670",
+     "host": "mediawatch.kr",
+     "at": "2026-11-09T13:50:00.000Z"
+    },
     {
      "title": "\"명예로운 사람\" 트럼프, 불륜 인정한 젠슨 황 '공개 지지'",
      "link": "https://www.wikitree.co.kr/articles/1173196",
@@ -504,29 +432,63 @@
      "link": "https://www.khan.co.kr/article/202611092129015",
      "host": "khan.co.kr",
      "at": "2026-11-09T12:29:00.000Z"
-    },
-    {
-     "title": "미국 뉴욕증시 전망, 젠슨 황 불륜에 엔비디아 휘청…CPI 앞두고 나스닥...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16272340",
-     "host": "topstarnews.net",
-     "at": "2026-11-09T11:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 25,
+    "score": 28,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -4.07,
+     "change": -4.34,
      "unit": "%",
-     "z": -1.4
+     "z": -1.5
     },
     "why": [
-     "WTI 유가 -4.07%"
+     "WTI 유가 -4.34%"
+    ]
+   }
+  },
+  {
+   "id": "x7gi8w",
+   "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+   "firstSeen": "2026-11-08T23:48:00.000Z",
+   "lastSeen": "2026-11-08T23:48:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "BIS \"디지털 뱅크런, 며칠 아닌 몇 시간\"…LCR 유출률 재검토 권고",
+     "link": "https://www.raonnews.com/news/article.html?no=62579",
+     "host": "raonnews.com",
+     "at": "2026-11-08T23:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -9.98,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 -9.98%"
     ]
    }
   },
@@ -571,18 +533,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
+    "score": 25,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -4.07,
+     "change": -4.34,
      "unit": "%",
-     "z": -1.4
+     "z": -1.5
     },
     "why": [
-     "WTI 유가 -4.07%"
+     "WTI 유가 -4.34%"
     ]
    }
   },
@@ -626,18 +588,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
+    "score": 22,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.64,
+     "change": -0.68,
      "unit": "%",
-     "z": -1
+     "z": -1.1
     },
     "why": [
-     "원/달러 -0.64%"
+     "원/달러 -0.68%"
     ]
    }
   },
@@ -682,74 +644,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
+    "score": 20,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -4.07,
+     "change": -4.34,
      "unit": "%",
-     "z": -1.4
+     "z": -1.5
     },
     "why": [
-     "WTI 유가 -4.07%"
-    ]
-   }
-  },
-  {
-   "id": "qlb9",
-   "title": "중국, 미국과의 무역 휴전 협정 2개월 연장",
-   "firstSeen": "2026-11-09T05:56:00.000Z",
-   "lastSeen": "2026-11-09T11:26:00.000Z",
-   "count": 4,
-   "sources": 3,
-   "topics": [
-    "war",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "중국, 배터리 수출통제 2개월 추가 유예…LG에너지솔루션·삼성SDI·SK온...",
-     "link": "http://sateconomy.co.kr/news/view/1065612142706504",
-     "host": "sateconomy.co.kr",
-     "at": "2026-11-09T11:26:00.000Z"
-    },
-    {
-     "title": "中, 희토류 수출통제 면제 2개월 연장…美·中 무역휴전 이어가",
-     "link": "https://www.hankyung.com/article/202611095990i",
-     "host": "hankyung.com",
-     "at": "2026-11-09T10:57:00.000Z"
-    },
-    {
-     "title": "美中, 무역 휴전 2개월 연장…관세·희토류 수출통제 유예",
-     "link": "https://www.hankyung.com/article/2026110959897",
-     "host": "hankyung.com",
-     "at": "2026-11-09T10:45:00.000Z"
-    },
-    {
-     "title": "중국, 미국과의 무역 휴전 협정 2개월 연장",
-     "link": "http://www.newstown.co.kr/news/articleView.html?idxno=721290",
-     "host": "newstown.co.kr",
-     "at": "2026-11-09T08:11:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 18,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.07,
-     "unit": "%",
-     "z": -1.4
-    },
-    "why": [
-     "WTI 유가 -4.07%"
+     "WTI 유가 -4.34%"
     ]
    }
   },
@@ -793,18 +699,118 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 16,
+    "score": 18,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.64,
+     "change": -0.68,
      "unit": "%",
-     "z": -1
+     "z": -1.1
     },
     "why": [
-     "원/달러 -0.64%"
+     "원/달러 -0.68%"
+    ]
+   }
+  },
+  {
+   "id": "m9pt32",
+   "title": "금시세(금값) 상승",
+   "firstSeen": "2026-11-09T01:20:00.000Z",
+   "lastSeen": "2026-11-09T11:22:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "politics",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "李대통령 지지율 충청권만 10% 상승",
+     "link": "http://www.cctimes.kr/news/articleView.html?idxno=936367",
+     "host": "cctimes.kr",
+     "at": "2026-11-09T11:22:00.000Z"
+    },
+    {
+     "title": "[도쿄증시-마감] 美 증시 반등·日 기업 실적 기대에 2%대 상승",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443814",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-09T08:50:00.000Z"
+    },
+    {
+     "title": "금시세(금값) 상승",
+     "link": "http://www.kjdaily.com/article.php?aid=1794187152691632227",
+     "host": "kjdaily.com",
+     "at": "2026-11-09T01:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 17,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "CL=F",
+     "label": "WTI 유가",
+     "change": -4.34,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "WTI 유가 -4.34%"
+    ]
+   }
+  },
+  {
+   "id": "14sj54d",
+   "title": "석유 최고가격제 손실 '정산 D-day' 임박… 7조 손실 놓고 정부·업계 '이...",
+   "firstSeen": "2026-11-09T06:28:00.000Z",
+   "lastSeen": "2026-11-09T13:37:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "김정관 “석유 최고가격제 쉽게 중단 못해”…이달 말 정유사 손실 첫 ...",
+     "link": "https://www.seoul.co.kr/news/politics/2026/11/09/20261109500402?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-09T13:37:00.000Z"
+    },
+    {
+     "title": "석유 최고가격제 첫 정산 임박…정부·정유업계 '셈법' 충돌",
+     "link": "https://www.mediaus.co.kr/news/articleView.html?idxno=318900",
+     "host": "mediaus.co.kr",
+     "at": "2026-11-09T09:26:00.000Z"
+    },
+    {
+     "title": "석유 최고가격제 손실 '정산 D-day' 임박… 7조 손실 놓고 정부·업계 '이...",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/09/2026110900203.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-09T06:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 17,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "CL=F",
+     "label": "WTI 유가",
+     "change": -4.34,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "WTI 유가 -4.34%"
     ]
    }
   },
@@ -854,67 +860,84 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -9.56,
+     "change": -9.98,
      "unit": "%",
-     "z": -0.8
+     "z": -0.9
     },
     "why": [
-     "VIX 변동성 -9.56%"
+     "VIX 변동성 -9.98%"
     ]
    }
   },
   {
-   "id": "m9pt32",
-   "title": "금시세(금값) 상승",
-   "firstSeen": "2026-11-09T01:20:00.000Z",
-   "lastSeen": "2026-11-09T11:22:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "19wd1ah",
+   "title": "헤그세스 탄핵안 놓고 트럼프·민주당 정면충돌…공화당 이탈표 주시",
+   "firstSeen": "2026-11-08T22:27:00.000Z",
+   "lastSeen": "2026-11-09T00:50:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "politics",
-    "energy"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "李대통령 지지율 충청권만 10% 상승",
-     "link": "http://www.cctimes.kr/news/articleView.html?idxno=936367",
-     "host": "cctimes.kr",
-     "at": "2026-11-09T11:22:00.000Z"
+     "title": "민주당·트럼프, 탄핵·수사로 정면충돌…마가 지지층은 패배 책임 놓고...",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261109010003113",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-09T00:50:00.000Z"
     },
     {
-     "title": "[도쿄증시-마감] 美 증시 반등·日 기업 실적 기대에 2%대 상승",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443814",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-09T08:50:00.000Z"
+     "title": "트럼프·민주당, 헤그세스 국방장관 탄핵안 놓고 첫 정면충돌",
+     "link": "https://www.m-economynews.com/news/article.html?no=72748",
+     "host": "m-economynews.com",
+     "at": "2026-11-08T23:18:00.000Z"
     },
     {
-     "title": "금시세(금값) 상승",
-     "link": "http://www.kjdaily.com/article.php?aid=1794187152691632227",
-     "host": "kjdaily.com",
-     "at": "2026-11-09T01:20:00.000Z"
+     "title": "美민주, 이번주 헤그세스 탄핵 추진… 트럼프와 첫 정면충돌",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3446998",
+     "host": "newscj.com",
+     "at": "2026-11-08T23:10:00.000Z"
+    },
+    {
+     "title": "헤그세스 탄핵안 놓고 트럼프·민주당 정면충돌…공화당 이탈표 주시",
+     "link": "https://www.dt.co.kr/article/12093861?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-08T22:35:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 14,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -4.07,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
      "unit": "%",
-     "z": -1.4
+     "z": -1.1
     },
     "why": [
-     "WTI 유가 -4.07%"
+     "원/달러 -0.68%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-09T14:15:09.080Z",
+   "id": "1t1cefu",
+   "level": "caution",
+   "title": "[심양섭의 정론직격] 국민연금 182조 평가손실, 李정부가 답해야 할 질문...",
+   "why": [
+    "핵심 단어",
+    "VIX 변동성 -9.98%"
+   ],
+   "link": "http://www.metroseoul.co.kr/article/20261109500274",
+   "delivered": false
+  },
   {
    "at": "2026-11-09T12:48:04.566Z",
    "id": "1t1cefu",
@@ -1141,18 +1164,6 @@
     "금 +1.28%"
    ],
    "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748069",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-09T03:47:57.762Z",
-   "id": "1nn4x1c",
-   "level": "caution",
-   "title": "[원자재 시황] 미 고용 호조에 금·코인 하락",
-   "why": [
-    "기사 급증(평소 대비 3σ)",
-    "금 +1.29%"
-   ],
-   "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443745",
    "delivered": false
   }
  ],
