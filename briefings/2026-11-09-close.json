@@ -1,0 +1,402 @@
+{
+ "id": "2026-11-09-close",
+ "version": "I1-2026-11-06",
+ "slot": "close",
+ "title": "국내 장 마감 브리핑",
+ "at": "2026-11-09T07:05:59.968Z",
+ "headline": "코스피 -0.81%, 코스닥 -0.82%, 원/달러 -0.68% · 주요 이슈: 전쟁·지정학, 관세·무역, 선거·정치",
+ "markets": [
+  {
+   "symbol": "^KS11",
+   "label": "코스피",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-09",
+   "last": 5018.85009765625,
+   "change": -0.81,
+   "z": -0.3,
+   "sd": 2.948375135524748,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "^KQ11",
+   "label": "코스닥",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-09",
+   "last": 638.969970703125,
+   "change": -0.82,
+   "z": -0.3,
+   "sd": 2.520234572375647,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "KRW=X",
+   "label": "원/달러",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-09",
+   "last": 1347.0799560546875,
+   "change": -0.68,
+   "z": -1.1,
+   "sd": 0.6401283221834233,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "^GSPC",
+   "label": "S&P 500",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 7376.85986328125,
+   "change": 0.31,
+   "z": 0.4,
+   "sd": 0.8730796089234166,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "CL=F",
+   "label": "WTI 유가",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-09",
+   "last": 89.66000366210938,
+   "change": -1.29,
+   "z": -0.5,
+   "sd": 2.8342734377460372,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "^VIX",
+   "label": "VIX 변동성",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-06",
+   "last": 25.639999389648438,
+   "change": -9.01,
+   "z": -0.8,
+   "sd": 11.277582247268505,
+   "source": "Yahoo",
+   "checked": true
+  }
+ ],
+ "unusual": [],
+ "issues": [
+  {
+   "id": "55t3q5",
+   "title": "中, 대미 24% 관세 유예 연장 확인…\"美 조치 따라 대응\" 여지도",
+   "firstSeen": "2026-11-09T04:04:00.000Z",
+   "lastSeen": "2026-11-09T05:56:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "trade"
+   ],
+   "critical": [
+    "trade"
+   ],
+   "links": [
+    {
+     "title": "中, 美 보복관세 2개월 더 유예…미·중 관세전쟁 '휴전 연장'",
+     "link": "https://www.dailian.co.kr/news/view/1712671/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-09T05:56:00.000Z"
+    },
+    {
+     "title": "中, 미국산 제품 24% 추가 관세 부과 2개월 유예 연장",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902438",
+     "host": "newsworks.co.kr",
+     "at": "2026-11-09T05:56:00.000Z"
+    },
+    {
+     "title": "中, 대미 24% 관세 유예 연장 확인…\"美 조치 따라 대응\" 여지도",
+     "link": "https://www.news1.kr/world/northeast-asia/6347651",
+     "host": "news1.kr",
+     "at": "2026-11-09T04:04:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 50,
+    "spike": 1.8,
+    "news": true,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.68%"
+    ]
+   }
+  },
+  {
+   "id": "1hg4n5e",
+   "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
+   "firstSeen": "2026-11-08T23:28:00.000Z",
+   "lastSeen": "2026-11-08T23:28:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "[잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달...",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38415",
+     "host": "junggi.co.kr",
+     "at": "2026-11-08T23:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.68%"
+    ]
+   }
+  },
+  {
+   "id": "1hxi5xh",
+   "title": "“전면전 없지만 폭격은 할 수도”…트럼프, 이란에 또 경고",
+   "firstSeen": "2026-11-09T00:12:00.000Z",
+   "lastSeen": "2026-11-09T00:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "“전면전 없지만 폭격은 할 수도”…트럼프, 이란에 또 경고",
+     "link": "https://www.ekn.kr/web/view.php?key=20261109021006964",
+     "host": "ekn.kr",
+     "at": "2026-11-09T00:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.68%"
+    ]
+   }
+  },
+  {
+   "id": "dktuvd",
+   "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
+   "firstSeen": "2026-11-09T02:01:00.000Z",
+   "lastSeen": "2026-11-09T02:01:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "“금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝...",
+     "link": "https://www.seoul.co.kr/news/international/middleeast-africa/2026/11/09/20261109500086?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-09T02:01:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.68%"
+    ]
+   }
+  },
+  {
+   "id": "j3wmvg",
+   "title": "3자 종전협상 앞둔 우크라전 전황은?…지상전 교착·공습전 격화",
+   "firstSeen": "2026-11-09T02:25:00.000Z",
+   "lastSeen": "2026-11-09T02:25:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "3자 종전협상 앞둔 우크라전 전황은?…지상전 교착·공습전 격화",
+     "link": "https://www.news1.kr/world/europe/6347485",
+     "host": "news1.kr",
+     "at": "2026-11-09T02:25:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.68%"
+    ]
+   }
+  },
+  {
+   "id": "1ug14g0",
+   "title": "[이슈] 트럼프, 이란 해법 놓고 고심⋯핵심 참모들도 '협상-재공습-경제...",
+   "firstSeen": "2026-11-08T07:14:00.000Z",
+   "lastSeen": "2026-11-09T03:31:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "[이슈] 트럼프, 이란 해법 놓고 고심⋯핵심 참모들도 '협상-재공습-경제...",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748069",
+     "host": "polinews.co.kr",
+     "at": "2026-11-09T03:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.68%"
+    ]
+   }
+  }
+ ],
+ "alerts": [
+  {
+   "id": "55t3q5",
+   "title": "中, 대미 24% 관세 유예 연장 확인…\"美 조치 따라 대응\" 여지도",
+   "firstSeen": "2026-11-09T04:04:00.000Z",
+   "lastSeen": "2026-11-09T05:56:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "trade"
+   ],
+   "critical": [
+    "trade"
+   ],
+   "links": [
+    {
+     "title": "中, 美 보복관세 2개월 더 유예…미·중 관세전쟁 '휴전 연장'",
+     "link": "https://www.dailian.co.kr/news/view/1712671/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-09T05:56:00.000Z"
+    },
+    {
+     "title": "中, 미국산 제품 24% 추가 관세 부과 2개월 유예 연장",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902438",
+     "host": "newsworks.co.kr",
+     "at": "2026-11-09T05:56:00.000Z"
+    },
+    {
+     "title": "中, 대미 24% 관세 유예 연장 확인…\"美 조치 따라 대응\" 여지도",
+     "link": "https://www.news1.kr/world/northeast-asia/6347651",
+     "host": "news1.kr",
+     "at": "2026-11-09T04:04:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 50,
+    "spike": 1.8,
+    "news": true,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.68,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.68%"
+    ]
+   }
+  }
+ ],
+ "text": "[국내 장 마감 브리핑] 2026-11-09 16시\n코스피 -0.81%, 코스닥 -0.82%, 원/달러 -0.68% · 주요 이슈: 전쟁·지정학, 관세·무역, 선거·정치\n1. [주의] 中, 대미 24% 관세 유예 연장 확인…\"美 조치 따라 대응\" 여지도 (3곳 보도)\n   https://www.dailian.co.kr/news/view/1712671/?sc=Naver\n2. [잠든 사이 월가] 트럼프 \"이란 재공습 희박\"…美 휘발유 석달 만에 4달... (1곳 보도)\n   https://www.junggi.co.kr/news/articleView.html?idxno=38415\n3. “전면전 없지만 폭격은 할 수도”…트럼프, 이란에 또 경고 (1곳 보도)\n   https://www.ekn.kr/web/view.php?key=20261109021006964\n4. “금지구역 뚫으려다 불덩이될 것”…이란이 ‘호르무즈 해협 봉쇄’ 끝... (1곳 보도)\n   https://www.seoul.co.kr/news/international/middleeast-africa/2026/11/09/20261109500086?wlog_tag3=naver\n5. 3자 종전협상 앞둔 우크라전 전황은?…지상전 교착·공습전 격화 (1곳 보도)\n   https://www.news1.kr/world/europe/6347485\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+ "delivered": false
+}
