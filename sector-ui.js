@@ -115,16 +115,17 @@ async function recomputeLive(s) {
 }
 
 // ── 내 섹터 분포(홈·섹터 화면 공용) ─────────────────────────
-function exposure() { return sectorExposure(S.positions.map(p => ({ ...p, hint: S.hints.get(p.symbol) || '' })), { cashKrw: S.cash, style: getStyle() }); }
+function prefCap() { try { const ses = sessionStorage.getItem('teamQuantSession') || 'guest'; for (const k of [`teamQuantRules:${ses}:demo`, `teamQuantRules:${ses}`]) { const v = JSON.parse(localStorage.getItem(k) || 'null'); if (v?.prefs?.sectorCap > 0) return v.prefs.sectorCap; } } catch { } return null; }
+function exposure() { return sectorExposure(S.positions.map(p => ({ ...p, hint: S.hints.get(p.symbol) || '' })), { cashKrw: S.cash, style: getStyle(), cap: prefCap() }); }
 function exposureHtml(exp, { compact = false } = {}) {
   if (!exp.rows.length) return '<p class="cr-muted">계좌를 연결하거나 예시 자산을 켜면 보유 종목을 섹터로 묶어 보여 줍니다.</p>';
   const mine = issuesFor(S.positions.map(p => p.symbol)), styleName = STYLE_NAME[getStyle()] || '균형';
-  const top = exp.top, topOver = top && top.pct > exp.cap && top.id !== 'index' && top.id !== 'bond';
+  const top = exp.top, topOver = top && top.pct > exp.cap && top.id !== 'index' && top.id !== 'bond', capFrom = prefCap() ? '세 질문' : styleName;
   const bars = exp.rows.map(r => { const ret = retOf(r.id)?.m1; const over = r.pct > exp.cap && r.id !== 'index' && r.id !== 'bond'; return `<li title="${esc(r.symbols.map(x => x.name).join(', '))}"><span class="n">${esc(r.name)}</span><i class="${over ? 'over' : r.id === 'index' || r.id === 'bond' ? 'idx' : ''}" style="--w:${Math.min(100, r.pct).toFixed(1)}%"></i><b>${r.pct.toFixed(0)}%</b><small class="${tone(ret)}">${Number.isFinite(ret) ? `1M ${pct(ret, 0)}` : ''}</small></li>`; }).join('');
   const plan = exp.over.length ? `<div class="sc-plan"><b>검토안 (${styleName} 성향 · 섹터 상한 ${exp.cap}%)</b><ul>${exp.over.map(o => `<li>${esc(o.name)} <b>${o.pct.toFixed(0)}% → ${exp.cap}%</b> · 약 <b>${manwon(o.cutKrw)}</b> 줄이기</li>`).join('')}</ul><span class="cr-muted">줄인 돈(전체의 ${exp.cutPctOfTotal.toFixed(0)}%)은 현금으로 둡니다. 다시 넣을 때는 매매 전 확인을 거칩니다. 어느 섹터를 사라는 뜻이 아닙니다.</span></div>`
     : `<div class="sc-plan"><span class="cr-muted">모든 섹터가 ${styleName} 성향 상한 ${exp.cap}% 안에 있습니다.${exp.rows.filter(r => r.id !== 'index' && r.id !== 'bond').length <= 1 ? ' 다만 섹터가 하나뿐이라 그 섹터 이슈에 전부 걸려 있습니다.' : ''}</span></div>`;
   const issues = mine.length ? `<div class="sc-mine-issues"><span>내 종목에 직접 걸린 이슈 ${mine.length}건 · 최근</span><br>${esc(mine[0].date)} ${esc(mine[0].sectorName)} · ${esc(mine[0].title)}${compact ? '' : mine.slice(1, 3).map(i => `<br>${esc(i.date)} ${esc(i.sectorName)} · ${esc(i.title)}`).join('')}</div>` : '';
-  return `<div class="sc-sum"><div><span>가장 큰 섹터</span><b class="${topOver ? 'bad' : ''}">${top ? `${esc(top.name)} ${top.pct.toFixed(0)}%` : '—'}</b><small>상한 ${exp.cap}% (${styleName})</small></div><div><span>유효 섹터 수</span><b>${exp.effective ? exp.effective.toFixed(1) : '—'}개</b><small>비중을 고르게 봤을 때 ${tip('비중 제곱합의 역수(허핀달 지수의 역수)입니다. 두 섹터에 반반이면 2.0, 한 섹터에 몰리면 1.0에 가깝습니다.')}</small></div><div><span>섹터 이슈</span><b>${mine.length}건</b><small>내 종목에 직접</small></div></div><ul class="sc-bars">${bars}</ul>${compact ? '' : plan}${compact ? (exp.over.length ? `<div class="sc-plan"><b>${esc(exp.over[0].name)} ${exp.over[0].pct.toFixed(0)}% → ${exp.cap}%</b> 검토 · 약 ${manwon(exp.over[0].cutKrw)}<span class="cr-muted"> (자세한 검토안은 섹터 화면)</span></div>` : '') : ''}${issues}`;
+  return `<div class="sc-sum"><div><span>가장 큰 섹터</span><b class="${topOver ? 'bad' : ''}">${top ? `${esc(top.name)} ${top.pct.toFixed(0)}%` : '—'}</b><small>상한 ${exp.cap}% (${capFrom})</small></div><div><span>유효 섹터 수</span><b>${exp.effective ? exp.effective.toFixed(1) : '—'}개</b><small>비중을 고르게 봤을 때 ${tip('비중 제곱합의 역수(허핀달 지수의 역수)입니다. 두 섹터에 반반이면 2.0, 한 섹터에 몰리면 1.0에 가깝습니다.')}</small></div><div><span>섹터 이슈</span><b>${mine.length}건</b><small>내 종목에 직접</small></div></div><ul class="sc-bars">${bars}</ul>${compact ? '' : plan}${compact ? (exp.over.length ? `<div class="sc-plan"><b>${esc(exp.over[0].name)} ${exp.over[0].pct.toFixed(0)}% → ${exp.cap}%</b> 검토 · 약 ${manwon(exp.over[0].cutKrw)}<span class="cr-muted"> (자세한 검토안은 섹터 화면)</span></div>` : '') : ''}${issues}`;
 }
 function renderMine() { const b = $('#sc-mine-body'); if (b) b.innerHTML = exposureHtml(exposure()); renderHome(); }
 function renderCommon() { const b = $('#sc-common-body'); if (b) b.innerHTML = [...COMMON_ISSUES].sort((a, b) => b.date.localeCompare(a.date)).map(i => issueHtml(i)).join(''); }
@@ -156,5 +157,6 @@ window.addEventListener('teamquant:asset-snapshot', e => {
 window.addEventListener('teamquant:asset-clear', () => { S.positions = []; S.cash = null; renderTiles(); renderDetail(); renderMine(); });
 window.addEventListener('teamquant:cash', e => { if (Number.isFinite(e.detail?.amount)) { S.cash = e.detail.amount; renderMine(); } });
 window.addEventListener('teamquant:style', () => { renderTiles(); renderMine(); });
+window.addEventListener('teamquant:state', () => renderMine());
 page.querySelectorAll('[name="sc-h"]').forEach(r => r.onchange = () => { S.horizon = r.value; renderTiles(); });
 renderTiles(); renderDetail(); renderCommon(); renderMine(); void loadData();

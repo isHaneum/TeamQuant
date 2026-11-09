@@ -12,6 +12,7 @@ import { resolveStockInput, stockName } from '/lib/instruments.js';
 import { tip } from '/tooltip-ui.js';
 import { mountCandles } from '/lib/candlestick-view.js';
 import { attachStockSearch, quoteOf } from '/stock-search-ui.js';
+import { presetRules, nearestPreset, reviewRules, LOSS_OPTIONS, SECTOR_OPTIONS, CADENCE_OPTIONS } from '/lib/rule-presets.js';
 
 const $ = s => document.querySelector(s);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -122,11 +123,20 @@ function renderStrategyEvidence() {
 fetch('/data/core-validation.json?v=' + RULES_VERSION).then(r => r.ok ? r.json() : null).then(d => { evidence = d; renderEvidence(); renderStrategyEvidence(); }).catch(() => {});
 const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>규칙 ${tip('한 번 정해 두면 오늘 점검·매매 전 확인·성적표가 이 기준으로 계산합니다. 이 브라우저(프로필별)에 저장되고 서버로 보내지 않습니다.')}</h1><p>내 투자 규칙과 종목별 계획 비중</p></div></div>
 <div class="cr-grid"><div class="cr-main">
-  <article class="cr-card"><header><h3>규칙</h3><span class="cr-muted" id="cr-saved"></span></header><form id="cr-form" class="cr-rules"></form>
+  <article class="cr-card" id="cr-quick"><header><h3>세 질문으로 정하기 ${tip('숫자 7개를 직접 고르는 대신 세 가지 질문에 답하면 규칙이 정해집니다. 하루 손실 한도 = 한 달 허용 손실 ÷ √21, 한 종목·섹터 상한은 나눌 섹터 수에서, 매매 횟수 상한은 점검 주기에서 나옵니다. 아래 숫자는 그대로 손볼 수 있습니다.')}</h3><span class="cr-muted" id="cr-quick-state"></span></header>
+    <div class="cq">
+      <div class="cq-q"><span>1. 한 달에 얼마까지 잃어도 견딜 수 있습니까?</span><div class="cp-seg" role="radiogroup"><label><input type="radio" name="cq-loss" value="5"><span>5%</span></label><label><input type="radio" name="cq-loss" value="10"><span>10%</span></label><label><input type="radio" name="cq-loss" value="20"><span>20%</span></label></div><small class="cr-muted" id="cq-loss-d"></small></div>
+      <div class="cq-q"><span>2. 몇 개 섹터로 나누겠습니까?</span><div class="cp-seg" role="radiogroup"><label><input type="radio" name="cq-sec" value="3"><span>3개 안팎</span></label><label><input type="radio" name="cq-sec" value="5"><span>5개 안팎</span></label><label><input type="radio" name="cq-sec" value="8"><span>8개 이상</span></label></div><small class="cr-muted" id="cq-sec-d"></small></div>
+      <div class="cq-q"><span>3. 얼마나 자주 보겠습니까?</span><div class="cp-seg" role="radiogroup"><label><input type="radio" name="cq-cad" value="weekly"><span>주 1회</span></label><label><input type="radio" name="cq-cad" value="monthly"><span>월 1회</span></label><label><input type="radio" name="cq-cad" value="urgent"><span>급할 때만</span></label></div><small class="cr-muted" id="cq-cad-d"></small></div>
+    </div>
+    <ul class="cq-explain" id="cq-explain"></ul>
+    <div class="cr-actions"><button type="button" class="primary" id="cq-apply">이 규칙으로 저장</button><button type="button" class="secondary" id="cq-pc">PC 모의계좌에도 적용</button><span class="cr-muted" id="cq-pc-state"></span></div></article>
+  <article class="cr-card"><header><h3>규칙 (세부) ${tip('세 질문으로 정한 뒤 숫자를 직접 손볼 수 있습니다. 손보면 위 선택은 "직접 조정"으로 표시됩니다.')}</h3><span class="cr-muted" id="cr-saved"></span></header><form id="cr-form" class="cr-rules"></form>
     <details class="cr-adv"><summary>추가 규칙</summary><div id="cr-adv"></div></details>
     <p class="cr-err" id="cr-err" role="alert"></p><div class="cr-actions"><button type="button" class="primary" id="cr-save">저장</button><button type="button" class="text-button" id="cr-default">기본값으로</button></div></article>
   <article class="cr-card"><header><h3>계획 비중 ${tip('종목마다 총자산(주식 + 현금)에서 차지할 목표 비중입니다. 오늘 점검은 이 계획에 규칙(200일선·하루 손실 한도)을 적용한 목표와 지금을 비교합니다. 규칙 때문에 팔았다가도 조건이 풀리면 다시 이 계획까지 사도록 안내합니다.')}</h3><button type="button" class="text-button" id="cr-fill">지금 비중으로 채우기</button></header>
     <div id="cr-plan"></div></article>
+  <article class="cr-card" id="cr-review"><header><h3>기록으로 점검 ${tip('PC 실시간 모의계좌의 날마다 기록(총자산·현금·주문·막힌 이유)으로 지금 규칙이 어떻게 작동했는지 잽니다. 측정이지 예측이 아닙니다. 20거래일은 지나야 의미가 있습니다.')}</h3><button type="button" class="text-button" id="cr-review-go">다시 불러오기</button></header><div id="cr-review-body"><p class="cr-muted">PC 모의계좌 기록이 있을 때 계산합니다.</p></div></article>
 </div><aside class="cr-side">
   <article class="cr-card"><header><h3>현금 ${tip('현금 최소 비중과 비중 계산에 씁니다. 계좌 API에서 예수금을 받지 못해 직접 기록합니다. PC 연결 상태면 PC에만 저장됩니다.')}</h3></header><div id="cr-cash"></div></article>
   <article class="cr-card"><header><h3>세부 전략 근거 ${tip('그때 공개돼 있던 재무(한국 OpenDART, 미국 SEC 제출일)와 시세만으로 54개 대형주를 월별로 다시 계산했습니다. 2019년까지로 고르고 2020년부터 확인했습니다. 지금 남아 있는 대형주라 생존 편향이 있습니다.')}</h3></header><div id="cr-strategy"><div class="shimmer ct-skel"></div></div></article>
@@ -166,7 +176,37 @@ function readForm() {
   return { rules, plan, errors };
 }
 $('#cr-save').onclick = () => { const { rules, plan, errors } = readForm(); $('#cr-err').textContent = errors.join(' '); if (errors.length) return; if (!save({ rules, plan })) { $('#cr-err').textContent = '이 브라우저에 저장하지 못했습니다(저장 공간 차단).'; return; } renderRules(); S.loading = loadAll(); $('#cr-saved').textContent = '저장했습니다'; };
-$('#cr-default').onclick = () => { const v = loadSaved(); save({ rules: DEFAULT_RULES, plan: v?.plan || null }); renderRules(); renderToday(); };
+$('#cr-default').onclick = () => { const v = loadSaved(); save({ rules: DEFAULT_RULES, plan: v?.plan || null }); renderRules(); renderToday(); cqInit(); };
+// ── 세 질문 카드 ──
+const cq = { prefs: null };
+function cqRead() { const v = k => rulesPage.querySelector(`[name="${k}"]:checked`)?.value; return { lossMonthly: Number(v('cq-loss')) || 10, sectors: Number(v('cq-sec')) || 5, cadence: v('cq-cad') || 'weekly' }; }
+function cqSet(prefs) { for (const [k, val] of [['cq-loss', prefs.lossMonthly], ['cq-sec', prefs.sectors], ['cq-cad', prefs.cadence]]) { const el = rulesPage.querySelector(`[name="${k}"][value="${val}"]`); if (el) el.checked = true; } }
+function cqRender(custom = false) {
+  const p = presetRules(cqRead()); cq.prefs = p;
+  $('#cq-loss-d').textContent = LOSS_OPTIONS.find(o => o.id === p.prefs.lossMonthly)?.desc || ''; $('#cq-sec-d').textContent = SECTOR_OPTIONS.find(o => o.id === p.prefs.sectors)?.desc || ''; $('#cq-cad-d').textContent = CADENCE_OPTIONS.find(o => o.id === p.prefs.cadence)?.desc || '';
+  $('#cq-explain').innerHTML = p.explain.map(t => `<li>${esc(t)}</li>`).join('');
+  $('#cr-quick-state').textContent = custom ? '지금 규칙은 직접 조정한 값입니다' : '';
+}
+function cqInit() { const saved = loadSaved(); const n = saved?.prefs?.lossMonthly ? { ...saved.prefs, custom: false } : nearestPreset(current().rules); cqSet(n); cqRender(n.custom); }
+rulesPage.querySelectorAll('[name="cq-loss"],[name="cq-sec"],[name="cq-cad"]').forEach(r => r.onchange = () => cqRender(false));
+$('#cq-apply').onclick = () => { const p = cq.prefs || presetRules(cqRead()); const saved = loadSaved(); if (!save({ rules: p.rules, plan: saved?.plan || null, prefs: { ...p.prefs, sectorCap: p.sectorCap, cadence: p.cadence } })) { $('#cr-err').textContent = '이 브라우저에 저장하지 못했습니다.'; return; } $('#cr-quick-state').textContent = '저장했습니다'; renderRules(); renderToday(); };
+$('#cq-pc').onclick = async () => { const p = cq.prefs || presetRules(cqRead()), st = $('#cq-pc-state'); st.textContent = 'PC에 보내는 중…'; try { const r = await privateRead('paper-live-prefs', { rules: p.rules, cadence: p.cadence, sectorCap: p.sectorCap, prefs: p.prefs }); st.textContent = `PC 모의계좌 규칙 저장 ${String(r.savedAt).slice(0, 16).replace('T', ' ')} · 점검 ${CADENCE_OPTIONS.find(o => o.id === r.cadence)?.label || r.cadence}`; } catch (e) { st.textContent = e?.status === 503 ? 'PC에 모의투자 키가 없습니다.' : (e?.message || 'PC 연결이 필요합니다(설정에서 연결).'); } };
+// ── 기록으로 점검 ──
+async function renderReview() {
+  const box = $('#cr-review-body'); if (!box) return;
+  try {
+    const st = await privateRead('paper-live-status'); let indexPct = null;
+    try { const m0 = st.marks?.[0]; if (m0) { const d = await fetchCandles('069500', 'KRW', '1y'); const c = (d.candles || []).filter(x => x.close > 0), base = c.find(x => x.date >= m0.date) || c[0]; indexPct = base ? c.at(-1).close / base.close - 1 : null; } } catch { }
+    const r = reviewRules(st, current().rules, { indexPct });
+    box.innerHTML = `<p class="cr-muted">모의계좌 ${esc(st.account || '')} · 운용 ${r.days}일 · 규칙 ${st.prefs?.savedAt ? 'PC 저장 ' + String(st.prefs.savedAt).slice(0, 10) : '기본값'} · 점검 ${CADENCE_OPTIONS.find(o => o.id === (st.prefs?.cadence || 'weekly'))?.label || ''}</p>
+      <ul class="cr-find">${r.findings.map(f => `<li><span class="ct-chip ${f.tone > 0 ? 'ok' : f.tone < 0 ? 'bad' : 'na'}">${f.tone > 0 ? '좋음' : f.tone < 0 ? '주의' : '참고'}</span><div><b>${esc(f.text)}</b>${f.suggest ? `<small>${esc(f.suggest)}</small>` : ''}</div></li>`).join('')}</ul>
+      ${r.findings.some(f => f.suggest) ? '<p class="cr-muted">제안은 지난 기록의 측정에서 나온 것이고, 바꾸려면 위 세 질문에서 고르고 "PC 모의계좌에도 적용"을 누르십시오.</p>' : ''}`;
+  } catch (e) { box.innerHTML = `<p class="cr-muted">${esc(e?.status === 503 ? 'PC에 모의투자 키가 없어 기록이 없습니다.' : 'PC 모의계좌에 연결되어 있지 않습니다. 설정에서 PC를 연결하면 기록으로 점검합니다.')}</p>`; }
+}
+$('#cr-review-go').onclick = renderReview;
+window.addEventListener('teamquant:page', () => { if (document.querySelector('.view.active')?.dataset.page === 'rules') { cqInit(); void renderReview(); } });
+cqInit();
+
 rulesPage.addEventListener('click', e => { if (e.target.id === 'cr-fill') { const rules = readForm().rules; const p = initialPlan(S.positions, S.cash, rules); renderPlan(Object.fromEntries(Object.entries(p).map(([k, v]) => [k, { pct: v }])), false); } });
 function renderCash() {
   const box = $('#cr-cash'); if (!box) return;
