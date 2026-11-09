@@ -1,8 +1,8 @@
 {
  "version": "PUB1-2026-11-09",
- "engine": "L3-2026-11-09",
+ "engine": "L4-2026-11-09",
  "label": "한투 모의계좌 (팀 공용)",
- "asOf": "2026-11-09T07:55:50.472Z",
+ "asOf": "2026-11-09T08:55:54.726Z",
  "mode": "vps",
  "public": true,
  "since": "2026-11-09",
@@ -20,8 +20,8 @@
   "US": {
    "open": false,
    "reason": "미국 장 시작 전입니다(09:30 ET = 한국 23:30).",
-   "openAt": "2026-11-09T14:30:00.470Z",
-   "closeAt": "2026-11-09T21:00:00.470Z",
+   "openAt": "2026-11-09T14:30:00.723Z",
+   "closeAt": "2026-11-09T21:00:00.723Z",
    "market": "US"
   }
  },
@@ -43,7 +43,7 @@
   "duplicateWindowMin": 10,
   "allowLive": false
  },
- "fx": 1349.0400390625,
+ "fx": 1350.0699462890625,
  "balance": {
   "cash": 62669084,
   "cashUsd": 0,
@@ -836,6 +836,53 @@
  ],
  "prefs": null,
  "hypotheses": [],
+ "hiddenHypotheses": 0,
+ "activity30": {
+  "decisions": 6,
+  "orders": 17,
+  "submitted": 17,
+  "fills": 13,
+  "rejected": 0,
+  "notFound": 0,
+  "batches": 1,
+  "tradedKrw": 83740502,
+  "turnoverPct": 84.3
+ },
+ "integrity": {
+  "ok": true,
+  "items": [
+   {
+    "key": "duplicates",
+    "label": "의도하지 않은 중복 주문",
+    "count": 0,
+    "target": 0
+   },
+   {
+    "key": "resentAfterNotFound",
+    "label": "미확인 주문 뒤 같은 날 재전송",
+    "count": 0,
+    "target": 0
+   },
+   {
+    "key": "noReason",
+    "label": "이유 없는 주문",
+    "count": 0,
+    "target": 0
+   },
+   {
+    "key": "staleUnknown",
+    "label": "1시간 넘게 미확인",
+    "count": 0,
+    "target": 0
+   }
+  ],
+  "notFound": 0,
+  "rejected": 0,
+  "pending": 1,
+  "orders": 17
+ },
+ "prefsHistory": [],
+ "baseline": null,
  "planVersionNow": "PP1-2026-11-09",
  "defaultPlanVersion": "PP1-2026-11-09",
  "hasDefaultPlan": true,
