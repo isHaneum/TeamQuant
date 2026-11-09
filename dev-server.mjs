@@ -21,11 +21,17 @@ import { fetchNews } from "./lib/news.js";
 import { fetchCompanyBrief } from "./lib/dart.js";
 import { fetchKisAccount } from "./lib/kis.js";
 import { getResearchStatus, startResearchRefresh } from "./lib/research-job.js";
+import { applyKeyFiles } from "./lib/key-files.js";
+import { createKisClient } from "./lib/kis-orders.js";
+import { createPaperLive, createLedgerStore, ledgerDir } from "./lib/paper-live.js";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 for (const file of [".env", ".env.local"]) {
   try { process.loadEnvFile(join(root, file)); } catch (error) { if (error.code !== "ENOENT") throw error; }
 }
+// 키 파일(.env.local 의 *_KEY_FILE 경로)을 환경 변수로 올린다. 값은 로그에 남기지 않는다.
+const keyFiles = applyKeyFiles(process.env);
+if (keyFiles.kis.reason) console.log(`[KIS] ${keyFiles.kis.reason}`); if (keyFiles.dart.reason) console.log(`[DART] ${keyFiles.dart.reason}`);
 const port = Number(process.env.PORT || 8766);
 const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8", ".zip":"application/zip" };
 
@@ -35,7 +41,9 @@ const performanceStore=createPerformanceStore({publicRoots:[root]});
 const investments=createInvestmentStore({publicRoots:[root,join(root,'..')]});
 const cashStore=createCashStore({publicRoots:[root,join(root,'..')]});
 const fetchTossHoldings=createTossReader({onSnapshot:historyRecorder.snapshot,onFailure:historyRecorder.failure});
-const bridge=createLocalBridge({port,devices:createDeviceStore({publicRoots:[root,join(root,'..')]}),readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,cash:cashStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
+// 한투 모의계좌 실행 엔진(모의 키가 있을 때만). 실전 모드(prod)에서는 만들지 않는다.
+let paperLive=null;try{if(keyFiles.kis.configured&&keyFiles.kis.mode==='vps'){let limits={};try{limits=process.env.PAPER_LIVE_LIMITS?JSON.parse(process.env.PAPER_LIVE_LIMITS):{};}catch{}paperLive=createPaperLive({client:createKisClient({tokenFile:join(ledgerDir(),'kis-vps-token.json')}),store:createLedgerStore(ledgerDir()),readMarket:fetchHeldMarketSeries,limits});console.log(`[KIS] 모의계좌 ${keyFiles.kis.accountMasked} 실행 엔진 준비 (장부: ${ledgerDir()})`);}}catch(e){console.log(`[KIS] 모의계좌 엔진을 만들지 못했습니다: ${e.message}`);}
+const bridge=createLocalBridge({port,paperLive,devices:createDeviceStore({publicRoots:[root,join(root,'..')]}),readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,cash:cashStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host}`);

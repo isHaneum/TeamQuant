@@ -7,6 +7,7 @@ import { normalizeRules, RULES_VERSION } from '/lib/core-rules.js';
 import { candles as fetchCandles } from '/lib/client-data.js';
 import { resolveStockInput, stockName, stockNames } from '/lib/instruments.js';
 import { tip } from '/tooltip-ui.js';
+import { privateRead } from '/bridge-client.js';
 
 const $ = s => document.querySelector(s);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -35,6 +36,10 @@ const style = document.createElement('style'); style.textContent = `
 .pp-range{background:var(--ck-soft);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.6}.pp-range b{font-size:16px}
 .pp-ref{width:100%;border-collapse:collapse;font-size:12.5px}.pp-ref th,.pp-ref td{padding:5px 6px;border-bottom:1px solid var(--ck-line);text-align:right;white-space:nowrap}.pp-ref th:first-child,.pp-ref td:first-child{text-align:left}.pp-ref th{color:var(--ck-sub);font-weight:600}
 .rp-chart .l-bench{stroke:#c0821a;stroke-dasharray:2 3}
+.pp-kis-sum{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--ck-sub);margin:0 0 10px}.pp-kis-sum b{color:var(--ck-ink)}.pp-kis-sum .on{color:var(--ck-bad);font-weight:700}
+.pp-kis-items{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}.pp-kis-items li{border:1px solid var(--ck-line);border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.5}.pp-kis-items li.ok{border-color:#abefc6;background:var(--ck-ok-bg)}.pp-kis-items li.bad{background:var(--ck-soft)}.pp-kis-items small{display:block;color:var(--ck-sub)}.pp-kis-items .st{font-weight:700}
+.pp-kis-note{font-size:12.5px;color:var(--ck-sub);line-height:1.6;margin:8px 0 0}
+#pp-kis-actions{flex-wrap:wrap}#pp-kis-actions button{white-space:nowrap}
 @media(max-width:760px){.pp-form{grid-template-columns:1fr}#core-paper .rp-tiles{grid-template-columns:1fr}.pp-live{display:grid}}`; document.head.append(style);
 
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
@@ -50,7 +55,7 @@ page.innerHTML = `<div class="page-head"><div><h1>모의투자 ${tip('실제로 
 <div class="cr-actions"><button id="pp-run" class="primary">절차 리허설</button><button id="pp-start" class="secondary">오늘부터 모의투자 시작</button><span id="pp-state" class="cr-err" role="status"></span></div></div>
 <div class="cr-card" id="pp-live" hidden></div>
 <div id="pp-result"></div>
-</div><div class="cr-side">
+</div><div class="cr-side"><article class="cr-card" id="pp-kis" hidden><header><h3>한투 모의계좌 ${tip('이 PC 에 설정한 한국투자증권 모의투자 키로, 규칙 화면의 내 규칙·계획 비중에 따라 오늘 할 일을 정하고, 매매 전 확인과 주문 보호(1회·하루 한도, 호가 폭, 중복 방지)를 모두 통과한 주문만 모의계좌에 지정가로 보냅니다. 실전 계좌로는 보내지 않습니다. 장이 닫혔거나 시세·잔고를 못 읽으면 보류합니다. 장부는 PC 에만 남습니다.')}</h3><button type="button" class="text-button" id="pp-kis-refresh">새로고침</button></header><div id="pp-kis-body"><p class="cr-muted">PC 서버 연결을 확인하는 중…</p></div><div class="cr-actions" id="pp-kis-actions" hidden><button type="button" class="secondary" id="pp-kis-preview">오늘 할 일 미리보기</button><button type="button" class="primary" id="pp-kis-run" disabled>모의계좌에 주문 보내기</button><button type="button" class="text-button" id="pp-kis-kill">전체 정지</button></div><p class="cr-err" id="pp-kis-state" role="status"></p><div id="pp-kis-result"></div></article>
 <div class="cr-card"><h3>절차</h3><ol class="pp-steps"><li>계획 비중<small>규칙의 한 종목 상한·현금 최소 비중 안에서 종목마다 균등</small></li><li>오늘 점검<small>주 마지막 거래일 종가(급할 때는 그날)에 규칙과 비교해 할 일을 냄</small></li><li>매매 전 확인<small>할 일마다 현금·비중·하루 손실 한도·매매 횟수를 확인, 하나라도 어기면 주문하지 않음</small></li><li>체결<small>다음 거래일 시가에 0.1% 불리하게, 편도 비용 0.2%, 국내 주식 1주 단위</small></li><li>평가와 비교<small>날마다 원화 환산, 같은 계획을 한 번 사서 둔 경우·지수와 비교</small></li></ol></div>
 <div class="cr-card" id="pp-ref"><h3>같은 절차를 지난 기간에 돌렸다면 ${tip('scripts/paper-rehearsal.mjs가 공개 일봉으로 네 가지 포트폴리오·아홉 기간(최근 12개월·6개월·올해·2020~2025년 각각)에 같은 절차를 돌린 결과입니다. 2012~2019 자료로 고른 규칙을 그 뒤 기간에 적용한 것이지만, 규칙 자체는 2026-11-06에 확정했으므로 완전한 표본 외 검증은 오늘 이후의 모의투자부터입니다.')}</h3><div id="pp-ref-body"><p class="cr-muted">불러오는 중…</p></div></div>
 </div></div>`;
@@ -184,3 +189,23 @@ renderLive();
     <p class="cr-muted" style="margin:0 0 6px">${esc(p.label)} (지수 ${esc(p.benchmark.name)})</p><div class="pp-scroll"><table class="pp-ref"><thead><tr><th>기간</th><th>절차</th><th>보유</th><th>지수</th><th>최대 손실 절차/보유</th></tr></thead><tbody>${ws.map(row).join('')}</tbody></table></div>`;
   } catch { el.innerHTML = '<p class="cr-muted">참고 자료를 불러오지 못했습니다.</p>'; }
 })();
+
+// ── 한투 모의계좌(PC 서버의 paper-live) ──────────────────────
+// 이 PC 서버에 모의투자 키가 있을 때만 카드가 보인다. 미리보기는 보내지 않고, 보내기는 두 번 눌러야 나간다(대화상자 없이).
+const K = { status: null, preview: null, armed: false };
+function savedPlan() { try { const v = JSON.parse(localStorage.getItem(`teamQuantRules:${session()}`) || 'null'); return v?.plan && Object.keys(v.plan).length ? v.plan : null; } catch { return null; } }
+const KR_EXAMPLE_PLAN = { '005930': { pct: 20, name: '삼성전자' }, '000660': { pct: 20, name: 'SK하이닉스' }, '069500': { pct: 20, name: 'KODEX 200' }, '035420': { pct: 20, name: 'NAVER' } };
+function planForKis() { const p = savedPlan(); return p ? { plan: p, label: '규칙 화면의 내 계획' } : { plan: KR_EXAMPLE_PLAN, label: '예시 계획(국내 4종목 각 20%) · 규칙 화면에서 계획을 저장하면 그것을 씁니다' }; }
+function kisSummary(s) { const b = s.balance; return `<div class="pp-kis-sum"><span>계좌 <b>${esc(s.account || '—')}</b></span><span>장 <b>${s.market?.open ? '열림' : '닫힘'}</b>${s.market?.open ? '' : ` <span class="cr-muted">(${esc(s.market?.reason || '')})</span>`}</span>${b ? `<span>예수금 <b>${won(b.cash)}</b></span><span>평가 <b>${won(b.total)}</b></span><span>보유 <b>${b.positions.length}종목</b></span>` : ''}<span>킬 스위치 <b class="${s.killSwitch ? 'on' : ''}">${s.killSwitch ? '켜짐' : '꺼짐'}</b></span><span>한도 1회 <b>${won(s.limits?.maxOrderKrw)}</b> · 하루 <b>${won(s.limits?.maxDailyKrw)}</b></span></div>`; }
+function kisOrdersTable(list, title) { if (!list?.length) return ''; return `<h4>${esc(title)}</h4><div class="pp-scroll"><table class="pp-journal"><tbody>${list.slice().reverse().map(o => `<tr class="${o.status === 'filled' ? '체결' : /rejected|not_found/.test(o.status) ? '차단' : ''}"><td>${esc(String(o.at).slice(11, 19))}</td><td>${o.side === 'BUY' ? '매수' : '매도'}</td><td>${esc(o.name)} ${o.qty}주 @${won(o.price)}${o.filledQty ? ` · 체결 ${o.filledQty}주` : ''}<br><small class="cr-muted">${esc(o.status)}${o.odno ? ' #' + esc(o.odno) : ''}${o.error ? ' · ' + esc(o.error) : ''}${o.note ? ' · ' + esc(o.note) : ''}</small></td></tr>`).join('')}</tbody></table></div>`; }
+function kisItems(r) { const lab = planForKis().label; return `<p class="pp-kis-note">${esc(String(r.at).slice(0, 16).replace('T', ' '))} 기준 · 계획: ${esc(lab)} · 규칙 ${r.evaluation.okCount}/${r.evaluation.known} 충족 · 할 일 ${r.items.length}건${r.skipped?.length ? ` · 해외 종목은 뺌(${esc(r.skipped.join(', '))})` : ''}${r.noData?.length ? ` · 시세 부족: ${esc(r.noData.join(', '))}` : ''}</p>${r.items.length ? `<ul class="pp-kis-items">${r.items.map(i => `<li class="${i.ok ? 'ok' : 'bad'}"><span class="st">${i.ok ? '통과' : '차단'}</span> · ${esc(i.name)} ${i.side === 'BUY' ? '매수' : '매도'} ${i.qty ?? '—'}주 @${won(i.price)} = ${won(i.amountKrw)}<small>${esc(i.why)}</small>${i.blocks.length ? `<small>${i.blocks.map(esc).join(' · ')}</small>` : ''}${i.warnings?.length ? `<small>! ${i.warnings.map(esc).join(' · ')}</small>` : ''}</li>`).join('')}</ul>` : '<p class="cr-muted">오늘은 규칙상 할 일이 없습니다.</p>'}${r.sent?.length ? kisOrdersTable(r.sent, '방금 보낸 주문') : ''}`; }
+async function kisRefresh() {
+  const card = $('#pp-kis'), body = $('#pp-kis-body'); if (!card) return;
+  try { const s = await privateRead('paper-live-status'); K.status = s; card.hidden = false; $('#pp-kis-actions').hidden = false; body.innerHTML = kisSummary(s) + (s.error ? `<p class="cr-err">${esc(s.error)}</p>` : '') + kisOrdersTable(s.ordersToday, '오늘 주문'); $('#pp-kis-kill').textContent = s.killSwitch ? '정지 해제' : '전체 정지'; }
+  catch (e) { if (e?.status === 503) { card.hidden = false; $('#pp-kis-actions').hidden = true; body.innerHTML = `<p class="cr-muted">${esc(e.message || '이 PC 에 모의투자 키가 없습니다.')}</p>`; } else card.hidden = true; }
+}
+async function kisPreview() { const st = $('#pp-kis-state'); st.textContent = '잔고·시세를 읽고 할 일을 정하는 중…'; K.armed = false; $('#pp-kis-run').textContent = '모의계좌에 주문 보내기'; try { const { plan } = planForKis(); const r = await privateRead('paper-live-preview', { rules: currentRules(), plan }); K.preview = r; $('#pp-kis-result').innerHTML = kisItems(r); const n = r.items.filter(i => i.ok).length; $('#pp-kis-run').disabled = n === 0; st.textContent = n ? `통과 ${n}건. "모의계좌에 주문 보내기"를 두 번 누르면 보냅니다.` : (r.items.length ? '통과한 주문이 없어 보낼 것이 없습니다.' : ''); } catch (e) { st.textContent = e?.message || '미리보기에 실패했습니다.'; } }
+async function kisRun() { const st = $('#pp-kis-state'), btn = $('#pp-kis-run'); if (!K.preview) return; if (!K.armed) { K.armed = true; btn.textContent = `정말 보내기 (${K.preview.items.filter(i => i.ok).length}건)`; st.textContent = '한 번 더 누르면 모의계좌에 지정가 주문이 나갑니다. 실전 계좌가 아닙니다.'; return; } K.armed = false; btn.disabled = true; btn.textContent = '보내는 중…'; try { const { plan } = planForKis(); const r = await privateRead('paper-live-run', { rules: currentRules(), plan }); K.preview = null; $('#pp-kis-result').innerHTML = kisItems(r); st.textContent = `보냄 ${r.sent.filter(o => o.status === 'sent').length}건 · 거부 ${r.sent.filter(o => o.status === 'rejected').length}건 · 미확인 ${r.sent.filter(o => o.status === 'unknown').length}건${r.note ? ' · ' + r.note : ''}`; await kisRefresh(); } catch (e) { st.textContent = e?.message || '주문에 실패했습니다.'; } finally { btn.textContent = '모의계좌에 주문 보내기'; } }
+async function kisKill() { const st = $('#pp-kis-state'); try { const on = !K.status?.killSwitch; const r = await privateRead('paper-live-kill', { on }); st.textContent = on ? `전체 정지. 열린 주문 ${r.cancelled.length}건 취소 요청.` : '정지를 해제했습니다.'; await kisRefresh(); } catch (e) { st.textContent = e?.message || '처리하지 못했습니다.'; } }
+$('#pp-kis-refresh').onclick = kisRefresh; $('#pp-kis-preview').onclick = kisPreview; $('#pp-kis-run').onclick = kisRun; $('#pp-kis-kill').onclick = kisKill;
+window.addEventListener('teamquant:page', () => { if (document.querySelector('.view.active')?.dataset.page === 'paper') void kisRefresh(); });
