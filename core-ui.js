@@ -6,10 +6,11 @@ import { assetRisk, krwReturns, riskGrid, portfolioRiskAt, buildEngine } from '/
 import { simulateGarch } from '/lib/risk-models.js';
 import { reportCard } from '/lib/report-card.js';
 import { fillsFrom } from '/lib/asset-timeline.js';
-import { candles as fetchCandles } from '/lib/client-data.js';
+import {candles as fetchCandles, getJson } from '/lib/client-data.js';
 import { privateRead } from '/bridge-client.js';
 import { resolveStockInput, stockName } from '/lib/instruments.js';
 import { tip } from '/tooltip-ui.js';
+import { mountCandles } from '/lib/candlestick-view.js';
 
 const $ = s => document.querySelector(s);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -184,15 +185,15 @@ function renderEvidence() {
 }
 
 // ── ③ 매매 전 확인 ───────────────────────────────────────────
-const preP = addView('precheck', '매매 전 확인', `<div class="page-head"><div><h1>매매 전 확인 ${tip('주문을 넣기 전에 내 규칙에 맞는지, 이 돈이 하루에 얼마까지 흔들릴 수 있는지 봅니다. 실제 주문은 하지 않습니다.')}</h1><p>사거나 팔기 전에 규칙과 손실 범위를 봅니다</p></div></div>
+const preP = addView('precheck', '매매 전 확인', `<div class="page-head"><div><h1>매매 전 확인 ${tip('주문을 넣기 전에 내 규칙에 맞는지, 이 돈이 하루에 얼마까지 흔들릴 수 있는지 봅니다. 실제 주문은 하지 않습니다.')}</h1><p>사거나 팔기 전에 포트폴리오 규칙과 손실 범위를 봅니다</p></div></div>
 <div class="cp"><form class="cp-form cr-card" id="cp-form">
-  <label class="cp-l">종목</label><div class="cp-chips" id="cp-chips"></div><input id="cp-sym" list="symbols" autocomplete="off" placeholder="직접 찾기 (예: 삼성전자, SPY)">
+  <label class="cp-l">종목</label><div class="cp-chips" id="cp-chips"></div><div class="cp-search"><input id="cp-sym" autocomplete="off" placeholder="이름·코드·티커로 찾기 (예: 현대, 005380, NVDA)" aria-autocomplete="list"><div class="cp-sugg" id="cp-sugg" hidden role="listbox"></div></div>
   <label class="cp-l">방향</label><div class="cp-seg" role="radiogroup"><label><input type="radio" name="cp-side" value="BUY" checked><span>매수</span></label><label><input type="radio" name="cp-side" value="SELL"><span>매도</span></label></div>
   <label class="cp-l" for="cp-amt">금액(원)</label><input id="cp-amt" type="number" min="1000" step="any" inputmode="numeric" placeholder="예: 1000000">
   <button type="submit" class="primary" id="cp-run">확인하기</button><p class="cp-state" id="cp-state" role="status"></p></form>
-  <div class="cp-result" id="cp-result"><div class="cr-card cp-empty"><p>종목·방향·금액을 넣고 확인하기를 누르십시오.</p></div></div></div>`);
+  <div class="cp-result" id="cp-result"><div id="cp-stock"></div><div id="cp-check"><div class="cr-card cp-empty"><p>종목을 고르면 오늘 등락과 1년 흐름이 여기 뜹니다. 방향·금액을 넣고 확인하기를 누르면 포트폴리오 규칙으로 점검합니다.</p></div></div></div></div>`);
 let cpSel = null;
-function renderPrecheckChips() { const box = $('#cp-chips'); if (!box) return; box.innerHTML = S.positions.map(p => `<button type="button" data-sym="${esc(p.symbol)}" class="${cpSel?.symbol === p.symbol ? 'on' : ''}">${esc(p.name)}</button>`).join('') || '<span class="cr-muted">보유 종목 없음</span>'; box.querySelectorAll('[data-sym]').forEach(b => b.onclick = () => { cpSel = S.positions.find(p => p.symbol === b.dataset.sym); $('#cp-sym').value = ''; renderPrecheckChips(); }); }
+function renderPrecheckChips() { const box = $('#cp-chips'); if (!box) return; box.innerHTML = S.positions.map(p => `<button type="button" data-sym="${esc(p.symbol)}" class="${cpSel?.symbol === p.symbol ? 'on' : ''}">${esc(p.name)}</button>`).join('') || '<span class="cr-muted">보유 종목 없음</span>'; box.querySelectorAll('[data-sym]').forEach(b => b.onclick = () => { cpSel = S.positions.find(p => p.symbol === b.dataset.sym); $('#cp-sym').value = ''; renderPrecheckChips(); void showStockPanel(cpSel); }); }
 async function chosen() {
   const t = $('#cp-sym').value.trim();
   if (!t) { if (cpSel) return cpSel; throw new Error('종목을 고르거나 적어 주십시오.'); }
@@ -200,8 +201,45 @@ async function chosen() {
   const s = await resolveStockInput(t); return { symbol: s.split('.')[0], name: stockName(s), currency: 'KRW' };
 }
 $('#cp-sym').oninput = () => { if ($('#cp-sym').value.trim()) { cpSel = null; renderPrecheckChips(); } };
+// ── 매매 전 확인: 종목 검색 제안(이름·코드·티커) + 오늘 등락 + 1년 차트 ──
+const US_LIST = [['AAPL', '애플'], ['MSFT', '마이크로소프트'], ['NVDA', '엔비디아'], ['AMZN', '아마존'], ['GOOGL', '알파벳'], ['META', '메타'], ['TSLA', '테슬라'], ['BRK-B', '버크셔 해서웨이'], ['JPM', 'JP모건'], ['JNJ', '존슨앤드존슨'], ['KO', '코카콜라'], ['PG', 'P&G'], ['LLY', '일라이 릴리'], ['UNH', '유나이티드헬스'], ['XOM', '엑슨모빌'], ['SPY', 'S&P500 ETF'], ['QQQ', '나스닥100 ETF'], ['VOO', '뱅가드 S&P500 ETF'], ['TLT', '미국 장기채 ETF'], ['SOXX', '반도체 ETF'], ['TSM', 'TSMC'], ['AVGO', '브로드컴'], ['AMD', 'AMD'], ['MU', '마이크론'], ['NFLX', '넷플릭스'], ['COST', '코스트코'], ['WMT', '월마트'], ['LMT', '록히드마틴'], ['RTX', 'RTX'], ['GEV', 'GE 버노바'], ['PLTR', '팔란티어'], ['ISRG', '인튜이티브 서지컬'], ['ASML', 'ASML'], ['V', '비자'], ['MA', '마스터카드'], ['HD', '홈디포'], ['ABBV', '애브비'], ['MRK', '머크'], ['PEP', '펩시코'], ['CSCO', '시스코'], ['ORCL', '오라클'], ['CRM', '세일즈포스'], ['INTC', '인텔'], ['BA', '보잉'], ['GS', '골드만삭스'], ['BAC', '뱅크오브아메리카']];
+const BOOST = new Set(['005930', '000660', '005380', '000270', '012330', '035420', '035720', '105560', '055550', '086790', '207940', '068270', '373220', '006400', '051910', '005490', '012450', '064350', '047810', '079550', '329180', '042660', '010140', '009540', '034020', '015760', '066570', '003550', '017670', '030200', '096770', '028260', '009150', '018260', '032830', '000810', '138040', '069500', '102110', '091160', '091180', '305720', '266420', '449450', '494670', '445290', '247540', '196170', '042700', '003670', '011200', '010130', '034730', '000100', '326030', '259960', '036570']);
+let suggRun = 0, suggTimer = null; const quoteCache = new Map();
+async function quoteOf(symbol) { if (!quoteCache.has(symbol)) quoteCache.set(symbol, getJson(`/api/quote?symbol=${encodeURIComponent(symbol)}`).catch(() => null)); return quoteCache.get(symbol); }
+async function suggest(q) {
+  const run = ++suggRun, box = $('#cp-sugg'); if (!q) { box.hidden = true; box.innerHTML = ''; return; }
+  const up = q.toUpperCase(), out = [];
+  if (/^[A-Za-z][A-Za-z.\-]*$/.test(q)) out.push(...US_LIST.filter(([t, n]) => t.startsWith(up) || n.includes(q)).slice(0, 6).map(([t, n]) => ({ symbol: t, name: n, currency: 'USD', sub: t })));
+  else out.push(...US_LIST.filter(([, n]) => n.includes(q)).slice(0, 3).map(([t, n]) => ({ symbol: t, name: n, currency: 'USD', sub: t })));
+  if (!/^[A-Za-z]/.test(q)) { try { const d = await getJson(`/api/stocks?q=${encodeURIComponent(q)}`); if (run !== suggRun) return;
+    const score = x => (x.name === q ? 0 : 1) * 100 + (BOOST.has(x.code) ? 0 : 50) + (x.name.startsWith(q) ? 0 : 20) + x.name.length;
+    out.push(...(d.items || []).sort((a, b) => score(a) - score(b)).slice(0, 8).map(x => ({ symbol: x.code, name: x.name, currency: 'KRW', sub: x.code }))); } catch { } }
+  if (run !== suggRun) return;
+  if (!out.length) { box.hidden = false; box.innerHTML = '<div class="cp-sugg-empty">찾는 종목이 없습니다. 코드(6자리)나 미국 티커로 적어 보십시오.</div>'; return; }
+  box.hidden = false; box.innerHTML = out.map(o => `<button type="button" role="option" data-symbol="${esc(o.symbol)}" data-name="${esc(o.name)}" data-cur="${o.currency}"><b>${esc(o.name)}</b><small>${esc(o.sub)}</small><span class="q" data-q="${esc(o.symbol)}">…</span></button>`).join('');
+  box.querySelectorAll('button').forEach(b => b.onclick = () => { cpSel = { symbol: b.dataset.symbol, name: b.dataset.name, currency: b.dataset.cur }; $('#cp-sym').value = b.dataset.name; box.hidden = true; renderPrecheckChips(); void showStockPanel(cpSel); });
+  // 오늘 등락(지연 시세)은 상위 6개만, 늦게 와도 그 행에만 채운다
+  await Promise.all(out.slice(0, 6).map(async o => { const qv = await quoteOf(o.symbol); if (run !== suggRun) return; const el = box.querySelector(`[data-q="${CSS.escape(o.symbol)}"]`); if (!el) return; if (qv && Number.isFinite(qv.pct)) { el.textContent = `${qv.pct > 0 ? '+' : ''}${qv.pct.toFixed(2)}%`; el.className = `q ${qv.pct > 0 ? 'up' : qv.pct < 0 ? 'down' : ''}`; } else el.textContent = ''; }));
+}
+$('#cp-sym').addEventListener('input', () => { clearTimeout(suggTimer); const v = $('#cp-sym').value.trim(); suggTimer = setTimeout(() => void suggest(v), 180); });
+$('#cp-sym').addEventListener('focus', () => { const v = $('#cp-sym').value.trim(); if (v && !cpSel) void suggest(v); });
+document.addEventListener('click', e => { if (!e.target.closest('.cp-search')) { const b = $('#cp-sugg'); if (b) b.hidden = true; } });
+$('#cp-sym').addEventListener('keydown', e => { if (e.key === 'Escape') $('#cp-sugg').hidden = true; if (e.key === 'ArrowDown') { const f = $('#cp-sugg button'); if (f) { e.preventDefault(); f.focus(); } } });
+$('#cp-sugg').addEventListener('keydown', e => { const items = [...$('#cp-sugg').querySelectorAll('button')], i = items.indexOf(document.activeElement); if (e.key === 'ArrowDown' && items[i + 1]) { e.preventDefault(); items[i + 1].focus(); } if (e.key === 'ArrowUp') { e.preventDefault(); (items[i - 1] || $('#cp-sym')).focus(); } });
+let panelRun = 0;
+async function showStockPanel(o) {
+  const host = $('#cp-stock'); if (!host || !o) return; const run = ++panelRun;
+  host.innerHTML = `<article class="cr-card cp-stockcard"><header><h3>${esc(o.name)} <small class="cr-muted">${esc(o.symbol)}${o.currency === 'USD' ? ' · 미국' : ''}</small></h3><span class="cp-quote" id="cp-quote">시세 확인 중…</span></header><div id="cp-chart" class="cp-chart"><div class="shimmer ct-skel"></div></div></article>`;
+  const [qv, d] = await Promise.all([quoteOf(o.symbol), fetchCandles(o.symbol, o.currency, '2y').catch(() => null)]);
+  if (run !== panelRun) return;
+  const qEl = $('#cp-quote'); if (qEl) qEl.innerHTML = qv && Number.isFinite(qv.price) ? `<b>${o.currency === 'USD' ? '$' + qv.price.toLocaleString('en-US', { maximumFractionDigits: 2 }) : won(qv.price)}</b> <span class="${qv.pct > 0 ? 'up' : qv.pct < 0 ? 'down' : ''}">${qv.pct > 0 ? '+' : ''}${(qv.pct ?? 0).toFixed(2)}%</span> <small class="cr-muted">${qv.status === 'OPEN' ? '장중' : '마감'} · ${esc(qv.source || '')}</small>` : '<small class="cr-muted">오늘 시세를 받지 못했습니다</small>';
+  const ch = $('#cp-chart'); if (!ch) return;
+  if (d?.candles?.length) { try { mountCandles(ch, d, { name: o.name, unit: o.currency === 'USD' ? '달러' : '원' }); const y1 = ch.querySelector('[data-period="1Y"]'); if (y1) y1.click(); } catch (e) { ch.innerHTML = `<p class="cr-muted">차트를 그리지 못했습니다 (${esc(e.message)})</p>`; } }
+  else ch.innerHTML = '<p class="cr-muted">시세를 불러오지 못했습니다.</p>';
+}
+
 $('#cp-form').onsubmit = async ev => {
-  ev.preventDefault(); const st = $('#cp-state'), box = $('#cp-result'); st.textContent = '계산 중…';
+  ev.preventDefault(); const st = $('#cp-state'), box = $('#cp-check'); st.textContent = '계산 중…';
   try {
     if (S.loading) await S.loading;
     const o = await chosen(), side = preP.querySelector('[name="cp-side"]:checked').value, amt = Number($('#cp-amt').value);

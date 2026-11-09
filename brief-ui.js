@@ -240,6 +240,23 @@ dialog.addEventListener('click', e => { const b = e.target.closest?.('[data-sit-
 const CORE_ONLY = true;
 const ROW = (label, value, note, t = 0) => `<div class="hm-kv"><span><i class="hm-dot ${t > 0 ? 'good' : t < 0 ? 'bad' : ''}"></i>${label}${note ? tip(note) : ''}</span><b>${value}</b></div>`;
 
+
+// 성장·모멘텀: 시세만으로 계산(지수와 나란히). 예측이 아니라 지금까지의 흐름이다.
+function momentumRows(b) {
+  const c = (b.candles || []).filter(x => x.close > 0), ix = (b.indexCandles || []).filter(x => x.close > 0); if (c.length < 30) return [];
+  const last = c.at(-1).close, at = (arr, n) => arr.length > n ? arr[arr.length - 1 - n].close : null, r = (arr, n) => { const v = at(arr, n); return v ? arr.at(-1).close / v - 1 : null; };
+  const rows = [];
+  for (const [n, label] of [[21, '1개월'], [63, '3개월'], [126, '6개월'], [252, '1년']]) { const a = r(c, n), i = r(ix, n); if (a === null) continue; rows.push(ROW(`수익률 ${label}`, `${pct(a * 100)}${i === null ? '' : ` <small class="hm-vs">지수 ${pct(i * 100)}</small>`}`, '', i === null ? 0 : a > i ? 1 : -1)); }
+  const hi = Math.max(...c.slice(-252).map(x => x.close)); rows.push(ROW('1년 고점 대비', pct((last / hi - 1) * 100), '', last / hi - 1 > -0.1 ? 1 : -1));
+  if (c.length >= 200) { const ma = c.slice(-200).reduce((a, x) => a + x.close, 0) / 200; rows.push(ROW('200일 평균선', `${last > ma ? '위' : '아래'} (${pct((last / ma - 1) * 100)})`, '', last > ma ? 1 : -1)); }
+  if (c.length >= 61) { const lr = []; for (let k = c.length - 60; k < c.length; k++) lr.push(Math.log(c[k].close / c[k - 1].close)); const m = lr.reduce((a, x) => a + x, 0) / lr.length, sd = Math.sqrt(lr.reduce((a, x) => a + (x - m) ** 2, 0) / (lr.length - 1)) * Math.sqrt(252); rows.push(ROW('변동성 (연, 최근 60일)', `${(sd * 100).toFixed(0)}%`, '', sd < 0.25 ? 1 : sd > 0.45 ? -1 : 0)); }
+  return rows;
+}
+function recentNewsHtml(allNews) {
+  const top = (allNews || []).slice(0, 3); if (!top.length) return '';
+  return `<h5 class="hm-h5">최근 기사 ${tip('제목에 회사 이름이 있는 최근 기사입니다. 점은 제목의 어조(초록 좋음·주황 나쁨)이고, 날짜와 원문 링크를 함께 둡니다.')}</h5><ul class="hm-news hm-news-mini">${top.map(n => `<li><i class="hm-dot ${n.tone > 0 ? 'good' : n.tone < 0 ? 'bad' : ''}"></i><small>${esc(n.date)}</small>${safeUrl(n.link) ? `<a href="${esc(safeUrl(n.link))}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>` : esc(n.title)}</li>`).join('')}</ul>`;
+}
+
 function detailHtml(b, p) {
   const f = funds.get(b.symbol), fund = f && !f.error ? f : null, r = reasons[scopeOf(b.currency)], style = getStyle();
   const e = explainMove(b, { market: r, sectorName: fund?.sector, sectorToday: fund?.sectorToday });
@@ -253,7 +270,7 @@ function detailHtml(b, p) {
     <section><h4>${CORE_ONLY ? `오늘 움직임 ${tip('시장 지수에 대한 민감도(지난 1년 회귀)로 오늘 움직임을 시장 몫과 종목 고유 몫으로 나눈 숫자입니다. 원인을 판단하지 않습니다. 관련 기사·공시는 아래에 있습니다.')}` : `오늘 왜 움직였나 ${tip(b.caveat + ' 매수·매도 권유가 아닙니다.')}`}</h4>${CORE_ONLY ? '' : `<p class="hm-conclusion">${esc(e.conclusion)}</p>`}${decompositionBar(b.move)}
       ${!CORE_ONLY && [...marketArticles, ...e.evidence].length ? `<ul class="hm-evidence">${[...marketArticles, ...e.evidence].map(x => `<li><span class="hm-fit ${FIT[x.fit][1]}">${FIT[x.fit][0]}</span><div><small>${esc(x.label)}</small>${safeUrl(x.link) ? `<a href="${esc(safeUrl(x.link))}" target="_blank" rel="noopener noreferrer">${esc(x.title)}</a>` : `<b>${esc(x.title)}</b>`}</div></li>`).join('')}</ul>` : ''}</section>
     <section><h4>투자 지표 ${fund ? tip('출처: ' + fund.source + '. 초록 점은 좋음, 주황 점은 주의입니다. 각 항목의 ⓘ에 뜻이 있습니다.') : ''} ${fund ? `<small>${esc(fund.sector || '')}${fund.annual?.year ? ` · ${esc(fund.annual.year)} 실적` : ''}</small>` : ''}</h4>
-      ${fund ? `${fund.business ? `<p class="hm-biz">${esc(fund.business)}</p>` : ''}<div class="hm-kvs">${(j?.factors || []).map(x => ROW(esc(x.label), esc(x.value), CORE_ONLY ? '' : esc(x.text), CORE_ONLY ? 0 : x.tone)).join('')}${Number.isFinite(fund.pbr) ? ROW('PBR', `${fund.pbr}배`, fund.pbr < 1 ? '장부상 자산보다 싸게 거래됩니다.' : '장부상 자산 대비 주가 수준입니다.', 0) : ''}</div>${fund.peers?.length ? `<p class="hm-note">비슷한 회사: ${esc(fund.peers.join(', '))}</p>` : ''}` : f?.error ? `<p class="hm-note">투자 지표를 불러오지 못했습니다 (${esc(f.error)}).</p>` : '<div class="shimmer rp-line"></div>'}</section>
+      ${fund ? `${fund.business ? `<details class="hm-bizbox"><summary>회사 설명</summary><p class="hm-biz">${esc(fund.business)}</p></details>` : ''}<h5 class="hm-h5">재무·가격 ${tip('증권사 지표 기준. PER은 이익 대비 가격, ROE/ROA는 돈 버는 힘, 성장은 최근 연간 매출 변화입니다.')}</h5><div class="hm-kvs">${(j?.factors || []).filter(x => x.key !== 'news').map(x => ROW(esc(x.label), esc(x.value), CORE_ONLY ? '' : esc(x.text), CORE_ONLY ? 0 : x.tone)).join('')}${Number.isFinite(fund.pbr) ? ROW('PBR', `${fund.pbr}배`, fund.pbr < 1 ? '장부상 자산보다 싸게 거래됩니다.' : '장부상 자산 대비 주가 수준입니다.', 0) : ''}</div><h5 class="hm-h5">성장·모멘텀 ${tip('시세로 계산한 지금까지의 흐름입니다. 수익률은 같은 기간 시장 지수와 나란히 두었습니다. 앞으로의 방향을 뜻하지 않습니다.')}</h5><div class="hm-kvs">${momentumRows(b).join('') || '<p class="hm-note">시세가 짧아 계산하지 못했습니다.</p>'}</div>${recentNewsHtml(allNews)}${fund.peers?.length ? `<p class="hm-note">비슷한 회사: ${esc(fund.peers.join(', '))}</p>` : ''}` : f?.error ? `<p class="hm-note">투자 지표를 불러오지 못했습니다 (${esc(f.error)}).</p>` : '<div class="shimmer rp-line"></div>'}</section>
     ${CORE_ONLY ? '' : `<section><h4>이 종목에 맞았던 매매 방식 ${tip('4가지 방식을 지난 1년에 적용해 그냥 들고 있기와 비교한 차이(비용 포함)입니다. 지난 결과에 맞춘 것이라 앞으로도 같다는 보장은 없습니다.')}</h4>${!fit ? '<div class="shimmer rp-line short"></div>' : !fit.available ? `<p class="hm-note">${esc(fit.message)}</p>` : `<p>${esc(fit.advice)}</p><div class="hm-fit-rows">${fit.rows.map(x => `<span>${esc(x.title)} <b class="${toneClass(x.edge)}">${x.edge > 0 ? '+' : ''}${x.edge}%p</b></span>`).join('')}</div>`}</section>`}
     ${CORE_ONLY ? '' : situationSection(b.symbol)}
     <section><h4>최근 흐름</h4>${chart(b, b.candles || [], b.indexCandles || [], p?.avgCost)}<div class="hm-kvs">${b.context.map(x => ROW(esc(x.label), esc(x.value), '', x.tone)).join('')}</div></section>
