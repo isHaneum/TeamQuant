@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-10T16:27:59.717Z",
+ "updatedAt": "2026-11-10T16:47:17.142Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 7496.419921875,
-   "change": -0.71,
-   "z": -0.8,
+   "last": 7487.919921875,
+   "change": -0.82,
+   "z": -0.9,
    "sd": 0.9243252516448476,
    "source": "Yahoo",
    "checked": true
@@ -51,9 +51,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 25009.8828125,
-   "change": -0.96,
-   "z": -0.7,
+   "last": 24955.873046875,
+   "change": -1.18,
+   "z": -0.9,
    "sd": 1.3071419616664692,
    "source": "Yahoo",
    "checked": true
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 1343.97998046875,
-   "change": -1.37,
+   "last": 1343.8699951171875,
+   "change": -1.38,
    "z": -2.1,
    "sd": 0.643884532532243,
    "source": "Yahoo"
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 86.04000091552734,
-   "change": -0.93,
-   "z": -0.3,
+   "last": 86.38999938964844,
+   "change": -0.53,
+   "z": -0.2,
    "sd": 2.891273352048926,
    "source": "Yahoo"
   },
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 4042.5,
-   "change": -1.75,
-   "z": -1.3,
+   "last": 4029.300048828125,
+   "change": -2.07,
+   "z": -1.5,
    "sd": 1.3625338106020346,
    "source": "Yahoo"
   },
@@ -100,11 +100,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 20.65999984741211,
-   "change": 3.71,
-   "z": 0.3,
+   "last": 20.49,
+   "change": 2.86,
+   "z": 0.2,
    "sd": 11.73515835561926,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -113,21 +114,21 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-10",
-   "last": 4.991999626159668,
-   "change": 12.8,
-   "z": 2.5,
+   "last": 5,
+   "change": 13.6,
+   "z": 2.6,
    "sd": 5.133200805897257,
    "source": "Yahoo"
   }
  ],
  "spikes": {
   "war": -0.3,
-  "politics": 2,
-  "rates": 1.4,
-  "trade": -0.6,
+  "politics": 1.9,
+  "rates": 1.6,
+  "trade": -0.4,
   "fx": -0.5,
-  "energy": 0.8,
-  "market": -1.1,
+  "energy": 0.9,
+  "market": -1.2,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.8
@@ -144,12 +145,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.2,
+   "rate": 3.4,
    "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 2,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -159,12 +160,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.8,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
@@ -186,26 +187,79 @@
  },
  "issues": [
   {
-   "id": "rs1kc0",
-   "title": "美 10월 CPI 0.4%↑ 예상 상회...12월 금리인상 확률 98.8%",
-   "firstSeen": "2026-11-10T14:20:00.000Z",
-   "lastSeen": "2026-11-10T16:20:00.000Z",
-   "count": 10,
-   "sources": 10,
+   "id": "ghkjpi",
+   "title": "美 10월 CPI 충격에 월러 연준 이사 '빅스텝' 시사…국채 금리 일제히 급...",
+   "firstSeen": "2026-11-10T13:50:00.000Z",
+   "lastSeen": "2026-11-10T16:40:00.000Z",
+   "count": 11,
+   "sources": 11,
    "topics": [
     "rates",
-    "fx"
+    "fx",
+    "market"
    ],
    "critical": [
     "rates"
    ],
    "links": [
     {
-     "title": "美 물가, 예상보다 덜 식었다…12월 '빅스텝'도 거론",
-     "link": "https://www.dkilbo.com/news/articleView.html?idxno=560324",
-     "host": "dkilbo.com",
-     "at": "2026-11-10T16:20:00.000Z"
+     "title": "美 연준 월러 “물가 여전히 높아”…12월 빅스텝 가능성 시사",
+     "link": "https://biz.chosun.com/international/international_economy/2026/11/11/AVYDMXOSIVGD5MCQIXNJWT6CUA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-10T16:40:00.000Z"
     },
+    {
+     "title": "연준 월러 \"12월 금리 인상\"…'빅스텝' 가능성도",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008839976&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-10T16:30:00.000Z"
+    },
+    {
+     "title": "미 연준 월러 이사 \"인플레 지속 시 12월 0.5%p 인상 가능\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611110126214824",
+     "host": "ytn.co.kr",
+     "at": "2026-11-10T16:26:00.000Z"
+    },
+    {
+     "title": "물가불안에 빅스텝까지...연준 월러 “12월 0.5%p 인상”",
+     "link": "https://www.mk.co.kr/article/12204627",
+     "host": "mk.co.kr",
+     "at": "2026-11-10T16:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 82,
+    "spike": 1.6,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 13.6,
+     "unit": "bp",
+     "z": 2.6
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
+    ]
+   }
+  },
+  {
+   "id": "rs1kc0",
+   "title": "美 10월 CPI 0.4%↑ 예상 상회...12월 금리인상 확률 98.8%",
+   "firstSeen": "2026-11-10T14:20:00.000Z",
+   "lastSeen": "2026-11-10T15:50:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
     {
      "title": "美 10월 CPI, 전월비 0.4% 상승…예상치 웃돌아(상보)",
      "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444047",
@@ -223,143 +277,30 @@
      "link": "https://www.kmib.co.kr/article/20261111500002",
      "host": "kmib.co.kr",
      "at": "2026-11-10T15:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 79,
-    "spike": 1.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 12.8,
-     "unit": "bp",
-     "z": 2.5
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +12.8bp(평소의 2.5배)"
-    ]
-   }
-  },
-  {
-   "id": "1lpwhw8",
-   "title": "월러 연준 이사, CPI 결과 따라 \"12월 50bp 인상도 고려해야\"",
-   "firstSeen": "2026-11-10T09:27:00.000Z",
-   "lastSeen": "2026-11-10T16:20:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "물가불안에 빅스텝까지...연준 월러 “12월 0.5%p 인상”",
-     "link": "https://www.mk.co.kr/article/12204627",
-     "host": "mk.co.kr",
-     "at": "2026-11-10T16:20:00.000Z"
     },
     {
-     "title": "미국 연준 월러 이사 ‘빅스텝’ 거론…“12월 50bp 인상도 고려”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8709357&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-10T16:11:00.000Z"
-    },
-    {
-     "title": "美연준 월러 이사 \"12월 50bp 인상도 고려\"…'빅스텝' 거론",
-     "link": "https://www.yna.co.kr/view/AKR20261111001200072?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-10T16:00:00.000Z"
-    },
-    {
-     "title": "美 연준 월러, 12월 금리 0.5%P 인상 가능성 첫 거론",
-     "link": "https://www.g-enews.com/view.php?ud=2026111020423024129a1f309431_1",
-     "host": "g-enews.com",
-     "at": "2026-11-10T15:10:00.000Z"
+     "title": "美 10월 CPI 0.4% 상승·예상치 상회…연준 12월 금리인상 '압박'",
+     "link": "https://news.tf.co.kr/read/economy/2387240.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-10T15:01:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 74,
-    "spike": 1.4,
+    "score": 80,
+    "spike": 1.6,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 12.8,
+     "change": 13.6,
      "unit": "bp",
-     "z": 2.5
+     "z": 2.6
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +12.8bp(평소의 2.5배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "ghkjpi",
-   "title": "美 10월 CPI 충격에 월러 연준 이사 '빅스텝' 시사…국채 금리 일제히 급...",
-   "firstSeen": "2026-11-10T13:50:00.000Z",
-   "lastSeen": "2026-11-10T15:54:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "fx",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "미 달러화 강세…끈적한 美 CPI 속 '빅스텝' 거론한 월러 이사",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444048",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-10T15:54:00.000Z"
-    },
-    {
-     "title": "美 10월 CPI 전월比 0.4% ↑…월러 Fed 이사, 빅스텝 시사",
-     "link": "https://view.asiae.co.kr/article/2026111100063166293",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-10T15:06:00.000Z"
-    },
-    {
-     "title": "[종합] 美 물가 또 예상 웃돌았다…국채 금리 급등, 연준 '빅스텝' 가능...",
-     "link": "https://www.newspim.com/news/view/20261110001534",
-     "host": "newspim.com",
-     "at": "2026-11-10T14:06:00.000Z"
-    },
-    {
-     "title": "美 10월 CPI 충격에 월러 연준 이사 '빅스텝' 시사…국채 금리 일제히 급...",
-     "link": "https://www.g-enews.com/view.php?ud=202611102245529716e250e8e188_1",
-     "host": "g-enews.com",
-     "at": "2026-11-10T13:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 71,
-    "spike": 1.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 12.8,
-     "unit": "bp",
-     "z": 2.5
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +12.8bp(평소의 2.5배)",
+     "미 10년 금리 +13.6bp(평소의 2.6배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
@@ -368,16 +309,23 @@
    "id": "89g9y3",
    "title": "美물가 예상 웃돌자 시장 출렁…12월 ‘빅스텝’ 경계(상보)",
    "firstSeen": "2026-11-10T14:08:00.000Z",
-   "lastSeen": "2026-11-10T14:08:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "lastSeen": "2026-11-10T16:27:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "politics"
+    "rates",
+    "market"
    ],
    "critical": [
     "rates"
    ],
    "links": [
+    {
+     "title": "美 물가 예상 웃돌자 국채금리 급등…12월 '빅스텝' 부상 [월가 업&다운...",
+     "link": "https://www.hankyung.com/article/202611118709i",
+     "host": "hankyung.com",
+     "at": "2026-11-10T16:27:00.000Z"
+    },
     {
      "title": "美물가 예상 웃돌자 시장 출렁…12월 ‘빅스텝’ 경계(상보)",
      "link": "https://www.edaily.co.kr/News/Read?newsId=07855606645644408&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
@@ -386,21 +334,21 @@
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 67,
-    "spike": 2,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 68,
+    "spike": 1.6,
+    "news": true,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 12.8,
+     "change": 13.6,
      "unit": "bp",
-     "z": 2.5
+     "z": 2.6
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +12.8bp(평소의 2.5배)"
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
     ]
    }
   },
@@ -430,18 +378,73 @@
     "level": "watch",
     "label": "관찰",
     "score": 67,
-    "spike": 2,
+    "spike": 1.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 12.8,
+     "change": 13.6,
      "unit": "bp",
-     "z": 2.5
+     "z": 2.6
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +12.8bp(평소의 2.5배)"
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
+    ]
+   }
+  },
+  {
+   "id": "1whzxid",
+   "title": "미국 10월 소비자물가 0.4% 상승…연준 금리인상 가능성↑",
+   "firstSeen": "2026-11-10T13:38:00.000Z",
+   "lastSeen": "2026-11-10T16:36:00.000Z",
+   "count": 9,
+   "sources": 9,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"미국 12월 금리 인상 확률 92%\" 10월 소비자물가 예상 웃돌아",
+     "link": "https://news.mtn.co.kr/article/2026111101343171046",
+     "host": "news.mtn.co.kr",
+     "at": "2026-11-10T16:36:00.000Z"
+    },
+    {
+     "title": "美 10월 소비자물가 예상 밖 상승…연준 금리 결정 '주목'",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026111101022833356",
+     "host": "newsway.co.kr",
+     "at": "2026-11-10T16:20:00.000Z"
+    },
+    {
+     "title": "미국 10월 소비자물가 0.4% 상승…연준 12월 금리 인상 전망 강화, 0.5%포...",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261111010003958",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-10T16:08:00.000Z"
+    },
+    {
+     "title": "美 소비자 물가 한 달 새 0.4% 상승…금리 인상 신호탄 되나",
+     "link": "https://www.ajunews.com/view/20261111001304694",
+     "host": "ajunews.com",
+     "at": "2026-11-10T15:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 56,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 13.6,
+     "unit": "bp",
+     "z": 2.6
+    },
+    "why": [
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
     ]
    }
   },
@@ -504,116 +507,6 @@
    }
   },
   {
-   "id": "1whzxid",
-   "title": "미국 10월 소비자물가 0.4% 상승…연준 금리인상 가능성↑",
-   "firstSeen": "2026-11-10T13:38:00.000Z",
-   "lastSeen": "2026-11-10T16:20:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 10월 소비자물가 예상 밖 상승…연준 금리 결정 '주목'",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026111101022833356",
-     "host": "newsway.co.kr",
-     "at": "2026-11-10T16:20:00.000Z"
-    },
-    {
-     "title": "미국 10월 소비자물가 0.4% 상승…연준 12월 금리 인상 전망 강화, 0.5%포...",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261111010003958",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-10T16:08:00.000Z"
-    },
-    {
-     "title": "美 소비자 물가 한 달 새 0.4% 상승…금리 인상 신호탄 되나",
-     "link": "https://www.ajunews.com/view/20261111001304694",
-     "host": "ajunews.com",
-     "at": "2026-11-10T15:20:00.000Z"
-    },
-    {
-     "title": "미국 10월 소비자물가 0.4% 상승에 금리 인상 전망",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000081470",
-     "host": "jnilbo.com",
-     "at": "2026-11-10T15:13:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 52,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 12.8,
-     "unit": "bp",
-     "z": 2.5
-    },
-    "why": [
-     "미 10년 금리 +12.8bp(평소의 2.5배)"
-    ]
-   }
-  },
-  {
-   "id": "1t0lsb7",
-   "title": "與 \"장동혁, 정치생명 연장용 탄핵 선동…법사위 보이콧 중단하라\"",
-   "firstSeen": "2026-11-10T01:10:00.000Z",
-   "lastSeen": "2026-11-10T08:46:00.000Z",
-   "count": 7,
-   "sources": 6,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "민주당 \"국민의힘, 탄핵 선동 멈추고 예산 심사 복귀하라\"",
-     "link": "https://www.natv.go.kr/natv/news/newsView.do?newsId=514537",
-     "host": "natv.go.kr",
-     "at": "2026-11-10T08:46:00.000Z"
-    },
-    {
-     "title": "한병도 민주당 원내대표 \"장동혁, 탄핵 선동 멈추고 예산심사 복귀해야...",
-     "link": "http://www.breaknews.com/1249800",
-     "host": "breaknews.com",
-     "at": "2026-11-10T05:26:00.000Z"
-    },
-    {
-     "title": "\"탄핵 선동 멈춰야\" vs \"대통령 거부권 행사\"",
-     "link": "https://www.natv.go.kr/natv/news/newsView.do?newsId=514525",
-     "host": "natv.go.kr",
-     "at": "2026-11-10T03:22:00.000Z"
-    },
-    {
-     "title": "한병도 \"국민의힘, 거짓 선동·예산 보이콧 중단하라\"",
-     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5081656",
-     "host": "shinailbo.co.kr",
-     "at": "2026-11-10T03:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 50,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -1.37,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "원/달러 -1.37%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "19nqsbn",
    "title": "美 반도체 반등에 코스피 4거래일만에 급등... 5200선 회복 [마감시황]",
    "firstSeen": "2026-11-10T06:42:00.000Z",
@@ -672,64 +565,64 @@
    }
   },
   {
-   "id": "vpzhyu",
-   "title": "금리 동결한 금통위원들 \"연속 금리인상 효과 점검\"",
-   "firstSeen": "2026-11-10T07:50:00.000Z",
-   "lastSeen": "2026-11-10T09:02:00.000Z",
-   "count": 6,
+   "id": "1t0lsb7",
+   "title": "與 \"장동혁, 정치생명 연장용 탄핵 선동…법사위 보이콧 중단하라\"",
+   "firstSeen": "2026-11-10T01:10:00.000Z",
+   "lastSeen": "2026-11-10T08:46:00.000Z",
+   "count": 7,
    "sources": 6,
    "topics": [
-    "rates"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "한은 금통위 \"연속 인상 효과 지켜볼 때\"‥만장일치 동결 의사록 공개",
-     "link": "https://imnews.imbc.com/news/2026/econo/article/6864617_36932.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-10T09:02:00.000Z"
+     "title": "민주당 \"국민의힘, 탄핵 선동 멈추고 예산 심사 복귀하라\"",
+     "link": "https://www.natv.go.kr/natv/news/newsView.do?newsId=514537",
+     "host": "natv.go.kr",
+     "at": "2026-11-10T08:46:00.000Z"
     },
     {
-     "title": "'금리 동결'한 금통위원들 \"선제 금리인상 영향 점검 필요\"",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261110173619Tzz",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-10T08:37:00.000Z"
+     "title": "한병도 민주당 원내대표 \"장동혁, 탄핵 선동 멈추고 예산심사 복귀해야...",
+     "link": "http://www.breaknews.com/1249800",
+     "host": "breaknews.com",
+     "at": "2026-11-10T05:26:00.000Z"
     },
     {
-     "title": "금리 묶은 한은 금통위… \"연속 인상 파급 효과 지켜볼 때\"",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=397525",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-10T08:34:00.000Z"
+     "title": "\"탄핵 선동 멈춰야\" vs \"대통령 거부권 행사\"",
+     "link": "https://www.natv.go.kr/natv/news/newsView.do?newsId=514525",
+     "host": "natv.go.kr",
+     "at": "2026-11-10T03:22:00.000Z"
     },
     {
-     "title": "'만장일치 동결' 10월 금통위 의사록 보니⋯\"연속 금리인상 효과 점검\"",
-     "link": "https://www.etoday.co.kr/news/view/2646433",
-     "host": "etoday.co.kr",
-     "at": "2026-11-10T08:16:00.000Z"
+     "title": "한병도 \"국민의힘, 거짓 선동·예산 보이콧 중단하라\"",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5081656",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-10T03:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
-    "spike": 1.4,
+    "score": 49,
+    "spike": 1.9,
     "news": false,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 12.8,
-     "unit": "bp",
-     "z": 2.5
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.38,
+     "unit": "%",
+     "z": -2.1
     },
     "why": [
-     "미 10년 금리 +12.8bp(평소의 2.5배)"
+     "원/달러 -1.38%(평소의 2.1배)"
     ]
    }
   },
   {
-   "id": "15076dn",
-   "title": "한은 기준금리 3% 동결에도…금통위 과반이 “추가 긴축 필요”",
-   "firstSeen": "2026-11-10T08:02:00.000Z",
+   "id": "xojffk",
+   "title": "금통위원들 \"10월 금리 동결했지만 긴축 기조 이어가야\"",
+   "firstSeen": "2026-11-10T07:23:00.000Z",
    "lastSeen": "2026-11-10T11:28:00.000Z",
    "count": 4,
    "sources": 4,
@@ -745,21 +638,125 @@
      "at": "2026-11-10T11:28:00.000Z"
     },
     {
+     "title": "금통위원 \"금리 인상 영향 지켜봐야⋯긴축 기조 유지\"",
+     "link": "http://www.inews24.com/view/2024730",
+     "host": "inews24.com",
+     "at": "2026-11-10T08:37:00.000Z"
+    },
+    {
+     "title": "금통위원, 10월 금리 동결에도 \"긴축 기조 유지\"",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611101734042553",
+     "host": "ytn.co.kr",
+     "at": "2026-11-10T08:34:00.000Z"
+    },
+    {
+     "title": "금통위원들 \"10월 금리 동결했지만 긴축 기조 이어가야\"",
+     "link": "https://www.newsis.com/view/NISX20261110_0003862527",
+     "host": "newsis.com",
+     "at": "2026-11-10T07:23:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 13.6,
+     "unit": "bp",
+     "z": 2.6
+    },
+    "why": [
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
+    ]
+   }
+  },
+  {
+   "id": "vpzhyu",
+   "title": "금리 동결한 금통위원들 \"연속 금리인상 효과 점검\"",
+   "firstSeen": "2026-11-10T07:50:00.000Z",
+   "lastSeen": "2026-11-10T09:47:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
      "title": "금통위원 과반 \"추가 금리인상 필요\"…AI 증시 충격 '경계'",
      "link": "https://www.news1.kr/economy/trend/6349658",
      "host": "news1.kr",
      "at": "2026-11-10T09:47:00.000Z"
     },
     {
-     "title": "10월 금통위 만장일치 동결…물가 압력에 추가 긴축 '저울질'",
-     "link": "https://www.newspim.com/news/view/20261110001475",
-     "host": "newspim.com",
-     "at": "2026-11-10T08:58:00.000Z"
+     "title": "'금리 동결'한 금통위원들 \"선제 금리인상 영향 점검 필요\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261110173619Tzz",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-10T08:37:00.000Z"
     },
     {
-     "title": "한은 기준금리 3% 동결에도…금통위 과반이 “추가 긴축 필요”",
-     "link": "https://biz.heraldcorp.com/article/10932564?ref=naver",
-     "host": "biz.heraldcorp.com",
+     "title": "추가 금리인상 열어둔 금통위원들…AI ‘증시 충격’ 경계",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=05484166645644408&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-10T08:13:00.000Z"
+    },
+    {
+     "title": "금리 동결한 금통위원들 \"연속 금리인상 효과 점검\"",
+     "link": "https://www.yna.co.kr/view/AKR20261110148100002?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-10T07:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 13.6,
+     "unit": "bp",
+     "z": 2.6
+    },
+    "why": [
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
+    ]
+   }
+  },
+  {
+   "id": "10s5i7m",
+   "title": "10월 금통위 리뷰…금통위원 전원 “두 차례 인상 효과 점검해야”",
+   "firstSeen": "2026-11-10T08:02:00.000Z",
+   "lastSeen": "2026-11-10T09:02:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "한은 금통위 \"연속 인상 효과 지켜볼 때\"‥만장일치 동결 의사록 공개",
+     "link": "https://imnews.imbc.com/news/2026/econo/article/6864617_36932.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-10T09:02:00.000Z"
+    },
+    {
+     "title": "금리 묶은 한은 금통위… \"연속 인상 파급 효과 지켜볼 때\"",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=397525",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-10T08:34:00.000Z"
+    },
+    {
+     "title": "10월 금통위 리뷰…금통위원 전원 “두 차례 인상 효과 점검해야”",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=579345&class=18&grp=",
+     "host": "joseilbo.com",
      "at": "2026-11-10T08:02:00.000Z"
     }
    ],
@@ -767,17 +764,17 @@
     "level": "watch",
     "label": "관찰",
     "score": 46,
-    "spike": 1.4,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 12.8,
+     "change": 13.6,
      "unit": "bp",
-     "z": 2.5
+     "z": 2.6
     },
     "why": [
-     "미 10년 금리 +12.8bp(평소의 2.5배)"
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
     ]
    }
   },
@@ -812,13 +809,13 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -1.37,
+     "change": -1.38,
      "unit": "%",
      "z": -2.1
     },
     "why": [
      "핵심 단어",
-     "원/달러 -1.37%(평소의 2.1배)"
+     "원/달러 -1.38%(평소의 2.1배)"
     ]
    }
   },
@@ -852,13 +849,13 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -1.37,
+     "change": -1.38,
      "unit": "%",
      "z": -2.1
     },
     "why": [
      "핵심 단어",
-     "원/달러 -1.37%(평소의 2.1배)"
+     "원/달러 -1.38%(평소의 2.1배)"
     ]
    }
   },
@@ -893,73 +890,73 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -1.37,
+     "change": -1.38,
      "unit": "%",
      "z": -2.1
     },
     "why": [
      "핵심 단어",
-     "원/달러 -1.37%(평소의 2.1배)"
+     "원/달러 -1.38%(평소의 2.1배)"
     ]
    }
   },
   {
-   "id": "2umge3",
-   "title": "'사면초가' 젠슨 황...FBI 조사·주주 집단소송까지 [이슈ON]",
-   "firstSeen": "2026-11-10T07:20:00.000Z",
-   "lastSeen": "2026-11-10T15:46:00.000Z",
-   "count": 4,
-   "sources": 3,
+   "id": "15076dn",
+   "title": "한은 기준금리 3% 동결에도…금통위 과반이 “추가 긴축 필요”",
+   "firstSeen": "2026-11-10T08:02:00.000Z",
+   "lastSeen": "2026-11-10T08:58:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "politics"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "“떨어진 주가 배상하라” 집단소송 당한 젠슨 황",
-     "link": "https://www.chosun.com/economy/money/2026/11/11/W6FPIU3SUVH4BEDFUB5REZF5JQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-10T15:46:00.000Z"
+     "title": "10월 금통위 만장일치 동결…물가 압력에 추가 긴축 '저울질'",
+     "link": "https://www.newspim.com/news/view/20261110001475",
+     "host": "newspim.com",
+     "at": "2026-11-10T08:58:00.000Z"
     },
     {
-     "title": "주주 집단소송에 의회 조사까지...사면초가 몰린 젠슨 황 [앵커리포트]",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611102245306427",
-     "host": "ytn.co.kr",
-     "at": "2026-11-10T13:45:00.000Z"
-    },
-    {
-     "title": "불륜 인정 뒤 시총 260조원 증발, 주주 집단소송…젠슨 황 ‘궁지’",
-     "link": "https://www.khan.co.kr/article/202611102126005",
-     "host": "khan.co.kr",
-     "at": "2026-11-10T12:26:00.000Z"
-    },
-    {
-     "title": "'사면초가' 젠슨 황...FBI 조사·주주 집단소송까지 [이슈ON]",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611101710519198",
-     "host": "ytn.co.kr",
-     "at": "2026-11-10T08:10:00.000Z"
+     "title": "한은 기준금리 3% 동결에도…금통위 과반이 “추가 긴축 필요”",
+     "link": "https://biz.heraldcorp.com/article/10932564?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-10T08:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 43,
-    "spike": 2,
+    "spike": 1.6,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -1.37,
-     "unit": "%",
-     "z": -2.1
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 13.6,
+     "unit": "bp",
+     "z": 2.6
     },
     "why": [
-     "원/달러 -1.37%(평소의 2.1배)"
+     "미 10년 금리 +13.6bp(평소의 2.6배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-10T16:47:17.142Z",
+   "id": "ghkjpi",
+   "level": "urgent",
+   "title": "美 10월 CPI 충격에 월러 연준 이사 '빅스텝' 시사…국채 금리 일제히 급...",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +13.6bp(평소의 2.6배)"
+   ],
+   "link": "https://biz.chosun.com/international/international_economy/2026/11/11/AVYDMXOSIVGD5MCQIXNJWT6CUA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+   "delivered": false
+  },
   {
    "at": "2026-11-10T16:27:59.717Z",
    "id": "rs1kc0",
@@ -1182,19 +1179,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8708921&ref=A",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T13:06:22.891Z",
-   "id": "xpa97n",
-   "level": "caution",
-   "title": "코스피·코스닥, 4% 이상↑ ... 4거래일 만에 반등 성공",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +2.35%(평소의 2.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=564987",
    "delivered": false
   }
  ],
