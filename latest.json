@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-10T03:15:42.653Z",
+ "updatedAt": "2026-11-10T03:28:17.177Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 5236.6201171875,
-   "change": 4.34,
-   "z": 1.5,
+   "last": 5221.02,
+   "change": 4.03,
+   "z": 1.4,
    "sd": 2.923937189752929,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,8 +24,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 661.69,
-   "change": 3.56,
+   "last": 660.79,
+   "change": 3.41,
    "z": 1.4,
    "sd": 2.499258922960436,
    "source": "네이버 현재가",
@@ -63,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 1346.56005859375,
-   "change": -1.18,
-   "z": -1.8,
+   "last": 1345.1800537109375,
+   "change": -1.29,
+   "z": -2,
    "sd": 0.643884532532243,
    "source": "Yahoo"
   },
@@ -75,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 85.9800033569336,
-   "change": -1,
-   "z": -0.3,
+   "last": 85.91999816894531,
+   "change": -1.07,
+   "z": -0.4,
    "sd": 2.891273352048926,
    "source": "Yahoo"
   },
@@ -87,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 4121.89990234375,
-   "change": 0.18,
-   "z": 0.1,
+   "last": 4123,
+   "change": 0.21,
+   "z": 0.2,
    "sd": 1.3625338106020346,
    "source": "Yahoo"
   },
@@ -120,30 +121,30 @@
   }
  ],
  "spikes": {
-  "war": 2.7,
-  "politics": 2.1,
-  "rates": 2.1,
+  "war": 2.4,
+  "politics": 2.3,
+  "rates": 1.5,
   "trade": 0.9,
   "fx": 0.1,
-  "energy": 2.9,
-  "market": 0.8,
-  "credit": 0.1,
+  "energy": 2.8,
+  "market": 0.6,
+  "credit": -0.2,
   "disaster": 0,
   "policy": -0.5
  },
  "rates": {
   "war": {
-   "rate": 5.1,
+   "rate": 4.8,
    "saturated": 1,
    "queries": 3
   },
   "politics": {
-   "rate": 3.9,
+   "rate": 4,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 3.6,
+   "rate": 3,
    "saturated": 0,
    "queries": 3
   },
@@ -163,12 +164,12 @@
    "queries": 1
   },
   "market": {
-   "rate": 6.2,
+   "rate": 5.9,
    "saturated": 2,
    "queries": 3
   },
   "credit": {
-   "rate": 0.2,
+   "rate": 0,
    "saturated": 0,
    "queries": 2
   },
@@ -227,8 +228,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 92,
-    "spike": 2.9,
+    "score": 91,
+    "spike": 2.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -244,12 +245,72 @@
    }
   },
   {
+   "id": "1ca6er4",
+   "title": "삼성전자 20만원·SK하이닉스 120만원 탈환…반도체주 동반 급등",
+   "firstSeen": "2026-11-10T00:37:00.000Z",
+   "lastSeen": "2026-11-10T03:18:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피 5300 돌파..삼성전자·SK하이닉스 급등에 ‘매수 사이드카’ 발...",
+     "link": "https://www.christiantoday.co.kr/news/378518",
+     "host": "christiantoday.co.kr",
+     "at": "2026-11-10T03:18:00.000Z"
+    },
+    {
+     "title": "삼성전자 주가 장중 4%대 상승, 미국 반도체주 강세에 SK하이닉스도 강...",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451609",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-10T02:24:00.000Z"
+    },
+    {
+     "title": "[특징주] 삼성전자·SK하이닉스 동반 '급등'···美 증시 반등·유가 하...",
+     "link": "http://www.finomy.com/news/articleView.html?idxno=266140",
+     "host": "finomy.com",
+     "at": "2026-11-10T01:10:00.000Z"
+    },
+    {
+     "title": "‘美 반도체 훈풍’ 코스피 급등…삼성전자 20만원 탈환 시도",
+     "link": "https://www.kukinews.com/article/view/kuk202611100029",
+     "host": "kukinews.com",
+     "at": "2026-11-10T01:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 88,
+    "spike": 2.8,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 2.35,
+     "unit": "%",
+     "z": 2.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +2.35%(평소의 2.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
    "id": "14n2ocw",
    "title": "코스피 5%대 급등하며 5280선 회복…외국인 매수에 코스닥도 4%↑",
    "firstSeen": "2026-11-09T07:03:00.000Z",
-   "lastSeen": "2026-11-10T03:05:00.000Z",
-   "count": 27,
-   "sources": 26,
+   "lastSeen": "2026-11-10T03:26:00.000Z",
+   "count": 28,
+   "sources": 27,
    "topics": [
     "fx",
     "market"
@@ -258,6 +319,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "[오전시황] 장초반 매수 사이드카...상한가는 10종목",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38443",
+     "host": "junggi.co.kr",
+     "at": "2026-11-10T03:26:00.000Z"
+    },
     {
      "title": "코스피 4~5%대 급등…코스피·코스닥 잇따라 매수 사이드카",
      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8708596&ref=A",
@@ -275,19 +342,13 @@
      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008838857&plink=ORI&cooper=NAVER",
      "host": "news.sbs.co.kr",
      "at": "2026-11-10T03:02:00.000Z"
-    },
-    {
-     "title": "오늘은 장초반 급등… 코스피·코스닥 ‘매수 사이드카’",
-     "link": "https://www.munhwa.com/article/11630218?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-10T03:01:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 77,
-    "spike": 0.8,
+    "score": 75,
+    "spike": 0.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -300,62 +361,6 @@
      "핵심 단어",
      "S&P 500 +2.35%(평소의 2.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "93pis9",
-   "title": "유가 내리고 美 증시 올랐다…엔비디아만 '불륜 리스크'에 역주행",
-   "firstSeen": "2026-11-09T22:24:00.000Z",
-   "lastSeen": "2026-11-10T03:04:00.000Z",
-   "count": 8,
-   "sources": 7,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "‘젠슨 황 리스크’ 엔비디아 주가 폭락…“스파이인 줄 몰랐다”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8708595&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-10T03:04:00.000Z"
-    },
-    {
-     "title": "'엔비디아 CEO' 젠슨 황, 주주들에 집단소송 당했다…불륜 은폐 의혹→...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16272696",
-     "host": "topstarnews.net",
-     "at": "2026-11-10T02:32:00.000Z"
-    },
-    {
-     "title": "젠슨황 스캔들에 엔비디아 급락…국내 관련 ETF 주가도 영향권?",
-     "link": "https://www.yna.co.kr/view/AKR20261110079800008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-10T02:15:00.000Z"
-    },
-    {
-     "title": "CEO 리스크에 ‘엔비디아’만 주가 급락…美 주주들, 젠슨황에 손배 청...",
-     "link": "https://www.nongmin.com/article/20261110500089",
-     "host": "nongmin.com",
-     "at": "2026-11-10T01:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 67,
-    "spike": 2.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "S&P 500 +2.35%(평소의 2.7배)"
     ]
    }
   },
@@ -400,8 +405,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 67,
-    "spike": 2.9,
+    "score": 66,
+    "spike": 2.8,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -416,48 +421,48 @@
    }
   },
   {
-   "id": "1ca6er4",
-   "title": "삼성전자 20만원·SK하이닉스 120만원 탈환…반도체주 동반 급등",
-   "firstSeen": "2026-11-10T00:37:00.000Z",
-   "lastSeen": "2026-11-10T02:24:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "14m37wc",
+   "title": "대한상의 \"美, 뒤바뀐 정치 지형…관세·투자·입법 3대 변수 대비해야...",
+   "firstSeen": "2026-11-10T03:00:00.000Z",
+   "lastSeen": "2026-11-10T03:14:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
-    "energy",
-    "market"
+    "politics",
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "삼성전자 주가 장중 4%대 상승, 미국 반도체주 강세에 SK하이닉스도 강...",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451609",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-10T02:24:00.000Z"
+     "title": "美 의회 바뀌어도 통상 압박은 계속... \"관세·투자·입법 3대 변수 정밀...",
+     "link": "http://www.efnews.co.kr/news/articleView.html?idxno=133848",
+     "host": "efnews.co.kr",
+     "at": "2026-11-10T03:14:00.000Z"
     },
     {
-     "title": "[특징주] 삼성전자·SK하이닉스 동반 '급등'···美 증시 반등·유가 하...",
-     "link": "http://www.finomy.com/news/articleView.html?idxno=266140",
-     "host": "finomy.com",
-     "at": "2026-11-10T01:10:00.000Z"
+     "title": "\"美 의회 바뀌어도 통상 압박 지속…관세·투자·입법 대응해야\"",
+     "link": "https://www.ajunews.com/view/20261110102010547",
+     "host": "ajunews.com",
+     "at": "2026-11-10T03:02:00.000Z"
     },
     {
-     "title": "‘美 반도체 훈풍’ 코스피 급등…삼성전자 20만원 탈환 시도",
-     "link": "https://www.kukinews.com/article/view/kuk202611100029",
-     "host": "kukinews.com",
-     "at": "2026-11-10T01:00:00.000Z"
+     "title": "美 의회 지형 바껴도 통상 압박 지속⋯관세·투자·입법 정밀 대응해야",
+     "link": "https://www.viva100.com/article/20261110500646",
+     "host": "viva100.com",
+     "at": "2026-11-10T03:02:00.000Z"
     },
     {
-     "title": "삼성전자 20만원·SK하이닉스 120만원 탈환…반도체주 동반 급등",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000081130",
-     "host": "jnilbo.com",
-     "at": "2026-11-10T00:37:00.000Z"
+     "title": "美 의회 바뀌어도 통상 압박 여전…韓 기업 ‘관세·투자·입법’ 3중고",
+     "link": "https://economist.co.kr/article/view/ecn202611100014",
+     "host": "economist.co.kr",
+     "at": "2026-11-10T03:01:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 61,
-    "spike": 2.9,
+    "level": "caution",
+    "label": "주의",
+    "score": 62,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -467,18 +472,17 @@
      "z": 2.7
     },
     "why": [
-     "S&P 500 +2.35%(평소의 2.7배)",
-     "시장 반응만 있는 사건이 이미 2건"
+     "S&P 500 +2.35%(평소의 2.7배)"
     ]
    }
   },
   {
-   "id": "y7zjfw",
-   "title": "\"너무 싼데\" 줍줍 몰리자 삼전닉스 불기둥…매수 사이드카 터졌다",
-   "firstSeen": "2026-11-10T02:11:00.000Z",
+   "id": "1wsz42m",
+   "title": "‘삼전닉스 불기둥’ 한숨 돌렸다…코스피 5300 돌파",
+   "firstSeen": "2026-11-10T01:14:00.000Z",
    "lastSeen": "2026-11-10T02:11:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "count": 2,
+   "sources": 2,
    "topics": [
     "market"
    ],
@@ -491,14 +495,20 @@
      "link": "https://www.mt.co.kr/stock/2026/11/10/2026111011021482868",
      "host": "mt.co.kr",
      "at": "2026-11-10T02:11:00.000Z"
+    },
+    {
+     "title": "‘삼전닉스 불기둥’ 한숨 돌렸다…코스피 5300 돌파",
+     "link": "https://www.seoul.co.kr/news/economy/securities/2026/11/10/20261110500085?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-10T01:36:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 60,
-    "spike": 0.8,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 61,
+    "spike": 0.6,
+    "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -513,48 +523,50 @@
    }
   },
   {
-   "id": "1k8pesn",
-   "title": "\"미국 통상정책 기조 이어질 것…'관세·투자·입법' 대응해야\"",
-   "firstSeen": "2026-11-10T03:00:00.000Z",
-   "lastSeen": "2026-11-10T03:02:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "1xqhjmp",
+   "title": "반도체 잘 만드는데 사생활 실패?...'젠슨 황 스캔들' 258조원 증발",
+   "firstSeen": "2026-11-09T23:58:00.000Z",
+   "lastSeen": "2026-11-10T02:48:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
+    "war",
     "politics",
-    "trade"
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "美 의회 지형 바껴도 통상 압박 지속⋯관세·투자·입법 정밀 대응해야",
-     "link": "https://www.viva100.com/article/20261110500646",
-     "host": "viva100.com",
-     "at": "2026-11-10T03:02:00.000Z"
+     "title": "집단소송 당한 ‘불륜’ 젠슨 황…시총 260조 증발에 분노 터졌다",
+     "link": "https://www.joongang.co.kr/article/25477274",
+     "host": "joongang.co.kr",
+     "at": "2026-11-10T02:48:00.000Z"
     },
     {
-     "title": "\"美 의회 바뀌어도 통상 압박 지속…관세·투자·입법 대응해야\"",
-     "link": "https://www.ajunews.com/view/20261110102010547",
-     "host": "ajunews.com",
-     "at": "2026-11-10T03:02:00.000Z"
+     "title": "젠슨 황 불륜에 엔비디아 역주행…하루 새 258조원 증발",
+     "link": "https://www.mk.co.kr/article/12203737",
+     "host": "mk.co.kr",
+     "at": "2026-11-10T02:39:00.000Z"
     },
     {
-     "title": "美 의회 바뀌어도 통상 압박 여전…韓 기업 ‘관세·투자·입법’ 3중고",
-     "link": "https://economist.co.kr/article/view/ecn202611100014",
-     "host": "economist.co.kr",
-     "at": "2026-11-10T03:01:00.000Z"
+     "title": "젠슨 황發 악재 엔비디아 시총, 하루 새 258조원 증발",
+     "link": "http://www.seouleconews.com/news/articleView.html?idxno=94908",
+     "host": "seouleconews.com",
+     "at": "2026-11-10T01:52:00.000Z"
     },
     {
-     "title": "\"美 의회 바뀌어도 통상 압박…관세·투자·입법 대응해야\"",
-     "link": "https://www.dailian.co.kr/news/view/1712886/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-10T03:01:00.000Z"
+     "title": "반도체 잘 만드는데 사생활 실패?...'젠슨 황 스캔들' 258조원 증발",
+     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=285771",
+     "host": "financialpost.co.kr",
+     "at": "2026-11-10T00:10:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 57,
-    "spike": 2.1,
+    "score": 60,
+    "spike": 2.8,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -570,36 +582,47 @@
    }
   },
   {
-   "id": "1486iot",
-   "title": "국제유가 급락·AI 저가매수에 나스닥 2.74% 급등 [뉴욕증시]",
-   "firstSeen": "2026-11-09T22:58:00.000Z",
-   "lastSeen": "2026-11-09T23:46:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "1t0lsb7",
+   "title": "與 \"장동혁, 정치생명 연장용 탄핵 선동…법사위 보이콧 중단하라\"",
+   "firstSeen": "2026-11-10T01:10:00.000Z",
+   "lastSeen": "2026-11-10T03:22:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "energy",
-    "market"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[뉴욕마켓워치] 유가 급락 속 저가매수에 필리지수 7% 급등…채권 혼조...",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443871",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-09T23:46:00.000Z"
+     "title": "\"탄핵 선동 멈춰야\" vs \"대통령 거부권 행사\"",
+     "link": "https://www.natv.go.kr/natv/news/newsView.do?newsId=514525",
+     "host": "natv.go.kr",
+     "at": "2026-11-10T03:22:00.000Z"
     },
     {
-     "title": "국제유가 급락·AI 저가매수에 나스닥 2.74% 급등 [뉴욕증시]",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2016432",
+     "title": "한병도 \"국민의힘, 거짓 선동·예산 보이콧 중단하라\"",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5081656",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-10T03:02:00.000Z"
+    },
+    {
+     "title": "한병도 \"장동혁, 탄핵 선동 멈춰야…목적은 정치생명 연장\"",
+     "link": "https://www.etoday.co.kr/news/view/2646200",
+     "host": "etoday.co.kr",
+     "at": "2026-11-10T01:42:00.000Z"
+    },
+    {
+     "title": "한병도 \"장동혁, 탄핵 선동 멈춰야…정치생명 연장 위한 장외투쟁인가\"",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2016514",
      "host": "m-i.kr",
-     "at": "2026-11-09T23:18:00.000Z"
+     "at": "2026-11-10T01:34:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 55,
-    "spike": 2.9,
+    "score": 59,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -609,139 +632,8 @@
      "z": 2.7
     },
     "why": [
-     "S&P 500 +2.35%(평소의 2.7배)"
-    ]
-   }
-  },
-  {
-   "id": "qrrh7g",
-   "title": "\"미국 금융시장, 중간선거 충격서 회복…유가 안정도 기대\"<iM證>",
-   "firstSeen": "2026-11-09T22:47:00.000Z",
-   "lastSeen": "2026-11-10T01:09:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[증시타임] 미 중간선거 이후, 금융시장은 무엇을 봐야 하나",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345282?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-10T01:09:00.000Z"
-    },
-    {
-     "title": "\"미국 금융시장, 중간선거 충격서 회복…유가 안정도 기대\"<iM證>",
-     "link": "https://www.news2day.co.kr/article/20261110500039",
-     "host": "news2day.co.kr",
-     "at": "2026-11-10T00:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 2.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "S&P 500 +2.35%(평소의 2.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1t0uaub",
-   "title": "증시 활황 꺾이자 증권사 순익 반토막…코스피 반등 조건은?",
-   "firstSeen": "2026-11-09T23:38:00.000Z",
-   "lastSeen": "2026-11-10T01:53:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"코스피 '이 때' 기다리다 사라\"…7100선 반등 가능성 제시한 증권사",
-     "link": "https://view.asiae.co.kr/article/2026111010523487215",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-10T01:53:00.000Z"
-    },
-    {
-     "title": "증시 활황 꺾이자 증권사 순익 반토막…코스피 반등 조건은?",
-     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81413",
-     "host": "issuenbiz.com",
-     "at": "2026-11-10T00:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 2.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "S&P 500 +2.35%(평소의 2.7배)"
-    ]
-   }
-  },
-  {
-   "id": "atfn78",
-   "title": "[마켓줌인] 국제유가 5%대 급락에 항공주 '훨훨'...대한항공·아시아나 ...",
-   "firstSeen": "2026-11-10T01:06:00.000Z",
-   "lastSeen": "2026-11-10T02:52:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "대한항공 주가 장중 11%대 올라, 국제유가 하락에 항공주 강세",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451617",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-10T02:52:00.000Z"
-    },
-    {
-     "title": "[마켓줌인] 국제유가 5%대 급락에 항공주 '훨훨'...대한항공·아시아나 ...",
-     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130732",
-     "host": "ntoday.co.kr",
-     "at": "2026-11-10T01:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 2.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "S&P 500 +2.35%(평소의 2.7배)"
+     "S&P 500 +2.35%(평소의 2.7배)",
+     "시장 반응만 있는 사건이 이미 2건"
     ]
    }
   },
@@ -786,8 +678,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 54,
-    "spike": 2.1,
+    "score": 56,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -842,8 +734,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 54,
-    "spike": 2.1,
+    "score": 56,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -854,62 +746,6 @@
     },
     "why": [
      "S&P 500 +2.35%(평소의 2.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1t0lsb7",
-   "title": "與 \"장동혁, 정치생명 연장용 탄핵 선동…법사위 보이콧 중단하라\"",
-   "firstSeen": "2026-11-10T01:10:00.000Z",
-   "lastSeen": "2026-11-10T03:02:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "한병도 \"국민의힘, 거짓 선동·예산 보이콧 중단하라\"",
-     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5081656",
-     "host": "shinailbo.co.kr",
-     "at": "2026-11-10T03:02:00.000Z"
-    },
-    {
-     "title": "한병도 \"장동혁, 탄핵 선동 멈춰야…목적은 정치생명 연장\"",
-     "link": "https://www.etoday.co.kr/news/view/2646200",
-     "host": "etoday.co.kr",
-     "at": "2026-11-10T01:42:00.000Z"
-    },
-    {
-     "title": "한병도 \"장동혁, 탄핵 선동 멈춰야…정치생명 연장 위한 장외투쟁인가\"",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2016514",
-     "host": "m-i.kr",
-     "at": "2026-11-10T01:34:00.000Z"
-    },
-    {
-     "title": "與 \"장동혁, 정치생명 연장용 탄핵 선동…법사위 보이콧 중단하라\"",
-     "link": "https://www.hg-times.com/news/articleView.html?idxno=306883",
-     "host": "hg-times.com",
-     "at": "2026-11-10T01:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "S&P 500 +2.35%(평소의 2.7배)",
-     "시장 반응만 있는 사건이 이미 2건"
     ]
    }
   },
@@ -954,8 +790,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 54,
-    "spike": 2.1,
+    "score": 56,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -969,9 +805,234 @@
      "시장 반응만 있는 사건이 이미 2건"
     ]
    }
+  },
+  {
+   "id": "1486iot",
+   "title": "국제유가 급락·AI 저가매수에 나스닥 2.74% 급등 [뉴욕증시]",
+   "firstSeen": "2026-11-09T22:58:00.000Z",
+   "lastSeen": "2026-11-09T23:46:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[뉴욕마켓워치] 유가 급락 속 저가매수에 필리지수 7% 급등…채권 혼조...",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443871",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-09T23:46:00.000Z"
+    },
+    {
+     "title": "국제유가 급락·AI 저가매수에 나스닥 2.74% 급등 [뉴욕증시]",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2016432",
+     "host": "m-i.kr",
+     "at": "2026-11-09T23:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 54,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 2.35,
+     "unit": "%",
+     "z": 2.7
+    },
+    "why": [
+     "S&P 500 +2.35%(평소의 2.7배)"
+    ]
+   }
+  },
+  {
+   "id": "qrrh7g",
+   "title": "\"미국 금융시장, 중간선거 충격서 회복…유가 안정도 기대\"<iM證>",
+   "firstSeen": "2026-11-09T22:47:00.000Z",
+   "lastSeen": "2026-11-10T01:09:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[증시타임] 미 중간선거 이후, 금융시장은 무엇을 봐야 하나",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345282?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-10T01:09:00.000Z"
+    },
+    {
+     "title": "\"미국 금융시장, 중간선거 충격서 회복…유가 안정도 기대\"<iM證>",
+     "link": "https://www.news2day.co.kr/article/20261110500039",
+     "host": "news2day.co.kr",
+     "at": "2026-11-10T00:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 54,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 2.35,
+     "unit": "%",
+     "z": 2.7
+    },
+    "why": [
+     "S&P 500 +2.35%(평소의 2.7배)"
+    ]
+   }
+  },
+  {
+   "id": "130xj1s",
+   "title": "S&P500 선물, CPI 대기 속 강보합…美 국채금리 혼조",
+   "firstSeen": "2026-11-10T00:44:00.000Z",
+   "lastSeen": "2026-11-10T01:22:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "금시세(금값) 강보합",
+     "link": "http://www.kjdaily.com/article.php?aid=1794273608691763227",
+     "host": "kjdaily.com",
+     "at": "2026-11-10T01:22:00.000Z"
+    },
+    {
+     "title": "S&P500 선물, CPI 대기 속 강보합…美 국채금리 혼조",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4443901",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-10T00:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 54,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 2.35,
+     "unit": "%",
+     "z": 2.7
+    },
+    "why": [
+     "S&P 500 +2.35%(평소의 2.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1t0uaub",
+   "title": "증시 활황 꺾이자 증권사 순익 반토막…코스피 반등 조건은?",
+   "firstSeen": "2026-11-09T23:38:00.000Z",
+   "lastSeen": "2026-11-10T01:53:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"코스피 '이 때' 기다리다 사라\"…7100선 반등 가능성 제시한 증권사",
+     "link": "https://view.asiae.co.kr/article/2026111010523487215",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-10T01:53:00.000Z"
+    },
+    {
+     "title": "증시 활황 꺾이자 증권사 순익 반토막…코스피 반등 조건은?",
+     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81413",
+     "host": "issuenbiz.com",
+     "at": "2026-11-10T00:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 54,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 2.35,
+     "unit": "%",
+     "z": 2.7
+    },
+    "why": [
+     "S&P 500 +2.35%(평소의 2.7배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-10T03:28:17.177Z",
+   "id": "14n2ocw",
+   "level": "caution",
+   "title": "코스피 5%대 급등하며 5280선 회복…외국인 매수에 코스닥도 4%↑",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +2.35%(평소의 2.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38443",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-10T03:28:17.177Z",
+   "id": "1ca6er4",
+   "level": "caution",
+   "title": "삼성전자 20만원·SK하이닉스 120만원 탈환…반도체주 동반 급등",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +2.35%(평소의 2.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.christiantoday.co.kr/news/378518",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-10T03:28:17.177Z",
+   "id": "1wsz42m",
+   "level": "caution",
+   "title": "‘삼전닉스 불기둥’ 한숨 돌렸다…코스피 5300 돌파",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +2.35%(평소의 2.7배)"
+   ],
+   "link": "https://www.mt.co.kr/stock/2026/11/10/2026111011021482868",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-10T03:28:17.177Z",
+   "id": "14m37wc",
+   "level": "caution",
+   "title": "대한상의 \"美, 뒤바뀐 정치 지형…관세·투자·입법 3대 변수 대비해야...",
+   "why": [
+    "S&P 500 +2.35%(평소의 2.7배)"
+   ],
+   "link": "http://www.efnews.co.kr/news/articleView.html?idxno=133848",
+   "delivered": false
+  },
   {
    "at": "2026-11-10T03:15:42.653Z",
    "id": "1p3vtb4",
@@ -1164,56 +1225,6 @@
     "S&P 500 +2.35%(평소의 2.7배)"
    ],
    "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=601957",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T01:27:00.895Z",
-   "id": "1e1w1id",
-   "level": "caution",
-   "title": "\"젠슨 황, 스파이인 줄 몰랐다 해\"…엔비디아 주가만 급락",
-   "why": [
-    "S&P 500 +2.35%(평소의 2.7배)"
-   ],
-   "link": "https://www.ajunews.com/view/20261110100426450",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T01:13:01.187Z",
-   "id": "67nn8e",
-   "level": "caution",
-   "title": "‘블루 쓰나미’에 흔들린 AI주…10일 밤 美 CPI발표에 촉각 [동여의도 ...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +2.35%(평소의 2.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000081095",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T01:13:01.187Z",
-   "id": "10m96mz",
-   "level": "caution",
-   "title": "美中, 무역 휴전 내년 1월 10일까지 연장",
-   "why": [
-    "기사 급증(평소 대비 3.3σ)",
-    "S&P 500 +2.35%(평소의 2.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.fnnews.com/news/202611100012568202",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T01:13:01.187Z",
-   "id": "nq614r",
-   "level": "caution",
-   "title": "국채선물, 美 증시 급등에 하락…10년물 12틱↓",
-   "why": [
-    "기사 급증(평소 대비 3.2σ)",
-    "S&P 500 +2.35%(평소의 2.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.yna.co.kr/view/AKR20261110056300008?input=1195m",
    "delivered": false
   }
  ],
