@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-10T18:14:56.575Z",
+ "updatedAt": "2026-11-10T18:27:58.506Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,8 +38,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 7481.8701171875,
-   "change": -0.9,
+   "last": 7482.6298828125,
+   "change": -0.89,
    "z": -1,
    "sd": 0.9243252516448476,
    "source": "Yahoo",
@@ -51,7 +51,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 24884.203125,
+   "last": 24883.716796875,
    "change": -1.46,
    "z": -1.1,
    "sd": 1.3071419616664692,
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 1343.5799560546875,
-   "change": -1.4,
+   "last": 1343.550048828125,
+   "change": -1.41,
    "z": -2.2,
    "sd": 0.643884532532243,
    "source": "Yahoo"
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 86.25,
-   "change": -0.69,
+   "last": 86.33000183105469,
+   "change": -0.6,
    "z": -0.2,
    "sd": 2.891273352048926,
    "source": "Yahoo"
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 4025.199951171875,
-   "change": -2.17,
+   "last": 4027,
+   "change": -2.13,
    "z": -1.6,
    "sd": 1.3625338106020346,
    "source": "Yahoo"
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 20.729999542236328,
-   "change": 4.07,
-   "z": 0.3,
+   "last": 20.899999618530273,
+   "change": 4.92,
+   "z": 0.4,
    "sd": 11.73515835561926,
    "source": "Yahoo",
    "checked": true
@@ -113,8 +113,8 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-10",
-   "last": 5.00600004196167,
-   "change": 14.2,
+   "last": 5.008000373840332,
+   "change": 14.4,
    "z": 2.8,
    "sd": 5.133200805897257,
    "source": "Yahoo"
@@ -122,34 +122,34 @@
  ],
  "spikes": {
   "war": -0.6,
-  "politics": 0.5,
-  "rates": 1.2,
-  "trade": -1,
+  "politics": 0.1,
+  "rates": 1.1,
+  "trade": -1.4,
   "fx": -0.5,
-  "energy": 0.6,
-  "market": -1.6,
+  "energy": 0.2,
+  "market": -1.8,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.8
  },
  "rates": {
   "war": {
-   "rate": 1,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.9,
+   "rate": 2.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.9,
-   "saturated": 1,
+   "rate": 2.8,
+   "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 1.3,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 2
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3.7,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.9,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -229,19 +229,19 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 82,
-    "spike": 1.2,
+    "score": 81,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
     ]
    }
   },
@@ -282,19 +282,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 71,
-    "spike": 1.2,
+    "score": 70,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +14.2bp(평소의 2.8배)",
+     "미 10년 금리 +14.4bp(평소의 2.8배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
@@ -342,60 +342,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 59,
-    "spike": 0.6,
+    "score": 56,
+    "spike": 0.2,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.17,
+     "change": -2.13,
      "unit": "%",
      "z": -1.6
     },
     "why": [
      "핵심 단어",
-     "금 -2.17%"
-    ]
-   }
-  },
-  {
-   "id": "195ulk8",
-   "title": "윌러가 누른 빅스텝 발작 버튼…중국이 美 데이터센터 중단시키나[박신...",
-   "firstSeen": "2026-11-10T15:24:00.000Z",
-   "lastSeen": "2026-11-10T15:24:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "policy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "윌러가 누른 빅스텝 발작 버튼…중국이 美 데이터센터 중단시키나[박신...",
-     "link": "https://www.hankyung.com/article/202611118700i",
-     "host": "hankyung.com",
-     "at": "2026-11-10T15:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 59,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 14.2,
-     "unit": "bp",
-     "z": 2.8
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "금 -2.13%"
     ]
    }
   },
@@ -439,18 +398,59 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 57,
-    "spike": 1.2,
+    "score": 56,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
+    ]
+   }
+  },
+  {
+   "id": "195ulk8",
+   "title": "윌러가 누른 빅스텝 발작 버튼…중국이 美 데이터센터 중단시키나[박신...",
+   "firstSeen": "2026-11-10T15:24:00.000Z",
+   "lastSeen": "2026-11-10T15:24:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "policy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "윌러가 누른 빅스텝 발작 버튼…중국이 美 데이터센터 중단시키나[박신...",
+     "link": "https://www.hankyung.com/article/202611118700i",
+     "host": "hankyung.com",
+     "at": "2026-11-10T15:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 56,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 14.4,
+     "unit": "bp",
+     "z": 2.8
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
     ]
    }
   },
@@ -552,18 +552,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 1.2,
+    "score": 48,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
     ]
    }
   },
@@ -607,18 +607,140 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 1.2,
+    "score": 48,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
+    ]
+   }
+  },
+  {
+   "id": "1cl0l3h",
+   "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
+   "firstSeen": "2026-11-09T08:18:00.000Z",
+   "lastSeen": "2026-11-10T08:56:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
+     "link": "https://www.etoday.co.kr/news/view/2646480",
+     "host": "etoday.co.kr",
+     "at": "2026-11-10T08:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.41,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -1.41%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "sc0cht",
+   "title": "\"中 수출금지된 엔비디아 블랙웰칩…中서 868억원어치 포착\" [블룸버그...",
+   "firstSeen": "2026-11-10T12:19:00.000Z",
+   "lastSeen": "2026-11-10T12:19:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "trade"
+   ],
+   "critical": [
+    "trade"
+   ],
+   "links": [
+    {
+     "title": "\"中 수출금지된 엔비디아 블랙웰칩…中서 868억원어치 포착\" [블룸버그...",
+     "link": "https://www.hankyung.com/article/202611108605i",
+     "host": "hankyung.com",
+     "at": "2026-11-10T12:19:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.41,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -1.41%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1jcdmbg",
+   "title": "폭탄 공격 못지않다… 이란의 ‘냉장고 테러’에 벌벌 떠는 유럽",
+   "firstSeen": "2026-11-10T15:42:00.000Z",
+   "lastSeen": "2026-11-10T15:42:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "폭탄 공격 못지않다… 이란의 ‘냉장고 테러’에 벌벌 떠는 유럽",
+     "link": "https://www.chosun.com/international/international_general/2026/11/11/ZNGW7T2GENFKDERAZCNEHBPKPM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-10T15:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.41,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -1.41%(평소의 2.2배)"
     ]
    }
   },
@@ -656,140 +778,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 1.2,
+    "score": 45,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "1cl0l3h",
-   "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
-   "firstSeen": "2026-11-09T08:18:00.000Z",
-   "lastSeen": "2026-11-10T08:56:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "fx",
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
-     "link": "https://www.etoday.co.kr/news/view/2646480",
-     "host": "etoday.co.kr",
-     "at": "2026-11-10T08:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -1.4,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 -1.4%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "sc0cht",
-   "title": "\"中 수출금지된 엔비디아 블랙웰칩…中서 868억원어치 포착\" [블룸버그...",
-   "firstSeen": "2026-11-10T12:19:00.000Z",
-   "lastSeen": "2026-11-10T12:19:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade"
-   ],
-   "critical": [
-    "trade"
-   ],
-   "links": [
-    {
-     "title": "\"中 수출금지된 엔비디아 블랙웰칩…中서 868억원어치 포착\" [블룸버그...",
-     "link": "https://www.hankyung.com/article/202611108605i",
-     "host": "hankyung.com",
-     "at": "2026-11-10T12:19:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -1.4,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 -1.4%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1jcdmbg",
-   "title": "폭탄 공격 못지않다… 이란의 ‘냉장고 테러’에 벌벌 떠는 유럽",
-   "firstSeen": "2026-11-10T15:42:00.000Z",
-   "lastSeen": "2026-11-10T15:42:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "disaster"
-   ],
-   "links": [
-    {
-     "title": "폭탄 공격 못지않다… 이란의 ‘냉장고 테러’에 벌벌 떠는 유럽",
-     "link": "https://www.chosun.com/international/international_general/2026/11/11/ZNGW7T2GENFKDERAZCNEHBPKPM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-10T15:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -1.4,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 -1.4%(평소의 2.2배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
     ]
    }
   },
@@ -821,18 +821,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 1.2,
+    "score": 42,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
     ]
    }
   },
@@ -864,18 +864,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 1.2,
+    "score": 42,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
     ]
    }
   },
@@ -908,18 +908,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 1.2,
+    "score": 42,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 14.2,
+     "change": 14.4,
      "unit": "bp",
      "z": 2.8
     },
     "why": [
-     "미 10년 금리 +14.2bp(평소의 2.8배)"
+     "미 10년 금리 +14.4bp(평소의 2.8배)"
     ]
    }
   }
