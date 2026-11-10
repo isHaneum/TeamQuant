@@ -10,6 +10,7 @@ import { currentSituation, groupOf, GROUPS, SITUATION_VERSION } from '/lib/situa
 import { fundamentals, candles, indexSeries as sharedIndex, getStyle } from '/lib/client-data.js';
 import { buildAssetTimeline, koreaDay } from '/lib/asset-timeline.js';
 import { reviewTrades } from '/lib/trade-review.js';
+import { kstStamp } from '/lib/paper-public.js';
 import { marketReasons, marketQuery } from '/lib/market-reasons.js';
 import { privateRead } from '/bridge-client.js';
 import { tip } from '/tooltip-ui.js';
@@ -464,7 +465,8 @@ window.addEventListener('teamquant:style', () => { if (snapshot) renderList(curr
 
 // ── 연결 상태: 계좌가 없으면 빈 화면 대신 연결 안내와 예시 둘러보기를 보여 준다.
 let connection = 'unknown';
-function paperText(m, at) { const ret = m.startTotal > 0 && m.total > 0 ? (m.total / m.startTotal - 1) * 100 : null; const when = at ? new Date(at).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }) : ''; return `${m.label || '한투 모의계좌 (팀 공용)'} · 가상 1억 · 운용 ${m.days || 0}일${m.since ? ` (${m.since}부터)` : ''}${ret === null ? '' : ` · 시작 대비 ${pct(ret)}`} · ${m.live ? 'PC 실시간' : '저장소 공개 파일'} ${when} · 실제 계좌를 연결하면 그 자료로 바뀝니다.`; }
+// 홈 배너 한 줄: 진행 중인가 · 투자 비중 · 마지막 자동 실행(절대 날짜, KST)까지 한 줄로 답한다. 진행 상태는 lib/paper-public.js runState 가 정한다.
+function paperText(m, at) { const ret = m.startTotal > 0 && m.total > 0 ? (m.total / m.startTotal - 1) * 100 : null; const when = at ? kstStamp(at) : ''; const inv = Number.isFinite(m.investedPct) ? ` · 투자 비중 ${m.investedPct.toFixed(0)}%${Number.isFinite(m.planInvestedPct) ? ` (계획 ${m.planInvestedPct.toFixed(0)}%)` : ''}` : ''; return `${m.label || '한투 모의계좌 (팀 공용)'}${m.run?.label ? ` · ${m.run.label}` : ''} · 가상 1억 · 운용 ${m.days || 0}일${m.since ? ` (${m.since}부터)` : ''}${ret === null ? '' : ` · 시작 대비 ${pct(ret)}`}${inv}${m.lastAutoAt ? ` · 마지막 자동 실행 ${kstStamp(m.lastAutoAt)}` : ''} · ${m.live ? 'PC 실시간' : '저장소 공개 파일'} ${when} · 실제 계좌를 연결하면 그 자료로 바뀝니다.`; }
 function syncState() {
   const none = !snapshot && connection === 'error';
   $('#hm-connect').hidden = !none; root.classList.toggle('hm-state-connect', none);
