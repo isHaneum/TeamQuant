@@ -1,8 +1,8 @@
 {
- "version": "PUB1-2026-11-09",
- "engine": "L5-2026-11-09",
+ "version": "PUB2-2026-11-10",
+ "engine": "L6-2026-11-10",
  "label": "한투 모의계좌 (팀 공용)",
- "asOf": "2026-11-10T07:07:30.047Z",
+ "asOf": "2026-11-10T07:36:14.087Z",
  "mode": "vps",
  "public": true,
  "since": "2026-11-09",
@@ -20,8 +20,8 @@
   "US": {
    "open": false,
    "reason": "미국 장 시작 전입니다(09:30 ET = 한국 23:30).",
-   "openAt": "2026-11-10T14:30:00.044Z",
-   "closeAt": "2026-11-10T21:00:00.044Z",
+   "openAt": "2026-11-10T14:30:00.083Z",
+   "closeAt": "2026-11-10T21:00:00.083Z",
    "market": "US"
   }
  },
@@ -43,7 +43,7 @@
   "duplicateWindowMin": 10,
   "allowLive": false
  },
- "fx": 1338.1800537109375,
+ "fx": 1335.550048828125,
  "balance": {
   "cash": 62669084,
   "cashUsd": 0,
@@ -355,10 +355,11 @@
    "amountKrw": 8050000,
    "why": "계획 비중보다 많음",
    "batch": "RB-2026-11-09-mw8qjcpb",
-   "status": "sent",
+   "status": "expired",
    "filledQty": 0,
    "avgPrice": 0,
-   "remaining": 100
+   "remaining": 100,
+   "note": "장 마감으로 소멸(미체결 100주)"
   },
   {
    "at": "2026-11-09T04:02:35.770Z",
@@ -532,6 +533,7 @@
   {
    "key": "KR:2026-11-09",
    "at": "2026-11-09T03:54:50.848Z",
+   "market": "KR",
    "reason": "계획 변경(PP1-2026-11-09)",
    "rebalance": false,
    "sent": 3,
@@ -541,6 +543,7 @@
   {
    "key": "US:2026-11-09",
    "at": "2026-11-09T14:38:30.225Z",
+   "market": "US",
    "reason": "계획 변경(PP1-2026-11-09)",
    "rebalance": true,
    "sent": 0,
@@ -548,6 +551,23 @@
    "items": 9
   }
  ],
+ "settings": null,
+ "planVersion": {
+  "KR": "PP1-2026-11-09",
+  "US": "PP1-2026-11-09"
+ },
+ "planApplied": {
+  "KR": {
+   "applied": true,
+   "at": null,
+   "version": null
+  },
+  "US": {
+   "applied": true,
+   "at": null,
+   "version": null
+  }
+ },
  "marks": [
   {
    "date": "2026-11-09",
@@ -602,11 +622,18 @@
     "label": "1시간 넘게 미확인",
     "count": 0,
     "target": 0
+   },
+   {
+    "key": "leftOpen",
+    "label": "마감 뒤 남은 미체결",
+    "count": 0,
+    "target": 0
    }
   ],
   "notFound": 0,
   "rejected": 0,
-  "pending": 1,
+  "pending": 0,
+  "leftOpen": 0,
   "orders": 17
  },
  "prefsHistory": [],
@@ -999,6 +1026,27 @@
     ],
     "exposure": []
    }
+  },
+  "concentration": {
+   "bySector": {
+    "반도체": 8,
+    "자동차": 4,
+    "금융": 12,
+    "의료·바이오": 9.5,
+    "조선": 3.5,
+    "방산": 7.5,
+    "인터넷·플랫폼": 15,
+    "지수 ETF": 11,
+    "채권 ETF": 14.5
+   },
+   "byCountry": {
+    "KR": 31,
+    "US": 54
+   },
+   "semi": 8,
+   "cash": 15,
+   "hhi": 0.07785467128027682,
+   "effective": 12.844444444444445
   },
   "validation": {
    "windows": [
