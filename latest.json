@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-10T10:27:06.945Z",
+ "updatedAt": "2026-11-10T10:47:55.024Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 1338.8299560546875,
-   "change": -1.75,
-   "z": -2.7,
+   "last": 1338.47998046875,
+   "change": -1.78,
+   "z": -2.8,
    "sd": 0.643884532532243,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 84.56999969482422,
-   "change": -2.63,
-   "z": -0.9,
+   "last": 85.02999877929688,
+   "change": -2.1,
+   "z": -0.7,
    "sd": 2.891273352048926,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 4088.5,
-   "change": -0.63,
+   "last": 4084,
+   "change": -0.74,
    "z": -0.5,
    "sd": 1.3625338106020346,
    "source": "Yahoo"
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-10",
-   "last": 19.850000381469727,
-   "change": -0.35,
+   "last": 19.979999542236328,
+   "change": 0.3,
    "z": 0,
    "sd": 11.73515835561926,
    "source": "Yahoo",
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": 2.5,
-  "politics": 0.5,
-  "rates": 2.4,
-  "trade": 0.8,
+  "war": 2.1,
+  "politics": 0.3,
+  "rates": 2.1,
+  "trade": 0.7,
   "fx": -0.5,
   "energy": 2.2,
-  "market": 0.2,
+  "market": 0.1,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 0.7
+  "policy": 0.4
  },
  "rates": {
   "war": {
-   "rate": 5.3,
-   "saturated": 1,
+   "rate": 4.8,
+   "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.8,
+   "rate": 2.7,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 4.3,
+   "rate": 4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 4,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 5.1,
+   "rate": 5,
    "saturated": 2,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   }
@@ -221,19 +221,19 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 80,
-    "spike": 2.5,
+    "score": 78,
+    "spike": 2.1,
     "news": true,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.78,
      "unit": "%",
-     "z": 2.7
+     "z": -2.8
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +2.35%(평소의 2.7배)"
+     "원/달러 -1.78%(평소의 2.8배)"
     ]
    }
   },
@@ -277,10 +277,10 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 72,
-    "spike": 0.2,
+    "level": "urgent",
+    "label": "긴급",
+    "score": 71,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -291,8 +291,7 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +2.35%(평소의 2.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "S&P 500 +2.35%(평소의 2.7배)"
     ]
    }
   },
@@ -339,19 +338,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 65,
-    "spike": 0.5,
+    "score": 64,
+    "spike": 0.3,
     "news": true,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.78,
      "unit": "%",
-     "z": 2.7
+     "z": -2.8
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +2.35%(평소의 2.7배)",
+     "원/달러 -1.78%(평소의 2.8배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
@@ -397,8 +396,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 64,
-    "spike": 2.4,
+    "score": 61,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -469,6 +468,62 @@
    }
   },
   {
+   "id": "6tohbn",
+   "title": "젠슨황 스캔들 '일파만파'...\"불확실성 최소화\" [정치ON]",
+   "firstSeen": "2026-11-10T07:31:00.000Z",
+   "lastSeen": "2026-11-10T10:41:00.000Z",
+   "count": 6,
+   "sources": 5,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아의 절체절명 위기 속…“젠슨 황 스캔들과 AI 투자는 별개” [...",
+     "link": "https://biz.heraldcorp.com/article/10932217?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-10T10:41:00.000Z"
+    },
+    {
+     "title": "불륜 스캔들에 젠슨 황 '흔들'...앨리스 황은 어디에? [이슈플러스]",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611101919002274",
+     "host": "ytn.co.kr",
+     "at": "2026-11-10T10:19:00.000Z"
+    },
+    {
+     "title": "젠슨 황 ‘불륜 스캔들’ 이어 ‘외압 스캔들’",
+     "link": "https://www.kmib.co.kr/article/20261110502026",
+     "host": "kmib.co.kr",
+     "at": "2026-11-10T10:08:00.000Z"
+    },
+    {
+     "title": "젠슨 황 스캔들 '일파만파'…후계자 거론도",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345492?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-10T09:15:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 60,
+    "spike": 2.1,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.78,
+     "unit": "%",
+     "z": -2.8
+    },
+    "why": [
+     "원/달러 -1.78%(평소의 2.8배)"
+    ]
+   }
+  },
+  {
    "id": "vpzhyu",
    "title": "금리 동결한 금통위원들 \"연속 금리인상 효과 점검\"",
    "firstSeen": "2026-11-10T07:50:00.000Z",
@@ -508,64 +563,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 60,
-    "spike": 2.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "S&P 500 +2.35%(평소의 2.7배)"
-    ]
-   }
-  },
-  {
-   "id": "6tohbn",
-   "title": "젠슨황 스캔들 '일파만파'...\"불확실성 최소화\" [정치ON]",
-   "firstSeen": "2026-11-10T07:31:00.000Z",
-   "lastSeen": "2026-11-10T10:19:00.000Z",
-   "count": 5,
-   "sources": 4,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "불륜 스캔들에 젠슨 황 '흔들'...앨리스 황은 어디에? [이슈플러스]",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611101919002274",
-     "host": "ytn.co.kr",
-     "at": "2026-11-10T10:19:00.000Z"
-    },
-    {
-     "title": "젠슨 황 ‘불륜 스캔들’ 이어 ‘외압 스캔들’",
-     "link": "https://www.kmib.co.kr/article/20261110502026",
-     "host": "kmib.co.kr",
-     "at": "2026-11-10T10:08:00.000Z"
-    },
-    {
-     "title": "젠슨 황 스캔들 '일파만파'…후계자 거론도",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345492?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-10T09:15:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 스캔들' 일파만파…CEO 거취 주목, 산업계 파장은?",
-     "link": "https://news.jtbc.co.kr/article/NB12327377?influxDiv=NAVER",
-     "host": "news.jtbc.co.kr",
-     "at": "2026-11-10T08:51:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 59,
-    "spike": 2.5,
+    "score": 57,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -604,8 +603,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 59,
-    "spike": 0.7,
+    "score": 57,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -616,6 +615,103 @@
     },
     "why": [
      "핵심 단어",
+     "S&P 500 +2.35%(평소의 2.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1cl0l3h",
+   "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
+   "firstSeen": "2026-11-09T08:18:00.000Z",
+   "lastSeen": "2026-11-10T08:56:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
+     "link": "https://www.etoday.co.kr/news/view/2646480",
+     "host": "etoday.co.kr",
+     "at": "2026-11-10T08:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 56,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.78,
+     "unit": "%",
+     "z": -2.8
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -1.78%(평소의 2.8배)"
+    ]
+   }
+  },
+  {
+   "id": "1tyc5k8",
+   "title": "美 반도체 훈풍·유가 급락...코스피 5,230선 회복·코스닥 4.48% 상승",
+   "firstSeen": "2026-11-10T00:10:00.000Z",
+   "lastSeen": "2026-11-10T09:38:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[오늘의 주목주] 삼성SDI 주가 9%대 반등, '반도체 투심 회복' 코스피 외...",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451677",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-10T09:38:00.000Z"
+    },
+    {
+     "title": "['클릭' 증시] 코스피 4%대 반등...반도체 상승 속 엔디비아 어쩌나",
+     "link": "http://www.00news.co.kr/news/articleView.html?idxno=107910",
+     "host": "00news.co.kr",
+     "at": "2026-11-10T09:36:00.000Z"
+    },
+    {
+     "title": "“반도체 급락 과도했다” 모처럼 상승…‘삼전닉스’ 뛰며 코스피 5230...",
+     "link": "https://www.seoul.co.kr/news/economy/securities/2026/11/10/20261110500363?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-10T09:03:00.000Z"
+    },
+    {
+     "title": "美 반도체 훈풍·유가 급락...코스피 5,230선 회복·코스닥 4.48% 상승",
+     "link": "https://www.youthdaily.co.kr/news/article.html?no=229633",
+     "host": "youthdaily.co.kr",
+     "at": "2026-11-10T07:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 55,
+    "spike": 2.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 2.35,
+     "unit": "%",
+     "z": 2.7
+    },
+    "why": [
      "S&P 500 +2.35%(평소의 2.7배)"
     ]
    }
@@ -660,8 +756,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 57,
-    "spike": 2.4,
+    "score": 54,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -677,59 +773,53 @@
    }
   },
   {
-   "id": "1tyc5k8",
-   "title": "美 반도체 훈풍·유가 급락...코스피 5,230선 회복·코스닥 4.48% 상승",
-   "firstSeen": "2026-11-10T00:10:00.000Z",
-   "lastSeen": "2026-11-10T09:38:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "176udd4",
+   "title": "11월 9일 이브닝뉴스 헤드라인",
+   "firstSeen": "2026-11-10T00:36:00.000Z",
+   "lastSeen": "2026-11-10T08:07:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
+    "politics",
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[오늘의 주목주] 삼성SDI 주가 9%대 반등, '반도체 투심 회복' 코스피 외...",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451677",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-10T09:38:00.000Z"
+     "title": "11월 10일 미리 보는 MBN 뉴스7",
+     "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5230077",
+     "host": "mbn.co.kr",
+     "at": "2026-11-10T08:07:00.000Z"
     },
     {
-     "title": "['클릭' 증시] 코스피 4%대 반등...반도체 상승 속 엔디비아 어쩌나",
-     "link": "http://www.00news.co.kr/news/articleView.html?idxno=107910",
-     "host": "00news.co.kr",
-     "at": "2026-11-10T09:36:00.000Z"
+     "title": "[이시각헤드라인] 11월 10일 뉴스센터",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261110133140JJs",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-10T04:32:00.000Z"
     },
     {
-     "title": "“반도체 급락 과도했다” 모처럼 상승…‘삼전닉스’ 뛰며 코스피 5230...",
-     "link": "https://www.seoul.co.kr/news/economy/securities/2026/11/10/20261110500363?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-10T09:03:00.000Z"
-    },
-    {
-     "title": "美 반도체 훈풍·유가 급락...코스피 5,230선 회복·코스닥 4.48% 상승",
-     "link": "https://www.youthdaily.co.kr/news/article.html?no=229633",
-     "host": "youthdaily.co.kr",
-     "at": "2026-11-10T07:30:00.000Z"
+     "title": "11월 9일 이브닝뉴스 헤드라인",
+     "link": "https://www.radiokorea.com/news/article.php?uid=509195",
+     "host": "radiokorea.com",
+     "at": "2026-11-10T00:36:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 55,
+    "score": 54,
     "spike": 2.2,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.78,
      "unit": "%",
-     "z": 2.7
+     "z": -2.8
     },
     "why": [
-     "S&P 500 +2.35%(평소의 2.7배)",
-     "시장 반응만 있는 사건이 이미 2건"
+     "원/달러 -1.78%(평소의 2.8배)"
     ]
    }
   },
@@ -767,28 +857,27 @@
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 2.5,
+    "level": "caution",
+    "label": "주의",
+    "score": 53,
+    "spike": 2.1,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.78,
      "unit": "%",
-     "z": 2.7
+     "z": -2.8
     },
     "why": [
-     "S&P 500 +2.35%(평소의 2.7배)",
-     "시장 반응만 있는 사건이 이미 2건"
+     "원/달러 -1.78%(평소의 2.8배)"
     ]
    }
   },
   {
-   "id": "ct8av3",
-   "title": "9개월 만에 열리는 우크라 '종전 협상'… 이번에는 성과 낼까",
-   "firstSeen": "2026-11-10T00:01:00.000Z",
+   "id": "sfh8x3",
+   "title": "美·러·우, 아부다비서 3자 협상…\"전후 안보보장 우선 논의\"(종합)",
+   "firstSeen": "2026-11-10T04:29:00.000Z",
    "lastSeen": "2026-11-10T09:46:00.000Z",
    "count": 3,
    "sources": 3,
@@ -804,33 +893,34 @@
      "at": "2026-11-10T09:46:00.000Z"
     },
     {
-     "title": "러우 협상 성과 있을까…\"美 종전 원하지만 푸틴은 시간벌기\"",
-     "link": "https://www.newsis.com/view/NISX20261110_0003862471",
-     "host": "newsis.com",
-     "at": "2026-11-10T08:48:00.000Z"
+     "title": "러·우, 종전 위한 ‘3자 협상’ 아부다비서 시작…2월 이후 첫 재개",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8708874&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-10T09:04:00.000Z"
     },
     {
-     "title": "9개월 만에 열리는 우크라 '종전 협상'… 이번에는 성과 낼까",
-     "link": "https://www.hankookilbo.com/news/article/A2026111009330005790?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-10T07:08:00.000Z"
+     "title": "美·러·우, 아부다비서 3자 협상…\"전후 안보보장 우선 논의\"(종합)",
+     "link": "https://www.news1.kr/world/europe/6349340",
+     "host": "news1.kr",
+     "at": "2026-11-10T07:13:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 55,
-    "spike": 2.5,
+    "level": "watch",
+    "label": "관찰",
+    "score": 53,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -1.75,
+     "change": -1.78,
      "unit": "%",
-     "z": -2.7
+     "z": -2.8
     },
     "why": [
-     "원/달러 -1.75%(평소의 2.7배)"
+     "원/달러 -1.78%(평소의 2.8배)",
+     "시장 반응만 있는 사건이 이미 2건"
     ]
    }
   },
@@ -869,8 +959,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 54,
-    "spike": 2.4,
+    "score": 51,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -880,103 +970,70 @@
      "z": 2.7
     },
     "why": [
-     "S&P 500 +2.35%(평소의 2.7배)"
-    ]
-   }
-  },
-  {
-   "id": "xojffk",
-   "title": "금통위원들 \"10월 금리 동결했지만 긴축 기조 이어가야\"",
-   "firstSeen": "2026-11-10T07:23:00.000Z",
-   "lastSeen": "2026-11-10T08:37:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "금통위원 \"금리 인상 영향 지켜봐야⋯긴축 기조 유지\"",
-     "link": "http://www.inews24.com/view/2024730",
-     "host": "inews24.com",
-     "at": "2026-11-10T08:37:00.000Z"
-    },
-    {
-     "title": "금통위원, 10월 금리 동결에도 \"긴축 기조 유지\"",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611101734042553",
-     "host": "ytn.co.kr",
-     "at": "2026-11-10T08:34:00.000Z"
-    },
-    {
-     "title": "금통위원들 \"10월 금리 동결했지만 긴축 기조 이어가야\"",
-     "link": "https://www.newsis.com/view/NISX20261110_0003862527",
-     "host": "newsis.com",
-     "at": "2026-11-10T07:23:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 2.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "S&P 500 +2.35%(평소의 2.7배)",
-     "시장 반응만 있는 사건이 이미 2건"
-    ]
-   }
-  },
-  {
-   "id": "1cl0l3h",
-   "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
-   "firstSeen": "2026-11-09T08:18:00.000Z",
-   "lastSeen": "2026-11-10T08:56:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "fx",
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "GS건설 외화채 3000만달러 크로스디폴트 우려…NH “신용 리스크 확산 가...",
-     "link": "https://www.etoday.co.kr/news/view/2646480",
-     "host": "etoday.co.kr",
-     "at": "2026-11-10T08:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 2.35,
-     "unit": "%",
-     "z": 2.7
-    },
-    "why": [
-     "핵심 단어",
      "S&P 500 +2.35%(평소의 2.7배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-10T10:47:55.024Z",
+   "id": "xae6ow",
+   "level": "caution",
+   "title": "엔비디아 충격에도 AI주 급반등",
+   "why": [
+    "핵심 단어",
+    "원/달러 -1.78%(평소의 2.8배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8708921&ref=A",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-10T10:47:55.024Z",
+   "id": "q68iqv",
+   "level": "caution",
+   "title": "[종합] 트럼프 \"이란 종전 합의에 긍정적 모멘텀\"…美·이란 협상 급물...",
+   "why": [
+    "원/달러 -1.78%(평소의 2.8배)"
+   ],
+   "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=881849",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-10T10:47:55.024Z",
+   "id": "19nqsbn",
+   "level": "urgent",
+   "title": "美 반도체 반등에 코스피 4거래일만에 급등... 5200선 회복 [마감시황]",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +2.35%(평소의 2.7배)"
+   ],
+   "link": "http://www.queen.co.kr/news/articleView.html?idxno=466114",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-10T10:47:55.024Z",
+   "id": "1tyc5k8",
+   "level": "caution",
+   "title": "美 반도체 훈풍·유가 급락...코스피 5,230선 회복·코스닥 4.48% 상승",
+   "why": [
+    "S&P 500 +2.35%(평소의 2.7배)"
+   ],
+   "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451677",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-10T10:47:55.024Z",
+   "id": "vpzhyu",
+   "level": "caution",
+   "title": "금리 동결한 금통위원들 \"연속 금리인상 효과 점검\"",
+   "why": [
+    "S&P 500 +2.35%(평소의 2.7배)"
+   ],
+   "link": "https://www.news1.kr/economy/trend/6349658",
+   "delivered": false
+  },
   {
    "at": "2026-11-10T10:27:06.945Z",
    "id": "sfh8x3",
@@ -1150,63 +1207,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://www.newsgn.com/news/articleView.html?idxno=584781",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T08:47:56.754Z",
-   "id": "kfrypr",
-   "level": "urgent",
-   "title": "[속보] 코스피·코스닥, 4%대 급등 마감…4거래일만 반등",
-   "why": [
-    "핵심 단어",
-    "원/달러 -1.96%(평소의 3배)"
-   ],
-   "link": "https://www.newsinside.kr/news/articleView.html?idxno=5044817",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T08:18:18.282Z",
-   "id": "1klacfi",
-   "level": "caution",
-   "title": "[셀럽의 한 수] 오늘 밤 美 CPI '촉각' 오늘 급반등 내일도 이어질까",
-   "why": [
-    "S&P 500 +2.35%(평소의 2.7배)"
-   ],
-   "link": "https://www.hani.co.kr/arti/economy/finance/1286644.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T08:18:18.282Z",
-   "id": "vpzhyu",
-   "level": "caution",
-   "title": "금리 동결한 금통위원들 \"연속 금리인상 효과 점검\"",
-   "why": [
-    "S&P 500 +2.35%(평소의 2.7배)"
-   ],
-   "link": "https://www.etoday.co.kr/news/view/2646433",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T07:47:12.836Z",
-   "id": "kfrypr",
-   "level": "caution",
-   "title": "코스피, 장중 반등에도 5019 마감…2월 2일 이후 최저",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +2.35%(평소의 2.7배)"
-   ],
-   "link": "https://news.bizwatch.co.kr/article/market/2026/11/10/0040",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-10T07:47:12.836Z",
-   "id": "1bwj2z5",
-   "level": "caution",
-   "title": "[아시아라운드업 20261110] 중국 관영지, 젠슨황 '스파이 불륜 연루설'에...",
-   "why": [
-    "원/달러 -2.04%(평소의 3.2배)"
-   ],
-   "link": "https://www.yna.co.kr/view/AKR20261110058351083?input=1195m",
    "delivered": false
   }
  ],
