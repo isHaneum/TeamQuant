@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-11T13:27:39.720Z",
+ "updatedAt": "2026-11-11T13:47:51.906Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 1334.280029296875,
-   "change": -0.71,
-   "z": -1.1,
+   "last": 1335.5799560546875,
+   "change": -0.61,
+   "z": -0.9,
    "sd": 0.666136262634127,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 86.95999908447266,
-   "change": 1.07,
-   "z": 0.4,
+   "last": 87.41000366210938,
+   "change": 1.59,
+   "z": 0.6,
    "sd": 2.876793379200961,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 4053.800048828125,
-   "change": 0.59,
-   "z": 0.4,
+   "last": 4044.60009765625,
+   "change": 0.36,
+   "z": 0.3,
    "sd": 1.3793365477261483,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 18.450000762939453,
-   "change": -5.19,
-   "z": -0.4,
+   "last": 18.420000076293945,
+   "change": -5.34,
+   "z": -0.5,
    "sd": 11.734936623655216,
    "source": "Yahoo",
    "checked": true
@@ -110,24 +110,24 @@
    "label": "미 10년 금리",
    "unit": "bp",
    "available": true,
-   "date": "2026-11-10",
-   "last": 4.982999801635742,
-   "change": 11.9,
-   "z": 2.3,
-   "sd": 5.133200805897257,
+   "date": "2026-11-11",
+   "last": 4.998000144958496,
+   "change": 1.5,
+   "z": 0.3,
+   "sd": 5.33922022327753,
    "source": "Yahoo"
   }
  ],
  "spikes": {
   "war": -0.7,
   "politics": -2.4,
-  "rates": -0.2,
+  "rates": -0.3,
   "trade": 0.4,
   "fx": -0.5,
   "energy": -0.6,
   "market": -1.6,
   "credit": -0.2,
-  "disaster": 0.4,
+  "disaster": 0,
   "policy": -0.8
  },
  "rates": {
@@ -142,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.4,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
@@ -172,7 +172,7 @@
    "queries": 2
   },
   "disaster": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   },
@@ -187,9 +187,9 @@
    "id": "13ezm4r",
    "title": "“코스피 숨 고르기, 코스닥 3% 급등…반도체·2차전지주 강세”",
    "firstSeen": "2026-11-11T00:28:00.000Z",
-   "lastSeen": "2026-11-11T12:24:00.000Z",
-   "count": 14,
-   "sources": 13,
+   "lastSeen": "2026-11-11T13:40:00.000Z",
+   "count": 17,
+   "sources": 16,
    "topics": [
     "rates",
     "market"
@@ -198,6 +198,12 @@
     "rates"
    ],
    "links": [
+    {
+     "title": "[26.11.11 증시 인싸잇] 코스피 2.6%·코스닥 5.6% 급등... 반도체가 증시...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261702",
+     "host": "mediawatch.kr",
+     "at": "2026-11-11T13:40:00.000Z"
+    },
     {
      "title": "美 빅스텝 우려에도 코스피 2.6%↑…5375 마감",
      "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=565138",
@@ -215,30 +221,24 @@
      "link": "http://www.yonhapnewstv.co.kr/news/MYH20261111181446WL2",
      "host": "yonhapnewstv.co.kr",
      "at": "2026-11-11T09:15:00.000Z"
-    },
-    {
-     "title": "美 빅스텝 공포 뚫은 코스피 5370선 안착…\"AI 투자 신뢰가 상승 견인\"",
-     "link": "https://www.etoday.co.kr/news/view/2646952",
-     "host": "etoday.co.kr",
-     "at": "2026-11-11T09:02:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 65,
+    "score": 45,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
     ]
    }
   },
@@ -286,19 +286,79 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 65,
+    "score": 45,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
+    ]
+   }
+  },
+  {
+   "id": "1ra7zug",
+   "title": "코스닥 5.62% 급등·이틀째 매수 사이드카... 코스피 5300선 회복 [마감시...",
+   "firstSeen": "2026-11-11T06:36:00.000Z",
+   "lastSeen": "2026-11-11T09:32:00.000Z",
+   "count": 9,
+   "sources": 9,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates",
+    "market"
+   ],
+   "links": [
+    {
+     "title": "5% 넘게 뛴 코스닥, 700선 탈환… 부양책 기대감에 ‘불기둥’",
+     "link": "https://www.fnnews.com/news/202611111830258613",
+     "host": "fnnews.com",
+     "at": "2026-11-11T09:32:00.000Z"
+    },
+    {
+     "title": "코스피 2.6% 상승…코스닥 700선 회복",
+     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54584",
+     "host": "koreareport.co.kr",
+     "at": "2026-11-11T08:38:00.000Z"
+    },
+    {
+     "title": "반도체株 반등에 코스피 이틀째 상승…코스닥 700선 탈환",
+     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101077",
+     "host": "newsian.co.kr",
+     "at": "2026-11-11T08:08:00.000Z"
+    },
+    {
+     "title": "'외인 사자' 코스피 5,300선 안착…'매수 사이드카' 코스닥 5%대 폭등",
+     "link": "https://www.youthdaily.co.kr/news/article.html?no=229697",
+     "host": "youthdaily.co.kr",
+     "at": "2026-11-11T08:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 44,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +2.6%"
     ]
    }
   },
@@ -347,79 +407,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 64,
+    "score": 44,
     "spike": 0.4,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1ra7zug",
-   "title": "코스닥 5.62% 급등·이틀째 매수 사이드카... 코스피 5300선 회복 [마감시...",
-   "firstSeen": "2026-11-11T06:36:00.000Z",
-   "lastSeen": "2026-11-11T08:38:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [
-    "rates",
-    "market"
-   ],
-   "links": [
-    {
-     "title": "코스피 2.6% 상승…코스닥 700선 회복",
-     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54584",
-     "host": "koreareport.co.kr",
-     "at": "2026-11-11T08:38:00.000Z"
-    },
-    {
-     "title": "반도체株 반등에 코스피 이틀째 상승…코스닥 700선 탈환",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101077",
-     "host": "newsian.co.kr",
-     "at": "2026-11-11T08:08:00.000Z"
-    },
-    {
-     "title": "'외인 사자' 코스피 5,300선 안착…'매수 사이드카' 코스닥 5%대 폭등",
-     "link": "https://www.youthdaily.co.kr/news/article.html?no=229697",
-     "host": "youthdaily.co.kr",
-     "at": "2026-11-11T08:02:00.000Z"
-    },
-    {
-     "title": "美 금리 우려 넘은 코스피 5375…코스닥도 700선 회복",
-     "link": "https://www.kbmaeil.com/article/20261111500628",
-     "host": "kbmaeil.com",
-     "at": "2026-11-11T07:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 63,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
     ]
    }
   },
@@ -465,19 +465,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 61,
+    "score": 41,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
     ]
    }
   },
@@ -526,19 +526,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 61,
+    "score": 41,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
     ]
    }
   },
@@ -586,19 +586,77 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 57,
+    "score": 37,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
+    ]
+   }
+  },
+  {
+   "id": "hb9fwg",
+   "title": "미·러·우크라 4시간 종전 협상에도 전력망 공습…평화 논의와 전쟁 현...",
+   "firstSeen": "2026-11-11T07:46:00.000Z",
+   "lastSeen": "2026-11-11T12:59:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "미·러·우 종전 협상 이틀 만에 종료…영토 등 쟁점 이견, 포로 교환만...",
+     "link": "https://www.khan.co.kr/article/202611112159005",
+     "host": "khan.co.kr",
+     "at": "2026-11-11T12:59:00.000Z"
+    },
+    {
+     "title": "미·러·우 종전 협상 종료…포로 교환 합의, 나머지는 추가 논의로",
+     "link": "https://www.khan.co.kr/article/202611112130001",
+     "host": "khan.co.kr",
+     "at": "2026-11-11T12:30:00.000Z"
+    },
+    {
+     "title": "우크라 3자 종전 협상 이틀째...안보·휴전 등 논의",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611111919505259",
+     "host": "ytn.co.kr",
+     "at": "2026-11-11T10:19:00.000Z"
+    },
+    {
+     "title": "미·러·우크라 4시간 종전 협상에도 전력망 공습…평화 논의와 전쟁 현...",
+     "link": "https://www.newsworker.co.kr/news/articleView.html?idxno=513528",
+     "host": "newsworker.co.kr",
+     "at": "2026-11-11T07:46:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 35,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.61,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.61%"
     ]
    }
   },
@@ -638,20 +696,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 54,
+    "score": 34,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "코스피 +2.6%"
     ]
    }
   },
@@ -692,20 +749,114 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 52,
+    "score": 32,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "코스피 +2.6%"
+    ]
+   }
+  },
+  {
+   "id": "y1gbha",
+   "title": "미국 평균 휘발유 가격 4달러 밑으로…7월 이후 처음",
+   "firstSeen": "2026-11-10T19:18:00.000Z",
+   "lastSeen": "2026-11-11T02:28:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics",
+    "fx"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "미국 휘발유 가격 4달러 아래로…트럼프 이란 공습 보류 시사에 국제유...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=397557",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-11T02:28:00.000Z"
+    },
+    {
+     "title": "미국 평균 휘발유 가격 4달러 밑으로…7월 이후 처음",
+     "link": "https://www.newsis.com/view/NISX20261111_0003862925",
+     "host": "newsis.com",
+     "at": "2026-11-10T19:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 31,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +2.6%"
+    ]
+   }
+  },
+  {
+   "id": "go2rj2",
+   "title": "[마켓 프리뷰] 매수 사이드카 발동…중간선거·젠슨 황 '쇼크' 걷힐까?",
+   "firstSeen": "2026-11-10T22:36:00.000Z",
+   "lastSeen": "2026-11-11T08:47:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스닥, 5%대 급등···매수 사이드카 발동",
+     "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2491324",
+     "host": "enewstoday.co.kr",
+     "at": "2026-11-11T08:47:00.000Z"
+    },
+    {
+     "title": "[마켓 프리뷰] 매수 사이드카 발동…중간선거·젠슨 황 '쇼크' 걷힐까?",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345562?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-10T22:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 31,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +2.6%"
     ]
    }
   },
@@ -739,19 +890,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 51,
+    "score": 31,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
     ]
    }
   },
@@ -781,184 +932,100 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
+    "score": 31,
     "spike": 0.4,
     "news": false,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
     ]
    }
   },
   {
-   "id": "17kj2bu",
-   "title": "美 CPI 에 살아난 ‘빅스텝’ 공포…구원투수는 꺾인 기름값?",
-   "firstSeen": "2026-11-11T06:13:00.000Z",
-   "lastSeen": "2026-11-11T06:13:00.000Z",
+   "id": "1eu1912",
+   "title": "[재테크 첫걸음] 요동치는 증시 브레이크…'사이드카' 란?",
+   "firstSeen": "2026-11-11T01:14:00.000Z",
+   "lastSeen": "2026-11-11T01:14:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "rates"
+    "market"
    ],
    "critical": [
-    "rates"
+    "market"
    ],
    "links": [
     {
-     "title": "美 CPI 에 살아난 ‘빅스텝’ 공포…구원투수는 꺾인 기름값?",
-     "link": "https://www.joongang.co.kr/article/25477667",
-     "host": "joongang.co.kr",
-     "at": "2026-11-11T06:13:00.000Z"
+     "title": "[재테크 첫걸음] 요동치는 증시 브레이크…'사이드카' 란?",
+     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=286081",
+     "host": "financialpost.co.kr",
+     "at": "2026-11-11T01:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
+    "score": 28,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1jof5lp",
-   "title": "\"최종 3.50% 이상 오를지도\"…美 '빅스텝' 부상에 한은 긴축 고삐 조이나",
-   "firstSeen": "2026-11-11T07:28:00.000Z",
-   "lastSeen": "2026-11-11T07:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "\"최종 3.50% 이상 오를지도\"…美 '빅스텝' 부상에 한은 긴축 고삐 조이나",
-     "link": "https://www.mt.co.kr/economy/2026/11/11/2026111116042327629",
-     "host": "mt.co.kr",
-     "at": "2026-11-11T07:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1iks44d",
-   "title": "물가 오르는데 카드빚은 역대 최대…美연준 12월 '빅스텝' 나설까",
-   "firstSeen": "2026-11-11T05:43:00.000Z",
-   "lastSeen": "2026-11-11T08:08:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "물가 오르는데 카드빚은 역대 최대…美연준 12월 '빅스텝' 나설까",
-     "link": "https://www.hankookilbo.com/news/article/A2026111109580000755?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-11T08:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "7yv03t",
-   "title": "월러 ‘12월 빅스텝’ 꺼냈지만…AI 투심 악화·유가 등 변수 많아",
-   "firstSeen": "2026-11-11T08:39:00.000Z",
-   "lastSeen": "2026-11-11T08:39:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "월러 ‘12월 빅스텝’ 꺼냈지만…AI 투심 악화·유가 등 변수 많아",
-     "link": "https://www.sedaily.com/article/20113122?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-11T08:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
+     "코스피 +2.6%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-11T13:47:51.906Z",
+   "id": "1ok7u92",
+   "level": "caution",
+   "title": "미 연준 '빅스텝' 가능성 부상…미 근원 물가, '월러 기준' 충족",
+   "why": [
+    "핵심 단어",
+    "코스피 +2.6%"
+   ],
+   "link": "https://www.edaily.co.kr/News/Read?newsId=05697366645644736&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-11T13:47:51.906Z",
+   "id": "13ezm4r",
+   "level": "caution",
+   "title": "“코스피 숨 고르기, 코스닥 3% 급등…반도체·2차전지주 강세”",
+   "why": [
+    "핵심 단어",
+    "코스피 +2.6%"
+   ],
+   "link": "https://www.mediawatch.kr/news/article.html?no=261702",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-11T13:47:51.906Z",
+   "id": "1hur72k",
+   "level": "caution",
+   "title": "비트코인(BTC)·금, CPI 발표 후 동반 하락...12월 금리 인상 확정?",
+   "why": [
+    "핵심 단어",
+    "코스피 +2.6%"
+   ],
+   "link": "https://www.betanews.net/article/view/beta202611110091",
+   "delivered": false
+  },
   {
    "at": "2026-11-11T13:27:39.720Z",
    "id": "y1gbha",
@@ -1164,44 +1231,6 @@
     "원/달러 -0.71%"
    ],
    "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2491324",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T12:19:40.023Z",
-   "id": "ymowzt",
-   "level": "caution",
-   "title": "美 2년물 금리, 15bp 급등...CPI가 연준 빅스텝으로?",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +11.9bp(평소의 2.3배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.topstarnews.net/news/articleView.html?idxno=16274164",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T12:19:40.023Z",
-   "id": "1a6wdmf",
-   "level": "caution",
-   "title": "美 국채금리 일제히 상승…10년물 장중 5% 재돌파",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +11.9bp(평소의 2.3배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.tokenpost.kr/news/economy/436511",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T12:19:40.023Z",
-   "id": "szk9ir",
-   "level": "caution",
-   "title": "AI 거품 우려에 물가 쇼크까지…월가 덮친 '이중 악재'",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +11.9bp(평소의 2.3배)"
-   ],
-   "link": "https://www.widedaily.com/news/articleView.html?idxno=303437",
    "delivered": false
   }
  ],
