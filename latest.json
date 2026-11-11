@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-11T03:28:59.595Z",
+ "updatedAt": "2026-11-11T03:48:08.098Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 5324.580078125,
-   "change": 1.63,
-   "z": 0.5,
+   "last": 5332.89990234375,
+   "change": 1.79,
+   "z": 0.6,
    "sd": 2.9840925109791576,
    "source": "Yahoo",
    "checked": true
@@ -23,9 +23,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 699.0800170898438,
-   "change": 4.71,
-   "z": 1.8,
+   "last": 697.5399780273438,
+   "change": 4.48,
+   "z": 1.7,
    "sd": 2.577226523266417,
    "source": "Yahoo",
    "checked": true
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 1336.25,
-   "change": -0.56,
-   "z": -0.8,
+   "last": 1337.4300537109375,
+   "change": -0.48,
+   "z": -0.7,
    "sd": 0.666136262634127,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 86.5,
-   "change": 0.53,
+   "last": 86.55000305175781,
+   "change": 0.59,
    "z": 0.2,
    "sd": 2.876793379200961,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 4057.10009765625,
-   "change": 0.67,
-   "z": 0.5,
+   "last": 4054.5,
+   "change": 0.6,
+   "z": 0.4,
    "sd": 1.3793365477261483,
    "source": "Yahoo"
   },
@@ -119,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": 1,
+  "war": 0.8,
   "politics": 1,
-  "rates": 2.6,
-  "trade": 1.5,
+  "rates": 2.5,
+  "trade": 1.3,
   "fx": -0.5,
-  "energy": 1.9,
+  "energy": 1.4,
   "market": 0.2,
   "credit": 0.1,
   "disaster": 0,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 3.3,
+   "rate": 3,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 5.4,
+   "rate": 5.3,
    "saturated": 2,
    "queries": 3
   },
   "trade": {
-   "rate": 5,
+   "rate": 4.8,
    "saturated": 1,
    "queries": 2
   },
@@ -157,8 +157,8 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6.7,
-   "saturated": 1,
+   "rate": 5.7,
+   "saturated": 0,
    "queries": 1
   },
   "market": {
@@ -183,6 +183,64 @@
   }
  },
  "issues": [
+  {
+   "id": "1ok7u92",
+   "title": "美 10월 물가도 예상치 상회…연준, 12월 ‘빅스텝’ 거론",
+   "firstSeen": "2026-11-10T17:41:00.000Z",
+   "lastSeen": "2026-11-11T03:19:00.000Z",
+   "count": 9,
+   "sources": 7,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "소비자물가 예상치 웃돌아…연준 “12월 0.5%p 인상도 고려”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8709796&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-11T03:19:00.000Z"
+    },
+    {
+     "title": "근원 CPI 3개월 연율 3.7%…연준, 12월 인상 경로 이견",
+     "link": "https://www.tokenpost.kr/news/economy/436344",
+     "host": "tokenpost.kr",
+     "at": "2026-11-11T03:12:00.000Z"
+    },
+    {
+     "title": "예상 웃돈 美 10월 소비자물가…월러 “12월 금리 빅스텝도 고려”",
+     "link": "https://biz.heraldcorp.com/article/10933583?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-11T02:34:00.000Z"
+    },
+    {
+     "title": "美 물가 예상 웃돌자…연준 12월 '빅스텝' 가능성",
+     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200436",
+     "host": "mstoday.co.kr",
+     "at": "2026-11-11T02:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 84,
+    "spike": 2.5,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 11.9,
+     "unit": "bp",
+     "z": 2.3
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +11.9bp(평소의 2.3배)"
+    ]
+   }
+  },
   {
    "id": "1qm7qhf",
    "title": "뉴욕증시, 연준 '빅스텝' 우려·엔비디아 급락에 하락 마감",
@@ -226,68 +284,10 @@
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 83,
-    "spike": 2.6,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 11.9,
-     "unit": "bp",
-     "z": 2.3
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +11.9bp(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "rs1kc0",
-   "title": "美 10월 물가도 예상치 상회…연준, 12월 ‘빅스텝’ 거론",
-   "firstSeen": "2026-11-10T14:20:00.000Z",
-   "lastSeen": "2026-11-11T03:12:00.000Z",
-   "count": 8,
-   "sources": 7,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "근원 CPI 3개월 연율 3.7%…연준, 12월 인상 경로 이견",
-     "link": "https://www.tokenpost.kr/news/economy/436344",
-     "host": "tokenpost.kr",
-     "at": "2026-11-11T03:12:00.000Z"
-    },
-    {
-     "title": "예상 웃돈 美 10월 소비자물가…월러 “12월 금리 빅스텝도 고려”",
-     "link": "https://biz.heraldcorp.com/article/10933583?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-11T02:34:00.000Z"
-    },
-    {
-     "title": "美 물가 예상 웃돌자…연준 12월 '빅스텝' 가능성",
-     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200436",
-     "host": "mstoday.co.kr",
-     "at": "2026-11-11T02:32:00.000Z"
-    },
-    {
-     "title": "소비자물가 예상치 웃돌아…연준 “12월 0.5%p 인상도 고려”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8709657&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-11T01:42:00.000Z"
-    }
-   ],
-   "assess": {
     "level": "caution",
     "label": "주의",
     "score": 83,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -346,7 +346,7 @@
     "level": "caution",
     "label": "주의",
     "score": 81,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -405,7 +405,7 @@
     "level": "caution",
     "label": "주의",
     "score": 77,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -458,7 +458,7 @@
     "level": "caution",
     "label": "주의",
     "score": 74,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -512,7 +512,7 @@
     "level": "caution",
     "label": "주의",
     "score": 74,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -566,7 +566,7 @@
     "level": "caution",
     "label": "주의",
     "score": 72,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -614,7 +614,7 @@
     "level": "caution",
     "label": "주의",
     "score": 71,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -660,7 +660,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 69,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -700,7 +700,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 68,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -741,7 +741,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 68,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -781,7 +781,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 68,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -821,7 +821,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 68,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -837,19 +837,26 @@
    }
   },
   {
-   "id": "kqc7lt",
-   "title": "코스피, 美 '빅스텝' 우려에도 약보합 출발 후 상승 전환…삼전닉스 강...",
-   "firstSeen": "2026-11-11T01:36:00.000Z",
-   "lastSeen": "2026-11-11T02:40:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "pwsjra",
+   "title": "“코스피 숨 고르기, 코스닥 3% 급등…반도체·2차전지주 강세”",
+   "firstSeen": "2026-11-11T00:12:00.000Z",
+   "lastSeen": "2026-11-11T02:46:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
     "market"
    ],
    "critical": [
-    "rates"
+    "rates",
+    "market"
    ],
    "links": [
+    {
+     "title": "코스닥 4%대 급등 매수 사이드카…코스피도 상승세",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8709769&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-11T02:46:00.000Z"
+    },
     {
      "title": "코스피 미국 증시 하락에도 장중 5300대로 상승, 코스닥도 690선까지 올...",
      "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451713",
@@ -857,28 +864,22 @@
      "at": "2026-11-11T02:40:00.000Z"
     },
     {
-     "title": "코스피,美 '빅스텝' 우려속 5,300선 공방…코스닥 3%대 상승",
-     "link": "http://www.seouleconews.com/news/articleView.html?idxno=94934",
-     "host": "seouleconews.com",
-     "at": "2026-11-11T02:00:00.000Z"
+     "title": "코스닥 4%대 급등…코스피 장중 5300 터치",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345642?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-11T02:36:00.000Z"
     },
     {
-     "title": "코스피, 장 초반 상승 전환...코스닥 4%대 급등",
-     "link": "https://www.etnews.com/20261111000143",
-     "host": "etnews.com",
-     "at": "2026-11-11T01:43:00.000Z"
-    },
-    {
-     "title": "코스피, 美 '빅스텝' 우려에도 약보합 출발 후 상승 전환…삼전닉스 강...",
-     "link": "http://www.beyondpost.co.kr/view.php?ud=202611111030076786be44c0aacd_30",
-     "host": "beyondpost.co.kr",
-     "at": "2026-11-11T01:36:00.000Z"
+     "title": "[속보]코스피, 1%대 강세…코스닥은 매수 사이드카 발동하며 4%대 급등",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=04132806645644736&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-11T02:34:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 58,
+    "score": 64,
     "spike": 0.2,
     "news": true,
     "reaction": {
@@ -936,7 +937,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 56,
-    "spike": 2.6,
+    "spike": 2.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -952,6 +953,30 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-11T03:48:08.098Z",
+   "id": "y1gbha",
+   "level": "caution",
+   "title": "미국 평균 휘발유 가격 4달러 밑으로…7월 이후 처음",
+   "why": [
+    "핵심 단어",
+    "원/달러 -0.48%"
+   ],
+   "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=397557",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-11T03:48:08.098Z",
+   "id": "1ok7u92",
+   "level": "urgent",
+   "title": "美 10월 물가도 예상치 상회…연준, 12월 ‘빅스텝’ 거론",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +11.9bp(평소의 2.3배)"
+   ],
+   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8709796&ref=A",
+   "delivered": false
+  },
   {
    "at": "2026-11-11T03:28:59.595Z",
    "id": "1qm7qhf",
@@ -1175,30 +1200,6 @@
     "원/달러 -0.55%"
    ],
    "link": "https://www.hankyung.com/article/2026111193136",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T02:16:50.097Z",
-   "id": "k05s39",
-   "level": "caution",
-   "title": "[오늘의 이슈]4% 뛴 코스피, 미 금리 급등 버틸까",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +11.9bp(평소의 2.3배)"
-   ],
-   "link": "http://coinreaders.com/269231",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T02:16:50.097Z",
-   "id": "1108uls",
-   "level": "caution",
-   "title": "[외환+] 美 인플레發 빅스텝 우려···원·달러 환율, 1340원대 복귀",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +11.9bp(평소의 2.3배)"
-   ],
-   "link": "http://www.weeklytoday.com/news/articleView.html?idxno=801691",
    "delivered": false
   }
  ],
