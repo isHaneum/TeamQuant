@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-11T13:47:51.906Z",
+ "updatedAt": "2026-11-11T14:14:27.973Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -35,12 +35,13 @@
    "label": "S&P 500",
    "unit": "%",
    "available": true,
-   "date": "2026-11-10",
-   "last": 7520.93017578125,
-   "change": -0.38,
-   "z": -0.4,
+   "date": "2026-11-11",
+   "last": 7520.93,
+   "change": 0,
+   "z": 0,
    "sd": 0.9243252516448476,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -48,12 +49,13 @@
    "label": "나스닥",
    "unit": "%",
    "available": true,
-   "date": "2026-11-10",
-   "last": 25065.869140625,
-   "change": -0.74,
-   "z": -0.6,
+   "date": "2026-11-11",
+   "last": 25065.87,
+   "change": 0,
+   "z": 0,
    "sd": 1.3071419616664692,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -62,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 1335.5799560546875,
-   "change": -0.61,
-   "z": -0.9,
+   "last": 1336.3199462890625,
+   "change": -0.56,
+   "z": -0.8,
    "sd": 0.666136262634127,
    "source": "Yahoo"
   },
@@ -74,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 87.41000366210938,
-   "change": 1.59,
-   "z": 0.6,
+   "last": 87.26000213623047,
+   "change": 1.42,
+   "z": 0.5,
    "sd": 2.876793379200961,
    "source": "Yahoo"
   },
@@ -86,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 4044.60009765625,
-   "change": 0.36,
-   "z": 0.3,
+   "last": 4040.10009765625,
+   "change": 0.25,
+   "z": 0.2,
    "sd": 1.3793365477261483,
    "source": "Yahoo"
   },
@@ -98,8 +100,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-11",
-   "last": 18.420000076293945,
-   "change": -5.34,
+   "last": 18.25,
+   "change": -6.22,
    "z": -0.5,
    "sd": 11.734936623655216,
    "source": "Yahoo",
@@ -119,20 +121,20 @@
   }
  ],
  "spikes": {
-  "war": -0.7,
+  "war": -0.5,
   "politics": -2.4,
-  "rates": -0.3,
-  "trade": 0.4,
+  "rates": -0.4,
+  "trade": 0.1,
   "fx": -0.5,
-  "energy": -0.6,
-  "market": -1.6,
+  "energy": -0.7,
+  "market": -1.7,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.8
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -142,13 +144,13 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.3,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
-   "saturated": 1,
+   "rate": 3.2,
+   "saturated": 0,
    "queries": 2
   },
   "fx": {
@@ -157,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.7,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -407,8 +409,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 44,
-    "spike": 0.4,
+    "score": 42,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -543,12 +545,71 @@
    }
   },
   {
-   "id": "1a6wdmf",
-   "title": "美 국채금리 일제히 상승…10년물 장중 5% 재돌파",
-   "firstSeen": "2026-11-11T00:52:00.000Z",
-   "lastSeen": "2026-11-11T11:00:00.000Z",
+   "id": "1abmu0q",
+   "title": "[투자 노하우] 미 10월 CPI 전월비 0.4% 상승…예상치 상회",
+   "firstSeen": "2026-11-11T08:08:00.000Z",
+   "lastSeen": "2026-11-11T14:10:00.000Z",
    "count": 4,
    "sources": 4,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "비트코인, 10월 CPI 예상치 웃돌자 7만4천달러 이탈…롱 1억 7,800만달러...",
+     "link": "https://www.wikitree.co.kr/articles/1173904",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-11T14:10:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시 마감] \"예상 웃돈 10월 CPI에 연준 빅스텝 우려\"… 월러 연준...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=625697",
+     "host": "cbci.co.kr",
+     "at": "2026-11-11T12:06:00.000Z"
+    },
+    {
+     "title": "미 10월 CPI 3개월 연속 예상 상회…월러 12월 인상 가능성 언급",
+     "link": "https://www.tokenpost.kr/news/breaking/436479",
+     "host": "tokenpost.kr",
+     "at": "2026-11-11T08:22:00.000Z"
+    },
+    {
+     "title": "[투자 노하우] 미 10월 CPI 전월비 0.4% 상승…예상치 상회",
+     "link": "https://biz.sbs.co.kr/article_hub/20000345754?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-11T08:08:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 37,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +2.6%"
+    ]
+   }
+  },
+  {
+   "id": "1satem1",
+   "title": "미 10년물 국채 금리 장중 5% 돌파…12월 빅스텝 가능성 14%",
+   "firstSeen": "2026-11-11T01:21:00.000Z",
+   "lastSeen": "2026-11-11T11:00:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "rates",
     "fx",
@@ -575,122 +636,6 @@
      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008840574&plink=ORI&cooper=NAVER",
      "host": "news.sbs.co.kr",
      "at": "2026-11-11T01:21:00.000Z"
-    },
-    {
-     "title": "美 국채금리 일제히 상승…10년물 장중 5% 재돌파",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=780731",
-     "host": "slist.kr",
-     "at": "2026-11-11T00:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 2.6,
-     "unit": "%",
-     "z": 0.9
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 +2.6%"
-    ]
-   }
-  },
-  {
-   "id": "hb9fwg",
-   "title": "미·러·우크라 4시간 종전 협상에도 전력망 공습…평화 논의와 전쟁 현...",
-   "firstSeen": "2026-11-11T07:46:00.000Z",
-   "lastSeen": "2026-11-11T12:59:00.000Z",
-   "count": 4,
-   "sources": 3,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "미·러·우 종전 협상 이틀 만에 종료…영토 등 쟁점 이견, 포로 교환만...",
-     "link": "https://www.khan.co.kr/article/202611112159005",
-     "host": "khan.co.kr",
-     "at": "2026-11-11T12:59:00.000Z"
-    },
-    {
-     "title": "미·러·우 종전 협상 종료…포로 교환 합의, 나머지는 추가 논의로",
-     "link": "https://www.khan.co.kr/article/202611112130001",
-     "host": "khan.co.kr",
-     "at": "2026-11-11T12:30:00.000Z"
-    },
-    {
-     "title": "우크라 3자 종전 협상 이틀째...안보·휴전 등 논의",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611111919505259",
-     "host": "ytn.co.kr",
-     "at": "2026-11-11T10:19:00.000Z"
-    },
-    {
-     "title": "미·러·우크라 4시간 종전 협상에도 전력망 공습…평화 논의와 전쟁 현...",
-     "link": "https://www.newsworker.co.kr/news/articleView.html?idxno=513528",
-     "host": "newsworker.co.kr",
-     "at": "2026-11-11T07:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 35,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.61,
-     "unit": "%",
-     "z": -0.9
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 -0.61%"
-    ]
-   }
-  },
-  {
-   "id": "1abmu0q",
-   "title": "[투자 노하우] 미 10월 CPI 전월비 0.4% 상승…예상치 상회",
-   "firstSeen": "2026-11-11T08:08:00.000Z",
-   "lastSeen": "2026-11-11T12:06:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "[뉴욕증시 마감] \"예상 웃돈 10월 CPI에 연준 빅스텝 우려\"… 월러 연준...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=625697",
-     "host": "cbci.co.kr",
-     "at": "2026-11-11T12:06:00.000Z"
-    },
-    {
-     "title": "미 10월 CPI 3개월 연속 예상 상회…월러 12월 인상 가능성 언급",
-     "link": "https://www.tokenpost.kr/news/breaking/436479",
-     "host": "tokenpost.kr",
-     "at": "2026-11-11T08:22:00.000Z"
-    },
-    {
-     "title": "[투자 노하우] 미 10월 CPI 전월비 0.4% 상승…예상치 상회",
-     "link": "https://biz.sbs.co.kr/article_hub/20000345754?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-11T08:08:00.000Z"
     }
    ],
    "assess": {
@@ -932,8 +877,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 0.4,
+    "score": 29,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -987,9 +932,73 @@
      "코스피 +2.6%"
     ]
    }
+  },
+  {
+   "id": "16qfhac",
+   "title": "\"코스피 대폭락, 지금이 기회\"…개미들 또 비명 터지나",
+   "firstSeen": "2026-11-11T03:02:00.000Z",
+   "lastSeen": "2026-11-11T03:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "\"코스피 대폭락, 지금이 기회\"…개미들 또 비명 터지나",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=04214806645644736&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-11T03:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 2.6,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +2.6%"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-11T14:14:27.973Z",
+   "id": "1satem1",
+   "level": "caution",
+   "title": "미 10년물 국채 금리 장중 5% 돌파…12월 빅스텝 가능성 14%",
+   "why": [
+    "핵심 단어",
+    "코스피 +2.6%"
+   ],
+   "link": "https://www.tokenpost.kr/news/economy/436511",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-11T14:14:27.973Z",
+   "id": "1ra7zug",
+   "level": "caution",
+   "title": "코스닥 5.62% 급등·이틀째 매수 사이드카... 코스피 5300선 회복 [마감시...",
+   "why": [
+    "핵심 단어",
+    "코스피 +2.6%"
+   ],
+   "link": "https://www.fnnews.com/news/202611111830258613",
+   "delivered": false
+  },
   {
    "at": "2026-11-11T13:47:51.906Z",
    "id": "1ok7u92",
@@ -1207,30 +1216,6 @@
     "원/달러 -0.71%"
    ],
    "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=397557",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T12:19:40.023Z",
-   "id": "1jpi6ly",
-   "level": "caution",
-   "title": "[뉴욕증시] , 엔비디아 4.27% '나홀로' 급락...유가 하락·반도체주 강세...",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +11.9bp(평소의 2.3배)"
-   ],
-   "link": "https://www.joongboo.com/news/articleView.html?idxno=363742257",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T12:19:40.023Z",
-   "id": "go2rj2",
-   "level": "caution",
-   "title": "[마켓 프리뷰] 매수 사이드카 발동…중간선거·젠슨 황 '쇼크' 걷힐까?",
-   "why": [
-    "핵심 단어",
-    "원/달러 -0.71%"
-   ],
-   "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2491324",
    "delivered": false
   }
  ],
