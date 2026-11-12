@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T09:27:36.067Z",
+ "updatedAt": "2026-11-12T09:48:05.574Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1332.1500244140625,
-   "change": -0.73,
+   "last": 1331.719970703125,
+   "change": -0.76,
    "z": -1.1,
    "sd": 0.6661814150687196,
    "source": "Yahoo"
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 86.38999938964844,
-   "change": -0.16,
-   "z": -0.1,
+   "last": 86.12999725341797,
+   "change": -0.46,
+   "z": -0.2,
    "sd": 2.876929486808728,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3931,
-   "change": -1.74,
-   "z": -1.3,
+   "last": 3943.199951171875,
+   "change": -1.43,
+   "z": -1,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 18.360000610351562,
-   "change": 4.97,
-   "z": 0.4,
+   "last": 18.190000534057617,
+   "change": 4,
+   "z": 0.3,
    "sd": 11.788047688421058,
    "source": "Yahoo",
    "checked": true
@@ -120,11 +120,11 @@
  ],
  "spikes": {
   "war": 0.2,
-  "politics": 0.2,
-  "rates": 0.1,
+  "politics": -0.2,
+  "rates": -0.1,
   "trade": 0.3,
   "fx": -0.4,
-  "energy": 0.9,
+  "energy": 0.5,
   "market": 0,
   "credit": -0.2,
   "disaster": 0,
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 2.6,
+   "rate": 2.3,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 2,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4.7,
+   "rate": 4,
    "saturated": 0,
    "queries": 1
   },
@@ -183,54 +183,6 @@
   }
  },
  "issues": [
-  {
-   "id": "v78t4q",
-   "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
-   "firstSeen": "2026-11-11T15:02:00.000Z",
-   "lastSeen": "2026-11-12T02:32:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "energy",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 물가 예상 웃돌자 연준 '빅스텝' 가능성 부상…유가 급락에 인플레 ...",
-     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
-     "host": "polinews.co.kr",
-     "at": "2026-11-12T02:32:00.000Z"
-    },
-    {
-     "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
-     "link": "https://www.joongang.co.kr/article/25477804",
-     "host": "joongang.co.kr",
-     "at": "2026-11-11T15:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 44,
-    "spike": 0.9,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
   {
    "id": "5gnazc",
    "title": "연준, 12월 금리 인상 확률 100%...\"0.5%포인트 인상도 가능\"",
@@ -273,8 +225,56 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 42,
-    "spike": 0.1,
+    "score": 41,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "v78t4q",
+   "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
+   "firstSeen": "2026-11-11T15:02:00.000Z",
+   "lastSeen": "2026-11-12T02:32:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 물가 예상 웃돌자 연준 '빅스텝' 가능성 부상…유가 급락에 인플레 ...",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
+     "host": "polinews.co.kr",
+     "at": "2026-11-12T02:32:00.000Z"
+    },
+    {
+     "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
+     "link": "https://www.joongang.co.kr/article/25477804",
+     "host": "joongang.co.kr",
+     "at": "2026-11-11T15:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 41,
+    "spike": 0.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -320,8 +320,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 38,
-    "spike": 0.1,
+    "score": 37,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -406,8 +406,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
-    "spike": 0.1,
+    "score": 34,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -447,8 +447,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
-    "spike": 0.1,
+    "score": 34,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -488,48 +488,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "4jsq70",
-   "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
-   "firstSeen": "2026-11-11T05:30:00.000Z",
-   "lastSeen": "2026-11-12T07:18:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=153128",
-     "host": "ziksir.com",
-     "at": "2026-11-12T07:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 0.1,
+    "score": 34,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -585,24 +545,24 @@
    }
   },
   {
-   "id": "uu3cw6",
-   "title": "네이버클라우드 “사이버 팬데믹, 보안 특화 AI가 살길”",
-   "firstSeen": "2026-11-12T06:20:00.000Z",
-   "lastSeen": "2026-11-12T09:08:00.000Z",
+   "id": "4jsq70",
+   "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
+   "firstSeen": "2026-11-11T05:30:00.000Z",
+   "lastSeen": "2026-11-12T07:18:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "disaster"
+    "rates"
    ],
    "critical": [
-    "disaster"
+    "rates"
    ],
    "links": [
     {
-     "title": "네이버클라우드 “사이버 팬데믹, 보안 특화 AI가 살길”",
-     "link": "https://byline.network/?p=9004111222627446",
-     "host": "byline.network",
-     "at": "2026-11-12T09:08:00.000Z"
+     "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
+     "link": "https://www.ziksir.com/news/articleView.html?idxno=153128",
+     "host": "ziksir.com",
+     "at": "2026-11-12T07:18:00.000Z"
     }
    ],
    "assess": {
@@ -621,61 +581,6 @@
     "why": [
      "핵심 단어",
      "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "u9qvo7",
-   "title": "[경제포커스] 반도체 호황의 나비효과",
-   "firstSeen": "2026-11-11T14:38:00.000Z",
-   "lastSeen": "2026-11-12T07:18:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "KDI “반도체 호황 따른 소비 증가, 내년부터 본격화할 것”",
-     "link": "http://www.segyebiz.com/newsView/20261112514607?OutUrl=naver",
-     "host": "segyebiz.com",
-     "at": "2026-11-12T07:18:00.000Z"
-    },
-    {
-     "title": "반도체 수출 '호황'에도 지갑은 닫혔다…왜?",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=929083",
-     "host": "namdonews.com",
-     "at": "2026-11-12T07:18:00.000Z"
-    },
-    {
-     "title": "성장과 달리 민간소비에선 반도체 호황 누른 유가 충격...내년엔 반대로",
-     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319558",
-     "host": "updownnews.co.kr",
-     "at": "2026-11-12T06:36:00.000Z"
-    },
-    {
-     "title": "KDI \"반도체 호황, 내년 소비 0.6%p 끌어올린다…하반기 본격 체감\"",
-     "link": "https://www.widedaily.com/news/articleView.html?idxno=303546",
-     "host": "widedaily.com",
-     "at": "2026-11-12T05:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.74,
-     "unit": "%",
-     "z": -1.3
-    },
-    "why": [
-     "금 -1.74%"
     ]
    }
   },
@@ -720,8 +625,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
-    "spike": 0.9,
+    "score": 25,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -736,107 +641,113 @@
    }
   },
   {
-   "id": "mdkemd",
-   "title": "반도체 초호황에도 소비 회복 ‘제자리’…고유가 충격도 묵직",
-   "firstSeen": "2026-11-12T03:00:00.000Z",
-   "lastSeen": "2026-11-12T09:00:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1rwnkhu",
+   "title": "美특사, 푸틴·젤렌스키 만난다…종전협상 돌파구 찾나",
+   "firstSeen": "2026-11-12T08:53:00.000Z",
+   "lastSeen": "2026-11-12T09:37:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프 특사, 푸틴·젤렌스키 연쇄 회동…‘종전 협상’ 돌파구 찾나",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711227&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-12T09:37:00.000Z"
+    },
+    {
+     "title": "미국 특사, 푸틴·젤렌스키 차례로 만난다…종전 협상 돌파구 찾나",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008843668&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-12T09:22:00.000Z"
+    },
+    {
+     "title": "美특사, 푸틴·젤렌스키 만난다…협상 기대에도 교전 계속",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261112180349bYp",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-12T09:04:00.000Z"
+    },
+    {
+     "title": "러·우 종전협상 \"돌파구 보인다\" 쿠슈너",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346097?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-12T09:03:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "u9qvo7",
+   "title": "[경제포커스] 반도체 호황의 나비효과",
+   "firstSeen": "2026-11-11T14:38:00.000Z",
+   "lastSeen": "2026-11-12T07:18:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
     "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "반도체 초호황에도 살아나지 않는 소비",
-     "link": "https://www.hankyung.com/article/2026111236301",
-     "host": "hankyung.com",
-     "at": "2026-11-12T09:00:00.000Z"
+     "title": "반도체 수출 '호황'에도 지갑은 닫혔다…왜?",
+     "link": "https://www.namdonews.com/news/articleView.html?idxno=929083",
+     "host": "namdonews.com",
+     "at": "2026-11-12T07:18:00.000Z"
     },
     {
-     "title": "반도체 날아도 소비는 제자리…유가 충격이 더 빨랐다",
-     "link": "https://www.kukinews.com/article/view/kuk202611120155",
-     "host": "kukinews.com",
-     "at": "2026-11-12T07:26:00.000Z"
+     "title": "KDI “반도체 호황 따른 소비 증가, 내년부터 본격화할 것”",
+     "link": "http://www.segyebiz.com/newsView/20261112514607?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-12T07:18:00.000Z"
     },
     {
-     "title": "반도체 초호황에도 소비 회복 ‘제자리’…고유가 충격도 묵직",
-     "link": "https://www.asiatime.co.kr/article/20261112500302",
-     "host": "asiatime.co.kr",
-     "at": "2026-11-12T05:04:00.000Z"
+     "title": "성장과 달리 민간소비에선 반도체 호황 누른 유가 충격...내년엔 반대로",
+     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319558",
+     "host": "updownnews.co.kr",
+     "at": "2026-11-12T06:36:00.000Z"
+    },
+    {
+     "title": "KDI \"반도체 호황, 내년 소비 0.6%p 끌어올린다…하반기 본격 체감\"",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=303546",
+     "host": "widedaily.com",
+     "at": "2026-11-12T05:36:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 21,
-    "spike": 0.9,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.74,
+     "change": -1.43,
      "unit": "%",
-     "z": -1.3
+     "z": -1
     },
     "why": [
-     "금 -1.74%"
-    ]
-   }
-  },
-  {
-   "id": "zwo03i",
-   "title": "스캔들의 덫",
-   "firstSeen": "2026-11-11T15:06:00.000Z",
-   "lastSeen": "2026-11-12T09:26:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미 의회 ‘칩 규제 3법’ 탄력… 삼성·SK 중국 공장 불똥 우려",
-     "link": "https://www.seoul.co.kr/news/economy/industry/2026/11/12/20261112500341?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-12T09:26:00.000Z"
-    },
-    {
-     "title": "美 '대중 칩 규제 3법' 속도… 삼성·SK에도 불똥 튀나 [젠슨 황 스캔들...",
-     "link": "https://www.fnnews.com/news/202611121809110302",
-     "host": "fnnews.com",
-     "at": "2026-11-12T09:09:00.000Z"
-    },
-    {
-     "title": "젠슨 황 스캔들에 日 대중 반도체 규제 파장 주목…엔비디아 관련주 급...",
-     "link": "https://www.ajunews.com/view/20261112175152447",
-     "host": "ajunews.com",
-     "at": "2026-11-12T09:08:00.000Z"
-    },
-    {
-     "title": "스캔들의 덫",
-     "link": "http://www.kwangju.co.kr/article.php?aid=1794409200805262087",
-     "host": "kwangju.co.kr",
-     "at": "2026-11-11T15:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "S&P 500 +1.31%"
+     "금 -1.43%"
     ]
    }
   },
@@ -845,8 +756,8 @@
    "title": "‘젠슨 황 해임설’에 출렁인 코스피…외국인 3일째 ‘사자’에도 5340선...",
    "firstSeen": "2026-11-12T07:29:00.000Z",
    "lastSeen": "2026-11-12T09:09:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "market"
    ],
@@ -859,6 +770,12 @@
      "at": "2026-11-12T09:09:00.000Z"
     },
     {
+     "title": "코스피, ‘젠슨 황 해임설’ 영향 3거래일 만에 하락 마감",
+     "link": "https://futurechosun.com/?p=166458",
+     "host": "futurechosun.com",
+     "at": "2026-11-12T08:46:00.000Z"
+    },
+    {
      "title": "'첩첩산중' 코스피, 젠슨 황 해임설·옵션만기 '이중고'에 3일 만에 하락",
      "link": "https://www.etoday.co.kr/news/view/2647518",
      "host": "etoday.co.kr",
@@ -869,12 +786,62 @@
      "link": "https://www.hidomin.com/news/articleView.html?idxno=729151",
      "host": "hidomin.com",
      "at": "2026-11-12T07:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 21,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "650b42",
+   "title": "[국제금융 브리핑] AI 기업 실적·투자수요에 반도체주 급등...필라델피...",
+   "firstSeen": "2026-11-12T00:54:00.000Z",
+   "lastSeen": "2026-11-12T09:32:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[중국증시-마감] 반도체주 강세에도 하락",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444497",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-12T09:32:00.000Z"
     },
     {
-     "title": "‘젠슨 황 해임설’에 출렁인 코스피…외국인 3일째 ‘사자’에도 5340선...",
-     "link": "https://biz.heraldcorp.com/article/10935438?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-12T07:29:00.000Z"
+     "title": "코스피, 반도체주 약세에 0.61% 하락…원·달러 환율은 1천330원대",
+     "link": "https://www.youthdaily.co.kr/news/article.html?no=229776",
+     "host": "youthdaily.co.kr",
+     "at": "2026-11-12T08:36:00.000Z"
+    },
+    {
+     "title": "[증시 프리즘] 美 반도체주 5.7% 급등에도 코스피 0.6% 하락…젠슨 황 리...",
+     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8382",
+     "host": "moneystorm.kr",
+     "at": "2026-11-12T07:21:00.000Z"
+    },
+    {
+     "title": "[국제금융 브리핑] AI 기업 실적·투자수요에 반도체주 급등...필라델피...",
+     "link": "https://www.tokenpost.kr/news/economy/436880",
+     "host": "tokenpost.kr",
+     "at": "2026-11-12T00:54:00.000Z"
     }
    ],
    "assess": {
@@ -882,6 +849,55 @@
     "label": "관찰",
     "score": 18,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "1y1imin",
+   "title": "온, 3분기 매출 17% 성장…중국 마케팅 논란에 '촉각'",
+   "firstSeen": "2026-11-11T11:14:00.000Z",
+   "lastSeen": "2026-11-12T08:26:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[마감] 코스맥스, 3분기 매출 8758억 '역대 최대'…주가 5%↑",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=882823",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-12T08:26:00.000Z"
+    },
+    {
+     "title": "코어위브, 3분기 매출 168% 급증…순손실은 6배 확대",
+     "link": "https://www.sedaily.com/article/20113430?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-12T04:21:00.000Z"
+    },
+    {
+     "title": "온, 3분기 매출 17% 성장…중국 마케팅 논란에 '촉각'",
+     "link": "http://www.ktnews.com/news/articleView.html?idxno=150106",
+     "host": "ktnews.com",
+     "at": "2026-11-11T11:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 17,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
