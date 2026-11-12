@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T05:14:19.794Z",
+ "updatedAt": "2026-11-12T05:27:35.838Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 5308.39,
-   "change": -1.25,
-   "z": -0.4,
+   "last": 5333.8701171875,
+   "change": -0.77,
+   "z": -0.3,
    "sd": 2.963021948385691,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,8 +23,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 690.84,
-   "change": -2.02,
+   "last": 690.34,
+   "change": -2.09,
    "z": -0.8,
    "sd": 2.6905879415977827,
    "source": "네이버 현재가",
@@ -64,9 +63,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1328.6800537109375,
-   "change": -0.99,
-   "z": -1.5,
+   "last": 1327.989990234375,
+   "change": -1.04,
+   "z": -1.6,
    "sd": 0.6661814150687196,
    "source": "Yahoo"
   },
@@ -76,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 85.51000213623047,
-   "change": -1.18,
+   "last": 85.56999969482422,
+   "change": -1.11,
    "z": -0.4,
    "sd": 2.876929486808728,
    "source": "Yahoo"
@@ -88,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3983.199951171875,
-   "change": -0.43,
-   "z": -0.3,
+   "last": 3978.5,
+   "change": -0.55,
+   "z": -0.4,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
   },
@@ -121,26 +120,26 @@
   }
  ],
  "spikes": {
-  "war": -0.8,
-  "politics": -0.3,
+  "war": -0.9,
+  "politics": -0.4,
   "rates": -0.3,
   "trade": 0.5,
   "fx": -0.4,
-  "energy": 1.3,
-  "market": -0.3,
+  "energy": 1.6,
+  "market": -0.4,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 0.7,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.2,
-   "saturated": 1,
+   "rate": 2.1,
+   "saturated": 0,
    "queries": 3
   },
   "rates": {
@@ -159,12 +158,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 5.7,
+   "rate": 6.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.8,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 3
   },
@@ -185,65 +184,6 @@
   }
  },
  "issues": [
-  {
-   "id": "ocl8df",
-   "title": "[종합] 美 CPI 예상 웃돌자 4년 만의 '빅스텝' 거론까지…12월 금리 인상...",
-   "firstSeen": "2026-11-11T01:22:00.000Z",
-   "lastSeen": "2026-11-12T04:28:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "rates",
-    "energy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "금리 인상 경계감 속 비트코인 1억원 하회",
-     "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3082379",
-     "host": "newsclaim.co.kr",
-     "at": "2026-11-12T04:28:00.000Z"
-    },
-    {
-     "title": "연준, 12월 금리 인상 확률 100%...\"0.5%포인트 인상도 가능\"",
-     "link": "http://coinreaders.com/269540",
-     "host": "coinreaders.com",
-     "at": "2026-11-12T00:36:00.000Z"
-    },
-    {
-     "title": "[현승윤 칼럼] 한은, 기준금리 인상에 신중할 때",
-     "link": "https://www.hankyung.com/article/2026111109361",
-     "host": "hankyung.com",
-     "at": "2026-11-11T15:21:00.000Z"
-    },
-    {
-     "title": "한은 뉴욕사무소 \"투자은행들, 美 12월 금리 인상 확실시\"",
-     "link": "https://www.newsis.com/view/NISX20261111_0003864303",
-     "host": "newsis.com",
-     "at": "2026-11-11T09:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 59,
-    "spike": 1.3,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
   {
    "id": "4jsq70",
    "title": "AI 거품론에 물가 충격 겹친 월가… 연준 '빅스텝' 공포에 국채금리 폭...",
@@ -288,8 +228,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 53,
-    "spike": 1.3,
+    "score": 56,
+    "spike": 1.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -386,8 +326,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 44,
-    "spike": 1.3,
+    "score": 47,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -428,19 +368,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
+    "score": 41,
     "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.99,
+     "change": -1.04,
      "unit": "%",
-     "z": -1.5
+     "z": -1.6
     },
     "why": [
      "핵심 단어",
-     "원/달러 -0.99%"
+     "원/달러 -1.04%"
     ]
    }
   },
@@ -475,140 +415,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 39,
+    "score": 40,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.99,
+     "change": -1.04,
      "unit": "%",
-     "z": -1.5
+     "z": -1.6
     },
     "why": [
      "핵심 단어",
-     "원/달러 -0.99%"
-    ]
-   }
-  },
-  {
-   "id": "1vy7hbk",
-   "title": "엔화, 160엔 돌파 목전...연준 '빅스텝' 관측에 달러 매수 가속",
-   "firstSeen": "2026-11-11T23:27:00.000Z",
-   "lastSeen": "2026-11-11T23:27:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "엔화, 160엔 돌파 목전...연준 '빅스텝' 관측에 달러 매수 가속",
-     "link": "https://www.newspim.com/news/view/20261112000098",
-     "host": "newspim.com",
-     "at": "2026-11-11T23:27:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.99,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 -0.99%"
-    ]
-   }
-  },
-  {
-   "id": "bc6j0c",
-   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
-   "firstSeen": "2026-11-11T07:30:00.000Z",
-   "lastSeen": "2026-11-12T01:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "fx"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444378",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-12T01:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.99,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "원/달러 -0.99%"
-    ]
-   }
-  },
-  {
-   "id": "1vsoib7",
-   "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
-   "firstSeen": "2026-11-12T04:49:00.000Z",
-   "lastSeen": "2026-11-12T04:49:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
-     "link": "https://www.sidae.com/article/2026111213392185934",
-     "host": "sidae.com",
-     "at": "2026-11-12T04:49:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
+     "원/달러 -1.04%"
     ]
    }
   },
@@ -653,18 +472,195 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 1.3,
+    "score": 38,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.99,
+     "change": -1.04,
      "unit": "%",
-     "z": -1.5
+     "z": -1.6
     },
     "why": [
-     "원/달러 -0.99%"
+     "원/달러 -1.04%"
+    ]
+   }
+  },
+  {
+   "id": "1vy7hbk",
+   "title": "엔화, 160엔 돌파 목전...연준 '빅스텝' 관측에 달러 매수 가속",
+   "firstSeen": "2026-11-11T23:27:00.000Z",
+   "lastSeen": "2026-11-11T23:27:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "엔화, 160엔 돌파 목전...연준 '빅스텝' 관측에 달러 매수 가속",
+     "link": "https://www.newspim.com/news/view/20261112000098",
+     "host": "newspim.com",
+     "at": "2026-11-11T23:27:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.04,
+     "unit": "%",
+     "z": -1.6
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -1.04%"
+    ]
+   }
+  },
+  {
+   "id": "bc6j0c",
+   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
+   "firstSeen": "2026-11-11T07:30:00.000Z",
+   "lastSeen": "2026-11-12T01:26:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444378",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-12T01:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -1.04,
+     "unit": "%",
+     "z": -1.6
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -1.04%"
+    ]
+   }
+  },
+  {
+   "id": "ocl8df",
+   "title": "유가 하락에도 \"美 연준 12월 금리 인상 확률 100%\"",
+   "firstSeen": "2026-11-11T01:22:00.000Z",
+   "lastSeen": "2026-11-12T04:28:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "rates",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "금리 인상 경계감 속 비트코인 1억원 하회",
+     "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3082379",
+     "host": "newsclaim.co.kr",
+     "at": "2026-11-12T04:28:00.000Z"
+    },
+    {
+     "title": "연준, 12월 금리 인상 확률 100%...\"0.5%포인트 인상도 가능\"",
+     "link": "http://coinreaders.com/269540",
+     "host": "coinreaders.com",
+     "at": "2026-11-12T00:36:00.000Z"
+    },
+    {
+     "title": "[현승윤 칼럼] 한은, 기준금리 인상에 신중할 때",
+     "link": "https://www.hankyung.com/article/2026111109361",
+     "host": "hankyung.com",
+     "at": "2026-11-11T15:21:00.000Z"
+    },
+    {
+     "title": "한은 뉴욕사무소 \"투자은행들, 美 12월 금리 인상 확실시\"",
+     "link": "https://www.newsis.com/view/NISX20261111_0003864303",
+     "host": "newsis.com",
+     "at": "2026-11-11T09:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "1vsoib7",
+   "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
+   "firstSeen": "2026-11-12T04:49:00.000Z",
+   "lastSeen": "2026-11-12T04:49:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
+     "link": "https://www.sidae.com/article/2026111213392185934",
+     "host": "sidae.com",
+     "at": "2026-11-12T04:49:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
     ]
    }
   },
@@ -793,14 +789,20 @@
    "id": "mdkemd",
    "title": "\"반도체 날아도 지갑 닫힌 이유\"…KDI \"유가 충격 있었다\"",
    "firstSeen": "2026-11-12T03:00:00.000Z",
-   "lastSeen": "2026-11-12T05:04:00.000Z",
-   "count": 10,
+   "lastSeen": "2026-11-12T05:26:00.000Z",
+   "count": 11,
    "sources": 10,
    "topics": [
     "energy"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "반도체 호황에도 소비 '완만'…유가 충격이 먼저 왔다",
+     "link": "https://www.asiatime.co.kr/article/20261112500315",
+     "host": "asiatime.co.kr",
+     "at": "2026-11-12T05:26:00.000Z"
+    },
     {
      "title": "반도체 초호황에도 소비 회복 ‘제자리’…고유가 충격도 묵직",
      "link": "https://www.asiatime.co.kr/article/20261112500302",
@@ -818,84 +820,73 @@
      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008842929&plink=ORI&cooper=NAVER",
      "host": "news.sbs.co.kr",
      "at": "2026-11-12T04:25:00.000Z"
-    },
-    {
-     "title": "반도체 호황에도 소비 둔화, 국제 유가가 발목 잡는다",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=885287",
-     "host": "gokorea.kr",
-     "at": "2026-11-12T04:12:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 1.3,
+    "score": 33,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -1.18,
+     "change": -1.11,
      "unit": "%",
      "z": -0.4
     },
     "why": [
-     "WTI 유가 -1.18%"
+     "WTI 유가 -1.11%"
     ]
    }
   },
   {
-   "id": "8lgk1e",
-   "title": "AI 투자 불안에 외국인 자금 이탈 '러쉬'…10월 137억 달러 순유출",
-   "firstSeen": "2026-11-12T03:00:00.000Z",
-   "lastSeen": "2026-11-12T04:36:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "id": "jv1z8u",
+   "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
+   "firstSeen": "2026-11-11T23:36:00.000Z",
+   "lastSeen": "2026-11-12T01:14:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "fx"
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "10월 국내 증시서 외국인 193억弗 순유출…환율 1330원대 안정",
-     "link": "https://www.jasm.co.kr/news/view/325078/?sc=Naver",
-     "host": "jasm.co.kr",
-     "at": "2026-11-12T04:36:00.000Z"
+     "title": "금시세(금값) 급락",
+     "link": "http://www.kjdaily.com/article.php?aid=1794445981692018227",
+     "host": "kjdaily.com",
+     "at": "2026-11-12T01:14:00.000Z"
     },
     {
-     "title": "지난달 외국인 주식 193억 달러 순유출…원·달러 환율은 1330원대로 ↓",
-     "link": "https://www.dailian.co.kr/news/view/1714120/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-12T03:04:00.000Z"
+     "title": "금시세·금값 12일",
+     "link": "https://www.bntnews.co.kr/article/view/bnt202611120067",
+     "host": "bntnews.co.kr",
+     "at": "2026-11-12T00:20:00.000Z"
     },
     {
-     "title": "‘AI 불안’에 외국인 10월에도 韓주식 193억달러 팔았다",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03270166645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-12T03:02:00.000Z"
-    },
-    {
-     "title": "AI 불안에 외국인 주식 193억 달러 이탈…'셀 코리아'",
-     "link": "https://www.news1.kr/economy/trend/6351808",
-     "host": "news1.kr",
-     "at": "2026-11-12T03:00:00.000Z"
+     "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731350",
+     "host": "ebn.co.kr",
+     "at": "2026-11-11T23:36:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 25,
-    "spike": 0,
+    "score": 28,
+    "spike": 1.6,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.99,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
      "unit": "%",
-     "z": -1.5
+     "z": 1.4
     },
     "why": [
-     "원/달러 -0.99%"
+     "S&P 500 +1.31%"
     ]
    }
   }
