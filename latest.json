@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T14:14:51.303Z",
+ "updatedAt": "2026-11-12T14:28:13.899Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 86.56999969482422,
-   "change": 0.05,
-   "z": 0,
+   "last": 86.31999969482422,
+   "change": -0.24,
+   "z": -0.1,
    "sd": 2.876929486808728,
    "source": "Yahoo"
   },
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3895.10009765625,
-   "change": -2.63,
-   "z": -1.9,
+   "last": 3905.300048828125,
+   "change": -2.38,
+   "z": -1.7,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
   },
@@ -100,8 +100,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 18.719999313354492,
-   "change": 7.03,
+   "last": 18.809999465942383,
+   "change": 7.55,
    "z": 0.6,
    "sd": 11.788047688421058,
    "source": "Yahoo",
@@ -113,33 +113,33 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-12",
-   "last": 5.0320000648498535,
-   "change": 3.4,
-   "z": 0.6,
+   "last": 5.019999980926514,
+   "change": 2.2,
+   "z": 0.4,
    "sd": 5.332834964737695,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -0.9,
-  "politics": -2.2,
+  "war": -0.8,
+  "politics": -2,
   "rates": -0.7,
   "trade": 0.2,
   "fx": -0.4,
   "energy": -0.6,
-  "market": -1.1,
+  "market": -0.7,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 0.6,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.4,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
@@ -164,8 +164,8 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.3,
-   "saturated": 0,
+   "rate": 3,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -185,100 +185,6 @@
   }
  },
  "issues": [
-  {
-   "id": "v78t4q",
-   "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
-   "firstSeen": "2026-11-11T15:02:00.000Z",
-   "lastSeen": "2026-11-12T02:32:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "energy",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 물가 예상 웃돌자 연준 '빅스텝' 가능성 부상…유가 급락에 인플레 ...",
-     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
-     "host": "polinews.co.kr",
-     "at": "2026-11-12T02:32:00.000Z"
-    },
-    {
-     "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
-     "link": "https://www.joongang.co.kr/article/25477804",
-     "host": "joongang.co.kr",
-     "at": "2026-11-11T15:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 45,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.63,
-     "unit": "%",
-     "z": -1.9
-    },
-    "why": [
-     "핵심 단어",
-     "금 -2.63%"
-    ]
-   }
-  },
-  {
-   "id": "ejyr9x",
-   "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
-   "firstSeen": "2026-11-12T06:17:00.000Z",
-   "lastSeen": "2026-11-12T12:01:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "엔비디아 이사회 긴급 회의…젠슨 황 결국 ‘해임 수순’?",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711454&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-12T12:01:00.000Z"
-    },
-    {
-     "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611121517401278",
-     "host": "ytn.co.kr",
-     "at": "2026-11-12T06:17:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 45,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.63,
-     "unit": "%",
-     "z": -1.9
-    },
-    "why": [
-     "핵심 단어",
-     "금 -2.63%"
-    ]
-   }
-  },
   {
    "id": "1v5wf34",
    "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
@@ -338,6 +244,112 @@
    }
   },
   {
+   "id": "9kvjue",
+   "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
+   "firstSeen": "2026-11-12T04:23:00.000Z",
+   "lastSeen": "2026-11-12T13:35:00.000Z",
+   "count": 7,
+   "sources": 6,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "젠슨 황 해임 위기에 엔비디아 장전 8% 폭락",
+     "link": "https://www.fnnews.com/news/202611122232315459",
+     "host": "fnnews.com",
+     "at": "2026-11-12T13:35:00.000Z"
+    },
+    {
+     "title": "엔비디아 이사회 긴급 회의…젠슨 황 결국 ‘해임 수순’?",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711454&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-12T12:01:00.000Z"
+    },
+    {
+     "title": "엔비디아 CEO, 외도 인정 3일 만에 해임 위기...이사회 논의 예정",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3750515",
+     "host": "gukjenews.com",
+     "at": "2026-11-12T11:44:00.000Z"
+    },
+    {
+     "title": "엔비디아 급락에 K-반도체·소부장 주가도 '출렁'",
+     "link": "https://www.ajunews.com/view/20261112142530215",
+     "host": "ajunews.com",
+     "at": "2026-11-12T09:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 42,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.55,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.55%"
+    ]
+   }
+  },
+  {
+   "id": "v78t4q",
+   "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
+   "firstSeen": "2026-11-11T15:02:00.000Z",
+   "lastSeen": "2026-11-12T02:32:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 물가 예상 웃돌자 연준 '빅스텝' 가능성 부상…유가 급락에 인플레 ...",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
+     "host": "polinews.co.kr",
+     "at": "2026-11-12T02:32:00.000Z"
+    },
+    {
+     "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
+     "link": "https://www.joongang.co.kr/article/25477804",
+     "host": "joongang.co.kr",
+     "at": "2026-11-11T15:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 42,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.38,
+     "unit": "%",
+     "z": -1.7
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.38%"
+    ]
+   }
+  },
+  {
    "id": "c86036",
    "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
    "firstSeen": "2026-11-12T10:52:00.000Z",
@@ -362,19 +374,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
+    "score": 39,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.63,
+     "change": -2.38,
      "unit": "%",
-     "z": -1.9
+     "z": -1.7
     },
     "why": [
      "핵심 단어",
-     "금 -2.63%"
+     "금 -2.38%"
     ]
    }
   },
@@ -403,59 +415,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
+    "score": 39,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.63,
+     "change": -2.38,
      "unit": "%",
-     "z": -1.9
+     "z": -1.7
     },
     "why": [
      "핵심 단어",
-     "금 -2.63%"
-    ]
-   }
-  },
-  {
-   "id": "jpw6u0",
-   "title": "美, 中 반도체 규제 전면전…삼성·SK 중국공장 '초비상'",
-   "firstSeen": "2026-11-12T12:56:00.000Z",
-   "lastSeen": "2026-11-12T12:56:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "美, 中 반도체 규제 전면전…삼성·SK 중국공장 '초비상'",
-     "link": "https://www.dongponews.net/news/articleView.html?idxno=61646",
-     "host": "dongponews.net",
-     "at": "2026-11-12T12:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 42,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.63,
-     "unit": "%",
-     "z": -1.9
-    },
-    "why": [
-     "핵심 단어",
-     "금 -2.63%"
+     "금 -2.38%"
     ]
    }
   },
@@ -507,6 +479,303 @@
    }
   },
   {
+   "id": "9sxwqk",
+   "title": "美 소비자물가 0.4% 상승… 연내 기준금리 ‘빅스텝’ 가능성",
+   "firstSeen": "2026-11-11T15:31:00.000Z",
+   "lastSeen": "2026-11-11T15:31:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 소비자물가 0.4% 상승… 연내 기준금리 ‘빅스텝’ 가능성",
+     "link": "https://www.donga.com/news/Economy/article/all/20261111/135009315/2",
+     "host": "donga.com",
+     "at": "2026-11-11T15:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 2.2,
+     "unit": "bp",
+     "z": 0.4
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +2.2bp"
+    ]
+   }
+  },
+  {
+   "id": "96dg3x",
+   "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+   "firstSeen": "2026-11-11T16:39:00.000Z",
+   "lastSeen": "2026-11-11T16:39:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+     "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
+     "host": "thescoop.co.kr",
+     "at": "2026-11-11T16:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.55,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.55%"
+    ]
+   }
+  },
+  {
+   "id": "145hcaq",
+   "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
+   "firstSeen": "2026-11-12T04:22:00.000Z",
+   "lastSeen": "2026-11-12T04:22:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
+     "link": "https://www.sedaily.com/article/20113432?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-12T04:22:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.55,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.55%"
+    ]
+   }
+  },
+  {
+   "id": "1vsoib7",
+   "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
+   "firstSeen": "2026-11-12T04:49:00.000Z",
+   "lastSeen": "2026-11-12T04:49:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
+     "link": "https://www.sidae.com/article/2026111213392185934",
+     "host": "sidae.com",
+     "at": "2026-11-12T04:49:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.55,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.55%"
+    ]
+   }
+  },
+  {
+   "id": "1sfddx0",
+   "title": "美 연준 빅스텝설에 상승하는 시장 금리",
+   "firstSeen": "2026-11-12T06:12:00.000Z",
+   "lastSeen": "2026-11-12T06:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 연준 빅스텝설에 상승하는 시장 금리",
+     "link": "https://www.mt.co.kr/stock/2026/11/12/2026111214141373752",
+     "host": "mt.co.kr",
+     "at": "2026-11-12T06:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 2.2,
+     "unit": "bp",
+     "z": 0.4
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +2.2bp"
+    ]
+   }
+  },
+  {
+   "id": "4jsq70",
+   "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
+   "firstSeen": "2026-11-11T05:30:00.000Z",
+   "lastSeen": "2026-11-12T07:18:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
+     "link": "https://www.ziksir.com/news/articleView.html?idxno=153128",
+     "host": "ziksir.com",
+     "at": "2026-11-12T07:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 2.2,
+     "unit": "bp",
+     "z": 0.4
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +2.2bp"
+    ]
+   }
+  },
+  {
+   "id": "u9qvo7",
+   "title": "[경제포커스] 반도체 호황의 나비효과",
+   "firstSeen": "2026-11-11T14:38:00.000Z",
+   "lastSeen": "2026-11-12T14:10:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "“반도체 호황, 효과는 내년부터” KDI 전망",
+     "link": "https://www.kmib.co.kr/article/20261112501977",
+     "host": "kmib.co.kr",
+     "at": "2026-11-12T14:10:00.000Z"
+    },
+    {
+     "title": "반도체 훈풍 막은 '고유가'…소비 온기 내년부터 돈다",
+     "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=565247",
+     "host": "idaegu.co.kr",
+     "at": "2026-11-12T12:34:00.000Z"
+    },
+    {
+     "title": "반도체 수출 '호황'에도 지갑은 닫혔다…왜?",
+     "link": "https://www.namdonews.com/news/articleView.html?idxno=929083",
+     "host": "namdonews.com",
+     "at": "2026-11-12T07:18:00.000Z"
+    },
+    {
+     "title": "KDI “반도체 호황 따른 소비 증가, 내년부터 본격화할 것”",
+     "link": "http://www.segyebiz.com/newsView/20261112514607?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-12T07:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 27,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.38,
+     "unit": "%",
+     "z": -1.7
+    },
+    "why": [
+     "금 -2.38%"
+    ]
+   }
+  },
+  {
    "id": "1rwnkhu",
    "title": "美특사, 푸틴·젤렌스키 만난다…종전협상 돌파구 찾나",
    "firstSeen": "2026-11-12T08:53:00.000Z",
@@ -547,321 +816,102 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
+    "score": 27,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.63,
+     "change": -2.38,
      "unit": "%",
-     "z": -1.9
+     "z": -1.7
     },
     "why": [
-     "금 -2.63%"
+     "금 -2.38%"
     ]
    }
   },
   {
-   "id": "9sxwqk",
-   "title": "美 소비자물가 0.4% 상승… 연내 기준금리 ‘빅스텝’ 가능성",
-   "firstSeen": "2026-11-11T15:31:00.000Z",
-   "lastSeen": "2026-11-11T15:31:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "gp7lpz",
+   "title": "[속보] 젠슨 황 엔비디아 CEO 사임…AI 황제, 추문에 물러난다",
+   "firstSeen": "2026-11-12T13:56:00.000Z",
+   "lastSeen": "2026-11-12T14:24:00.000Z",
+   "count": 16,
+   "sources": 16,
    "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 소비자물가 0.4% 상승… 연내 기준금리 ‘빅스텝’ 가능성",
-     "link": "https://www.donga.com/news/Economy/article/all/20261111/135009315/2",
-     "host": "donga.com",
-     "at": "2026-11-11T15:31:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 3.4,
-     "unit": "bp",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +3.4bp"
-    ]
-   }
-  },
-  {
-   "id": "96dg3x",
-   "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
-   "firstSeen": "2026-11-11T16:39:00.000Z",
-   "lastSeen": "2026-11-11T16:39:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
-     "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
-     "host": "thescoop.co.kr",
-     "at": "2026-11-11T16:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.03,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.03%"
-    ]
-   }
-  },
-  {
-   "id": "145hcaq",
-   "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
-   "firstSeen": "2026-11-12T04:22:00.000Z",
-   "lastSeen": "2026-11-12T04:22:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
-     "link": "https://www.sedaily.com/article/20113432?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-12T04:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.03,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.03%"
-    ]
-   }
-  },
-  {
-   "id": "1vsoib7",
-   "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
-   "firstSeen": "2026-11-12T04:49:00.000Z",
-   "lastSeen": "2026-11-12T04:49:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
-     "link": "https://www.sidae.com/article/2026111213392185934",
-     "host": "sidae.com",
-     "at": "2026-11-12T04:49:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.03,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.03%"
-    ]
-   }
-  },
-  {
-   "id": "1sfddx0",
-   "title": "美 연준 빅스텝설에 상승하는 시장 금리",
-   "firstSeen": "2026-11-12T06:12:00.000Z",
-   "lastSeen": "2026-11-12T06:12:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 연준 빅스텝설에 상승하는 시장 금리",
-     "link": "https://www.mt.co.kr/stock/2026/11/12/2026111214141373752",
-     "host": "mt.co.kr",
-     "at": "2026-11-12T06:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 3.4,
-     "unit": "bp",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +3.4bp"
-    ]
-   }
-  },
-  {
-   "id": "4jsq70",
-   "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
-   "firstSeen": "2026-11-11T05:30:00.000Z",
-   "lastSeen": "2026-11-12T07:18:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=153128",
-     "host": "ziksir.com",
-     "at": "2026-11-12T07:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 3.4,
-     "unit": "bp",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +3.4bp"
-    ]
-   }
-  },
-  {
-   "id": "jv1z8u",
-   "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
-   "firstSeen": "2026-11-11T23:36:00.000Z",
-   "lastSeen": "2026-11-12T14:10:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "energy",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "뉴욕증시 개장 전 특징주...엔비디아 10% 급락·AMD 상승",
-     "link": "https://www.newspim.com/news/view/20261112001498",
-     "host": "newspim.com",
-     "at": "2026-11-12T14:10:00.000Z"
+     "title": "'GPU 제왕' 젠슨 황, 스캔들 속 전격 사퇴…엔비디아 33년 경영 마침표",
+     "link": "https://www.dailian.co.kr/news/view/1714431/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-12T14:24:00.000Z"
     },
     {
-     "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346045?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-12T07:42:00.000Z"
+     "title": "젠슨 황, 엔비디아 CEO·이사직 사임…크레스 CFO가 임시 CEO",
+     "link": "http://www.seouleconews.com/news/articleView.html?idxno=94988",
+     "host": "seouleconews.com",
+     "at": "2026-11-12T14:20:00.000Z"
     },
     {
-     "title": "뉴욕증시 반등에도…엔비디아 '젠슨 황 축출설'에 시간외 급락",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902827",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-12T00:38:00.000Z"
+     "title": "젠슨 황 엔비디아 CEO 전격 사임…시간외 주가 10% 급락·AI 산업 충격(종...",
+     "link": "https://www.news1.kr/world/international-economy/6352629",
+     "host": "news1.kr",
+     "at": "2026-11-12T14:19:00.000Z"
     },
     {
-     "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731350",
-     "host": "ebn.co.kr",
-     "at": "2026-11-11T23:36:00.000Z"
+     "title": "젠슨 황 엔비디아 CEO 공식 사임…콜레트 크레스 CFO 임시 CEO로",
+     "link": "https://www.etnews.com/20261112000481",
+     "host": "etnews.com",
+     "at": "2026-11-12T14:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
+    "score": 20,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.63,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.55,
      "unit": "%",
-     "z": -1.9
+     "z": 0.6
     },
     "why": [
-     "금 -2.63%"
+     "VIX 변동성 +7.55%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-12T14:28:13.899Z",
+   "id": "v78t4q",
+   "level": "caution",
+   "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
+   "why": [
+    "핵심 단어",
+    "금 -2.38%"
+   ],
+   "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-12T14:28:13.899Z",
+   "id": "9kvjue",
+   "level": "caution",
+   "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
+   "why": [
+    "핵심 단어",
+    "VIX 변동성 +7.55%"
+   ],
+   "link": "https://www.fnnews.com/news/202611122232315459",
+   "delivered": false
+  },
   {
    "at": "2026-11-12T13:47:54.954Z",
    "id": "v78t4q",
@@ -1076,30 +1126,6 @@
     "S&P 500 +1.31%"
    ],
    "link": "https://www.dt.co.kr/article/12094839?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T09:27:36.067Z",
-   "id": "1v5wf34",
-   "level": "caution",
-   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101161",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T08:18:09.217Z",
-   "id": "4jsq70",
-   "level": "caution",
-   "title": "미 물가 상승에 연준 ‘빅스텝’ 단행하나",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.ziksir.com/news/articleView.html?idxno=153128",
    "delivered": false
   }
  ],
