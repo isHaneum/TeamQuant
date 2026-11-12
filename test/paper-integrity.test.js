@@ -13,7 +13,7 @@ const o = (over) => ({ at: new Date(T0).toISOString(), symbol: '005930', name: '
 
 test('시스템 점검: 중복 주문·미확인 뒤 재전송·이유 없는 주문·오래된 미확인을 센다', () => {
   const clean = systemCheck({ orders: [o({}), o({ symbol: '000660', at: new Date(T0 + 60e3).toISOString() })], runs: [] }, T0 + 3600e3);
-  assert.equal(clean.ok, true); assert.deepEqual(clean.items.map(i => i.count), [0, 0, 0, 0, 0]);
+  assert.equal(clean.ok, true); assert.deepEqual(clean.items.map(i => i.count), [0, 0, 0, 0, 0, 0]); assert.equal(clean.items.at(-1).key, 'chain', '기록 변경 감지 항목(빈 체인은 정상)');
   const dirty = systemCheck({ orders: [
     o({}), o({ at: new Date(T0 + 30e3).toISOString() }),                                  // 같은 주문이 30초 안에 둘 → 중복 1
     o({ symbol: 'NVDA', status: 'not_found', at: new Date(T0 + 100e3).toISOString() }), o({ symbol: 'NVDA', status: 'sent', at: new Date(T0 + 200e3).toISOString() }), // 미확인 뒤 재전송 1
@@ -31,7 +31,7 @@ test('시스템 점검: 마감 뒤 남은 미체결(leftOpen)은 시장별 거�
   const krSent = o({ symbol: '069500', side: 'SELL', status: 'sent', filledQty: 0, remaining: 100, qty: 100, at: '2026-11-09T04:02:31Z' });
   const t1 = Date.parse('2026-11-10T01:30:00Z');
   const r1 = systemCheck({ orders: [krSent] }, t1); assert.equal(r1.leftOpen, 1); assert.equal(r1.staleUnknown, 0, 'sent 는 미확인이 아니다'); assert.equal(r1.ok, false);
-  assert.deepEqual(r1.items.at(-1), { key: 'leftOpen', label: '마감 뒤 남은 미체결', count: 1, target: 0 });
+  assert.deepEqual(r1.items.find(i => i.key === 'leftOpen'), { key: 'leftOpen', label: '마감 뒤 남은 미체결', count: 1, target: 0 });
   // 같은 KST 날짜 안(11-09 23:00 KST)이면 아직 남은 것이 아니다
   assert.equal(systemCheck({ orders: [krSent] }, Date.parse('2026-11-09T14:00:00Z')).leftOpen, 0);
   // 미국 11-09 23:40 KST(09:40 ET) 주문은 KST 자정을 넘긴 11-10 01:30 KST 에도 뉴욕은 아직 11-09 → 남은 것이 아니다. 뉴욕 날짜가 바뀐 뒤(11-10 15:00 KST)엔 1건.

@@ -21,9 +21,11 @@ import { fetchNews } from "./lib/news.js";
 import { fetchCompanyBrief } from "./lib/dart.js";
 import { fetchKisAccount } from "./lib/kis.js";
 import { getResearchStatus, startResearchRefresh } from "./lib/research-job.js";
-import { applyKeyFiles } from "./lib/key-files.js";
+import { applyKeyFiles, kisReadOnlySettings } from "./lib/key-files.js";
 import { readFileSync } from "node:fs";
 import { createKisClient } from "./lib/kis-orders.js";
+import { createKisReader } from "./lib/kis-reader.js";
+import { createRealRecord } from "./lib/real-record.js";
 import { createPaperLive, createLedgerStore, ledgerDir } from "./lib/paper-live.js";
 import { publicSnapshot } from "./lib/paper-public.js";
 import { writeFileSync } from "node:fs";
@@ -58,7 +60,12 @@ paperLive.publishPublic=async({push=false}={})=>{const st=await paperLive.status
 if(process.env.PAPER_LIVE_AUTO==='1'){let publishedDay=null,publicWroteAt=0;const autoTick=async()=>{try{const r=await paperLive.autoRun();if(r.ran)console.log(`[KIS 자동] ${new Date().toISOString()} ${r.market} ${r.reason}: 할 일 ${r.items} · 보냄 ${r.sent} · 차단 ${r.blocked}`);}catch(e){console.log(`[KIS 자동] 실패: ${e.message}`);}
   // 공개 스냅샷은 25분마다 파일로, 하루 한 번(16:00 KST 뒤)은 저장소에도.
   try{const kst=new Date(Date.now()+9*3600e3),day=kst.toISOString().slice(0,10),hhmm=kst.getUTCHours()*100+kst.getUTCMinutes(),push=process.env.PAPER_LIVE_PUBLISH==='1'&&hhmm>=1600&&publishedDay!==day;if(push||Date.now()-publicWroteAt>=25*60e3){if(push)publishedDay=day;publicWroteAt=Date.now();await paperLive.publishPublic({push});}}catch(e){console.log(`[KIS 공개] 실패: ${e.message}`);}};setInterval(autoTick,10*60e3).unref();setTimeout(autoTick,30e3).unref();console.log('[KIS] 자동 실행 켜짐(10분마다 확인 · 금요일/급함/계획 변경/첫 운용에만 전송)');}console.log(`[KIS] 모의계좌 ${keyFiles.kis.accountMasked} 실행 엔진 준비 (장부: ${ledgerDir()})`);}}catch(e){console.log(`[KIS] 모의계좌 엔진을 만들지 못했습니다: ${e.message}`);}
-const bridge=createLocalBridge({port,paperLive,devices:createDeviceStore({publicRoots:[root,join(root,'..')]}),readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,cash:cashStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
+// 실계좌 읽기 전용 기록(2026-11-12 결정 22): KIS_REAL_READONLY=1 이면 같은 키 파일의 실전 이름표로 '조회만' 한다. 넘기는 리더(lib/kis-reader.js)에는 주문 함수가 없고 GET 이 아닌 요청은 던지므로 이 경로에서 주문이 나갈 수 없다.
+// 실전 키는 process.env 에 올리지 않고(엔진의 env 는 모의 한 벌만), 장부는 kis-prod-*.json 으로 모의 장부와 분리한다. 공개 스냅샷은 쓰지 않는다(개인 자료) — 위 publishPublic 은 모의계좌 status 만 받는다. 로그에는 값·계좌번호·경로·증권사 문구를 남기지 않는다.
+let realRecord=null;try{const ro=kisReadOnlySettings(process.env);if(ro.configured){realRecord=createRealRecord({reader:createKisReader({settings:ro,tokenFile:join(ledgerDir(),'kis-prod-token.json')}),store:createLedgerStore(ledgerDir(),{prefix:'kis-prod'}),readMarket:fetchHeldMarketSeries});
+  const realTick=async()=>{try{const s=await realRecord.status();if(s.error)console.log(`[KIS 실계좌] 평가 보류 (조회 실패)`);}catch(e){console.log(`[KIS 실계좌] 기록 실패 (${e.code||'error'})`);}};setInterval(realTick,25*60e3).unref();setTimeout(realTick,45e3).unref();
+  console.log(`[KIS 실계좌] ${ro.accountMasked} 읽기 전용 기록 준비 (주문 기능 없음 · 25분마다 평가 · 공개 안 함)`);}else if(process.env.KIS_REAL_READONLY==='1')console.log(`[KIS 실계좌] ${ro.reason}`);}catch(e){console.log(`[KIS 실계좌] 준비 실패 (${e.code||'error'})`);}
+const bridge=createLocalBridge({port,paperLive,realRecord,devices:createDeviceStore({publicRoots:[root,join(root,'..')]}),readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,cash:cashStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host}`);

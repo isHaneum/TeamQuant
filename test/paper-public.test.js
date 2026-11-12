@@ -20,7 +20,9 @@ const status = {
   planVersionNow: 'PP1+R:abc', defaultPlanVersion: 'PP1', hasDefaultPlan: true, planVersion: { KR: 'PP1+R:abc', US: null },
   settings: { auto: true, accountMasked: '****2787', keyFile: 'C:\\k\\kis-vps.key' },
   integrity: { ok: true, items: [{ key: 'duplicates', label: '의도하지 않은 중복 주문', count: 0, target: 0 }, { key: 'leftOpen', label: '마감 뒤 남은 미체결', count: 1, target: 0 }], notFound: 0, rejected: 0, pending: 1, leftOpen: 1, orders: 17 },
-  planDoc: { version: 'PP1', asOf: '2026-11-09', cashPct: 15, method: ['m'], weights: { '005930': { pct: 2.5, name: '삼성전자', currency: 'KRW', sectorName: '반도체', why: ['변동성 역수'], exposure: ['2026-06-04 지방선거'] }, SPY: { pct: 8, name: 'S&P500 ETF', currency: 'USD', why: ['지수 ETF'] } }, validation: { windows: [] } }
+  planDoc: { version: 'PP1', asOf: '2026-11-09', cashPct: 15, method: ['m'], weights: { '005930': { pct: 2.5, name: '삼성전자', currency: 'KRW', sectorName: '반도체', why: ['변동성 역수'], exposure: ['2026-06-04 지방선거'] }, SPY: { pct: 8, name: 'S&P500 ETF', currency: 'USD', why: ['지수 ETF'] } }, validation: { windows: [] } },
+  // 비교선: 정의·숫자만 옮기고 그 밖의 키(note 에 경로·주문번호가 섞인 상황을 가정)는 버린다
+  benchmark: { version: 'BM1-2026-11-12', label: '국가 비중·현금 일치 지수 투자', weights: { KR: 10.5, US: 8, cash: 81.5 }, legs: { KR: { symbol: '069500', name: 'KODEX 200', currency: 'KRW' }, US: { symbol: 'SPY', name: 'S&P500 ETF', currency: 'USD' } }, ownRetPct: 1.2, benchRetPct: 0.7, diffPp: 0.5, days: 2, from: '2026-11-09', asOf: '2026-11-10', error: null, note: 'ledger C:\\x\\kis-vps-2787.json ODNO 0000123' }
 };
 
 test('공개 스냅샷: 계좌번호·장부 경로·주문 번호·증권사 응답이 빠지고 잔고·보유·기록·계획·규칙·가설은 남는다', () => {
@@ -52,6 +54,16 @@ test('공개 스냅샷(PUB2): 자동 실행은 요약만(메모·주문 목록 �
   // settings.auto 가 boolean 이 아니면 null, items 가 배열이면 길이만
   assert.deepEqual(publicSnapshot({ settings: { auto: 'yes' }, auto: [{ key: 'US:2026-11-09', at: '2026-11-09T14:38:00Z', items: [{ odno: 1 }, {}] }] }).auto[0].items, 2);
   assert.equal(publicSnapshot({ settings: { auto: 'yes' } }).settings.auto, null);
+});
+
+test('공개 스냅샷(결정 21): 비교선은 정의(이름·국가 비중·현금·다리)와 지수 대비 숫자만 · 그 밖의 키는 버림 · error 는 숫자열 스크럽 · 없으면 null · startTotal/total 은 그대로(PUB2 호환)', () => {
+  const pub = publicSnapshot(status);
+  assert.deepEqual(pub.benchmark, { version: 'BM1-2026-11-12', label: '국가 비중·현금 일치 지수 투자', weights: { KR: 10.5, US: 8, cash: 81.5 }, legs: { KR: { symbol: '069500', name: 'KODEX 200', currency: 'KRW' }, US: { symbol: 'SPY', name: 'S&P500 ETF', currency: 'USD' } }, ownRetPct: 1.2, benchRetPct: 0.7, diffPp: 0.5, days: 2, from: '2026-11-09', asOf: '2026-11-10', error: null });
+  assert.ok(!('note' in pub.benchmark) && !JSON.stringify(pub.benchmark).includes('2787'));
+  assert.equal(pub.startTotal, 99_940_000); assert.equal(pub.total, 99_940_000);
+  const held = publicSnapshot({ benchmark: { label: 'x', weights: { KR: 20 }, ownRetPct: 1, benchRetPct: null, diffPp: null, error: '지수 시세를 읽지 못해 비교를 보류 ODNO 0000123' } }).benchmark;
+  assert.deepEqual(held.weights, { KR: 20, US: 0, cash: 0 }); assert.deepEqual(held.legs, { KR: null, US: null }); assert.equal(held.diffPp, null); assert.equal(held.error, '지수 시세를 읽지 못해 비교를 보류 ODNO …');
+  assert.equal(publicSnapshot({}).benchmark, null); assert.equal(publicSnapshot({ benchmark: 'x' }).benchmark, null);
 });
 
 test('자산 스냅샷 변환: 토스 모양의 보유·체결(demo+paper 표식) · 현금은 달러 예수금을 환율로 합친다 · paperMeta 에 운용 상태·투자 비중·마지막 자동 실행', () => {

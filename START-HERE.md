@@ -72,6 +72,7 @@
     KIS_MODE=vps                                 (모의투자만. 실전 키는 주문에 쓰지 않습니다)
     KIS_KEY_FILE=C:/본인경로/hantu.key           (simulappkey=… / simulappsecret=… 줄이 있어야 합니다)
     KIS_PAPER_ACCOUNT_NO=모의계좌8자리
+    KIS_REAL_READONLY=1                          (선택 · 같은 키 파일의 실전 이름표(appkey/app/KIS_ACCOUNT_NO)로 실계좌를 조회만 합니다. 주문 함수가 없는 리더라 실계좌 주문은 불가능하고, 기록(kis-prod-*.json)은 PC 에만 남으며 공개 파일에 올라가지 않습니다)
     PAPER_LIVE_LIMITS={"maxOrderKrw":15000000,"maxDailyKrw":60000000}   (주문 보호 한도 · 기본 100만/300만)
     PAPER_LIVE_AUTO=1                            (자동 실행: 10분마다 확인, 금요일·급함·계획 변경·첫 운용에만 전송)
     PAPER_LIVE_PUBLISH=1                         (공개 스냅샷: 25분마다 data/paper-live-public.json, 하루 한 번 16:00 KST 뒤 아래 저장소에 그 파일만 커밋·푸시)
