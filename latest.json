@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T10:14:14.350Z",
+ "updatedAt": "2026-11-12T10:27:47.942Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1331.239990234375,
-   "change": -0.8,
-   "z": -1.2,
+   "last": 1330.489990234375,
+   "change": -0.85,
+   "z": -1.3,
    "sd": 0.6661814150687196,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 86.12999725341797,
-   "change": -0.46,
-   "z": -0.2,
+   "last": 85.68000030517578,
+   "change": -0.98,
+   "z": -0.3,
    "sd": 2.876929486808728,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3950.39990234375,
-   "change": -1.25,
+   "last": 3952.60009765625,
+   "change": -1.2,
    "z": -0.9,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 18.209999084472656,
-   "change": 4.12,
-   "z": 0.3,
+   "last": 18.290000915527344,
+   "change": 4.57,
+   "z": 0.4,
    "sd": 11.788047688421058,
    "source": "Yahoo",
    "checked": true
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": 0.2,
-  "politics": -1,
-  "rates": -0.3,
+  "war": 0.1,
+  "politics": -1.2,
+  "rates": -0.4,
   "trade": 0.3,
   "fx": -0.4,
-  "energy": 0.4,
-  "market": 0,
+  "energy": -0.3,
+  "market": -0.1,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 0
+  "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 2.1,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.6,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.4,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -157,13 +157,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3.7,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.4,
-   "saturated": 2,
+   "rate": 4.3,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -177,12 +177,70 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.7,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
+  {
+   "id": "1v5wf34",
+   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
+   "firstSeen": "2026-11-12T01:26:00.000Z",
+   "lastSeen": "2026-11-12T10:10:00.000Z",
+   "count": 8,
+   "sources": 7,
+   "topics": [
+    "fx"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "원·달러 환율, 美 긴축 우려에도 수출업체 달러매도 등에 하락...1330.7원...",
+     "link": "https://www.betanews.net/article/view/beta202611120207",
+     "host": "betanews.net",
+     "at": "2026-11-12T10:10:00.000Z"
+    },
+    {
+     "title": "원/달러 환율, 다시 장중 1320원대까지 내려",
+     "link": "https://weeklytrade.co.kr/news/view.html?section=1&category=6&item=&no=102198",
+     "host": "weeklytrade.co.kr",
+     "at": "2026-11-12T09:48:00.000Z"
+    },
+    {
+     "title": "[외환-마감] 코스피 약세 전환하자 환율도 하락…1,320원대에 저점",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444498",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-12T09:40:00.000Z"
+    },
+    {
+     "title": "환율, 보름 만에 1320원대로 내려…수출업체 달러매도 영향",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731493",
+     "host": "ebn.co.kr",
+     "at": "2026-11-12T09:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 49,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
   {
    "id": "5gnazc",
    "title": "연준, 12월 금리 인상 확률 100%...\"0.5%포인트 인상도 가능\"",
@@ -273,8 +331,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 40,
-    "spike": 0.4,
+    "score": 37,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -315,52 +373,6 @@
      "link": "https://www.dailian.co.kr/news/view/1713698/?sc=Naver",
      "host": "dailian.co.kr",
      "at": "2026-11-11T22:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "1v5wf34",
-   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
-   "firstSeen": "2026-11-12T01:26:00.000Z",
-   "lastSeen": "2026-11-12T07:24:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "기관 매도에 밀린 코스피, 5340선 후퇴…삼전↑·하닉↓",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101161",
-     "host": "newsian.co.kr",
-     "at": "2026-11-12T07:24:00.000Z"
-    },
-    {
-     "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444378",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-12T01:26:00.000Z"
     }
    ],
    "assess": {
@@ -680,63 +692,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "1f5hmz0",
-   "title": "코스피, 美엔비디아 사태에 5340선 약세 마감···DB하이텍 16% 급락",
-   "firstSeen": "2026-11-12T07:33:00.000Z",
-   "lastSeen": "2026-11-12T08:36:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 엔비디아발 불확실성에 0.61% ↓···5300선 마감",
-     "link": "http://www.finomy.com/news/articleView.html?idxno=266551",
-     "host": "finomy.com",
-     "at": "2026-11-12T08:36:00.000Z"
-    },
-    {
-     "title": "[마감 시황] 코스피·코스닥 동반 약세…코스피, 0.61% 내린 5,340선 마감",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281164",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-12T08:24:00.000Z"
-    },
-    {
-     "title": "오락가락 코스피, 반등 실패하며 하락 마감",
-     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/12/2026111290210.html",
-     "host": "news.tvchosun.com",
-     "at": "2026-11-12T08:22:00.000Z"
-    },
-    {
-     "title": "등락 거듭하던 코스피, 약보합 마감...코스닥 1%↓",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611121652381857",
-     "host": "ytn.co.kr",
-     "at": "2026-11-12T07:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
     "score": 22,
-    "spike": 0,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -791,8 +748,63 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
-    "spike": 0.4,
+    "score": 18,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "w5o2go",
+   "title": "등락 거듭하던 코스피, 약보합 마감...코스닥 1%↓",
+   "firstSeen": "2026-11-12T06:48:00.000Z",
+   "lastSeen": "2026-11-12T09:21:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'엔비디아 리스크' 코스피 약보합…코스닥 1% 하락",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261112182102jd7",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-12T09:21:00.000Z"
+    },
+    {
+     "title": "코스피, 엔비디아발 불확실성에 0.61% ↓···5300선 마감",
+     "link": "http://www.finomy.com/news/articleView.html?idxno=266551",
+     "host": "finomy.com",
+     "at": "2026-11-12T08:36:00.000Z"
+    },
+    {
+     "title": "[마감 시황] 코스피·코스닥 동반 약세…코스피, 0.61% 내린 5,340선 마감",
+     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281164",
+     "host": "businesskorea.co.kr",
+     "at": "2026-11-12T08:24:00.000Z"
+    },
+    {
+     "title": "등락 거듭하던 코스피, 약보합 마감...코스닥 1%↓",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611121652381857",
+     "host": "ytn.co.kr",
+     "at": "2026-11-12T07:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -846,78 +858,108 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
-    "spike": 0.4,
+    "score": 17,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.25,
+     "change": -1.2,
      "unit": "%",
      "z": -0.9
     },
     "why": [
-     "금 -1.25%"
+     "금 -1.2%"
     ]
    }
   },
   {
-   "id": "onrp82",
-   "title": "원/달러 환율, 수출업체 달러 매도에 보름 만에 1,320원대 하락",
-   "firstSeen": "2026-11-12T07:13:00.000Z",
-   "lastSeen": "2026-11-12T10:10:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "id": "1r9ytg8",
+   "title": "코스피, 장중 5400선 돌파 후 하락 반전 5340선 후퇴...코스닥 700선 붕괴",
+   "firstSeen": "2026-11-12T00:38:00.000Z",
+   "lastSeen": "2026-11-12T08:40:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "fx"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "원·달러 환율, 美 긴축 우려에도 수출업체 달러매도 등에 하락...1330.7원...",
-     "link": "https://www.betanews.net/article/view/beta202611120207",
-     "host": "betanews.net",
-     "at": "2026-11-12T10:10:00.000Z"
+     "title": "[오늘증시] 코스피, 장중 5450선 돌파 후 하락 전환…엔비디아 불확실성...",
+     "link": "http://www.queen.co.kr/news/articleView.html?idxno=466259",
+     "host": "queen.co.kr",
+     "at": "2026-11-12T08:40:00.000Z"
     },
     {
-     "title": "원/달러 환율, 다시 장중 1320원대까지 내려",
-     "link": "https://weeklytrade.co.kr/news/view.html?section=1&category=6&item=&no=102198",
-     "host": "weeklytrade.co.kr",
-     "at": "2026-11-12T09:48:00.000Z"
+     "title": "‘젠슨 황 해임설’에 투자심리 위축…코스피 0.61% 하락, 코스닥 700선 ...",
+     "link": "https://www.ddaily.co.kr/page/view/2026111216231917748",
+     "host": "ddaily.co.kr",
+     "at": "2026-11-12T07:29:00.000Z"
     },
     {
-     "title": "[외환-마감] 코스피 약세 전환하자 환율도 하락…1,320원대에 저점",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444498",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-12T09:40:00.000Z"
-    },
-    {
-     "title": "환율, 보름 만에 1320원대로 내려…수출업체 달러매도 영향",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731493",
-     "host": "ebn.co.kr",
-     "at": "2026-11-12T09:36:00.000Z"
+     "title": "코스피, 장중 5400선 돌파 후 하락 반전 5340선 후퇴...코스닥 700선 붕괴",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=503460",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-12T07:26:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
+    "score": 15,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.8,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.4
     },
     "why": [
-     "원/달러 -0.8%"
+     "S&P 500 +1.31%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-12T10:27:47.942Z",
+   "id": "v78t4q",
+   "level": "caution",
+   "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +1.31%"
+   ],
+   "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-12T10:27:47.942Z",
+   "id": "5gnazc",
+   "level": "caution",
+   "title": "미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +1.31%"
+   ],
+   "link": "https://www.dt.co.kr/article/12094839?ref=naver",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-12T10:27:47.942Z",
+   "id": "1v5wf34",
+   "level": "caution",
+   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +1.31%"
+   ],
+   "link": "https://www.betanews.net/article/view/beta202611120207",
+   "delivered": false
+  },
   {
    "at": "2026-11-12T09:27:36.067Z",
    "id": "v78t4q",
@@ -1120,42 +1162,6 @@
     "S&P 500 +1.31%"
    ],
    "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3082379",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T04:28:45.876Z",
-   "id": "11px7ls",
-   "level": "caution",
-   "title": "코스닥 5.62% 폭등해 700선 탈환…이틀 연속 매수 사이드카",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38470",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T04:28:45.876Z",
-   "id": "dv3yu",
-   "level": "caution",
-   "title": "美 '빅스텝'까지 거론…환율·경기 사이 한은 '고심'",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.dailian.co.kr/news/view/1713698/?sc=Naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T03:47:52.078Z",
-   "id": "szk9ir",
-   "level": "caution",
-   "title": "AI 거품론에 물가 충격 겹친 월가… 연준 '빅스텝' 공포에 국채금리 폭...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.busan.com/view/busan/view.php?code=2026111118212251055",
    "delivered": false
   }
  ],
