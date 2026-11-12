@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T02:18:12.731Z",
+ "updatedAt": "2026-11-12T02:29:25.823Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 5432.54,
-   "change": 1.06,
-   "z": 0.4,
+   "last": 5427.64013671875,
+   "change": 3.6,
+   "z": 1.2,
    "sd": 2.963802534910339,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,9 +23,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 705.010009765625,
-   "change": 5.6,
-   "z": 2.2,
+   "last": 707.2000122070312,
+   "change": 5.93,
+   "z": 2.3,
    "sd": 2.598476194894014,
    "source": "Yahoo",
    "checked": true
@@ -63,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1334.1800537109375,
-   "change": -0.58,
+   "last": 1333.6800537109375,
+   "change": -0.61,
    "z": -0.9,
    "sd": 0.6661814150687196,
    "source": "Yahoo"
@@ -75,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 85.87999725341797,
-   "change": -0.19,
-   "z": -0.1,
+   "last": 86.05999755859375,
+   "change": 0.02,
+   "z": 0,
    "sd": 2.876793379200961,
    "source": "Yahoo"
   },
@@ -87,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3990.10009765625,
-   "change": -0.99,
+   "last": 3993.10009765625,
+   "change": -0.92,
    "z": -0.7,
    "sd": 1.3793365477261483,
    "source": "Yahoo"
@@ -125,7 +124,7 @@
   "rates": 1.1,
   "trade": 0.8,
   "fx": -0.4,
-  "energy": 1.5,
+  "energy": 1.4,
   "market": 0.2,
   "credit": 0.3,
   "disaster": 0,
@@ -143,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.7,
+   "rate": 3.6,
    "saturated": 0,
    "queries": 3
   },
@@ -158,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6,
+   "rate": 5.7,
    "saturated": 0,
    "queries": 1
   },
@@ -228,8 +227,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 62,
-    "spike": 1.5,
+    "score": 61,
+    "spike": 1.4,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -378,8 +377,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 1.5,
+    "score": 45,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -558,6 +557,47 @@
    }
   },
   {
+   "id": "ymowzt",
+   "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+   "firstSeen": "2026-11-11T00:36:00.000Z",
+   "lastSeen": "2026-11-11T16:39:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+     "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
+     "host": "thescoop.co.kr",
+     "at": "2026-11-11T16:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
    "id": "1vy7hbk",
    "title": "엔화, 160엔 돌파 목전...연준 '빅스텝' 관측에 달러 매수 가속",
    "firstSeen": "2026-11-11T23:27:00.000Z",
@@ -639,48 +679,6 @@
    }
   },
   {
-   "id": "y1gbha",
-   "title": "미국 휘발유 가격 4달러 아래로…트럼프 이란 공습 보류 시사에 국제유...",
-   "firstSeen": "2026-11-10T19:18:00.000Z",
-   "lastSeen": "2026-11-11T02:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics",
-    "fx"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "미국 휘발유 가격 4달러 아래로…트럼프 이란 공습 보류 시사에 국제유...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=397557",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-11T02:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
    "id": "bc6j0c",
    "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
    "firstSeen": "2026-11-11T07:30:00.000Z",
@@ -724,15 +722,21 @@
    "id": "bc6j0c",
    "title": "원·달러 환율, 1337.5원…달러, 美 연준 추가 긴축 우려에 강세",
    "firstSeen": "2026-11-11T07:30:00.000Z",
-   "lastSeen": "2026-11-12T01:08:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-12T01:10:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "rates",
     "fx"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[위클리오늘] 코스피 5380선 상승 출발···환율 1330원대",
+     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=801802",
+     "host": "weeklytoday.com",
+     "at": "2026-11-12T01:10:00.000Z"
+    },
     {
      "title": "원·달러 환율, 달러 강세 속 1336.4원 출발···2.8원↑",
      "link": "https://www.ziksir.com/news/articleView.html?idxno=153006",
@@ -750,18 +754,12 @@
      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=731212",
      "host": "the-biz.co.kr",
      "at": "2026-11-11T23:16:00.000Z"
-    },
-    {
-     "title": "연준 긴축 경계 속 AI주가 반등…환율 1340원대 재진입 시도[외환브리핑...",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=02246806645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-11T23:13:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
+    "score": 31,
     "spike": 1.1,
     "news": false,
     "reaction": {
@@ -777,46 +775,46 @@
    }
   },
   {
-   "id": "1r9ytg8",
-   "title": "'美훈풍' 코스피 피해가나...5400선 회복했다 '하락 전환'",
-   "firstSeen": "2026-11-12T00:38:00.000Z",
-   "lastSeen": "2026-11-12T01:18:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "id": "6syawz",
+   "title": "[증시 포인트] 상승 출발 전망...5500선 회복 관건",
+   "firstSeen": "2026-11-11T23:38:00.000Z",
+   "lastSeen": "2026-11-12T01:45:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피, 美 AI·반도체 훈풍에 '강보합'···5400선",
-     "link": "http://www.finomy.com/news/articleView.html?idxno=266435",
-     "host": "finomy.com",
-     "at": "2026-11-12T01:18:00.000Z"
+     "title": "코스피, 하락 전환...'젠슨 황 해임설'에 변동성 확대 [포토]",
+     "link": "https://news.tf.co.kr/read/photomovie/2387897.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-12T01:45:00.000Z"
     },
     {
-     "title": "개미·외인 '사자'…코스피 장중 5400선 회복 [시황]",
-     "link": "https://www.dailian.co.kr/news/view/1714080/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-12T01:17:00.000Z"
+     "title": "美 AI 훈풍 vs 차익 실현…코스피, 0.20% 오른 5380선 출발",
+     "link": "https://www.g-enews.com/view.php?ud=202611120920215427923c501012_1",
+     "host": "g-enews.com",
+     "at": "2026-11-12T01:10:00.000Z"
     },
     {
-     "title": "코스피, 반도체 훈풍에 강보합 출발 … 장 초반 5390~5400선 공방",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/12/2026111200069.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-12T01:02:00.000Z"
+     "title": "美 반도체 훈풍에도 코스피 주춤…젠슨 황 해임설에 증시 출렁",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000081985",
+     "host": "jnilbo.com",
+     "at": "2026-11-12T00:57:00.000Z"
     },
     {
-     "title": "코스피 장 초반 5,400선 회복",
-     "link": "https://imnews.imbc.com/news/2026/econo/article/6865074_36932.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-12T00:51:00.000Z"
+     "title": "코스피, 5400선 돌파 후 출렁…젠슨 황 해임설에 변동성 확대",
+     "link": "https://www.hidomin.com/news/articleView.html?idxno=729039",
+     "host": "hidomin.com",
+     "at": "2026-11-12T00:52:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
+    "score": 26,
     "spike": 0.2,
     "news": false,
     "reaction": {
@@ -835,7 +833,7 @@
    "id": "e40h43",
    "title": "뉴욕증시 반등에도…엔비디아 '젠슨 황 축출설'에 시간외 급락",
    "firstSeen": "2026-11-12T00:18:00.000Z",
-   "lastSeen": "2026-11-12T02:04:00.000Z",
+   "lastSeen": "2026-11-12T02:24:00.000Z",
    "count": 8,
    "sources": 8,
    "topics": [
@@ -843,6 +841,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "'CEO 해임설' 엔비디아 급락…삼성전자·SK하이닉스 파장은? [뉴스큐]",
+     "link": "https://www.newsq.co.kr/news/articleView.html?idxno=500860",
+     "host": "newsq.co.kr",
+     "at": "2026-11-12T02:24:00.000Z"
+    },
     {
      "title": "엔비디아 젠슨 황 거취 흔들리나…혼외관계 추가 의혹에 해임 준비 보도",
      "link": "https://www.kizmom.com/news/articleView.html?idxno=113922",
@@ -860,12 +864,6 @@
      "link": "https://www.kukinews.com/article/view/kuk202611120066",
      "host": "kukinews.com",
      "at": "2026-11-12T02:02:00.000Z"
-    },
-    {
-     "title": "엔비디아 주가, 황 CEO 해임 수순 소식에 시간외서 8.6% 급락...시총, 마...",
-     "link": "http://www.beyondpost.co.kr/view.php?ud=2026111210495766782aaae0046f_30",
-     "host": "beyondpost.co.kr",
-     "at": "2026-11-12T01:58:00.000Z"
     }
    ],
    "assess": {
@@ -888,6 +886,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-12T02:29:25.823Z",
+   "id": "szk9ir",
+   "level": "caution",
+   "title": "AI 거품 우려에 물가 쇼크까지…월가 덮친 '이중 악재'",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +1.31%"
+   ],
+   "link": "https://www.busan.com/view/busan/view.php?code=2026111118212251055",
+   "delivered": false
+  },
   {
    "at": "2026-11-12T01:47:55.956Z",
    "id": "ocl8df",
@@ -1114,18 +1124,6 @@
     "S&P 500 +1.31%"
    ],
    "link": "https://www.etoday.co.kr/news/view/2647103",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-11T23:12:04.063Z",
-   "id": "1cp0fik",
-   "level": "caution",
-   "title": "美 반도체 급등에 코스피 사흘째 반등 기대…옵션만기 변수",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://view.asiae.co.kr/article/2026111114222363832",
    "delivered": false
   }
  ],
