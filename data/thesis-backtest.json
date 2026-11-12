@@ -1,0 +1,108 @@
+{
+ "version": "TB1-2026-11-12",
+ "generatedAt": "2026-11-12T09:14:31.337Z",
+ "cardVersion": "TC1-2026-11-12",
+ "rules": {
+  "minGrowth": 0.05,
+  "minRank": 0.6,
+  "maxValuePct": 0.7,
+  "minRoe": 0.08,
+  "oneOffRatio": 2,
+  "marginDropPp": 5,
+  "historyMonths": 60,
+  "minHistory": 24
+ },
+ "from": "2017-01-31",
+ "to": "2026-10-30",
+ "note": [
+  "월말마다 그때 공개된 재무와 그 달의 표본 외 성장 예측으로 카드를 만들고, 통과 종목 동일가중의 다음 달 수익을 같은 시장 98개 종목군 전체 동일가중과 비교(월평균 %p).",
+  "종목군은 2026년에 고른 98개라 생존·선택 편향이 있다 — 절대 수익이 아니라 통과 − 전체 차이만 본다. 비용·세금 없음. 주식 수는 현재 값 근사.",
+  "기준값은 과거 자료로 조정하지 않았다(2026-11-12 에 정함). 성장 예측 모델의 변수는 2020년까지 자료로 골랐으므로 2021~ 이 엄격한 미사용 구간."
+ ],
+ "periods": {
+  "~2020": {
+   "KR": {
+    "months": 23,
+    "emptyMonths": 10,
+    "avgPass": 2.61,
+    "avgAll": 39.78,
+    "excessVsAllPp": 4.2,
+    "t": 1.04,
+    "hitPct": 48,
+    "excessVsIndexPp": 5.09,
+    "cumPassPct": 226,
+    "cumAllPct": 65,
+    "waitMinusAllPp": -6.55
+   },
+   "US": {
+    "months": 48,
+    "emptyMonths": 0,
+    "avgPass": 4.56,
+    "avgAll": 36.94,
+    "excessVsAllPp": 0.5,
+    "t": 1.01,
+    "hitPct": 48,
+    "excessVsIndexPp": 1.29,
+    "cumPassPct": 193,
+    "cumAllPct": 137,
+    "waitMinusAllPp": 0.32
+   }
+  },
+  "2021~": {
+   "KR": {
+    "months": 67,
+    "emptyMonths": 2,
+    "avgPass": 3.43,
+    "avgAll": 43.37,
+    "excessVsAllPp": 0.58,
+    "t": 0.56,
+    "hitPct": 52,
+    "excessVsIndexPp": 0.71,
+    "cumPassPct": 110,
+    "cumAllPct": 76,
+    "waitMinusAllPp": 0.11
+   },
+   "US": {
+    "months": 69,
+    "emptyMonths": 0,
+    "avgPass": 6.58,
+    "avgAll": 46.1,
+    "excessVsAllPp": 0.93,
+    "t": 1.96,
+    "hitPct": 57,
+    "excessVsIndexPp": 0.92,
+    "cumPassPct": 251,
+    "cumAllPct": 100,
+    "waitMinusAllPp": -0.27
+   }
+  },
+  "all": {
+   "KR": {
+    "months": 90,
+    "emptyMonths": 12,
+    "avgPass": 3.22,
+    "avgAll": 42.46,
+    "excessVsAllPp": 1.51,
+    "t": 1.17,
+    "hitPct": 51,
+    "excessVsIndexPp": 1.83,
+    "cumPassPct": 584,
+    "cumAllPct": 191,
+    "waitMinusAllPp": -0.94
+   },
+   "US": {
+    "months": 117,
+    "emptyMonths": 0,
+    "avgPass": 5.75,
+    "avgAll": 42.34,
+    "excessVsAllPp": 0.75,
+    "t": 2.19,
+    "hitPct": 53,
+    "excessVsIndexPp": 1.07,
+    "cumPassPct": 929,
+    "cumAllPct": 374,
+    "waitMinusAllPp": -0.03
+   }
+  }
+ }
+}
