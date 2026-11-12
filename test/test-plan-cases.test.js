@@ -40,9 +40,9 @@ test('TC-UNIT-PRE-005~006 주문 금액: 0원은 거부, 1원부터 평가', () 
   assert.equal(buyA(0).ok, false); assert.match(buyA(0).error, /0보다 크게/);
   assert.ok(Array.isArray(buyA(1).checks));
 });
-test('TC-UNIT-PRE-007~008 매도 금액: 보유액+1원까지 허용(반올림), +2원은 거부', () => {
+test('TC-UNIT-PRE-007~008 매도 금액: 보유액의 2%+1원까지 허용(전량 매도의 호가·환율 차이 · 2026-11-12), 그보다 크면 거부', () => {
   const sell = amt => preTradeCheck(base, { symbol: 'B', name: '나', currency: 'KRW', side: 'SELL', amountKrw: amt }, { ok: true, vol: 0.1 });
-  assert.ok(!sell(5_000_001).error); assert.match(sell(5_000_002).error, /보유 금액/);
+  assert.ok(!sell(5_000_001).error); assert.ok(!sell(5_100_001).error); assert.match(sell(5_100_002).error, /보유 금액/);
 });
 test('TC-UNIT-PRE-009~010 30일 매매 횟수 상한 8회: 8번째 주문 통과, 9번째 위반', () => {
   assert.equal(rule(buyA(100_000, { ...base, trades30: 7 }), 'maxTrades30'), true);
