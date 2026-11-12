@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T03:16:24.992Z",
+ "updatedAt": "2026-11-12T03:28:37.901Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 5413.33984375,
-   "change": 0.71,
-   "z": 0.2,
+   "last": 5396.99,
+   "change": 0.4,
+   "z": 0.1,
    "sd": 2.963021948385691,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,11 +24,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 701.1799926757812,
-   "change": -0.56,
-   "z": -0.2,
+   "last": 697.55,
+   "change": -1.07,
+   "z": -0.4,
    "sd": 2.6905879415977827,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -62,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1331.780029296875,
-   "change": -0.75,
+   "last": 1332.4100341796875,
+   "change": -0.71,
    "z": -1.1,
    "sd": 0.6661814150687196,
    "source": "Yahoo"
@@ -74,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 85.69999694824219,
-   "change": -0.96,
-   "z": -0.3,
+   "last": 85.55999755859375,
+   "change": -1.12,
+   "z": -0.4,
    "sd": 2.876929486808728,
    "source": "Yahoo"
   },
@@ -86,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3986.10009765625,
-   "change": -0.36,
+   "last": 3984.5,
+   "change": -0.4,
    "z": -0.3,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
@@ -119,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 0,
+  "war": -0.1,
   "politics": -0.3,
-  "rates": 0.9,
-  "trade": 0.6,
+  "rates": 0.6,
+  "trade": 0.5,
   "fx": -0.4,
-  "energy": 1.8,
+  "energy": 1.5,
   "market": 0.2,
   "credit": 0.1,
   "disaster": 0,
@@ -132,7 +134,7 @@
  },
  "rates": {
   "war": {
-   "rate": 1.8,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +144,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.3,
+   "rate": 2.9,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.8,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -157,8 +159,8 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6.7,
-   "saturated": 1,
+   "rate": 6,
+   "saturated": 0,
    "queries": 1
   },
   "market": {
@@ -227,8 +229,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 64,
-    "spike": 1.8,
+    "score": 62,
+    "spike": 1.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -333,8 +335,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 51,
-    "spike": 1.8,
+    "score": 49,
+    "spike": 1.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -373,8 +375,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
-    "spike": 1.8,
+    "score": 46,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -419,8 +421,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 44,
-    "spike": 0.9,
+    "score": 42,
+    "spike": 0.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -466,8 +468,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 44,
-    "spike": 0.9,
+    "score": 42,
+    "spike": 0.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -506,8 +508,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
+    "score": 39,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -548,8 +550,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
+    "score": 39,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -588,8 +590,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
+    "score": 39,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -629,8 +631,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
+    "score": 39,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -670,8 +672,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
+    "score": 39,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -727,58 +729,59 @@
    }
   },
   {
-   "id": "11b2rmj",
-   "title": "[국제금융리포트] AI 투자심리 회복에 美 증시 반등…달러 강세·유가 상...",
-   "firstSeen": "2026-11-11T22:46:00.000Z",
-   "lastSeen": "2026-11-12T01:18:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "jv1z8u",
+   "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
+   "firstSeen": "2026-11-11T23:36:00.000Z",
+   "lastSeen": "2026-11-12T02:40:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "fx",
-    "energy"
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피, 美 AI·반도체 훈풍에 '강보합'···5400선",
-     "link": "http://www.finomy.com/news/articleView.html?idxno=266435",
-     "host": "finomy.com",
-     "at": "2026-11-12T01:18:00.000Z"
+     "title": "뉴욕증시, 코어위브 ‘깜짝 실적’에 반등...나스닥 1.60%↑",
+     "link": "http://www.metroseoul.co.kr/article/20261112500179",
+     "host": "metroseoul.co.kr",
+     "at": "2026-11-12T02:40:00.000Z"
     },
     {
-     "title": "원·달러 환율, 달러 강세 속 1336.4원 출발···2.8원↑",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=153006",
-     "host": "ziksir.com",
-     "at": "2026-11-12T01:08:00.000Z"
+     "title": "뉴욕증시 반등에도…엔비디아 '젠슨 황 축출설'에 시간외 급락",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902827",
+     "host": "newsworks.co.kr",
+     "at": "2026-11-12T00:38:00.000Z"
     },
     {
-     "title": "코스피, 반도체 훈풍에 강보합 출발 … 장 초반 5390~5400선 공방",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/12/2026111200069.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-12T01:02:00.000Z"
+     "title": "[국제금융리포트] AI 투자심리 회복에 美 증시 반등…달러 강세·유가 상...",
+     "link": "https://www.ajunews.com/view/20261112083414878",
+     "host": "ajunews.com",
+     "at": "2026-11-11T23:38:00.000Z"
     },
     {
-     "title": "AI 투심 회복…반도체 훈풍에 코스피 강세 출발?",
-     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=315186",
-     "host": "straightnews.co.kr",
-     "at": "2026-11-11T23:56:00.000Z"
+     "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731350",
+     "host": "ebn.co.kr",
+     "at": "2026-11-11T23:36:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 1.8,
+    "score": 30,
+    "spike": 1.5,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.75,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
      "unit": "%",
-     "z": -1.1
+     "z": 1.4
     },
     "why": [
-     "원/달러 -0.75%"
+     "S&P 500 +1.31%"
     ]
    }
   },
@@ -822,8 +825,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.9,
+    "score": 28,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -838,57 +841,57 @@
    }
   },
   {
-   "id": "mdkemd",
-   "title": "KDI \"반도체 온기 1년 뒤, 유가 충격은 직후\"…소비 파급 시차",
-   "firstSeen": "2026-11-12T03:00:00.000Z",
-   "lastSeen": "2026-11-12T03:03:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "e40h43",
+   "title": "엔비디아 주가, 황 CEO 해임 수순 소식에 시간외서 8.6% 급락...시총, 마...",
+   "firstSeen": "2026-11-12T00:18:00.000Z",
+   "lastSeen": "2026-11-12T02:44:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
-    "energy"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "반도체 호황에도 소비 부진…KDI “유가 상승에 구매력 약화”",
-     "link": "https://www.dt.co.kr/article/12094802?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-12T03:03:00.000Z"
+     "title": "'불륜 인정'과 함께 증발한 897조원…엔비디아, MS에 밀려 시총 3위",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5230447",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-12T02:44:00.000Z"
     },
     {
-     "title": "반도체 호황 온기는 '아직'…유가 충격에 민간소비 회복 '발목'",
-     "link": "https://www.nocutnews.co.kr/news/6605827?utm_source=naver&utm_medium=article&utm_campaign=20261112120109",
-     "host": "nocutnews.co.kr",
-     "at": "2026-11-12T03:02:00.000Z"
+     "title": "'CEO 해임설' 엔비디아 급락…삼성전자·SK하이닉스 파장은? [뉴스큐]",
+     "link": "https://www.newsq.co.kr/news/articleView.html?idxno=500860",
+     "host": "newsq.co.kr",
+     "at": "2026-11-12T02:24:00.000Z"
     },
     {
-     "title": "반도체 호황 누른 유가…KDI \"소비에 부정적 영향 먼저 반영\"",
-     "link": "https://www.yna.co.kr/view/AKR20261112084800002?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-12T03:00:00.000Z"
+     "title": "'젠슨 황 해임설'에 엔비디아 주가 8%대 폭락… 시총 3위 추락",
+     "link": "https://www.kado.net/news/articleView.html?idxno=2084379",
+     "host": "kado.net",
+     "at": "2026-11-12T02:12:00.000Z"
     },
     {
-     "title": "\"반도체 날아도 지갑 닫힌 이유\"…KDI \"유가 충격 있었다\"",
-     "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4118215",
-     "host": "news.bbsi.co.kr",
-     "at": "2026-11-12T03:00:00.000Z"
+     "title": "엔비디아, 황 CEO 해임 준비 보도에 시간외 8.6% 급락",
+     "link": "https://www.slist.kr/news/articleView.html?idxno=781096",
+     "host": "slist.kr",
+     "at": "2026-11-12T02:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 1.8,
+    "score": 25,
+    "spike": 0.2,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -0.96,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
      "unit": "%",
-     "z": -0.3
+     "z": 1.4
     },
     "why": [
-     "WTI 유가 -0.96%"
+     "S&P 500 +1.31%"
     ]
    }
   }
