@@ -51,12 +51,12 @@ test('② 달러로 샀으면(외화예수금 > 0) 빼지 않는다 · 미국 �
   const b = await createPaperLive({ client: c, store: createLedgerStore(tmp()), readMarket, now: () => t, limits: L }).status(); assert.equal(b.balance.usFundingKrw, 0); assert.equal(b.balance.total, 1000);
 });
 
-test("③ '목록에 없음'으로 소멸 처리된 주문을 다시 조회해 체결이면 filled 로 바로잡고 기록을 남긴다 · 진짜 없는 주문은 그대로", async () => {
+test("③ '목록에 없음'으로 소멸 처리된 주문을 다시 조회해 체결이면 filled 로 바로잡고 기록을 남긴다(주문번호 앞 0 차이 무시) · 진짜 없는 주문은 그대로", async () => {
   const t = Date.parse('2026-11-12T04:00:00Z');
   const brokerRows = [{ market: 'US', odno: '9001', orgno: '', code: 'JNJ', side: 'BUY', qty: 17, filled: 17, remaining: 0, price: 281.84, avgPrice: 281.74, cancelled: false, rejected: false, status: 'filled' }];
   const pl = createPaperLive({ client: broker({ orders: brokerRows }), store: createLedgerStore(tmp()), readMarket, now: () => t, limits: L });
   const led = pl._ledger();
-  led.orders.push({ at: '2026-11-10T14:36:45.843Z', symbol: 'JNJ', name: 'JNJ', market: 'US', currency: 'USD', side: 'BUY', qty: 17, price: 281.84, odno: '9001', status: 'expired', filledQty: 0, remaining: 17, note: '장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 17주)', expiredAt: '2026-11-11T00:00:00Z', why: 't' });
+  led.orders.push({ at: '2026-11-10T14:36:45.843Z', symbol: 'JNJ', name: 'JNJ', market: 'US', currency: 'USD', side: 'BUY', qty: 17, price: 281.84, odno: '0000009001', status: 'expired', filledQty: 0, remaining: 17, note: '장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 17주)', expiredAt: '2026-11-11T00:00:00Z', why: 't' });
   led.orders.push({ at: '2026-11-10T14:36:46.000Z', symbol: 'SPY', name: 'SPY', market: 'US', currency: 'USD', side: 'BUY', qty: 7, price: 749.05, odno: '9002', status: 'expired', filledQty: 0, remaining: 7, note: '장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 7주)', why: 't' });
   led.orders.push({ at: '2026-11-05T14:36:46.000Z', symbol: 'LMT', name: 'LMT', market: 'US', currency: 'USD', side: 'BUY', qty: 5, price: 590, odno: '9003', status: 'expired', filledQty: 0, remaining: 5, note: '장 마감으로 소멸(증권사 2026-11-05 주문 목록에 없음 · 미체결 5주)', why: 't' });
   const st = await pl.status(); const o = Object.fromEntries(st.recentOrders.map(x => [x.symbol, x]));
