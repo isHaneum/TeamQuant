@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T13:27:24.263Z",
+ "updatedAt": "2026-11-12T13:47:54.954Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,7 +62,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1332.8499755859375,
+   "last": 1332.81005859375,
    "change": -0.68,
    "z": -1,
    "sd": 0.6661814150687196,
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 87.54000091552734,
-   "change": 1.17,
-   "z": 0.4,
+   "last": 87.3499984741211,
+   "change": 0.95,
+   "z": 0.3,
    "sd": 2.876929486808728,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3933.10009765625,
-   "change": -1.68,
-   "z": -1.2,
+   "last": 3909.300048828125,
+   "change": -2.28,
+   "z": -1.7,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 19,
-   "change": 8.63,
+   "last": 18.889999389648438,
+   "change": 8,
    "z": 0.7,
    "sd": 11.788047688421058,
    "source": "Yahoo",
@@ -110,29 +110,29 @@
    "label": "미 10년 금리",
    "unit": "bp",
    "available": true,
-   "date": "2026-11-11",
-   "last": 4.998000144958496,
-   "change": 1.5,
-   "z": 0.3,
-   "sd": 5.33922022327753,
+   "date": "2026-11-12",
+   "last": 5.047999858856201,
+   "change": 5,
+   "z": 0.9,
+   "sd": 5.332834964737695,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -0.7,
+  "war": -0.6,
   "politics": -2,
-  "rates": -0.7,
+  "rates": -0.6,
   "trade": 0.2,
   "fx": -0.4,
-  "energy": -0.9,
-  "market": -1.5,
+  "energy": -0.8,
+  "market": -1.4,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.7,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.6,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
@@ -242,58 +242,6 @@
    }
   },
   {
-   "id": "ejyr9x",
-   "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
-   "firstSeen": "2026-11-12T06:17:00.000Z",
-   "lastSeen": "2026-11-12T12:01:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "엔비디아 이사회 긴급 회의…젠슨 황 결국 ‘해임 수순’?",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711454&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-12T12:01:00.000Z"
-    },
-    {
-     "title": "젠슨 황 추가 불륜 보도…이사회 해임 수순",
-     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1543584",
-     "host": "obsnews.co.kr",
-     "at": "2026-11-12T11:46:00.000Z"
-    },
-    {
-     "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611121517401278",
-     "host": "ytn.co.kr",
-     "at": "2026-11-12T06:17:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 40,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
    "id": "v78t4q",
    "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
    "firstSeen": "2026-11-11T15:02:00.000Z",
@@ -325,19 +273,187 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 37,
+    "score": 42,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.28,
      "unit": "%",
-     "z": 1.4
+     "z": -1.7
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +1.31%"
+     "금 -2.28%"
+    ]
+   }
+  },
+  {
+   "id": "ejyr9x",
+   "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
+   "firstSeen": "2026-11-12T06:17:00.000Z",
+   "lastSeen": "2026-11-12T12:01:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "엔비디아 이사회 긴급 회의…젠슨 황 결국 ‘해임 수순’?",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711454&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-12T12:01:00.000Z"
+    },
+    {
+     "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611121517401278",
+     "host": "ytn.co.kr",
+     "at": "2026-11-12T06:17:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 42,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.28,
+     "unit": "%",
+     "z": -1.7
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.28%"
+    ]
+   }
+  },
+  {
+   "id": "c86036",
+   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
+   "firstSeen": "2026-11-12T10:52:00.000Z",
+   "lastSeen": "2026-11-12T10:52:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
+     "host": "globale.co.kr",
+     "at": "2026-11-12T10:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.28,
+     "unit": "%",
+     "z": -1.7
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.28%"
+    ]
+   }
+  },
+  {
+   "id": "yhd7nc",
+   "title": "국제유가 전망, 호르무즈 위험에도 공급 증가…WTI 86달러 공방",
+   "firstSeen": "2026-11-12T11:58:00.000Z",
+   "lastSeen": "2026-11-12T11:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "국제유가 전망, 호르무즈 위험에도 공급 증가…WTI 86달러 공방",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16275166",
+     "host": "topstarnews.net",
+     "at": "2026-11-12T11:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.28,
+     "unit": "%",
+     "z": -1.7
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.28%"
+    ]
+   }
+  },
+  {
+   "id": "jpw6u0",
+   "title": "美, 中 반도체 규제 전면전…삼성·SK 중국공장 '초비상'",
+   "firstSeen": "2026-11-12T12:56:00.000Z",
+   "lastSeen": "2026-11-12T12:56:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "policy"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "美, 中 반도체 규제 전면전…삼성·SK 중국공장 '초비상'",
+     "link": "https://www.dongponews.net/news/articleView.html?idxno=61646",
+     "host": "dongponews.net",
+     "at": "2026-11-12T12:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.28,
+     "unit": "%",
+     "z": -1.7
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.28%"
     ]
    }
   },
@@ -631,134 +747,12 @@
    }
   },
   {
-   "id": "c86036",
-   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-   "firstSeen": "2026-11-12T10:52:00.000Z",
-   "lastSeen": "2026-11-12T10:52:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
-     "host": "globale.co.kr",
-     "at": "2026-11-12T10:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "yhd7nc",
-   "title": "국제유가 전망, 호르무즈 위험에도 공급 증가…WTI 86달러 공방",
-   "firstSeen": "2026-11-12T11:58:00.000Z",
-   "lastSeen": "2026-11-12T11:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "fx",
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "국제유가 전망, 호르무즈 위험에도 공급 증가…WTI 86달러 공방",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16275166",
-     "host": "topstarnews.net",
-     "at": "2026-11-12T11:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.68,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "금 -1.68%"
-    ]
-   }
-  },
-  {
-   "id": "jpw6u0",
-   "title": "美, 中 반도체 규제 전면전…삼성·SK 중국공장 '초비상'",
-   "firstSeen": "2026-11-12T12:56:00.000Z",
-   "lastSeen": "2026-11-12T12:56:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "美, 中 반도체 규제 전면전…삼성·SK 중국공장 '초비상'",
-     "link": "https://www.dongponews.net/news/articleView.html?idxno=61646",
-     "host": "dongponews.net",
-     "at": "2026-11-12T12:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.68,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "금 -1.68%"
-    ]
-   }
-  },
-  {
    "id": "u9qvo7",
    "title": "[경제포커스] 반도체 호황의 나비효과",
    "firstSeen": "2026-11-11T14:38:00.000Z",
    "lastSeen": "2026-11-12T12:34:00.000Z",
-   "count": 10,
-   "sources": 10,
+   "count": 8,
+   "sources": 8,
    "topics": [
     "energy"
    ],
@@ -771,12 +765,6 @@
      "at": "2026-11-12T12:34:00.000Z"
     },
     {
-     "title": "반도체 초호황에도 살아나지 않는 소비",
-     "link": "https://www.hankyung.com/article/2026111236301",
-     "host": "hankyung.com",
-     "at": "2026-11-12T09:00:00.000Z"
-    },
-    {
      "title": "반도체 날아도 소비는 제자리…유가 충격이 더 빨랐다",
      "link": "https://www.kukinews.com/article/view/kuk202611120155",
      "host": "kukinews.com",
@@ -787,83 +775,126 @@
      "link": "http://www.segyebiz.com/newsView/20261112514607?OutUrl=naver",
      "host": "segyebiz.com",
      "at": "2026-11-12T07:18:00.000Z"
+    },
+    {
+     "title": "반도체 수출 '호황'에도 지갑은 닫혔다…왜?",
+     "link": "https://www.namdonews.com/news/articleView.html?idxno=929083",
+     "host": "namdonews.com",
+     "at": "2026-11-12T07:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.68,
+     "change": -2.28,
      "unit": "%",
-     "z": -1.2
+     "z": -1.7
     },
     "why": [
-     "금 -1.68%"
+     "금 -2.28%"
     ]
    }
   },
   {
-   "id": "w5o2go",
-   "title": "등락 거듭하던 코스피, 약보합 마감...코스닥 1%↓",
-   "firstSeen": "2026-11-12T06:48:00.000Z",
-   "lastSeen": "2026-11-12T12:30:00.000Z",
-   "count": 7,
+   "id": "1rwnkhu",
+   "title": "美특사, 푸틴·젤렌스키 만난다…종전협상 돌파구 찾나",
+   "firstSeen": "2026-11-12T08:53:00.000Z",
+   "lastSeen": "2026-11-12T11:07:00.000Z",
+   "count": 6,
    "sources": 6,
    "topics": [
-    "market"
+    "war",
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피, 약보합에 5300선 유지...삼성전기, 현대차 하락",
-     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447124",
-     "host": "econonews.co.kr",
-     "at": "2026-11-12T12:30:00.000Z"
+     "title": "美 특사, 푸틴·젤렌스키 연쇄 회동…종전협상 돌파구 찾기 주력",
+     "link": "https://www.sedaily.com/article/20113746?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-12T11:07:00.000Z"
     },
     {
-     "title": "'젠슨 황 해임설' 코스피 약세…코스닥 동반 하락",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611122044029u7",
+     "title": "트럼프 특사, 푸틴·젤렌스키 연쇄 회동…‘종전 협상’ 돌파구 찾나",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711227&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-12T09:37:00.000Z"
+    },
+    {
+     "title": "미국 특사, 푸틴·젤렌스키 차례로 만난다…종전 협상 돌파구 찾나",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008843668&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-12T09:22:00.000Z"
+    },
+    {
+     "title": "美특사, 푸틴·젤렌스키 만난다…협상 기대에도 교전 계속",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261112180349bYp",
      "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-12T11:44:00.000Z"
-    },
-    {
-     "title": "[26.11.12 증시 인싸잇] 엔비디아 악재에 증시 출렁... 코스피·코스닥 동...",
-     "link": "https://www.mediawatch.kr/news/article.html?no=261716",
-     "host": "mediawatch.kr",
-     "at": "2026-11-12T10:50:00.000Z"
-    },
-    {
-     "title": "코스피·코스닥, 전일 급등 후 차익실현에 동반 하락",
-     "link": "https://www.thereport.co.kr/news/articleView.html?idxno=93316",
-     "host": "thereport.co.kr",
-     "at": "2026-11-12T09:40:00.000Z"
+     "at": "2026-11-12T09:04:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
+    "score": 27,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.28,
      "unit": "%",
-     "z": 1.4
+     "z": -1.7
     },
     "why": [
-     "S&P 500 +1.31%"
+     "금 -2.28%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-12T13:47:54.954Z",
+   "id": "v78t4q",
+   "level": "caution",
+   "title": "미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’",
+   "why": [
+    "핵심 단어",
+    "금 -2.28%"
+   ],
+   "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-12T13:47:54.954Z",
+   "id": "5gnazc",
+   "level": "caution",
+   "title": "미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +1.31%"
+   ],
+   "link": "https://www.dt.co.kr/article/12094839?ref=naver",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-12T13:47:54.954Z",
+   "id": "1v5wf34",
+   "level": "caution",
+   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +1.31%"
+   ],
+   "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=565256",
+   "delivered": false
+  },
   {
    "at": "2026-11-12T13:27:24.263Z",
    "id": "ejyr9x",
@@ -1066,42 +1097,6 @@
     "S&P 500 +1.31%"
    ],
    "link": "https://www.ziksir.com/news/articleView.html?idxno=153128",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T08:18:09.217Z",
-   "id": "5gnazc",
-   "level": "caution",
-   "title": "미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.dt.co.kr/article/12094839?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T08:18:09.217Z",
-   "id": "1v5wf34",
-   "level": "caution",
-   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.smartbizn.com/news/articleView.html?idxno=159300",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T07:47:06.672Z",
-   "id": "bc6j0c",
-   "level": "caution",
-   "title": "美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101161",
    "delivered": false
   }
  ],
