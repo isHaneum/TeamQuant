@@ -2,34 +2,34 @@
  "version": "PUB2-2026-11-10",
  "engine": "L6-2026-11-10",
  "label": "한투 모의계좌 (팀 공용)",
- "asOf": "2026-11-11T07:05:39.038Z",
+ "asOf": "2026-11-12T04:50:29.903Z",
  "mode": "vps",
  "public": true,
  "since": "2026-11-09",
- "days": 3,
+ "days": 4,
  "startTotal": 99378704,
- "total": 129096312,
+ "total": 100448911,
  "markets": {
   "KR": {
-   "open": false,
-   "reason": "장이 끝났습니다(15:30 KST).",
-   "openAt": "2026-11-11T00:00:00.000Z",
-   "closeAt": "2026-11-11T06:30:00.000Z",
+   "open": true,
+   "reason": "",
+   "openAt": "2026-11-12T00:00:00.000Z",
+   "closeAt": "2026-11-12T06:30:00.000Z",
    "market": "KR"
   },
   "US": {
    "open": false,
-   "reason": "미국 장 시작 전입니다(09:30 ET = 한국 23:30).",
-   "openAt": "2026-11-11T14:30:00.034Z",
-   "closeAt": "2026-11-11T21:00:00.034Z",
+   "reason": "미국 장이 끝났습니다(16:00 ET).",
+   "openAt": "2026-11-11T14:30:00.898Z",
+   "closeAt": "2026-11-11T21:00:00.898Z",
    "market": "US"
   }
  },
  "market": {
-  "open": false,
-  "reason": "장이 끝났습니다(15:30 KST).",
-  "openAt": "2026-11-11T00:00:00.000Z",
-  "closeAt": "2026-11-11T06:30:00.000Z",
+  "open": true,
+  "reason": "",
+  "openAt": "2026-11-12T00:00:00.000Z",
+  "closeAt": "2026-11-12T06:30:00.000Z",
   "market": "KR"
  },
  "killSwitch": false,
@@ -43,12 +43,14 @@
   "duplicateWindowMin": 10,
   "allowLive": false
  },
- "fx": 1334.199951171875,
+ "fx": 1330.8900146484375,
  "balance": {
-  "cash": 62669084,
+  "cash": 34512955,
+  "cashRawKrw": 62669084,
+  "usFundingKrw": 28156129,
   "cashUsd": 0,
-  "total": 129096312,
-  "stock": 66427228,
+  "total": 100448911,
+  "stock": 65936266,
   "positions": [
    {
     "symbol": "000660",
@@ -56,11 +58,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 2,
-    "price": 1277000,
+    "price": 1269000,
     "avgCost": 1176000,
-    "value": 2554000,
-    "valueKrw": 2554000,
-    "weightPct": 1.9783679025625458
+    "value": 2538000,
+    "valueKrw": 2538000,
+    "weightPct": 2.5266575562974496
    },
    {
     "symbol": "005380",
@@ -68,11 +70,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 14,
-    "price": 272500,
+    "price": 265250,
     "avgCost": 276500,
-    "value": 3815000,
-    "valueKrw": 3815000,
-    "weightPct": 2.9551580063727925
+    "value": 3713500,
+    "valueKrw": 3713500,
+    "weightPct": 3.6969041904297
    },
    {
     "symbol": "005930",
@@ -80,11 +82,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 13,
-    "price": 206000,
+    "price": 208500,
     "avgCost": 192900,
-    "value": 2678000,
-    "valueKrw": 2678000,
-    "weightPct": 2.0744202204629985
+    "value": 2710500,
+    "valueKrw": 2710500,
+    "weightPct": 2.698386645525704
    },
    {
     "symbol": "012450",
@@ -92,11 +94,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 4,
-    "price": 659000,
+    "price": 655000,
     "avgCost": 646000,
-    "value": 2636000,
-    "valueKrw": 2636000,
-    "weightPct": 2.0418863708515547
+    "value": 2620000,
+    "valueKrw": 2620000,
+    "weightPct": 2.6082910943653737
    },
    {
     "symbol": "035420",
@@ -104,11 +106,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 24,
-    "price": 194300,
+    "price": 182300,
     "avgCost": 190181.034,
-    "value": 4663200,
-    "valueKrw": 4663200,
-    "weightPct": 3.612186845430565
+    "value": 4375200,
+    "valueKrw": 4375200,
+    "weightPct": 4.355647021399764
    },
    {
     "symbol": "069500",
@@ -116,11 +118,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 138,
-    "price": 84540,
+    "price": 84160,
     "avgCost": 80298.26,
-    "value": 11666520,
-    "valueKrw": 11666520,
-    "weightPct": 9.037066837354734
+    "value": 11614080,
+    "valueKrw": 11614080,
+    "weightPct": 11.562176119559922
    },
    {
     "symbol": "105560",
@@ -128,11 +130,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 36,
-    "price": 153300,
+    "price": 150500,
     "avgCost": 151600,
-    "value": 5518800,
-    "valueKrw": 5518800,
-    "weightPct": 4.274947838943687
+    "value": 5418000,
+    "valueKrw": 5418000,
+    "weightPct": 5.393786698195265
    },
    {
     "symbol": "207940",
@@ -140,11 +142,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 1,
-    "price": 1430000,
+    "price": 1421000,
     "avgCost": 1549000,
-    "value": 1430000,
-    "valueKrw": 1430000,
-    "weightPct": 1.1077001177229602
+    "value": 1421000,
+    "valueKrw": 1421000,
+    "weightPct": 1.4146494828599983
    },
    {
     "symbol": "329180",
@@ -152,11 +154,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 13,
-    "price": 262500,
+    "price": 268000,
     "avgCost": 258000,
-    "value": 3412500,
-    "valueKrw": 3412500,
-    "weightPct": 2.6433752809297917
+    "value": 3484000,
+    "valueKrw": 3484000,
+    "weightPct": 3.468429836934718
    },
    {
     "symbol": "JNJ",
@@ -164,11 +166,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 17,
-    "price": 280.78,
+    "price": 280.41,
     "avgCost": 281.74,
-    "value": 4773.26,
-    "valueKrw": 6368483.2589306645,
-    "weightPct": 4.933125633310628
+    "value": 4766.97,
+    "valueKrw": 6344312.773128662,
+    "weightPct": 6.315959735122129
    },
    {
     "symbol": "JPM",
@@ -176,11 +178,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 14,
-    "price": 342.07,
+    "price": 343.39,
     "avgCost": 343.93,
-    "value": 4788.98,
-    "valueKrw": 6389456.882163085,
-    "weightPct": 4.9493721262642145
+    "value": 4807.46,
+    "valueKrw": 6398200.509821777,
+    "weightPct": 6.36960664493593
    },
    {
     "symbol": "LMT",
@@ -188,11 +190,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 5,
-    "price": 603.12,
+    "price": 610.05,
     "avgCost": 592.47,
-    "value": 3015.6,
-    "valueKrw": 4023413.372753906,
-    "weightPct": 3.1165982284249187
+    "value": 3050.25,
+    "valueKrw": 4059547.2671813965,
+    "weightPct": 4.0414049557803535
    },
    {
     "symbol": "MSFT",
@@ -200,11 +202,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 6,
-    "price": 533.16,
+    "price": 521.125,
     "avgCost": 542.315,
-    "value": 3198.96,
-    "valueKrw": 4268052.275800781,
-    "weightPct": 3.3060993065400517
+    "value": 3126.75,
+    "valueKrw": 4161360.353302002,
+    "weightPct": 4.14276303433693
    },
    {
     "symbol": "SPY",
@@ -212,11 +214,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 7,
-    "price": 749.92,
+    "price": 759.81,
     "avgCost": 749.01,
-    "value": 5249.44,
-    "valueKrw": 7003802.591679687,
-    "weightPct": 5.425253814903471
+    "value": 5318.67,
+    "valueKrw": 7078564.794210205,
+    "weightPct": 7.046930348712496
    }
   ],
   "usError": null
@@ -508,11 +510,11 @@
    "amountKrw": 7039092,
    "why": "계획 비중보다 적음",
    "batch": "RB-2026-11-10-mwasmw9e",
-   "status": "expired",
-   "filledQty": 0,
-   "avgPrice": null,
-   "remaining": 7,
-   "note": "장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 7주)"
+   "status": "filled",
+   "filledQty": 7,
+   "avgPrice": 749.01014286,
+   "remaining": 0,
+   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
   },
   {
    "at": "2026-11-10T14:36:45.843Z",
@@ -527,11 +529,11 @@
    "amountKrw": 6432197,
    "why": "계획 비중보다 적음",
    "batch": "RB-2026-11-10-mwasmw9e",
-   "status": "expired",
-   "filledQty": 0,
-   "avgPrice": null,
-   "remaining": 17,
-   "note": "장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 17주)"
+   "status": "filled",
+   "filledQty": 17,
+   "avgPrice": 281.74,
+   "remaining": 0,
+   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
   },
   {
    "at": "2026-11-10T14:36:46.991Z",
@@ -546,11 +548,11 @@
    "amountKrw": 6468015,
    "why": "계획 비중보다 적음",
    "batch": "RB-2026-11-10-mwasmw9e",
-   "status": "expired",
-   "filledQty": 0,
-   "avgPrice": null,
-   "remaining": 14,
-   "note": "장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 14주)"
+   "status": "filled",
+   "filledQty": 14,
+   "avgPrice": 343.93,
+   "remaining": 0,
+   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
   },
   {
    "at": "2026-11-10T14:36:47.537Z",
@@ -565,11 +567,11 @@
    "amountKrw": 4368886,
    "why": "계획 비중보다 적음",
    "batch": "RB-2026-11-10-mwasmw9e",
-   "status": "expired",
-   "filledQty": 0,
-   "avgPrice": null,
-   "remaining": 6,
-   "note": "장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 6주)"
+   "status": "filled",
+   "filledQty": 6,
+   "avgPrice": 542.315,
+   "remaining": 0,
+   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
   },
   {
    "at": "2026-11-10T14:36:48.578Z",
@@ -584,11 +586,11 @@
    "amountKrw": 3978372,
    "why": "계획 비중보다 적음",
    "batch": "RB-2026-11-10-mwasmw9e",
-   "status": "expired",
-   "filledQty": 0,
-   "avgPrice": null,
-   "remaining": 5,
-   "note": "장 마감으로 소멸(증권사 2026-11-10 주문 목록에 없음 · 미체결 5주)"
+   "status": "filled",
+   "filledQty": 5,
+   "avgPrice": 592.47,
+   "remaining": 0,
+   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
   }
  ],
  "runs": [
@@ -711,15 +713,24 @@
   },
   {
    "date": "2026-11-10",
-   "total": 120510923,
-   "cash": 62669084,
-   "stock": 57841839
+   "total": 100664042,
+   "cash": 42822203,
+   "stock": 57841839,
+   "funding": 19846881
   },
   {
    "date": "2026-11-11",
-   "total": 129096312,
-   "cash": 62669084,
-   "stock": 66427228
+   "total": 101068446,
+   "cash": 34512955,
+   "stock": 66555491,
+   "funding": 28156129
+  },
+  {
+   "date": "2026-11-12",
+   "total": 100448911,
+   "cash": 34512955,
+   "stock": 65936266,
+   "funding": 28156129
   }
  ],
  "prefs": null,
@@ -729,12 +740,12 @@
   "decisions": 7,
   "orders": 22,
   "submitted": 22,
-  "fills": 13,
+  "fills": 18,
   "rejected": 0,
   "notFound": 0,
   "batches": 2,
-  "tradedKrw": 83740502,
-  "turnoverPct": 72
+  "tradedKrw": 112018381,
+  "turnoverPct": 111.6
  },
  "integrity": {
   "ok": true,
