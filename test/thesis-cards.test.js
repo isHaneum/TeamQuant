@@ -50,10 +50,12 @@ test('엔진: 계획에 pct 0 · exit 로 적힌 보유는 재조정에서 매�
   const pos = [{ symbol: '105560', name: 'KB금융', market: 'KR', currency: 'KRW', qty: 100, price: 70000, value: 7_000_000, valueKrw: 7_000_000 }, { symbol: '069500', name: 'KODEX 200', market: 'KR', currency: 'KRW', qty: 100, price: 70000, value: 7_000_000, valueKrw: 7_000_000 }];
   const client = { settings: () => ({ mode: 'vps', accountMasked: '****2787' }), async price(code) { return { code, market: 'KR', currency: 'KRW', exchange: 'KRX', price: 70000, upper: 0, lower: 0, halted: false }; },
     async balance() { return { cash: 86_000_000, total: 100_000_000, stock: 14_000_000, positions: pos, cashUsd: 0, stockUsd: 0 }; }, async buyingPower() { return { maxQty: 1e6, cashQty: 1e6 }; }, async place() { return { odno: '1', orgno: '' }; }, async cancel() { return {}; }, async orders() { return []; } };
-  const t = Date.parse('2026-11-09T01:30:00Z'), mk = () => createPaperLive({ client, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-exit-'))), readMarket, now: () => t, limits: { maxOrderKrw: 30_000_000, maxDailyKrw: 100_000_000 } });
+  const t = Date.parse('2026-11-09T01:30:00Z'), mk = (maxOrderKrw = 30_000_000) => createPaperLive({ client, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-exit-'))), readMarket, now: () => t, limits: { maxOrderKrw, maxDailyKrw: 100_000_000 } });
   const rules = { maxSingle: 25, minCash: 10, dailyLoss: 2.5, maxTrades30: 8 };
   const a = await mk().preview({ rules, rebalance: true, plan: { '069500': { pct: 7, name: 'KODEX 200' }, '105560': { pct: 0, exit: true, name: 'KB금융' } } });
   const sell = a.items.find(i => i.symbol === '105560'); assert.ok(sell && sell.side === 'SELL' && sell.qty === 100, JSON.stringify(a.items.map(i => [i.symbol, i.side, i.qty])));
+  const c = await mk(10_000_000).preview({ rules, rebalance: true, plan: { '069500': { pct: 60, name: 'KODEX 200' }, '105560': { pct: 0, exit: true, name: 'KB금융' } } });
+  const big = c.items.find(i => i.symbol === '069500'); assert.ok(big && big.side === 'BUY' && big.amountKrw <= 10_000_000 && big.qty === Math.floor(10_000_000 / big.price) && big.warnings.some(w => /1회 한도/.test(w)), JSON.stringify(big));
   const b = await mk().preview({ rules, rebalance: true, plan: { '069500': { pct: 7, name: 'KODEX 200' }, '105560': { pct: 0, name: 'KB금융' } } });
   assert.ok(!b.items.some(i => i.symbol === '105560' && i.side === 'SELL'));
 });
