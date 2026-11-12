@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T21:47:35.868Z",
+ "updatedAt": "2026-11-12T22:12:18.762Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -22,7 +22,15 @@
    "symbol": "^KQ11",
    "label": "코스닥",
    "unit": "%",
-   "available": false
+   "available": true,
+   "date": "2026-11-12",
+   "last": 696.53,
+   "change": -1.22,
+   "z": -0.5,
+   "sd": 2.598476194894014,
+   "source": "네이버 현재가",
+   "live": false,
+   "checked": true
   },
   {
    "symbol": "^GSPC",
@@ -56,7 +64,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1334.9000244140625,
+   "last": 1334.9100341796875,
    "change": -0.52,
    "z": -0.8,
    "sd": 0.6661814150687196,
@@ -80,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3878,
-   "change": -3.06,
+   "last": 3881.699951171875,
+   "change": -2.97,
    "z": -2.2,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
@@ -113,35 +121,35 @@
   }
  ],
  "spikes": {
-  "war": -0.1,
-  "politics": -1.5,
-  "rates": 0.6,
-  "trade": 0.3,
+  "war": 0.5,
+  "politics": -0.7,
+  "rates": 1.3,
+  "trade": 0.5,
   "fx": -0.4,
   "energy": 1.8,
-  "market": -0.5,
+  "market": -0.2,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 1.6,
+   "rate": 2.4,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.9,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.7,
+   "rate": 3.9,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -156,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.4,
+   "rate": 3.9,
    "saturated": 1,
    "queries": 3
   },
@@ -182,8 +190,8 @@
    "title": "트럼프 “이란과 합의 필요 없다”…발언 뒤 美증시 선물↓",
    "firstSeen": "2026-11-12T13:46:00.000Z",
    "lastSeen": "2026-11-12T21:46:00.000Z",
-   "count": 10,
-   "sources": 10,
+   "count": 6,
+   "sources": 6,
    "topics": [
     "war",
     "politics",
@@ -207,34 +215,34 @@
      "at": "2026-11-12T21:39:00.000Z"
     },
     {
-     "title": "국제유가, \"이란과 합의 불필요\" 트럼프 발언에 급등... 브렌트유 3.3%↑",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887027",
-     "host": "getnews.co.kr",
-     "at": "2026-11-12T21:38:00.000Z"
+     "title": "트럼프 \"이란과 합의 필요 없다\" 급선회…국제유가 급등",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR202611130606432xB",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-12T21:07:00.000Z"
     },
     {
-     "title": "국제유가, 트럼프 “이란 협상 필요없다”에 급등⋯브렌트유 3.3%↑ [상...",
-     "link": "https://www.etoday.co.kr/news/view/2647643",
-     "host": "etoday.co.kr",
-     "at": "2026-11-12T21:24:00.000Z"
+     "title": "트럼프 “이란과 합의 필요없다”…밴스 협상론 뒤집고 강경 선회[1일1트...",
+     "link": "https://biz.heraldcorp.com/article/10935678?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-12T20:50:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 77,
+    "score": 73,
     "spike": 1.8,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.06,
+     "change": -2.97,
      "unit": "%",
      "z": -2.2
     },
     "why": [
      "핵심 단어",
-     "금 -3.06%(평소의 2.2배)"
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   },
@@ -269,82 +277,27 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.06,
+     "change": -2.97,
      "unit": "%",
      "z": -2.2
     },
     "why": [
      "핵심 단어",
-     "금 -3.06%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "xu55w3",
-   "title": "[서울데이터랩]미국 증시, 주요 지수 일제히 하락 마감…반도체 약세 속...",
-   "firstSeen": "2026-11-12T15:24:00.000Z",
-   "lastSeen": "2026-11-12T21:47:00.000Z",
-   "count": 12,
-   "sources": 12,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시, 젠슨 황 퇴진·유가 급등에 하락…엔비디아 4%↓",
-     "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284423",
-     "host": "womennews.co.kr",
-     "at": "2026-11-12T21:47:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시 마감] 젠슨 황 사임·유가 급등에 일제히 하락…나스닥 0.39%↓",
-     "link": "https://www.ajunews.com/view/20261113063840833",
-     "host": "ajunews.com",
-     "at": "2026-11-12T21:44:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시]젠슨 황 사임·종전 불투명…일제히 하락 마감",
-     "link": "https://view.asiae.co.kr/article/2026111305592985181",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-12T21:44:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 3대 지수 동반 약세…젠슨 황 사임에 엔비디아 4.4% 하락",
-     "link": "https://www.ddaily.co.kr/page/view/2026111306390152983",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-12T21:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 52,
-    "spike": 1.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.06,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "금 -3.06%(평소의 2.2배)"
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   },
   {
    "id": "1len34m",
-   "title": "미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심",
+   "title": "[김미정의 머니태그] 가계부채 1200조인데… 미국 12월 ‘빅스텝’ 공포...",
    "firstSeen": "2026-11-11T22:08:00.000Z",
    "lastSeen": "2026-11-12T05:50:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "count": 1,
+   "sources": 1,
    "topics": [
     "rates",
-    "fx"
+    "fx",
+    "market"
    ],
    "critical": [
     "rates"
@@ -355,60 +308,13 @@
      "link": "https://www.dt.co.kr/article/12094839?ref=naver",
      "host": "dt.co.kr",
      "at": "2026-11-12T05:50:00.000Z"
-    },
-    {
-     "title": "미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심",
-     "link": "https://www.dailian.co.kr/news/view/1713698/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-11T22:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 51,
-    "spike": 0.6,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "19z2587",
-   "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 'AI 투자·관세·재정 지...",
-   "firstSeen": "2026-11-12T07:18:00.000Z",
-   "lastSeen": "2026-11-12T07:18:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "trade"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 'AI 투자·관세·재정 지...",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=153128",
-     "host": "ziksir.com",
-     "at": "2026-11-12T07:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
-    "spike": 0.6,
+    "score": 53,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -447,8 +353,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
-    "spike": 0.6,
+    "score": 53,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -460,6 +366,64 @@
     "why": [
      "핵심 단어",
      "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "w6tq8y",
+   "title": "엔비디아, 젠슨 황 CEO 즉각 사임 발표…33년 만에 퇴진·주가 13% 급락 ...",
+   "firstSeen": "2026-11-12T16:22:00.000Z",
+   "lastSeen": "2026-11-12T22:11:00.000Z",
+   "count": 23,
+   "sources": 22,
+   "topics": [
+    "politics",
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황 엔비디아 CEO 전격 퇴진…주가 '휘청'",
+     "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5230584",
+     "host": "mbn.co.kr",
+     "at": "2026-11-12T22:11:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 사임'에 출렁인 뉴욕증시…엔비디아 4%대 하락, 경쟁사는 5%대...",
+     "link": "https://www.ziksir.com/news/articleView.html?idxno=153168",
+     "host": "ziksir.com",
+     "at": "2026-11-12T22:06:00.000Z"
+    },
+    {
+     "title": "미국증시, 젠슨 황 사임·국채금리 5% 돌파에 하락…엔비디아 4.34%↓ 브...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16275371",
+     "host": "topstarnews.net",
+     "at": "2026-11-12T22:06:00.000Z"
+    },
+    {
+     "title": "美증시, 젠슨 황 퇴진·유가 급등에 일제히 하락-[글로벌 마감 시황]",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611130011&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-12T22:01:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 52,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.97,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   },
@@ -488,19 +452,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 0,
+    "score": 50,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.06,
+     "change": -2.97,
      "unit": "%",
      "z": -2.2
     },
     "why": [
      "핵심 단어",
-     "금 -3.06%(평소의 2.2배)"
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   },
@@ -530,19 +494,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 0,
+    "score": 50,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.06,
+     "change": -2.97,
      "unit": "%",
      "z": -2.2
     },
     "why": [
      "핵심 단어",
-     "금 -3.06%(평소의 2.2배)"
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   },
@@ -586,8 +550,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 39,
-    "spike": 0.6,
+    "score": 44,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -602,9 +566,9 @@
    }
   },
   {
-   "id": "1703vlg",
+   "id": "k8u6ea",
    "title": "[속보]엔비디아 급락에 나스닥 0.4%↓…유가 뛰고 에너지주 강세",
-   "firstSeen": "2026-11-12T12:42:00.000Z",
+   "firstSeen": "2026-11-12T21:04:00.000Z",
    "lastSeen": "2026-11-12T21:30:00.000Z",
    "count": 2,
    "sources": 2,
@@ -638,99 +602,12 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.06,
+     "change": -2.97,
      "unit": "%",
      "z": -2.2
     },
     "why": [
-     "금 -3.06%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "onrp82",
-   "title": "10월 수출물가, 환율 하락에도 석 달 만에 ↑…'반도체의 힘'",
-   "firstSeen": "2026-11-12T07:13:00.000Z",
-   "lastSeen": "2026-11-12T21:10:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국제유가·환율 동반 하락에…10월 수입물가 한 달 만에 하락",
-     "link": "https://view.asiae.co.kr/article/2026111306105002008",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-12T21:10:00.000Z"
-    },
-    {
-     "title": "10월 수출물가, 환율 하락에도 석 달 만에 ↑…'반도체의 힘'",
-     "link": "https://www.dailian.co.kr/news/view/1714301/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-12T21:05:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 38,
-    "spike": 1.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.06,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "금 -3.06%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1j8zxna",
-   "title": "[속보]젠슨황 ‘사임’에 기술주 휘청…뉴욕증시 일제 하락",
-   "firstSeen": "2026-11-12T21:22:00.000Z",
-   "lastSeen": "2026-11-12T21:28:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시, 젠슨황 사임·유가상승에 일제 하락 마감…나스닥 0.4%↓",
-     "link": "https://www.newsis.com/view/NISX20261113_0003866373",
-     "host": "newsis.com",
-     "at": "2026-11-12T21:28:00.000Z"
-    },
-    {
-     "title": "[속보]젠슨황 ‘사임’에 기술주 휘청…뉴욕증시 일제 하락",
-     "link": "https://www.munhwa.com/article/11630974?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-12T21:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 38,
-    "spike": 1.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.06,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "금 -3.06%(평소의 2.2배)"
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   },
@@ -762,51 +639,12 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.06,
+     "change": -2.97,
      "unit": "%",
      "z": -2.2
     },
     "why": [
-     "금 -3.06%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "wdxed8",
-   "title": "월드 뉴스 브리프 (기준일시: 2026년 11월 12일 목요일 10:00)",
-   "firstSeen": "2026-11-12T02:00:00.000Z",
-   "lastSeen": "2026-11-12T02:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "월드 뉴스 브리프 (기준일시: 2026년 11월 12일 목요일 10:00)",
-     "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=globalnewsfocus&wr_id=527",
-     "host": "ifs.or.kr",
-     "at": "2026-11-12T02:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 1.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.06,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "금 -3.06%(평소의 2.2배)"
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   },
@@ -839,17 +677,182 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.06,
+     "change": -2.97,
      "unit": "%",
      "z": -2.2
     },
     "why": [
-     "금 -3.06%(평소의 2.2배)"
+     "금 -2.97%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1l30mkw",
+   "title": "\"S&P500, 연말 대규모 랠리 펼칠 것\"",
+   "firstSeen": "2026-11-12T20:26:00.000Z",
+   "lastSeen": "2026-11-12T20:26:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "fx",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"S&P500, 연말 대규모 랠리 펼칠 것\"",
+     "link": "https://www.businessplus.kr/news/articleView.html?idxno=119800",
+     "host": "businessplus.kr",
+     "at": "2026-11-12T20:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.97,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "금 -2.97%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1sfddx0",
+   "title": "美 국채 10년물 금리 5.109% 급등…유가 상승·연준 추가 인상 전망",
+   "firstSeen": "2026-11-12T06:12:00.000Z",
+   "lastSeen": "2026-11-12T20:44:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 국채 10년물 금리 5.109% 급등…유가 상승·연준 추가 인상 전망",
+     "link": "https://www.news1.kr/world/international-economy/6352649",
+     "host": "news1.kr",
+     "at": "2026-11-12T20:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.97,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "금 -2.97%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "fzivr8",
+   "title": "[美증시] 젠슨황 퇴진·유가급등에 3대 지수 동반 조정…메모리·장비주...",
+   "firstSeen": "2026-11-12T21:46:00.000Z",
+   "lastSeen": "2026-11-12T21:46:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[美증시] 젠슨황 퇴진·유가급등에 3대 지수 동반 조정…메모리·장비주...",
+     "link": "https://www.mediapen.com/news/view/1137200",
+     "host": "mediapen.com",
+     "at": "2026-11-12T21:46:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.97,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "금 -2.97%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "z9uy2m",
+   "title": "나스닥, 유가 상승·젠슨황 사퇴에 약보합… 필반지수 하락",
+   "firstSeen": "2026-11-12T21:50:00.000Z",
+   "lastSeen": "2026-11-12T21:50:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나스닥, 유가 상승·젠슨황 사퇴에 약보합… 필반지수 하락",
+     "link": "https://it.chosun.com/news/articleView.html?idxno=3000000000940",
+     "host": "it.chosun.com",
+     "at": "2026-11-12T21:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.97,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "금 -2.97%(평소의 2.2배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-12T22:12:18.762Z",
+   "id": "1vztfhm",
+   "level": "urgent",
+   "title": "트럼프 “이란과 합의 필요 없다”…발언 뒤 美증시 선물↓",
+   "why": [
+    "핵심 단어",
+    "금 -2.97%(평소의 2.2배)"
+   ],
+   "link": "http://www.inews24.com/view/2025772",
+   "delivered": false
+  },
   {
    "at": "2026-11-12T21:12:13.427Z",
    "id": "1vztfhm",
@@ -1076,18 +1079,6 @@
     "S&P 500 +1.31%"
    ],
    "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=565256",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T12:32:31.213Z",
-   "id": "1sfddx0",
-   "level": "caution",
-   "title": "美 연준 빅스텝설에 상승하는 시장 금리",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://www.thepublic.kr/news/articleView.html?idxno=326391",
    "delivered": false
   }
  ],
@@ -1674,7 +1665,5 @@
   "text": "[미국 장 브리핑] 2026-11-12 22시\nS&P 500 +1.31%(11.11 기준), 나스닥 +1.6%(11.11 기준), 원/달러 -0.71% · 주요 이슈: 환율·달러, 전쟁·지정학, 금리·통화\n1. [주의] 美 '빅스텝' 우려에도 밀린 달러-원…역외 스탑성 매도 주목 (7곳 보도)\n   https://www.idaegu.co.kr/news/articleView.html?idxno=565256\n2. [주의] 부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM] (3곳 보도)\n   https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711454&ref=A\n3. [주의] 미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’ (2곳 보도)\n   https://www.polinews.co.kr/news/articleView.html?idxno=748305\n4. [주의] 미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심 (2곳 보도)\n   https://www.dt.co.kr/article/12094839?ref=naver\n5. 美 소비자물가 0.4% 상승… 연내 기준금리 ‘빅스텝’ 가능성 (1곳 보도)\n   https://www.donga.com/news/Economy/article/all/20261111/135009315/2\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
   "delivered": false
  },
- "problems": [
-  "시세 실패 ^KQ11: 시장 데이터 요청 실패 (429)"
- ]
+ "problems": []
 }
