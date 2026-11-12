@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T11:47:48.240Z",
+ "updatedAt": "2026-11-12T12:19:53.995Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,7 +62,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1332.3900146484375,
+   "last": 1332.4000244140625,
    "change": -0.71,
    "z": -1.1,
    "sd": 0.6661814150687196,
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 86.0199966430664,
-   "change": -0.59,
-   "z": -0.2,
+   "last": 85.87000274658203,
+   "change": -0.76,
+   "z": -0.3,
    "sd": 2.876929486808728,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3951.699951171875,
-   "change": -1.22,
+   "last": 3950.699951171875,
+   "change": -1.24,
    "z": -0.9,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 18.31999969482422,
-   "change": 4.75,
+   "last": 18.360000610351562,
+   "change": 4.97,
    "z": 0.4,
    "sd": 11.788047688421058,
    "source": "Yahoo",
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": 0,
-  "politics": -1.7,
-  "rates": -1,
+  "war": -0.4,
+  "politics": -2,
+  "rates": -0.8,
   "trade": 0.3,
   "fx": -0.4,
-  "energy": -0.8,
-  "market": -1.1,
+  "energy": -0.9,
+  "market": -1.4,
   "credit": -0.2,
   "disaster": 0,
-  "policy": -0.4
+  "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 1.8,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.9,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.2,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.4,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   }
@@ -226,6 +226,58 @@
     "level": "caution",
     "label": "주의",
     "score": 49,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "ejyr9x",
+   "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
+   "firstSeen": "2026-11-12T06:17:00.000Z",
+   "lastSeen": "2026-11-12T12:01:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "엔비디아 이사회 긴급 회의…젠슨 황 결국 ‘해임 수순’?",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711454&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-12T12:01:00.000Z"
+    },
+    {
+     "title": "젠슨 황 추가 불륜 보도…이사회 해임 수순",
+     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1543584",
+     "host": "obsnews.co.kr",
+     "at": "2026-11-12T11:46:00.000Z"
+    },
+    {
+     "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611121517401278",
+     "host": "ytn.co.kr",
+     "at": "2026-11-12T06:17:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 40,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -315,52 +367,6 @@
      "link": "https://www.dailian.co.kr/news/view/1713698/?sc=Naver",
      "host": "dailian.co.kr",
      "at": "2026-11-11T22:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "1sfddx0",
-   "title": "美 연준 빅스텝설에 상승하는 시장 금리",
-   "firstSeen": "2026-11-12T06:12:00.000Z",
-   "lastSeen": "2026-11-12T07:16:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 금리 인상 시계 빨라지나...연준 내부서 '속도전' 갑론을박",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=326391",
-     "host": "thepublic.kr",
-     "at": "2026-11-12T07:16:00.000Z"
-    },
-    {
-     "title": "美 연준 빅스텝설에 상승하는 시장 금리",
-     "link": "https://www.mt.co.kr/stock/2026/11/12/2026111214141373752",
-     "host": "mt.co.kr",
-     "at": "2026-11-12T06:12:00.000Z"
     }
    ],
    "assess": {
@@ -545,6 +551,46 @@
    }
   },
   {
+   "id": "1sfddx0",
+   "title": "美 연준 빅스텝설에 상승하는 시장 금리",
+   "firstSeen": "2026-11-12T06:12:00.000Z",
+   "lastSeen": "2026-11-12T06:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 연준 빅스텝설에 상승하는 시장 금리",
+     "link": "https://www.mt.co.kr/stock/2026/11/12/2026111214141373752",
+     "host": "mt.co.kr",
+     "at": "2026-11-12T06:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 34,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
    "id": "4jsq70",
    "title": "기름값 탓이라더니…미 연준 '빅스텝' 불 지핀 AI·서비스",
    "firstSeen": "2026-11-11T05:30:00.000Z",
@@ -626,6 +672,158 @@
    }
   },
   {
+   "id": "yhd7nc",
+   "title": "국제유가 전망, 호르무즈 위험에도 공급 증가…WTI 86달러 공방",
+   "firstSeen": "2026-11-12T11:58:00.000Z",
+   "lastSeen": "2026-11-12T11:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "국제유가 전망, 호르무즈 위험에도 공급 증가…WTI 86달러 공방",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16275166",
+     "host": "topstarnews.net",
+     "at": "2026-11-12T11:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.71,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 -0.71%"
+    ]
+   }
+  },
+  {
+   "id": "jv1z8u",
+   "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
+   "firstSeen": "2026-11-11T23:36:00.000Z",
+   "lastSeen": "2026-11-12T09:18:00.000Z",
+   "count": 6,
+   "sources": 5,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 급락에 K-반도체·소부장 주가도 '출렁'",
+     "link": "https://www.ajunews.com/view/20261112142530215",
+     "host": "ajunews.com",
+     "at": "2026-11-12T09:18:00.000Z"
+    },
+    {
+     "title": "\"젠슨 황 해임 논의\" 소식에 엔비디아 8%대 급락…K-반도체·소부장도 '...",
+     "link": "https://www.ajunews.com/view/20261112144357322",
+     "host": "ajunews.com",
+     "at": "2026-11-12T09:08:00.000Z"
+    },
+    {
+     "title": "'기술주 반등' 상승했던 지수‥엔비디아 급락에 약세",
+     "link": "https://imnews.imbc.com/replay/2026/nw1700/article/6865205_36981.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-12T08:06:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346045?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-12T07:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "w5o2go",
+   "title": "등락 거듭하던 코스피, 약보합 마감...코스닥 1%↓",
+   "firstSeen": "2026-11-12T06:48:00.000Z",
+   "lastSeen": "2026-11-12T11:44:00.000Z",
+   "count": 6,
+   "sources": 5,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'젠슨 황 해임설' 코스피 약세…코스닥 동반 하락",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611122044029u7",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-12T11:44:00.000Z"
+    },
+    {
+     "title": "[26.11.12 증시 인싸잇] 엔비디아 악재에 증시 출렁... 코스피·코스닥 동...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261716",
+     "host": "mediawatch.kr",
+     "at": "2026-11-12T10:50:00.000Z"
+    },
+    {
+     "title": "코스피·코스닥, 전일 급등 후 차익실현에 동반 하락",
+     "link": "https://www.thereport.co.kr/news/articleView.html?idxno=93316",
+     "host": "thereport.co.kr",
+     "at": "2026-11-12T09:40:00.000Z"
+    },
+    {
+     "title": "'엔비디아 리스크' 코스피 약보합…코스닥 1% 하락",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261112182102jd7",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-12T09:21:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
    "id": "1rwnkhu",
    "title": "美특사, 푸틴·젤렌스키 만난다…종전협상 돌파구 찾나",
    "firstSeen": "2026-11-12T08:53:00.000Z",
@@ -680,231 +878,21 @@
      "S&P 500 +1.31%"
     ]
    }
-  },
-  {
-   "id": "w5o2go",
-   "title": "등락 거듭하던 코스피, 약보합 마감...코스닥 1%↓",
-   "firstSeen": "2026-11-12T06:48:00.000Z",
-   "lastSeen": "2026-11-12T10:50:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[26.11.12 증시 인싸잇] 엔비디아 악재에 증시 출렁... 코스피·코스닥 동...",
-     "link": "https://www.mediawatch.kr/news/article.html?no=261716",
-     "host": "mediawatch.kr",
-     "at": "2026-11-12T10:50:00.000Z"
-    },
-    {
-     "title": "'엔비디아 리스크' 코스피 약보합…코스닥 1% 하락",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261112182102jd7",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-12T09:21:00.000Z"
-    },
-    {
-     "title": "코스피, 엔비디아발 불확실성에 0.61% ↓···5300선 마감",
-     "link": "http://www.finomy.com/news/articleView.html?idxno=266551",
-     "host": "finomy.com",
-     "at": "2026-11-12T08:36:00.000Z"
-    },
-    {
-     "title": "[마감 시황] 코스피·코스닥 동반 약세…코스피, 0.61% 내린 5,340선 마감",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281164",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-12T08:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 21,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "jv1z8u",
-   "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
-   "firstSeen": "2026-11-11T23:36:00.000Z",
-   "lastSeen": "2026-11-12T08:06:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'기술주 반등' 상승했던 지수‥엔비디아 급락에 약세",
-     "link": "https://imnews.imbc.com/replay/2026/nw1700/article/6865205_36981.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-12T08:06:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346045?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-12T07:42:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 반등에도…엔비디아 '젠슨 황 축출설'에 시간외 급락",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=902827",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-12T00:38:00.000Z"
-    },
-    {
-     "title": "[원자재 시황] 금값 하락하고 유가·뉴욕증시 반등",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731350",
-     "host": "ebn.co.kr",
-     "at": "2026-11-11T23:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 18,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "9u9q6d",
-   "title": "'첩첩산중' 코스피, 젠슨 황 해임설·옵션만기 '이중고'에 3일 만에 하락",
-   "firstSeen": "2026-11-12T07:29:00.000Z",
-   "lastSeen": "2026-11-12T09:09:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황 해임설에 '출렁'…코스피 5340선 후퇴",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346084?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-12T09:09:00.000Z"
-    },
-    {
-     "title": "닛케이 4일 만에 반락…젠슨 황 해임설에 AI주 투매 확산",
-     "link": "https://www.g-enews.com/view.php?ud=202611121752146022e7e8286d56_1",
-     "host": "g-enews.com",
-     "at": "2026-11-12T08:54:00.000Z"
-    },
-    {
-     "title": "코스피, ‘젠슨 황 해임설’ 영향 3거래일 만에 하락 마감",
-     "link": "https://futurechosun.com/?p=166458",
-     "host": "futurechosun.com",
-     "at": "2026-11-12T08:46:00.000Z"
-    },
-    {
-     "title": "'첩첩산중' 코스피, 젠슨 황 해임설·옵션만기 '이중고'에 3일 만에 하락",
-     "link": "https://www.etoday.co.kr/news/view/2647518",
-     "host": "etoday.co.kr",
-     "at": "2026-11-12T08:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 18,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "u9qvo7",
-   "title": "[경제포커스] 반도체 호황의 나비효과",
-   "firstSeen": "2026-11-11T14:38:00.000Z",
-   "lastSeen": "2026-11-12T07:18:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "반도체 수출 '호황'에도 지갑은 닫혔다…왜?",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=929083",
-     "host": "namdonews.com",
-     "at": "2026-11-12T07:18:00.000Z"
-    },
-    {
-     "title": "KDI “반도체 호황 따른 소비 증가, 내년부터 본격화할 것”",
-     "link": "http://www.segyebiz.com/newsView/20261112514607?OutUrl=naver",
-     "host": "segyebiz.com",
-     "at": "2026-11-12T07:18:00.000Z"
-    },
-    {
-     "title": "성장과 달리 민간소비에선 반도체 호황 누른 유가 충격...내년엔 반대로",
-     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319558",
-     "host": "updownnews.co.kr",
-     "at": "2026-11-12T06:36:00.000Z"
-    },
-    {
-     "title": "KDI \"반도체 호황, 내년 소비 0.6%p 끌어올린다…하반기 본격 체감\"",
-     "link": "https://www.widedaily.com/news/articleView.html?idxno=303546",
-     "host": "widedaily.com",
-     "at": "2026-11-12T05:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.22,
-     "unit": "%",
-     "z": -0.9
-    },
-    "why": [
-     "금 -1.22%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-12T12:19:53.995Z",
+   "id": "ejyr9x",
+   "level": "caution",
+   "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +1.31%"
+   ],
+   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8711454&ref=A",
+   "delivered": false
+  },
   {
    "at": "2026-11-12T11:47:48.240Z",
    "id": "v78t4q",
@@ -1131,18 +1119,6 @@
     "원/달러 -0.98%"
    ],
    "link": "https://www.mt.co.kr/stock/2026/11/12/2026111214141373752",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T05:47:56.903Z",
-   "id": "11px7ls",
-   "level": "caution",
-   "title": "코스닥 5.62% 폭등해 700선 탈환…이틀 연속 매수 사이드카",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +1.31%"
-   ],
-   "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444434",
    "delivered": false
   }
  ],
