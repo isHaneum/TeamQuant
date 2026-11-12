@@ -55,3 +55,14 @@ test('뉴스·가격 급락: 회사 이름 + 위험 낱말만 · 주의까지만
     news: async s => s.symbol === 'NVDA' ? [{ title: '젠슨 황 "수요 강하다"', date: '2026-11-16' }, { title: '미 상무부, 엔비디아 대중 수출 통제 강화', date: '2026-11-16', link: 'n1' }] : [] });
   const r = await w.scan(); assert.deepEqual(got.map(e => [e.symbol, e.level, e.source]), [['NVDA', 'caution', '뉴스'], ['005930', 'caution', '시세']]); assert.match(got[1].reason, /지수 대비 -9\.4%p/); assert.equal(r.events.length, 2);
 });
+
+test('200일선 규칙: 위성 종목은 200일 평균 아래여도 산다 · 같은 조건의 지수(핵심)는 사지 않는다(결정 28)', async () => {
+  const down = (start) => { const out = []; let p = start; for (let t = Date.parse('2025-06-01'); t <= Date.parse('2026-11-16'); t += 864e5) { const d = new Date(t); if (d.getUTCDay() && d.getUTCDay() !== 6) { p *= 0.999; out.push({ date: d.toISOString().slice(0, 10), open: p, close: p }); } } return out; };
+  const readMarket = async s => ({ candles: s === 'KRW=X' ? down(1400).map(c => ({ ...c, open: 1400, close: 1400 })) : down(300) }); // 미국 두 종목 모두 내리막(200일 평균 아래)
+  const client = { settings: () => ({ mode: 'vps', accountMasked: '****2787' }), async price(code) { return { code, market: 'US', currency: 'USD', exchange: 'NASD', price: 200, upper: null, lower: null, halted: false }; }, async balance() { return { cash: 100_000_000, total: 100_000_000, stock: 0, positions: [], cashUsd: 0, stockUsd: 0 }; }, async buyingPower() { return { maxQty: 1e6, cashQty: 1e6 }; }, async place() { return { odno: '1', orgno: '' }; }, async cancel() { return {}; }, async orders() { return []; } };
+  const doc = { version: 'T1', weights: { SPY: { pct: 10, name: 'S&P500 ETF', currency: 'USD', role: 'core' }, NVDA: { pct: 3, targetPct: 5, tranche: 1, name: '엔비디아', currency: 'USD', role: 'satellite' } } };
+  const pl = createPaperLive({ client, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-200-'))), readMarket, now: () => Date.parse('2026-11-16T15:30:00Z'), defaultPlan: () => Object.fromEntries(Object.entries(doc.weights).map(([k, v]) => [k, { pct: v.pct, name: v.name, currency: v.currency }])), defaultPlanVersion: () => 'T1', defaultPlanDoc: () => doc, limits: { maxOrderKrw: 30_000_000, maxDailyKrw: 100_000_000 } });
+  const pv = await pl.preview({ rules: { maxSingle: 25, minCash: 10, dailyLoss: 2.5, maxTrades30: 8, trendUS: true }, rebalance: true });
+  assert.ok(pv.items.some(i => i.symbol === 'NVDA' && i.side === 'BUY' && i.ok), JSON.stringify(pv.items.map(i => [i.symbol, i.side, i.ok, i.blocks])));
+  assert.ok(!pv.items.some(i => i.symbol === 'SPY' && i.side === 'BUY'), '지수는 200일선 아래면 사지 않는다');
+});
