@@ -379,3 +379,10 @@ Question from the user after G2: can a strategy be built on the growth outlook? 
 - **실계좌 카드 문구(P1·P2):** 재사용한 ⓘ 가 '공개 파일로 검증(verify)'과 '계획에서 국가 비중'이라고 적어 그 카드에서는 둘 다 거짓이었다. → `chainHtml(s, {published:false})`('이 PC 의 장부로만 검증'), `progressHtml(s, {basis:'holdings'})`('첫 평가점의 보유 국가 비중에서'). 헤더 ⓘ 는 title 속성 span(폰에서 안 보임) 대신 tip(). '기준' 시각은 KST(kstStamp). 총자산 ⓘ·문서는 실제 규칙(증권사 국내 총평가 tot_evlu_amt + 미국×환율 + 외화×환율 · 가수도정산 전엔 현금+주식 ≠ 총자산)으로. D+1 메모는 `cashUsd === 0` 일 때만(조회 실패 null 은 보류).
 - **고치지 않은 것(검토 의견 중):** 점검 제안 문구(rule-presets)는 chainBreaks 가 ok 에서 빠지면서 그대로 맞게 됐다. 체인 fills 에 거래일(tradeDate) 필드를 더하는 것은 변조 증거에 필요하지 않아 넣지 않았다. 평가점 800개 상한은 위에 적음.
 - **검증:** test/paper-chain.test.js +1(verifyAgainstMarks)·CLI 케이스 확장, test/paper-live-us.test.js +1(기준선 전 평가점)·체인 테스트를 닫힌 날 공개로 고침·미국 체결 기대 뒤집음, test/paper-benchmark.test.js +1(읽기: 캐시·갱신 실패·범위)·보류 케이스 확장, test/kis-reader.test.js +1(cashUsdError), test/real-record.test.js +2(보류 fail-closed · 체결 시각 무관), test/paper-ui-layout.test.js TC-UI-REORG-04/05 갱신. 전체 335/335(329 + 6). 공개 파일·장부·서버는 건드리지 않았다(PC 서버 재시작 뒤 새 엔진이 체인을 시작한다).
+
+## (24) 2026-11-12 실계좌 기록을 토스 종합계좌로
+- **왜:** 한투 실전 계좌(****2259)는 0원·보유 0(2026-11-12 조회). 실제 돈은 토스 종합계좌(국내 1·미국 5종목)에 있다. 검증 기록은 실제 돈이 있는 계좌여야 의미가 있다.
+- **무엇:** lib/toss-record-reader.js 가 토스 Open API 조회(lib/toss.js)를 real-record 리더 모양(settings/balance/orders)으로 감싼다. 주문 함수 없음. REAL_RECORD_SOURCE=toss 면 dev-server 가 토스로 기록(장부 real-toss.json, 공개 안 함). 한투 읽기 전용 경로는 그대로 남는다.
+- **현금 없음 → 시간가중:** 토스 API 는 현금을 주지 않아 총자산 = 보유 주식 평가. 적립 입금·추가 매수가 수익으로 잡히지 않게 평가점에 보유 기준 시간가중 지수(index = 전 수량 × 오늘 가격 ÷ 전 수량 × 전 가격의 누적곱)를 두고, compare() 는 index 가 있으면 그 비율로 지수와 비교한다(basis twr). 한계: 같은 날 사고판 손익·배당 현금·현금 이자는 빠진다. index 는 체인 payload 에 넣지 않는다(봉인 형식 유지).
+- **환율:** 토스 매매기준율 우선, 없으면 Yahoo KRW=X, 둘 다 없으면 보류(fail-closed).
+- **검증:** test/toss-record.test.js 4개(래퍼·시간가중·비교 기준·보류).

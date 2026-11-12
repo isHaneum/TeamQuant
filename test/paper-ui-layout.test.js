@@ -41,7 +41,7 @@ test('TC-UI-REORG-05 실계좌 읽기 전용 카드(결정 22): 모의계좌 카
   const kis = paperUi.indexOf('id="pp-kis"'), real = paperUi.indexOf('id="pp-real"'), hyp = paperUi.indexOf('id="pp-hyp"');
   assert.ok(kis >= 0 && real > kis && real < hyp, '순서: 모의계좌 → 실계좌 → 가설');
   assert.equal(paperUi.split('id="pp-real"').length - 1, 1); assert.match(paperUi, /<article class="cr-card" id="pp-real" hidden>/);
-  assert.match(paperUi, /실계좌\(한투\) · 읽기 전용 <span class="pp-badge">주문 기능 없음<\/span> \$\{tip\('이 계좌로는 조회만 합니다\. 주문은 모의계좌에서만 보냅니다\.'\)\}<\/h3>/, 'title 속성만 있는 span 은 폰에서 안 보이므로 tip() 을 쓴다');
+  assert.match(paperUi, /실계좌\(<span id="pp-real-label">토스<\/span>\) · 읽기 전용 <span class="pp-badge">주문 기능 없음<\/span> \$\{tip\('이 계좌로는 조회만 합니다\. 주문은 모의계좌에서만 보냅니다\.'\)\}<\/h3>/, 'title 속성만 있는 span 은 폰에서 안 보이므로 tip() 을 쓴다');
   const s = paperUi.indexOf('async function realRefresh('), e = paperUi.indexOf("$('#pp-real-refresh')"); assert.ok(s >= 0 && e > s);
   const block = paperUi.slice(s, e);
   assert.match(block, /privateRead\('kis-real-status'\)/); assert.match(block, /catch \{ card\.hidden = true; return; \}/); assert.match(block, /s\.readOnly !== true\) \{ card\.hidden = true/);

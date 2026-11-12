@@ -71,7 +71,7 @@ test('비교: 시작 = 첫 평가점 총자산, 지금 = 마지막 평가점 · 
   const series = [{ date: '2026-11-06', value: 1 }, { date: '2026-11-07', value: 1 }, { date: '2026-11-08', value: 1 }, { date: '2026-11-09', value: 1.05 }, { date: '2026-11-10', value: 1.02 }];
   const marks = [{ date: '2026-11-06', total: 100_000_000 }, { date: '2026-11-09', total: 103_000_000 }, { date: '2026-11-10', total: 110_000_000 }];
   const r = compare({ marks, series });
-  assert.deepEqual(r, { ownRetPct: 10, benchRetPct: 2, diffPp: 8, days: 3, from: '2026-11-06', asOf: '2026-11-10' });
+  assert.deepEqual(r, { ownRetPct: 10, benchRetPct: 2, diffPp: 8, days: 3, from: '2026-11-06', asOf: '2026-11-10', basis: 'total' });
   // 마지막 평가점이 주말이면 비교선은 금요일 값(이하 마지막 점)
   const r2 = compare({ marks: [marks[0], { date: '2026-11-12', total: 101_000_000 }], series }); assert.equal(r2.benchRetPct, 2); assert.equal(r2.diffPp, -1);
   // 0.01 단위로 반올림
