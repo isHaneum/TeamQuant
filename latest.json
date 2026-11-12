@@ -1,7 +1,7 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-12T06:47:59.433Z",
- "mode": "watch",
+ "updatedAt": "2026-11-12T07:05:27.150Z",
+ "mode": "briefing",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
   {
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 5342.73,
+   "last": 5342.72998046875,
    "change": -0.61,
    "z": -0.2,
    "sd": 2.963021948385691,
-   "source": "네이버 현재가",
-   "live": false,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,9 +23,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 697.3099975585938,
-   "change": -1.1,
-   "z": -0.4,
+   "last": 696.530029296875,
+   "change": -1.22,
+   "z": -0.5,
    "sd": 2.6905879415977827,
    "source": "Yahoo",
    "checked": true
@@ -63,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 1330.97998046875,
-   "change": -0.81,
-   "z": -1.2,
+   "last": 1332.1800537109375,
+   "change": -0.73,
+   "z": -1.1,
    "sd": 0.6661814150687196,
    "source": "Yahoo"
   },
@@ -75,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 86.2300033569336,
-   "change": -0.35,
-   "z": -0.1,
+   "last": 86.41000366210938,
+   "change": -0.14,
+   "z": 0,
    "sd": 2.876929486808728,
    "source": "Yahoo"
   },
@@ -87,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-12",
-   "last": 3979.5,
-   "change": -0.52,
-   "z": -0.4,
+   "last": 3970.89990234375,
+   "change": -0.74,
+   "z": -0.5,
    "sd": 1.3748990817410445,
    "source": "Yahoo"
   },
@@ -120,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -1.1,
+  "war": -0.9,
   "politics": -1,
-  "rates": -0.1,
+  "rates": 0,
   "trade": 0.5,
   "fx": -0.1,
-  "energy": 0.9,
-  "market": 0,
+  "energy": 1,
+  "market": 0.2,
   "credit": 0.3,
   "disaster": 0,
-  "policy": -0.7
+  "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 0.4,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
@@ -143,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.7,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.8,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -158,13 +157,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4.7,
+   "rate": 5,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.4,
-   "saturated": 1,
+   "rate": 4.7,
+   "saturated": 2,
    "queries": 3
   },
   "credit": {
@@ -178,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -228,66 +227,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 50,
-    "spike": 0.9,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "11px7ls",
-   "title": "코스닥 5.62% 폭등해 700선 탈환…이틀 연속 매수 사이드카",
-   "firstSeen": "2026-11-11T07:03:00.000Z",
-   "lastSeen": "2026-11-12T06:43:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "외국인만 산 코스피 약보합 마감…코스닥 700선 붕괴 [시황]",
-     "link": "https://www.dailian.co.kr/news/view/1714295/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-12T06:43:00.000Z"
-    },
-    {
-     "title": "코스피, 0.61% 내린 5,342.73…코스닥도 1%대 하락",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261112153754sgA",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-12T06:38:00.000Z"
-    },
-    {
-     "title": "AI 훈풍에도 코스피 5350선 후퇴…코스닥 1.44% 내려 700선 내줘",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03476806645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-12T04:55:00.000Z"
-    },
-    {
-     "title": "[개장 시황] 코스피·코스닥, 장 초반 출렁임 속 5,400선과 700선 공방",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281101",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-12T01:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 48,
-    "spike": 0,
+    "score": 51,
+    "spike": 1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -307,8 +248,8 @@
    "title": "日 증시, 3거래일째 상승…美·日 12월 금리 인상 '경계'",
    "firstSeen": "2026-11-11T07:14:00.000Z",
    "lastSeen": "2026-11-12T06:42:00.000Z",
-   "count": 7,
-   "sources": 6,
+   "count": 6,
+   "sources": 5,
    "topics": [
     "rates",
     "fx"
@@ -324,12 +265,6 @@
      "at": "2026-11-12T06:42:00.000Z"
     },
     {
-     "title": "금리 인상 경계감 속 비트코인 1억원 하회",
-     "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3082379",
-     "host": "newsclaim.co.kr",
-     "at": "2026-11-12T04:28:00.000Z"
-    },
-    {
      "title": "연준, 12월 금리 인상 확률 100%...\"0.5%포인트 인상도 가능\"",
      "link": "http://coinreaders.com/269540",
      "host": "coinreaders.com",
@@ -340,12 +275,18 @@
      "link": "https://www.dailian.co.kr/news/view/1713698/?sc=Naver",
      "host": "dailian.co.kr",
      "at": "2026-11-11T22:08:00.000Z"
+    },
+    {
+     "title": "[현승윤 칼럼] 한은, 기준금리 인상에 신중할 때",
+     "link": "https://www.hankyung.com/article/2026111109361",
+     "host": "hankyung.com",
+     "at": "2026-11-11T15:21:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 48,
+    "score": 47,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -385,8 +326,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.9,
+    "score": 42,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -444,6 +385,88 @@
    }
   },
   {
+   "id": "ymowzt",
+   "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+   "firstSeen": "2026-11-11T00:36:00.000Z",
+   "lastSeen": "2026-11-11T16:39:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+     "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
+     "host": "thescoop.co.kr",
+     "at": "2026-11-11T16:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
+   "id": "ymowzt",
+   "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
+   "firstSeen": "2026-11-11T00:36:00.000Z",
+   "lastSeen": "2026-11-12T04:22:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
+     "link": "https://www.sedaily.com/article/20113432?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-12T04:22:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
    "id": "1vsoib7",
    "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
    "firstSeen": "2026-11-12T04:49:00.000Z",
@@ -484,6 +507,62 @@
    }
   },
   {
+   "id": "mdkemd",
+   "title": "반도체 호황에도 소비 부진…KDI “유가 상승에 구매력 약화”",
+   "firstSeen": "2026-11-12T03:00:00.000Z",
+   "lastSeen": "2026-11-12T06:36:00.000Z",
+   "count": 10,
+   "sources": 10,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "성장과 달리 민간소비에선 반도체 호황 누른 유가 충격...내년엔 반대로",
+     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319558",
+     "host": "updownnews.co.kr",
+     "at": "2026-11-12T06:36:00.000Z"
+    },
+    {
+     "title": "KDI \"반도체 호황, 내년 소비 0.6%p 끌어올린다…하반기 본격 체감\"",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=303546",
+     "host": "widedaily.com",
+     "at": "2026-11-12T05:36:00.000Z"
+    },
+    {
+     "title": "반도체 호황에도 소비 '완만'…유가 충격이 먼저 왔다",
+     "link": "https://www.asiatime.co.kr/article/20261112500315",
+     "host": "asiatime.co.kr",
+     "at": "2026-11-12T05:26:00.000Z"
+    },
+    {
+     "title": "반도체 호황에도 더딘 소비…고유가에 증가율 0.4%P↓",
+     "link": "https://www.sedaily.com/article/20113477?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-12T05:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 34,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
+     "unit": "%",
+     "z": 1.4
+    },
+    "why": [
+     "S&P 500 +1.31%"
+    ]
+   }
+  },
+  {
    "id": "cbk85h",
    "title": "물가 오르는데 카드빚은 역대 최대…美연준 12월 '빅스텝' 나설까",
    "firstSeen": "2026-11-11T08:08:00.000Z",
@@ -502,47 +581,6 @@
      "link": "https://www.hankookilbo.com/news/article/A2026111109580000755?did=NA",
      "host": "hankookilbo.com",
      "at": "2026-11-11T08:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
-   "id": "ymowzt",
-   "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
-   "firstSeen": "2026-11-11T00:36:00.000Z",
-   "lastSeen": "2026-11-11T16:39:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
-     "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
-     "host": "thescoop.co.kr",
-     "at": "2026-11-11T16:39:00.000Z"
     }
    ],
    "assess": {
@@ -605,47 +643,6 @@
    }
   },
   {
-   "id": "ymowzt",
-   "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
-   "firstSeen": "2026-11-11T00:36:00.000Z",
-   "lastSeen": "2026-11-12T04:22:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
-     "link": "https://www.sedaily.com/article/20113432?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-12T04:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 1.31,
-     "unit": "%",
-     "z": 1.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +1.31%"
-    ]
-   }
-  },
-  {
    "id": "33zn0g",
    "title": "[김미정의 머니태그]가계부채 1200조인데…미국 12월 ‘빅스텝’ 공포 ...",
    "firstSeen": "2026-11-11T08:16:00.000Z",
@@ -686,48 +683,48 @@
    }
   },
   {
-   "id": "mdkemd",
-   "title": "\"반도체 날아도 지갑 닫힌 이유\"…KDI \"유가 충격 있었다\"",
-   "firstSeen": "2026-11-12T03:00:00.000Z",
-   "lastSeen": "2026-11-12T06:36:00.000Z",
-   "count": 12,
+   "id": "w5o2go",
+   "title": "코스피, '젠슨황 축출' 소식에 하락 마감",
+   "firstSeen": "2026-11-12T06:48:00.000Z",
+   "lastSeen": "2026-11-12T07:02:00.000Z",
+   "count": 11,
    "sources": 11,
    "topics": [
-    "energy",
+    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "성장과 달리 민간소비에선 반도체 호황 누른 유가 충격...내년엔 반대로",
-     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319558",
-     "host": "updownnews.co.kr",
-     "at": "2026-11-12T06:36:00.000Z"
+     "title": "[증시-마감] 코스피, 약보합 마감으로 숨 고르기…美 반등에도 0.61% 하락",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444472",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-12T07:02:00.000Z"
     },
     {
-     "title": "반도체 호황에도 소비 '완만'…유가 충격이 먼저 왔다",
-     "link": "https://www.asiatime.co.kr/article/20261112500315",
-     "host": "asiatime.co.kr",
-     "at": "2026-11-12T05:26:00.000Z"
+     "title": "코스피 사흘 만에 약보합 마감… 코스닥도 1.22% 내려",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3448193",
+     "host": "newscj.com",
+     "at": "2026-11-12T07:02:00.000Z"
     },
     {
-     "title": "반도체 초호황에도 소비 회복 ‘제자리’…고유가 충격도 묵직",
-     "link": "https://www.asiatime.co.kr/article/20261112500302",
-     "host": "asiatime.co.kr",
-     "at": "2026-11-12T05:04:00.000Z"
+     "title": "[마감시황] 코스피, 32.63포인트(-0.61%) 내린 5342.73 마감",
+     "link": "https://www.lcnews.co.kr/news/articleView.html?idxno=211290",
+     "host": "lcnews.co.kr",
+     "at": "2026-11-12T07:00:00.000Z"
     },
     {
-     "title": "반도체 수출 145% 급등에도 소비 온기 실종 … 유가에 막힌 낙수효과",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/12/2026111200224.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-12T04:48:00.000Z"
+     "title": "[마감시황] 코스피, 장중 등락 거듭 끝 하락 마감…0.61%↓",
+     "link": "http://www.segyebiz.com/newsView/20261112514125?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-12T07:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0.9,
+    "score": 28,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -742,113 +739,112 @@
    }
   },
   {
-   "id": "11b2rmj",
-   "title": "[국제금융리포트] AI 투자심리 회복에 美 증시 반등…달러 강세·유가 상...",
-   "firstSeen": "2026-11-11T22:46:00.000Z",
-   "lastSeen": "2026-11-12T03:26:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "91f71s",
+   "title": "코스피 5340선 턱걸이…외국인·기관 '팔자'에 코스닥도 하락",
+   "firstSeen": "2026-11-12T00:56:00.000Z",
+   "lastSeen": "2026-11-12T07:02:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
-    "fx",
-    "energy"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피, 반도체 강세에 5,400선 회복...기관 매도에 상승폭 제한",
-     "link": "https://www.m-economynews.com/news/article.html?no=72925",
-     "host": "m-economynews.com",
-     "at": "2026-11-12T03:26:00.000Z"
+     "title": "이틀 반등 끝…코스피 5340선 후퇴·코스닥 700선 붕괴",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1320250&inflow=N",
+     "host": "newstomato.com",
+     "at": "2026-11-12T07:02:00.000Z"
     },
     {
-     "title": "코스피, 1%대 강세로 5,400선 회복...삼전닉스 1∼3% 상승",
-     "link": "http://www.seouleconews.com/news/articleView.html?idxno=94972",
-     "host": "seouleconews.com",
-     "at": "2026-11-12T03:08:00.000Z"
+     "title": "코스피, 기관 매물에 5340선 후퇴…코스닥 700선 아래로",
+     "link": "https://www.sentv.co.kr/article/view/sentv202611120167",
+     "host": "sentv.co.kr",
+     "at": "2026-11-12T07:00:00.000Z"
     },
     {
-     "title": "코스피 5,400선 회복 시도…반도체 반등에도 상승 탄력은 제한",
-     "link": "https://www.ppss.kr/news/articleView.html?idxno=320611",
-     "host": "ppss.kr",
-     "at": "2026-11-12T03:06:00.000Z"
+     "title": "[마감시황] 코스피, 기관 '팔자'에 하락 마감…삼성전자, 1.7% 상승",
+     "link": "https://www.ajunews.com/view/20261112155216827",
+     "host": "ajunews.com",
+     "at": "2026-11-12T06:58:00.000Z"
     },
     {
-     "title": "AI 투심 회복…반도체 훈풍에 코스피 강세 출발?",
-     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=315186",
-     "host": "straightnews.co.kr",
-     "at": "2026-11-11T23:56:00.000Z"
+     "title": "코스피는 기관이, 코스닥은 외인이 끌어내렸다...5340선 후퇴·700선 붕괴",
+     "link": "https://www.etoday.co.kr/news/view/2647508",
+     "host": "etoday.co.kr",
+     "at": "2026-11-12T06:52:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 25,
-    "spike": 0.9,
+    "score": 24,
+    "spike": 0.2,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.81,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.4
     },
     "why": [
-     "원/달러 -0.81%"
+     "S&P 500 +1.31%"
     ]
    }
   },
   {
-   "id": "ee5osu",
-   "title": "[속보] AI 훈풍 vs 엔비디아 리스크...코스피 약보합 마감",
-   "firstSeen": "2026-11-11T23:30:00.000Z",
-   "lastSeen": "2026-11-12T06:47:00.000Z",
-   "count": 12,
-   "sources": 7,
+   "id": "1x8idl6",
+   "title": "젠슨 황, 불륜 의혹 또 터졌다…엔비디아 이사회 해임 준비설까지",
+   "firstSeen": "2026-11-12T02:12:00.000Z",
+   "lastSeen": "2026-11-12T06:56:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "fx"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "옵션만기일 맞아 '롤러코스터' 탄 코스피 5340선 마감",
-     "link": "https://www.hankyung.com/article/2026111232216",
-     "host": "hankyung.com",
-     "at": "2026-11-12T06:47:00.000Z"
+     "title": "젠슨 황, 이번엔 '사내 불륜' 의혹...엔비디아 이사회 해임 준비",
+     "link": "https://www.womentimes.co.kr/news/articleView.html?idxno=107858",
+     "host": "womentimes.co.kr",
+     "at": "2026-11-12T06:56:00.000Z"
     },
     {
-     "title": "코스피, 0.61% 내린 5340선 마감",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611120156",
-     "host": "sentv.co.kr",
-     "at": "2026-11-12T06:46:00.000Z"
-    },
-    {
-     "title": "코스피·코스닥, 내림세로 장 마감",
-     "link": "https://www.hg-times.com/news/articleView.html?idxno=306971",
-     "host": "hg-times.com",
-     "at": "2026-11-12T06:46:00.000Z"
-    },
-    {
-     "title": "코스피 소폭 하락 마감",
-     "link": "https://www.yna.co.kr/view/PYH20261112168900013?input=1196m",
-     "host": "yna.co.kr",
+     "title": "[경제쏙] '사내 불륜'에 젠슨 황 해임 논의‥\"사내 윤리 강령과 지배구...",
+     "link": "https://imnews.imbc.com/replay/2026/nw1400/article/6865182_36974.html",
+     "host": "imnews.imbc.com",
      "at": "2026-11-12T06:44:00.000Z"
+    },
+    {
+     "title": "젠슨 황, 추가 불륜 의혹에 해임 무게…향후 파장은?",
+     "link": "http://www.metroseoul.co.kr/article/20261112500380",
+     "host": "metroseoul.co.kr",
+     "at": "2026-11-12T06:42:00.000Z"
+    },
+    {
+     "title": "부사장과 불륜도 들통 ...엔비디아 해임 수순 밟나 [2PM]",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611121517401278",
+     "host": "ytn.co.kr",
+     "at": "2026-11-12T06:17:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 23,
-    "spike": 0,
+    "spike": 0.2,
     "news": false,
     "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.81,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 1.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.4
     },
     "why": [
-     "원/달러 -0.81%"
+     "S&P 500 +1.31%"
     ]
    }
   },
@@ -887,8 +883,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 22,
-    "spike": 0.9,
+    "score": 23,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -1146,13 +1142,51 @@
   }
  ],
  "briefing": {
-  "id": "2026-11-12-pre",
+  "id": "2026-11-12-close",
   "version": "I1-2026-11-06",
-  "slot": "pre",
-  "title": "장 전 브리핑",
-  "at": "2026-11-11T23:32:11.438Z",
-  "headline": "S&P 500 +1.31%(11.11 기준), 나스닥 +1.6%(11.11 기준), 원/달러 -0.54%(11.11 기준) · 주요 이슈: 금리·통화, 환율·달러, 유가·원자재",
+  "slot": "close",
+  "title": "국내 장 마감 브리핑",
+  "at": "2026-11-12T07:05:27.150Z",
+  "headline": "코스피 -0.61%, 코스닥 -1.22%, 원/달러 -0.73% · 주요 이슈: 금리·통화, 유가·원자재, 증시 급변",
   "markets": [
+   {
+    "symbol": "^KS11",
+    "label": "코스피",
+    "unit": "%",
+    "available": true,
+    "date": "2026-11-12",
+    "last": 5342.72998046875,
+    "change": -0.61,
+    "z": -0.2,
+    "sd": 2.963021948385691,
+    "source": "Yahoo",
+    "checked": true
+   },
+   {
+    "symbol": "^KQ11",
+    "label": "코스닥",
+    "unit": "%",
+    "available": true,
+    "date": "2026-11-12",
+    "last": 696.530029296875,
+    "change": -1.22,
+    "z": -0.5,
+    "sd": 2.6905879415977827,
+    "source": "Yahoo",
+    "checked": true
+   },
+   {
+    "symbol": "KRW=X",
+    "label": "원/달러",
+    "unit": "%",
+    "available": true,
+    "date": "2026-11-12",
+    "last": 1332.1800537109375,
+    "change": -0.73,
+    "z": -1.1,
+    "sd": 0.6661814150687196,
+    "source": "Yahoo"
+   },
    {
     "symbol": "^GSPC",
     "label": "S&P 500",
@@ -1167,40 +1201,15 @@
     "checked": true
    },
    {
-    "symbol": "^IXIC",
-    "label": "나스닥",
-    "unit": "%",
-    "available": true,
-    "date": "2026-11-11",
-    "last": 25466.189453125,
-    "change": 1.6,
-    "z": 1.2,
-    "sd": 1.3095651668968036,
-    "source": "Yahoo",
-    "checked": true
-   },
-   {
-    "symbol": "KRW=X",
-    "label": "원/달러",
-    "unit": "%",
-    "available": true,
-    "date": "2026-11-11",
-    "last": 1336.5699462890625,
-    "change": -0.54,
-    "z": -0.8,
-    "sd": 0.666136262634127,
-    "source": "Yahoo"
-   },
-   {
     "symbol": "CL=F",
     "label": "WTI 유가",
     "unit": "%",
     "available": true,
-    "date": "2026-11-11",
-    "last": 86.26000213623047,
-    "change": 0.26,
-    "z": 0.1,
-    "sd": 2.876793379200961,
+    "date": "2026-11-12",
+    "last": 86.41000366210938,
+    "change": -0.14,
+    "z": 0,
+    "sd": 2.876929486808728,
     "source": "Yahoo"
    },
    {
@@ -1215,38 +1224,97 @@
     "sd": 11.734936623655216,
     "source": "Yahoo",
     "checked": true
-   },
-   {
-    "symbol": "^TNX",
-    "label": "미 10년 금리",
-    "unit": "bp",
-    "available": true,
-    "date": "2026-11-11",
-    "last": 4.998000144958496,
-    "change": 1.5,
-    "z": 0.3,
-    "sd": 5.33922022327753,
-    "source": "Yahoo"
    }
   ],
   "unusual": [],
   "issues": [
    {
-    "id": "ocl8df",
-    "title": "미국 물가 다시 시장 예상 웃돌아…연준 12월 금리 인상 압박 커지나",
-    "firstSeen": "2026-11-11T01:22:00.000Z",
-    "lastSeen": "2026-11-11T22:08:00.000Z",
-    "count": 10,
-    "sources": 9,
+    "id": "9sxwqk",
+    "title": "미 물가 상승에 연준 ‘빅스텝’ 단행하나",
+    "firstSeen": "2026-11-11T09:27:00.000Z",
+    "lastSeen": "2026-11-12T06:12:00.000Z",
+    "count": 4,
+    "sources": 4,
     "topics": [
      "rates",
-     "fx",
-     "energy"
+     "energy",
+     "market"
     ],
     "critical": [
      "rates"
     ],
     "links": [
+     {
+      "title": "美 연준 빅스텝설에 상승하는 시장 금리",
+      "link": "https://www.mt.co.kr/stock/2026/11/12/2026111214141373752",
+      "host": "mt.co.kr",
+      "at": "2026-11-12T06:12:00.000Z"
+     },
+     {
+      "title": "美 물가 예상 웃돌자 연준 '빅스텝' 가능성 부상…유가 급락에 인플레 ...",
+      "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
+      "host": "polinews.co.kr",
+      "at": "2026-11-12T02:32:00.000Z"
+     },
+     {
+      "title": "美 소비자물가 0.4% 상승… 연내 기준금리 ‘빅스텝’ 가능성",
+      "link": "https://www.donga.com/news/Economy/article/all/20261111/135009315/2",
+      "host": "donga.com",
+      "at": "2026-11-11T15:31:00.000Z"
+     },
+     {
+      "title": "미 물가 상승에 연준 ‘빅스텝’ 단행하나",
+      "link": "https://www.busan.com/view/busan/view.php?code=2026111118212251055",
+      "host": "busan.com",
+      "at": "2026-11-11T09:27:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 51,
+     "spike": 1,
+     "news": true,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": 1.31,
+      "unit": "%",
+      "z": 1.4
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 +1.31%"
+     ]
+    }
+   },
+   {
+    "id": "1jq5m8s",
+    "title": "日 증시, 3거래일째 상승…美·日 12월 금리 인상 '경계'",
+    "firstSeen": "2026-11-11T07:14:00.000Z",
+    "lastSeen": "2026-11-12T06:42:00.000Z",
+    "count": 6,
+    "sources": 5,
+    "topics": [
+     "rates",
+     "fx"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
+      "link": "http://coinreaders.com/269616",
+      "host": "coinreaders.com",
+      "at": "2026-11-12T06:42:00.000Z"
+     },
+     {
+      "title": "연준, 12월 금리 인상 확률 100%...\"0.5%포인트 인상도 가능\"",
+      "link": "http://coinreaders.com/269540",
+      "host": "coinreaders.com",
+      "at": "2026-11-12T00:36:00.000Z"
+     },
      {
       "title": "미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심",
       "link": "https://www.dailian.co.kr/news/view/1713698/?sc=Naver",
@@ -1258,241 +1326,13 @@
       "link": "https://www.hankyung.com/article/2026111109361",
       "host": "hankyung.com",
       "at": "2026-11-11T15:21:00.000Z"
-     },
-     {
-      "title": "한은 뉴욕사무소 \"투자은행들, 美 12월 금리 인상 확실시\"",
-      "link": "https://www.newsis.com/view/NISX20261111_0003864303",
-      "host": "newsis.com",
-      "at": "2026-11-11T09:36:00.000Z"
-     },
-     {
-      "title": "美 '빅스텝' 거론에 한은 금리 인상 압력 커지나",
-      "link": "https://www.ajunews.com/view/20261111143938337",
-      "host": "ajunews.com",
-      "at": "2026-11-11T09:06:00.000Z"
      }
     ],
     "assess": {
      "level": "caution",
      "label": "주의",
-     "score": 66,
-     "spike": 1.9,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "bc6j0c",
-    "title": "미국 빅스텝 가능성 커졌는데…원·달러 환율은 1330원대",
-    "firstSeen": "2026-11-11T07:30:00.000Z",
-    "lastSeen": "2026-11-11T23:16:00.000Z",
-    "count": 5,
-    "sources": 5,
-    "topics": [
-     "rates",
-     "fx"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "美 연준 긴축 기대에 강달러 지속… 원/달러 환율, 네고에도 소폭 상승...",
-      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=731212",
-      "host": "the-biz.co.kr",
-      "at": "2026-11-11T23:16:00.000Z"
-     },
-     {
-      "title": "연준 긴축 경계 속 AI주가 반등…환율 1340원대 재진입 시도[외환브리핑...",
-      "link": "https://www.edaily.co.kr/News/Read?newsId=02246806645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-      "host": "edaily.co.kr",
-      "at": "2026-11-11T23:13:00.000Z"
-     },
-     {
-      "title": "연준 긴축 가능성에 달러 강세⋯\"원·달러 소폭 상승할 것\" [환율전망]",
-      "link": "https://www.etoday.co.kr/news/view/2647103",
-      "host": "etoday.co.kr",
-      "at": "2026-11-11T23:08:00.000Z"
-     },
-     {
-      "title": "원·달러 환율, 1337.5원…달러, 美 연준 추가 긴축 우려에 강세",
-      "link": "http://www.joseilbo.com/news/news_read.php?uid=579467&class=18&grp=",
-      "host": "joseilbo.com",
-      "at": "2026-11-11T23:01:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 58,
-     "spike": 1.5,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "1ok7u92",
-    "title": "AI 거품론에 물가 충격 겹친 월가… 연준 '빅스텝' 공포에 국채금리 폭...",
-    "firstSeen": "2026-11-10T17:41:00.000Z",
-    "lastSeen": "2026-11-11T22:36:00.000Z",
-    "count": 3,
-    "sources": 3,
-    "topics": [
-     "rates"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "[마켓 프리뷰] 끈적한 물가 '빅스텝' 우려에도 코스피 2%대 상승",
-      "link": "https://biz.sbs.co.kr/article_hub/20000345845?division=NAVER",
-      "host": "biz.sbs.co.kr",
-      "at": "2026-11-11T22:36:00.000Z"
-     },
-     {
-      "title": "미 물가 상승에 연준 ‘빅스텝’ 단행하나",
-      "link": "https://www.busan.com/view/busan/view.php?code=2026111118212251055",
-      "host": "busan.com",
-      "at": "2026-11-11T09:27:00.000Z"
-     },
-     {
-      "title": "AI 거품론에 물가 충격 겹친 월가… 연준 '빅스텝' 공포에 국채금리 폭...",
-      "link": "https://www.widedaily.com/news/articleView.html?idxno=303437",
-      "host": "widedaily.com",
-      "at": "2026-11-11T05:30:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 52,
-     "spike": 1.5,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "1e4wis4",
-    "title": "코스피·코스닥, 동반 상승…반도체주 강세에 코스피 5300선 마감",
-    "firstSeen": "2026-11-11T07:28:00.000Z",
-    "lastSeen": "2026-11-11T23:12:00.000Z",
-    "count": 8,
-    "sources": 8,
-    "topics": [
-     "market"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "[박정식의 국내 주식시황] 코스피 코스닥 쌍바닥 형성 후 반도체 투심 ...",
-      "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=304799",
-      "host": "newsquest.co.kr",
-      "at": "2026-11-11T23:12:00.000Z"
-     },
-     {
-      "title": "[오늘 증시 전망] 코스피 5,300선 회복·뉴욕증시 동반 상승…12일 옵션...",
-      "link": "https://www.upkoreanews.kr/news/articleView.html?idxno=101133",
-      "host": "upkoreanews.kr",
-      "at": "2026-11-11T22:44:00.000Z"
-     },
-     {
-      "title": "코스피 상승·코스닥 5%대 급등…삼성전자·SK하이닉스·에코프로·주성...",
-      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=625880",
-      "host": "cbci.co.kr",
-      "at": "2026-11-11T21:16:00.000Z"
-     },
-     {
-      "title": "패션주 F&F 3.99% 하락, 코스닥 급등 속 뷰티주 강세, …",
-      "link": "http://okfashion.co.kr/detail.php?number=64372&thread=62r04",
-      "host": "okfashion.co.kr",
-      "at": "2026-11-11T14:20:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 51,
-     "spike": 0.3,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "ymowzt",
-    "title": "美 2년물 금리, 15bp 급등...CPI가 연준 빅스텝으로?",
-    "firstSeen": "2026-11-11T00:36:00.000Z",
-    "lastSeen": "2026-11-11T16:39:00.000Z",
-    "count": 2,
-    "sources": 2,
-    "topics": [
-     "rates",
-     "market"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
-      "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
-      "host": "thescoop.co.kr",
-      "at": "2026-11-11T16:39:00.000Z"
-     },
-     {
-      "title": "美 2년물 금리, 15bp 급등...CPI가 연준 빅스텝으로?",
-      "link": "http://coinreaders.com/269231",
-      "host": "coinreaders.com",
-      "at": "2026-11-11T00:36:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 49,
-     "spike": 1.5,
+     "score": 47,
+     "spike": 0,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
@@ -1531,8 +1371,132 @@
     "assess": {
      "level": "watch",
      "label": "관찰",
-     "score": 49,
-     "spike": 1.9,
+     "score": 42,
+     "spike": 1,
+     "news": false,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": 1.31,
+      "unit": "%",
+      "z": 1.4
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 +1.31%"
+     ]
+    }
+   },
+   {
+    "id": "33zn0g",
+    "title": "美국채금리, 관세 충격 이후 최대폭 급등⋯12월 ‘빅스텝’ 가능성에 시...",
+    "firstSeen": "2026-11-11T08:16:00.000Z",
+    "lastSeen": "2026-11-11T08:16:00.000Z",
+    "count": 1,
+    "sources": 1,
+    "topics": [
+     "rates",
+     "trade",
+     "market"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "美국채금리, 관세 충격 이후 최대폭 급등⋯12월 ‘빅스텝’ 가능성에 시...",
+      "link": "https://www.etoday.co.kr/news/view/2647007",
+      "host": "etoday.co.kr",
+      "at": "2026-11-11T08:16:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 38,
+     "spike": 0.5,
+     "news": false,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": 1.31,
+      "unit": "%",
+      "z": 1.4
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 +1.31%"
+     ]
+    }
+   },
+   {
+    "id": "ymowzt",
+    "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+    "firstSeen": "2026-11-11T00:36:00.000Z",
+    "lastSeen": "2026-11-11T16:39:00.000Z",
+    "count": 1,
+    "sources": 1,
+    "topics": [
+     "rates",
+     "market"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+      "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
+      "host": "thescoop.co.kr",
+      "at": "2026-11-11T16:39:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 36,
+     "spike": 0.2,
+     "news": false,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": 1.31,
+      "unit": "%",
+      "z": 1.4
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 +1.31%"
+     ]
+    }
+   },
+   {
+    "id": "ymowzt",
+    "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
+    "firstSeen": "2026-11-11T00:36:00.000Z",
+    "lastSeen": "2026-11-12T04:22:00.000Z",
+    "count": 1,
+    "sources": 1,
+    "topics": [
+     "rates",
+     "market"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "美 CPI 발표에 연준 빅스텝론 부상…국채금리 급등",
+      "link": "https://www.sedaily.com/article/20113432?ref=naver",
+      "host": "sedaily.com",
+      "at": "2026-11-12T04:22:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 36,
+     "spike": 0.2,
      "news": false,
      "reaction": {
       "symbol": "^GSPC",
@@ -1550,21 +1514,92 @@
   ],
   "alerts": [
    {
-    "id": "ocl8df",
-    "title": "미국 물가 다시 시장 예상 웃돌아…연준 12월 금리 인상 압박 커지나",
-    "firstSeen": "2026-11-11T01:22:00.000Z",
-    "lastSeen": "2026-11-11T22:08:00.000Z",
-    "count": 10,
-    "sources": 9,
+    "id": "9sxwqk",
+    "title": "미 물가 상승에 연준 ‘빅스텝’ 단행하나",
+    "firstSeen": "2026-11-11T09:27:00.000Z",
+    "lastSeen": "2026-11-12T06:12:00.000Z",
+    "count": 4,
+    "sources": 4,
     "topics": [
      "rates",
-     "fx",
-     "energy"
+     "energy",
+     "market"
     ],
     "critical": [
      "rates"
     ],
     "links": [
+     {
+      "title": "美 연준 빅스텝설에 상승하는 시장 금리",
+      "link": "https://www.mt.co.kr/stock/2026/11/12/2026111214141373752",
+      "host": "mt.co.kr",
+      "at": "2026-11-12T06:12:00.000Z"
+     },
+     {
+      "title": "美 물가 예상 웃돌자 연준 '빅스텝' 가능성 부상…유가 급락에 인플레 ...",
+      "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
+      "host": "polinews.co.kr",
+      "at": "2026-11-12T02:32:00.000Z"
+     },
+     {
+      "title": "美 소비자물가 0.4% 상승… 연내 기준금리 ‘빅스텝’ 가능성",
+      "link": "https://www.donga.com/news/Economy/article/all/20261111/135009315/2",
+      "host": "donga.com",
+      "at": "2026-11-11T15:31:00.000Z"
+     },
+     {
+      "title": "미 물가 상승에 연준 ‘빅스텝’ 단행하나",
+      "link": "https://www.busan.com/view/busan/view.php?code=2026111118212251055",
+      "host": "busan.com",
+      "at": "2026-11-11T09:27:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 51,
+     "spike": 1,
+     "news": true,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": 1.31,
+      "unit": "%",
+      "z": 1.4
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 +1.31%"
+     ]
+    }
+   },
+   {
+    "id": "1jq5m8s",
+    "title": "日 증시, 3거래일째 상승…美·日 12월 금리 인상 '경계'",
+    "firstSeen": "2026-11-11T07:14:00.000Z",
+    "lastSeen": "2026-11-12T06:42:00.000Z",
+    "count": 6,
+    "sources": 5,
+    "topics": [
+     "rates",
+     "fx"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
+      "link": "http://coinreaders.com/269616",
+      "host": "coinreaders.com",
+      "at": "2026-11-12T06:42:00.000Z"
+     },
+     {
+      "title": "연준, 12월 금리 인상 확률 100%...\"0.5%포인트 인상도 가능\"",
+      "link": "http://coinreaders.com/269540",
+      "host": "coinreaders.com",
+      "at": "2026-11-12T00:36:00.000Z"
+     },
      {
       "title": "미 12월 '빅스텝' 가능성에 달러 들썩…한은, 금리 고심",
       "link": "https://www.dailian.co.kr/news/view/1713698/?sc=Naver",
@@ -1576,241 +1611,13 @@
       "link": "https://www.hankyung.com/article/2026111109361",
       "host": "hankyung.com",
       "at": "2026-11-11T15:21:00.000Z"
-     },
-     {
-      "title": "한은 뉴욕사무소 \"투자은행들, 美 12월 금리 인상 확실시\"",
-      "link": "https://www.newsis.com/view/NISX20261111_0003864303",
-      "host": "newsis.com",
-      "at": "2026-11-11T09:36:00.000Z"
-     },
-     {
-      "title": "美 '빅스텝' 거론에 한은 금리 인상 압력 커지나",
-      "link": "https://www.ajunews.com/view/20261111143938337",
-      "host": "ajunews.com",
-      "at": "2026-11-11T09:06:00.000Z"
      }
     ],
     "assess": {
      "level": "caution",
      "label": "주의",
-     "score": 66,
-     "spike": 1.9,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "bc6j0c",
-    "title": "미국 빅스텝 가능성 커졌는데…원·달러 환율은 1330원대",
-    "firstSeen": "2026-11-11T07:30:00.000Z",
-    "lastSeen": "2026-11-11T23:16:00.000Z",
-    "count": 5,
-    "sources": 5,
-    "topics": [
-     "rates",
-     "fx"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "美 연준 긴축 기대에 강달러 지속… 원/달러 환율, 네고에도 소폭 상승...",
-      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=731212",
-      "host": "the-biz.co.kr",
-      "at": "2026-11-11T23:16:00.000Z"
-     },
-     {
-      "title": "연준 긴축 경계 속 AI주가 반등…환율 1340원대 재진입 시도[외환브리핑...",
-      "link": "https://www.edaily.co.kr/News/Read?newsId=02246806645645064&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-      "host": "edaily.co.kr",
-      "at": "2026-11-11T23:13:00.000Z"
-     },
-     {
-      "title": "연준 긴축 가능성에 달러 강세⋯\"원·달러 소폭 상승할 것\" [환율전망]",
-      "link": "https://www.etoday.co.kr/news/view/2647103",
-      "host": "etoday.co.kr",
-      "at": "2026-11-11T23:08:00.000Z"
-     },
-     {
-      "title": "원·달러 환율, 1337.5원…달러, 美 연준 추가 긴축 우려에 강세",
-      "link": "http://www.joseilbo.com/news/news_read.php?uid=579467&class=18&grp=",
-      "host": "joseilbo.com",
-      "at": "2026-11-11T23:01:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 58,
-     "spike": 1.5,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "1ok7u92",
-    "title": "AI 거품론에 물가 충격 겹친 월가… 연준 '빅스텝' 공포에 국채금리 폭...",
-    "firstSeen": "2026-11-10T17:41:00.000Z",
-    "lastSeen": "2026-11-11T22:36:00.000Z",
-    "count": 3,
-    "sources": 3,
-    "topics": [
-     "rates"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "[마켓 프리뷰] 끈적한 물가 '빅스텝' 우려에도 코스피 2%대 상승",
-      "link": "https://biz.sbs.co.kr/article_hub/20000345845?division=NAVER",
-      "host": "biz.sbs.co.kr",
-      "at": "2026-11-11T22:36:00.000Z"
-     },
-     {
-      "title": "미 물가 상승에 연준 ‘빅스텝’ 단행하나",
-      "link": "https://www.busan.com/view/busan/view.php?code=2026111118212251055",
-      "host": "busan.com",
-      "at": "2026-11-11T09:27:00.000Z"
-     },
-     {
-      "title": "AI 거품론에 물가 충격 겹친 월가… 연준 '빅스텝' 공포에 국채금리 폭...",
-      "link": "https://www.widedaily.com/news/articleView.html?idxno=303437",
-      "host": "widedaily.com",
-      "at": "2026-11-11T05:30:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 52,
-     "spike": 1.5,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "1e4wis4",
-    "title": "코스피·코스닥, 동반 상승…반도체주 강세에 코스피 5300선 마감",
-    "firstSeen": "2026-11-11T07:28:00.000Z",
-    "lastSeen": "2026-11-11T23:12:00.000Z",
-    "count": 8,
-    "sources": 8,
-    "topics": [
-     "market"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "[박정식의 국내 주식시황] 코스피 코스닥 쌍바닥 형성 후 반도체 투심 ...",
-      "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=304799",
-      "host": "newsquest.co.kr",
-      "at": "2026-11-11T23:12:00.000Z"
-     },
-     {
-      "title": "[오늘 증시 전망] 코스피 5,300선 회복·뉴욕증시 동반 상승…12일 옵션...",
-      "link": "https://www.upkoreanews.kr/news/articleView.html?idxno=101133",
-      "host": "upkoreanews.kr",
-      "at": "2026-11-11T22:44:00.000Z"
-     },
-     {
-      "title": "코스피 상승·코스닥 5%대 급등…삼성전자·SK하이닉스·에코프로·주성...",
-      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=625880",
-      "host": "cbci.co.kr",
-      "at": "2026-11-11T21:16:00.000Z"
-     },
-     {
-      "title": "패션주 F&F 3.99% 하락, 코스닥 급등 속 뷰티주 강세, …",
-      "link": "http://okfashion.co.kr/detail.php?number=64372&thread=62r04",
-      "host": "okfashion.co.kr",
-      "at": "2026-11-11T14:20:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 51,
-     "spike": 0.3,
-     "news": true,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": 1.31,
-      "unit": "%",
-      "z": 1.4
-     },
-     "why": [
-      "핵심 단어",
-      "S&P 500 +1.31%"
-     ]
-    }
-   },
-   {
-    "id": "ymowzt",
-    "title": "美 2년물 금리, 15bp 급등...CPI가 연준 빅스텝으로?",
-    "firstSeen": "2026-11-11T00:36:00.000Z",
-    "lastSeen": "2026-11-11T16:39:00.000Z",
-    "count": 2,
-    "sources": 2,
-    "topics": [
-     "rates",
-     "market"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
-      "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312263",
-      "host": "thescoop.co.kr",
-      "at": "2026-11-11T16:39:00.000Z"
-     },
-     {
-      "title": "美 2년물 금리, 15bp 급등...CPI가 연준 빅스텝으로?",
-      "link": "http://coinreaders.com/269231",
-      "host": "coinreaders.com",
-      "at": "2026-11-11T00:36:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 49,
-     "spike": 1.5,
+     "score": 47,
+     "spike": 0,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
@@ -1826,7 +1633,7 @@
     }
    }
   ],
-  "text": "[장 전 브리핑] 2026-11-12 08시\nS&P 500 +1.31%(11.11 기준), 나스닥 +1.6%(11.11 기준), 원/달러 -0.54%(11.11 기준) · 주요 이슈: 금리·통화, 환율·달러, 유가·원자재\n1. [주의] 미국 물가 다시 시장 예상 웃돌아…연준 12월 금리 인상 압박 커지나 (9곳 보도)\n   https://www.dailian.co.kr/news/view/1713698/?sc=Naver\n2. [주의] 미국 빅스텝 가능성 커졌는데…원·달러 환율은 1330원대 (5곳 보도)\n   http://www.the-biz.co.kr/news/articleView.html?idxno=731212\n3. [주의] AI 거품론에 물가 충격 겹친 월가… 연준 '빅스텝' 공포에 국채금리 폭... (3곳 보도)\n   https://biz.sbs.co.kr/article_hub/20000345845?division=NAVER\n4. [주의] 코스피·코스닥, 동반 상승…반도체주 강세에 코스피 5300선 마감 (8곳 보도)\n   https://www.newsquest.co.kr/news/articleView.html?idxno=304799\n5. [주의] 美 2년물 금리, 15bp 급등...CPI가 연준 빅스텝으로? (2곳 보도)\n   https://www.thescoop.co.kr/news/articleView.html?idxno=312263\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+  "text": "[국내 장 마감 브리핑] 2026-11-12 16시\n코스피 -0.61%, 코스닥 -1.22%, 원/달러 -0.73% · 주요 이슈: 금리·통화, 유가·원자재, 증시 급변\n1. [주의] 미 물가 상승에 연준 ‘빅스텝’ 단행하나 (4곳 보도)\n   https://www.mt.co.kr/stock/2026/11/12/2026111214141373752\n2. [주의] 日 증시, 3거래일째 상승…美·日 12월 금리 인상 '경계' (5곳 보도)\n   http://coinreaders.com/269616\n3. 미 빅스텝 부르는 ‘뛰는 물가’…구원 투수 떠오른 ‘꺾인 유가’ (1곳 보도)\n   https://www.joongang.co.kr/article/25477804\n4. 美국채금리, 관세 충격 이후 최대폭 급등⋯12월 ‘빅스텝’ 가능성에 시... (1곳 보도)\n   https://www.etoday.co.kr/news/view/2647007\n5. 결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까 (1곳 보도)\n   https://www.thescoop.co.kr/news/articleView.html?idxno=312263\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
   "delivered": false
  },
  "problems": []
