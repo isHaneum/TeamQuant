@@ -24,7 +24,7 @@ const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' })
 const daysAgo = n => new Date(Date.now() - n * 864e5 + 9 * 3600e3).toISOString().slice(0, 10);
 const marketOf = p => p.currency === 'USD' ? 'US' : 'KR';
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261113b'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261113c'; document.head.append(css);
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
 function addView(id, label, html) {
   const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = id; nav.textContent = label; navHost.append(nav);
