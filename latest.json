@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T05:27:41.507Z",
+ "updatedAt": "2026-11-13T05:47:05.411Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 5282.92,
+   "last": 5282.919921875,
    "change": -1.12,
    "z": -0.4,
    "sd": 2.919676065766116,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,12 +23,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 701.98,
+   "last": 701.97998046875,
    "change": 0.78,
    "z": 0.3,
    "sd": 2.6920969628677787,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -64,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1333.1199951171875,
-   "change": -0.23,
-   "z": -0.4,
+   "last": 1334.8800048828125,
+   "change": -0.1,
+   "z": -0.2,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
   },
@@ -76,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.23999786376953,
-   "change": -0.56,
+   "last": 88.2300033569336,
+   "change": -0.57,
    "z": -0.2,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
@@ -88,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3921.39990234375,
-   "change": 0.93,
-   "z": 0.7,
+   "last": 3918.800048828125,
+   "change": 0.86,
+   "z": 0.6,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -121,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": -0.2,
-  "politics": -0.8,
-  "rates": 0.5,
+  "war": -0.5,
+  "politics": -1,
+  "rates": 0.3,
   "trade": 0.3,
-  "fx": 0.8,
-  "energy": 1.7,
-  "market": 0.2,
-  "credit": 1,
+  "fx": 0.4,
+  "energy": 1.5,
+  "market": -0.2,
+  "credit": 0.5,
   "disaster": 0,
-  "policy": -0.7
+  "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 1.6,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.6,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.7,
+   "rate": 2.4,
    "saturated": 0,
    "queries": 3
   },
@@ -154,22 +152,22 @@
    "queries": 2
   },
   "fx": {
-   "rate": 1,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 6.7,
-   "saturated": 1,
+   "rate": 6.3,
+   "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.6,
-   "saturated": 2,
+   "rate": 3.9,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
-   "rate": 0.8,
+   "rate": 0.5,
    "saturated": 0,
    "queries": 2
   },
@@ -179,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -211,8 +209,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 0.8,
+    "score": 46,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -251,8 +249,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 47,
-    "spike": 0.5,
+    "score": 45,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -291,8 +289,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 47,
-    "spike": 0.5,
+    "score": 45,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -339,8 +337,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
-    "spike": 1.7,
+    "score": 33,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -397,18 +395,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 1.7,
+    "score": 32,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.93,
+     "change": 0.86,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
-     "금 +0.93%"
+     "금 +0.86%"
     ]
    }
   },
@@ -417,8 +415,8 @@
    "title": "[원자재 시황] 금·비트코인 3%대 급락",
    "firstSeen": "2026-11-12T22:30:00.000Z",
    "lastSeen": "2026-11-13T04:54:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "count": 7,
+   "sources": 7,
    "topics": [
     "energy",
     "market"
@@ -453,18 +451,99 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 32,
-    "spike": 1.7,
+    "score": 29,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.93,
+     "change": 0.86,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
-     "금 +0.93%"
+     "금 +0.86%"
+    ]
+   }
+  },
+  {
+   "id": "c86036",
+   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
+   "firstSeen": "2026-11-12T10:52:00.000Z",
+   "lastSeen": "2026-11-12T10:52:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
+     "host": "globale.co.kr",
+     "at": "2026-11-12T10:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 0.86,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "금 +0.86%"
+    ]
+   }
+  },
+  {
+   "id": "1f5ys94",
+   "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
+   "firstSeen": "2026-11-13T01:09:00.000Z",
+   "lastSeen": "2026-11-13T01:09:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
+     "link": "https://www.newsis.com/view/NISX20261113_0003866554",
+     "host": "newsis.com",
+     "at": "2026-11-13T01:09:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 0.86,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "금 +0.86%"
     ]
    }
   },
@@ -504,8 +583,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.8,
+    "score": 27,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -553,133 +632,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "c86036",
-   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-   "firstSeen": "2026-11-12T10:52:00.000Z",
-   "lastSeen": "2026-11-12T10:52:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
-     "host": "globale.co.kr",
-     "at": "2026-11-12T10:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 0.93,
-     "unit": "%",
-     "z": 0.7
-    },
-    "why": [
-     "핵심 단어",
-     "금 +0.93%"
-    ]
-   }
-  },
-  {
-   "id": "1f5ys94",
-   "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-   "firstSeen": "2026-11-13T01:09:00.000Z",
-   "lastSeen": "2026-11-13T01:09:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-     "link": "https://www.newsis.com/view/NISX20261113_0003866554",
-     "host": "newsis.com",
-     "at": "2026-11-13T01:09:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 0.93,
-     "unit": "%",
-     "z": 0.7
-    },
-    "why": [
-     "핵심 단어",
-     "금 +0.93%"
-    ]
-   }
-  },
-  {
-   "id": "wc1dpx",
-   "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
-   "firstSeen": "2026-11-12T06:42:00.000Z",
-   "lastSeen": "2026-11-13T04:12:00.000Z",
-   "count": 2,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[크립토 오즈] 비트코인(BTC) 연말 6만 5,000달러 하락 확률 66%…하루 새...",
-     "link": "http://coinreaders.com/269943",
-     "host": "coinreaders.com",
-     "at": "2026-11-13T04:12:00.000Z"
-    },
-    {
-     "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
-     "link": "http://coinreaders.com/269616",
-     "host": "coinreaders.com",
-     "at": "2026-11-12T06:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 25,
-    "spike": 0.8,
+    "score": 26,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -721,8 +675,95 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 25,
-    "spike": 0.5,
+    "score": 23,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "1alic78",
+   "title": "S&P500 선물, 엔비디아 충격 딛고 상승…美 국채금리↓",
+   "firstSeen": "2026-11-13T00:22:00.000Z",
+   "lastSeen": "2026-11-13T05:46:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 젠슨 황 퇴진 충격에 美 지수 선물도 휘청",
+     "link": "https://www.theguru.co.kr/news/article.html?no=109722",
+     "host": "theguru.co.kr",
+     "at": "2026-11-13T05:46:00.000Z"
+    },
+    {
+     "title": "S&P500 선물, 엔비디아 충격 딛고 상승…美 국채금리↓",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444657",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-13T03:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "wc1dpx",
+   "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
+   "firstSeen": "2026-11-12T06:42:00.000Z",
+   "lastSeen": "2026-11-13T04:12:00.000Z",
+   "count": 2,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[크립토 오즈] 비트코인(BTC) 연말 6만 5,000달러 하락 확률 66%…하루 새...",
+     "link": "http://coinreaders.com/269943",
+     "host": "coinreaders.com",
+     "at": "2026-11-13T04:12:00.000Z"
+    },
+    {
+     "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
+     "link": "http://coinreaders.com/269616",
+     "host": "coinreaders.com",
+     "at": "2026-11-12T06:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -771,18 +812,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
-    "spike": 1.7,
+    "score": 21,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.93,
+     "change": 0.86,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
-     "금 +0.93%"
+     "금 +0.86%"
     ]
    }
   },
@@ -815,46 +856,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1eta2bc",
-   "title": "AI 정체가 인도인이었어?…AI 핑계로 직원 자르던 호주기업 딱 걸렸다",
-   "firstSeen": "2026-11-12T05:57:00.000Z",
-   "lastSeen": "2026-11-12T05:57:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "disaster"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AI 정체가 인도인이었어?…AI 핑계로 직원 자르던 호주기업 딱 걸렸다",
-     "link": "https://www.mk.co.kr/article/12206386",
-     "host": "mk.co.kr",
-     "at": "2026-11-12T05:57:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 22,
-    "spike": 0.5,
+    "score": 21,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
