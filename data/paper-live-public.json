@@ -2,14 +2,16 @@
  "version": "PUB2-2026-11-10",
  "engine": "L6-2026-11-10",
  "label": "한투 모의계좌 (팀 공용)",
- "asOf": "2026-11-13T07:07:16.296Z",
+ "asOf": "2026-11-13T12:01:42.746Z",
  "mode": "vps",
  "public": true,
  "since": "2026-11-09",
  "days": 5,
  "startTotal": 99378704,
  "principalKrw": 100000000,
- "total": 100486195,
+ "prefsCooldownDays": 28,
+ "prefsNextChangeAt": null,
+ "total": 100604877,
  "markets": {
   "KR": {
    "open": false,
@@ -21,8 +23,8 @@
   "US": {
    "open": false,
    "reason": "미국 장 시작 전입니다(09:30 ET = 한국 23:30).",
-   "openAt": "2026-11-13T14:30:00.294Z",
-   "closeAt": "2026-11-13T21:00:00.294Z",
+   "openAt": "2026-11-13T14:30:00.742Z",
+   "closeAt": "2026-11-13T21:00:00.742Z",
    "market": "US"
   }
  },
@@ -44,14 +46,14 @@
   "duplicateWindowMin": 10,
   "allowLive": false
  },
- "fx": 1335.0999755859375,
+ "fx": 1336.1700439453125,
  "balance": {
   "cash": 42527252,
   "cashRawKrw": 75102195,
   "usFundingKrw": 32574943,
   "cashUsd": 0,
-  "total": 100486195,
-  "stock": 57958943,
+  "total": 100604877,
+  "stock": 58077625,
   "positions": [
    {
     "symbol": "000660",
@@ -63,7 +65,7 @@
     "avgCost": 1176000,
     "value": 2432000,
     "valueKrw": 2432000,
-    "weightPct": 2.4202329484164466
+    "weightPct": 2.4173778374581185
    },
    {
     "symbol": "005930",
@@ -75,7 +77,7 @@
     "avgCost": 192900,
     "value": 2678000,
     "valueKrw": 2678000,
-    "weightPct": 2.6650426956658078
+    "weightPct": 2.6618987864773196
    },
    {
     "symbol": "047810",
@@ -87,7 +89,7 @@
     "avgCost": 107117.857,
     "value": 2917600,
     "valueKrw": 2917600,
-    "weightPct": 2.9034834088403882
+    "weightPct": 2.900058214871631
    },
    {
     "symbol": "068270",
@@ -99,7 +101,7 @@
     "avgCost": 210000,
     "value": 2996000,
     "valueKrw": 2996000,
-    "weightPct": 2.981504076256445
+    "weightPct": 2.977986842526531
    },
    {
     "symbol": "069500",
@@ -111,7 +113,7 @@
     "avgCost": 80298.26,
     "value": 11469870,
     "valueKrw": 11469870,
-    "weightPct": 11.414373884890356
+    "weightPct": 11.40090852653197
    },
    {
     "symbol": "128940",
@@ -123,7 +125,7 @@
     "avgCost": 469500,
     "value": 2793000,
     "valueKrw": 2793000,
-    "weightPct": 2.779486276697013
+    "weightPct": 2.7762073602058077
    },
    {
     "symbol": "AMZN",
@@ -131,11 +133,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 8,
-    "price": 267.44,
+    "price": 269.45,
     "avgCost": 270.73,
-    "value": 2139.52,
-    "valueKrw": 2856473.099765625,
-    "weightPct": 2.8426522665781353
+    "value": 2155.6,
+    "valueKrw": 2880248.1467285156,
+    "weightPct": 2.862930935970943
    },
    {
     "symbol": "GE",
@@ -143,11 +145,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 6,
-    "price": 330.86,
+    "price": 331.4,
     "avgCost": 340.39,
-    "value": 1985.16,
-    "valueKrw": 2650387.06753418,
-    "weightPct": 2.6375633663252747
+    "value": 1988.4,
+    "valueKrw": 2656840.5153808594,
+    "weightPct": 2.64086652119346
    },
    {
     "symbol": "LLY",
@@ -155,11 +157,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 1,
-    "price": 1427.28,
+    "price": 1429.29,
     "avgCost": 1440.22,
-    "value": 1427.28,
-    "valueKrw": 1905561.493154297,
-    "weightPct": 1.896341575232595
+    "value": 1429.29,
+    "valueKrw": 1909774.4821105956,
+    "weightPct": 1.8982921495054317
    },
    {
     "symbol": "LMT",
@@ -167,11 +169,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 5,
-    "price": 604.09,
+    "price": 607.9988,
     "avgCost": 592.47,
-    "value": 3020.45,
-    "valueKrw": 4032602.721258545,
-    "weightPct": 4.013091272147925
+    "value": 3039.994,
+    "valueKrw": 4061948.9165734863,
+    "weightPct": 4.037526845317336
    },
    {
     "symbol": "SPY",
@@ -179,11 +181,11 @@
     "market": "US",
     "currency": "USD",
     "qty": 21,
-    "price": 757.12,
+    "price": 758.47,
     "avgCost": 754.17,
-    "value": 15899.52,
-    "valueKrw": 21227448.763828125,
-    "weightPct": 21.12474132772977
+    "value": 15927.87,
+    "valueKrw": 21282342.757855225,
+    "weightPct": 21.1543847500109
    }
   ],
   "usError": null
@@ -860,7 +862,7 @@
  },
  "sleeve": {
   "n": 8,
-  "excessPp": 0.23,
+  "excessPp": 0.36,
   "items": [
    {
     "symbol": "128940",
@@ -896,9 +898,9 @@
     "symbol": "AMZN",
     "name": "아마존 (AMZN)",
     "since": "2026-11-12",
-    "returnPct": -0.01215232888856066,
+    "returnPct": -0.0047279577438777975,
     "indexPct": 0.004164586235413603,
-    "excessPct": -0.016316915123974263,
+    "excessPct": -0.0088925439792914,
     "step": 1,
     "targetPct": 5
    },
@@ -916,9 +918,9 @@
     "symbol": "LLY",
     "name": "일라이릴리 (LLY)",
     "since": "2026-11-12",
-    "returnPct": -0.00898473844273795,
+    "returnPct": -0.007589118329144218,
     "indexPct": 0.004164586235413603,
-    "excessPct": -0.013149324678151553,
+    "excessPct": -0.01175370456455782,
     "step": 1,
     "targetPct": 5
    },
@@ -936,9 +938,9 @@
     "symbol": "GE",
     "name": "GE (GE)",
     "since": "2026-11-12",
-    "returnPct": -0.02799729721789701,
+    "returnPct": -0.026410881635770767,
     "indexPct": 0.004164586235413603,
-    "excessPct": -0.032161883453310613,
+    "excessPct": -0.03057546787118437,
     "step": 1,
     "targetPct": 5
    }
@@ -950,11 +952,11 @@
    "name": "엔비디아 (NVDA)",
    "level": "caution",
    "factor": 1,
-   "reason": "뉴스(경영진): 젠슨 황, 사임 발표 날 또 '사내 관계' 의혹… 엔비디아 임시 CEO 체제로",
+   "reason": "뉴스(경영진): [젠슨 황 사임 충격] 반사이익 기대감에 AMD·브로드컴 5%대 급등… 에너...",
    "source": "뉴스",
    "date": "2026-11-13",
-   "at": "2026-11-13T07:07:15.510Z",
-   "until": "2026-11-27T07:07:15.510Z"
+   "at": "2026-11-13T11:57:14.146Z",
+   "until": "2026-11-27T11:57:14.146Z"
   }
  ],
  "marks": [
@@ -987,9 +989,9 @@
   },
   {
    "date": "2026-11-13",
-   "total": 100486195,
+   "total": 100604877,
    "cash": 42527252,
-   "stock": 57958943,
+   "stock": 58077625,
    "funding": 32574943
   }
  ],
@@ -1292,9 +1294,9 @@
     "currency": "USD"
    }
   },
-  "ownRetPct": 1.11,
-  "benchRetPct": 1.13,
-  "diffPp": -0.01,
+  "ownRetPct": 1.23,
+  "benchRetPct": 1.09,
+  "diffPp": 0.14,
   "days": 5,
   "from": "2026-11-09",
   "asOf": "2026-11-13",
