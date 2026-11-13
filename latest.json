@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T10:47:51.210Z",
+ "updatedAt": "2026-11-13T11:12:39.592Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1335.510009765625,
-   "change": -0.06,
-   "z": -0.1,
+   "last": 1336.3800048828125,
+   "change": 0.01,
+   "z": 0,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 87.87999725341797,
-   "change": -0.97,
-   "z": -0.3,
+   "last": 88.25,
+   "change": -0.55,
+   "z": -0.2,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3899.199951171875,
-   "change": 0.36,
-   "z": 0.3,
+   "last": 3895.10009765625,
+   "change": 0.25,
+   "z": 0.2,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 18.459999084472656,
-   "change": -1.28,
-   "z": -0.1,
+   "last": 18.34000015258789,
+   "change": -1.93,
+   "z": -0.2,
    "sd": 11.782503388614433,
    "source": "Yahoo",
    "checked": true
@@ -119,40 +119,40 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": -1.7,
-  "rates": 0.2,
-  "trade": 0.5,
-  "fx": 0,
+  "war": -0.4,
+  "politics": -2,
+  "rates": -0.1,
+  "trade": 0.4,
+  "fx": -0.4,
   "energy": 1.6,
-  "market": 0.1,
-  "credit": -0.2,
+  "market": -0.2,
+  "credit": 0.1,
   "disaster": 0,
   "policy": 0.2
  },
  "rates": {
   "war": {
-   "rate": 1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.7,
+   "rate": 3.5,
    "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   },
@@ -162,12 +162,12 @@
    "queries": 1
   },
   "market": {
-   "rate": 4.4,
-   "saturated": 2,
+   "rate": 3.8,
+   "saturated": 0,
    "queries": 3
   },
   "credit": {
-   "rate": 0,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 2
   },
@@ -242,6 +242,63 @@
    }
   },
   {
+   "id": "1tfympz",
+   "title": "코스피, 장중 5500선 돌파후 5290선 후퇴...외국인 5500억 순매도",
+   "firstSeen": "2026-11-13T06:46:00.000Z",
+   "lastSeen": "2026-11-13T09:28:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피, 장중 5,500선 터치 후 하락 반전···5,290.53 마감",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41639",
+     "host": "globale.co.kr",
+     "at": "2026-11-13T09:28:00.000Z"
+    },
+    {
+     "title": "코스피, 장중 5,500선 돌파 후 하락 반전",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261113182325aHr",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-13T09:24:00.000Z"
+    },
+    {
+     "title": "[26.11.13 증시 인싸잇] 코스피, 장중 5500선 돌파에도 하락 마감... 外人...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261735",
+     "host": "mediawatch.kr",
+     "at": "2026-11-13T09:02:00.000Z"
+    },
+    {
+     "title": "[마감 시황] 장중 5,500선 뚫었던 코스피, 외국인 '변심'에 5,290선 하락 ...",
+     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281283",
+     "host": "businesskorea.co.kr",
+     "at": "2026-11-13T08:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
    "id": "d16imi",
    "title": "美 '빅스텝' 거론에 한미 금리차 확대 우려…소비 부진에 한은 '딜레마...",
    "firstSeen": "2026-11-12T21:00:00.000Z",
@@ -265,8 +322,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
-    "spike": 0.2,
+    "score": 43,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -305,8 +362,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
-    "spike": 0.2,
+    "score": 43,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -411,64 +468,6 @@
    }
   },
   {
-   "id": "1lfpa1f",
-   "title": "트럼프 \"이란과 합의 필요 없다\"…밴스에 협상 대신 민주당 수사 지시",
-   "firstSeen": "2026-11-12T20:54:00.000Z",
-   "lastSeen": "2026-11-13T04:38:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "war",
-    "politics",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 “이란과 합의 필요 없다”⋯국제유가 급등",
-     "link": "https://www.etoday.co.kr/news/view/2647889",
-     "host": "etoday.co.kr",
-     "at": "2026-11-13T04:38:00.000Z"
-    },
-    {
-     "title": "트럼프 \"이란과 합의 필요 없다\"…밴스 주도 협상에 제동",
-     "link": "https://www.hidomin.com/news/articleView.html?idxno=729227",
-     "host": "hidomin.com",
-     "at": "2026-11-13T02:20:00.000Z"
-    },
-    {
-     "title": "트럼프 \"이란과 합의 필요 없다\"...11월 -20% 브렌트유, 되돌림 오나",
-     "link": "http://coinreaders.com/269903",
-     "host": "coinreaders.com",
-     "at": "2026-11-13T02:16:00.000Z"
-    },
-    {
-     "title": "트럼프 “이란과 협상 불필요”…협상 주도한 밴스에게 국내 업무 지시",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000559767",
-     "host": "ichannela.com",
-     "at": "2026-11-13T01:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.35%"
-    ]
-   }
-  },
-  {
    "id": "1eknkrm",
    "title": "‘젠슨 황 퇴진’에도 3% 넘게 오르던 코스피, 외인 ‘팔자’에 하락 마...",
    "firstSeen": "2026-11-13T05:01:00.000Z",
@@ -508,32 +507,50 @@
    }
   },
   {
-   "id": "c86036",
-   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-   "firstSeen": "2026-11-12T10:52:00.000Z",
-   "lastSeen": "2026-11-12T10:52:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "1lfpa1f",
+   "title": "트럼프 \"이란과 합의 필요 없다\"…밴스에 협상 대신 민주당 수사 지시",
+   "firstSeen": "2026-11-12T20:54:00.000Z",
+   "lastSeen": "2026-11-13T04:38:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
     "war",
-    "politics"
+    "politics",
+    "energy",
+    "market"
    ],
-   "critical": [
-    "energy"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
-     "host": "globale.co.kr",
-     "at": "2026-11-12T10:52:00.000Z"
+     "title": "트럼프 “이란과 합의 필요 없다”⋯국제유가 급등",
+     "link": "https://www.etoday.co.kr/news/view/2647889",
+     "host": "etoday.co.kr",
+     "at": "2026-11-13T04:38:00.000Z"
+    },
+    {
+     "title": "트럼프 \"이란과 합의 필요 없다\"…밴스 주도 협상에 제동",
+     "link": "https://www.hidomin.com/news/articleView.html?idxno=729227",
+     "host": "hidomin.com",
+     "at": "2026-11-13T02:20:00.000Z"
+    },
+    {
+     "title": "트럼프 \"이란과 합의 필요 없다\"...11월 -20% 브렌트유, 되돌림 오나",
+     "link": "http://coinreaders.com/269903",
+     "host": "coinreaders.com",
+     "at": "2026-11-13T02:16:00.000Z"
+    },
+    {
+     "title": "[국제금융 브리핑] 트럼프 “이란 합의 불필요”·젠슨 황 사임...브렌트...",
+     "link": "https://www.tokenpost.kr/news/economy/437451",
+     "host": "tokenpost.kr",
+     "at": "2026-11-13T00:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
-    "spike": 0,
+    "score": 30,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -543,7 +560,6 @@
      "z": -0.4
     },
     "why": [
-     "핵심 단어",
      "S&P 500 -0.35%"
     ]
    }
@@ -578,13 +594,13 @@
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -0.97,
+     "change": -0.55,
      "unit": "%",
-     "z": -0.3
+     "z": -0.2
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 -0.97%"
+     "WTI 유가 -0.55%"
     ]
    }
   },
@@ -662,8 +678,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
-    "spike": 0.2,
+    "score": 24,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -711,8 +727,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
-    "spike": 0.2,
+    "score": 24,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -723,6 +739,57 @@
     },
     "why": [
      "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "1eknkrm",
+   "title": "[마감시황] 반도체주 상승분 반납…코스피 '전강후약' 0.98% 하락",
+   "firstSeen": "2026-11-13T05:01:00.000Z",
+   "lastSeen": "2026-11-13T08:32:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피, 5500선 찍고 1% 하락",
+     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54712",
+     "host": "koreareport.co.kr",
+     "at": "2026-11-13T08:32:00.000Z"
+    },
+    {
+     "title": "[오늘증시] 코스피 5500선 반납…외인 매도세에 하락 반전하며 이틀째 ...",
+     "link": "http://www.queen.co.kr/news/articleView.html?idxno=466317",
+     "host": "queen.co.kr",
+     "at": "2026-11-13T07:30:00.000Z"
+    },
+    {
+     "title": "[마감시황] 반도체주 상승분 반납…코스피 '전강후약' 0.98% 하락",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748431",
+     "host": "polinews.co.kr",
+     "at": "2026-11-13T07:27:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.35,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.35%"
     ]
    }
   },
@@ -801,8 +868,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 22,
-    "spike": 0.5,
+    "score": 21,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -813,61 +880,6 @@
     },
     "why": [
      "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1tfympz",
-   "title": "코스피, 장중 5500선 돌파후 5290선 후퇴...외국인 5500억 순매도",
-   "firstSeen": "2026-11-13T06:46:00.000Z",
-   "lastSeen": "2026-11-13T09:28:00.000Z",
-   "count": 11,
-   "sources": 11,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 장중 5,500선 터치 후 하락 반전···5,290.53 마감",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41639",
-     "host": "globale.co.kr",
-     "at": "2026-11-13T09:28:00.000Z"
-    },
-    {
-     "title": "코스피, 장중 5,500선 돌파 후 하락 반전",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261113182325aHr",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-13T09:24:00.000Z"
-    },
-    {
-     "title": "코스피, 李 대통령 자본시장 간담회 효과 무색...‘외국인 순매도’에 ...",
-     "link": "https://futurechosun.com/?p=166585",
-     "host": "futurechosun.com",
-     "at": "2026-11-13T09:12:00.000Z"
-    },
-    {
-     "title": "[26.11.13 증시 인싸잇] 코스피, 장중 5500선 돌파에도 하락 마감... 外人...",
-     "link": "https://www.mediawatch.kr/news/article.html?no=261735",
-     "host": "mediawatch.kr",
-     "at": "2026-11-13T09:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.35%"
     ]
    }
   }
