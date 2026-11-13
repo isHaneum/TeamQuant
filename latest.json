@@ -1,7 +1,7 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T12:47:51.528Z",
- "mode": "watch",
+ "updatedAt": "2026-11-13T13:06:32.047Z",
+ "mode": "briefing",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
   {
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1337.1300048828125,
-   "change": 0.07,
+   "last": 1337.280029296875,
+   "change": 0.08,
    "z": 0.1,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.81999969482422,
-   "change": 0.09,
+   "last": 88.63999938964844,
+   "change": -0.11,
    "z": 0,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3893.699951171875,
-   "change": 0.22,
-   "z": 0.2,
+   "last": 3890.5,
+   "change": 0.13,
+   "z": 0.1,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 18.260000228881836,
-   "change": -2.35,
-   "z": -0.2,
+   "last": 18.3799991607666,
+   "change": -1.71,
+   "z": -0.1,
    "sd": 11.782503388614433,
    "source": "Yahoo",
    "checked": true
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": -0.8,
-  "politics": -2.2,
+  "war": -0.7,
+  "politics": -2,
   "rates": -0.6,
   "trade": 0.2,
   "fx": -0.4,
   "energy": -0.3,
-  "market": -1.5,
+  "market": -1.7,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 0.7,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.2,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.7,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -260,46 +260,6 @@
     "why": [
      "핵심 단어",
      "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1f5ys94",
-   "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-   "firstSeen": "2026-11-13T01:09:00.000Z",
-   "lastSeen": "2026-11-13T01:09:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-     "link": "https://www.newsis.com/view/NISX20261113_0003866554",
-     "host": "newsis.com",
-     "at": "2026-11-13T01:09:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 0.22,
-     "unit": "%",
-     "z": 0.2
-    },
-    "why": [
-     "핵심 단어",
-     "금 +0.22%"
     ]
    }
   },
@@ -803,6 +763,43 @@
      "미 10년 금리 +10.5bp(평소의 2배)"
     ]
    }
+  },
+  {
+   "id": "tc57wv",
+   "title": "뉴욕 연은 총재 \"인플레 2% 복귀 위해 추가 금리인상 필요\"",
+   "firstSeen": "2026-11-13T06:06:00.000Z",
+   "lastSeen": "2026-11-13T06:06:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕 연은 총재 \"인플레 2% 복귀 위해 추가 금리인상 필요\"",
+     "link": "https://www.news1.kr/world/international-economy/6353404",
+     "host": "news1.kr",
+     "at": "2026-11-13T06:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
   }
  ],
  "alerts": [
@@ -1048,51 +1045,13 @@
   }
  ],
  "briefing": {
-  "id": "2026-11-13-close",
+  "id": "2026-11-13-us",
   "version": "I1-2026-11-06",
-  "slot": "close",
-  "title": "국내 장 마감 브리핑",
-  "at": "2026-11-13T07:05:03.171Z",
-  "headline": "코스피 -0.98%, 코스닥 +0.45%, 원/달러 -0.08% · 주요 이슈: 금리·통화, 전쟁·지정학, 선거·정치",
+  "slot": "us",
+  "title": "미국 장 브리핑",
+  "at": "2026-11-13T13:06:32.047Z",
+  "headline": "S&P 500 -0.35%(11.12 기준), 나스닥 -0.39%(11.12 기준), 원/달러 +0.08% · 주요 이슈: 금리·통화, 재난·사고, 환율·달러",
   "markets": [
-   {
-    "symbol": "^KS11",
-    "label": "코스피",
-    "unit": "%",
-    "available": true,
-    "date": "2026-11-13",
-    "last": 5290.52978515625,
-    "change": -0.98,
-    "z": -0.3,
-    "sd": 2.919676065766116,
-    "source": "Yahoo",
-    "checked": true
-   },
-   {
-    "symbol": "^KQ11",
-    "label": "코스닥",
-    "unit": "%",
-    "available": true,
-    "date": "2026-11-13",
-    "last": 699.6599731445312,
-    "change": 0.45,
-    "z": 0.2,
-    "sd": 2.6920969628677787,
-    "source": "Yahoo",
-    "checked": true
-   },
-   {
-    "symbol": "KRW=X",
-    "label": "원/달러",
-    "unit": "%",
-    "available": true,
-    "date": "2026-11-13",
-    "last": 1335.1500244140625,
-    "change": -0.08,
-    "z": -0.1,
-    "sd": 0.6327981458522444,
-    "source": "Yahoo"
-   },
    {
     "symbol": "^GSPC",
     "label": "S&P 500",
@@ -1107,14 +1066,39 @@
     "checked": true
    },
    {
+    "symbol": "^IXIC",
+    "label": "나스닥",
+    "unit": "%",
+    "available": true,
+    "date": "2026-11-12",
+    "last": 25366.08984375,
+    "change": -0.39,
+    "z": -0.3,
+    "sd": 1.317158730401176,
+    "source": "Yahoo",
+    "checked": true
+   },
+   {
+    "symbol": "KRW=X",
+    "label": "원/달러",
+    "unit": "%",
+    "available": true,
+    "date": "2026-11-13",
+    "last": 1337.280029296875,
+    "change": 0.08,
+    "z": 0.1,
+    "sd": 0.6327981458522444,
+    "source": "Yahoo"
+   },
+   {
     "symbol": "CL=F",
     "label": "WTI 유가",
     "unit": "%",
     "available": true,
     "date": "2026-11-13",
-    "last": 88.91000366210938,
-    "change": 0.19,
-    "z": 0.1,
+    "last": 88.63999938964844,
+    "change": -0.11,
+    "z": 0,
     "sd": 2.8921201786070414,
     "source": "Yahoo"
    },
@@ -1123,13 +1107,25 @@
     "label": "VIX 변동성",
     "unit": "%",
     "available": true,
-    "date": "2026-11-12",
-    "last": 18.700000762939453,
-    "change": 6.92,
-    "z": 0.6,
-    "sd": 11.788047688421058,
+    "date": "2026-11-13",
+    "last": 18.3799991607666,
+    "change": -1.71,
+    "z": -0.1,
+    "sd": 11.782503388614433,
     "source": "Yahoo",
     "checked": true
+   },
+   {
+    "symbol": "^TNX",
+    "label": "미 10년 금리",
+    "unit": "bp",
+    "available": true,
+    "date": "2026-11-12",
+    "last": 5.103000164031982,
+    "change": 10.5,
+    "z": 2,
+    "sd": 5.332834964737695,
+    "source": "Yahoo"
    }
   ],
   "unusual": [
@@ -1160,8 +1156,8 @@
     "assess": {
      "level": "watch",
      "label": "관찰",
-     "score": 46,
-     "spike": 0.4,
+     "score": 43,
+     "spike": 0,
      "news": false,
      "reaction": {
       "symbol": "^TNX",
@@ -1200,8 +1196,8 @@
     "assess": {
      "level": "watch",
      "label": "관찰",
-     "score": 46,
-     "spike": 0.4,
+     "score": 43,
+     "spike": 0,
      "news": false,
      "reaction": {
       "symbol": "^TNX",
@@ -1217,47 +1213,137 @@
     }
    },
    {
-    "id": "htpvr5",
-    "title": "美연준, 2027년 FOMC 일정 공개…기준금리 결정 8번→7번",
-    "firstSeen": "2026-11-12T23:58:00.000Z",
-    "lastSeen": "2026-11-13T06:08:00.000Z",
+    "id": "1xvffo8",
+    "title": "호르무즈 해협서 가스운반선 기뢰 충돌 폭발",
+    "firstSeen": "2026-11-13T08:40:00.000Z",
+    "lastSeen": "2026-11-13T08:40:00.000Z",
+    "count": 1,
+    "sources": 1,
+    "topics": [
+     "disaster"
+    ],
+    "critical": [
+     "energy"
+    ],
+    "links": [
+     {
+      "title": "호르무즈 해협서 가스운반선 기뢰 충돌 폭발",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=885534",
+      "host": "gokorea.kr",
+      "at": "2026-11-13T08:40:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 28,
+     "spike": 0,
+     "news": false,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -0.35,
+      "unit": "%",
+      "z": -0.4
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 -0.35%"
+     ]
+    }
+   },
+   {
+    "id": "1tfympz",
+    "title": "코스피, 5500선 찍고 1% 하락",
+    "firstSeen": "2026-11-13T06:46:00.000Z",
+    "lastSeen": "2026-11-13T09:28:00.000Z",
     "count": 4,
     "sources": 4,
+    "topics": [
+     "rates",
+     "fx"
+    ],
+    "critical": [],
+    "links": [
+     {
+      "title": "코스피, 장중 5,500선 터치 후 하락 반전···5,290.53 마감",
+      "link": "https://www.globale.co.kr/news/articleView.html?idxno=41639",
+      "host": "globale.co.kr",
+      "at": "2026-11-13T09:28:00.000Z"
+     },
+     {
+      "title": "코스피, 장중 5,500선 돌파 후 하락 반전",
+      "link": "http://www.yonhapnewstv.co.kr/news/MYH20261113182325aHr",
+      "host": "yonhapnewstv.co.kr",
+      "at": "2026-11-13T09:24:00.000Z"
+     },
+     {
+      "title": "[26.11.13 증시 인싸잇] 코스피, 장중 5500선 돌파에도 하락 마감... 外人...",
+      "link": "https://www.mediawatch.kr/news/article.html?no=261735",
+      "host": "mediawatch.kr",
+      "at": "2026-11-13T09:02:00.000Z"
+     },
+     {
+      "title": "코스피, 5500선 찍고 1% 하락",
+      "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54712",
+      "host": "koreareport.co.kr",
+      "at": "2026-11-13T08:32:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 27,
+     "spike": 0,
+     "news": false,
+     "reaction": {
+      "symbol": "^TNX",
+      "label": "미 10년 금리",
+      "change": 10.5,
+      "unit": "bp",
+      "z": 2
+     },
+     "why": [
+      "미 10년 금리 +10.5bp(평소의 2배)"
+     ]
+    }
+   },
+   {
+    "id": "1m2xqso",
+    "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
+    "firstSeen": "2026-11-13T03:02:00.000Z",
+    "lastSeen": "2026-11-13T07:46:00.000Z",
+    "count": 3,
+    "sources": 3,
     "topics": [
      "rates"
     ],
     "critical": [],
     "links": [
      {
-      "title": "미 연준, 내년 금리 결정 회의 7번으로 줄여",
-      "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005961735",
-      "host": "mbnmoney.mbn.co.kr",
-      "at": "2026-11-13T06:08:00.000Z"
+      "title": "9월 통화량 17조 늘었지만…증가율 석 달째 둔화",
+      "link": "https://www.sidae.com/article/2026111313551647703",
+      "host": "sidae.com",
+      "at": "2026-11-13T07:46:00.000Z"
      },
      {
-      "title": "美 연준, 내년 금리 결정 8회→7회…10월엔 금리 표결 안 한다",
-      "link": "https://news.mtn.co.kr/article/2026111311083551632",
-      "host": "news.mtn.co.kr",
-      "at": "2026-11-13T02:12:00.000Z"
+      "title": "9월 시중 통화량 17조1000억원 증가…반도체 수출대금 유입에 11개월 연...",
+      "link": "https://www.greened.kr/news/articleView.html?idxno=354616",
+      "host": "greened.kr",
+      "at": "2026-11-13T04:56:00.000Z"
      },
      {
-      "title": "미 연준, 내년 기준금리 결정 8번→7번 축소…10월엔 정책 전략만 논의",
-      "link": "https://www.widedaily.com/news/articleView.html?idxno=303662",
-      "host": "widedaily.com",
-      "at": "2026-11-13T01:40:00.000Z"
-     },
-     {
-      "title": "美연준, 2027년 FOMC 일정 공개…기준금리 결정 8번→7번",
-      "link": "https://www.newsis.com/view/NISX20261113_0003866679",
-      "host": "newsis.com",
-      "at": "2026-11-13T01:15:00.000Z"
+      "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
+      "link": "https://www.newsway.co.kr/news/view?ud=2026111311003622029",
+      "host": "newsway.co.kr",
+      "at": "2026-11-13T03:02:00.000Z"
      }
     ],
     "assess": {
      "level": "watch",
      "label": "관찰",
-     "score": 30,
-     "spike": 0.4,
+     "score": 24,
+     "spike": 0,
      "news": false,
      "reaction": {
       "symbol": "^TNX",
@@ -1272,120 +1358,35 @@
     }
    },
    {
-    "id": "c86036",
-    "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-    "firstSeen": "2026-11-12T10:52:00.000Z",
-    "lastSeen": "2026-11-12T10:52:00.000Z",
-    "count": 1,
-    "sources": 1,
-    "topics": [
-     "war",
-     "politics"
-    ],
-    "critical": [
-     "energy"
-    ],
-    "links": [
-     {
-      "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-      "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
-      "host": "globale.co.kr",
-      "at": "2026-11-12T10:52:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 28,
-     "spike": 0,
-     "news": false,
-     "reaction": {
-      "symbol": "^VIX",
-      "label": "VIX 변동성",
-      "change": 6.92,
-      "unit": "%",
-      "z": 0.6
-     },
-     "why": [
-      "핵심 단어",
-      "VIX 변동성 +6.92%"
-     ]
-    }
-   },
-   {
-    "id": "1f5ys94",
-    "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-    "firstSeen": "2026-11-13T01:09:00.000Z",
-    "lastSeen": "2026-11-13T01:09:00.000Z",
-    "count": 1,
-    "sources": 1,
-    "topics": [
-     "war"
-    ],
-    "critical": [
-     "war"
-    ],
-    "links": [
-     {
-      "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-      "link": "https://www.newsis.com/view/NISX20261113_0003866554",
-      "host": "newsis.com",
-      "at": "2026-11-13T01:09:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 28,
-     "spike": 0,
-     "news": false,
-     "reaction": {
-      "symbol": "^VIX",
-      "label": "VIX 변동성",
-      "change": 6.92,
-      "unit": "%",
-      "z": 0.6
-     },
-     "why": [
-      "핵심 단어",
-      "VIX 변동성 +6.92%"
-     ]
-    }
-   },
-   {
-    "id": "171o4h2",
-    "title": "이찬일의 글로벌 경제 브리프 240",
-    "firstSeen": "2026-11-13T02:46:00.000Z",
-    "lastSeen": "2026-11-13T03:16:00.000Z",
+    "id": "c3wpk2",
+    "title": "'젠슨황 사퇴' 효과...코스피, 상승 후 결국 0.98% 하락 5,290 마감",
+    "firstSeen": "2026-11-13T07:16:00.000Z",
+    "lastSeen": "2026-11-13T10:04:00.000Z",
     "count": 2,
     "sources": 2,
     "topics": [
-     "war",
-     "politics",
-     "rates",
-     "fx",
-     "energy"
+     "rates"
     ],
     "critical": [],
     "links": [
      {
-      "title": "월드 뉴스 브리프 (기준일시: 2026년 11월 13일 금요일 10:00)",
-      "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=globalnewsfocus&wr_id=528",
-      "host": "ifs.or.kr",
-      "at": "2026-11-13T03:16:00.000Z"
+      "title": "상승 출발했던 코스피, 5,290선 하락 마감",
+      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712342&ref=A",
+      "host": "news.kbs.co.kr",
+      "at": "2026-11-13T10:04:00.000Z"
      },
      {
-      "title": "이찬일의 글로벌 경제 브리프 240",
-      "link": "https://www.woodkorea.co.kr/news/articleView.html?idxno=92554",
-      "host": "woodkorea.co.kr",
-      "at": "2026-11-13T02:46:00.000Z"
+      "title": "'젠슨황 사퇴' 효과...코스피, 상승 후 결국 0.98% 하락 5,290 마감",
+      "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82460",
+      "host": "newsfc.co.kr",
+      "at": "2026-11-13T07:16:00.000Z"
      }
     ],
     "assess": {
      "level": "watch",
      "label": "관찰",
-     "score": 24,
-     "spike": 0.4,
+     "score": 21,
+     "spike": 0,
      "news": false,
      "reaction": {
       "symbol": "^TNX",
@@ -1401,7 +1402,7 @@
    }
   ],
   "alerts": [],
-  "text": "[국내 장 마감 브리핑] 2026-11-13 16시\n코스피 -0.98%, 코스닥 +0.45%, 원/달러 -0.08% · 주요 이슈: 금리·통화, 전쟁·지정학, 선거·정치\n· 미 10년 금리 +10.5bp — 평소 하루 움직임의 2배\n1. 美 '빅스텝' 거론에 한미 금리차 확대 우려…소비 부진에 한은 '딜레마... (1곳 보도)\n   https://www.news1.kr/economy/trend/6352332\n2. \"물가·고용 모두 뜨겁다\"...美 연준 '빅스텝' 가능성 부상 (1곳 보도)\n   https://www.ntoday.co.kr/news/articleView.html?idxno=130842\n3. 美연준, 2027년 FOMC 일정 공개…기준금리 결정 8번→7번 (4곳 보도)\n   http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005961735\n4. 2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치 (1곳 보도)\n   https://www.globale.co.kr/news/articleView.html?idxno=41611\n5. 푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수 (1곳 보도)\n   https://www.newsis.com/view/NISX20261113_0003866554\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+  "text": "[미국 장 브리핑] 2026-11-13 22시\nS&P 500 -0.35%(11.12 기준), 나스닥 -0.39%(11.12 기준), 원/달러 +0.08% · 주요 이슈: 금리·통화, 재난·사고, 환율·달러\n· 미 10년 금리 +10.5bp — 평소 하루 움직임의 2배\n1. 美 '빅스텝' 거론에 한미 금리차 확대 우려…소비 부진에 한은 '딜레마... (1곳 보도)\n   https://www.news1.kr/economy/trend/6352332\n2. \"물가·고용 모두 뜨겁다\"...美 연준 '빅스텝' 가능성 부상 (1곳 보도)\n   https://www.ntoday.co.kr/news/articleView.html?idxno=130842\n3. 호르무즈 해협서 가스운반선 기뢰 충돌 폭발 (1곳 보도)\n   https://www.gokorea.kr/news/articleView.html?idxno=885534\n4. 코스피, 5500선 찍고 1% 하락 (4곳 보도)\n   https://www.globale.co.kr/news/articleView.html?idxno=41639\n5. 9월 시중 통화량 17조1000억원 늘어…증가세 둔화 (3곳 보도)\n   https://www.sidae.com/article/2026111313551647703\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
   "delivered": false
  },
  "problems": []
