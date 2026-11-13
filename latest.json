@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T09:27:51.420Z",
+ "updatedAt": "2026-11-13T09:47:18.722Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,7 +62,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1335.8299560546875,
+   "last": 1335.81005859375,
    "change": -0.03,
    "z": -0.1,
    "sd": 0.6327981458522444,
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.6500015258789,
-   "change": -0.1,
-   "z": 0,
+   "last": 88.5999984741211,
+   "change": -0.16,
+   "z": -0.1,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3903.199951171875,
-   "change": 0.46,
-   "z": 0.3,
+   "last": 3904.199951171875,
+   "change": 0.49,
+   "z": 0.4,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 18.770000457763672,
-   "change": 0.37,
+   "last": 18.649999618530273,
+   "change": -0.27,
    "z": 0,
    "sd": 11.782503388614433,
    "source": "Yahoo",
@@ -119,8 +119,8 @@
   }
  ],
  "spikes": {
-  "war": 0.1,
-  "politics": -0.6,
+  "war": -0.1,
+  "politics": -1,
   "rates": 1,
   "trade": 0.6,
   "fx": 0.5,
@@ -132,12 +132,12 @@
  },
  "rates": {
   "war": {
-   "rate": 1.9,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.7,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 5,
+   "rate": 4.9,
    "saturated": 2,
    "queries": 3
   },
@@ -264,9 +264,66 @@
    }
   },
   {
-   "id": "ige1rg",
-   "title": "美 금리·유가 급등에 달러·원 환율 6.0원 올라 1336.7원(종합)",
-   "firstSeen": "2026-11-13T06:42:00.000Z",
+   "id": "1tfympz",
+   "title": "코스피, 장중 5500선 돌파후 5290선 후퇴...외국인 5500억 순매도",
+   "firstSeen": "2026-11-13T06:46:00.000Z",
+   "lastSeen": "2026-11-13T09:40:00.000Z",
+   "count": 14,
+   "sources": 14,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[머니워치] 코스피, 외국인 매도에 하락 마감…17일 엔비디아 실적 발표...",
+     "link": "http://www.newswatch.kr/news/articleView.html?idxno=81823",
+     "host": "newswatch.kr",
+     "at": "2026-11-13T09:40:00.000Z"
+    },
+    {
+     "title": "코스피, 장중 5,500선 터치 후 하락 반전···5,290.53 마감",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41639",
+     "host": "globale.co.kr",
+     "at": "2026-11-13T09:28:00.000Z"
+    },
+    {
+     "title": "코스피, 장중 5,500선 돌파 후 하락 반전",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261113182325aHr",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-13T09:24:00.000Z"
+    },
+    {
+     "title": "젠슨 황 쇼크에 출렁…코스피 5300선 붕괴",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346348?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-13T09:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "17edmxt",
+   "title": "[환율마감] 원·달러 5거래일만 반등, 유가·미국채 금리 급등",
+   "firstSeen": "2026-11-13T07:08:00.000Z",
    "lastSeen": "2026-11-13T08:28:00.000Z",
    "count": 9,
    "sources": 9,
@@ -413,6 +470,51 @@
    }
   },
   {
+   "id": "17edmxt",
+   "title": "[채권마감] 10년 금리 10일만 4%대 재진입, 유가·미 금리 급등",
+   "firstSeen": "2026-11-13T07:08:00.000Z",
+   "lastSeen": "2026-11-13T09:42:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[채권-마감] 美 금리 급등 속 코스피·外人 영향권…국고 10년 4% 넘겨",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444730",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-13T09:42:00.000Z"
+    },
+    {
+     "title": "[채권마감] 10년 금리 10일만 4%대 재진입, 유가·미 금리 급등",
+     "link": "https://www.etoday.co.kr/news/view/2648070",
+     "host": "etoday.co.kr",
+     "at": "2026-11-13T08:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 34,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
    "id": "1m2xqso",
    "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
    "firstSeen": "2026-11-13T03:02:00.000Z",
@@ -520,10 +622,10 @@
    }
   },
   {
-   "id": "16tnhax",
-   "title": "[마켓펄스] 증시 반등 못 지킨 '빈손 간담회'...외국인 매도에 코스피 하...",
-   "firstSeen": "2026-11-13T07:04:00.000Z",
-   "lastSeen": "2026-11-13T07:50:00.000Z",
+   "id": "1eknkrm",
+   "title": "‘젠슨 황 퇴진’에도 3% 넘게 오르던 코스피, 외인 ‘팔자’에 하락 마...",
+   "firstSeen": "2026-11-13T05:01:00.000Z",
+   "lastSeen": "2026-11-13T07:46:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
@@ -534,10 +636,10 @@
    "critical": [],
    "links": [
     {
-     "title": "[마켓펄스] 증시 반등 못 지킨 '빈손 간담회'...외국인 매도에 코스피 하...",
-     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130859",
-     "host": "ntoday.co.kr",
-     "at": "2026-11-13T07:50:00.000Z"
+     "title": "‘젠슨 황 퇴진’에도 3% 넘게 오르던 코스피, 외인 ‘팔자’에 하락 마...",
+     "link": "https://www.hani.co.kr/arti/economy/economy_general/1287255.html",
+     "host": "hani.co.kr",
+     "at": "2026-11-13T07:46:00.000Z"
     }
    ],
    "assess": {
@@ -559,10 +661,10 @@
    }
   },
   {
-   "id": "17edmxt",
-   "title": "[채권마감] 10년 금리 10일만 4%대 재진입, 유가·미 금리 급등",
-   "firstSeen": "2026-11-13T07:08:00.000Z",
-   "lastSeen": "2026-11-13T08:16:00.000Z",
+   "id": "16tnhax",
+   "title": "[마켓펄스] 증시 반등 못 지킨 '빈손 간담회'...외국인 매도에 코스피 하...",
+   "firstSeen": "2026-11-13T07:04:00.000Z",
+   "lastSeen": "2026-11-13T07:50:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
@@ -573,10 +675,10 @@
    "critical": [],
    "links": [
     {
-     "title": "[채권마감] 10년 금리 10일만 4%대 재진입, 유가·미 금리 급등",
-     "link": "https://www.etoday.co.kr/news/view/2648070",
-     "host": "etoday.co.kr",
-     "at": "2026-11-13T08:16:00.000Z"
+     "title": "[마켓펄스] 증시 반등 못 지킨 '빈손 간담회'...외국인 매도에 코스피 하...",
+     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130859",
+     "host": "ntoday.co.kr",
+     "at": "2026-11-13T07:50:00.000Z"
     }
    ],
    "assess": {
@@ -665,8 +767,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
+    "score": 28,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -705,19 +807,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
+    "score": 28,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.46,
+     "change": 0.49,
      "unit": "%",
-     "z": 0.3
+     "z": 0.4
     },
     "why": [
      "핵심 단어",
-     "금 +0.46%"
+     "금 +0.49%"
     ]
    }
   },
@@ -758,80 +860,6 @@
     "why": [
      "핵심 단어",
      "S&P 500 -0.35%"
-    ]
-   }
-  },
-  {
-   "id": "kb9z1s",
-   "title": "연말 대출 막힐 걱정 줄었지만…이번엔 이자가 부담",
-   "firstSeen": "2026-11-12T21:02:00.000Z",
-   "lastSeen": "2026-11-12T21:02:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "연말 대출 막힐 걱정 줄었지만…이번엔 이자가 부담",
-     "link": "https://www.kukinews.com/article/view/kuk202611120154",
-     "host": "kukinews.com",
-     "at": "2026-11-12T21:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 26,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "2om8yo",
-   "title": "연 4% 예금의 귀환…정기예금 한 달 새 24조 몰렸다",
-   "firstSeen": "2026-11-12T22:02:00.000Z",
-   "lastSeen": "2026-11-12T22:02:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "연 4% 예금의 귀환…정기예금 한 달 새 24조 몰렸다",
-     "link": "http://www.segyebiz.com/newsView/20261113500613?OutUrl=naver",
-     "host": "segyebiz.com",
-     "at": "2026-11-12T22:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 26,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
     ]
    }
   }
