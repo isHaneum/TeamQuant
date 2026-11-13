@@ -51,7 +51,7 @@ test('종목 가설: 등록하면 기본 계획에 한도만큼 얹히고 기본
   const r = await pl.autoRun(); assert.ok(r.ran && /계획 변경/.test(r.reason), JSON.stringify(r));
   const st2 = await pl.status(); const hy = st2.hypotheses[0];
   assert.ok(b.state.placed.some(p => p.code === '000660' && p.side === 'BUY'));
-  assert.ok(hy.entryPrice > 0, '진입가는 체결 평균'); assert.ok(Number.isFinite(hy.indexPct), '같은 기간 지수');
+  assert.ok(hy.entryPrice > 0, '진입가는 체결 평균'); assert.ok(hy.indexPct === null || Number.isFinite(hy.indexPct), '같은 기간 지수(진입일 봉이 아직 없으면 비교 전 = null · 결정 31)');
   // 닫기 전에는 삭제 불가, 깨짐 표시 뒤 계획에서 빠진다
   assert.throws(() => pl.hypothesis('remove', { id: h.id }), /먼저/);
   pl.hypothesis('break', { id: h.id, note: '매출 성장 둔화' });
