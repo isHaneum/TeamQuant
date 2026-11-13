@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T02:16:08.626Z",
+ "updatedAt": "2026-11-13T02:27:40.956Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 5423.18,
-   "change": 1.51,
-   "z": 0.5,
+   "last": 5410.7,
+   "change": 1.27,
+   "z": 0.4,
    "sd": 2.9445596810530357,
    "source": "네이버 현재가",
    "live": true,
@@ -24,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 720.08,
-   "change": 3.38,
-   "z": 1.2,
+   "last": 717.89,
+   "change": 3.07,
+   "z": 1.1,
    "sd": 2.712600847193978,
    "source": "네이버 현재가",
    "live": true,
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1331.9100341796875,
-   "change": -0.33,
-   "z": -0.5,
+   "last": 1333.050048828125,
+   "change": -0.24,
+   "z": -0.4,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
   },
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.06999969482422,
-   "change": -0.76,
-   "z": -0.3,
+   "last": 88.31999969482422,
+   "change": -0.47,
+   "z": -0.2,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
   },
@@ -121,11 +121,11 @@
   }
  ],
  "spikes": {
-  "war": 1.3,
+  "war": 1.6,
   "politics": 0.3,
   "rates": 1.5,
   "trade": 1,
-  "fx": -0.1,
+  "fx": 0.4,
   "energy": 1.7,
   "market": 0.5,
   "credit": 0.1,
@@ -134,7 +134,7 @@
  },
  "rates": {
   "war": {
-   "rate": 3.6,
+   "rate": 3.9,
    "saturated": 0,
    "queries": 3
   },
@@ -154,7 +154,7 @@
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
@@ -268,6 +268,64 @@
    }
   },
   {
+   "id": "r8p6ds",
+   "title": "엔비디아발 충격에 유가 급등까지…뉴욕증시 3대 지수 일제히 하락",
+   "firstSeen": "2026-11-12T22:32:00.000Z",
+   "lastSeen": "2026-11-13T02:26:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "rates",
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'젠슨 황 퇴진' 엔비디아발 기술주 충격에 유가 변수까지...뉴욕증시 일...",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=326522",
+     "host": "thepublic.kr",
+     "at": "2026-11-13T02:26:00.000Z"
+    },
+    {
+     "title": "환율·유가 하락에 10월 수입물가 1.8%↓···수출물가는 D램 강세에 상...",
+     "link": "https://www.todaykorea.co.kr/news/articleView.html?idxno=408579",
+     "host": "todaykorea.co.kr",
+     "at": "2026-11-13T01:40:00.000Z"
+    },
+    {
+     "title": "10월 수입물가 1.8% 하락 전환…환율·유가 동반 하락 영향",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748376",
+     "host": "polinews.co.kr",
+     "at": "2026-11-13T01:30:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 CEO 사임·유가 급등에 일제히 하락…나스닥 0.39%↓",
+     "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=95152",
+     "host": "mediafine.co.kr",
+     "at": "2026-11-13T01:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
    "id": "ewgphy",
    "title": "변동금리 고공행진속 가계대출 증가세 확대",
    "firstSeen": "2026-11-12T04:06:00.000Z",
@@ -323,48 +381,49 @@
    }
   },
   {
-   "id": "1j8zxna",
-   "title": "뉴욕증시, 젠슨 황 사임에 하락…엔비디아 4.34%↓",
-   "firstSeen": "2026-11-12T21:22:00.000Z",
-   "lastSeen": "2026-11-13T01:14:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "1hu4bex",
+   "title": "'엔비디아 악재'에도 삼전닉스 강세…코스피 2% 상승[개장시황]",
+   "firstSeen": "2026-11-12T23:02:00.000Z",
+   "lastSeen": "2026-11-13T01:57:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "rates",
+    "fx",
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "뉴욕증시, 엔비디아 CEO 사임·유가 급등에 일제히 하락…나스닥 0.39%↓",
-     "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=95152",
-     "host": "mediafine.co.kr",
-     "at": "2026-11-13T01:14:00.000Z"
+     "title": "'젠슨 황 퇴임'에도 코스피, 장중 2%대 상승…외국인 '사자'",
+     "link": "https://www.yna.co.kr/view/AKR20261113071900008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-13T01:57:00.000Z"
     },
     {
-     "title": "[뉴욕증시 마감] 엔비디아 4%↓·국채금리 급등…3대 지수 하락",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94025",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-12T22:50:00.000Z"
+     "title": "`젠슨황 퇴임`에도 코스피·코스닥 오전 장 2~3％대 상승세",
+     "link": "http://tbs.seoul.kr/news/newsView.do?typ_800=1&idx_800=3538751&seq_800=20531652",
+     "host": "tbs.seoul.kr",
+     "at": "2026-11-13T01:54:00.000Z"
     },
     {
-     "title": "젠슨 황 사임 충격에 뉴욕증시 동반 하락…엔비디아 4% 급락[투자360]",
-     "link": "https://biz.heraldcorp.com/article/10935716?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-12T22:32:00.000Z"
+     "title": "‘젠슨황 퇴임’에도 외국인 ‘사자’ 행렬에 코스피 2%대·코스닥 3%대...",
+     "link": "https://www.khan.co.kr/article/202611131022001",
+     "host": "khan.co.kr",
+     "at": "2026-11-13T01:22:00.000Z"
     },
     {
-     "title": "엔비디아발 충격에 유가 급등까지…뉴욕증시 3대 지수 일제히 하락",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026111307220944626",
-     "host": "newsway.co.kr",
-     "at": "2026-11-12T22:32:00.000Z"
+     "title": "'젠슨황 사임'에도 코스피 강세…5,400선 회복",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261113101840dDX",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-13T01:19:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 44,
+    "score": 45,
     "spike": 1.7,
     "news": false,
     "reaction": {
@@ -380,12 +439,93 @@
    }
   },
   {
+   "id": "c86036",
+   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
+   "firstSeen": "2026-11-12T10:52:00.000Z",
+   "lastSeen": "2026-11-12T10:52:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
+     "host": "globale.co.kr",
+     "at": "2026-11-12T10:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +6.92%"
+    ]
+   }
+  },
+  {
+   "id": "1edquu1",
+   "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
+   "firstSeen": "2026-11-12T14:39:00.000Z",
+   "lastSeen": "2026-11-13T01:09:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
+     "link": "https://www.newsis.com/view/NISX20261113_0003866554",
+     "host": "newsis.com",
+     "at": "2026-11-13T01:09:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +6.92%"
+    ]
+   }
+  },
+  {
    "id": "rn2ohn",
    "title": "美 연준, 내년 기준금리 결정 8번서 7번으로…10월엔 전략만 논의",
    "firstSeen": "2026-11-12T20:34:00.000Z",
    "lastSeen": "2026-11-13T02:12:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "count": 4,
+   "sources": 4,
    "topics": [
     "rates"
    ],
@@ -404,22 +544,22 @@
      "at": "2026-11-13T01:40:00.000Z"
     },
     {
-     "title": "美연준, 2027년 FOMC 일정 공개…기준금리 결정 8번→7번",
-     "link": "https://www.newsis.com/view/NISX20261113_0003866679",
-     "host": "newsis.com",
-     "at": "2026-11-13T01:15:00.000Z"
-    },
-    {
      "title": "美연준, 내년 ‘금리 결정’ FOMC 회의 7번만 개최…10월엔 전략 논의",
      "link": "https://www.kukinews.com/article/view/kuk202611130016",
      "host": "kukinews.com",
      "at": "2026-11-12T23:46:00.000Z"
+    },
+    {
+     "title": "美 연준, 내년 기준금리 결정 8번서 7번으로…10월엔 전략만 논의",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/13/IE6QLNXBHBCHHON42YRUZHASXQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-12T23:35:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
+    "score": 39,
     "spike": 1.5,
     "news": false,
     "reaction": {
@@ -487,87 +627,6 @@
    }
   },
   {
-   "id": "c86036",
-   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-   "firstSeen": "2026-11-12T10:52:00.000Z",
-   "lastSeen": "2026-11-12T10:52:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41611",
-     "host": "globale.co.kr",
-     "at": "2026-11-12T10:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 38,
-    "spike": 1.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 6.92,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +6.92%"
-    ]
-   }
-  },
-  {
-   "id": "1edquu1",
-   "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-   "firstSeen": "2026-11-12T14:39:00.000Z",
-   "lastSeen": "2026-11-13T01:09:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "푸틴 \"우크라 유럽군 주둔은 전면전 의미\"…강경론 고수",
-     "link": "https://www.newsis.com/view/NISX20261113_0003866554",
-     "host": "newsis.com",
-     "at": "2026-11-13T01:09:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 38,
-    "spike": 1.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 6.92,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +6.92%"
-    ]
-   }
-  },
-  {
    "id": "168l4dl",
    "title": "[원자재 시황] 금·비트코인 3%대 급락",
    "firstSeen": "2026-11-12T22:30:00.000Z",
@@ -613,6 +672,64 @@
    }
   },
   {
+   "id": "nhm6xc",
+   "title": "트럼프 \"이란과 합의 필요 없다\"…밴스에 협상 대신 민주당 수사 지시",
+   "firstSeen": "2026-11-12T16:45:00.000Z",
+   "lastSeen": "2026-11-13T02:20:00.000Z",
+   "count": 10,
+   "sources": 10,
+   "topics": [
+    "war",
+    "politics",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프 \"이란과 합의 필요 없다\"…밴스 주도 협상에 제동",
+     "link": "https://www.hidomin.com/news/articleView.html?idxno=729227",
+     "host": "hidomin.com",
+     "at": "2026-11-13T02:20:00.000Z"
+    },
+    {
+     "title": "트럼프 \"이란과 합의 필요 없다\"...11월 -20% 브렌트유, 되돌림 오나",
+     "link": "http://coinreaders.com/269903",
+     "host": "coinreaders.com",
+     "at": "2026-11-13T02:16:00.000Z"
+    },
+    {
+     "title": "트럼프 \"이란과 합의 필요 없다\"…국제유가 3% 급등",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1320349&inflow=N",
+     "host": "newstomato.com",
+     "at": "2026-11-13T01:46:00.000Z"
+    },
+    {
+     "title": "트럼프 “이란과 협상 불필요”…협상 주도한 밴스에게 국내 업무 지시",
+     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000559767",
+     "host": "ichannela.com",
+     "at": "2026-11-13T01:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 34,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "VIX 변동성 +6.92%"
+    ]
+   }
+  },
+  {
    "id": "1d1tq28",
    "title": "19개월 만의 최고 강달러 속… 외국인 매수·반도체 수출 호조에 환율 하...",
    "firstSeen": "2026-11-12T07:06:00.000Z",
@@ -644,8 +761,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 1.5,
+    "score": 34,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -660,60 +777,45 @@
    }
   },
   {
-   "id": "nhm6xc",
-   "title": "트럼프 \"이란과 합의 필요 없다\"…밴스에 협상 대신 민주당 수사 지시",
-   "firstSeen": "2026-11-12T16:45:00.000Z",
-   "lastSeen": "2026-11-13T01:46:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "id": "htpvr5",
+   "title": "연준, 2027년 FOMC 일정 공개…12월 회의 11월로 당겨",
+   "firstSeen": "2026-11-12T23:58:00.000Z",
+   "lastSeen": "2026-11-13T01:15:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "war",
-    "politics",
-    "energy",
-    "market"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "트럼프 \"이란과 합의 필요 없다\"…국제유가 3% 급등",
-     "link": "http://www.newstomato.com/ReadNews.aspx?no=1320349&inflow=N",
-     "host": "newstomato.com",
-     "at": "2026-11-13T01:46:00.000Z"
+     "title": "美연준, 2027년 FOMC 일정 공개…기준금리 결정 8번→7번",
+     "link": "https://www.newsis.com/view/NISX20261113_0003866679",
+     "host": "newsis.com",
+     "at": "2026-11-13T01:15:00.000Z"
     },
     {
-     "title": "트럼프 “이란과 협상 불필요”…협상 주도한 밴스에게 국내 업무 지시",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000559767",
-     "host": "ichannela.com",
-     "at": "2026-11-13T01:06:00.000Z"
-    },
-    {
-     "title": "\"민주당 부패 조사 집중\" 트럼프, 밴스의 이란협상 제동…유가 급등",
-     "link": "https://www.mt.co.kr/world/2026/11/13/2026111308263646165",
-     "host": "mt.co.kr",
-     "at": "2026-11-13T00:06:00.000Z"
-    },
-    {
-     "title": "[국제금융 브리핑] 트럼프 “이란 합의 불필요”·젠슨 황 사임...브렌트...",
-     "link": "https://www.tokenpost.kr/news/economy/437451",
-     "host": "tokenpost.kr",
-     "at": "2026-11-13T00:02:00.000Z"
+     "title": "연준, 2027년 FOMC 일정 공개…12월 회의 11월로 당겨",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=563541",
+     "host": "joongangenews.com",
+     "at": "2026-11-12T23:58:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 32,
-    "spike": 1.7,
+    "score": 33,
+    "spike": 1.5,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 6.92,
-     "unit": "%",
-     "z": 0.6
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
     },
     "why": [
-     "VIX 변동성 +6.92%"
+     "미 10년 금리 +10.5bp(평소의 2배)"
     ]
    }
   },
@@ -783,86 +885,6 @@
     "label": "관찰",
     "score": 32,
     "spike": 1.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "wc1dpx",
-   "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
-   "firstSeen": "2026-11-12T06:42:00.000Z",
-   "lastSeen": "2026-11-12T23:12:00.000Z",
-   "count": 2,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[머니 확률표] 연준 1월 연속 인상 확률 62%…하루 새 10%p 상승",
-     "link": "http://coinreaders.com/269830",
-     "host": "coinreaders.com",
-     "at": "2026-11-12T23:12:00.000Z"
-    },
-    {
-     "title": "[머니 확률표] 연준 12월 0.25%p 인상 확률 86%…하루 새 1%p 올랐다",
-     "link": "http://coinreaders.com/269616",
-     "host": "coinreaders.com",
-     "at": "2026-11-12T06:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 1.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1qlgojz",
-   "title": "이미 긴축적이라고?…한은 FCI 판단에 기준금리 경로 달라질까",
-   "firstSeen": "2026-11-12T02:28:00.000Z",
-   "lastSeen": "2026-11-12T02:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "이미 긴축적이라고?…한은 FCI 판단에 기준금리 경로 달라질까",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444405",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-12T02:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
