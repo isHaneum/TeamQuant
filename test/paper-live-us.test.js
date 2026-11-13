@@ -44,7 +44,7 @@ test('시장별 장 시간: 한국 장중에는 국내만, 미국 장중에는 �
   const r2 = await pl.run({ rules, plan });
   const nv2 = r2.items.find(i => i.symbol === 'NVDA'), kr2 = r2.items.find(i => i.symbol === '005930');
   assert.ok(nv2.ok, JSON.stringify(nv2.blocks)); assert.ok(!kr2.ok);
-  assert.ok(r2.fx > 1000 && nv2.fx === r2.fx); assert.equal(nv2.currency, 'USD'); assert.equal(nv2.price, roundTick(180, 'BUY', 'US'));
+  assert.ok(r2.fx > 1000 && nv2.fx === r2.fx); assert.equal(nv2.currency, 'USD'); assert.equal(nv2.price, 180.9, '현재가 180 +0.5% = 바로 체결되는 지정가(결정 32)');
   assert.ok(Math.abs(nv2.amountKrw - nv2.qty * nv2.price * r2.fx) < 1, '원화 환산 금액');
   assert.ok(b2.state.placed.some(p => p.code === 'NVDA' && p.exchange === 'NASD'));
   const sentUs = r2.sent.find(s => s.symbol === 'NVDA'); assert.equal(sentUs.status, 'sent'); assert.equal(sentUs.currency, 'USD');

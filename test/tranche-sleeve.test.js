@@ -52,7 +52,7 @@ test('뉴스·가격 급락: 회사 이름 + 위험 낱말만 · 주의까지만
   const got = [], engine = { setIssue: e => { got.push(e); return { applied: true }; } };
   const w = createIssueWatch({ engine, gapMs: 0, symbols: () => [{ symbol: 'NVDA', market: 'US', name: '엔비디아 (NVDA)' }, { symbol: '005930', market: 'KR', name: '삼성전자' }], fetchKR: async () => [], fetchUS: async () => [],
     priceDrop: async s => s.symbol === '005930' ? { date: '2026-11-16', dropPp: -9.4 } : { date: '2026-11-16', dropPp: -2 },
-    news: async s => s.symbol === 'NVDA' ? [{ title: '젠슨 황 "수요 강하다"', date: '2026-11-16' }, { title: '미 상무부, 엔비디아 대중 수출 통제 강화', date: '2026-11-16', link: 'n1' }] : [] });
+    news: async s => s.symbol === 'NVDA' ? [{ title: '젠슨 황 "수요 강하다"', date: '2026-11-16' }, { title: '미 상무부, 엔비디아 대중 수출 통제 강화', date: '2026-11-16', link: 'https://a.example/1' }, { title: '엔비디아 수출 통제 대상 확대', date: '2026-11-16', link: 'https://b.example/2' }] : [{ title: '삼성전자 노조 파업 예고', date: '2026-11-16', link: 'https://a.example/3' }] }); // 삼성전자 파업 기사는 1곳뿐 → 주의 아님(결정 32)
   const r = await w.scan(); assert.deepEqual(got.map(e => [e.symbol, e.level, e.source]), [['NVDA', 'caution', '뉴스'], ['005930', 'caution', '시세']]); assert.match(got[1].reason, /지수 대비 -9\.4%p/); assert.equal(r.events.length, 2);
 });
 

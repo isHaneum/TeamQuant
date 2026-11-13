@@ -56,6 +56,19 @@ test('뉴스: 위험 낱말의 주어가 이 회사일 때만 — 2026-11-13 실
 test('감시: 걸려 있는 뉴스 주의의 제목이 지금 기준으로 다른 회사 기사면 푼다 · 맞는 것은 둔다', async () => {
   const issues = { '005930': { level: 'caution', source: '뉴스', date: '2026-11-13', reason: '뉴스(경영진): 젠슨 황 사임에도 코스피 1.89%·코스닥 3.47% 급등…삼성전자·SK하이닉...' }, NVDA: { level: 'caution', source: '뉴스', date: '2026-11-13', reason: "뉴스(경영진): 젠슨 황 해임에 집단소송 '러시'... 엔비디아 보유 '서학개미'도 배상받..." } }, cleared = [];
   const engine = { issues: () => Object.entries(issues).map(([symbol, v]) => ({ symbol, ...v })), clearIssue: (s, why) => { cleared.push([s, why]); delete issues[s]; return { cleared: true }; }, setIssue: () => ({ applied: false }) };
-  const w = createIssueWatch({ engine, symbols: () => [{ symbol: '005930', name: '삼성전자', market: 'KR' }, { symbol: '000660', name: 'SK하이닉스', market: 'KR' }, { symbol: 'NVDA', name: '엔비디아 (NVDA)', market: 'US' }], fetchKR: async () => [], fetchUS: async () => [], news: async () => [], gapMs: 0 });
+  const w = createIssueWatch({ engine, symbols: () => [{ symbol: '005930', name: '삼성전자', market: 'KR' }, { symbol: '000660', name: 'SK하이닉스', market: 'KR' }, { symbol: 'NVDA', name: '엔비디아 (NVDA)', market: 'US' }], fetchKR: async () => [], fetchUS: async () => [], news: async s => s.symbol === 'NVDA' ? [{ title: '젠슨 황, 엔비디아 CEO 사임', link: 'https://a.example/1', date: '2026-11-13' }, { title: '엔비디아 젠슨 황 사임 후폭풍', link: 'https://b.example/2', date: '2026-11-13' }] : [], gapMs: 0 });
   const out = await w.scan(); assert.deepEqual(cleared.map(c => c[0]), ['005930']); assert.match(cleared[0][1], /다른 회사 기사/); assert.ok(issues.NVDA); assert.ok(out.events.some(e => e.symbol === '005930' && e.level === 'cleared'));
+});
+
+import { marketableLimit } from '../lib/kis-orders.js';
+test('지정가: 매수는 현재가 +0.5% 올림, 매도는 −0.5% 내림(호가 단위) · 허용 폭 3% 안', () => {
+  assert.equal(marketableLimit(611.86, 'SELL', 'US'), 608.8); assert.equal(marketableLimit(180, 'BUY', 'US'), 180.9);
+  assert.equal(marketableLimit(1_279_000, 'BUY'), 1_286_000); assert.equal(marketableLimit(213_000, 'SELL'), 211_500); assert.equal(marketableLimit(25_090, 'BUY'), 25_250);
+  for (const p of [1_950, 4_990, 19_990, 49_950, 199_900, 499_000, 1_279_000]) for (const s of ['BUY', 'SELL']) { const v = marketableLimit(p, s); assert.ok(Math.abs(v / p - 1) < 0.03, `${p} ${s} ${v}`); assert.ok(s === 'BUY' ? v >= p : v <= p); }
+});
+test('뉴스 주의: 기준 전에 보도 1곳으로 걸린 주의는 지금 2곳 이상 보도가 없으면 푼다', async () => {
+  const issues = { '005930': { level: 'caution', source: '뉴스', date: '2026-11-13', reason: '뉴스(보안 사고): 736억 들인 삼성전자 기술 유출 전 부장... 징역 6년 4개월 확정' } }, cleared = [];
+  const engine = { issues: () => Object.entries(issues).map(([symbol, v]) => ({ symbol, ...v })), clearIssue: (s, why) => { cleared.push([s, why]); delete issues[s]; return { cleared: true }; }, setIssue: () => ({ applied: false }) };
+  const w = createIssueWatch({ engine, symbols: () => [{ symbol: '005930', name: '삼성전자', market: 'KR' }], fetchKR: async () => [], fetchUS: async () => [], news: async () => [{ title: '736억 들인 삼성전자 기술 유출 전 부장... 징역 6년 4개월 확정', link: 'https://a.example/1' }], gapMs: 0 });
+  await w.scan(); assert.equal(cleared.length, 1); assert.match(cleared[0][1], /보도 1곳/);
 });
