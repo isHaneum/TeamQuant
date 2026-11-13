@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T13:12:50.901Z",
+ "updatedAt": "2026-11-13T13:27:13.417Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1337.780029296875,
-   "change": 0.11,
-   "z": 0.2,
+   "last": 1337.1800537109375,
+   "change": 0.07,
+   "z": 0.1,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.62999725341797,
-   "change": -0.12,
-   "z": 0,
+   "last": 88.56999969482422,
+   "change": -0.19,
+   "z": -0.1,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3893.5,
-   "change": 0.21,
-   "z": 0.2,
+   "last": 3887.60009765625,
+   "change": 0.06,
+   "z": 0,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 18.3799991607666,
-   "change": -1.71,
-   "z": -0.1,
+   "last": 18.25,
+   "change": -2.41,
+   "z": -0.2,
    "sd": 11.782503388614433,
    "source": "Yahoo",
    "checked": true
@@ -124,8 +124,8 @@
   "rates": -0.6,
   "trade": 0.2,
   "fx": -0.4,
-  "energy": -0.3,
-  "market": -1.7,
+  "energy": 0,
+  "market": -1.5,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.7
@@ -142,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.9,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.3,
+   "rate": 3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.2,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -260,46 +260,6 @@
     "why": [
      "핵심 단어",
      "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1xvffo8",
-   "title": "호르무즈 해협서 가스운반선 기뢰 충돌 폭발",
-   "firstSeen": "2026-11-13T08:40:00.000Z",
-   "lastSeen": "2026-11-13T08:40:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "disaster"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "호르무즈 해협서 가스운반선 기뢰 충돌 폭발",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=885534",
-     "host": "gokorea.kr",
-     "at": "2026-11-13T08:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -0.35%"
     ]
    }
   },
@@ -780,6 +740,43 @@
      "title": "미국 상업용 부동산 시장, AI·공급망 재편에 자산별 수요 차별화",
      "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=110&CONTENTS_NO=1&bbsGbn=245&bbsSn=245&pNttSn=245173",
      "host": "dream.kotra.or.kr",
+     "at": "2026-11-13T06:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "tc57wv",
+   "title": "뉴욕 연은 총재 \"인플레 2% 복귀 위해 추가 금리인상 필요\"",
+   "firstSeen": "2026-11-13T06:06:00.000Z",
+   "lastSeen": "2026-11-13T06:06:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕 연은 총재 \"인플레 2% 복귀 위해 추가 금리인상 필요\"",
+     "link": "https://www.news1.kr/world/international-economy/6353404",
+     "host": "news1.kr",
      "at": "2026-11-13T06:06:00.000Z"
     }
    ],
