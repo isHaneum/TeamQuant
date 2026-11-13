@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T03:29:35.531Z",
+ "updatedAt": "2026-11-13T03:47:40.307Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 5356.01,
-   "change": 0.25,
-   "z": 0.1,
+   "last": 5331.6,
+   "change": -0.21,
+   "z": -0.1,
    "sd": 2.919676065766116,
    "source": "네이버 현재가",
    "live": true,
@@ -24,12 +24,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 709.69,
-   "change": 1.89,
+   "last": 709.02001953125,
+   "change": 1.79,
    "z": 0.7,
    "sd": 2.6920969628677787,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -64,8 +63,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1332.0999755859375,
-   "change": -0.31,
+   "last": 1332.3199462890625,
+   "change": -0.29,
    "z": -0.5,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
@@ -76,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.16000366210938,
-   "change": -0.65,
+   "last": 88.19000244140625,
+   "change": -0.62,
    "z": -0.2,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
@@ -88,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3918.89990234375,
-   "change": 0.86,
-   "z": 0.6,
+   "last": 3922.300048828125,
+   "change": 0.95,
+   "z": 0.7,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -123,14 +122,14 @@
  "spikes": {
   "war": 0.8,
   "politics": 0.3,
-  "rates": 1.1,
+  "rates": 0.5,
   "trade": 0.7,
   "fx": 0.8,
   "energy": 1.7,
-  "market": 0.5,
+  "market": 0.4,
   "credit": 1,
   "disaster": 0,
-  "policy": 0.3
+  "policy": 0
  },
  "rates": {
   "war": {
@@ -144,8 +143,8 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.7,
-   "saturated": 1,
+   "rate": 2.7,
+   "saturated": 0,
    "queries": 3
   },
   "trade": {
@@ -164,7 +163,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 5.1,
+   "rate": 5,
    "saturated": 2,
    "queries": 3
   },
@@ -179,7 +178,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   }
@@ -211,8 +210,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 1.1,
+    "score": 49,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -251,8 +250,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 1.1,
+    "score": 47,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -291,8 +290,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 1.1,
+    "score": 47,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -303,61 +302,6 @@
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "ewgphy",
-   "title": "변동금리 고공행진속 가계대출 증가세 확대",
-   "firstSeen": "2026-11-12T04:06:00.000Z",
-   "lastSeen": "2026-11-13T02:40:00.000Z",
-   "count": 9,
-   "sources": 9,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "정부, 경기 판단 '회복 흐름'→ '견조한 성장세'...\"불확실성은 지속\"",
-     "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82450",
-     "host": "newsfc.co.kr",
-     "at": "2026-11-13T02:40:00.000Z"
-    },
-    {
-     "title": "정부, 경기 평가 '회복'→'성장' 1년만에 상향…\"불확실성은 지속\"(종합...",
-     "link": "https://www.news1.kr/economy/trend/6353011",
-     "host": "news1.kr",
-     "at": "2026-11-13T01:44:00.000Z"
-    },
-    {
-     "title": "정부, 경기 진단 ‘회복 흐름→견조한 성장세’…글로벌 경제 불확실성...",
-     "link": "https://biz.heraldcorp.com/article/10936054?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-13T01:35:00.000Z"
-    },
-    {
-     "title": "'회복 흐름'에서 '견조한 성장세'로…재경부, 경기 판단 한 단계 상향",
-     "link": "https://www.widedaily.com/news/articleView.html?idxno=303655",
-     "host": "widedaily.com",
-     "at": "2026-11-13T01:34:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
      "미 10년 금리 +10.5bp(평소의 2배)"
     ]
    }
@@ -411,6 +355,61 @@
     "why": [
      "핵심 단어",
      "VIX 변동성 +6.92%"
+    ]
+   }
+  },
+  {
+   "id": "ewgphy",
+   "title": "변동금리 고공행진속 가계대출 증가세 확대",
+   "firstSeen": "2026-11-12T04:06:00.000Z",
+   "lastSeen": "2026-11-13T02:40:00.000Z",
+   "count": 9,
+   "sources": 9,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "정부, 경기 판단 '회복 흐름'→ '견조한 성장세'...\"불확실성은 지속\"",
+     "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82450",
+     "host": "newsfc.co.kr",
+     "at": "2026-11-13T02:40:00.000Z"
+    },
+    {
+     "title": "정부, 경기 평가 '회복'→'성장' 1년만에 상향…\"불확실성은 지속\"(종합...",
+     "link": "https://www.news1.kr/economy/trend/6353011",
+     "host": "news1.kr",
+     "at": "2026-11-13T01:44:00.000Z"
+    },
+    {
+     "title": "정부, 경기 진단 ‘회복 흐름→견조한 성장세’…글로벌 경제 불확실성...",
+     "link": "https://biz.heraldcorp.com/article/10936054?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-13T01:35:00.000Z"
+    },
+    {
+     "title": "'회복 흐름'에서 '견조한 성장세'로…재경부, 경기 판단 한 단계 상향",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=303655",
+     "host": "widedaily.com",
+     "at": "2026-11-13T01:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 38,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
     ]
    }
   },
@@ -551,8 +550,8 @@
    "title": "트럼프 \"이란과 합의 필요 없다\"…밴스에 협상 대신 민주당 수사 지시",
    "firstSeen": "2026-11-12T16:45:00.000Z",
    "lastSeen": "2026-11-13T02:56:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "count": 11,
+   "sources": 11,
    "topics": [
     "war",
     "politics",
@@ -562,15 +561,15 @@
    "critical": [],
    "links": [
     {
-     "title": "‘오락가락’ 트럼프… 이란 만난다더니 “합의 필요없다”",
-     "link": "https://www.munhwa.com/article/11631133?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-13T02:56:00.000Z"
-    },
-    {
      "title": "트럼프, 밴스 이란 임무에서 배제…“이란과 합의 필요 없다”",
      "link": "https://www.hani.co.kr/arti/international/international_general/1287192.html",
      "host": "hani.co.kr",
+     "at": "2026-11-13T02:56:00.000Z"
+    },
+    {
+     "title": "‘오락가락’ 트럼프… 이란 만난다더니 “합의 필요없다”",
+     "link": "https://www.munhwa.com/article/11631133?ref=naver",
+     "host": "munhwa.com",
      "at": "2026-11-13T02:56:00.000Z"
     },
     {
@@ -595,12 +594,12 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.86,
+     "change": 0.95,
      "unit": "%",
-     "z": 0.6
+     "z": 0.7
     },
     "why": [
-     "금 +0.86%"
+     "금 +0.95%"
     ]
    }
   },
@@ -635,13 +634,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.86,
+     "change": 0.95,
      "unit": "%",
-     "z": 0.6
+     "z": 0.7
     },
     "why": [
      "핵심 단어",
-     "금 +0.86%"
+     "금 +0.95%"
     ]
    }
   },
@@ -675,62 +674,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.86,
+     "change": 0.95,
      "unit": "%",
-     "z": 0.6
+     "z": 0.7
     },
     "why": [
      "핵심 단어",
-     "금 +0.86%"
-    ]
-   }
-  },
-  {
-   "id": "htpvr5",
-   "title": "연준, 2027년 FOMC 일정 공개…12월 회의 11월로 당겨",
-   "firstSeen": "2026-11-12T23:58:00.000Z",
-   "lastSeen": "2026-11-13T01:40:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미 연준, 내년 기준금리 결정 8번→7번 축소…10월엔 정책 전략만 논의",
-     "link": "https://www.widedaily.com/news/articleView.html?idxno=303662",
-     "host": "widedaily.com",
-     "at": "2026-11-13T01:40:00.000Z"
-    },
-    {
-     "title": "美연준, 2027년 FOMC 일정 공개…기준금리 결정 8번→7번",
-     "link": "https://www.newsis.com/view/NISX20261113_0003866679",
-     "host": "newsis.com",
-     "at": "2026-11-13T01:15:00.000Z"
-    },
-    {
-     "title": "연준, 2027년 FOMC 일정 공개…12월 회의 11월로 당겨",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=563541",
-     "host": "joongangenews.com",
-     "at": "2026-11-12T23:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
+     "금 +0.95%"
     ]
    }
   },
@@ -778,21 +728,15 @@
    "id": "1j8zxna",
    "title": "젠슨 황 사임 충격에 뉴욕증시 동반 하락…엔비디아 4% 급락[투자360]",
    "firstSeen": "2026-11-12T21:22:00.000Z",
-   "lastSeen": "2026-11-13T02:28:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "lastSeen": "2026-11-13T02:26:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
-    {
-     "title": "[시황] 젠슨 황 사임 충격에도 코스피 5,400선 회복…외국인 '사자'",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=929159",
-     "host": "namdonews.com",
-     "at": "2026-11-13T02:28:00.000Z"
-    },
     {
      "title": "'젠슨 황 퇴진' 엔비디아발 기술주 충격에 유가 변수까지...뉴욕증시 일...",
      "link": "https://www.thepublic.kr/news/articleView.html?idxno=326522",
@@ -810,56 +754,68 @@
      "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=95152",
      "host": "mediafine.co.kr",
      "at": "2026-11-13T01:14:00.000Z"
+    },
+    {
+     "title": "[잠든 사이 월가] 엔비디아 젠슨 황 사임, 장중 14% 급락...돈은 AMD로 몰...",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38477",
+     "host": "junggi.co.kr",
+     "at": "2026-11-13T00:34:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
+    "score": 29,
     "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.86,
+     "change": 0.95,
      "unit": "%",
-     "z": 0.6
+     "z": 0.7
     },
     "why": [
-     "금 +0.86%"
+     "금 +0.95%"
     ]
    }
   },
   {
-   "id": "5u1n14",
-   "title": "워시 취임 2년차 맞는 美Fed…2027년 금리 결정 7회로 축소",
-   "firstSeen": "2026-11-13T02:07:00.000Z",
-   "lastSeen": "2026-11-13T02:12:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "htpvr5",
+   "title": "연준, 2027년 FOMC 일정 공개…12월 회의 11월로 당겨",
+   "firstSeen": "2026-11-12T23:58:00.000Z",
+   "lastSeen": "2026-11-13T01:40:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "美 연준, 내년 금리 결정 8회→7회…10월엔 금리 표결 안 한다",
-     "link": "https://news.mtn.co.kr/article/2026111311083551632",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-13T02:12:00.000Z"
+     "title": "미 연준, 내년 기준금리 결정 8번→7번 축소…10월엔 정책 전략만 논의",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=303662",
+     "host": "widedaily.com",
+     "at": "2026-11-13T01:40:00.000Z"
     },
     {
-     "title": "워시 취임 2년차 맞는 美Fed…2027년 금리 결정 7회로 축소",
-     "link": "https://view.asiae.co.kr/article/2026111311075152170",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-13T02:07:00.000Z"
+     "title": "美연준, 2027년 FOMC 일정 공개…기준금리 결정 8번→7번",
+     "link": "https://www.newsis.com/view/NISX20261113_0003866679",
+     "host": "newsis.com",
+     "at": "2026-11-13T01:15:00.000Z"
+    },
+    {
+     "title": "연준, 2027년 FOMC 일정 공개…12월 회의 11월로 당겨",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=563541",
+     "host": "joongangenews.com",
+     "at": "2026-11-12T23:58:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 1.1,
+    "score": 28,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -870,6 +826,62 @@
     },
     "why": [
      "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "12wvcs7",
+   "title": "[이시각헤드라인] 11월 13일 라이브투데이",
+   "firstSeen": "2026-11-12T22:19:00.000Z",
+   "lastSeen": "2026-11-13T01:50:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[오늘의 증시] 11월 13일 코스피 5450선 돌파…코스닥 3%대 급등",
+     "link": "https://www.job-post.co.kr/news/articleView.html?idxno=238165",
+     "host": "job-post.co.kr",
+     "at": "2026-11-13T01:50:00.000Z"
+    },
+    {
+     "title": "금시세(금값) 급락",
+     "link": "http://www.kjdaily.com/article.php?aid=1794532558692156227",
+     "host": "kjdaily.com",
+     "at": "2026-11-13T01:16:00.000Z"
+    },
+    {
+     "title": "금시세·금값 13일",
+     "link": "https://www.bntnews.co.kr/article/view/bnt202611130130",
+     "host": "bntnews.co.kr",
+     "at": "2026-11-13T00:12:00.000Z"
+    },
+    {
+     "title": "[이시각헤드라인] 11월 13일 라이브투데이",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261113071857yqe",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-12T22:19:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 26,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 0.95,
+     "unit": "%",
+     "z": 0.7
+    },
+    "why": [
+     "금 +0.95%"
     ]
    }
   }
