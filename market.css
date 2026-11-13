@@ -1,0 +1,29 @@
+/* 시장 화면(2026-11-13). 빨강·파랑은 등락·순매수/순매도에만 쓴다. */
+.mk-sub{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.mk-sub button{border:1px solid #d9dee6;background:#fff;border-radius:999px;padding:7px 14px;font:inherit;font-size:13.5px;color:#40516a;cursor:pointer;min-height:0}
+.mk-sub button.on{background:#111827;border-color:#111827;color:#fff;font-weight:600}
+#mk-line{font-size:14.5px}#mk-line b{font-weight:700}
+#core-market .up,.mk-table .up{color:var(--ck-up,#d73b47)}#core-market .down,.mk-table .down{color:var(--ck-down,#2565c6)}
+.mk-idx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 16px}
+.mk-tile{background:#fff;border:1px solid #e5e9ef;border-radius:16px;padding:14px 16px;display:grid;gap:4px;min-width:0}
+.mk-tile span{font-size:13px;color:#56637a;display:flex;justify-content:space-between;gap:6px}.mk-tile small{font-size:11.5px;color:#8a94a6}.mk-tile small.live{color:#0a7d4f;font-weight:600}
+.mk-tile b{font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.mk-tile em{font-style:normal;font-size:13.5px;font-variant-numeric:tabular-nums}
+.mk-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin:0 0 16px;align-items:start}
+.mk-two .cr-card{min-width:0}.mk-two header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.mk-flow{display:grid;gap:6px;padding:8px 0}.mk-flow+.mk-flow{border-top:1px solid #eef1f5;margin-top:6px;padding-top:14px}.mk-flow>b{font-size:13.5px}
+.mk-bar{display:grid;grid-template-columns:52px minmax(0,1fr) 84px;align-items:center;gap:10px;font-size:13.5px}
+.mk-bar i,.mk-row i{display:block;height:8px;background:#f1f4f8;border-radius:6px;overflow:hidden}.mk-bar u,.mk-row u{display:block;height:100%;border-radius:6px;background:#9aa5b5;text-decoration:none}
+.mk-bar u.up,.mk-row u.up{background:var(--ck-up,#d73b47)}.mk-bar u.down,.mk-row u.down{background:var(--ck-down,#2565c6)}
+.mk-bar em,.mk-row em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.mk-rows{display:grid;gap:2px}.mk-rows.all{max-height:520px;overflow:auto}.mk-cap{margin:10px 0 4px;font-size:12px;color:#6b7686;font-weight:600}.mk-cap:first-child{margin-top:0}
+.mk-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) 64px 78px;align-items:center;gap:10px;border:0;background:none;padding:7px 8px;border-radius:8px;font:inherit;font-size:13.5px;text-align:left;cursor:pointer;color:inherit;min-height:0}
+.mk-row:hover,.mk-row.on{background:#f3f6fa}.mk-row span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mk-row small{color:#6b7686;font-size:12px;text-align:right;white-space:nowrap}
+.mk-seg{display:inline-flex;flex-wrap:wrap;border:1px solid #d9dee6;border-radius:10px;overflow:hidden}
+.mk-seg button{border:0;background:#fff;padding:7px 12px;font:inherit;font-size:13px;color:#40516a;cursor:pointer;min-height:0}.mk-seg button+button{border-left:1px solid #e5e9ef}.mk-seg button.on{background:#111827;color:#fff;font-weight:600}
+.mk-tabs2{margin:0 0 10px}
+.mk-table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+.mk-table th{font-size:12px;color:#6b7686;font-weight:600;text-align:right;padding:6px 8px;border-bottom:1px solid #e5e9ef}.mk-table th:first-child{text-align:left}
+.mk-table td{padding:8px;text-align:right;border-bottom:1px solid #f1f4f8;white-space:nowrap}.mk-table td:first-child{text-align:left;white-space:normal}
+.mk-table tr[data-open]{cursor:pointer}.mk-table tr[data-open]:hover td{background:#f7f9fc}.mk-table tr[data-open]:focus-visible{outline:2px solid #111827;outline-offset:-2px}
+@media (max-width:1100px){.mk-idx{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.mk-idx{grid-template-columns:repeat(2,minmax(0,1fr))}.mk-two{grid-template-columns:minmax(0,1fr)}.mk-tile b{font-size:19px}.mk-row{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr) 58px;}.mk-row small{display:none}.mk-table td,.mk-table th{padding:7px 5px}}

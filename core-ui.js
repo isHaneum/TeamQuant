@@ -1,4 +1,4 @@
-// 핵심 기능 화면: ① 규칙 ② 오늘 점검(홈) ③ 매매 전 확인 ④ 성적표.
+// 핵심 기능 화면: ① 규칙 ② 오늘 점검(홈) ③ 주문 점검 ④ 성적표.
 // 계산은 모두 이 브라우저에서 한다. 보유 금액·현금·규칙은 서버로 보내지 않고, 서버에는 종목 코드로 시세만 묻는다.
 // 규칙·계획은 브라우저(프로필별)에 저장한다. 같은 엔진(lib/core-rules·core-risk·report-card)을 scripts/validate-core.mjs가 2012년부터 검증했다.
 import { RULE_DEFS, DEFAULT_RULES, BAND, normalizeRules, initialPlan, planPctOf, evaluate, preTradeCheck, maxBuyAmount, allocateCash, isLeveraged, RULES_VERSION } from '/lib/core-rules.js';
@@ -64,7 +64,11 @@ async function loadAll() {
   await Promise.all([ordersP, cashP]);
   if (epoch !== S.epoch) return;
   renderToday(); renderRules(); renderPrecheckChips(); if (cq.prefs) cqRisk(cq.prefs); if ($('.view.active')?.dataset.page === 'report') void renderReport();
+  window.dispatchEvent(new Event('teamquant:core-ready'));
 }
+// 시장 화면(market-ui.js)이 쓰는 두 가지: 지금 보유 목록 · 종목 하나를 종목·주문 점검에서 열기.
+export function coreHoldings() { return S.positions.map(p => ({ symbol: p.symbol, name: p.name, currency: p.currency, valueKrw: p.valueKrw })); }
+export function openStock(o) { if (!o?.symbol) return; const held = S.positions.find(p => p.symbol === o.symbol); document.querySelector('[data-view="precheck"]')?.click(); cpSel = held || { symbol: o.symbol, name: o.name || o.symbol, currency: o.currency || 'KRW' }; const inp = document.querySelector('#cp-sym'); if (inp) inp.value = ''; renderPrecheckChips(); void showStockPanel(cpSel); }
 
 window.addEventListener('teamquant:asset-snapshot', e => {
   const snap = e.detail || {}; S.snap = snap; S.fx = snap.fx?.midRate || null;
@@ -93,7 +97,7 @@ function renderToday() {
     ${e.actions.length ? `<ol class="ct-actions">${e.actions.slice(0, 6).map(a => `<li class="${a.kind}"><b>${esc(a.text)}</b>${a.why?.length ? `<small>${esc(a.why.join(' · '))}</small>` : ''}</li>`).join('')}</ol>` : '<p class="ct-none">할 일 없음 · 계획대로 유지</p>'}
     <div class="ct-risk"><span>계좌 하루 95% 손실 범위 ${tip('지금 보유를 최근 500거래일의 하루 움직임(지금 변동성으로 맞춤)에 넣어 본 값입니다. 2012~2026 검증에서 이 범위를 넘은 날은 4.5~4.9%였습니다(목표 5%).')}</span><b>${e.varNow?.ok ? `−${won(e.varNow.var95)}` : '—'}</b><small>${e.varNow?.ok ? `총자산의 ${(e.varNow.var95 / e.total * 100).toFixed(2)}% · 한도 ${current().rules.dailyLoss}%` : ''}</small></div>
     <form class="ct-cash" id="ct-cash"><label>새로 넣을 돈 ${tip('들어온 돈을 계획보다 모자란 종목부터 나눕니다. 떨어졌거나 덜 산 종목에 자연히 더 들어갑니다. 한 종목 상한·현금 최소·하루 손실 한도를 지키고 남으면 현금으로 둡니다. 무작위 6종목 포트폴리오 120개 모의 운용(2016~2026)에서 균등 적립과 수익·손실은 비슷하고 매매는 약 40% 적었습니다.')}</label><input id="ct-cash-in" type="number" min="10000" step="any" inputmode="numeric" placeholder="예: 500000"><button type="submit" class="secondary">나누기</button></form><div id="ct-cash-out"></div>
-    <div class="ct-links"><button type="button" class="secondary" data-core-go="precheck">매매 전 확인</button><button type="button" class="secondary" data-core-go="report">성적표</button><button type="button" class="text-button" data-core-go="rules">규칙·계획</button></div>`;
+    <div class="ct-links"><button type="button" class="secondary" data-core-go="precheck">주문 점검</button><button type="button" class="secondary" data-core-go="report">성적표</button><button type="button" class="text-button" data-core-go="rules">규칙·계획</button></div>`;
 }
 document.addEventListener('submit', e => {
   if (e.target?.id !== 'ct-cash') return; e.preventDefault();
@@ -121,7 +125,7 @@ function renderStrategyEvidence() {
     </ul>`;
 }
 fetch('/data/core-validation.json?v=' + RULES_VERSION).then(r => r.ok ? r.json() : null).then(d => { evidence = d; renderEvidence(); renderStrategyEvidence(); }).catch(() => {});
-const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>규칙 ${tip('한 번 정해 두면 오늘 점검·매매 전 확인·성적표가 이 기준으로 계산합니다. 이 브라우저(프로필별)에 저장되고 서버로 보내지 않습니다.')}</h1><p>내 투자 규칙과 종목별 계획 비중</p></div></div>
+const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>규칙 ${tip('한 번 정해 두면 오늘 점검·주문 점검·성적표가 이 기준으로 계산합니다. 이 브라우저(프로필별)에 저장되고 서버로 보내지 않습니다.')}</h1><p>내 투자 규칙과 종목별 계획 비중</p></div></div>
 <div class="cr-grid"><div class="cr-main">
   <article class="cr-card" id="cr-quick"><header><h3>세 질문으로 정하기 ${tip('숫자 7개를 직접 고르는 대신 세 가지 질문에 답하면 규칙이 정해집니다. 하루 손실 한도 = 한 달 허용 손실 ÷ √21, 한 종목·섹터 상한은 나눌 섹터 수에서, 매매 횟수 상한은 점검 주기에서 나옵니다. 아래 숫자는 그대로 손볼 수 있습니다.')}</h3><span class="cr-muted" id="cr-quick-state"></span></header>
     <div class="cq">
@@ -239,14 +243,14 @@ function renderEvidence() {
     <ul class="cr-facts"><li>하루 95% 손실 범위를 넘은 날 ${Math.min(...rows.map(x => x.v.rule95.rate))}~${Math.max(...rows.map(x => x.v.rule95.rate))}% (목표 5%)</li><li>맞추는 횟수 연 ${Math.min(...rows.map(x => x.t.tradesPerYear))}~${Math.max(...rows.map(x => x.t.tradesPerYear))}번 · 30일 매매 상한을 넘은 기간 ${Math.max(...rows.map(x => x.t.over30DayLimitShare))}% 이하</li><li>수익률은 그냥 보유보다 낮았습니다. 큰 손실을 줄이는 규칙입니다.</li></ul>`;
 }
 
-// ── ③ 매매 전 확인 ───────────────────────────────────────────
-const preP = addView('precheck', '매매 전 확인', `<div class="page-head"><div><h1>매매 전 확인 ${tip('주문을 넣기 전에 내 규칙에 맞는지, 이 돈이 하루에 얼마까지 흔들릴 수 있는지 봅니다. 실제 주문은 하지 않습니다.')}</h1><p>사거나 팔기 전에 포트폴리오 규칙과 손실 범위를 봅니다</p></div></div>
+// ── ③ 주문 점검 ───────────────────────────────────────────
+const preP = addView('precheck', '종목·주문 점검', `<div class="page-head"><div><h1>종목·주문 점검 ${tip('주문을 넣기 전에 내 규칙에 맞는지, 이 돈이 하루에 얼마까지 흔들릴 수 있는지 봅니다. 실제 주문은 하지 않습니다.')}</h1><p>종목을 고르면 시세와 흐름 · 금액을 넣으면 내 규칙으로 점검</p></div></div>
 <div class="cp"><form class="cp-form cr-card" id="cp-form">
   <label class="cp-l">종목</label><div class="cp-chips" id="cp-chips"></div><div class="cp-search"><input id="cp-sym" autocomplete="off" placeholder="이름·코드·티커로 찾기 (예: 현대, 005380, NVDA)" aria-autocomplete="list"><div class="cp-sugg" id="cp-sugg" hidden role="listbox"></div></div>
   <label class="cp-l">방향</label><div class="cp-seg" role="radiogroup"><label><input type="radio" name="cp-side" value="BUY" checked><span>매수</span></label><label><input type="radio" name="cp-side" value="SELL"><span>매도</span></label></div>
   <label class="cp-l" for="cp-amt">금액(원)</label><input id="cp-amt" type="number" min="1000" step="any" inputmode="numeric" placeholder="예: 1000000">
   <button type="submit" class="primary" id="cp-run">확인하기</button><p class="cp-state" id="cp-state" role="status"></p></form>
-  <div class="cp-result" id="cp-result"><div id="cp-stock"></div><div id="cp-check"><div class="cr-card cp-empty"><p>종목을 고르면 오늘 등락과 1년 흐름이 여기 뜹니다. 방향·금액을 넣고 확인하기를 누르면 포트폴리오 규칙으로 점검합니다.</p></div></div></div></div>`);
+  <div class="cp-result" id="cp-result"><div id="cp-stock"></div><div id="cp-check"><div class="cr-card cp-empty"><p>종목을 고르면 시세와 차트가, 방향·금액을 넣고 확인하기를 누르면 규칙 점검 결과가 여기 뜹니다.</p></div></div></div></div>`);
 let cpSel = null;
 function renderPrecheckChips() { const box = $('#cp-chips'); if (!box) return; box.innerHTML = S.positions.map(p => `<button type="button" data-sym="${esc(p.symbol)}" class="${cpSel?.symbol === p.symbol ? 'on' : ''}">${esc(p.name)}</button>`).join('') || '<span class="cr-muted">보유 종목 없음</span>'; box.querySelectorAll('[data-sym]').forEach(b => b.onclick = () => { cpSel = S.positions.find(p => p.symbol === b.dataset.sym); $('#cp-sym').value = ''; renderPrecheckChips(); void showStockPanel(cpSel); }); }
 async function chosen() {
@@ -256,7 +260,7 @@ async function chosen() {
   const s = await resolveStockInput(t); return { symbol: s.split('.')[0], name: stockName(s), currency: 'KRW' };
 }
 $('#cp-sym').oninput = () => { if ($('#cp-sym').value.trim()) { cpSel = null; renderPrecheckChips(); } };
-// 매매 전 확인: 종목 검색 제안은 공용 모듈(stock-search-ui.js). 고르면 오늘 등락·1년 차트 패널을 연다.
+// 주문 점검: 종목 검색 제안은 공용 모듈(stock-search-ui.js). 고르면 오늘 등락·1년 차트 패널을 연다.
 attachStockSearch($('#cp-sym'), { onPick: o => { cpSel = o; renderPrecheckChips(); void showStockPanel(o); } });
 let panelRun = 0;
 async function showStockPanel(o) {

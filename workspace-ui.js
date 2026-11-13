@@ -15,14 +15,15 @@ import '/core-ui.js';
 import '/paper-ui.js';
 import '/paper-account-ui.js';
 import '/sector-ui.js';
+import '/market-ui.js';
 import '/company-ui.js';
 import '/growth-ui.js';
 const $=s=>document.querySelector(s);
 const style=document.createElement('link');style.rel='stylesheet';style.href='/workspace.css';document.head.append(style);
 const navigation=$('.overview-nav nav'),main=document.createElement('div');main.className='workspace-main';main.setAttribute('aria-label','메인 메뉴');
 // 2026-11-05: 두 단계(내 자산/Strategy Lab → 세부 탭) 메뉴를 한 줄로 펼친다. 원래 nav 버튼은 숨겨 두고 그대로 눌러 화면을 바꾼다.
-const names={rules:'규칙',precheck:'매매 전 확인',report:'성적표',paper:'모의투자',sectors:'섹터',issues:'시장 (참고)',quicktest:'전략 테스트·과거 기업 분석',home:'홈',toss:'포트폴리오 (참고)',performance:'과거 투자 성과',planner:'목표·ETF 적립',evidence:'판단 기록',strategy:'원칙 승인·모의 운용 (고급)',comparison:'과거 검증',simulation:'투자금 계산',assets:'모의 운용',news:'시장 뉴스',model:'모델 연구'};
-const primary=[['home','홈'],['precheck','매매 전 확인'],['report','성적표'],['paper','모의투자'],['rules','규칙']],moreViews=['sectors','issues','quicktest','toss','news','performance','planner','evidence','strategy','model'],labViews=['quicktest'],advancedViews=['strategy','comparison','simulation','assets'];
+const names={market:'시장',rules:'규칙',precheck:'종목·주문 점검',report:'성적표',paper:'모의투자',sectors:'섹터',issues:'이슈',quicktest:'전략 테스트·과거 기업 분석',home:'홈',toss:'포트폴리오 (참고)',performance:'과거 투자 성과',planner:'목표·ETF 적립',evidence:'판단 기록',strategy:'원칙 승인·모의 운용 (고급)',comparison:'과거 검증',simulation:'투자금 계산',assets:'모의 운용',news:'시장 뉴스',model:'모델 연구'};
+const primary=[['home','홈'],['market','시장'],['paper','모의투자'],['report','성적표'],['rules','규칙']],marketViews=['market','precheck','sectors','issues','news'],moreViews=['quicktest','toss','performance','planner','evidence','strategy','model'],labViews=['quicktest'],advancedViews=['strategy','comparison','simulation','assets'];
 const hiddenNav=document.createElement('div');hiddenNav.hidden=true;hiddenNav.className='workspace-hidden-nav';
 for(const view of Object.keys(names)){const button=document.querySelector(`.sidebar [data-view="${view}"]`);if(button){button.textContent=names[view];hiddenNav.append(button);}}
 const topButtons=new Map();
@@ -47,7 +48,7 @@ const help=navigation.querySelector('[data-view="help"]');if(help)$('#workspace-
 const shortcut=$('#overview .page-head .ov-actions button');if(shortcut?.textContent==='토스 자산 연결')connections.append(shortcut);
 const note=document.createElement('p');note.className='workspace-security-note';note.textContent='체험 환경 · 정식 회원 인증 미연결';$('.top-actions').prepend(note);
 $('#login-form h2').textContent='체험 프로필 열기';$('#login-form > p:not(.eyebrow)').textContent='기존 전략·모의 기록을 여는 체험 프로필입니다. 정식 회원 인증과 금융정보 접근 권한은 별도입니다.';
-function sync(){const view=$('.view.active')?.dataset.page||'home',top=labViews.includes(view)?'quicktest':view;for(const [key,b] of topButtons){b.classList.toggle('active',key===top);b.setAttribute('aria-current',key===top?'page':'false');}const inMore=moreViews.includes(view)||advancedViews.includes(view);moreMenu.classList.toggle('active',inMore);moreMenu.querySelector('summary').textContent=inMore?(advancedViews.includes(view)?'고급 전략 실험':names[view])+' ▾':'더보기 ▾';for(const b of moreMenu.querySelectorAll('button'))b.setAttribute('aria-current',b.dataset.workspace===view||(b.dataset.workspace==='strategy'&&advancedViews.includes(view))?'page':'false');}
+function sync(){const view=$('.view.active')?.dataset.page||'home',top=marketViews.includes(view)?'market':labViews.includes(view)?'quicktest':view;for(const [key,b] of topButtons){b.classList.toggle('active',key===top);b.setAttribute('aria-current',key===top?'page':'false');}const inMore=moreViews.includes(view)||advancedViews.includes(view);moreMenu.classList.toggle('active',inMore);moreMenu.querySelector('summary').textContent=inMore?(advancedViews.includes(view)?'고급 전략 실험':names[view])+' ▾':'더보기 ▾';for(const b of moreMenu.querySelectorAll('button'))b.setAttribute('aria-current',b.dataset.workspace===view||(b.dataset.workspace==='strategy'&&advancedViews.includes(view))?'page':'false');}
 window.addEventListener('teamquant:page',sync);window.addEventListener('teamquant:state',sync);sync();
 
 // Private plan summary is memory-only; distinguish its paper book from actual holdings.

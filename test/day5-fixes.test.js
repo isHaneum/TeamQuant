@@ -72,3 +72,13 @@ test('뉴스 주의: 기준 전에 보도 1곳으로 걸린 주의는 지금 2�
   const w = createIssueWatch({ engine, symbols: () => [{ symbol: '005930', name: '삼성전자', market: 'KR' }], fetchKR: async () => [], fetchUS: async () => [], news: async () => [{ title: '736억 들인 삼성전자 기술 유출 전 부장... 징역 6년 4개월 확정', link: 'https://a.example/1' }], gapMs: 0 });
   await w.scan(); assert.equal(cleared.length, 1); assert.match(cleared[0][1], /보도 1곳/);
 });
+
+test('미국 잔고 조회 실패(usError): 미국 보유분이 빠진 잔고로는 주문도 평가도 하지 않는다', async () => {
+  const { pl, state } = setup(); pl._ledger().orders.push(buy('2026-11-13T00:08:00.000Z'));
+  let st = await pl.status(); assert.ok(st.balance && !st.error); const good = st.marks.at(-1).total;
+  const orig = pl._client?.balance; // 클라이언트를 직접 바꿀 수 없으면 새 엔진으로 확인
+  const c = { settings: () => ({ mode: 'vps', accountMasked: '****0000' }), async price() { return { market: 'KR', currency: 'KRW', exchange: 'KRX', price: 77000, upper: 0, lower: 0, halted: false }; }, async balance() { return { cash: 90_000_000, total: 93_000_000, stock: 3_000_000, positions: [{ symbol: '005930', name: '삼성전자', market: 'KR', currency: 'KRW', qty: 43, price: 70000, value: 3_010_000, valueKrw: 3_010_000 }], cashUsd: null, stockUsd: 0, usError: 'EGW00201' }; }, async buyingPower() { return { maxQty: 1e6 }; }, async place() { throw new Error('주문이 나가면 안 된다'); }, async cancel() { return {}; }, async orders() { return []; } };
+  const bad = createPaperLive({ client: c, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-d5u-'))), readMarket: async () => ({ candles: [] }), now: () => state.t, defaultPlan: () => ({ SPY: { pct: 30, name: 'S&P500 ETF', currency: 'USD' } }), defaultPlanVersion: () => 'T1' });
+  st = await bad.status(); assert.equal(st.balance, null); assert.match(st.error, /미국 잔고를 읽지 못했습니다/); assert.equal(st.marks.length, 0, '불완전한 잔고는 기록하지 않는다');
+  await assert.rejects(bad.preview({ rebalance: true }), /미국 잔고를 읽지 못했습니다/); assert.ok(good > 0 && orig === undefined);
+});
