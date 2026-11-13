@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T09:47:18.722Z",
+ "updatedAt": "2026-11-13T10:14:04.155Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1335.81005859375,
-   "change": -0.03,
-   "z": -0.1,
+   "last": 1336.199951171875,
+   "change": 0,
+   "z": 0,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.5999984741211,
-   "change": -0.16,
-   "z": -0.1,
+   "last": 88.05000305175781,
+   "change": -0.78,
+   "z": -0.3,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3904.199951171875,
-   "change": 0.49,
+   "last": 3908.300048828125,
+   "change": 0.59,
    "z": 0.4,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 18.649999618530273,
-   "change": -0.27,
-   "z": 0,
+   "last": 18.510000228881836,
+   "change": -1.02,
+   "z": -0.1,
    "sd": 11.782503388614433,
    "source": "Yahoo",
    "checked": true
@@ -120,30 +120,30 @@
  ],
  "spikes": {
   "war": -0.1,
-  "politics": -1,
-  "rates": 1,
+  "politics": -1.4,
+  "rates": 0.8,
   "trade": 0.6,
   "fx": 0.5,
   "energy": 1.6,
-  "market": 0.4,
+  "market": 0.1,
   "credit": -0.2,
   "disaster": 0,
   "policy": 0.2
  },
  "rates": {
   "war": {
-   "rate": 1.7,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.4,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.6,
-   "saturated": 1,
+   "rate": 3.3,
+   "saturated": 0,
    "queries": 3
   },
   "trade": {
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 4.9,
+   "rate": 4.4,
    "saturated": 2,
    "queries": 3
   },
@@ -207,8 +207,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
-    "spike": 1,
+    "score": 49,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -247,8 +247,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
-    "spike": 1,
+    "score": 49,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -264,66 +264,9 @@
    }
   },
   {
-   "id": "1tfympz",
-   "title": "코스피, 장중 5500선 돌파후 5290선 후퇴...외국인 5500억 순매도",
-   "firstSeen": "2026-11-13T06:46:00.000Z",
-   "lastSeen": "2026-11-13T09:40:00.000Z",
-   "count": 14,
-   "sources": 14,
-   "topics": [
-    "rates",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[머니워치] 코스피, 외국인 매도에 하락 마감…17일 엔비디아 실적 발표...",
-     "link": "http://www.newswatch.kr/news/articleView.html?idxno=81823",
-     "host": "newswatch.kr",
-     "at": "2026-11-13T09:40:00.000Z"
-    },
-    {
-     "title": "코스피, 장중 5,500선 터치 후 하락 반전···5,290.53 마감",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41639",
-     "host": "globale.co.kr",
-     "at": "2026-11-13T09:28:00.000Z"
-    },
-    {
-     "title": "코스피, 장중 5,500선 돌파 후 하락 반전",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261113182325aHr",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-13T09:24:00.000Z"
-    },
-    {
-     "title": "젠슨 황 쇼크에 출렁…코스피 5300선 붕괴",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346348?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-13T09:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "17edmxt",
-   "title": "[환율마감] 원·달러 5거래일만 반등, 유가·미국채 금리 급등",
-   "firstSeen": "2026-11-13T07:08:00.000Z",
+   "id": "ige1rg",
+   "title": "美 금리·유가 급등에 달러·원 환율 6.0원 올라 1336.7원(종합)",
+   "firstSeen": "2026-11-13T06:42:00.000Z",
    "lastSeen": "2026-11-13T08:28:00.000Z",
    "count": 9,
    "sources": 9,
@@ -364,53 +307,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 47,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "171o4h2",
-   "title": "이찬일의 글로벌 경제 브리프 240",
-   "firstSeen": "2026-11-13T02:46:00.000Z",
-   "lastSeen": "2026-11-13T03:16:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics",
-    "rates",
-    "fx",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "월드 뉴스 브리프 (기준일시: 2026년 11월 13일 금요일 10:00)",
-     "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=globalnewsfocus&wr_id=528",
-     "host": "ifs.or.kr",
-     "at": "2026-11-13T03:16:00.000Z"
-    },
-    {
-     "title": "이찬일의 글로벌 경제 브리프 240",
-     "link": "https://www.woodkorea.co.kr/news/articleView.html?idxno=92554",
-     "host": "woodkorea.co.kr",
-     "at": "2026-11-13T02:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
     "spike": 1.6,
     "news": false,
     "reaction": {
@@ -501,55 +397,6 @@
     "label": "관찰",
     "score": 34,
     "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1m2xqso",
-   "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
-   "firstSeen": "2026-11-13T03:02:00.000Z",
-   "lastSeen": "2026-11-13T07:46:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "9월 통화량 17조 늘었지만…증가율 석 달째 둔화",
-     "link": "https://www.sidae.com/article/2026111313551647703",
-     "host": "sidae.com",
-     "at": "2026-11-13T07:46:00.000Z"
-    },
-    {
-     "title": "9월 시중 통화량 17조1000억원 증가…반도체 수출대금 유입에 11개월 연...",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=354616",
-     "host": "greened.kr",
-     "at": "2026-11-13T04:56:00.000Z"
-    },
-    {
-     "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026111311003622029",
-     "host": "newsway.co.kr",
-     "at": "2026-11-13T03:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -661,31 +508,41 @@
    }
   },
   {
-   "id": "16tnhax",
-   "title": "[마켓펄스] 증시 반등 못 지킨 '빈손 간담회'...외국인 매도에 코스피 하...",
-   "firstSeen": "2026-11-13T07:04:00.000Z",
-   "lastSeen": "2026-11-13T07:50:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "1m2xqso",
+   "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
+   "firstSeen": "2026-11-13T03:02:00.000Z",
+   "lastSeen": "2026-11-13T07:46:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "rates",
-    "energy",
-    "market"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[마켓펄스] 증시 반등 못 지킨 '빈손 간담회'...외국인 매도에 코스피 하...",
-     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130859",
-     "host": "ntoday.co.kr",
-     "at": "2026-11-13T07:50:00.000Z"
+     "title": "9월 통화량 17조 늘었지만…증가율 석 달째 둔화",
+     "link": "https://www.sidae.com/article/2026111313551647703",
+     "host": "sidae.com",
+     "at": "2026-11-13T07:46:00.000Z"
+    },
+    {
+     "title": "9월 시중 통화량 17조1000억원 증가…반도체 수출대금 유입에 11개월 연...",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=354616",
+     "host": "greened.kr",
+     "at": "2026-11-13T04:56:00.000Z"
+    },
+    {
+     "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026111311003622029",
+     "host": "newsway.co.kr",
+     "at": "2026-11-13T03:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 1.6,
+    "score": 30,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -703,14 +560,20 @@
    "id": "c3wpk2",
    "title": "'젠슨황 사퇴' 효과...코스피, 상승 후 결국 0.98% 하락 5,290 마감",
    "firstSeen": "2026-11-13T07:16:00.000Z",
-   "lastSeen": "2026-11-13T07:52:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "lastSeen": "2026-11-13T10:04:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "상승 출발했던 코스피, 5,290선 하락 마감",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712342&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-13T10:04:00.000Z"
+    },
     {
      "title": "장중 3% 치솟던 코스피, 상승 폭 반납하고 0.98% 하락 마감",
      "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398227",
@@ -727,8 +590,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 1,
+    "score": 30,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -813,13 +676,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.49,
+     "change": 0.59,
      "unit": "%",
      "z": 0.4
     },
     "why": [
      "핵심 단어",
-     "금 +0.49%"
+     "금 +0.59%"
     ]
    }
   },
@@ -860,6 +723,119 @@
     "why": [
      "핵심 단어",
      "S&P 500 -0.35%"
+    ]
+   }
+  },
+  {
+   "id": "kb9z1s",
+   "title": "연말 대출 막힐 걱정 줄었지만…이번엔 이자가 부담",
+   "firstSeen": "2026-11-12T21:02:00.000Z",
+   "lastSeen": "2026-11-12T21:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "연말 대출 막힐 걱정 줄었지만…이번엔 이자가 부담",
+     "link": "https://www.kukinews.com/article/view/kuk202611120154",
+     "host": "kukinews.com",
+     "at": "2026-11-12T21:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 24,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "2om8yo",
+   "title": "연 4% 예금의 귀환…정기예금 한 달 새 24조 몰렸다",
+   "firstSeen": "2026-11-12T22:02:00.000Z",
+   "lastSeen": "2026-11-12T22:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "연 4% 예금의 귀환…정기예금 한 달 새 24조 몰렸다",
+     "link": "http://www.segyebiz.com/newsView/20261113500613?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-12T22:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 24,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "10uwbji",
+   "title": "\"지금은 현금 쥐고 버틸 때\"…증권가가 찍은 매수 타이밍 [분석+]",
+   "firstSeen": "2026-11-12T23:40:00.000Z",
+   "lastSeen": "2026-11-12T23:40:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "rates",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"지금은 현금 쥐고 버틸 때\"…증권가가 찍은 매수 타이밍 [분석+]",
+     "link": "https://www.hankyung.com/article/2026111342146",
+     "host": "hankyung.com",
+     "at": "2026-11-12T23:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 24,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
     ]
    }
   }
