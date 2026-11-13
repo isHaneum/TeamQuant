@@ -37,12 +37,13 @@ test('TC-UI-REORG-03 문구 규칙: "~할까요?" 없음 · 상태 띠 다섯 �
   assert.match(briefUi, /m\.run\?\.label/);
 });
 
-test('TC-UI-REORG-05 실계좌 읽기 전용 카드(결정 22): 모의계좌 카드 바로 아래 · 기본 숨김(브리지 응답이 있을 때만) · "주문 기능 없음" 배지와 tip() ⓘ(폰에서도 보임) · 지수 대비·해시 체인은 모의 카드 함수를 이 계좌의 문구로 재사용(보유 국가 비중 · 공개 안 됨) · 보류 사유·마지막 정상 평가 · KST 시각 · 주문 버튼 없음', () => {
-  const kis = paperUi.indexOf('id="pp-kis"'), real = paperUi.indexOf('id="pp-real"'), hyp = paperUi.indexOf('id="pp-hyp"');
-  assert.ok(kis >= 0 && real > kis && real < hyp, '순서: 모의계좌 → 실계좌 → 가설');
-  assert.equal(paperUi.split('id="pp-real"').length - 1, 1); assert.match(paperUi, /<article class="cr-card" id="pp-real" hidden>/);
-  assert.match(paperUi, /실계좌\(<span id="pp-real-label">토스<\/span>\) · 읽기 전용 <span class="pp-badge">주문 기능 없음<\/span> \$\{tip\('이 계좌로는 조회만 합니다\. 주문은 모의계좌에서만 보냅니다\.'\)\}<\/h3>/, 'title 속성만 있는 span 은 폰에서 안 보이므로 tip() 을 쓴다');
-  const s = paperUi.indexOf('async function realRefresh('), e = paperUi.indexOf("$('#pp-real-refresh')"); assert.ok(s >= 0 && e > s);
+test('TC-UI-REORG-05 실계좌 읽기 전용 기록(결정 22 · 위치는 결정 34): 모의투자 화면에는 없고 홈 카드 #hm-real · 기본 숨김(홈이 실계좌이고 브리지 응답이 있을 때만) · "주문 기능 없음" 배지와 tip() ⓘ · 지수 대비·해시 체인은 모의 카드 함수를 이 계좌의 문구로 재사용 · 보유표 없음 · 보류 사유·마지막 정상 평가 · KST 시각 · 주문 경로 없음 · 수동 실행은 브라우저 규칙을 보내지 않음', () => {
+  assert.equal(paperUi.indexOf('id="pp-real"'), -1, '모의투자 화면 틀에는 실계좌 카드가 없다(결정 34: 모의투자 화면에는 모의계좌 하나만)');
+  assert.match(paperUi, /card\.id = 'hm-real'; card\.hidden = true;/, '홈 카드 · 기본 숨김'); assert.match(paperUi, /document\.querySelector\('#overview \.hm-main'\)/);
+  assert.match(paperUi, /실계좌 기록 \(<span id="pp-real-label">토스<\/span>\) <span class="pp-badge">주문 기능 없음<\/span> \$\{tip\('이 계좌로는 조회만 합니다\./, 'title 속성만 있는 span 은 폰에서 안 보이므로 tip() 을 쓴다');
+  const s = paperUi.indexOf('async function realRefresh('), e = paperUi.indexOf("window.addEventListener('teamquant:page', () => { const p ="); assert.ok(s >= 0 && e > s);
+  assert.match(paperUi.slice(s, e), /document\.body\.dataset\.account !== 'real'\) \{ card\.hidden = true/, '홈이 실계좌일 때만'); assert.doesNotMatch(paperUi.slice(s, e), /holdTable\(/, '기록 응답에는 평균단가·현재가가 없어 보유표를 그리면 손익이 0으로 찍힌다');
+  assert.doesNotMatch(paperUi, /privateRead\('paper-live-(preview|run)', \{ rules:/, '수동 미리보기·주문은 브라우저 규칙·계획을 보내지 않는다(엔진의 규칙과 기본 계획만)');
   const block = paperUi.slice(s, e);
   assert.match(block, /privateRead\('kis-real-status'\)/); assert.match(block, /catch \{ card\.hidden = true; return; \}/); assert.match(block, /s\.readOnly !== true\) \{ card\.hidden = true/);
   assert.match(block, /chainHtml\(s, \{ published: false \}\)/, '실계좌 체인은 공개 파일에 없으므로 공개 파일로 검증하라는 문장을 쓰지 않는다'); assert.match(block, /progressHtml\(s, \{ basis: 'holdings' \}\)/, '비교선 비중은 계획이 아니라 보유에서');

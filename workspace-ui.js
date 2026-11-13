@@ -22,8 +22,8 @@ const $=s=>document.querySelector(s);
 const style=document.createElement('link');style.rel='stylesheet';style.href='/workspace.css';document.head.append(style);
 const navigation=$('.overview-nav nav'),main=document.createElement('div');main.className='workspace-main';main.setAttribute('aria-label','메인 메뉴');
 // 2026-11-05: 두 단계(내 자산/Strategy Lab → 세부 탭) 메뉴를 한 줄로 펼친다. 원래 nav 버튼은 숨겨 두고 그대로 눌러 화면을 바꾼다.
-const names={market:'시장',rules:'규칙',precheck:'종목·주문 점검',report:'성적표',paper:'모의투자',sectors:'섹터',issues:'이슈',quicktest:'전략 테스트·과거 기업 분석',home:'홈',toss:'포트폴리오 (참고)',performance:'과거 투자 성과',planner:'목표·ETF 적립',evidence:'판단 기록',strategy:'원칙 승인·모의 운용 (고급)',comparison:'과거 검증',simulation:'투자금 계산',assets:'모의 운용',news:'시장 뉴스',model:'모델 연구'};
-const primary=[['home','홈'],['market','시장'],['paper','모의투자'],['report','성적표'],['rules','규칙']],marketViews=['market','precheck','sectors','issues','news'],moreViews=['quicktest','toss','performance','planner','evidence','strategy','model'],labViews=['quicktest'],advancedViews=['strategy','comparison','simulation','assets'];
+const names={market:'시장',rules:'규칙',precheck:'종목·주문 점검',report:'내 계좌 최근 기간',paper:'모의투자',sectors:'섹터',issues:'이슈',quicktest:'전략 테스트·과거 기업 분석',home:'홈',toss:'포트폴리오 (참고)',performance:'과거 투자 성과',planner:'목표·ETF 적립',evidence:'판단 기록',strategy:'원칙 승인·모의 운용 (고급)',comparison:'과거 검증',simulation:'투자금 계산',assets:'모의 운용',news:'시장 뉴스',model:'모델 연구'};
+const primary=[['home','홈'],['rules','규칙'],['paper','모의투자'],['market','시장']],marketViews=['market','precheck','sectors','issues','news'],moreViews=['quicktest','toss','performance','planner','evidence','strategy','model'],labViews=['quicktest'],advancedViews=['strategy','comparison','simulation','assets'];
 const hiddenNav=document.createElement('div');hiddenNav.hidden=true;hiddenNav.className='workspace-hidden-nav';
 for(const view of Object.keys(names)){const button=document.querySelector(`.sidebar [data-view="${view}"]`);if(button){button.textContent=names[view];hiddenNav.append(button);}}
 const topButtons=new Map();

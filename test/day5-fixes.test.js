@@ -6,6 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createPaperLive, createLedgerStore } from '../lib/paper-live.js';
 import { gradeNews, createIssueWatch, NEWS_ALIAS } from '../lib/issue-watch.js';
+import { publicSnapshot } from '../lib/paper-public.js';
 
 function setup({ lastCandle = '2026-12-31', exitQty = 0 } = {}) {
   // 지수: 2026-11-13 시가 70,000 → 그날부터 종가 77,000(+10%). 그 전은 35,000(1년 전 봉으로 떨어지면 +120%가 나온다).
@@ -81,4 +82,20 @@ test('미국 잔고 조회 실패(usError): 미국 보유분이 빠진 잔고로
   const bad = createPaperLive({ client: c, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-d5u-'))), readMarket: async () => ({ candles: [] }), now: () => state.t, defaultPlan: () => ({ SPY: { pct: 30, name: 'S&P500 ETF', currency: 'USD' } }), defaultPlanVersion: () => 'T1' });
   st = await bad.status(); assert.equal(st.balance, null); assert.match(st.error, /미국 잔고를 읽지 못했습니다/); assert.equal(st.marks.length, 0, '불완전한 잔고는 기록하지 않는다');
   await assert.rejects(bad.preview({ rebalance: true }), /미국 잔고를 읽지 못했습니다/); assert.ok(good > 0 && orig === undefined);
+});
+
+test('모의계좌 규칙 변경 잠금(결정 34): 서버 설정 일수 안에는 409 로 거부 · 처음 저장과 같은 값 저장은 통과 · 기본값 0 이면 제한 없음 · 상태에 다음 변경 가능 시각', async () => {
+  const mk = days => { const state = { t: Date.parse('2026-11-16T01:30:00Z') }; const client = { settings: () => ({ mode: 'vps', accountMasked: '****0000' }), async price() { return { market: 'KR', currency: 'KRW', exchange: 'KRX', price: 70000, upper: 0, lower: 0, halted: false }; }, async balance() { return { cash: 100_000_000, total: 100_000_000, stock: 0, positions: [], cashUsd: 0, stockUsd: 0 }; }, async buyingPower() { return { maxQty: 1e6 }; }, async place() { return { odno: '1' }; }, async cancel() { return {}; }, async orders() { return []; } };
+    return { state, pl: createPaperLive({ client, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-lock-'))), readMarket: async () => ({ candles: [] }), now: () => state.t, defaultPlan: () => null, ...(days === undefined ? {} : { prefsCooldownDays: days }) }) }; };
+  const R = { maxSingle: 25, minCash: 10, dailyLoss: 2.5, maxTrades30: 8 }, a = mk(28);
+  assert.deepEqual(a.pl.setPrefs({ rules: R }).changed, ['init']);
+  assert.deepEqual(a.pl.setPrefs({ rules: R }).changed, [], '같은 값은 변경이 아니다');
+  assert.throws(() => a.pl.setPrefs({ rules: { ...R, dailyLoss: 1.5 }, reason: '한도를 낮춘다' }), e => e.status === 409 && e.code === 'prefs_locked' && /2026-12-14부터/.test(e.message) && typeof e.allowedAt === 'string');
+  a.state.t += 27 * 864e5; assert.throws(() => a.pl.setPrefs({ rules: { ...R, dailyLoss: 1.5 }, reason: '한도를 낮춘다' }), e => e.status === 409);
+  a.state.t += 1 * 864e5; assert.throws(() => a.pl.setPrefs({ rules: { ...R, dailyLoss: 1.5 } }), e => e.status === 400, '잠금이 풀려도 이유는 필요');
+  assert.deepEqual(a.pl.setPrefs({ rules: { ...R, dailyLoss: 1.5 }, reason: '한도를 낮춘다' }).changed, ['dailyLoss']);
+  const st = await a.pl.status(); assert.equal(st.prefsCooldownDays, 28); assert.equal(st.prefsNextChangeAt, new Date(a.state.t + 28 * 864e5).toISOString());
+  const pub = publicSnapshot(st, { asOf: new Date(a.state.t).toISOString() }); assert.equal(pub.prefsCooldownDays, 28); assert.equal(pub.prefsNextChangeAt, st.prefsNextChangeAt);
+  const b = mk(undefined); b.pl.setPrefs({ rules: R }); assert.deepEqual(b.pl.setPrefs({ rules: { ...R, dailyLoss: 1.5 }, reason: '바로 바꾼다' }).changed, ['dailyLoss'], '설정이 없으면(0) 제한 없음 — 기존 동작');
+  assert.equal((await b.pl.status()).prefsNextChangeAt, null);
 });
