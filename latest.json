@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T23:12:22.199Z",
+ "updatedAt": "2026-11-13T23:27:13.297Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -121,30 +121,30 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": -0.8,
-  "rates": 0.3,
+  "war": -0.3,
+  "politics": -0.5,
+  "rates": 0.9,
   "trade": 0.5,
   "fx": -0.4,
-  "energy": -0.1,
-  "market": -0.3,
+  "energy": 0.1,
+  "market": -0.2,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 1,
-   "saturated": 0,
-   "queries": 3
-  },
-  "politics": {
    "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
+  "politics": {
+   "rate": 1.6,
+   "saturated": 0,
+   "queries": 3
+  },
   "rates": {
-   "rate": 2.4,
+   "rate": 3.4,
    "saturated": 0,
    "queries": 3
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.4,
+   "rate": 3.6,
    "saturated": 1,
    "queries": 3
   },
@@ -189,16 +189,29 @@
    "id": "s238rd",
    "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
    "firstSeen": "2026-11-13T13:43:00.000Z",
-   "lastSeen": "2026-11-13T19:30:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-13T23:20:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "rates"
+    "rates",
+    "market"
    ],
    "critical": [
     "rates"
    ],
    "links": [
+    {
+     "title": "美 생산자물가 6.5% 급등, 4년 만에 최고…연준 12월 금리인상 '무게'",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731654",
+     "host": "ebn.co.kr",
+     "at": "2026-11-13T23:20:00.000Z"
+    },
+    {
+     "title": "美 10월 도매물가 전년 대비 6.5%↑…4년만에 최고",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887173",
+     "host": "getnews.co.kr",
+     "at": "2026-11-13T22:58:00.000Z"
+    },
     {
      "title": "미국 10월 생산자물가 4년 만에 최고…'빅스텝' 주목",
      "link": "https://news.mtn.co.kr/article/2026111404295484786",
@@ -206,23 +219,17 @@
      "at": "2026-11-13T19:30:00.000Z"
     },
     {
-     "title": "美 도매물가 예상 밑돌았지만…연간 상승률은 4년 만에 최고",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579627&class=42&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-13T16:01:00.000Z"
-    },
-    {
-     "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
-     "link": "https://www.chosun.com/economy/int_economy/2026/11/13/3VYNNJCWLNEXBAVXEAFTE5TAYQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-13T13:43:00.000Z"
+     "title": "미국 10월 도매물가 전년 대비 6.5%↑…약 4년 만에 최고",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712734&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-13T18:30:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 36,
-    "spike": 0.3,
+    "score": 47,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -261,8 +268,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.3,
+    "score": 35,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -302,8 +309,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.3,
+    "score": 35,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -363,8 +370,8 @@
    "title": "뉴욕증시 프리뷰, 美 주가지수 선물 혼조…엔비디아 반등에도 AI 투자 불...",
    "firstSeen": "2026-11-13T13:16:00.000Z",
    "lastSeen": "2026-11-13T23:06:00.000Z",
-   "count": 14,
-   "sources": 13,
+   "count": 11,
+   "sources": 10,
    "topics": [
     "rates",
     "fx"
@@ -399,66 +406,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 22,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "1091xbo",
-   "title": "[속보] 미국 10월 PPI 전년 동기대비 6.5%, 근원 PPI는 4.9% 올라…물가 ...",
-   "firstSeen": "2026-11-13T13:32:00.000Z",
-   "lastSeen": "2026-11-13T22:58:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "rates",
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 10월 도매물가 전년 대비 6.5%↑…4년만에 최고",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887173",
-     "host": "getnews.co.kr",
-     "at": "2026-11-13T22:58:00.000Z"
-    },
-    {
-     "title": "미국 10월 도매물가 전년 대비 6.5%↑…약 4년 만에 최고",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712734&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-13T18:30:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 10월 PPI 둔화 속 장 초반 혼조세",
-     "link": "https://biz.chosun.com/stock/overseas_stock/2026/11/14/JVDYVJW72ZAVNB4OVV3V4BI2FI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-13T16:29:00.000Z"
-    },
-    {
-     "title": "미국 10월 도매 물가 전년보다 6.5%↑...4년 만에 최고",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611140117393544",
-     "host": "ytn.co.kr",
-     "at": "2026-11-13T16:17:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0.3,
+    "score": 27,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -514,8 +463,64 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 17,
-    "spike": 0.3,
+    "score": 22,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "6ngvns",
+   "title": "국고채 10년물 금리 4% 돌파…열흘 만에 재진입",
+   "firstSeen": "2026-11-13T04:22:00.000Z",
+   "lastSeen": "2026-11-13T22:22:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"국고채 금리, 연내 저점 찍고 반등…추격 매수 신중해야\"",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444756",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-13T22:22:00.000Z"
+    },
+    {
+     "title": "국고채 금리 상승…10년물, 열흘만에 다시 4%대로",
+     "link": "http://www.fins.co.kr/news/articleView.html?idxno=110556",
+     "host": "fins.co.kr",
+     "at": "2026-11-13T21:40:00.000Z"
+    },
+    {
+     "title": "한은 금리 인상에도 국고채·환율 하락 전망",
+     "link": "https://www.mediapen.com/news/view/1137439",
+     "host": "mediapen.com",
+     "at": "2026-11-13T21:02:00.000Z"
+    },
+    {
+     "title": "국고채 10년물 금리 4% 돌파…열흘 만에 재진입",
+     "link": "http://www.kjdaily.com/article.php?aid=1794582487692181276",
+     "host": "kjdaily.com",
+     "at": "2026-11-13T15:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 19,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -585,48 +590,41 @@
    }
   },
   {
-   "id": "6ngvns",
-   "title": "국고채 10년물 금리 4% 돌파…열흘 만에 재진입",
-   "firstSeen": "2026-11-13T04:22:00.000Z",
-   "lastSeen": "2026-11-13T22:22:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "1m2xqso",
+   "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
+   "firstSeen": "2026-11-13T03:02:00.000Z",
+   "lastSeen": "2026-11-13T07:46:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "rates",
-    "fx"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"국고채 금리, 연내 저점 찍고 반등…추격 매수 신중해야\"",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444756",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-13T22:22:00.000Z"
+     "title": "9월 통화량 17조 늘었지만…증가율 석 달째 둔화",
+     "link": "https://www.sidae.com/article/2026111313551647703",
+     "host": "sidae.com",
+     "at": "2026-11-13T07:46:00.000Z"
     },
     {
-     "title": "국고채 금리 상승…10년물, 열흘만에 다시 4%대로",
-     "link": "http://www.fins.co.kr/news/articleView.html?idxno=110556",
-     "host": "fins.co.kr",
-     "at": "2026-11-13T21:40:00.000Z"
+     "title": "9월 시중 통화량 17조1000억원 증가…반도체 수출대금 유입에 11개월 연...",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=354616",
+     "host": "greened.kr",
+     "at": "2026-11-13T04:56:00.000Z"
     },
     {
-     "title": "한은 금리 인상에도 국고채·환율 하락 전망",
-     "link": "https://www.mediapen.com/news/view/1137439",
-     "host": "mediapen.com",
-     "at": "2026-11-13T21:02:00.000Z"
-    },
-    {
-     "title": "국고채 10년물 금리 4% 돌파…열흘 만에 재진입",
-     "link": "http://www.kjdaily.com/article.php?aid=1794582487692181276",
-     "host": "kjdaily.com",
-     "at": "2026-11-13T15:12:00.000Z"
+     "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026111311003622029",
+     "host": "newsway.co.kr",
+     "at": "2026-11-13T03:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 14,
-    "spike": 0.3,
+    "score": 16,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -683,8 +681,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 0,
+    "score": 13,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -699,41 +697,125 @@
    }
   },
   {
-   "id": "1m2xqso",
-   "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
-   "firstSeen": "2026-11-13T03:02:00.000Z",
-   "lastSeen": "2026-11-13T07:46:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1792e1l",
+   "title": "[월드 e 브리핑] 미 기술주 흔들리자 유럽으로…독일 닥스, 2만7천↑",
+   "firstSeen": "2026-11-13T11:56:00.000Z",
+   "lastSeen": "2026-11-13T14:03:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[글로벌 특징주] 美 기술주 흔들리자 웃는 유럽 증시…'빅테크 부재'가...",
+     "link": "https://www.newspim.com/news/view/20261113001455",
+     "host": "newspim.com",
+     "at": "2026-11-13T14:03:00.000Z"
+    },
+    {
+     "title": "[월드 e 브리핑] 미 기술주 흔들리자 유럽으로…독일 닥스, 2만7천↑",
+     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1543732",
+     "host": "obsnews.co.kr",
+     "at": "2026-11-13T11:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 13,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "x1j0xs",
+   "title": "[주간증시전망] 코스피 5200~6000선 반등 전망…엔비디아 실적·연준 주...",
+   "firstSeen": "2026-11-13T04:47:00.000Z",
+   "lastSeen": "2026-11-13T22:02:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "9월 통화량 17조 늘었지만…증가율 석 달째 둔화",
-     "link": "https://www.sidae.com/article/2026111313551647703",
-     "host": "sidae.com",
-     "at": "2026-11-13T07:46:00.000Z"
+     "title": "[주간증시전망] 코스피, 美금리·AI 전망에 좌우…엔비디아 실적·앤트로...",
+     "link": "https://www.ajunews.com/view/20261114014700961",
+     "host": "ajunews.com",
+     "at": "2026-11-13T22:02:00.000Z"
     },
     {
-     "title": "9월 시중 통화량 17조1000억원 증가…반도체 수출대금 유입에 11개월 연...",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=354616",
-     "host": "greened.kr",
-     "at": "2026-11-13T04:56:00.000Z"
-    },
-    {
-     "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026111311003622029",
-     "host": "newsway.co.kr",
-     "at": "2026-11-13T03:02:00.000Z"
+     "title": "[주간증시전망] 코스피 5200~6000선 반등 전망…엔비디아 실적·연준 주...",
+     "link": "https://www.etoday.co.kr/news/view/2648041",
+     "host": "etoday.co.kr",
+     "at": "2026-11-13T21:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 11,
-    "spike": 0.3,
+    "score": 13,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "jphvub",
+   "title": "뉴욕증시, 다우지수만 0.1% 상승…엔비디아 2%↓",
+   "firstSeen": "2026-11-13T21:28:00.000Z",
+   "lastSeen": "2026-11-13T22:14:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시, 다우지수만 0.1% 상승…엔비디아 2%↓, 하락 지속(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261114009551072?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-13T22:14:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 다우지수만 0.1% 상승…엔비디아 2%↓",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346377?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-13T21:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 13,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -749,12 +831,14 @@
   },
   {
    "id": "39u4sn",
-   "title": "'젠슨 황 사태' 코너 몰린 러트닉...베선트도 공개 저격",
+   "title": "러트닉 상무장관 경질 위기‥베선트도 공개 저격",
    "firstSeen": "2026-11-13T22:02:00.000Z",
    "lastSeen": "2026-11-13T22:58:00.000Z",
-   "count": 3,
+   "count": 2,
    "sources": 2,
    "topics": [
+    "politics",
+    "rates",
     "trade"
    ],
    "critical": [],
@@ -770,29 +854,23 @@
      "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6865591_37012.html",
      "host": "imnews.imbc.com",
      "at": "2026-11-13T22:05:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 사태' 코너 몰린 러트닉...베선트도 공개 저격",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611140702202200",
-     "host": "ytn.co.kr",
-     "at": "2026-11-13T22:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 11,
-    "spike": 0.5,
+    "score": 13,
+    "spike": 0.9,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
     },
     "why": [
-     "S&P 500 -0.4%"
+     "미 10년 금리 +5.1bp"
     ]
    }
   },
@@ -850,109 +928,21 @@
      "S&P 500 -0.4%"
     ]
    }
-  },
-  {
-   "id": "16tnhax",
-   "title": "'젠슨 황' 불확실성 지속…외국인 매도 폭탄에 코스피 5200대로 추락",
-   "firstSeen": "2026-11-13T07:04:00.000Z",
-   "lastSeen": "2026-11-13T20:50:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "5500선 뚫고도 5290선 추락…코스피, 외국인 매도에 245포인트 출렁",
-     "link": "https://www.geconomy.co.kr/news/article.html?no=325651",
-     "host": "geconomy.co.kr",
-     "at": "2026-11-13T20:50:00.000Z"
-    },
-    {
-     "title": "엔비디아 후폭풍에 美반도체 6% 급락…외국인 7000억 매도, 코스피 5300선...",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=354659",
-     "host": "greened.kr",
-     "at": "2026-11-13T18:25:00.000Z"
-    },
-    {
-     "title": "'젠슨 황' 불확실성 지속…외국인 매도 폭탄에 코스피 5200대로 추락",
-     "link": "https://www.ddaily.co.kr/page/view/2026111316005377798",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-13T07:07:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "1eknkrm",
-   "title": "[마감시황] 반도체주 상승분 반납…코스피 '전강후약' 0.98% 하락",
-   "firstSeen": "2026-11-13T05:01:00.000Z",
-   "lastSeen": "2026-11-13T13:14:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피 5500선 터치 후 0.98% 하락 마감…외국인 '팔자'에 상승분 반납",
-     "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=89521",
-     "host": "industrynews.co.kr",
-     "at": "2026-11-13T13:14:00.000Z"
-    },
-    {
-     "title": "'전강후약' 코스피, 젠슨 황 쇼크에 5290선 약세 마감···외국인 '팔자...",
-     "link": "https://www.seoulfn.com/news/articleView.html?idxno=642799",
-     "host": "seoulfn.com",
-     "at": "2026-11-13T07:30:00.000Z"
-    },
-    {
-     "title": "[마감시황] 반도체주 상승분 반납…코스피 '전강후약' 0.98% 하락",
-     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748431",
-     "host": "polinews.co.kr",
-     "at": "2026-11-13T07:27:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-13T23:27:13.297Z",
+   "id": "s238rd",
+   "level": "caution",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731654",
+   "delivered": false
+  },
   {
    "at": "2026-11-13T22:12:25.984Z",
    "id": "14hvp9w",
@@ -1179,18 +1169,6 @@
     "금 -2.38%"
    ],
    "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748305",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T14:28:13.899Z",
-   "id": "9kvjue",
-   "level": "caution",
-   "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +7.55%"
-   ],
-   "link": "https://www.fnnews.com/news/202611122232315459",
    "delivered": false
   }
  ],
