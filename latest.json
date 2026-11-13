@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T04:16:01.370Z",
+ "updatedAt": "2026-11-13T04:28:24.160Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,8 +10,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 5308.7001953125,
-   "change": -0.64,
+   "last": 5305.77001953125,
+   "change": -0.69,
    "z": -0.2,
    "sd": 2.919676065766116,
    "source": "Yahoo",
@@ -23,9 +23,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 704.3200073242188,
-   "change": 1.12,
-   "z": 0.4,
+   "last": 705.5,
+   "change": 1.29,
+   "z": 0.5,
    "sd": 2.6920969628677787,
    "source": "Yahoo",
    "checked": true
@@ -62,7 +62,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1332.8800048828125,
+   "last": 1332.8599853515625,
    "change": -0.25,
    "z": -0.4,
    "sd": 0.6327981458522444,
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.30999755859375,
-   "change": -0.48,
-   "z": -0.2,
+   "last": 88.43000030517578,
+   "change": -0.35,
+   "z": -0.1,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3924.5,
-   "change": 1.01,
-   "z": 0.7,
+   "last": 3914.300048828125,
+   "change": 0.75,
+   "z": 0.5,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -119,8 +119,8 @@
   }
  ],
  "spikes": {
-  "war": 0.1,
-  "politics": 0,
+  "war": -0.2,
+  "politics": -0.4,
   "rates": 0.6,
   "trade": 0.5,
   "fx": 0.8,
@@ -128,16 +128,16 @@
   "market": 0.3,
   "credit": 1,
   "disaster": 0,
-  "policy": -0.4
+  "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 1.9,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   }
@@ -306,6 +306,64 @@
    }
   },
   {
+   "id": "168l4dl",
+   "title": "[원자재 시황] 금·비트코인 3%대 급락",
+   "firstSeen": "2026-11-12T22:30:00.000Z",
+   "lastSeen": "2026-11-13T04:28:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "rates",
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 쇼크 속 비트코인 9400만원 아래로",
+     "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3082557",
+     "host": "newsclaim.co.kr",
+     "at": "2026-11-13T04:28:00.000Z"
+    },
+    {
+     "title": "비트코인 7만달러 하회…금리 상승 우려에 암호화폐 매도세 가속",
+     "link": "https://www.newspim.com/news/view/20261113000867",
+     "host": "newspim.com",
+     "at": "2026-11-13T03:53:00.000Z"
+    },
+    {
+     "title": "비트코인 왜 급락했나…엔비디아·스트래티지·금리 부담 겹쳐",
+     "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=715164",
+     "host": "digitaltoday.co.kr",
+     "at": "2026-11-13T00:14:00.000Z"
+    },
+    {
+     "title": "[원자재 시황] 금·비트코인 3%대 급락",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731518",
+     "host": "ebn.co.kr",
+     "at": "2026-11-13T00:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
+    ]
+   }
+  },
+  {
    "id": "7shul7",
    "title": "GS건설, 자회사 산은 빚 1125억 대위변제…외화채 위험 완화",
    "firstSeen": "2026-11-13T01:50:00.000Z",
@@ -358,58 +416,6 @@
    }
   },
   {
-   "id": "168l4dl",
-   "title": "[원자재 시황] 금·비트코인 3%대 급락",
-   "firstSeen": "2026-11-12T22:30:00.000Z",
-   "lastSeen": "2026-11-13T03:53:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates",
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "비트코인 7만달러 하회…금리 상승 우려에 암호화폐 매도세 가속",
-     "link": "https://www.newspim.com/news/view/20261113000867",
-     "host": "newspim.com",
-     "at": "2026-11-13T03:53:00.000Z"
-    },
-    {
-     "title": "비트코인 왜 급락했나…엔비디아·스트래티지·금리 부담 겹쳐",
-     "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=715164",
-     "host": "digitaltoday.co.kr",
-     "at": "2026-11-13T00:14:00.000Z"
-    },
-    {
-     "title": "[원자재 시황] 금·비트코인 3%대 급락",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731518",
-     "host": "ebn.co.kr",
-     "at": "2026-11-13T00:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 38,
-    "spike": 1.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
-    ]
-   }
-  },
-  {
    "id": "1vsoib7",
    "title": "\"금융권 해킹, 뱅크런 번지면 시스템 위기\"",
    "firstSeen": "2026-11-12T04:49:00.000Z",
@@ -446,6 +452,52 @@
     "why": [
      "핵심 단어",
      "VIX 변동성 +6.92%"
+    ]
+   }
+  },
+  {
+   "id": "9oij0q",
+   "title": "[뉴욕채권] 국채가 급락…'이란 기대↓' 유가 급등에 10년물 5%대 안착",
+   "firstSeen": "2026-11-12T23:20:00.000Z",
+   "lastSeen": "2026-11-13T04:22:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 10년물 국채 금리 5% 돌파...연준 인상 가능성에 주택시장 '찬바람'",
+     "link": "http://coinreaders.com/269948",
+     "host": "coinreaders.com",
+     "at": "2026-11-13T04:22:00.000Z"
+    },
+    {
+     "title": "[뉴욕채권] 국채가 급락…'이란 기대↓' 유가 급등에 10년물 5%대 안착",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444544",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-12T23:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 10.5,
+     "unit": "bp",
+     "z": 2
+    },
+    "why": [
+     "미 10년 금리 +10.5bp(평소의 2배)"
     ]
    }
   },
@@ -512,15 +564,15 @@
    "critical": [],
    "links": [
     {
-     "title": "‘오락가락’ 트럼프… 이란 만난다더니 “합의 필요없다”",
-     "link": "https://www.munhwa.com/article/11631133?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-13T02:56:00.000Z"
-    },
-    {
      "title": "트럼프, 밴스 이란 임무에서 배제…“이란과 합의 필요 없다”",
      "link": "https://www.hani.co.kr/arti/international/international_general/1287192.html",
      "host": "hani.co.kr",
+     "at": "2026-11-13T02:56:00.000Z"
+    },
+    {
+     "title": "‘오락가락’ 트럼프… 이란 만난다더니 “합의 필요없다”",
+     "link": "https://www.munhwa.com/article/11631133?ref=naver",
+     "host": "munhwa.com",
      "at": "2026-11-13T02:56:00.000Z"
     },
     {
@@ -543,54 +595,14 @@
     "spike": 1.7,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.01,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
-     "금 +1.01%"
-    ]
-   }
-  },
-  {
-   "id": "9oij0q",
-   "title": "[뉴욕채권] 국채가 급락…'이란 기대↓' 유가 급등에 10년물 5%대 안착",
-   "firstSeen": "2026-11-12T23:20:00.000Z",
-   "lastSeen": "2026-11-12T23:20:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "rates",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴욕채권] 국채가 급락…'이란 기대↓' 유가 급등에 10년물 5%대 안착",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444544",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-12T23:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 1.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 10.5,
-     "unit": "bp",
-     "z": 2
-    },
-    "why": [
-     "미 10년 금리 +10.5bp(평소의 2배)"
+     "VIX 변동성 +6.92%"
     ]
    }
   },
@@ -598,15 +610,27 @@
    "id": "1j8zxna",
    "title": "젠슨 황 사임 충격에 뉴욕증시 동반 하락…엔비디아 4% 급락[투자360]",
    "firstSeen": "2026-11-12T21:22:00.000Z",
-   "lastSeen": "2026-11-13T02:26:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-13T04:24:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[이슈] 젠슨 황, 엔비디아 CEO 전격 사퇴 'AI황제 추락'…美민주, '엔비...",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748416",
+     "host": "polinews.co.kr",
+     "at": "2026-11-13T04:24:00.000Z"
+    },
+    {
+     "title": "젠슨 황 전격 사임…엔비디아 33년 리더십 막 내렸다",
+     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200470",
+     "host": "mstoday.co.kr",
+     "at": "2026-11-13T03:14:00.000Z"
+    },
     {
      "title": "'젠슨 황 퇴진' 엔비디아발 기술주 충격에 유가 변수까지...뉴욕증시 일...",
      "link": "https://www.thepublic.kr/news/articleView.html?idxno=326522",
@@ -618,35 +642,23 @@
      "link": "https://www.ytn.co.kr/_ln/0134_202611131125096439",
      "host": "ytn.co.kr",
      "at": "2026-11-13T02:25:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 엔비디아 CEO 사임·유가 급등에 일제히 하락…나스닥 0.39%↓",
-     "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=95152",
-     "host": "mediafine.co.kr",
-     "at": "2026-11-13T01:14:00.000Z"
-    },
-    {
-     "title": "[잠든 사이 월가] 엔비디아 젠슨 황 사임, 장중 14% 급락...돈은 AMD로 몰...",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38477",
-     "host": "junggi.co.kr",
-     "at": "2026-11-13T00:34:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
+    "score": 32,
     "spike": 1.7,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.01,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
-     "금 +1.01%"
+     "VIX 변동성 +6.92%"
     ]
    }
   },
@@ -724,19 +736,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
+    "score": 28,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.01,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
      "핵심 단어",
-     "금 +1.01%"
+     "VIX 변동성 +6.92%"
     ]
    }
   },
@@ -764,19 +776,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
+    "score": 28,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.01,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
      "핵심 단어",
-     "금 +1.01%"
+     "VIX 변동성 +6.92%"
     ]
    }
   },
@@ -806,15 +818,15 @@
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.01,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 6.92,
      "unit": "%",
-     "z": 0.7
+     "z": 0.6
     },
     "why": [
      "핵심 단어",
-     "금 +1.01%"
+     "VIX 변동성 +6.92%"
     ]
    }
   },
