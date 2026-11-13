@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-13T13:47:54.257Z",
+ "updatedAt": "2026-11-13T14:14:17.810Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -35,12 +35,13 @@
    "label": "S&P 500",
    "unit": "%",
    "available": true,
-   "date": "2026-11-12",
-   "last": 7592.39990234375,
-   "change": -0.35,
-   "z": -0.4,
+   "date": "2026-11-13",
+   "last": 7592.4,
+   "change": 0,
+   "z": 0,
    "sd": 0.9356164495411708,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -48,12 +49,13 @@
    "label": "나스닥",
    "unit": "%",
    "available": true,
-   "date": "2026-11-12",
-   "last": 25366.08984375,
-   "change": -0.39,
-   "z": -0.3,
+   "date": "2026-11-13",
+   "last": 25366.09,
+   "change": 0,
+   "z": 0,
    "sd": 1.317158730401176,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -62,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 1335.510009765625,
-   "change": -0.06,
-   "z": -0.1,
+   "last": 1336.469970703125,
+   "change": 0.02,
+   "z": 0,
    "sd": 0.6327981458522444,
    "source": "Yahoo"
   },
@@ -74,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 88.66000366210938,
-   "change": -0.09,
-   "z": 0,
+   "last": 89.16999816894531,
+   "change": 0.48,
+   "z": 0.2,
    "sd": 2.8921201786070414,
    "source": "Yahoo"
   },
@@ -86,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 3902,
-   "change": 0.43,
-   "z": 0.3,
+   "last": 3888,
+   "change": 0.07,
+   "z": 0.1,
    "sd": 1.3625379742431585,
    "source": "Yahoo"
   },
@@ -98,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 17.770000457763672,
-   "change": -4.97,
-   "z": -0.4,
+   "last": 18.030000686645508,
+   "change": -3.58,
+   "z": -0.3,
    "sd": 11.782503388614433,
    "source": "Yahoo",
    "checked": true
@@ -111,43 +113,43 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-13",
-   "last": 5.13700008392334,
-   "change": 3.4,
-   "z": 0.6,
+   "last": 5.140999794006348,
+   "change": 3.8,
+   "z": 0.7,
    "sd": 5.431435989551597,
    "source": "Yahoo"
   }
  ],
  "spikes": {
   "war": -0.7,
-  "politics": -1.9,
-  "rates": -0.5,
-  "trade": 0.2,
+  "politics": -1.5,
+  "rates": -0.3,
+  "trade": 0.5,
   "fx": -0.4,
-  "energy": 0.1,
-  "market": -1.4,
-  "credit": 0.3,
+  "energy": 0.3,
+  "market": -1.3,
+  "credit": 0.1,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 0.8,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.4,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.1,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.3,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -157,17 +159,17 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3.3,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.7,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
   "credit": {
-   "rate": 0.3,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 2
   },
@@ -213,13 +215,13 @@
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 3.4,
+     "change": 3.8,
      "unit": "bp",
-     "z": 0.6
+     "z": 0.7
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +3.4bp"
+     "미 10년 금리 +3.8bp"
     ]
    }
   },
@@ -253,13 +255,53 @@
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 3.4,
+     "change": 3.8,
      "unit": "bp",
-     "z": 0.6
+     "z": 0.7
     },
     "why": [
      "핵심 단어",
-     "미 10년 금리 +3.4bp"
+     "미 10년 금리 +3.8bp"
+    ]
+   }
+  },
+  {
+   "id": "s238rd",
+   "title": "[속보] 美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’...",
+   "firstSeen": "2026-11-13T13:43:00.000Z",
+   "lastSeen": "2026-11-13T13:43:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "[속보] 美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’...",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/13/3VYNNJCWLNEXBAVXEAFTE5TAYQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-13T13:43:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 3.8,
+     "unit": "bp",
+     "z": 0.7
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +3.8bp"
     ]
    }
   },
@@ -306,18 +348,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
-    "spike": 0.1,
+    "score": 19,
+    "spike": 0.3,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
      "unit": "%",
-     "z": -0.4
+     "z": -0.3
     },
     "why": [
-     "S&P 500 -0.35%"
+     "코스피 -0.98%"
     ]
    }
   },
@@ -365,69 +407,166 @@
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
      "unit": "%",
-     "z": -0.4
+     "z": -0.3
     },
     "why": [
-     "S&P 500 -0.35%"
+     "코스피 -0.98%"
     ]
    }
   },
   {
-   "id": "7shul7",
-   "title": "GS건설, 자회사 산은 빚 1125억 대위변제…외화채 위험 완화",
-   "firstSeen": "2026-11-13T01:50:00.000Z",
-   "lastSeen": "2026-11-13T11:06:00.000Z",
-   "count": 4,
+   "id": "1aklci8",
+   "title": "[오늘의 이슈]젠슨 황 떠난 엔비디아, 하이닉스엔 악재일까",
+   "firstSeen": "2026-11-12T22:42:00.000Z",
+   "lastSeen": "2026-11-13T09:54:00.000Z",
+   "count": 3,
    "sources": 3,
    "topics": [
-    "credit"
+    "trade",
+    "fx"
    ],
    "critical": [],
    "links": [
     {
-     "title": "GS건설, 자회사 채무 1126억 대신 갚는다",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026111320051979557",
-     "host": "newsway.co.kr",
-     "at": "2026-11-13T11:06:00.000Z"
+     "title": "젠슨 황 떠난 엔비디아 바라보는 개미들 전망이 갈리는 이유... 가장 큰...",
+     "link": "https://www.wikitree.co.kr/articles/1174452",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-13T09:54:00.000Z"
     },
     {
-     "title": "GS건설, 자회사 대출 1125억 상환...원리금 일괄 정리",
-     "link": "https://www.bloter.net/news/articleView.html?idxno=678524",
-     "host": "bloter.net",
-     "at": "2026-11-13T03:13:00.000Z"
+     "title": "\"지금 사야 하나\"…젠슨 황 떠난 엔비디아, 개미들 '갈팡질팡'",
+     "link": "https://www.news1.kr/finance/general-stock/6353616",
+     "host": "news1.kr",
+     "at": "2026-11-13T08:45:00.000Z"
     },
     {
-     "title": "GS건설, 에너지머티리얼즈 채무 1126억원 대위변제",
-     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54698",
-     "host": "koreareport.co.kr",
-     "at": "2026-11-13T02:32:00.000Z"
-    },
-    {
-     "title": "GS건설, 자회사 산은 빚 1125억 대위변제…외화채 위험 완화",
-     "link": "https://www.bloter.net/news/articleView.html?idxno=678508",
-     "host": "bloter.net",
-     "at": "2026-11-13T01:50:00.000Z"
+     "title": "[오늘의 이슈]젠슨 황 떠난 엔비디아, 하이닉스엔 악재일까",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=107964",
+     "host": "newskr.kr",
+     "at": "2026-11-12T22:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 0.3,
+    "score": 13,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
      "unit": "%",
-     "z": -0.4
+     "z": -0.3
     },
     "why": [
-     "S&P 500 -0.35%"
+     "코스피 -0.98%"
+    ]
+   }
+  },
+  {
+   "id": "ghmtjy",
+   "title": "“젠슨 황 불륜 상대는 中국가안전부 ‘반도체팀’ 공작원”… 대만 자...",
+   "firstSeen": "2026-11-13T02:55:00.000Z",
+   "lastSeen": "2026-11-13T13:32:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황 내연녀…“中 국가안전부 ‘반도체팀’ 공작원”",
+     "link": "https://www.kmib.co.kr/article/20261113500665",
+     "host": "kmib.co.kr",
+     "at": "2026-11-13T13:32:00.000Z"
+    },
+    {
+     "title": "젠슨 황 불륜 상대, 中 정보기관 연루 의혹 제기…반도체 우회 반출도 ...",
+     "link": "https://www.g-enews.com/view.php?ud=2026111321342391143d7a510102_1",
+     "host": "g-enews.com",
+     "at": "2026-11-13T12:46:00.000Z"
+    },
+    {
+     "title": "“젠슨 황 불륜 상대는 中국가안전부 ‘반도체팀’ 공작원”… 대만 자...",
+     "link": "https://www.dt.co.kr/article/12095067?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-13T12:41:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 13,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
+     "unit": "%",
+     "z": -0.3
+    },
+    "why": [
+     "코스피 -0.98%"
+    ]
+   }
+  },
+  {
+   "id": "1ux1qoy",
+   "title": "미국 10월 생산자물가 전월비 0.3%↑…예상치 하회",
+   "firstSeen": "2026-11-13T13:56:00.000Z",
+   "lastSeen": "2026-11-13T14:05:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "politics",
+    "rates",
+    "trade",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 10월 생산자물가 0.3%↑…연 6.5% 상승 4년만에 최고",
+     "link": "https://www.fnnews.com/news/202611132302144149",
+     "host": "fnnews.com",
+     "at": "2026-11-13T14:05:00.000Z"
+    },
+    {
+     "title": "美 10월 생산자물가 0.3% 상승…에너지 하락에 상승폭 둔화",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026111322594233285",
+     "host": "newsway.co.kr",
+     "at": "2026-11-13T14:02:00.000Z"
+    },
+    {
+     "title": "미국 10월 생산자물가 전월비 0.3%↑…예상치 하회",
+     "link": "http://www.4th.kr/news/articleView.html?idxno=2121861",
+     "host": "4th.kr",
+     "at": "2026-11-13T13:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 13,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 3.8,
+     "unit": "bp",
+     "z": 0.7
+    },
+    "why": [
+     "미 10년 금리 +3.8bp"
     ]
    }
   },
@@ -477,12 +616,12 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -4.97,
+     "change": -3.58,
      "unit": "%",
-     "z": -0.4
+     "z": -0.3
     },
     "why": [
-     "VIX 변동성 -4.97%"
+     "VIX 변동성 -3.58%"
     ]
    }
   },
@@ -533,111 +672,67 @@
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
-     "change": 3.4,
+     "change": 3.8,
      "unit": "bp",
-     "z": 0.6
+     "z": 0.7
     },
     "why": [
-     "미 10년 금리 +3.4bp"
+     "미 10년 금리 +3.8bp"
     ]
    }
   },
   {
-   "id": "1aklci8",
-   "title": "[오늘의 이슈]젠슨 황 떠난 엔비디아, 하이닉스엔 악재일까",
-   "firstSeen": "2026-11-12T22:42:00.000Z",
-   "lastSeen": "2026-11-13T09:54:00.000Z",
-   "count": 3,
+   "id": "7shul7",
+   "title": "GS건설, 자회사 산은 빚 1125억 대위변제…외화채 위험 완화",
+   "firstSeen": "2026-11-13T01:50:00.000Z",
+   "lastSeen": "2026-11-13T11:06:00.000Z",
+   "count": 4,
    "sources": 3,
    "topics": [
-    "trade",
-    "fx"
+    "credit"
    ],
    "critical": [],
    "links": [
     {
-     "title": "젠슨 황 떠난 엔비디아 바라보는 개미들 전망이 갈리는 이유... 가장 큰...",
-     "link": "https://www.wikitree.co.kr/articles/1174452",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-13T09:54:00.000Z"
+     "title": "GS건설, 자회사 채무 1126억 대신 갚는다",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026111320051979557",
+     "host": "newsway.co.kr",
+     "at": "2026-11-13T11:06:00.000Z"
     },
     {
-     "title": "\"지금 사야 하나\"…젠슨 황 떠난 엔비디아, 개미들 '갈팡질팡'",
-     "link": "https://www.news1.kr/finance/general-stock/6353616",
-     "host": "news1.kr",
-     "at": "2026-11-13T08:45:00.000Z"
+     "title": "GS건설, 자회사 대출 1125억 상환...원리금 일괄 정리",
+     "link": "https://www.bloter.net/news/articleView.html?idxno=678524",
+     "host": "bloter.net",
+     "at": "2026-11-13T03:13:00.000Z"
     },
     {
-     "title": "[오늘의 이슈]젠슨 황 떠난 엔비디아, 하이닉스엔 악재일까",
-     "link": "http://www.newskr.kr/news/articleView.html?idxno=107964",
-     "host": "newskr.kr",
-     "at": "2026-11-12T22:42:00.000Z"
+     "title": "GS건설, 에너지머티리얼즈 채무 1126억원 대위변제",
+     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54698",
+     "host": "koreareport.co.kr",
+     "at": "2026-11-13T02:32:00.000Z"
+    },
+    {
+     "title": "GS건설, 자회사 산은 빚 1125억 대위변제…외화채 위험 완화",
+     "link": "https://www.bloter.net/news/articleView.html?idxno=678508",
+     "host": "bloter.net",
+     "at": "2026-11-13T01:50:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 11,
-    "spike": 0.2,
+    "spike": 0.1,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
      "unit": "%",
-     "z": -0.4
+     "z": -0.3
     },
     "why": [
-     "S&P 500 -0.35%"
-    ]
-   }
-  },
-  {
-   "id": "1hg6ay2",
-   "title": "정부, 경기 진단 ‘회복 흐름→견조한 성장세’…글로벌 경제 불확실성...",
-   "firstSeen": "2026-11-13T01:35:00.000Z",
-   "lastSeen": "2026-11-13T06:34:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "정부, 수출·투자 호조에…‘견조한 성장세’ 상향",
-     "link": "https://www.kukinews.com/article/view/kuk202611130116",
-     "host": "kukinews.com",
-     "at": "2026-11-13T06:34:00.000Z"
-    },
-    {
-     "title": "정부, “우리 경제, ‘회복 흐름’에서 ‘견조한 성장세’로”",
-     "link": "https://www.viva100.com/article/20261113500474",
-     "host": "viva100.com",
-     "at": "2026-11-13T05:18:00.000Z"
-    },
-    {
-     "title": "정부, 경기 진단 ‘회복 흐름→견조한 성장세’…글로벌 경제 불확실성...",
-     "link": "https://biz.heraldcorp.com/article/10936054?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-13T01:35:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 11,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.35%"
+     "코스피 -0.98%"
     ]
    }
   },
@@ -677,18 +772,69 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 10,
-    "spike": 0.1,
+    "score": 11,
+    "spike": 0.3,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
      "unit": "%",
-     "z": -0.4
+     "z": -0.3
     },
     "why": [
-     "S&P 500 -0.35%"
+     "코스피 -0.98%"
+    ]
+   }
+  },
+  {
+   "id": "1s7gpfy",
+   "title": "국고채 금리 상승…유가 상승·美국채 약세",
+   "firstSeen": "2026-11-13T04:10:00.000Z",
+   "lastSeen": "2026-11-13T09:42:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[채권-마감] 美 금리 급등 속 코스피·外人 영향권…국고 10년 4% 넘겨",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444730",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-13T09:42:00.000Z"
+    },
+    {
+     "title": "[채권마감] 10년 금리 10일만 4%대 재진입, 유가·미 금리 급등",
+     "link": "https://www.etoday.co.kr/news/view/2648070",
+     "host": "etoday.co.kr",
+     "at": "2026-11-13T08:16:00.000Z"
+    },
+    {
+     "title": "국고채 금리 상승…유가 상승·美국채 약세",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346332?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-13T08:11:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 11,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 3.8,
+     "unit": "bp",
+     "z": 0.7
+    },
+    "why": [
+     "미 10년 금리 +3.8bp"
     ]
    }
   },
@@ -728,214 +874,73 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
+    "score": 11,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
+     "unit": "%",
+     "z": -0.3
+    },
+    "why": [
+     "코스피 -0.98%"
+    ]
+   }
+  },
+  {
+   "id": "16tnhax",
+   "title": "'전강후약' 코스피, 젠슨 황 쇼크에 5290선 약세 마감···외국인 '팔자...",
+   "firstSeen": "2026-11-13T07:04:00.000Z",
+   "lastSeen": "2026-11-13T14:01:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "war"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'전강후약' 코스피 5,300 붕괴...코스닥 700 하회",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611132301583819",
+     "host": "ytn.co.kr",
+     "at": "2026-11-13T14:01:00.000Z"
+    },
+    {
+     "title": "'전강후약' 코스피 5,300 붕괴...코스닥 700 하회",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611131831314067",
+     "host": "ytn.co.kr",
+     "at": "2026-11-13T09:31:00.000Z"
+    },
+    {
+     "title": "젠슨 황 쇼크에 출렁…코스피 5300선 붕괴",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346348?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-13T09:10:00.000Z"
+    },
+    {
+     "title": "'전강후약' 코스피, 젠슨 황 쇼크에 5290선 약세 마감···외국인 '팔자...",
+     "link": "https://www.seoulfn.com/news/articleView.html?idxno=642799",
+     "host": "seoulfn.com",
+     "at": "2026-11-13T07:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
     "score": 10,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.35%"
-    ]
-   }
-  },
-  {
-   "id": "wbdur9",
-   "title": "\"오후 2시만 되면 주가 떨어진다\"…개미 떨게 하는 '약속의 2시'",
-   "firstSeen": "2026-11-12T21:00:00.000Z",
-   "lastSeen": "2026-11-13T07:06:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“오후 2시만 되면...” 개미 투자자들 사이에서 '약속의 2시'라는 밈이...",
-     "link": "https://www.wikitree.co.kr/articles/1174413",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-13T07:06:00.000Z"
-    },
-    {
-     "title": "\"오후 2시만 되면 떨어진다\"…개미 울리는 '약속의 2시' 진짜일까",
-     "link": "https://view.asiae.co.kr/article/2026111309081943676",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-13T00:10:00.000Z"
-    },
-    {
-     "title": "\"오후 2시만 되면 주가 떨어진다\"…개미 떨게 하는 '약속의 2시'",
-     "link": "https://www.news1.kr/finance/general-stock/6352415",
-     "host": "news1.kr",
-     "at": "2026-11-12T21:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -3.58,
      "unit": "%",
-     "z": -0.4
+     "z": -0.3
     },
     "why": [
-     "S&P 500 -0.35%"
-    ]
-   }
-  },
-  {
-   "id": "1conq14",
-   "title": "코스피, 장초반 2%대 급등해 5470선 회복...삼성전자·SK하이닉스 강세",
-   "firstSeen": "2026-11-13T00:18:00.000Z",
-   "lastSeen": "2026-11-13T08:20:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[오늘의 주목주] '금융주 강세' 신한지주 주가 5%대 상승, 코스피 외국인...",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451995",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-13T08:20:00.000Z"
-    },
-    {
-     "title": "코스피, 반도체 강세에 장중 5500선 회복 [마켓시그널]",
-     "link": "https://www.sedaily.com/article/20113829?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-13T00:19:00.000Z"
-    },
-    {
-     "title": "코스피, 장초반 2%대 급등해 5470선 회복...삼성전자·SK하이닉스 강세",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=503654",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-13T00:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.35%"
-    ]
-   }
-  },
-  {
-   "id": "1m2xqso",
-   "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
-   "firstSeen": "2026-11-13T03:02:00.000Z",
-   "lastSeen": "2026-11-13T07:46:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "9월 통화량 17조 늘었지만…증가율 석 달째 둔화",
-     "link": "https://www.sidae.com/article/2026111313551647703",
-     "host": "sidae.com",
-     "at": "2026-11-13T07:46:00.000Z"
-    },
-    {
-     "title": "9월 시중 통화량 17조1000억원 증가…반도체 수출대금 유입에 11개월 연...",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=354616",
-     "host": "greened.kr",
-     "at": "2026-11-13T04:56:00.000Z"
-    },
-    {
-     "title": "9월 시중 통화량 17조1000억원 늘어…증가세 둔화",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026111311003622029",
-     "host": "newsway.co.kr",
-     "at": "2026-11-13T03:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 3.4,
-     "unit": "bp",
-     "z": 0.6
-    },
-    "why": [
-     "미 10년 금리 +3.4bp"
-    ]
-   }
-  },
-  {
-   "id": "8ecufn",
-   "title": "李대통령, 자본시장 정책 간담회서 신뢰 회복·시장 투명성 강조",
-   "firstSeen": "2026-11-13T06:02:00.000Z",
-   "lastSeen": "2026-11-13T09:12:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 李 대통령 자본시장 간담회 효과 무색...‘외국인 순매도’에 ...",
-     "link": "https://futurechosun.com/?p=166585",
-     "host": "futurechosun.com",
-     "at": "2026-11-13T09:12:00.000Z"
-    },
-    {
-     "title": "증시 간담회에서 李 대통령 \"핵심은 신뢰\"...방안 기대감",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=300821",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-13T06:54:00.000Z"
-    },
-    {
-     "title": "李대통령, 자본시장 정책 간담회서 신뢰 회복·시장 투명성 강조",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000082469",
-     "host": "jnilbo.com",
-     "at": "2026-11-13T06:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.35,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.35%"
+     "VIX 변동성 -3.58%"
     ]
    }
   }
