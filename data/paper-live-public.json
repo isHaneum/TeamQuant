@@ -2,32 +2,33 @@
  "version": "PUB2-2026-11-10",
  "engine": "L6-2026-11-10",
  "label": "한투 모의계좌 (팀 공용)",
- "asOf": "2026-11-13T01:46:35.885Z",
+ "asOf": "2026-11-13T06:47:16.262Z",
  "mode": "vps",
  "public": true,
  "since": "2026-11-09",
  "days": 5,
  "startTotal": 99378704,
- "total": 101168457,
+ "principalKrw": 100000000,
+ "total": 100481547,
  "markets": {
   "KR": {
-   "open": true,
-   "reason": "",
+   "open": false,
+   "reason": "장이 끝났습니다(15:30 KST).",
    "openAt": "2026-11-13T00:00:00.000Z",
    "closeAt": "2026-11-13T06:30:00.000Z",
    "market": "KR"
   },
   "US": {
    "open": false,
-   "reason": "미국 장이 끝났습니다(16:00 ET).",
-   "openAt": "2026-11-12T14:30:00.881Z",
-   "closeAt": "2026-11-12T21:00:00.881Z",
+   "reason": "미국 장 시작 전입니다(09:30 ET = 한국 23:30).",
+   "openAt": "2026-11-13T14:30:00.242Z",
+   "closeAt": "2026-11-13T21:00:00.242Z",
    "market": "US"
   }
  },
  "market": {
-  "open": true,
-  "reason": "",
+  "open": false,
+  "reason": "장이 끝났습니다(15:30 KST).",
   "openAt": "2026-11-13T00:00:00.000Z",
   "closeAt": "2026-11-13T06:30:00.000Z",
   "market": "KR"
@@ -43,14 +44,14 @@
   "duplicateWindowMin": 10,
   "allowLive": false
  },
- "fx": 1331.47998046875,
+ "fx": 1334.9100341796875,
  "balance": {
   "cash": 42527252,
   "cashRawKrw": 75102195,
   "usFundingKrw": 32574943,
   "cashUsd": 0,
-  "total": 101168457,
-  "stock": 58641205,
+  "total": 100481547,
+  "stock": 57954295,
   "positions": [
    {
     "symbol": "000660",
@@ -58,11 +59,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 2,
-    "price": 1278000,
+    "price": 1216000,
     "avgCost": 1176000,
-    "value": 2556000,
-    "valueKrw": 2556000,
-    "weightPct": 2.526479177200459
+    "value": 2432000,
+    "valueKrw": 2432000,
+    "weightPct": 2.420344901736037
    },
    {
     "symbol": "005930",
@@ -70,11 +71,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 13,
-    "price": 212500,
+    "price": 206000,
     "avgCost": 192900,
-    "value": 2762500,
-    "valueKrw": 2762500,
-    "weightPct": 2.7305941811487746
+    "value": 2678000,
+    "valueKrw": 2678000,
+    "weightPct": 2.665165973210982
    },
    {
     "symbol": "047810",
@@ -82,11 +83,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 28,
-    "price": 107000,
+    "price": 104200,
     "avgCost": 107117.857,
-    "value": 2996000,
-    "valueKrw": 2996000,
-    "weightPct": 2.96139734541963
+    "value": 2917600,
+    "valueKrw": 2917600,
+    "weightPct": 2.9036177159971475
    },
    {
     "symbol": "068270",
@@ -94,11 +95,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 14,
-    "price": 213500,
+    "price": 214000,
     "avgCost": 210000,
-    "value": 2989000,
-    "valueKrw": 2989000,
-    "weightPct": 2.954478192743416
+    "value": 2996000,
+    "valueKrw": 2996000,
+    "weightPct": 2.9816419924346906
    },
    {
     "symbol": "069500",
@@ -106,11 +107,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 138,
-    "price": 85890,
+    "price": 83115,
     "avgCost": 80298.26,
-    "value": 11852820,
-    "valueKrw": 11852820,
-    "weightPct": 11.715924460526269
+    "value": 11469870,
+    "valueKrw": 11469870,
+    "weightPct": 11.414901882432204
    },
    {
     "symbol": "128940",
@@ -118,11 +119,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 6,
-    "price": 483500,
+    "price": 465500,
     "avgCost": 469500,
-    "value": 2901000,
-    "valueKrw": 2901000,
-    "weightPct": 2.867494559099582
+    "value": 2793000,
+    "valueKrw": 2793000,
+    "weightPct": 2.7796148480874803
    },
    {
     "symbol": "AMZN",
@@ -133,8 +134,8 @@
     "price": 267.44,
     "avgCost": 270.73,
     "value": 2139.52,
-    "valueKrw": 2848728.0478125,
-    "weightPct": 2.815826327975428
+    "valueKrw": 2856066.716328125,
+    "weightPct": 2.8423793239649515
    },
    {
     "symbol": "GE",
@@ -145,8 +146,8 @@
     "price": 330.86,
     "avgCost": 340.39,
     "value": 1985.16,
-    "valueKrw": 2643200.798027344,
-    "weightPct": 2.6126728393488734
+    "valueKrw": 2650010.0034521488,
+    "weightPct": 2.6373101157092544
    },
    {
     "symbol": "LLY",
@@ -157,8 +158,8 @@
     "price": 1427.28,
     "avgCost": 1440.22,
     "value": 1427.28,
-    "valueKrw": 1900394.7465234376,
-    "weightPct": 1.878445913752977
+    "valueKrw": 1905290.3935839843,
+    "weightPct": 1.8961594944233735
    },
    {
     "symbol": "LMT",
@@ -169,8 +170,8 @@
     "price": 604.09,
     "avgCost": 592.47,
     "value": 3020.45,
-    "valueKrw": 4021668.707006836,
-    "weightPct": 3.9752199709904006
+    "valueKrw": 4032029.012738037,
+    "weightPct": 4.012705947628411
    },
    {
     "symbol": "SPY",
@@ -181,8 +182,8 @@
     "price": 757.12,
     "avgCost": 754.17,
     "value": 15899.52,
-    "valueKrw": 21169892.5790625,
-    "weightPct": 20.925388413369298
+    "valueKrw": 21224428.786640625,
+    "weightPct": 21.122712995890307
    }
   ],
   "usError": null
@@ -479,10 +480,11 @@
    "amountKrw": 4074834,
    "why": "계획 비중보다 많음",
    "batch": "RB-2026-11-12-mwdnkn8n",
-   "status": "sent",
+   "status": "expired",
    "filledQty": 0,
    "avgPrice": 0,
-   "remaining": 5
+   "remaining": 5,
+   "note": "장 마감으로 소멸(미체결 5주)"
   },
   {
    "at": "2026-11-12T14:38:24.559Z",
@@ -857,16 +859,16 @@
   }
  },
  "sleeve": {
-  "n": 5,
-  "excessPp": 0.44,
+  "n": 8,
+  "excessPp": 0.05,
   "items": [
    {
     "symbol": "128940",
     "name": "한미약품",
     "since": "2026-11-13",
-    "returnPct": 0.029818956336528313,
-    "indexPct": 0.0064102564102563875,
-    "excessPct": 0.023408699926271925,
+    "returnPct": -0.008519701810436597,
+    "indexPct": -0.02867132867132871,
+    "excessPct": 0.020151626860892113,
     "step": 1,
     "targetPct": 5
    },
@@ -874,9 +876,9 @@
     "symbol": "000660",
     "name": "SK하이닉스",
     "since": "2026-11-09",
-    "returnPct": 0.08673469387755106,
-    "indexPct": 0.09699549005907393,
-    "excessPct": -0.010260796181522869,
+    "returnPct": 0.03401360544217691,
+    "indexPct": 0.0587562726291051,
+    "excessPct": -0.02474266718692819,
     "step": 1,
     "targetPct": 5
    },
@@ -884,9 +886,9 @@
     "symbol": "005930",
     "name": "삼성전자",
     "since": "2026-11-09",
-    "returnPct": 0.10160705028512185,
-    "indexPct": 0.09699549005907393,
-    "excessPct": 0.004611560226047917,
+    "returnPct": 0.06791083462934155,
+    "indexPct": 0.0587562726291051,
+    "excessPct": 0.009154562000236455,
     "step": 1,
     "targetPct": 5
    },
@@ -895,8 +897,8 @@
     "name": "아마존 (AMZN)",
     "since": "2026-11-12",
     "returnPct": -0.01215232888856066,
-    "indexPct": 0,
-    "excessPct": 0,
+    "indexPct": 0.004164586235413603,
+    "excessPct": -0.016316915123974263,
     "step": 1,
     "targetPct": 5
    },
@@ -904,9 +906,9 @@
     "symbol": "068270",
     "name": "셀트리온",
     "since": "2026-11-13",
-    "returnPct": 0.016666666666666607,
-    "indexPct": 0.0064102564102563875,
-    "excessPct": 0.01025641025641022,
+    "returnPct": 0.01904761904761898,
+    "indexPct": -0.02867132867132871,
+    "excessPct": 0.04771894771894769,
     "step": 1,
     "targetPct": 5
    },
@@ -915,8 +917,8 @@
     "name": "일라이릴리 (LLY)",
     "since": "2026-11-12",
     "returnPct": -0.00898473844273795,
-    "indexPct": 0,
-    "excessPct": 0,
+    "indexPct": 0.004164586235413603,
+    "excessPct": -0.013149324678151553,
     "step": 1,
     "targetPct": 5
    },
@@ -924,9 +926,9 @@
     "symbol": "047810",
     "name": "한국항공우주",
     "since": "2026-11-13",
-    "returnPct": -0.0010922635996153396,
-    "indexPct": 0.0064102564102563875,
-    "excessPct": -0.007502520009871727,
+    "returnPct": -0.027231905299812342,
+    "indexPct": -0.02867132867132871,
+    "excessPct": 0.0014394233715163685,
     "step": 1,
     "targetPct": 5
    },
@@ -935,8 +937,8 @@
     "name": "GE (GE)",
     "since": "2026-11-12",
     "returnPct": -0.02799729721789701,
-    "indexPct": 0,
-    "excessPct": 0,
+    "indexPct": 0.004164586235413603,
+    "excessPct": -0.032161883453310613,
     "step": 1,
     "targetPct": 5
    }
@@ -948,22 +950,11 @@
    "name": "엔비디아 (NVDA)",
    "level": "caution",
    "factor": 1,
-   "reason": "뉴스(규제·제재): 젠슨 황 논란이 불 붙인 美 수출통제 입법…삼성·SK 中공장 '사정권'",
+   "reason": "뉴스(경영진): 젠슨 황 사임에…정부 \"GPU 26만장 차질 없다\"",
    "source": "뉴스",
    "date": "2026-11-13",
-   "at": "2026-11-13T01:45:36.539Z",
-   "until": "2026-11-27T01:45:36.539Z"
-  },
-  {
-   "symbol": "005930",
-   "name": "삼성전자",
-   "level": "caution",
-   "factor": 1,
-   "reason": "뉴스(보안 사고): ﻿736억 들인 삼성전자 기술 유출 전 부장... 징역 6년 4개월 확정",
-   "source": "뉴스",
-   "date": "2026-11-13",
-   "at": "2026-11-13T01:45:39.805Z",
-   "until": "2026-11-27T01:45:39.805Z"
+   "at": "2026-11-13T06:45:05.808Z",
+   "until": "2026-11-27T06:45:05.808Z"
   }
  ],
  "marks": [
@@ -996,9 +987,9 @@
   },
   {
    "date": "2026-11-13",
-   "total": 101168457,
+   "total": 100481547,
    "cash": 42527252,
-   "stock": 58641205,
+   "stock": 57954295,
    "funding": 32574943
   }
  ],
@@ -1014,7 +1005,7 @@
   "notFound": 0,
   "batches": 4,
   "tradedKrw": 180657761,
-  "turnoverPct": 179.6
+  "turnoverPct": 179.8
  },
  "integrity": {
   "ok": true,
@@ -1058,7 +1049,7 @@
   ],
   "notFound": 0,
   "rejected": 0,
-  "pending": 1,
+  "pending": 0,
   "leftOpen": 0,
   "orders": 39
  },
@@ -1301,9 +1292,9 @@
     "currency": "USD"
    }
   },
-  "ownRetPct": 1.8,
-  "benchRetPct": 2.37,
-  "diffPp": -0.57,
+  "ownRetPct": 1.11,
+  "benchRetPct": 1.13,
+  "diffPp": -0.02,
   "days": 5,
   "from": "2026-11-09",
   "asOf": "2026-11-13",
