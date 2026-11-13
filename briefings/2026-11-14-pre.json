@@ -1,0 +1,500 @@
+{
+ "id": "2026-11-14-pre",
+ "version": "I1-2026-11-06",
+ "slot": "pre",
+ "title": "장 전 브리핑",
+ "at": "2026-11-13T23:32:06.405Z",
+ "headline": "S&P 500 -0.4%, 나스닥 -0.91%, 원/달러 -0.09% · 주요 이슈: 금리·통화, 증시 급변, 재난·사고",
+ "markets": [
+  {
+   "symbol": "^GSPC",
+   "label": "S&P 500",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-13",
+   "last": 7561.669921875,
+   "change": -0.4,
+   "z": -0.4,
+   "sd": 0.936184183617435,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "^IXIC",
+   "label": "나스닥",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-13",
+   "last": 25136.2734375,
+   "change": -0.91,
+   "z": -0.7,
+   "sd": 1.317646321459254,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "KRW=X",
+   "label": "원/달러",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-13",
+   "last": 1335.1099853515625,
+   "change": -0.09,
+   "z": -0.1,
+   "sd": 0.6327981458522444,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "CL=F",
+   "label": "WTI 유가",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-13",
+   "last": 88.91999816894531,
+   "change": 0.2,
+   "z": 0.1,
+   "sd": 2.8921201786070414,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "^VIX",
+   "label": "VIX 변동성",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-13",
+   "last": 19.299999237060547,
+   "change": 3.21,
+   "z": 0.3,
+   "sd": 11.782503388614433,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "^TNX",
+   "label": "미 10년 금리",
+   "unit": "bp",
+   "available": true,
+   "date": "2026-11-13",
+   "last": 5.154000282287598,
+   "change": 5.1,
+   "z": 0.9,
+   "sd": 5.431435989551597,
+   "source": "Yahoo"
+  }
+ ],
+ "unusual": [],
+ "issues": [
+  {
+   "id": "s238rd",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "firstSeen": "2026-11-13T13:43:00.000Z",
+   "lastSeen": "2026-11-13T23:20:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 생산자물가 6.5% 급등, 4년 만에 최고…연준 12월 금리인상 '무게'",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731654",
+     "host": "ebn.co.kr",
+     "at": "2026-11-13T23:20:00.000Z"
+    },
+    {
+     "title": "美 10월 도매물가 전년 대비 6.5%↑…4년만에 최고",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887173",
+     "host": "getnews.co.kr",
+     "at": "2026-11-13T22:58:00.000Z"
+    },
+    {
+     "title": "미국 10월 생산자물가 4년 만에 최고…'빅스텝' 주목",
+     "link": "https://news.mtn.co.kr/article/2026111404295484786",
+     "host": "news.mtn.co.kr",
+     "at": "2026-11-13T19:30:00.000Z"
+    },
+    {
+     "title": "미국 10월 도매물가 전년 대비 6.5%↑…약 4년 만에 최고",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712734&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-13T18:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 47,
+    "spike": 0.9,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1pvrlb4",
+   "title": "\"물가·고용 모두 뜨겁다\"...美 연준 '빅스텝' 가능성 부상",
+   "firstSeen": "2026-11-13T02:50:00.000Z",
+   "lastSeen": "2026-11-13T02:50:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "\"물가·고용 모두 뜨겁다\"...美 연준 '빅스텝' 가능성 부상",
+     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130842",
+     "host": "ntoday.co.kr",
+     "at": "2026-11-13T02:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1ifrgdu",
+   "title": "굴스비 \"연준, 인플레에 분명 할 일 있어...팬데믹 공급 충격에 AI 수요...",
+   "firstSeen": "2026-11-13T18:07:00.000Z",
+   "lastSeen": "2026-11-13T18:07:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "굴스비 \"연준, 인플레에 분명 할 일 있어...팬데믹 공급 충격에 AI 수요...",
+     "link": "https://www.fnnews.com/news/202611140243507346",
+     "host": "fnnews.com",
+     "at": "2026-11-13T18:07:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "mxrumr",
+   "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
+   "firstSeen": "2026-11-13T22:04:00.000Z",
+   "lastSeen": "2026-11-13T22:33:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "젠슨 황 쇼크에 4조달러 무너졌다…AMD·브로드컴도 급락",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140003&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-13T22:33:00.000Z"
+    },
+    {
+     "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
+     "link": "https://www.sedaily.com/article/20114286?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-13T22:04:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 31,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   },
+   "delivered": false
+  },
+  {
+   "id": "12rbdhy",
+   "title": "뉴욕증시 프리뷰, 美 주가지수 선물 혼조…엔비디아 반등에도 AI 투자 불...",
+   "firstSeen": "2026-11-13T13:16:00.000Z",
+   "lastSeen": "2026-11-13T23:06:00.000Z",
+   "count": 11,
+   "sources": 10,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[속보]뉴욕증시 혼조 마감…다우 상승에도 나스닥 0.91% 하락, 엔비디아...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=626842",
+     "host": "cbci.co.kr",
+     "at": "2026-11-13T23:06:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 하락에 나스닥 0.91%↓ 혼조 마감",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000082579",
+     "host": "jnilbo.com",
+     "at": "2026-11-13T22:56:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 사태 확산·연준 AI 고평가 경고에 혼조 마감",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41641",
+     "host": "globale.co.kr",
+     "at": "2026-11-13T22:56:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 혼조 마감…엔비디아 2%↓‘하락세’ 지속",
+     "link": "https://www.khan.co.kr/article/202611140752001",
+     "host": "khan.co.kr",
+     "at": "2026-11-13T22:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 27,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "k8nt85",
+   "title": "엔비디아 쇼크에 美 반도체주 급락…고물가·고금리까지 글로벌 금융시...",
+   "firstSeen": "2026-11-13T09:34:00.000Z",
+   "lastSeen": "2026-11-13T23:20:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[속보] 미국 뉴욕증시 반도체주 부진…AMD 8.75%·마이크론 2.52% 하락, 메...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=626846",
+     "host": "cbci.co.kr",
+     "at": "2026-11-13T23:20:00.000Z"
+    },
+    {
+     "title": "엔비디아 CEO 사퇴 후폭풍…나스닥 0.91%↓, 美 반도체주 줄줄이 급락",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731653",
+     "host": "ebn.co.kr",
+     "at": "2026-11-13T23:02:00.000Z"
+    },
+    {
+     "title": "엔비디아 4조달러 시총 붕괴…뉴욕증시 AI·반도체주 동반 급락",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=93547",
+     "host": "the-today.com",
+     "at": "2026-11-13T22:54:00.000Z"
+    },
+    {
+     "title": "엔비디아 2%, 필라델피아반도체지수 마이크론 3%↓...반도체주, 젠슨 황...",
+     "link": "http://www.beyondpost.co.kr/view.php?ud=2026111406555644232aaae0046f_30",
+     "host": "beyondpost.co.kr",
+     "at": "2026-11-13T22:04:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  }
+ ],
+ "alerts": [
+  {
+   "id": "s238rd",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "firstSeen": "2026-11-13T13:43:00.000Z",
+   "lastSeen": "2026-11-13T23:20:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 생산자물가 6.5% 급등, 4년 만에 최고…연준 12월 금리인상 '무게'",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731654",
+     "host": "ebn.co.kr",
+     "at": "2026-11-13T23:20:00.000Z"
+    },
+    {
+     "title": "美 10월 도매물가 전년 대비 6.5%↑…4년만에 최고",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887173",
+     "host": "getnews.co.kr",
+     "at": "2026-11-13T22:58:00.000Z"
+    },
+    {
+     "title": "미국 10월 생산자물가 4년 만에 최고…'빅스텝' 주목",
+     "link": "https://news.mtn.co.kr/article/2026111404295484786",
+     "host": "news.mtn.co.kr",
+     "at": "2026-11-13T19:30:00.000Z"
+    },
+    {
+     "title": "미국 10월 도매물가 전년 대비 6.5%↑…약 4년 만에 최고",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712734&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-13T18:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 47,
+    "spike": 0.9,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "mxrumr",
+   "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
+   "firstSeen": "2026-11-13T22:04:00.000Z",
+   "lastSeen": "2026-11-13T22:33:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "젠슨 황 쇼크에 4조달러 무너졌다…AMD·브로드컴도 급락",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140003&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-13T22:33:00.000Z"
+    },
+    {
+     "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
+     "link": "https://www.sedaily.com/article/20114286?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-13T22:04:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 31,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   },
+   "delivered": false
+  }
+ ],
+ "text": "[장 전 브리핑] 2026-11-14 08시\nS&P 500 -0.4%, 나스닥 -0.91%, 원/달러 -0.09% · 주요 이슈: 금리·통화, 증시 급변, 재난·사고\n1. [주의] 美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까 (5곳 보도)\n   https://www.ebn.co.kr/news/articleView.html?idxno=1731654\n2. \"물가·고용 모두 뜨겁다\"...美 연준 '빅스텝' 가능성 부상 (1곳 보도)\n   https://www.ntoday.co.kr/news/articleView.html?idxno=130842\n3. 굴스비 \"연준, 인플레에 분명 할 일 있어...팬데믹 공급 충격에 AI 수요... (1곳 보도)\n   https://www.fnnews.com/news/202611140243507346\n4. [주의] 젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일... (2곳 보도)\n   http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140003&t=NN\n5. 뉴욕증시 프리뷰, 美 주가지수 선물 혼조…엔비디아 반등에도 AI 투자 불... (10곳 보도)\n   https://www.cbci.co.kr/news/articleView.html?idxno=626842\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+ "delivered": false
+}
