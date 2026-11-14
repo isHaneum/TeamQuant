@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T06:20:15.662Z",
+ "updatedAt": "2026-11-14T06:32:27.173Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,12 +120,12 @@
  ],
  "spikes": {
   "war": -0.4,
-  "politics": -1,
+  "politics": -1.1,
   "rates": -0.8,
-  "trade": 0.3,
+  "trade": 0.1,
   "fx": -0.4,
   "energy": -1,
-  "market": -1.5,
+  "market": -1.4,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.7
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.1,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
+   "rate": 3.3,
    "saturated": 1,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.2,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -289,7 +289,7 @@
    "title": "뉴욕증시, 엔비디아 우려에 혼조 마감…나스닥 0.91%↓",
    "firstSeen": "2026-11-13T13:16:00.000Z",
    "lastSeen": "2026-11-14T04:18:00.000Z",
-   "count": 19,
+   "count": 18,
    "sources": 18,
    "topics": [
     "rates",
@@ -342,6 +342,62 @@
    }
   },
   {
+   "id": "1dy4d4g",
+   "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
+   "firstSeen": "2026-11-14T02:40:00.000Z",
+   "lastSeen": "2026-11-14T06:28:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프, 시진핑과 회담서 ‘젠슨 황 스캔들’ 거론 안 할 듯",
+     "link": "https://biz.heraldcorp.com/article/10937042?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-14T06:28:00.000Z"
+    },
+    {
+     "title": "“트럼프, 시진핑과 회담에서 ‘젠슨 황·中간첩 불륜’ 거론 안 할듯”",
+     "link": "https://biz.chosun.com/international/international_general/2026/11/14/IDJA32DZGZDQLNFGMYH3F4GUDU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-14T06:27:00.000Z"
+    },
+    {
+     "title": "트럼프, 시진핑 회담서 '젠슨황 中스파이 불륜' 거론 안 할 듯",
+     "link": "https://www.ajunews.com/view/20261114151105190",
+     "host": "ajunews.com",
+     "at": "2026-11-14T06:22:00.000Z"
+    },
+    {
+     "title": "“트럼프, 시진핑에 젠슨 황 의혹 거론 안 할 듯”",
+     "link": "https://www.kbmaeil.com/article/20261114500194",
+     "host": "kbmaeil.com",
+     "at": "2026-11-14T06:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "1g8adqd",
    "title": "젠슨황 여파 주목…中전문가 \"美 칩규제 강화시 中 희토류 맞불\"",
    "firstSeen": "2026-11-14T04:24:00.000Z",
@@ -366,15 +422,15 @@
      "at": "2026-11-14T05:50:00.000Z"
     },
     {
-     "title": "젠슨황 여파 주목…중국 전문가 “미국 칩규제 강화시 중국 희토류 맞불...",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712892&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-14T05:08:00.000Z"
-    },
-    {
      "title": "젠슨 황 여파에 美 '칩 규제' 칼바람…중국 \"희토류 맞불\"",
      "link": "https://www.hankyung.com/article/2026111464557",
      "host": "hankyung.com",
+     "at": "2026-11-14T05:08:00.000Z"
+    },
+    {
+     "title": "젠슨황 여파 주목…중국 전문가 “미국 칩규제 강화시 중국 희토류 맞불...",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712892&ref=A",
+     "host": "news.kbs.co.kr",
      "at": "2026-11-14T05:08:00.000Z"
     }
    ],
@@ -453,177 +509,9 @@
    }
   },
   {
-   "id": "k8nt85",
-   "title": "'젠슨황 스캔들' 엔비디아 급락…서학개미, 한주간 1천억 폭풍매수",
-   "firstSeen": "2026-11-13T09:34:00.000Z",
-   "lastSeen": "2026-11-14T04:48:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "서학개미, 엔비디아 급락에 한주간 1천억 원 매수",
-     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005962192",
-     "host": "mbnmoney.mbn.co.kr",
-     "at": "2026-11-14T04:48:00.000Z"
-    },
-    {
-     "title": "‘젠슨황 스캔들’에 급락한 엔비디아…서학개미, 1000억 사들였다",
-     "link": "https://www.munhwa.com/article/11631258?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-14T02:02:00.000Z"
-    },
-    {
-     "title": "\"젠슨황 여파\"...서학개미, 급락한 엔비디아 1000억원대 '저가 매수'",
-     "link": "https://www.fnnews.com/news/202611140917177584",
-     "host": "fnnews.com",
-     "at": "2026-11-14T01:46:00.000Z"
-    },
-    {
-     "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5230823",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-14T01:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 15,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "1dy4d4g",
-   "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
-   "firstSeen": "2026-11-14T02:40:00.000Z",
-   "lastSeen": "2026-11-14T06:19:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 방중 앞두고…美 \"엔비디아 문제 회담서 다루지 않을 것\"",
-     "link": "https://www.hankyung.com/article/2026111464937",
-     "host": "hankyung.com",
-     "at": "2026-11-14T06:19:00.000Z"
-    },
-    {
-     "title": "\"트럼프, 시진핑 회담서 '젠슨황-中간첩 불륜' 거론 안할듯\"",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346418?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-14T06:14:00.000Z"
-    },
-    {
-     "title": "\"트럼프, 시진핑 회담서 '젠슨황-中간첩 불륜' 거론 안할듯\"",
-     "link": "https://www.yna.co.kr/view/AKR20261114034500009?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-14T06:07:00.000Z"
-    },
-    {
-     "title": "트럼프·시진핑·푸틴, 중국서 3자 정상회담 추진…핵군축·북한 문제 논...",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=131835",
-     "host": "pennmike.com",
-     "at": "2026-11-14T05:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 15,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "1ewsvus",
-   "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
-   "firstSeen": "2026-11-13T23:37:00.000Z",
-   "lastSeen": "2026-11-14T04:36:00.000Z",
-   "count": 4,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴스초점] '젠슨 황 스캔들' 후폭풍…러트닉 '경질론'도",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261114133455CrS",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-14T04:36:00.000Z"
-    },
-    {
-     "title": "\"베선트 미 재무, 젠슨 황 파문에 러트닉 미 상무장관 책임 거론\" CNN",
-     "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284475",
-     "host": "womennews.co.kr",
-     "at": "2026-11-14T04:12:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 스캔들' 후폭풍…러트닉 상무장관 경질 가능성",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611141007183x7",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-14T01:08:00.000Z"
-    },
-    {
-     "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261114084720gJk",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-13T23:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 10,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "16tnhax",
+   "id": "1jmcpkc",
    "title": "'젠슨 황' 불확실성 지속…외국인 매도 폭탄에 코스피 5200대로 추락",
-   "firstSeen": "2026-11-13T07:04:00.000Z",
+   "firstSeen": "2026-11-13T07:07:00.000Z",
    "lastSeen": "2026-11-13T20:50:00.000Z",
    "count": 3,
    "sources": 3,
@@ -769,6 +657,55 @@
    }
   },
   {
+   "id": "k8nt85",
+   "title": "뉴욕증시 혼란: 엔비디아 전 CEO 스캔들로 기술주 급락, 투자자들 주목",
+   "firstSeen": "2026-11-13T09:34:00.000Z",
+   "lastSeen": "2026-11-14T04:48:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "서학개미, 엔비디아 급락에 한주간 1천억 원 매수",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005962192",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-14T04:48:00.000Z"
+    },
+    {
+     "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5230823",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-14T01:36:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 혼란: 엔비디아 전 CEO 스캔들로 기술주 급락, 투자자들 주목",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=885596",
+     "host": "gokorea.kr",
+     "at": "2026-11-14T00:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "18zddv3",
    "title": "국힘 \"李, '개미' 피눈물 쏟는데 주가 반등 타령…현실 인식 참담\"",
    "firstSeen": "2026-11-14T00:42:00.000Z",
@@ -868,6 +805,57 @@
    }
   },
   {
+   "id": "1ewsvus",
+   "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
+   "firstSeen": "2026-11-13T23:37:00.000Z",
+   "lastSeen": "2026-11-14T05:08:00.000Z",
+   "count": 3,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 ‘젠슨황 스캔들’ 후폭풍 지속···주가 요동치고 정치권·업...",
+     "link": "https://www.ekn.kr/web/view.php?key=20261114023569672",
+     "host": "ekn.kr",
+     "at": "2026-11-14T05:08:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 스캔들' 후폭풍…러트닉 상무장관 경질 가능성",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611141007183x7",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-14T01:08:00.000Z"
+    },
+    {
+     "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261114084720gJk",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-13T23:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 8,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "rcueeo",
    "title": "중간선거 패배 뒤 아시아 순방 나서는 트럼프…미중 무역휴전 연장 주목",
    "firstSeen": "2026-11-13T23:11:00.000Z",
@@ -897,8 +885,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 8,
-    "spike": 0.3,
+    "score": 7,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -913,9 +901,9 @@
    }
   },
   {
-   "id": "16tnhax",
+   "id": "1ls3qbz",
    "title": "[마감시황] 반도체주 상승분 반납…코스피 '전강후약' 0.98% 하락",
-   "firstSeen": "2026-11-13T07:04:00.000Z",
+   "firstSeen": "2026-11-13T07:27:00.000Z",
    "lastSeen": "2026-11-14T04:56:00.000Z",
    "count": 2,
    "sources": 2,
@@ -959,6 +947,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-14T06:32:27.173Z",
+   "id": "s238rd",
+   "level": "caution",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.sedaily.com/article/20114301?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-14T05:27:32.583Z",
    "id": "s238rd",
@@ -1185,18 +1185,6 @@
     "금 -2.85%(평소의 2.1배)"
    ],
    "link": "https://www.tokenpost.kr/news/breaking/437199",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T19:11:00.179Z",
-   "id": "1703vlg",
-   "level": "urgent",
-   "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +11.1bp(평소의 2.1배)"
-   ],
-   "link": "https://www.news2day.co.kr/article/20261113500001",
    "delivered": false
   }
  ],
