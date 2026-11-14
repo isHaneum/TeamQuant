@@ -24,7 +24,7 @@ const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' })
 const daysAgo = n => new Date(Date.now() - n * 864e5 + 9 * 3600e3).toISOString().slice(0, 10);
 const marketOf = p => p.currency === 'USD' ? 'US' : 'KR';
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261113c'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261115a'; document.head.append(css);
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
 function addView(id, label, html) {
   const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = id; nav.textContent = label; navHost.append(nav);
@@ -115,13 +115,14 @@ window.addEventListener('teamquant:page', () => { if (document.querySelector('.v
 // 한 줄 배치: 지금 규칙 → 왜 이 규칙인가 → 얼마나 위험한가 → 과거 시장에 넣어 보면 → 규칙을 지켰나 → (접힘) 규칙 바꾸기 · 종목별 목표 비중 · 검증 자료 원표.
 // 계좌마다 규칙은 한 벌이다. 모의계좌 화면은 모의계좌의 규칙(PC 장부, 저장한 적 없으면 기본 규칙)을 읽기 전용으로, 예시·실계좌 화면은 이 브라우저에 저장한 규칙을 보인다.
 // 화면의 과거 숫자는 전부 data/core-validation.json · data/strategy-evidence.json · data/paper-rehearsal.json 에서 읽는다(문구에 숫자를 박지 않는다).
-let evidence = null, strat = null, rehearsal = null;
+let evidence = null, strat = null, rehearsal = null, sizing = null;
 const RL = { pf: 'demo', pick: null, pc: null };
 const acct = () => (S.snap?.paper ? 'paper' : S.snap?.demo ? 'demo' : S.snap ? 'real' : 'none');
 const kday = t => new Date(new Date(t).getTime() + 9 * 3600e3).toISOString().slice(0, 10);
 const guard = (name, fn) => { try { return fn(); } catch (e) { console.warn('[규칙 화면]', name, e); return null; } };
 const sg = v => (v > 0 ? '+' : '') + v;
 fetch('/data/strategy-evidence.json?v=E1').then(r => r.ok ? r.json() : null).then(d => { strat = d; renderRules(); }).catch(() => {});
+fetch('/data/sizing-study.json?v=RB1').then(r => r.ok ? r.json() : null).then(d => { sizing = d; renderRules(); }).catch(() => {});
 fetch('/data/core-validation.json?v=' + RULES_VERSION).then(r => r.ok ? r.json() : null).then(d => { evidence = d; renderRules(); }).catch(() => {});
 fetch('/data/paper-rehearsal.json').then(r => r.ok ? r.json() : null).then(d => { rehearsal = d; renderRules(); }).catch(() => {});
 
@@ -218,6 +219,23 @@ function renderWhy() {
     </ul></details>`;
 }
 
+// 계획의 위험 분해(결정 35): 개별 종목 묶음이 계좌 위험에서 차지하는 몫, 지수와 다르게 움직이는 정도(추적오차)가 어느 종목에서 나오는지, 위험을 같게 나누면 비중이 어떻게 되는지.
+// 계산 결과 파일(scripts/research/sizing-study.mjs)을 읽기만 한다 — 계획은 바꾸지 않는다. 모의계좌이고 파일의 계획 버전이 지금 계획과 같을 때만 보인다. 수익 비교는 없다.
+function sizingHtml() {
+  if (acct() !== 'paper' || !sizing?.snapshot?.equal || !sizing.snapshot.erc || sizing.planVersion !== S.mock?.planDoc?.version) return '';
+  const eq = sizing.snapshot.equal, er = sizing.snapshot.erc, nm = sizing.snapshot.names || {}, wk = sizing.walk || {}, syms = Object.keys(eq.weightsPct).sort((a, b) => eq.activeSharePct[b] - eq.activeSharePct[a]);
+  const top = syms.slice(0, 3), topSum = top.reduce((a, s) => a + eq.activeSharePct[s], 0), short = s => String(nm[s]?.name || s).replace(/\s*\(.*\)$/, ''), satW = Object.values(eq.weightsPct).reduce((a, b) => a + b, 0);
+  const rows = syms.map(s => `<tr><td>${esc(short(s))}</td><td>${eq.weightsPct[s].toFixed(1)}%</td><td><b>${eq.activeSharePct[s].toFixed(0)}%</b></td><td>${er.weightsPct[s].toFixed(1)}%</td></tr>`).join('');
+  return `<div class="rl-sizing"><h4 class="rl-h4">계획의 위험은 어디서 나오나 ${tip('최근 3년 주간 수익률(원화)로 계산했습니다. "지수와 다르게 움직이는 정도"는 같은 국가 비중의 지수만 들었을 때와의 차이가 한 해에 흔들리는 폭입니다(추적오차). 종목별 몫은 그 흔들림에 각 종목이 보탠 비율입니다. 수익을 예측한 값이 아닙니다.')}</h4>
+    <p>개별 ${syms.length}종목은 비중 ${satW.toFixed(0)}%인데 계좌 위험의 <b>${eq.satRiskOfTotalPct.toFixed(0)}%</b>를 냅니다. 지수와 다르게 움직이는 정도는 연 ${eq.tePct.toFixed(1)}%이고, 그 <b>${topSum.toFixed(0)}%</b>가 ${top.map(s => esc(short(s))).join(' · ')}에서 나옵니다.</p>
+    <details class="rl-in"><summary>종목별 위험 몫 · 위험을 같게 나누면</summary>
+      <div class="table-wrap"><table class="cr-table rl-size"><thead><tr><th>종목</th><th>계획 비중</th><th>위험 몫</th><th>같게 나누면</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <ul class="cr-facts"><li>위험을 같게 나누면 지수와 다르게 움직이는 정도가 연 ${eq.tePct.toFixed(2)}% → <b>${er.tePct.toFixed(2)}%</b>, 가장 큰 종목의 몫이 ${eq.maxActiveSharePct.toFixed(0)}% → ${er.maxActiveSharePct.toFixed(0)}%입니다. 계좌 전체 변동성은 ${eq.volPct.toFixed(1)}% → ${er.volPct.toFixed(1)}%로 거의 같습니다.</li>
+      ${wk.equal && wk.erc ? `<li>${esc(wk.equal.from.slice(0, 4))}~${esc(wk.equal.to.slice(0, 4))}년에 4주마다 다시 계산해 본 실제 값: ${wk.equal.tePct.toFixed(2)}% → <b>${wk.erc.tePct.toFixed(2)}%</b>. 예측은 실제의 ${(1 / wk.equal.teRealizedOverForecast).toFixed(2)}배로 조금 높게 나왔습니다.</li>` : ''}
+      ${wk.equal && wk.equalBand25 ? `<li>4주마다 다 맞추면 ${wk.equal.rebalances}번 · 한 해 매매 ${wk.equal.turnoverPerYearPct.toFixed(0)}%, 25% 넘게 벗어날 때만 맞추면 ${wk.equalBand25.rebalances}번 · ${wk.equalBand25.turnoverPerYearPct.toFixed(0)}%이고 흔들림은 같습니다(${wk.equalBand25.tePct.toFixed(2)}%).</li>` : ''}
+      <li>수익은 비교하지 않았습니다. 종목을 2026년에 골랐기 때문에 과거 수익을 보면 답을 알고 본 결과가 됩니다. 계획은 그대로 균등입니다.</li></ul>
+    </details></div>`;
+}
 function renderRisk() {
   const box = $('#rl-risk-body'); if (!box) return; const c = ruleCtx(), pf = pfData(), V = variantOf(c.level) || 'C';
   let live = '<p class="cr-muted">보유 자료를 불러오면 지금 위험을 계산합니다.</p>', tiles = '';
@@ -230,7 +248,7 @@ function renderRisk() {
   const br = pf ? pf.variants[V].dailyLossBreach : null, lossOf = evidence?.variants?.find(v => v.id === V)?.rules?.dailyLoss;
   box.innerHTML = `${live}<div class="rl-tiles">${tiles}</div>
     ${pf ? `<p class="rl-note">과거 기록: ${esc(PF_NAMES[RL.pf])} · ${variantOf(c.level) ? '지금 규칙' : '기본 규칙(지금 규칙은 직접 조정이라 과거 결과 없음)'} · ${esc(evidence.from.slice(0, 4))}~${esc(pf.to.slice(0, 4))}${br ? ` · 하루 ${lossOf}% 넘게 잃은 날 ${br.hold}% → ${br.rule}%` : ''}</p>` : ''}
-    <p class="rl-note">한도는 그날의 손실을 막지 못합니다. 다음 날 비중을 줄입니다.</p>`;
+    <p class="rl-note">한도는 그날의 손실을 막지 못합니다. 다음 날 비중을 줄입니다.</p>${guard('sizing', sizingHtml) || ''}`;
 }
 
 function renderPast() {

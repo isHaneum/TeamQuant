@@ -1,0 +1,388 @@
+{
+ "version": "RB1-2026-11-15",
+ "generatedAt": "2026-11-14T15:23:15.213Z",
+ "planVersion": "PP3-2026-11-12",
+ "data": {
+  "from": "2015-01-02",
+  "to": "2026-11-13",
+  "weeks": 619,
+  "window": 156,
+  "stepWeeks": 4,
+  "source": "Yahoo Finance 일봉 수정 종가 → 원화 → 주간"
+ },
+ "universe": [
+  {
+   "symbol": "SPY",
+   "name": "S&P500 ETF",
+   "role": "core",
+   "pct": 28.6
+  },
+  {
+   "symbol": "069500",
+   "name": "KODEX 200",
+   "role": "core",
+   "pct": 11.4
+  },
+  {
+   "symbol": "128940",
+   "name": "한미약품",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "NVDA",
+   "name": "엔비디아 (NVDA)",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "000660",
+   "name": "SK하이닉스",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "005930",
+   "name": "삼성전자",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "AMZN",
+   "name": "아마존 (AMZN)",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "068270",
+   "name": "셀트리온",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "LLY",
+   "name": "일라이릴리 (LLY)",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "047810",
+   "name": "한국항공우주",
+   "role": "satellite",
+   "pct": 3
+  },
+  {
+   "symbol": "GE",
+   "name": "GE (GE)",
+   "role": "satellite",
+   "pct": 3
+  }
+ ],
+ "shrink": {
+  "delta": 0.19,
+  "avgCorr": 0.2
+ },
+ "snapshot": {
+  "equal": {
+   "label": "균등(지금)",
+   "volPct": 11.1,
+   "tePct": 4.15,
+   "weightsPct": {
+    "128940": 3,
+    "NVDA": 3,
+    "000660": 3,
+    "005930": 3,
+    "AMZN": 3,
+    "068270": 3,
+    "LLY": 3,
+    "047810": 3,
+    "GE": 3
+   },
+   "activeSharePct": {
+    "128940": 24.6,
+    "NVDA": 8.5,
+    "000660": 8.5,
+    "005930": 3.6,
+    "AMZN": 3.3,
+    "068270": 15.9,
+    "LLY": 7.7,
+    "047810": 21.7,
+    "GE": 6.1
+   },
+   "maxActiveSharePct": 24.6,
+   "effectiveBets": 6.3,
+   "satRiskOfTotalPct": 47.5,
+   "satWeightOfInvestedPct": 40.3
+  },
+  "names": {
+   "128940": {
+    "name": "한미약품",
+    "volPct": 49.1,
+    "activeVolPct": 53.7
+   },
+   "NVDA": {
+    "name": "엔비디아 (NVDA)",
+    "volPct": 44.5,
+    "activeVolPct": 37.8
+   },
+   "000660": {
+    "name": "SK하이닉스",
+    "volPct": 60.9,
+    "activeVolPct": 43.7
+   },
+   "005930": {
+    "name": "삼성전자",
+    "volPct": 42.3,
+    "activeVolPct": 27.6
+   },
+   "AMZN": {
+    "name": "아마존 (AMZN)",
+    "volPct": 29.6,
+    "activeVolPct": 25.1
+   },
+   "068270": {
+    "name": "셀트리온",
+    "volPct": 30.4,
+    "activeVolPct": 41.2
+   },
+   "LLY": {
+    "name": "일라이릴리 (LLY)",
+    "volPct": 37.6,
+    "activeVolPct": 36.6
+   },
+   "047810": {
+    "name": "한국항공우주",
+    "volPct": 44.5,
+    "activeVolPct": 50.4
+   },
+   "GE": {
+    "name": "GE (GE)",
+    "volPct": 32.4,
+    "activeVolPct": 28
+   }
+  },
+  "invVol": {
+   "label": "변동성 역수",
+   "volPct": 10.7,
+   "tePct": 4.03,
+   "weightsPct": {
+    "128940": 2.39,
+    "NVDA": 2.64,
+    "000660": 1.93,
+    "005930": 2.78,
+    "AMZN": 3.97,
+    "068270": 3.86,
+    "LLY": 3.13,
+    "047810": 2.65,
+    "GE": 3.63
+   },
+   "activeSharePct": {
+    "128940": 19.7,
+    "NVDA": 6.4,
+    "000660": 3.1,
+    "005930": 3,
+    "AMZN": 6.2,
+    "068270": 24.6,
+    "LLY": 9,
+    "047810": 19.2,
+    "GE": 9
+   },
+   "maxActiveSharePct": 24.6,
+   "effectiveBets": 6.2,
+   "satRiskOfTotalPct": 45.4,
+   "satWeightOfInvestedPct": 40.3
+  },
+  "invResVar": {
+   "label": "잔차분산 역수",
+   "volPct": 11.1,
+   "tePct": 3.41,
+   "weightsPct": {
+    "128940": 1.25,
+    "NVDA": 2.53,
+    "000660": 1.89,
+    "005930": 4.75,
+    "AMZN": 5.72,
+    "068270": 2.13,
+    "LLY": 2.69,
+    "047810": 1.42,
+    "GE": 4.61
+   },
+   "activeSharePct": {
+    "128940": 7.2,
+    "NVDA": 9.7,
+    "000660": 7.2,
+    "005930": 13.6,
+    "AMZN": 18.7,
+    "068270": 9.3,
+    "LLY": 8.7,
+    "047810": 6.8,
+    "GE": 18.8
+   },
+   "maxActiveSharePct": 18.8,
+   "effectiveBets": 7.7,
+   "satRiskOfTotalPct": 46.7,
+   "satWeightOfInvestedPct": 40.3
+  },
+  "erc": {
+   "label": "위험 기여 균등",
+   "volPct": 11.1,
+   "tePct": 3.53,
+   "weightsPct": {
+    "128940": 1.66,
+    "NVDA": 2.84,
+    "000660": 2.58,
+    "005930": 4.39,
+    "AMZN": 4.62,
+    "068270": 2.35,
+    "LLY": 3.15,
+    "047810": 1.88,
+    "GE": 3.53
+   },
+   "activeSharePct": {
+    "128940": 11.1,
+    "NVDA": 11.1,
+    "000660": 11.1,
+    "005930": 11.1,
+    "AMZN": 11.1,
+    "068270": 11.1,
+    "LLY": 11.1,
+    "047810": 11.1,
+    "GE": 11.1
+   },
+   "maxActiveSharePct": 11.1,
+   "effectiveBets": 9,
+   "satRiskOfTotalPct": 47.2,
+   "satWeightOfInvestedPct": 40.3
+  },
+  "minTE": {
+   "label": "추적오차 최소",
+   "volPct": 11.1,
+   "tePct": 3.35,
+   "weightsPct": {
+    "128940": 0.48,
+    "NVDA": 2.39,
+    "000660": 1.46,
+    "005930": 5.86,
+    "AMZN": 6.55,
+    "068270": 1.97,
+    "LLY": 3.13,
+    "047810": 1.3,
+    "GE": 3.86
+   },
+   "activeSharePct": {
+    "128940": 1.8,
+    "NVDA": 8.8,
+    "000660": 5.4,
+    "005930": 21.7,
+    "AMZN": 24.3,
+    "068270": 7.3,
+    "LLY": 11.6,
+    "047810": 4.8,
+    "GE": 14.3
+   },
+   "maxActiveSharePct": 24.3,
+   "effectiveBets": 6.3,
+   "satRiskOfTotalPct": 46.8,
+   "satWeightOfInvestedPct": 40.3
+  }
+ },
+ "walk": {
+  "equal": {
+   "label": "균등(지금)",
+   "from": "2018-01-05",
+   "to": "2026-11-13",
+   "weeks": 463,
+   "tePct": 3.11,
+   "volPct": 11.2,
+   "teForecastPct": 3.5,
+   "teRealizedOverForecast": 0.87,
+   "relDrawdownPct": -5.1,
+   "turnoverPerYearPct": 24.2,
+   "rebalances": 115
+  },
+  "invVol": {
+   "label": "변동성 역수",
+   "from": "2018-01-05",
+   "to": "2026-11-13",
+   "weeks": 463,
+   "tePct": 2.98,
+   "volPct": 11,
+   "teForecastPct": 3.24,
+   "teRealizedOverForecast": 0.89,
+   "relDrawdownPct": -5.7,
+   "turnoverPerYearPct": 24,
+   "rebalances": 115
+  },
+  "invResVar": {
+   "label": "잔차분산 역수",
+   "from": "2018-01-05",
+   "to": "2026-11-13",
+   "weeks": 463,
+   "tePct": 2.63,
+   "volPct": 10.9,
+   "teForecastPct": 3.05,
+   "teRealizedOverForecast": 0.85,
+   "relDrawdownPct": -3.5,
+   "turnoverPerYearPct": 23.9,
+   "rebalances": 115
+  },
+  "erc": {
+   "label": "위험 기여 균등",
+   "from": "2018-01-05",
+   "to": "2026-11-13",
+   "weeks": 463,
+   "tePct": 2.73,
+   "volPct": 11,
+   "teForecastPct": 3.15,
+   "teRealizedOverForecast": 0.85,
+   "relDrawdownPct": -4.2,
+   "turnoverPerYearPct": 24.1,
+   "rebalances": 115
+  },
+  "minTE": {
+   "label": "추적오차 최소",
+   "from": "2018-01-05",
+   "to": "2026-11-13",
+   "weeks": 463,
+   "tePct": 2.65,
+   "volPct": 10.9,
+   "teForecastPct": 2.99,
+   "teRealizedOverForecast": 0.88,
+   "relDrawdownPct": -3.3,
+   "turnoverPerYearPct": 24.4,
+   "rebalances": 115
+  },
+  "equalBand25": {
+   "label": "균등 · 25% 넘게 벗어날 때만 맞춤",
+   "from": "2018-01-05",
+   "to": "2026-11-13",
+   "weeks": 463,
+   "tePct": 3.1,
+   "volPct": 11.2,
+   "teForecastPct": 3.5,
+   "teRealizedOverForecast": 0.87,
+   "relDrawdownPct": -4.1,
+   "turnoverPerYearPct": 15.7,
+   "rebalances": 41
+  },
+  "ercBand25": {
+   "label": "위험 기여 균등 · 25% 넘게 벗어날 때만 맞춤",
+   "from": "2018-01-05",
+   "to": "2026-11-13",
+   "weeks": 463,
+   "tePct": 2.73,
+   "volPct": 11.1,
+   "teForecastPct": 3.15,
+   "teRealizedOverForecast": 0.85,
+   "relDrawdownPct": -3.5,
+   "turnoverPerYearPct": 15.6,
+   "rebalances": 41
+  }
+ },
+ "notes": [
+  "수익은 비교하지 않는다(종목을 2026년에 골랐다).",
+  "비교선 = 국가 비중을 맞춘 지수(SPY·KODEX 200) + 같은 현금.",
+  "능동 위험 몫 = 종목을 사고 그만큼 자기 시장 지수를 덜 가진 위치의 추적오차 기여.",
+  "공분산은 표본을 같은-상관 목표로 줄인 값(Ledoit·Wolf)."
+ ]
+}
