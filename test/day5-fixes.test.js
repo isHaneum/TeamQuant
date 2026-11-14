@@ -99,3 +99,22 @@ test('모의계좌 규칙 변경 잠금(결정 34): 서버 설정 일수 안에�
   const b = mk(undefined); b.pl.setPrefs({ rules: R }); assert.deepEqual(b.pl.setPrefs({ rules: { ...R, dailyLoss: 1.5 }, reason: '바로 바꾼다' }).changed, ['dailyLoss'], '설정이 없으면(0) 제한 없음 — 기존 동작');
   assert.equal((await b.pl.status()).prefsNextChangeAt, null);
 });
+
+test('자동 실행(결정 35): 장 시작 뒤 5분 안에는 돌지 않고 그날 기회도 쓰지 않는다 → 다음 점검에서 돈다', async () => {
+  const { pl, state } = setup({ exitQty: 10 }); const L = pl._ledger(); L.orders.push(buy('2026-11-13T00:08:00.000Z'));
+  const ver = (await pl.status()).planVersionNow; L.planVersion.KR = ver; L.planVersion.US = ver;
+  state.t = Date.parse('2026-11-16T00:01:52Z'); // 09:01:52 KST — 2026-11-13 미국 장에서 걸린 것과 같은 위상
+  assert.equal((await pl.autoRun()).ran, false); assert.equal(L.auto['KR:2026-11-16'], undefined, '그날 기회를 쓰지 않는다'); assert.equal(L.residual?.[`KR:${ver}`], undefined); assert.equal(state.placed.length, 0); assert.equal(L.runs.length, 0);
+  state.t = Date.parse('2026-11-16T00:11:52Z'); const r = await pl.autoRun(); assert.equal(r.ran, true, JSON.stringify(r)); assert.ok(r.sent >= 1); assert.ok(state.placed.some(o => (o.symbol || o.code) === '105560'));
+});
+
+test('자동 실행(결정 35): 닫혀 있는 다른 시장의 대기 항목은 이 시장의 집행 판정에 넣지 않는다 · 막힌 이유 이름이 시각에서 잘리지 않는다', async () => {
+  const state = { t: Date.parse('2026-11-16T01:30:00Z') }, bars = []; for (let t = Date.parse('2025-06-01'); t <= Date.parse('2026-12-31'); t += 864e5) { const d = new Date(t); if (d.getUTCDay() && d.getUTCDay() !== 6) bars.push({ date: d.toISOString().slice(0, 10), open: 100, close: 100 }); }
+  const client = { settings: () => ({ mode: 'vps', accountMasked: '****0000' }), async price(code) { return { code, market: /^[A-Z]/.test(code) ? 'US' : 'KR', currency: /^[A-Z]/.test(code) ? 'USD' : 'KRW', exchange: 'X', price: /^[A-Z]/.test(code) ? 500 : 77000, upper: 0, lower: 0, halted: false }; },
+    async balance() { return { cash: 100_000_000, total: 100_000_000, stock: 0, positions: [], cashUsd: 0, stockUsd: 0 }; }, async buyingPower() { return { maxQty: 1e6, cashQty: 1e6 }; }, async place() { return { odno: '1', orgno: '' }; }, async cancel() { return {}; }, async orders() { return []; } };
+  const plan = () => ({ '069500': { pct: 0.01, name: 'KODEX 200', currency: 'KRW' }, SPY: { pct: 10, name: 'SPY', currency: 'USD' } });
+  const pl = createPaperLive({ client, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-d35-'))), readMarket: async s => ({ candles: s === 'KRW=X' ? bars.map(c => ({ ...c, open: 1400, close: 1400 })) : bars }), now: () => state.t, defaultPlan: plan, defaultPlanVersion: () => 'T2', limits: { maxOrderKrw: 30_000_000, maxDailyKrw: 100_000_000 } });
+  const r = await pl.autoRun(); assert.equal(r.ran, true, JSON.stringify(r)); assert.equal(r.market, 'KR'); assert.equal(r.items, 1, '국내 항목만 센다(미국 SPY 는 미국 장에서)'); assert.equal(r.applied, true, JSON.stringify(r)); assert.match(r.note, /집행으로 적음/);
+  const L = pl._ledger(); assert.equal(L.planVersion.KR, (await pl.status()).planVersionNow); assert.notEqual(L.planVersion.US, L.planVersion.KR, '미국은 아직 집행 전');
+  assert.ok(Object.keys(L.runs.at(-1).blockedReasons).every(k => !/\(\d+$/.test(k)), JSON.stringify(L.runs.at(-1).blockedReasons));
+});
