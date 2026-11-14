@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T02:28:07.105Z",
+ "updatedAt": "2026-11-14T02:47:48.597Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -23,12 +23,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-13",
-   "last": 699.66,
+   "last": 699.6599731445312,
    "change": 0.45,
    "z": 0.2,
-   "sd": 2.712600847193978,
-   "source": "네이버 현재가",
-   "live": false,
+   "sd": 2.6920969628677787,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -120,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": -0.5,
-  "politics": -0.3,
-  "rates": 0,
+  "war": -0.4,
+  "politics": -0.4,
+  "rates": -0.2,
   "trade": 0.3,
   "fx": 0,
-  "energy": -0.3,
+  "energy": -0.4,
   "market": -0.5,
   "credit": 0.3,
   "disaster": 0,
@@ -133,17 +132,17 @@
  },
  "rates": {
   "war": {
-   "rate": 1.1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.8,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -158,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.1,
+   "rate": 3,
    "saturated": 1,
    "queries": 3
   },
@@ -246,53 +245,6 @@
    }
   },
   {
-   "id": "mxrumr",
-   "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
-   "firstSeen": "2026-11-13T22:04:00.000Z",
-   "lastSeen": "2026-11-13T22:33:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "젠슨 황 쇼크에 4조달러 무너졌다…AMD·브로드컴도 급락",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140003&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-13T22:33:00.000Z"
-    },
-    {
-     "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
-     "link": "https://www.sedaily.com/article/20114286?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-13T22:04:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 31,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
    "id": "1pvrlb4",
    "title": "\"물가·고용 모두 뜨겁다\"...美 연준 '빅스텝' 가능성 부상",
    "firstSeen": "2026-11-13T02:50:00.000Z",
@@ -311,6 +263,46 @@
      "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130842",
      "host": "ntoday.co.kr",
      "at": "2026-11-13T02:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "mxrumr",
+   "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
+   "firstSeen": "2026-11-13T22:04:00.000Z",
+   "lastSeen": "2026-11-13T22:04:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
+     "link": "https://www.sedaily.com/article/20114286?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-13T22:04:00.000Z"
     }
    ],
    "assess": {
@@ -376,15 +368,22 @@
    "id": "k8nt85",
    "title": "엔비디아 악재에 나스닥 0.91% 급락… 국내 반도체주 운명은",
    "firstSeen": "2026-11-13T09:34:00.000Z",
-   "lastSeen": "2026-11-14T01:52:00.000Z",
-   "count": 19,
-   "sources": 18,
+   "lastSeen": "2026-11-14T02:46:00.000Z",
+   "count": 20,
+   "sources": 19,
    "topics": [
     "rates",
+    "energy",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "뉴욕증시 기술주 약세 속 혼조···국제유가도 ‘널뛰기’",
+     "link": "https://www.ekn.kr/web/view.php?key=20261114024239653",
+     "host": "ekn.kr",
+     "at": "2026-11-14T02:46:00.000Z"
+    },
     {
      "title": "뉴욕증시 혼조 마감-반도체·AI 기술주 약세에 나스닥 0.91% 하락",
      "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=95244",
@@ -402,12 +401,6 @@
      "link": "https://www.jasm.co.kr/news/view/325285/?sc=Naver",
      "host": "jasm.co.kr",
      "at": "2026-11-14T01:22:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 혼조 마감…엔비디아 하락세 계속, 2%↓",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008845766&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-14T00:40:00.000Z"
     }
    ],
    "assess": {
@@ -425,6 +418,62 @@
     },
     "why": [
      "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "4bbrks",
+   "title": "로이터 \"'엔비디아칩 의존' 中 AI프로젝트 규모 4조6천억 이상\"",
+   "firstSeen": "2026-11-14T01:48:00.000Z",
+   "lastSeen": "2026-11-14T02:41:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "trade",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "로이터 \"'엔비디아칩 의존' 中 AI프로젝트 규모 4조6천억 이상\"",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346404?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-14T02:41:00.000Z"
+    },
+    {
+     "title": "로이터 \"'엔비디아칩 의존' 中 AI프로젝트 규모 4.6조 이상\"",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887188",
+     "host": "getnews.co.kr",
+     "at": "2026-11-14T02:40:00.000Z"
+    },
+    {
+     "title": "분명 수출 통제했는데…중국, 엔비디아 칩 의존 '4.6조' 이상",
+     "link": "https://www.hankyung.com/article/2026111463697",
+     "host": "hankyung.com",
+     "at": "2026-11-14T02:21:00.000Z"
+    },
+    {
+     "title": "로이터 “엔비디아 의존 中 AI 프로젝트 규모 4조6000억원 이상”",
+     "link": "https://www.etnews.com/20261114000015",
+     "host": "etnews.com",
+     "at": "2026-11-14T02:21:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 19,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -469,117 +518,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 17,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "4bbrks",
-   "title": "로이터 \"'엔비디아칩 의존' 中 AI프로젝트 규모 4조6천억 이상\"",
-   "firstSeen": "2026-11-14T01:48:00.000Z",
-   "lastSeen": "2026-11-14T02:21:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "trade",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "분명 수출 통제했는데…중국, 엔비디아 칩 의존 '4조6000억' 이상",
-     "link": "https://www.hankyung.com/article/2026111463697",
-     "host": "hankyung.com",
-     "at": "2026-11-14T02:21:00.000Z"
-    },
-    {
-     "title": "로이터 “엔비디아 의존 中 AI 프로젝트 규모 4조6000억원 이상”",
-     "link": "https://www.etnews.com/20261114000015",
-     "host": "etnews.com",
-     "at": "2026-11-14T02:21:00.000Z"
-    },
-    {
-     "title": "美 수출규제에도 中 AI사업에 엔비디아칩…규모만 4조6000억원 이상 [비...",
-     "link": "https://biz.heraldcorp.com/article/10936950?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-14T02:09:00.000Z"
-    },
-    {
-     "title": "로이터 “‘엔비디아칩 의존’ 중국 AI프로젝트 규모 4조6천억 이상”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712864&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-14T01:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "16tnhax",
-   "title": "'젠슨 황' 불확실성 지속…외국인 매도 폭탄에 코스피 5200대로 추락",
-   "firstSeen": "2026-11-13T07:04:00.000Z",
-   "lastSeen": "2026-11-13T20:50:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "5500선 뚫고도 5290선 추락…코스피, 외국인 매도에 245포인트 출렁",
-     "link": "https://www.geconomy.co.kr/news/article.html?no=325651",
-     "host": "geconomy.co.kr",
-     "at": "2026-11-13T20:50:00.000Z"
-    },
-    {
-     "title": "엔비디아 후폭풍에 美반도체 6% 급락…외국인 7000억 매도, 코스피 5300선...",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=354659",
-     "host": "greened.kr",
-     "at": "2026-11-13T18:25:00.000Z"
-    },
-    {
-     "title": "‘젠슨 황’ 불확실성에… 코스피 1% 하락 마감",
-     "link": "https://www.donga.com/news/Economy/article/all/20261113/135023326/2",
-     "host": "donga.com",
-     "at": "2026-11-13T16:41:00.000Z"
-    },
-    {
-     "title": "'젠슨 황' 불확실성 지속…외국인 매도 폭탄에 코스피 5200대로 추락",
-     "link": "https://www.ddaily.co.kr/page/view/2026111316005377798",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-13T07:07:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 12,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -640,6 +578,55 @@
     },
     "why": [
      "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "16tnhax",
+   "title": "'젠슨 황' 불확실성 지속…외국인 매도 폭탄에 코스피 5200대로 추락",
+   "firstSeen": "2026-11-13T07:04:00.000Z",
+   "lastSeen": "2026-11-13T20:50:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "5500선 뚫고도 5290선 추락…코스피, 외국인 매도에 245포인트 출렁",
+     "link": "https://www.geconomy.co.kr/news/article.html?no=325651",
+     "host": "geconomy.co.kr",
+     "at": "2026-11-13T20:50:00.000Z"
+    },
+    {
+     "title": "엔비디아 후폭풍에 美반도체 6% 급락…외국인 7000억 매도, 코스피 5300선...",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=354659",
+     "host": "greened.kr",
+     "at": "2026-11-13T18:25:00.000Z"
+    },
+    {
+     "title": "'젠슨 황' 불확실성 지속…외국인 매도 폭탄에 코스피 5200대로 추락",
+     "link": "https://www.ddaily.co.kr/page/view/2026111316005377798",
+     "host": "ddaily.co.kr",
+     "at": "2026-11-13T07:07:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -944,6 +931,18 @@
  ],
  "alerts": [
   {
+   "at": "2026-11-14T02:47:48.597Z",
+   "id": "s238rd",
+   "level": "caution",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.sedaily.com/article/20114301?ref=naver",
+   "delivered": false
+  },
+  {
    "at": "2026-11-14T02:18:13.804Z",
    "id": "mxrumr",
    "level": "caution",
@@ -1169,18 +1168,6 @@
     "미 10년 금리 +10.7bp(평소의 2배)"
    ],
    "link": "https://www.news2day.co.kr/article/20261113500001",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T17:27:51.086Z",
-   "id": "1vztfhm",
-   "level": "urgent",
-   "title": "트럼프 \"이란과 합의 없다\"…국제유가 1%대 급등",
-   "why": [
-    "핵심 단어",
-    "금 -3.03%(평소의 2.2배)"
-   ],
-   "link": "https://www.tokenpost.kr/news/breaking/437199",
    "delivered": false
   }
  ],
