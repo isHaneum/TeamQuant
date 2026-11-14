@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T07:27:35.243Z",
+ "updatedAt": "2026-11-14T07:47:58.745Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,15 +120,15 @@
  ],
  "spikes": {
   "war": -0.5,
-  "politics": -1.6,
+  "politics": -1.4,
   "rates": -1,
   "trade": 0.1,
   "fx": -0.4,
-  "energy": -1,
+  "energy": -0.9,
   "market": -1.4,
   "credit": 0.1,
   "disaster": 0,
-  "policy": -0.7
+  "policy": -0.2
  },
  "rates": {
   "war": {
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.4,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.3,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.7,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -285,6 +285,63 @@
    }
   },
   {
+   "id": "1dy4d4g",
+   "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
+   "firstSeen": "2026-11-14T02:40:00.000Z",
+   "lastSeen": "2026-11-14T07:42:00.000Z",
+   "count": 12,
+   "sources": 12,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프·시진핑 회담서 ‘엔비디아 스캔들’ 빠지나…美 “수출통제 협...",
+     "link": "https://www.kukinews.com/article/view/kuk202611140029",
+     "host": "kukinews.com",
+     "at": "2026-11-14T07:42:00.000Z"
+    },
+    {
+     "title": "트럼프, 미·중 정상회담서 '젠슨황-中간첩 불륜' 꺼내지 않을 듯",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731674",
+     "host": "ebn.co.kr",
+     "at": "2026-11-14T07:28:00.000Z"
+    },
+    {
+     "title": "트럼프, 미·중 정상회담서 ‘엔비디아 스파이 의혹’ 거론 안 할듯",
+     "link": "https://www.kmib.co.kr/article/20261114500076",
+     "host": "kmib.co.kr",
+     "at": "2026-11-14T07:25:00.000Z"
+    },
+    {
+     "title": "[속보] 트럼프, 시진핑 회담서 ‘앨리스 황 간첩 의혹’ 거론 안 할 듯",
+     "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0400&key=20261114.99099004218",
+     "host": "kookje.co.kr",
+     "at": "2026-11-14T07:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 21,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "12rbdhy",
    "title": "뉴욕증시, 엔비디아 우려에 혼조 마감…나스닥 0.91%↓",
    "firstSeen": "2026-11-13T13:16:00.000Z",
@@ -338,62 +395,6 @@
     },
     "why": [
      "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "1dy4d4g",
-   "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
-   "firstSeen": "2026-11-14T02:40:00.000Z",
-   "lastSeen": "2026-11-14T07:25:00.000Z",
-   "count": 11,
-   "sources": 11,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프, 미·중 정상회담서 ‘엔비디아 스파이 의혹’ 거론 안 할듯",
-     "link": "https://www.kmib.co.kr/article/20261114500076",
-     "host": "kmib.co.kr",
-     "at": "2026-11-14T07:25:00.000Z"
-    },
-    {
-     "title": "[속보] 트럼프, 시진핑 회담서 ‘앨리스 황 간첩 의혹’ 거론 안 할 듯",
-     "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0400&key=20261114.99099004218",
-     "host": "kookje.co.kr",
-     "at": "2026-11-14T07:20:00.000Z"
-    },
-    {
-     "title": "트럼프, 시진핑과 회담서 '젠슨 황·中스파이 불륜 의혹' 거론 안 할 듯",
-     "link": "https://www.g-enews.com/view.php?ud=20261114160641236931a5c2dd38_1",
-     "host": "g-enews.com",
-     "at": "2026-11-14T07:10:00.000Z"
-    },
-    {
-     "title": "美 “트럼프, 시진핑 회담서 젠슨 황 스캔들 거론 안할 듯”",
-     "link": "https://www.sedaily.com/article/20114334?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-14T06:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
     ]
    }
   },
@@ -457,15 +458,21 @@
    "id": "197mj7o",
    "title": "[분석] 젠슨 황 퇴진…AI 투자·미중 칩 갈등·韓 반도체에 파장",
    "firstSeen": "2026-11-13T09:00:00.000Z",
-   "lastSeen": "2026-11-14T05:45:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-14T07:42:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "war",
     "policy"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "젠슨 황 퇴진에 미중 반도체 갈등 재점화 우려…中 “희토류로 맞대응”",
+     "link": "https://www.etoday.co.kr/news/view/2648169",
+     "host": "etoday.co.kr",
+     "at": "2026-11-14T07:42:00.000Z"
+    },
     {
      "title": "젠슨 황 퇴진 여파에 中 전문가 “美 반도체 규제 강화 땐 희토류로 대...",
      "link": "https://www.sedaily.com/article/20114328?ref=naver",
@@ -483,18 +490,12 @@
      "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5230843",
      "host": "mbn.mk.co.kr",
      "at": "2026-11-14T05:24:00.000Z"
-    },
-    {
-     "title": "젠슨 황 퇴진 불똥, 美中 반도체 전쟁으로…中 희토류로 맞대응",
-     "link": "https://www.g-enews.com/view.php?ud=202611141337112692cd0bfacc1c_1",
-     "host": "g-enews.com",
-     "at": "2026-11-14T05:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 16,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -506,6 +507,116 @@
     },
     "why": [
      "코스피 -0.98%"
+    ]
+   }
+  },
+  {
+   "id": "8d5x7h",
+   "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
+   "firstSeen": "2026-11-13T13:01:00.000Z",
+   "lastSeen": "2026-11-14T04:48:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "서학개미, 엔비디아 급락에 한주간 1천억 원 매수",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005962192",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-14T04:48:00.000Z"
+    },
+    {
+     "title": "‘젠슨황 스캔들’에 급락한 엔비디아…서학개미, 1000억 사들였다",
+     "link": "https://www.munhwa.com/article/11631258?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-14T02:02:00.000Z"
+    },
+    {
+     "title": "\"젠슨황 여파\"...서학개미, 급락한 엔비디아 1000억원대 '저가 매수'",
+     "link": "https://www.fnnews.com/news/202611140917177584",
+     "host": "fnnews.com",
+     "at": "2026-11-14T01:46:00.000Z"
+    },
+    {
+     "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5230823",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-14T01:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 12,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "juw5g8",
+   "title": "국힘, 이 대통령 '증시 골 깊으면 산도 높다' 발언에 \"무책임한 현실 극...",
+   "firstSeen": "2026-11-14T02:20:00.000Z",
+   "lastSeen": "2026-11-14T07:17:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "與 \"국힘, 코리아 디스카운트\" vs 野 \"한가한 낙관론\"…'李 증시' 충돌",
+     "link": "https://www.news1.kr/politics/assembly/6354056",
+     "host": "news1.kr",
+     "at": "2026-11-14T07:17:00.000Z"
+    },
+    {
+     "title": "국힘, 李 증시 발언 맹공…\"개미 피눈물 나는데 한가한 낙관론\"",
+     "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2313518",
+     "host": "daejonilbo.com",
+     "at": "2026-11-14T06:53:00.000Z"
+    },
+    {
+     "title": "李 \"증시, 골 깊으면 산 높을 것\".. 국힘 \"한가한 낙관론\"",
+     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67597?feed=na",
+     "host": "jibs.co.kr",
+     "at": "2026-11-14T02:21:00.000Z"
+    },
+    {
+     "title": "국힘, 이 대통령 '증시 골 깊으면 산도 높다' 발언에 \"무책임한 현실 극...",
+     "link": "https://www.hankookilbo.com/news/article/A2026111410530005129?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-14T02:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 12,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -658,104 +769,6 @@
    }
   },
   {
-   "id": "k8nt85",
-   "title": "뉴욕증시 혼란: 엔비디아 전 CEO 스캔들로 기술주 급락, 투자자들 주목",
-   "firstSeen": "2026-11-13T09:34:00.000Z",
-   "lastSeen": "2026-11-14T04:48:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "서학개미, 엔비디아 급락에 한주간 1천억 원 매수",
-     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005962192",
-     "host": "mbnmoney.mbn.co.kr",
-     "at": "2026-11-14T04:48:00.000Z"
-    },
-    {
-     "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5230823",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-14T01:36:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 혼란: 엔비디아 전 CEO 스캔들로 기술주 급락, 투자자들 주목",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=885596",
-     "host": "gokorea.kr",
-     "at": "2026-11-14T00:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "18zddv3",
-   "title": "국힘 \"李, '개미' 피눈물 쏟는데 주가 반등 타령…현실 인식 참담\"",
-   "firstSeen": "2026-11-14T00:42:00.000Z",
-   "lastSeen": "2026-11-14T02:20:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국힘, 이 대통령 '증시 골 깊으면 산도 높다' 발언에 \"무책임한 현실 극...",
-     "link": "https://www.hankookilbo.com/news/article/A2026111410530005129?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-14T02:20:00.000Z"
-    },
-    {
-     "title": "국힘 \"李대통령, 국민 피눈물 쏟는데 고작 반등 타령…무책임한 현실 극...",
-     "link": "https://www.newsis.com/view/NISX20261114_0003867998",
-     "host": "newsis.com",
-     "at": "2026-11-14T00:50:00.000Z"
-    },
-    {
-     "title": "국힘 \"李, '개미' 피눈물 쏟는데 주가 반등 타령…현실 인식 참담\"",
-     "link": "https://news.tf.co.kr/read/ptoday/2388804.htm",
-     "host": "news.tf.co.kr",
-     "at": "2026-11-14T00:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
    "id": "k0f710",
    "title": "국민의힘 \"증시 오르면 치적, 폭락하면 개미 팔자?…李대통령 사과해야...",
    "firstSeen": "2026-11-14T01:11:00.000Z",
@@ -785,55 +798,6 @@
      "link": "https://www.dailian.co.kr/news/view/1714939/?sc=Naver",
      "host": "dailian.co.kr",
      "at": "2026-11-14T01:11:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "wqry3j",
-   "title": "李 \"증시, 골 깊으면 산 높을 것\".. 국힘 \"한가한 낙관론\"",
-   "firstSeen": "2026-11-13T23:33:00.000Z",
-   "lastSeen": "2026-11-14T07:17:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "與 \"국힘, 코리아 디스카운트\" vs 野 \"한가한 낙관론\"…'李 증시' 충돌",
-     "link": "https://www.news1.kr/politics/assembly/6354056",
-     "host": "news1.kr",
-     "at": "2026-11-14T07:17:00.000Z"
-    },
-    {
-     "title": "국힘, 李 증시 발언 맹공…\"개미 피눈물 나는데 한가한 낙관론\"",
-     "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2313518",
-     "host": "daejonilbo.com",
-     "at": "2026-11-14T06:53:00.000Z"
-    },
-    {
-     "title": "李 \"증시, 골 깊으면 산 높을 것\".. 국힘 \"한가한 낙관론\"",
-     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67597?feed=na",
-     "host": "jibs.co.kr",
-     "at": "2026-11-14T02:21:00.000Z"
     }
    ],
    "assess": {
@@ -949,9 +913,64 @@
      "S&P 500 -0.4%"
     ]
    }
+  },
+  {
+   "id": "thl8ek",
+   "title": "3분기 순이익 70% 급감…한투증권 ‘김성환호’ 험난한 겨울나기",
+   "firstSeen": "2026-11-13T08:32:00.000Z",
+   "lastSeen": "2026-11-14T00:38:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "상반기 호황 무색…대형 증권사 3분기 순이익 85% 급감",
+     "link": "https://www.mediapen.com/news/view/1137368",
+     "host": "mediapen.com",
+     "at": "2026-11-14T00:38:00.000Z"
+    },
+    {
+     "title": "3분기 순이익 70% 급감…한투증권 ‘김성환호’ 험난한 겨울나기",
+     "link": "https://ilyo.co.kr/?ac=article_view&entry_id=513606",
+     "host": "ilyo.co.kr",
+     "at": "2026-11-13T08:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-14T07:47:58.745Z",
+   "id": "s238rd",
+   "level": "caution",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.sedaily.com/article/20114301?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-14T06:32:27.173Z",
    "id": "s238rd",
@@ -1178,18 +1197,6 @@
     "금 -3.03%(평소의 2.2배)"
    ],
    "link": "http://www.yonhapnewstv.co.kr/news/AKR202611130606432xB",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T19:47:31.819Z",
-   "id": "1vztfhm",
-   "level": "urgent",
-   "title": "트럼프 \"이란과 합의 없다\"…국제유가 1%대 급등",
-   "why": [
-    "핵심 단어",
-    "금 -2.85%(평소의 2.1배)"
-   ],
-   "link": "https://www.tokenpost.kr/news/breaking/437199",
    "delivered": false
   }
  ],
