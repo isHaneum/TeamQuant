@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T09:13:15.079Z",
+ "updatedAt": "2026-11-14T09:27:12.933Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -125,7 +125,7 @@
   "trade": 0.1,
   "fx": -0.4,
   "energy": -1,
-  "market": -1.5,
+  "market": -1.6,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.2
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.1,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -382,24 +382,75 @@
    }
   },
   {
+   "id": "18rhojq",
+   "title": "규제 풀기 직전 엔비디아 주식 매입…'이해충돌 논란' 휩싸인 트럼프",
+   "firstSeen": "2026-11-14T08:45:00.000Z",
+   "lastSeen": "2026-11-14T09:20:00.000Z",
+   "count": 9,
+   "sources": 9,
+   "topics": [
+    "politics",
+    "trade",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프, AI 수출통제 풀기 전 엔비디아 주식 매입 논란",
+     "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2313526",
+     "host": "daejonilbo.com",
+     "at": "2026-11-14T09:20:00.000Z"
+    },
+    {
+     "title": "\"트럼프, 대중 반도체 규제 폐지 직전 엔비디아 주식 대거 매입\"",
+     "link": "https://news.jtbc.co.kr/article/NB12328115?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-14T09:18:00.000Z"
+    },
+    {
+     "title": "트럼프, AI칩 수출통제 풀기 직전 엔비디아 주식 대규모 매수...이해충돌...",
+     "link": "https://www.g-enews.com/view.php?ud=20261114181210882031a5c2dd38_1",
+     "host": "g-enews.com",
+     "at": "2026-11-14T09:18:00.000Z"
+    },
+    {
+     "title": "트럼프, AI칩 中 수출규제 풀기 직전 엔비디아 ‘풀매수’",
+     "link": "https://www.donga.com/news/Inter/article/all/20261114/135024388/1",
+     "host": "donga.com",
+     "at": "2026-11-14T09:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 20,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "rp5c56",
    "title": "\"트럼프, 작년에 AI칩 수출통제 풀며 엔비디아 주식 사들여\"",
    "firstSeen": "2026-11-14T08:29:00.000Z",
-   "lastSeen": "2026-11-14T09:12:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "lastSeen": "2026-11-14T09:00:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
     "politics",
     "trade"
    ],
    "critical": [],
    "links": [
-    {
-     "title": "“트럼프, AI칩 수출통제 풀기 직전 엔비디아 주식 샀다” 가디언",
-     "link": "https://www.donga.com/news/Inter/article/all/20261114/135024388/1",
-     "host": "donga.com",
-     "at": "2026-11-14T09:12:00.000Z"
-    },
     {
      "title": "“AI칩 수출통제 폐기 직전 주식 샀다”…트럼프, 엔비디아 투자 도마에",
      "link": "https://biz.heraldcorp.com/article/10937098?ref=naver",
@@ -417,12 +468,18 @@
      "link": "https://view.asiae.co.kr/article/2026111417532609275",
      "host": "view.asiae.co.kr",
      "at": "2026-11-14T08:54:00.000Z"
+    },
+    {
+     "title": "“트럼프, 작년에 AI칩 수출 통제 풀며 엔비디아 주식 사들여”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712927&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-14T08:44:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
+    "score": 18,
     "spike": 0.1,
     "news": false,
     "reaction": {
@@ -493,9 +550,9 @@
    }
   },
   {
-   "id": "197mj7o",
+   "id": "1j29i4b",
    "title": "[분석] 젠슨 황 퇴진…AI 투자·미중 칩 갈등·韓 반도체에 파장",
-   "firstSeen": "2026-11-13T09:00:00.000Z",
+   "firstSeen": "2026-11-13T22:24:00.000Z",
    "lastSeen": "2026-11-14T05:45:00.000Z",
    "count": 5,
    "sources": 5,
@@ -659,118 +716,6 @@
    }
   },
   {
-   "id": "1dy4d4g",
-   "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
-   "firstSeen": "2026-11-14T02:40:00.000Z",
-   "lastSeen": "2026-11-14T08:48:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"트럼프, 시진핑 회담서 '젠슨황-中간첩 불륜' 거론 안할듯\"",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887194",
-     "host": "getnews.co.kr",
-     "at": "2026-11-14T08:48:00.000Z"
-    },
-    {
-     "title": "[속보] \"트럼프, 시진핑과 회담서 '엔비디아 中간첩' 의혹 제기 안할것...",
-     "link": "https://www.cjb.co.kr/home/sub.php?menukey=61&mod=view&P_NO=261114508&PRO_CODE=99",
-     "host": "cjb.co.kr",
-     "at": "2026-11-14T08:21:00.000Z"
-    },
-    {
-     "title": "트럼프·시진핑·푸틴, 중국서 3자 정상회담 추진…핵군축·북한 문제 논...",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=131835",
-     "host": "pennmike.com",
-     "at": "2026-11-14T05:20:00.000Z"
-    },
-    {
-     "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
-     "link": "http://www.newstown.co.kr/news/articleView.html?idxno=721930",
-     "host": "newstown.co.kr",
-     "at": "2026-11-14T02:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 12,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "18rhojq",
-   "title": "규제 풀기 직전 엔비디아 주식 매입…'이해충돌 논란' 휩싸인 트럼프",
-   "firstSeen": "2026-11-14T08:45:00.000Z",
-   "lastSeen": "2026-11-14T08:57:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[속보] “트럼프, AI 반도체 규제 완화 전 엔비디아 주식 매입”",
-     "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0400&key=20261114.99099004222",
-     "host": "kookje.co.kr",
-     "at": "2026-11-14T08:57:00.000Z"
-    },
-    {
-     "title": "트럼프, 규제 풀기 전 엔비디아 주식 샀나…또 이해충돌 논란",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140048&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-14T08:54:00.000Z"
-    },
-    {
-     "title": "가디언 \"트럼프, 지난해 AI 칩 규제 풀기 전 엔비디아 주식 매수\"",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5230869",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-14T08:49:00.000Z"
-    },
-    {
-     "title": "규제 풀기 직전 엔비디아 주식 매입…'이해충돌 논란' 휩싸인 트럼프",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008845990&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-14T08:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 12,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
    "id": "1owe7ls",
    "title": "금시세·금값 14일",
    "firstSeen": "2026-11-13T12:40:00.000Z",
@@ -849,6 +794,56 @@
      "link": "https://www.dailian.co.kr/news/view/1714939/?sc=Naver",
      "host": "dailian.co.kr",
      "at": "2026-11-14T01:11:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "1dy4d4g",
+   "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
+   "firstSeen": "2026-11-14T02:40:00.000Z",
+   "lastSeen": "2026-11-14T08:48:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"트럼프, 시진핑 회담서 '젠슨황-中간첩 불륜' 거론 안할듯\"",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887194",
+     "host": "getnews.co.kr",
+     "at": "2026-11-14T08:48:00.000Z"
+    },
+    {
+     "title": "트럼프·시진핑·푸틴, 중국서 3자 정상회담 추진…핵군축·북한 문제 논...",
+     "link": "https://www.pennmike.com/news/articleView.html?idxno=131835",
+     "host": "pennmike.com",
+     "at": "2026-11-14T05:20:00.000Z"
+    },
+    {
+     "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
+     "link": "http://www.newstown.co.kr/news/articleView.html?idxno=721930",
+     "host": "newstown.co.kr",
+     "at": "2026-11-14T02:40:00.000Z"
     }
    ],
    "assess": {
