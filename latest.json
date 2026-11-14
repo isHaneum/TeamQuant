@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T21:47:46.012Z",
+ "updatedAt": "2026-11-14T22:11:31.570Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,36 +119,36 @@
   }
  ],
  "spikes": {
-  "war": -0.8,
-  "politics": -0.9,
-  "rates": -0.4,
-  "trade": -0.2,
+  "war": -0.7,
+  "politics": -0.3,
+  "rates": -0.1,
+  "trade": 0,
   "fx": -0.4,
   "energy": -1,
-  "market": -1.2,
+  "market": -0.9,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 0.6,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.3,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3,
-   "saturated": 0,
+   "rate": 3.3,
+   "saturated": 1,
    "queries": 2
   },
   "fx": {
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.3,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -187,9 +187,9 @@
    "id": "1yyjm53",
    "title": "연준 12월 금리 인상 확률 100%…1월 연속 인상도 거론",
    "firstSeen": "2026-11-14T10:46:00.000Z",
-   "lastSeen": "2026-11-14T21:00:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "lastSeen": "2026-11-14T22:06:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "rates"
    ],
@@ -197,6 +197,12 @@
     "rates"
    ],
    "links": [
+    {
+     "title": "[N2 포커스] 미국 연준, '빅스텝'도 거론…올해 마지막 금통위 주목",
+     "link": "https://www.news2day.co.kr/article/20261111500409",
+     "host": "news2day.co.kr",
+     "at": "2026-11-14T22:06:00.000Z"
+    },
     {
      "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
      "link": "https://www.newsis.com/view/NISX20261113_0003867549",
@@ -213,49 +219,9 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 31,
+    "score": 34,
     "spike": 0,
     "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "mxrumr",
-   "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
-   "firstSeen": "2026-11-13T22:04:00.000Z",
-   "lastSeen": "2026-11-13T22:04:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
-     "link": "https://www.sedaily.com/article/20114286?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-13T22:04:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
@@ -354,8 +320,8 @@
    "title": "젤렌스키 \"美, '우크라 나토 가입 대가' 돈바스 양도안 질의\"",
    "firstSeen": "2026-11-14T10:09:00.000Z",
    "lastSeen": "2026-11-14T21:33:00.000Z",
-   "count": 14,
-   "sources": 10,
+   "count": 13,
+   "sources": 9,
    "topics": [
     "war"
    ],
@@ -368,7 +334,7 @@
      "at": "2026-11-14T21:33:00.000Z"
     },
     {
-     "title": "젤렌스키 \"美, '나토 가입 대신 돈바스서 철군' 첫 제안(종합)",
+     "title": "젤렌스키 \"美, '나토 가입 대신 돈바스서 철군' 첫 제안\"(종합)",
      "link": "https://www.newsis.com/view/NISX20261115_0003868286",
      "host": "newsis.com",
      "at": "2026-11-14T20:31:00.000Z"
@@ -460,101 +426,46 @@
    }
   },
   {
-   "id": "1voon04",
-   "title": "美연구소 \"中딥시크·키미, 美제재에도 엔비디아 최첨단칩 훈련\"",
-   "firstSeen": "2026-11-14T18:32:00.000Z",
-   "lastSeen": "2026-11-14T20:01:00.000Z",
+   "id": "ko510n",
+   "title": "삼성SDI 주가 2.14% 상승…코스피 4.56% 반등에는 못 미쳐",
+   "firstSeen": "2026-11-14T15:24:00.000Z",
+   "lastSeen": "2026-11-14T22:01:00.000Z",
    "count": 6,
-   "sources": 6,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미 연구소 \"중국 AI모델, 미국 제재에도 엔비디아 최첨단칩 훈련\"",
-     "link": "https://imnews.imbc.com/news/2026/world/article/6865711_36925.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-14T20:01:00.000Z"
-    },
-    {
-     "title": "미국 연구소 “중국 딥시크·키미, 엔비디아 최첨단칩 훈련”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8713057&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-14T20:00:00.000Z"
-    },
-    {
-     "title": "미 연구소 \"중 딥시크·키미, 엔비디아 최첨단칩 훈련\"",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008846125&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-14T19:55:00.000Z"
-    },
-    {
-     "title": "미 연구소 \"중국 딥시크·키미, 미국 제재에도 엔비디아 최첨단칩 훈련...",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611150438032272",
-     "host": "ytn.co.kr",
-     "at": "2026-11-14T19:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 16,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "qq9diw",
-   "title": "서학개미, 엔비디아 급락에 한주간 1천억 원 매수",
-   "firstSeen": "2026-11-14T01:46:00.000Z",
-   "lastSeen": "2026-11-14T21:00:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "sources": 4,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[젠슨 황 스캔들] 서학개미, 일주일간 엔비디아 주식 1천억 원어치 폭풍...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=626884",
-     "host": "cbci.co.kr",
+     "title": "‘젠슨 황’ 사임에 코스피도 안갯속…엔비디아 실적, 반등 가를까[선데...",
+     "link": "https://www.sedaily.com/article/20114355?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-14T22:01:00.000Z"
+    },
+    {
+     "title": "9385서 4911까지 출렁인 코스피…내년 반등 변수는",
+     "link": "https://www.kbmaeil.com/article/20261115500023",
+     "host": "kbmaeil.com",
+     "at": "2026-11-14T21:44:00.000Z"
+    },
+    {
+     "title": "[주간증시전망] 엔비디아 실적에 반도체 반등 달렸다",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731665",
+     "host": "ebn.co.kr",
      "at": "2026-11-14T21:00:00.000Z"
     },
     {
-     "title": "엔비디아 주가 급락에도 서학개미 1천억원 순매수",
-     "link": "http://www.kjdaily.com/article.php?aid=1794671528692194276",
+     "title": "반도체 ETF 주간 32% 급등…코스피 반등에 레버리지 강세",
+     "link": "http://www.kjdaily.com/article.php?aid=1794671565692206276",
      "host": "kjdaily.com",
-     "at": "2026-11-14T15:56:00.000Z"
-    },
-    {
-     "title": "[NZSI INDEX] 2026년 11월 13일… 엔비디아 급락에도 저가 매수 집중, 개...",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93572",
-     "host": "the-today.com",
-     "at": "2026-11-14T11:14:00.000Z"
-    },
-    {
-     "title": "엔비디아 급락이 기회?…서학개미 1천억원 매수",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH2026111418485964a",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-14T09:49:00.000Z"
+     "at": "2026-11-14T15:54:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 14,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -571,11 +482,11 @@
   },
   {
    "id": "1j29i4b",
-   "title": "미국, 젠슨 황 퇴진 틈타 반도체 규제 강화할까…중국 전문가 \"희토류로...",
+   "title": "젠슨 황 퇴진에 美 반도체 규제 촉각…中 전문가 \"통제 강화 땐 희토류...",
    "firstSeen": "2026-11-13T22:24:00.000Z",
    "lastSeen": "2026-11-14T06:53:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "count": 4,
+   "sources": 4,
    "topics": [
     "policy"
    ],
@@ -609,7 +520,7 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 12,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -680,46 +591,46 @@
    }
   },
   {
-   "id": "ko510n",
-   "title": "삼성SDI 주가 2.14% 상승…코스피 4.56% 반등에는 못 미쳐",
-   "firstSeen": "2026-11-14T15:24:00.000Z",
-   "lastSeen": "2026-11-14T21:44:00.000Z",
-   "count": 5,
-   "sources": 3,
+   "id": "xsxx82",
+   "title": "엔비디아 실적에 앤트로픽 상장까지…이번 주 증시 '진짜 변수'는 [주식...",
+   "firstSeen": "2026-11-14T15:02:00.000Z",
+   "lastSeen": "2026-11-14T22:02:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "market"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "9385서 4911까지 출렁인 코스피…내년 반등 변수는",
-     "link": "https://www.kbmaeil.com/article/20261115500023",
-     "host": "kbmaeil.com",
-     "at": "2026-11-14T21:44:00.000Z"
+     "title": "[뉴욕증시-주간전망] 엔비디아 실적에 앤트로픽 상장…'AI 빅위크'",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444787",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-14T22:02:00.000Z"
     },
     {
-     "title": "[주간증시전망] 엔비디아 실적에 반도체 반등 달렸다",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731665",
-     "host": "ebn.co.kr",
+     "title": "[글로벌 경제지표] 엔비디아 실적·앤트로픽 상장 주목…트럼프, APEC 참...",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346230?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-14T22:00:00.000Z"
+    },
+    {
+     "title": "'젠슨황 스캔들'에 짓눌린 증시…엔비디아 실적·앤트로픽 상장 주시",
+     "link": "https://www.yna.co.kr/view/AKR20261113177200008?input=1195m",
+     "host": "yna.co.kr",
      "at": "2026-11-14T21:00:00.000Z"
     },
     {
-     "title": "반도체 ETF 주간 32% 급등…코스피 반등에 레버리지 강세",
-     "link": "http://www.kjdaily.com/article.php?aid=1794671565692206276",
-     "host": "kjdaily.com",
-     "at": "2026-11-14T15:54:00.000Z"
-    },
-    {
-     "title": "삼성전기 주가 1.72% 하락…코스피 4.56% 반등과 엇갈려",
-     "link": "http://www.kjdaily.com/article.php?aid=1794670958692209276",
-     "host": "kjdaily.com",
-     "at": "2026-11-14T15:44:00.000Z"
+     "title": "엔비디아 실적에 앤트로픽 상장까지…이번 주 증시 '진짜 변수'는 [주식...",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140043&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-14T15:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 11,
+    "score": 12,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -764,56 +675,6 @@
      "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94169",
      "host": "thefairnews.co.kr",
      "at": "2026-11-13T23:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "k0f710",
-   "title": "국민의힘 \"증시 오르면 치적, 폭락하면 개미 팔자?…李대통령 사과해야...",
-   "firstSeen": "2026-11-14T01:11:00.000Z",
-   "lastSeen": "2026-11-14T05:28:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국민의힘 \"주가 오르면 대통령 치적, 폭락하면 개미 팔자냐\" 李 직격",
-     "link": "https://www.newdaily.co.kr/site/data/html/2026/11/14/2026111450028.html",
-     "host": "newdaily.co.kr",
-     "at": "2026-11-14T05:28:00.000Z"
-    },
-    {
-     "title": "野, 李대통령 증시 관련 발언에 \"오르면 치적, 폭락하면 팔자?\"",
-     "link": "https://www.sisajournal.com/news/articleView.html?idxno=394015",
-     "host": "sisajournal.com",
-     "at": "2026-11-14T04:45:00.000Z"
-    },
-    {
-     "title": "국민의힘 \"증시 오르면 치적, 폭락하면 개미 팔자?…李대통령 사과해야...",
-     "link": "https://www.dailian.co.kr/news/view/1714939/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-14T01:11:00.000Z"
     }
    ],
    "assess": {
@@ -925,9 +786,153 @@
      "원/달러 +0.18%"
     ]
    }
+  },
+  {
+   "id": "1ewsvus",
+   "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
+   "firstSeen": "2026-11-13T23:37:00.000Z",
+   "lastSeen": "2026-11-14T05:08:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 ‘젠슨황 스캔들’ 후폭풍 지속···주가 요동치고 정치권·업...",
+     "link": "https://www.ekn.kr/web/view.php?key=20261114023569672",
+     "host": "ekn.kr",
+     "at": "2026-11-14T05:08:00.000Z"
+    },
+    {
+     "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261114084720gJk",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-13T23:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "1k226it",
+   "title": "엔비디아 주가 일주일 새 13% 급락...시총 4조달러 붕괴",
+   "firstSeen": "2026-11-13T23:58:00.000Z",
+   "lastSeen": "2026-11-14T17:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 시총 4조달러 붕괴…반도체 동반 약세 속 저평가론",
+     "link": "https://www.g-enews.com/view.php?ud=2026111421030827649a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-14T17:02:00.000Z"
+    },
+    {
+     "title": "엔비디아 주가 일주일 새 13% 급락...시총 4조달러 붕괴",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/14/DFGKTXF52VF7XCEKX6VHX3JJOQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-13T23:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "1edzuzv",
+   "title": "[분석] 석유 최고가격 4주 동결…국제유가 내려도 국내 공급비용은 왜 ...",
+   "firstSeen": "2026-11-14T00:00:00.000Z",
+   "lastSeen": "2026-11-14T03:09:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "정부, 국제유가 하락에도 석유 최고가격 동결… 휘발유 1784원",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000082622",
+     "host": "jnilbo.com",
+     "at": "2026-11-14T03:09:00.000Z"
+    },
+    {
+     "title": "[분석] 석유 최고가격 4주 동결…국제유가 내려도 국내 공급비용은 왜 ...",
+     "link": "https://www.energydaily.co.kr/news/articleView.html?idxno=205101",
+     "host": "energydaily.co.kr",
+     "at": "2026-11-14T00:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "CL=F",
+     "label": "WTI 유가",
+     "change": -0.2,
+     "unit": "%",
+     "z": -0.1
+    },
+    "why": [
+     "WTI 유가 -0.2%"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-14T22:11:31.570Z",
+   "id": "1yyjm53",
+   "level": "caution",
+   "title": "연준 12월 금리 인상 확률 100%…1월 연속 인상도 거론",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.news2day.co.kr/article/20261111500409",
+   "delivered": false
+  },
   {
    "at": "2026-11-14T12:29:25.839Z",
    "id": "s238rd",
@@ -1154,18 +1159,6 @@
     "VIX 변동성 +6.92%"
    ],
    "link": "https://www.bloter.net/news/articleView.html?idxno=678524",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-13T00:34:31.480Z",
-   "id": "c86036",
-   "level": "caution",
-   "title": "2개의 전선에 갇힌 트럼프, 러·우크라 중재와 이란 호르무즈 대치",
-   "why": [
-    "핵심 단어",
-    "금 -2.8%(평소의 2배)"
-   ],
-   "link": "https://www.mt.co.kr/world/2026/11/13/2026111308263646165",
    "delivered": false
   }
  ],
