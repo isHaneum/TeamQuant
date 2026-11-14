@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T13:27:17.819Z",
+ "updatedAt": "2026-11-14T13:47:44.496Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,9 +119,9 @@
   }
  ],
  "spikes": {
-  "war": -0.7,
+  "war": -0.8,
   "politics": -1.5,
-  "rates": -1.1,
+  "rates": -1.2,
   "trade": -0.9,
   "fx": -0.4,
   "energy": -1.3,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 0.8,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
@@ -142,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.2,
+   "rate": 0.1,
    "saturated": 0,
    "queries": 3
   },
@@ -183,67 +183,6 @@
   }
  },
  "issues": [
-  {
-   "id": "s238rd",
-   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
-   "firstSeen": "2026-11-13T13:43:00.000Z",
-   "lastSeen": "2026-11-14T01:48:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
-     "link": "https://www.sedaily.com/article/20114301?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-14T01:48:00.000Z"
-    },
-    {
-     "title": "美 10월 생산자물가 6.5% 상승…4년 만에 최고",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611140006",
-     "host": "sentv.co.kr",
-     "at": "2026-11-13T23:58:00.000Z"
-    },
-    {
-     "title": "美 생산자물가 6.5% 급등, 4년 만에 최고…연준 12월 금리인상 '무게'",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731654",
-     "host": "ebn.co.kr",
-     "at": "2026-11-13T23:20:00.000Z"
-    },
-    {
-     "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
-     "link": "https://www.chosun.com/economy/int_economy/2026/11/13/3VYNNJCWLNEXBAVXEAFTE5TAYQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-13T13:43:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
   {
    "id": "mxrumr",
    "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
@@ -422,6 +361,62 @@
    }
   },
   {
+   "id": "1g8adqd",
+   "title": "젠슨황 여파 주목…中전문가 \"美 칩규제 강화시 中 희토류 맞불\"",
+   "firstSeen": "2026-11-14T04:24:00.000Z",
+   "lastSeen": "2026-11-14T13:31:00.000Z",
+   "count": 8,
+   "sources": 6,
+   "topics": [
+    "politics",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프, '젠슨황 스캔들' 거론 안 할듯...\"칩 규제엔 희토류 맞불\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611142231445697",
+     "host": "ytn.co.kr",
+     "at": "2026-11-14T13:31:00.000Z"
+    },
+    {
+     "title": "트럼프, '젠슨황 스캔들' 거론 안 할듯...\"칩 규제엔 희토류 맞불\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611142025581739",
+     "host": "ytn.co.kr",
+     "at": "2026-11-14T11:25:00.000Z"
+    },
+    {
+     "title": "中 전문가 \"美 칩규제 강화시 中 희토류로 맞불\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261114155218DOQ",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-14T06:53:00.000Z"
+    },
+    {
+     "title": "젠슨 황 여파에 미국 '칩 규제' 칼바람...중국 전문가 \"희토류 맞불\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611141500173881",
+     "host": "ytn.co.kr",
+     "at": "2026-11-14T06:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "1nnv078",
    "title": "젤렌스키 \"美, '우크라 나토 가입 대가' 돈바스 양도안 질의\"",
    "firstSeen": "2026-11-14T10:09:00.000Z",
@@ -473,62 +468,6 @@
     },
     "why": [
      "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
-   "id": "1g8adqd",
-   "title": "젠슨황 여파 주목…中전문가 \"美 칩규제 강화시 中 희토류 맞불\"",
-   "firstSeen": "2026-11-14T04:24:00.000Z",
-   "lastSeen": "2026-11-14T11:25:00.000Z",
-   "count": 7,
-   "sources": 6,
-   "topics": [
-    "politics",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프, '젠슨황 스캔들' 거론 안 할듯...\"칩 규제엔 희토류 맞불\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611142025581739",
-     "host": "ytn.co.kr",
-     "at": "2026-11-14T11:25:00.000Z"
-    },
-    {
-     "title": "中 전문가 \"美 칩규제 강화시 中 희토류로 맞불\"",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261114155218DOQ",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-14T06:53:00.000Z"
-    },
-    {
-     "title": "젠슨 황 여파에 미국 '칩 규제' 칼바람...중국 전문가 \"희토류 맞불\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611141500173881",
-     "host": "ytn.co.kr",
-     "at": "2026-11-14T06:00:00.000Z"
-    },
-    {
-     "title": "젠슨 황 여파에 美 '칩 규제' 칼바람…중국 \"희토류 맞불\"",
-     "link": "https://www.hankyung.com/article/2026111464557",
-     "host": "hankyung.com",
-     "at": "2026-11-14T05:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
     ]
    }
   },
@@ -754,6 +693,58 @@
     },
     "why": [
      "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "s238rd",
+   "title": "美 생산자물가 6.5% 급등, 4년 만에 최고…연준 12월 금리인상 '무게'",
+   "firstSeen": "2026-11-13T13:43:00.000Z",
+   "lastSeen": "2026-11-14T01:48:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
+     "link": "https://www.sedaily.com/article/20114301?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-14T01:48:00.000Z"
+    },
+    {
+     "title": "美 10월 생산자물가 6.5% 상승…4년 만에 최고",
+     "link": "https://www.sentv.co.kr/article/view/sentv202611140006",
+     "host": "sentv.co.kr",
+     "at": "2026-11-13T23:58:00.000Z"
+    },
+    {
+     "title": "美 생산자물가 6.5% 급등, 4년 만에 최고…연준 12월 금리인상 '무게'",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731654",
+     "host": "ebn.co.kr",
+     "at": "2026-11-13T23:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
     ]
    }
   },
