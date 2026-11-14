@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T05:12:32.657Z",
+ "updatedAt": "2026-11-14T05:27:32.583Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": -0.8,
-  "rates": -0.6,
+  "war": -0.5,
+  "politics": -1,
+  "rates": -0.7,
   "trade": 0.3,
   "fx": -0.4,
-  "energy": -0.6,
+  "energy": -0.7,
   "market": -1.3,
   "credit": -0.2,
   "disaster": 0,
@@ -132,17 +132,17 @@
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.3,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.7,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -466,15 +466,15 @@
    "critical": [],
    "links": [
     {
-     "title": "젠슨황 여파 주목…중국 전문가 “미국 칩규제 강화시 중국 희토류 맞불...",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712892&ref=A",
-     "host": "news.kbs.co.kr",
+     "title": "젠슨 황 여파에 美 '칩 규제' 칼바람…중국 \"희토류 맞불\"",
+     "link": "https://www.hankyung.com/article/2026111464557",
+     "host": "hankyung.com",
      "at": "2026-11-14T05:08:00.000Z"
     },
     {
-     "title": "젠슨황 여파, 미국 칩 규제… 전문가 \"중국 희토류 맞불할 것\"",
-     "link": "https://www.hankyung.com/article/2026111464557",
-     "host": "hankyung.com",
+     "title": "젠슨황 여파 주목…중국 전문가 “미국 칩규제 강화시 중국 희토류 맞불...",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712892&ref=A",
+     "host": "news.kbs.co.kr",
      "at": "2026-11-14T05:08:00.000Z"
     },
     {
@@ -659,6 +659,56 @@
    }
   },
   {
+   "id": "197mj7o",
+   "title": "[분석] 젠슨 황 퇴진…AI 투자·미중 칩 갈등·韓 반도체에 파장",
+   "firstSeen": "2026-11-13T09:00:00.000Z",
+   "lastSeen": "2026-11-14T05:24:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "미국, 젠슨 황 퇴진 틈타 반도체 규제 강화할까…중국 전문가 \"희토류로...",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5230843",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-14T05:24:00.000Z"
+    },
+    {
+     "title": "젠슨 황 퇴진 불똥, 美中 반도체 전쟁으로…中 희토류로 맞대응",
+     "link": "https://www.g-enews.com/view.php?ud=202611141337112692cd0bfacc1c_1",
+     "host": "g-enews.com",
+     "at": "2026-11-14T05:00:00.000Z"
+    },
+    {
+     "title": "[분석] 젠슨 황 퇴진…AI 투자·미중 칩 갈등·韓 반도체에 파장",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94166",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-13T22:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -0.98,
+     "unit": "%",
+     "z": -0.3
+    },
+    "why": [
+     "코스피 -0.98%"
+    ]
+   }
+  },
+  {
    "id": "1owe7ls",
    "title": "금시세·금값 14일",
    "firstSeen": "2026-11-13T12:40:00.000Z",
@@ -736,6 +786,56 @@
      "link": "https://news.tf.co.kr/read/ptoday/2388804.htm",
      "host": "news.tf.co.kr",
      "at": "2026-11-14T00:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "1dy4d4g",
+   "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
+   "firstSeen": "2026-11-14T02:40:00.000Z",
+   "lastSeen": "2026-11-14T05:20:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프·시진핑·푸틴, 중국서 3자 정상회담 추진…핵군축·북한 문제 논...",
+     "link": "https://www.pennmike.com/news/articleView.html?idxno=131835",
+     "host": "pennmike.com",
+     "at": "2026-11-14T05:20:00.000Z"
+    },
+    {
+     "title": "트럼프, 시진핑·푸틴과 첫 3자 회담… 김정은과 만남은 불발",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3448674",
+     "host": "newscj.com",
+     "at": "2026-11-14T04:02:00.000Z"
+    },
+    {
+     "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
+     "link": "http://www.newstown.co.kr/news/articleView.html?idxno=721930",
+     "host": "newstown.co.kr",
+     "at": "2026-11-14T02:40:00.000Z"
     }
    ],
    "assess": {
@@ -845,95 +945,21 @@
      "S&P 500 -0.4%"
     ]
    }
-  },
-  {
-   "id": "thl8ek",
-   "title": "3분기 순이익 70% 급감…한투증권 ‘김성환호’ 험난한 겨울나기",
-   "firstSeen": "2026-11-13T08:32:00.000Z",
-   "lastSeen": "2026-11-14T00:38:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "상반기 호황 무색…대형 증권사 3분기 순이익 85% 급감",
-     "link": "https://www.mediapen.com/news/view/1137368",
-     "host": "mediapen.com",
-     "at": "2026-11-14T00:38:00.000Z"
-    },
-    {
-     "title": "3분기 순이익 70% 급감…한투증권 ‘김성환호’ 험난한 겨울나기",
-     "link": "https://ilyo.co.kr/?ac=article_view&entry_id=513606",
-     "host": "ilyo.co.kr",
-     "at": "2026-11-13T08:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "1v3fnu9",
-   "title": "위트코프 특사 \"푸틴, 다음 우크라 평화협상 때 유럽 참여 허용키로\"…...",
-   "firstSeen": "2026-11-13T08:41:00.000Z",
-   "lastSeen": "2026-11-13T19:06:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미 특사단 \"우크라 평화협상에 유럽 참여 합의\"…러 \"아직 결정 안 돼\"",
-     "link": "https://www.voakorea.com/a/us-russia-ukraine/8223429.html",
-     "host": "voakorea.com",
-     "at": "2026-11-13T19:06:00.000Z"
-    },
-    {
-     "title": "위트코프 특사 \"푸틴, 다음 우크라 평화협상 때 유럽 참여 허용키로\"…...",
-     "link": "https://www.newspim.com/news/view/20261113001414",
-     "host": "newspim.com",
-     "at": "2026-11-13T10:34:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-14T05:27:32.583Z",
+   "id": "s238rd",
+   "level": "caution",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.sedaily.com/article/20114301?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-14T04:14:26.412Z",
    "id": "s238rd",
@@ -1160,18 +1186,6 @@
     "미 10년 금리 +11.1bp(평소의 2.1배)"
    ],
    "link": "https://www.news2day.co.kr/article/20261113500001",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T18:28:52.710Z",
-   "id": "1vztfhm",
-   "level": "urgent",
-   "title": "트럼프 \"이란과 합의 없다\"…국제유가 1%대 급등",
-   "why": [
-    "핵심 단어",
-    "금 -2.87%(평소의 2.1배)"
-   ],
-   "link": "https://www.tokenpost.kr/news/breaking/437199",
    "delivered": false
   }
  ],
