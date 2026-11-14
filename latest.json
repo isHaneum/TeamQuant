@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T23:11:21.235Z",
+ "updatedAt": "2026-11-14T23:27:40.240Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,29 +120,29 @@
  ],
  "spikes": {
   "war": -0.5,
-  "politics": -0.1,
-  "rates": 0.2,
+  "politics": 0.1,
+  "rates": 0.4,
   "trade": 0.2,
   "fx": -0.4,
   "energy": -0.6,
-  "market": -0.4,
+  "market": -0.2,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 1,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.9,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.3,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.8,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 3
   },
@@ -213,9 +213,49 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 33,
-    "spike": 0.2,
+    "score": 34,
+    "spike": 0.4,
     "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1yyjm53",
+   "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
+   "firstSeen": "2026-11-14T10:46:00.000Z",
+   "lastSeen": "2026-11-14T23:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
+     "link": "http://coinreaders.com/270342",
+     "host": "coinreaders.com",
+     "at": "2026-11-14T23:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 0.4,
+    "news": false,
     "reaction": {
      "symbol": "^TNX",
      "label": "미 10년 금리",
@@ -313,14 +353,20 @@
    "id": "1nnv078",
    "title": "젤렌스키 \"美, '우크라 나토 가입 대가' 돈바스 양도안 질의\"",
    "firstSeen": "2026-11-14T10:09:00.000Z",
-   "lastSeen": "2026-11-14T22:46:00.000Z",
-   "count": 14,
-   "sources": 10,
+   "lastSeen": "2026-11-14T23:19:00.000Z",
+   "count": 15,
+   "sources": 11,
    "topics": [
     "war"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "美, 우크라에 \"돈바스 영토-나토 맞교환\" 첫 타진",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01154566645646048&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-14T23:19:00.000Z"
+    },
     {
      "title": "\"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\"",
      "link": "https://monthly.chosun.com/news/articleView.html?idxno=71966",
@@ -338,12 +384,6 @@
      "link": "https://www.newsis.com/view/NISX20261115_0003868286",
      "host": "newsis.com",
      "at": "2026-11-14T20:31:00.000Z"
-    },
-    {
-     "title": "젤렌스키 \"미국, '우크라 나토 가입 대가' 돈바스 양도안 질의\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611150349310553",
-     "host": "ytn.co.kr",
-     "at": "2026-11-14T18:49:00.000Z"
     }
    ],
    "assess": {
@@ -365,10 +405,10 @@
    }
   },
   {
-   "id": "jphvub",
-   "title": "[뉴욕증시] AI·반도체 약세에 혼조세 마감…엔비디아 2.01%↓",
-   "firstSeen": "2026-11-13T21:45:00.000Z",
-   "lastSeen": "2026-11-14T04:18:00.000Z",
+   "id": "8pkt5x",
+   "title": "뉴욕증시 혼조 마감-반도체·AI 기술주 약세에 나스닥 0.91% 하락",
+   "firstSeen": "2026-11-14T01:52:00.000Z",
+   "lastSeen": "2026-11-14T09:54:00.000Z",
    "count": 5,
    "sources": 5,
    "topics": [
@@ -376,6 +416,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "뉴욕증시, 다우지수만 0.1% 상승…엔비디아 2%↓, 하락 지속",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=208888",
+     "host": "tfmedia.co.kr",
+     "at": "2026-11-14T09:54:00.000Z"
+    },
     {
      "title": "뉴욕증시, 엔비디아 여파에 혼조 마감…\"다우 0.10%↑·나스닥 0.91%↓\"",
      "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=369732",
@@ -393,12 +439,6 @@
      "link": "https://www.ekn.kr/web/view.php?key=20261114024239653",
      "host": "ekn.kr",
      "at": "2026-11-14T02:46:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 혼조 마감-반도체·AI 기술주 약세에 나스닥 0.91% 하락",
-     "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=95244",
-     "host": "mediafine.co.kr",
-     "at": "2026-11-14T01:52:00.000Z"
     }
    ],
    "assess": {
@@ -459,58 +499,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "jphvub",
-   "title": "[뉴욕증시 주간] 3대 지수 2%대 동반 상승…엔비디아는 CEO 사임에 13% 가...",
-   "firstSeen": "2026-11-13T21:45:00.000Z",
-   "lastSeen": "2026-11-14T11:50:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴욕증시 마감] 다우 소폭 상승 속 엔비디아 2% 하락하며 시총 4조 달러...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=626889",
-     "host": "cbci.co.kr",
-     "at": "2026-11-14T11:50:00.000Z"
-    },
-    {
-     "title": "엔비디아 충격에 반도체주 동반 급락…다우만 상승",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93555",
-     "host": "the-today.com",
-     "at": "2026-11-14T02:24:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시 주간] 3대 지수 2%대 동반 상승…엔비디아는 CEO 사임에 13% 가...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94169",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-13T23:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
+    "score": 13,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -559,8 +549,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 9,
-    "spike": 0.2,
+    "score": 10,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -571,104 +561,6 @@
     },
     "why": [
      "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "1j29i4b",
-   "title": "젠슨 황 퇴진 여파에 中 전문가 “美 반도체 규제 강화 땐 희토류로 대...",
-   "firstSeen": "2026-11-13T22:24:00.000Z",
-   "lastSeen": "2026-11-14T06:53:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "中 전문가 \"美 칩규제 강화시 中 희토류로 맞불\"",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261114155218DOQ",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-14T06:53:00.000Z"
-    },
-    {
-     "title": "젠슨 황 여파에 미국 '칩 규제' 칼바람...중국 전문가 \"희토류 맞불\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611141500173881",
-     "host": "ytn.co.kr",
-     "at": "2026-11-14T06:00:00.000Z"
-    },
-    {
-     "title": "젠슨 황 퇴진 여파에 中 전문가 “美 반도체 규제 강화 땐 희토류로 대...",
-     "link": "https://www.sedaily.com/article/20114328?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-14T05:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -0.98,
-     "unit": "%",
-     "z": -0.3
-    },
-    "why": [
-     "코스피 -0.98%"
-    ]
-   }
-  },
-  {
-   "id": "1dy4d4g",
-   "title": "트럼프·시진핑·푸틴, APEC서 사상 첫 3자 회담 추진",
-   "firstSeen": "2026-11-14T02:40:00.000Z",
-   "lastSeen": "2026-11-14T21:46:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“트럼프, 시진핑 회담서 젠슨 황 ‘스파이 연루 의혹’ 언급 안 할 듯”",
-     "link": "https://www.dailian.co.kr/news/view/1715076/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-14T21:46:00.000Z"
-    },
-    {
-     "title": "\"트럼프, 시진핑 회담서 '젠슨황-中간첩 불륜' 거론 안할듯“",
-     "link": "https://www.m-economynews.com/news/article.html?no=73045",
-     "host": "m-economynews.com",
-     "at": "2026-11-14T21:26:00.000Z"
-    },
-    {
-     "title": "트럼프·시진핑·푸틴, APEC서 사상 첫 3자 회담 추진",
-     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003285013&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
-     "host": "ohmynews.com",
-     "at": "2026-11-14T10:21:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
     ]
    }
   },
@@ -708,8 +600,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 9,
-    "spike": 0,
+    "score": 10,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -720,6 +612,235 @@
     },
     "why": [
      "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "13qmde0",
+   "title": "[뉴욕마켓워치] 美 물가 경계 속 엔비디아 후폭풍…주식·채권 혼조·달...",
+   "firstSeen": "2026-11-14T00:10:00.000Z",
+   "lastSeen": "2026-11-14T13:50:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[김남현의 채권썰] 물가에 꺾인 채권 랠리, 이젠 합(合)의 시간",
+     "link": "https://www.etoday.co.kr/news/view/2648191",
+     "host": "etoday.co.kr",
+     "at": "2026-11-14T13:50:00.000Z"
+    },
+    {
+     "title": "[뉴욕마켓워치] 美 물가 경계 속 엔비디아 후폭풍…주식·채권 혼조·달...",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444773",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-14T00:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1m60h9j",
+   "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
+   "firstSeen": "2026-11-14T01:48:00.000Z",
+   "lastSeen": "2026-11-14T17:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 달러화 3주째 강세…국채금리 급등에 19개월 최고권",
+     "link": "https://www.g-enews.com/view.php?ud=2026111419054118449a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-14T17:02:00.000Z"
+    },
+    {
+     "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
+     "link": "https://www.sedaily.com/article/20114301?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-14T01:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "el7z7s",
+   "title": "급락 딛고 반등한 코스피…다음주 '엔비디아·연준' 변수 주목",
+   "firstSeen": "2026-11-13T22:18:00.000Z",
+   "lastSeen": "2026-11-14T22:00:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "급락 딛고 반등한 코스피…엔비디아 실적이 다음 주 증시 가른다",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5083201",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-14T22:00:00.000Z"
+    },
+    {
+     "title": "급락 딛고 반등한 코스피…다음주 '엔비디아·연준' 변수 주목",
+     "link": "https://daily.hankooki.com/news/articleView.html?idxno=1425040",
+     "host": "daily.hankooki.com",
+     "at": "2026-11-14T05:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "foazm4",
+   "title": "[마켓스토리] 롤러코스터 탔던 올해 코스피…내년 투자 전략은?",
+   "firstSeen": "2026-11-14T21:30:00.000Z",
+   "lastSeen": "2026-11-14T21:44:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "rates",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "9385서 4911까지 출렁인 코스피…내년 반등 변수는",
+     "link": "https://www.kbmaeil.com/article/20261115500023",
+     "host": "kbmaeil.com",
+     "at": "2026-11-14T21:44:00.000Z"
+    },
+    {
+     "title": "[마켓스토리] 롤러코스터 탔던 올해 코스피…내년 투자 전략은?",
+     "link": "https://www.yna.co.kr/view/AKR20261114025800008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-14T21:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "sq89r0",
+   "title": "[크립토 오즈] 비트코인(BTC) 연내 6만 달러 하락 확률 50%…하루 새 14%...",
+   "firstSeen": "2026-11-13T23:12:00.000Z",
+   "lastSeen": "2026-11-14T23:12:00.000Z",
+   "count": 3,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[크립토 오즈] 비트코인(BTC) 11월 중 6만 달러 터치 확률 61%…하루 새 ...",
+     "link": "http://coinreaders.com/270340",
+     "host": "coinreaders.com",
+     "at": "2026-11-14T23:12:00.000Z"
+    },
+    {
+     "title": "[머니 확률표] 美 5년물 금리 5.25% 도달 확률 16%…하루 새 5%p 상승",
+     "link": "http://coinreaders.com/270220",
+     "host": "coinreaders.com",
+     "at": "2026-11-14T04:12:00.000Z"
+    },
+    {
+     "title": "[크립토 오즈] 비트코인(BTC) 연내 6만 달러 하락 확률 50%…하루 새 14%...",
+     "link": "http://coinreaders.com/270218",
+     "host": "coinreaders.com",
+     "at": "2026-11-14T04:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 8,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
     ]
    }
   },
@@ -767,144 +888,21 @@
      "S&P 500 -0.4%"
     ]
    }
-  },
-  {
-   "id": "13qmde0",
-   "title": "[뉴욕마켓워치] 美 물가 경계 속 엔비디아 후폭풍…주식·채권 혼조·달...",
-   "firstSeen": "2026-11-14T00:10:00.000Z",
-   "lastSeen": "2026-11-14T13:50:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[김남현의 채권썰] 물가에 꺾인 채권 랠리, 이젠 합(合)의 시간",
-     "link": "https://www.etoday.co.kr/news/view/2648191",
-     "host": "etoday.co.kr",
-     "at": "2026-11-14T13:50:00.000Z"
-    },
-    {
-     "title": "[뉴욕마켓워치] 美 물가 경계 속 엔비디아 후폭풍…주식·채권 혼조·달...",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444773",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-14T00:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 8,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "o410tx",
-   "title": "[11월 둘째 주 세계경제동향 브리핑] 코스피 5,200선 회복…한미 증시 동...",
-   "firstSeen": "2026-11-14T01:40:00.000Z",
-   "lastSeen": "2026-11-14T21:00:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아 실적·미중회담 '슈퍼위크'…코스피 6000선 회복 시험대",
-     "link": "https://www.news1.kr/finance/market-exr/6353836",
-     "host": "news1.kr",
-     "at": "2026-11-14T21:00:00.000Z"
-    },
-    {
-     "title": "[11월 둘째 주 세계경제동향 브리핑] 코스피 5,200선 회복…한미 증시 동...",
-     "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3040901",
-     "host": "kihoilbo.co.kr",
-     "at": "2026-11-14T01:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 8,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "1m60h9j",
-   "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
-   "firstSeen": "2026-11-14T01:48:00.000Z",
-   "lastSeen": "2026-11-14T17:02:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 달러화 3주째 강세…국채금리 급등에 19개월 최고권",
-     "link": "https://www.g-enews.com/view.php?ud=2026111419054118449a1f309431_1",
-     "host": "g-enews.com",
-     "at": "2026-11-14T17:02:00.000Z"
-    },
-    {
-     "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
-     "link": "https://www.sedaily.com/article/20114301?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-14T01:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 8,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-14T23:27:40.240Z",
+   "id": "1yyjm53",
+   "level": "caution",
+   "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.news2day.co.kr/article/20261111500409",
+   "delivered": false
+  },
   {
    "at": "2026-11-14T22:11:31.570Z",
    "id": "1yyjm53",
@@ -1123,18 +1121,6 @@
   },
   {
    "at": "2026-11-13T04:16:01.370Z",
-   "id": "7shul7",
-   "level": "caution",
-   "title": "GS건설, 자회사 산은 빚 1125억 대위변제…외화채 위험 완화",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +6.92%"
-   ],
-   "link": "https://www.bloter.net/news/articleView.html?idxno=678524",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-13T03:15:53.126Z",
    "id": "7shul7",
    "level": "caution",
    "title": "GS건설, 자회사 산은 빚 1125억 대위변제…외화채 위험 완화",
