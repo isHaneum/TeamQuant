@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T06:32:27.173Z",
+ "updatedAt": "2026-11-14T06:47:20.195Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,8 +120,8 @@
  ],
  "spikes": {
   "war": -0.4,
-  "politics": -1.1,
-  "rates": -0.8,
+  "politics": -1.2,
+  "rates": -0.7,
   "trade": 0.1,
   "fx": -0.4,
   "energy": -1,
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.6,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -345,15 +345,21 @@
    "id": "1dy4d4g",
    "title": "백악관, 트럼프-시진핑-푸틴, APEC 기간 중 공동 회담",
    "firstSeen": "2026-11-14T02:40:00.000Z",
-   "lastSeen": "2026-11-14T06:28:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "lastSeen": "2026-11-14T06:44:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "war",
     "politics"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "“트럼프, 시진핑 회담서 ‘젠슨황-중국 간첩 불륜’ 거론 안할 듯”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712899&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-14T06:44:00.000Z"
+    },
     {
      "title": "트럼프, 시진핑과 회담서 ‘젠슨 황 스캔들’ 거론 안 할 듯",
      "link": "https://biz.heraldcorp.com/article/10937042?ref=naver",
@@ -371,18 +377,12 @@
      "link": "https://www.ajunews.com/view/20261114151105190",
      "host": "ajunews.com",
      "at": "2026-11-14T06:22:00.000Z"
-    },
-    {
-     "title": "“트럼프, 시진핑에 젠슨 황 의혹 거론 안 할 듯”",
-     "link": "https://www.kbmaeil.com/article/20261114500194",
-     "host": "kbmaeil.com",
-     "at": "2026-11-14T06:20:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
+    "score": 19,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -505,6 +505,61 @@
     },
     "why": [
      "코스피 -0.98%"
+    ]
+   }
+  },
+  {
+   "id": "8d5x7h",
+   "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
+   "firstSeen": "2026-11-13T13:01:00.000Z",
+   "lastSeen": "2026-11-14T04:48:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "서학개미, 엔비디아 급락에 한주간 1천억 원 매수",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005962192",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-14T04:48:00.000Z"
+    },
+    {
+     "title": "‘젠슨황 스캔들’에 급락한 엔비디아…서학개미, 1000억 사들였다",
+     "link": "https://www.munhwa.com/article/11631258?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-14T02:02:00.000Z"
+    },
+    {
+     "title": "\"젠슨황 여파\"...서학개미, 급락한 엔비디아 1000억원대 '저가 매수'",
+     "link": "https://www.fnnews.com/news/202611140917177584",
+     "host": "fnnews.com",
+     "at": "2026-11-14T01:46:00.000Z"
+    },
+    {
+     "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5230823",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-14T01:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 12,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -653,55 +708,6 @@
     },
     "why": [
      "WTI 유가 -0.2%"
-    ]
-   }
-  },
-  {
-   "id": "k8nt85",
-   "title": "뉴욕증시 혼란: 엔비디아 전 CEO 스캔들로 기술주 급락, 투자자들 주목",
-   "firstSeen": "2026-11-13T09:34:00.000Z",
-   "lastSeen": "2026-11-14T04:48:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "서학개미, 엔비디아 급락에 한주간 1천억 원 매수",
-     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005962192",
-     "host": "mbnmoney.mbn.co.kr",
-     "at": "2026-11-14T04:48:00.000Z"
-    },
-    {
-     "title": "서학개미, 엔비디아 1천억 매수…젠슨 황 스캔들로 주가 급락",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5230823",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-14T01:36:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 혼란: 엔비디아 전 CEO 스캔들로 기술주 급락, 투자자들 주목",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=885596",
-     "host": "gokorea.kr",
-     "at": "2026-11-14T00:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
     ]
    }
   },
