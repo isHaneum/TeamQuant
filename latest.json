@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-14T03:47:40.997Z",
+ "updatedAt": "2026-11-14T04:14:26.412Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -101,7 +101,7 @@
    "last": 19.299999237060547,
    "change": 3.21,
    "z": 0.3,
-   "sd": 11.83586506190386,
+   "sd": 11.782503388614433,
    "source": "Yahoo",
    "checked": true
   },
@@ -120,15 +120,15 @@
  ],
  "spikes": {
   "war": -0.8,
-  "politics": -0.8,
-  "rates": -0.6,
+  "politics": -0.4,
+  "rates": -0.5,
   "trade": 0.3,
   "fx": 0.1,
   "energy": -0.6,
-  "market": -0.9,
-  "credit": 0.3,
+  "market": -1,
+  "credit": 0.1,
   "disaster": 0,
-  "policy": -0.2
+  "policy": -0.7
  },
  "rates": {
   "war": {
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -162,12 +162,12 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.3,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
   "credit": {
-   "rate": 0.3,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 2
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   }
@@ -289,8 +289,8 @@
    "title": "엔비디아 악재에 나스닥 0.91% 급락… 국내 반도체주 운명은",
    "firstSeen": "2026-11-13T09:34:00.000Z",
    "lastSeen": "2026-11-14T03:12:00.000Z",
-   "count": 19,
-   "sources": 19,
+   "count": 18,
+   "sources": 18,
    "topics": [
     "rates",
     "energy",
@@ -342,15 +342,71 @@
    }
   },
   {
+   "id": "qujvdf",
+   "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
+   "firstSeen": "2026-11-13T06:52:00.000Z",
+   "lastSeen": "2026-11-14T04:12:00.000Z",
+   "count": 6,
+   "sources": 5,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"베선트 미 재무, 젠슨 황 파문에 러트닉 미 상무장관 책임 거론\" CNN",
+     "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284475",
+     "host": "womennews.co.kr",
+     "at": "2026-11-14T04:12:00.000Z"
+    },
+    {
+     "title": "러트닉 美상무, 젠슨 황 비호 의혹에 '경질론' 위기",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887190",
+     "host": "getnews.co.kr",
+     "at": "2026-11-14T03:30:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 스캔들' 불똥 맞은 러트닉, 경질 위기…베선트도 공개 저격",
+     "link": "https://www.pennmike.com/news/articleView.html?idxno=131829",
+     "host": "pennmike.com",
+     "at": "2026-11-14T03:16:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 스캔들'‥러트닉 상무장관 '사면초가'",
+     "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6865635_36967.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-14T02:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "4bbrks",
-   "title": "로이터 “엔비디아 의존 中 AI 프로젝트 규모 4조6000억원 이상”",
+   "title": "로이터 \"'엔비디아칩 의존' 中 AI프로젝트 규모 4.6조 이상\"",
    "firstSeen": "2026-11-14T01:48:00.000Z",
    "lastSeen": "2026-11-14T03:35:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "trade",
-    "policy"
+    "trade"
    ],
    "critical": [],
    "links": [
@@ -382,7 +438,7 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
+    "score": 17,
     "spike": 0.3,
     "news": false,
     "reaction": {
@@ -453,59 +509,113 @@
    }
   },
   {
-   "id": "qujvdf",
-   "title": "젠슨 황 스캔들 후폭풍…러트닉 상무 '경질론' 위기",
-   "firstSeen": "2026-11-13T06:52:00.000Z",
-   "lastSeen": "2026-11-14T03:30:00.000Z",
+   "id": "1v3fnu9",
+   "title": "젤렌스키 \"다음 종전협상엔 유럽도 참여\"…미국 특사와 회동",
+   "firstSeen": "2026-11-13T08:41:00.000Z",
+   "lastSeen": "2026-11-13T19:06:00.000Z",
    "count": 5,
-   "sources": 4,
+   "sources": 5,
    "topics": [
-    "war",
-    "politics",
-    "trade"
+    "war"
    ],
    "critical": [],
    "links": [
     {
-     "title": "러트닉 美상무, 젠슨 황 비호 의혹에 '경질론' 위기",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887190",
-     "host": "getnews.co.kr",
-     "at": "2026-11-14T03:30:00.000Z"
+     "title": "미 특사단 \"우크라 평화협상에 유럽 참여 합의\"…러 \"아직 결정 안 돼\"",
+     "link": "https://www.voakorea.com/a/us-russia-ukraine/8223429.html",
+     "host": "voakorea.com",
+     "at": "2026-11-13T19:06:00.000Z"
     },
     {
-     "title": "'젠슨 황 스캔들' 불똥 맞은 러트닉, 경질 위기…베선트도 공개 저격",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=131829",
-     "host": "pennmike.com",
-     "at": "2026-11-14T03:16:00.000Z"
+     "title": "위트코프 특사 \"푸틴, 다음 우크라 평화협상 때 유럽 참여 허용키로\"…...",
+     "link": "https://www.newspim.com/news/view/20261113001414",
+     "host": "newspim.com",
+     "at": "2026-11-13T10:34:00.000Z"
     },
     {
-     "title": "'젠슨 황 스캔들'‥러트닉 상무장관 '사면초가'",
-     "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6865635_36967.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-14T02:52:00.000Z"
+     "title": "젤렌스키 “다음 종전 협상엔 유럽도 직접 참여할 것”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712325&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-13T09:17:00.000Z"
     },
     {
-     "title": "'젠슨 황 스캔들' 후폭풍…러트닉 상무장관 경질 가능성",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611141007183x7",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-14T01:08:00.000Z"
+     "title": "젤렌스키 “다음 종전협상에 유럽 직접 참여”...러시아 동의 여부 주목",
+     "link": "https://www.m-economynews.com/news/article.html?no=73019",
+     "host": "m-economynews.com",
+     "at": "2026-11-13T09:10:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 15,
-    "spike": 0.3,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 0.18,
      "unit": "%",
-     "z": -0.4
+     "z": 0.3
     },
     "why": [
-     "S&P 500 -0.4%"
+     "원/달러 +0.18%"
+    ]
+   }
+  },
+  {
+   "id": "sq89r0",
+   "title": "[머니 확률표] 美 10년물 5.4% 터치 확률 25%…하루 새 5%p 상승",
+   "firstSeen": "2026-11-13T23:12:00.000Z",
+   "lastSeen": "2026-11-14T04:12:00.000Z",
+   "count": 5,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[머니 확률표] 美 5년물 금리 5.25% 도달 확률 16%…하루 새 5%p 상승",
+     "link": "http://coinreaders.com/270220",
+     "host": "coinreaders.com",
+     "at": "2026-11-14T04:12:00.000Z"
+    },
+    {
+     "title": "[크립토 오즈] 비트코인(BTC) 연내 6만 달러 하락 확률 50%…하루 새 14%...",
+     "link": "http://coinreaders.com/270218",
+     "host": "coinreaders.com",
+     "at": "2026-11-14T04:12:00.000Z"
+    },
+    {
+     "title": "11월 2주차 SK하이닉스 주가 131만원 터치 후 하락 마감",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=563813",
+     "host": "joongangenews.com",
+     "at": "2026-11-14T01:46:00.000Z"
+    },
+    {
+     "title": "[크립토 오즈] 비트코인(BTC) 11월 6만 5,000달러 터치 확률 54%…하루 새...",
+     "link": "http://coinreaders.com/270151",
+     "host": "coinreaders.com",
+     "at": "2026-11-13T23:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 10,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
     ]
    }
   },
@@ -609,133 +719,36 @@
    }
   },
   {
-   "id": "60y8wm",
-   "title": "푸틴 만난 미 특사 “향후 우크라 협상에 ‘유럽 대표’ 참여할 것”",
-   "firstSeen": "2026-11-13T08:16:00.000Z",
-   "lastSeen": "2026-11-13T19:06:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미 특사단 \"우크라 평화협상에 유럽 참여 합의\"…러 \"아직 결정 안 돼\"",
-     "link": "https://www.voakorea.com/a/us-russia-ukraine/8223429.html",
-     "host": "voakorea.com",
-     "at": "2026-11-13T19:06:00.000Z"
-    },
-    {
-     "title": "위트코프 특사 \"푸틴, 다음 우크라 평화협상 때 유럽 참여 허용키로\"…...",
-     "link": "https://www.newspim.com/news/view/20261113001414",
-     "host": "newspim.com",
-     "at": "2026-11-13T10:34:00.000Z"
-    },
-    {
-     "title": "푸틴 만난 미 특사 “향후 우크라 협상에 ‘유럽 대표’ 참여할 것”",
-     "link": "https://www.hani.co.kr/arti/international/international_general/1287262.html",
-     "host": "hani.co.kr",
-     "at": "2026-11-13T08:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
-   "id": "1v3fnu9",
-   "title": "젤렌스키 \"다음 종전협상엔 유럽도 참여\"…미국 특사와 회동",
-   "firstSeen": "2026-11-13T08:41:00.000Z",
-   "lastSeen": "2026-11-13T09:17:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젤렌스키 “다음 종전 협상엔 유럽도 직접 참여할 것”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8712325&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-13T09:17:00.000Z"
-    },
-    {
-     "title": "젤렌스키 “다음 종전협상에 유럽 직접 참여”...러시아 동의 여부 주목",
-     "link": "https://www.m-economynews.com/news/article.html?no=73019",
-     "host": "m-economynews.com",
-     "at": "2026-11-13T09:10:00.000Z"
-    },
-    {
-     "title": "젤렌스키 \"다음 종전협상엔 유럽도 참여\"…미국 특사와 회동",
-     "link": "https://www.yna.co.kr/view/AKR20261113153500109?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-13T08:41:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
-   "id": "197mj7o",
-   "title": "'미·중 가교' 젠슨 황 퇴진에…美, 반도체 中규제 더 조인다",
-   "firstSeen": "2026-11-13T08:45:00.000Z",
-   "lastSeen": "2026-11-14T01:28:00.000Z",
+   "id": "pu1s9s",
+   "title": "“국내 주식 저평가…골 깊으면 산 높아”",
+   "firstSeen": "2026-11-13T16:49:00.000Z",
+   "lastSeen": "2026-11-14T02:21:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
     "politics",
+    "market",
     "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[AI 이슈트렌드] 젠슨 황 퇴진 쇼크 속 트럼프 행보·앤트로픽 개인정보...",
-     "link": "https://www.aitimes.com/news/articleView.html?idxno=217404",
-     "host": "aitimes.com",
-     "at": "2026-11-14T01:28:00.000Z"
+     "title": "李 \"증시, 골 깊으면 산 높을 것\".. 국힘 \"한가한 낙관론\"",
+     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67597?feed=na",
+     "host": "jibs.co.kr",
+     "at": "2026-11-14T02:21:00.000Z"
     },
     {
-     "title": "[분석] 젠슨 황 퇴진…AI 투자·미중 칩 갈등·韓 반도체에 파장",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94166",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-13T22:24:00.000Z"
+     "title": "李 \"골 깊으면 산도 높아\"…국민의힘 \"개미들은 피눈물, 한가한 낙관론...",
+     "link": "https://www.imaeil.com/page/view/2026111408593314627",
+     "host": "imaeil.com",
+     "at": "2026-11-14T00:18:00.000Z"
     },
     {
-     "title": "'미·중 가교' 젠슨 황 퇴진에…美, 반도체 中규제 더 조인다",
-     "link": "https://www.mk.co.kr/article/12208285",
-     "host": "mk.co.kr",
-     "at": "2026-11-13T08:45:00.000Z"
+     "title": "“국내 주식 저평가…골 깊으면 산 높아”",
+     "link": "https://www.joongang.co.kr/article/25478558",
+     "host": "joongang.co.kr",
+     "at": "2026-11-13T16:49:00.000Z"
     }
    ],
    "assess": {
@@ -855,55 +868,6 @@
    }
   },
   {
-   "id": "sq89r0",
-   "title": "[머니 확률표] 美 10년물 5.4% 터치 확률 25%…하루 새 5%p 상승",
-   "firstSeen": "2026-11-13T23:12:00.000Z",
-   "lastSeen": "2026-11-14T01:46:00.000Z",
-   "count": 3,
-   "sources": 2,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "11월 2주차 SK하이닉스 주가 131만원 터치 후 하락 마감",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=563813",
-     "host": "joongangenews.com",
-     "at": "2026-11-14T01:46:00.000Z"
-    },
-    {
-     "title": "[크립토 오즈] 비트코인(BTC) 11월 6만 5,000달러 터치 확률 54%…하루 새...",
-     "link": "http://coinreaders.com/270151",
-     "host": "coinreaders.com",
-     "at": "2026-11-13T23:12:00.000Z"
-    },
-    {
-     "title": "[머니 확률표] 美 10년물 5.4% 터치 확률 25%…하루 새 5%p 상승",
-     "link": "http://coinreaders.com/270152",
-     "host": "coinreaders.com",
-     "at": "2026-11-13T23:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 8,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
    "id": "rcueeo",
    "title": "중간선거 패배 뒤 아시아 순방 나서는 트럼프…미중 무역휴전 연장 주목",
    "firstSeen": "2026-11-13T23:11:00.000Z",
@@ -947,9 +911,65 @@
      "S&P 500 -0.4%"
     ]
    }
+  },
+  {
+   "id": "k8nt85",
+   "title": "엔비디아 주가 일주일 새 13% 급락...시총 4조달러 붕괴",
+   "firstSeen": "2026-11-13T09:34:00.000Z",
+   "lastSeen": "2026-11-14T00:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 시총 4조 달러 붕괴…나스닥 0.9% 급락, 다우만 소폭 상승",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=67745",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-14T00:02:00.000Z"
+    },
+    {
+     "title": "엔비디아 주가 일주일 새 13% 급락...시총 4조달러 붕괴",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/14/DFGKTXF52VF7XCEKX6VHX3JJOQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-13T23:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-14T04:14:26.412Z",
+   "id": "s238rd",
+   "level": "caution",
+   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.sedaily.com/article/20114301?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-14T02:47:48.597Z",
    "id": "s238rd",
@@ -1176,18 +1196,6 @@
     "금 -2.87%(평소의 2.1배)"
    ],
    "link": "https://www.tokenpost.kr/news/breaking/437199",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-12T17:47:56.852Z",
-   "id": "1703vlg",
-   "level": "urgent",
-   "title": "[뉴욕증시 전략] \"엔비디아 이사회, 해임 준비\"…시간외 8% 급락",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +10.7bp(평소의 2배)"
-   ],
-   "link": "https://www.news2day.co.kr/article/20261113500001",
    "delivered": false
   }
  ],
