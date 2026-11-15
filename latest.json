@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T22:27:15.544Z",
+ "updatedAt": "2026-11-15T22:47:44.589Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-15",
-   "last": 1335.280029296875,
-   "change": 0.11,
+   "last": 1335.6500244140625,
+   "change": 0.14,
    "z": 0.2,
    "sd": 0.6326251329727653,
    "source": "Yahoo"
@@ -120,12 +120,12 @@
  ],
  "spikes": {
   "war": -0.3,
-  "politics": -0.2,
-  "rates": 0.1,
+  "politics": -0.1,
+  "rates": 0.5,
   "trade": 0.3,
   "fx": -0.3,
-  "energy": -0.8,
-  "market": -0.3,
+  "energy": -0.5,
+  "market": -0.1,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.5
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.6,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.3,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.6,
+   "rate": 3,
    "saturated": 0,
    "queries": 3
   },
@@ -243,15 +243,14 @@
   },
   {
    "id": "16gcimi",
-   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
+   "title": "[글로벌 매크로 레이더] 트럼프 '이란과 합의 불필요'…호르무즈 정상화...",
    "firstSeen": "2026-11-14T22:36:00.000Z",
    "lastSeen": "2026-11-15T04:12:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "count": 1,
+   "sources": 1,
    "topics": [
     "war",
-    "politics",
-    "energy"
+    "politics"
    ],
    "critical": [
     "energy"
@@ -262,20 +261,14 @@
      "link": "http://coinreaders.com/270390",
      "host": "coinreaders.com",
      "at": "2026-11-15T04:12:00.000Z"
-    },
-    {
-     "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=300926",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-14T22:36:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 31,
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
     "spike": 0,
-    "news": true,
+    "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -331,17 +324,29 @@
    }
   },
   {
-   "id": "1k77ib0",
-   "title": "젠슨 황 퇴진에 흔들린 증시…엔비디아 실적이 반등 분수령",
-   "firstSeen": "2026-11-14T23:20:00.000Z",
-   "lastSeen": "2026-11-15T22:06:00.000Z",
-   "count": 20,
-   "sources": 20,
+   "id": "xsxx82",
+   "title": "젠슨 황 공백에 흔들린 AI주…\"엔비디아 실적·앤트로픽 상장 주목\"",
+   "firstSeen": "2026-11-14T15:02:00.000Z",
+   "lastSeen": "2026-11-15T22:42:00.000Z",
+   "count": 15,
+   "sources": 15,
    "topics": [
     "fx"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[오늘의 경제뉴스] 엔비디아 실적·앤트로픽 상장…이번 주 AI 증시 중대...",
+     "link": "https://www.newsverse.kr/news/articleView.html?idxno=11937",
+     "host": "newsverse.kr",
+     "at": "2026-11-15T22:42:00.000Z"
+    },
+    {
+     "title": "[넥스트-샷] 엔비디아는 성적표, 앤트로픽은 가격표···AI에게 '다시 묻...",
+     "link": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=261156",
+     "host": "womaneconomy.co.kr",
+     "at": "2026-11-15T22:30:00.000Z"
+    },
     {
      "title": "증시 주간 전망…엔비디아 실적·앤트로픽 643억달러 공모, 반도체 자금...",
      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16277389",
@@ -353,18 +358,6 @@
      "link": "https://www.news1.kr/world/international-economy/6354638",
      "host": "news1.kr",
      "at": "2026-11-15T22:00:00.000Z"
-    },
-    {
-     "title": "[증시전략] 엔비디아 실적·앤트로픽 상장에 촉각…뉴욕증시 향방은?",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346532?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-15T21:59:00.000Z"
-    },
-    {
-     "title": "“삼전닉스 오를까 내릴까”…엔비디아 실적·앤트로픽 상장 변수 [잇슈...",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8713325&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-15T21:49:00.000Z"
     }
    ],
    "assess": {
@@ -376,67 +369,12 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": 0.11,
+     "change": 0.14,
      "unit": "%",
      "z": 0.2
     },
     "why": [
-     "원/달러 +0.11%"
-    ]
-   }
-  },
-  {
-   "id": "dlhrxy",
-   "title": "젠슨 황 없는 엔비디아, 다시 황에게?…사임 직후 복귀 논의",
-   "firstSeen": "2026-11-14T22:30:00.000Z",
-   "lastSeen": "2026-11-15T22:17:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "‘비상대책본부’ 꾸린 젠슨 황, 사임 나흘 만에 복귀 추진",
-     "link": "https://weekly.khan.co.kr/article/202611160717001",
-     "host": "weekly.khan.co.kr",
-     "at": "2026-11-15T22:17:00.000Z"
-    },
-    {
-     "title": "젠슨 황 CEO 복귀 추진설…“실리콘밸리 거물들 지원 나섰다”",
-     "link": "https://www.dt.co.kr/article/12095309?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-15T22:17:00.000Z"
-    },
-    {
-     "title": "일론 머스크까지! 젠슨 황 전 엔비디아 CEO 복귀 움직임에 실리콘밸리 ...",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=885754",
-     "host": "gokorea.kr",
-     "at": "2026-11-15T22:16:00.000Z"
-    },
-    {
-     "title": "젠슨 황 전 엔비디아 CEO, 사임 나흘 만에 복귀 추진",
-     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41656",
-     "host": "globale.co.kr",
-     "at": "2026-11-15T22:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
+     "원/달러 +0.14%"
     ]
    }
   },
@@ -475,8 +413,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 10,
-    "spike": 0.1,
+    "score": 13,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -494,14 +432,20 @@
    "id": "ef8p29",
    "title": "코스피 고점에 발행된 ELS '비상'…다음 달부터 만기 도래",
    "firstSeen": "2026-11-14T21:15:00.000Z",
-   "lastSeen": "2026-11-15T15:30:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-15T22:28:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "'9천피' 발행 ELS, 12부터 만기 도래…원금 손실 우려",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887246",
+     "host": "getnews.co.kr",
+     "at": "2026-11-15T22:28:00.000Z"
+    },
     {
      "title": "[코스피 급락과 기초자산 부진] '9천피' 고점 당시 발행된 고수익 ELS, 1...",
      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627091",
@@ -524,53 +468,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 9,
+    "score": 12,
     "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "1p7p925",
-   "title": "베선트 美재무 \"젠슨 황 후임, 엔비디아 밖에서 찾아야\"",
-   "firstSeen": "2026-11-15T15:07:00.000Z",
-   "lastSeen": "2026-11-15T22:12:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics",
-    "trade",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美재무 \"젠슨 황 후임, 엔비디아 밖에서 찾아야\"",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887244",
-     "host": "getnews.co.kr",
-     "at": "2026-11-15T22:12:00.000Z"
-    },
-    {
-     "title": "베선트 美재무 \"젠슨 황 후임, 엔비디아 밖에서 찾아야\"",
-     "link": "https://www.newdaily.co.kr/site/data/html/2026/11/16/2026111650012.html",
-     "host": "newdaily.co.kr",
-     "at": "2026-11-15T22:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 8,
-    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -612,8 +511,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 7,
-    "spike": 0.1,
+    "score": 10,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -628,104 +527,23 @@
    }
   },
   {
-   "id": "g5zyrq",
-   "title": "[이번주 환율] 강달러에도 1330원대 지킨 환율…이번주 APEC 회담에 촉각",
-   "firstSeen": "2026-11-15T01:54:00.000Z",
-   "lastSeen": "2026-11-15T05:52:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "李대통령, 아세안·APEC '외교 슈퍼위크'…미·중·러 회담에 촉각",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346497?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-15T05:52:00.000Z"
-    },
-    {
-     "title": "[이번주 환율] 강달러에도 1330원대 지킨 환율…이번주 APEC 회담에 촉각",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147081",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-15T01:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "17oobvy",
-   "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
-   "firstSeen": "2026-11-15T04:14:00.000Z",
-   "lastSeen": "2026-11-15T04:33:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "4시간 미 전역 항공 마비, 후폭풍 우려…약 150만명 피해",
-     "link": "https://www.sidae.com/article/2026111513292788466",
-     "host": "sidae.com",
-     "at": "2026-11-15T04:33:00.000Z"
-    },
-    {
-     "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
-     "link": "https://www.news1.kr/world/usa-canada/6354351",
-     "host": "news1.kr",
-     "at": "2026-11-15T04:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.11,
-     "unit": "%",
-     "z": 0.2
-    },
-    "why": [
-     "원/달러 +0.11%"
-    ]
-   }
-  },
-  {
    "id": "z3ljqj",
    "title": "엔비디아 실적·미중 정상회담까지…코스피 변동성 확대 우려",
    "firstSeen": "2026-11-13T22:02:00.000Z",
-   "lastSeen": "2026-11-15T15:08:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "lastSeen": "2026-11-15T22:41:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[글로벌 마켓시황] 엔비디아 실적 APEC까지…이번 주 변수는",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008846882&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-15T22:41:00.000Z"
+    },
     {
      "title": "[중국증시 주간 포인트] APEC 미·중·러 정상회담, 엔비디아 실적·젠슨...",
      "link": "https://www.newspim.com/news/view/20261116000001",
@@ -742,7 +560,7 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 6,
+    "score": 9,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -758,11 +576,60 @@
    }
   },
   {
-   "id": "1jspb6f",
-   "title": "APEC 정상회의 18일 개막...사상 첫 미중러 정상회담",
-   "firstSeen": "2026-11-15T06:40:00.000Z",
-   "lastSeen": "2026-11-15T07:38:00.000Z",
-   "count": 2,
+   "id": "dlhrxy",
+   "title": "FT “젠슨 황, 엔비디아 CEO 복귀 논의 중…백악관 설득 시도”",
+   "firstSeen": "2026-11-14T22:30:00.000Z",
+   "lastSeen": "2026-11-15T22:33:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "“젠슨 황 나흘 만에 엔비디아 복귀 시도…‘전시 상황실’ 꾸려 백악관...",
+     "link": "https://www.segye.com/newsView/20261116501866?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-15T22:33:00.000Z"
+    },
+    {
+     "title": "\"젠슨 황, CEO 자리 복귀 노린다…백악관도 설득 시도\"",
+     "link": "https://www.tjb.co.kr/news05/bodo/view/id/106093",
+     "host": "tjb.co.kr",
+     "at": "2026-11-15T22:32:00.000Z"
+    },
+    {
+     "title": "FT “젠슨 황, 엔비디아 CEO 복귀 논의 중…백악관 설득 시도”",
+     "link": "https://www.etnews.com/20261116000004",
+     "host": "etnews.com",
+     "at": "2026-11-15T22:29:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "8a7v7b",
+   "title": "“트럼프, 美中 정상회담서 ‘젠슨 황’ 사태 언급 안할 듯”",
+   "firstSeen": "2026-11-15T11:42:00.000Z",
+   "lastSeen": "2026-11-15T22:34:00.000Z",
+   "count": 3,
    "sources": 2,
    "topics": [
     "politics"
@@ -770,65 +637,28 @@
    "critical": [],
    "links": [
     {
-     "title": "李대통령, 16일부터 아세안·APEC 정상회의 순방",
-     "link": "https://www.m-economynews.com/news/article.html?no=73060",
-     "host": "m-economynews.com",
-     "at": "2026-11-15T07:38:00.000Z"
+     "title": "엔비디아 파문, 트럼프·시진핑 정상회담의 새로운 변수로 부상",
+     "link": "https://www.dt.co.kr/article/12095312?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-15T22:34:00.000Z"
     },
     {
-     "title": "APEC 정상회의 18일 개막...사상 첫 미중러 정상회담",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611151542561401",
-     "host": "ytn.co.kr",
-     "at": "2026-11-15T06:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "13vkm4o",
-   "title": "‘강심장’ 서학개미?…‘젠슨 황 스캔들’ 엔비디아 4500억원 샀다",
-   "firstSeen": "2026-11-15T06:02:00.000Z",
-   "lastSeen": "2026-11-15T21:32:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“젠슨황 스캔들, 절호의 기회”…엔비디아 급락에 서학개미 1000억 넘게...",
-     "link": "https://www.sedaily.com/article/20114440?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-15T21:32:00.000Z"
-    },
-    {
-     "title": "‘강심장’ 서학개미?…‘젠슨 황 스캔들’ 엔비디아 4500억원 샀다",
-     "link": "https://www.donga.com/news/Economy/article/all/20261115/135026650/1",
+     "title": "“트럼프, 시진핑에 ‘젠슨 황 사태’ 거론 안할듯”",
+     "link": "https://www.donga.com/news/Inter/article/all/20261116/135028772/2",
      "host": "donga.com",
-     "at": "2026-11-15T06:42:00.000Z"
+     "at": "2026-11-15T19:33:00.000Z"
+    },
+    {
+     "title": "“트럼프, 美中 정상회담서 ‘젠슨 황’ 사태 언급 안할 듯”",
+     "link": "https://www.donga.com/news/Inter/article/all/20261115/135026720/1",
+     "host": "donga.com",
+     "at": "2026-11-15T11:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 6,
+    "score": 7,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -844,45 +674,193 @@
    }
   },
   {
-   "id": "1l15mvp",
-   "title": "김정관 \"석유최고가 연장 불가피…물가상승률 월평균 0.6p 낮춰\"",
-   "firstSeen": "2026-11-15T07:55:00.000Z",
-   "lastSeen": "2026-11-15T12:24:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "8jtvjg",
+   "title": "“삼전닉스 아직 안 끝났다”…골드만삭스가 韓증시 믿는 이유 [머니+]",
+   "firstSeen": "2026-11-15T02:44:00.000Z",
+   "lastSeen": "2026-11-15T02:44:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
+    "war",
+    "rates",
     "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "김정관 \"석유 최고가격제 연장 불가피\"…해제 조건은 유가만 근접",
-     "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=366161",
-     "host": "smedaily.co.kr",
-     "at": "2026-11-15T12:24:00.000Z"
-    },
-    {
-     "title": "김정관 \"석유최고가 연장 불가피…물가상승률 월평균 0.6p 낮춰\"",
-     "link": "https://www.newspim.com/news/view/20261115000121",
-     "host": "newspim.com",
-     "at": "2026-11-15T07:55:00.000Z"
+     "title": "“삼전닉스 아직 안 끝났다”…골드만삭스가 韓증시 믿는 이유 [머니+]",
+     "link": "https://www.ekn.kr/web/view.php?key=20261115029459700",
+     "host": "ekn.kr",
+     "at": "2026-11-15T02:44:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 6,
-    "spike": 0,
+    "score": 7,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -0.2,
-     "unit": "%",
-     "z": -0.1
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
     },
     "why": [
-     "WTI 유가 -0.2%"
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1jz7xyq",
+   "title": "가계대출 다시 증가…이달 기준금리 인상 힘 받나",
+   "firstSeen": "2026-11-15T03:00:00.000Z",
+   "lastSeen": "2026-11-15T03:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "가계대출 다시 증가…이달 기준금리 인상 힘 받나",
+     "link": "https://news.bizwatch.co.kr/article/finance/2026/11/13/0028",
+     "host": "news.bizwatch.co.kr",
+     "at": "2026-11-15T03:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "w3xso9",
+   "title": "월드 뉴스 브리프 (기준일시: 2026년 11월 15일 일요일 10:00)",
+   "firstSeen": "2026-11-15T03:30:00.000Z",
+   "lastSeen": "2026-11-15T03:30:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "월드 뉴스 브리프 (기준일시: 2026년 11월 15일 일요일 10:00)",
+     "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=globalnewsfocus&wr_id=530",
+     "host": "ifs.or.kr",
+     "at": "2026-11-15T03:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1xuqbue",
+   "title": "국채 담합에 1.6조 과징금…그런데 왜 정부도 후폭풍을 걱정할까 [최소...",
+   "firstSeen": "2026-11-15T04:01:00.000Z",
+   "lastSeen": "2026-11-15T04:01:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "credit"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국채 담합에 1.6조 과징금…그런데 왜 정부도 후폭풍을 걱정할까 [최소...",
+     "link": "https://www.mk.co.kr/article/12208166",
+     "host": "mk.co.kr",
+     "at": "2026-11-15T04:01:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "10jwagm",
+   "title": "[외환-주간] 바깥바람이 만들어낼 방향성…연준·APEC 주시",
+   "firstSeen": "2026-11-15T04:02:00.000Z",
+   "lastSeen": "2026-11-15T04:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[외환-주간] 바깥바람이 만들어낼 방향성…연준·APEC 주시",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444812",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-15T04:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
     ]
    }
   }
