@@ -1,6 +1,7 @@
 // 통합증거금 보정(2026-11-12): 한투 모의계좌는 미국 주식을 원화로 사도 원화 예수금을 빼지 않아 총자산이 매수금액만큼 부풀려졌다(11-11 공개 숫자 +29.9%).
 // ① 외화예수금이 없고 미국 보유가 있으면 증권사 매입금액(원화)을 현금·총자산에서 뺀다 ② 달러로 샀으면 빼지 않는다 ③ '목록에 없음'으로 소멸 처리한 주문을 다시 조회해 체결이면 바로잡는다
 // ④ 미국 체결 조회는 거래소를 비워 전체를 받고, 거부되면 NASD·NYSE·AMEX 로 나눠 조회한다 ⑤ 잔고가 매입금액(원화)을 돌려준다.
+// ⑥ (2026-11-16 결정 38) 모의계좌는 미국 매도 대금도 원화로 넣지 않는다 → 장부 체결의 순매수금액(산 금액 − 판 금액)을 뺀다. 장부 수량이 보유와 다르면 ① 의 식으로 돌아간다.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtempSync } from 'node:fs';
@@ -49,6 +50,20 @@ test('② 달러로 샀으면(외화예수금 > 0) 빼지 않는다 · 미국 �
   assert.equal(a.marks.at(-1).funding, undefined);
   const c = broker(); c.balance = async () => ({ cash: 1000, total: 1000, stock: 0, positions: [], cashUsd: 0, stockUsd: 0, usCostKrw: 0 });
   const b = await createPaperLive({ client: c, store: createLedgerStore(tmp()), readMarket, now: () => t, limits: L }).status(); assert.equal(b.balance.usFundingKrw, 0); assert.equal(b.balance.total, 1000);
+});
+
+test('⑥ 미국 매도 뒤: 장부 체결의 순매수금액(산 금액 − 판 금액)을 빼서 판 종목의 손익이 남는다 · 장부 수량이 보유와 다르면 증권사 매입금액으로 돌아간다', async () => {
+  const t = Date.parse('2026-11-16T04:00:00Z');
+  const fill = (symbol, side, qty, avgPrice, fx, at) => ({ at, symbol, name: symbol, market: 'US', currency: 'USD', side, qty, price: avgPrice, fx, status: 'filled', filledQty: qty, avgPrice, remaining: 0, why: 't' });
+  const orders = [fill('JNJ', 'BUY', 17, 281.74, 1340, '2026-11-10T14:36:45Z'), fill('SPY', 'BUY', 7, 749.01, 1340, '2026-11-10T14:36:46Z'), fill('MSFT', 'BUY', 6, 542.315, 1342.48, '2026-11-10T14:36:47Z'), fill('MSFT', 'SELL', 6, 523.32, 1331.95, '2026-11-12T14:38:21Z')];
+  const net = Math.round(17 * 281.74 * 1340 + 7 * 749.01 * 1340 + 6 * 542.315 * 1342.48 - 6 * 523.32 * 1331.95), usKrw = (4766.97 + 5318.67) * 1330;
+  const pl = createPaperLive({ client: broker(), store: createLedgerStore(tmp()), readMarket, now: () => t, limits: L }); pl._ledger().orders.push(...orders.map(o => ({ ...o })));
+  const b = (await pl.status()).balance;
+  assert.equal(b.fundingBasis, 'ledger'); assert.equal(b.usFundingKrw, net); assert.equal(b.cash, 62_669_084 - net); assert.equal(b.cashRawKrw, 62_669_084);
+  assert.equal(b.total, Math.round(62_669_084 + 11_730_000 + usKrw - net), '총자산 = 원화 예수금 + 국내 + 미국×환율 − 미국 순매수금액');
+  assert.ok(net - COST_KRW > 100_000, '판 마이크로소프트의 손실(약 −19만 원)이 기록에 남는다 — 예전 식(보유 매입금액)은 이것이 빠졌다');
+  const pl2 = createPaperLive({ client: broker(), store: createLedgerStore(tmp()), readMarket, now: () => t, limits: L }); pl2._ledger().orders.push(...orders.filter(o => o.symbol !== 'SPY').map(o => ({ ...o })));
+  const b2 = (await pl2.status()).balance; assert.equal(b2.fundingBasis, 'broker', '장부에 SPY 매수가 없으면 수량이 안 맞아 증권사 매입금액'); assert.equal(b2.usFundingKrw, COST_KRW);
 });
 
 test("③ '목록에 없음'으로 소멸 처리된 주문을 다시 조회해 체결이면 filled 로 바로잡고 기록을 남긴다(주문번호 앞 0 차이 무시) · 진짜 없는 주문은 그대로", async () => {

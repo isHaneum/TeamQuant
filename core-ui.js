@@ -225,17 +225,19 @@ function renderWhy() {
 // 계산 결과 파일(scripts/research/sizing-study.mjs)을 읽기만 한다 — 계획은 바꾸지 않는다. 모의계좌이고 파일의 계획 버전이 지금 계획과 같을 때만 보인다. 수익 비교는 없다.
 function sizingHtml() {
   if (acct() !== 'paper' || !sizing?.snapshot?.equal || !sizing.snapshot.erc || sizing.planVersion !== S.mock?.planDoc?.version) return '';
-  const eq = sizing.snapshot.equal, er = sizing.snapshot.erc, nm = sizing.snapshot.names || {}, wk = sizing.walk || {}, syms = Object.keys(eq.weightsPct).sort((a, b) => eq.activeSharePct[b] - eq.activeSharePct[a]);
-  const top = syms.slice(0, 3), topSum = top.reduce((a, s) => a + eq.activeSharePct[s], 0), short = s => String(nm[s]?.name || s).replace(/\s*\(.*\)$/, ''), satW = Object.values(eq.weightsPct).reduce((a, b) => a + b, 0);
-  const rows = syms.map(s => `<tr><td>${esc(short(s))}</td><td>${eq.weightsPct[s].toFixed(1)}%</td><td><b>${eq.activeSharePct[s].toFixed(0)}%</b></td><td>${er.weightsPct[s].toFixed(1)}%</td></tr>`).join('');
+  // 계획이 위험 기여 균등(PP4c · 2026-11-16 적용)이면 지금 = erc, 비교 = 균등. 균등 계획(PP3)이면 반대.
+  const ercPlan = Object.values(S.mock?.planDoc?.weights || {}).some(w => w.sizing === 'erc'), eq = sizing.snapshot.equal, er = sizing.snapshot.erc, cur = ercPlan ? er : eq, alt = ercPlan ? eq : er;
+  const nm = sizing.snapshot.names || {}, wk = sizing.walk || {}, wb = ercPlan ? [wk.erc, wk.ercBand25] : [wk.equal, wk.equalBand25], syms = Object.keys(cur.weightsPct).sort((a, b) => cur.activeSharePct[b] - cur.activeSharePct[a]);
+  const top = syms.slice(0, 3), topSum = top.reduce((a, s) => a + cur.activeSharePct[s], 0), short = s => String(nm[s]?.name || s).replace(/\s*\(.*\)$/, ''), satW = Object.values(cur.weightsPct).reduce((a, b) => a + b, 0);
+  const rows = syms.map(s => `<tr><td>${esc(short(s))}</td><td>${Number(S.mock?.planDoc?.weights?.[s]?.pct ?? cur.weightsPct[s]).toFixed(1)}%</td><td><b>${cur.activeSharePct[s].toFixed(0)}%</b></td><td>${alt.weightsPct[s].toFixed(1)}%</td></tr>`).join('');
   return `<div class="rl-sizing"><h4 class="rl-h4">계획의 위험은 어디서 나오나 ${tip('최근 3년 주간 수익률(원화)로 계산했습니다. "지수와 다르게 움직이는 정도"는 같은 국가 비중의 지수만 들었을 때와의 차이가 한 해에 흔들리는 폭입니다(추적오차). 종목별 몫은 그 흔들림에 각 종목이 보탠 비율입니다. 수익을 예측한 값이 아닙니다.')}</h4>
-    <p>개별 ${syms.length}종목은 비중 ${satW.toFixed(0)}%인데 계좌 위험의 <b>${eq.satRiskOfTotalPct.toFixed(0)}%</b>를 냅니다. 지수와 다르게 움직이는 정도는 연 ${eq.tePct.toFixed(1)}%이고, 그 <b>${topSum.toFixed(0)}%</b>가 ${top.map(s => esc(short(s))).join(' · ')}에서 나옵니다.</p>
-    <details class="rl-in"><summary>종목별 위험 몫 · 위험을 같게 나누면</summary>
-      <div class="table-wrap"><table class="cr-table rl-size"><thead><tr><th>종목</th><th>계획 비중</th><th>위험 몫</th><th>같게 나누면</th></tr></thead><tbody>${rows}</tbody></table></div>
-      <ul class="cr-facts"><li>위험을 같게 나누면 지수와 다르게 움직이는 정도가 연 ${eq.tePct.toFixed(2)}% → <b>${er.tePct.toFixed(2)}%</b>, 가장 큰 종목의 몫이 ${eq.maxActiveSharePct.toFixed(0)}% → ${er.maxActiveSharePct.toFixed(0)}%입니다. 계좌 전체 변동성은 ${eq.volPct.toFixed(1)}% → ${er.volPct.toFixed(1)}%로 거의 같습니다.</li>
-      ${wk.equal && wk.erc ? `<li>${esc(wk.equal.from.slice(0, 4))}~${esc(wk.equal.to.slice(0, 4))}년에 4주마다 다시 계산해 본 실제 값: ${wk.equal.tePct.toFixed(2)}% → <b>${wk.erc.tePct.toFixed(2)}%</b>. 예측은 실제의 ${(1 / wk.equal.teRealizedOverForecast).toFixed(2)}배로 조금 높게 나왔습니다.</li>` : ''}
-      ${wk.equal && wk.equalBand25 ? `<li>4주마다 다 맞추면 ${wk.equal.rebalances}번 · 한 해 매매 ${wk.equal.turnoverPerYearPct.toFixed(0)}%, 25% 넘게 벗어날 때만 맞추면 ${wk.equalBand25.rebalances}번 · ${wk.equalBand25.turnoverPerYearPct.toFixed(0)}%이고 흔들림은 같습니다(${wk.equalBand25.tePct.toFixed(2)}%).</li>` : ''}
-      <li>수익은 비교하지 않았습니다. 종목을 2026년에 골랐기 때문에 과거 수익을 보면 답을 알고 본 결과가 됩니다. 계획은 그대로 균등입니다.</li>${S.mock?.planChange?.candidate ? '<li>위험을 같게 나눈 비중은 아래 "종목별 목표 비중"에 다음 계획 후보로 올라와 있습니다(적용 전 · 예상 거래대금 표시).</li>' : ''}</ul>
+    <p>개별 ${syms.length}종목은 비중 ${satW.toFixed(0)}%인데 계좌 위험의 <b>${cur.satRiskOfTotalPct.toFixed(0)}%</b>를 냅니다. 지수와 다르게 움직이는 정도는 연 ${cur.tePct.toFixed(1)}%이고, ${ercPlan ? `종목마다 그 <b>${(100 / syms.length).toFixed(0)}%</b>씩을 내도록 비중을 나눴습니다.` : `그 <b>${topSum.toFixed(0)}%</b>가 ${top.map(s => esc(short(s))).join(' · ')}에서 나옵니다.`}</p>
+    <details class="rl-in"><summary>종목별 위험 몫 · ${ercPlan ? '똑같이 나눴다면' : '위험을 같게 나누면'}</summary>
+      <div class="table-wrap"><table class="cr-table rl-size"><thead><tr><th>종목</th><th>계획 비중</th><th>위험 몫</th><th>${ercPlan ? '똑같이 나누면' : '같게 나누면'}</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <ul class="cr-facts"><li>${ercPlan ? '똑같이 나눈 비중과 비교하면 지금 계획(위험을 같게 나눔)은' : '위험을 같게 나누면'} 지수와 다르게 움직이는 정도가 연 ${eq.tePct.toFixed(2)}% → <b>${er.tePct.toFixed(2)}%</b>, 가장 큰 종목의 몫이 ${eq.maxActiveSharePct.toFixed(0)}% → ${er.maxActiveSharePct.toFixed(0)}%입니다. 계좌 전체 변동성은 ${eq.volPct.toFixed(1)}% → ${er.volPct.toFixed(1)}%로 거의 같습니다.</li>
+      ${wk.equal && wk.erc ? `<li>${esc(wk.equal.from.slice(0, 4))}~${esc(wk.equal.to.slice(0, 4))}년에 4주마다 다시 계산해 본 실제 값: ${wk.equal.tePct.toFixed(2)}% → <b>${wk.erc.tePct.toFixed(2)}%</b>. 예측은 실제의 ${(1 / (ercPlan ? wk.erc : wk.equal).teRealizedOverForecast).toFixed(2)}배로 조금 높게 나왔습니다.</li>` : ''}
+      ${wb[0] && wb[1] ? `<li>4주마다 다 맞추면 ${wb[0].rebalances}번 · 한 해 매매 ${wb[0].turnoverPerYearPct.toFixed(0)}%, 25% 넘게 벗어날 때만 맞추면 ${wb[1].rebalances}번 · ${wb[1].turnoverPerYearPct.toFixed(0)}%이고 흔들림은 같습니다(${wb[1].tePct.toFixed(2)}%).</li>` : ''}
+      <li>수익은 비교하지 않았습니다. 종목을 2026년에 골랐기 때문에 과거 수익을 보면 답을 알고 본 결과가 됩니다. ${ercPlan ? '계획은 위험을 같게 나눈 비중입니다(2026-11-16 적용).' : '계획은 그대로 균등입니다.'}</li>${S.mock?.planChange?.candidate ? '<li>위험을 같게 나눈 비중은 아래 "종목별 목표 비중"에 다음 계획 후보로 올라와 있습니다(적용 전 · 예상 거래대금 표시).</li>' : ''}</ul>
     </details></div>`;
 }
 function renderRisk() {
