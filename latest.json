@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T07:47:06.899Z",
+ "updatedAt": "2026-11-15T08:16:28.621Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
+  "war": -0.7,
   "politics": -0.8,
-  "rates": 0,
-  "trade": 0.4,
-  "fx": 0.1,
-  "energy": -1.1,
-  "market": -0.6,
+  "rates": -0.5,
+  "trade": 0.2,
+  "fx": -0.3,
+  "energy": -1,
+  "market": -0.9,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.6
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -142,27 +142,27 @@
    "queries": 3
   },
   "rates": {
-   "rate": 2,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.7,
+   "rate": 3.5,
    "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 0.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.3,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -342,86 +342,6 @@
    }
   },
   {
-   "id": "18gtay",
-   "title": "'빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴",
-   "firstSeen": "2026-11-15T05:22:00.000Z",
-   "lastSeen": "2026-11-15T05:22:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "fx"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "'빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴",
-     "link": "http://www.metroseoul.co.kr/article/20261115500200",
-     "host": "metroseoul.co.kr",
-     "at": "2026-11-15T05:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "1k41l7a",
-   "title": "어질어질 한국 증시…올해 사이드카·서킷 브레이커 얼마나 발동됐나 [...",
-   "firstSeen": "2026-11-14T08:00:00.000Z",
-   "lastSeen": "2026-11-14T08:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "어질어질 한국 증시…올해 사이드카·서킷 브레이커 얼마나 발동됐나 [...",
-     "link": "https://www.ddaily.co.kr/page/view/2026111316131853035",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-14T08:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
    "id": "1yyjm53",
    "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
    "firstSeen": "2026-11-14T10:46:00.000Z",
@@ -462,17 +382,70 @@
    }
   },
   {
+   "id": "18gtay",
+   "title": "'빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴",
+   "firstSeen": "2026-11-15T05:22:00.000Z",
+   "lastSeen": "2026-11-15T05:22:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "'빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴",
+     "link": "http://www.metroseoul.co.kr/article/20261115500200",
+     "host": "metroseoul.co.kr",
+     "at": "2026-11-15T05:22:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
    "id": "qqe5dm",
    "title": "[주간증시전망] 젠슨 황 사임 후 엔비디아 실적 발표… 미·중 정상회담...",
    "firstSeen": "2026-11-14T09:18:00.000Z",
-   "lastSeen": "2026-11-15T07:44:00.000Z",
-   "count": 17,
-   "sources": 16,
+   "lastSeen": "2026-11-15T08:00:00.000Z",
+   "count": 19,
+   "sources": 18,
    "topics": [
+    "rates",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[주간 증시 전망대] 엔비디아 실적·FOMC 의사록 주목…코스피, 반등 시...",
+     "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=731362",
+     "host": "the-biz.co.kr",
+     "at": "2026-11-15T08:00:00.000Z"
+    },
+    {
+     "title": "[마켓 ING]코스피 반등, 여전히 엔비디아에 달렸다",
+     "link": "https://view.asiae.co.kr/article/2026111516505463421",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-15T07:50:00.000Z"
+    },
     {
      "title": "반등한 코스피, 이번 주 엔비디아 실적에 달렸다",
      "link": "https://www.namdonews.com/news/articleView.html?idxno=929258",
@@ -484,18 +457,6 @@
      "link": "https://www.mt.co.kr/stock/2026/11/15/2026111511143020483",
      "host": "mt.co.kr",
      "at": "2026-11-15T05:11:00.000Z"
-    },
-    {
-     "title": "엔비디아 실적에 쏠린 눈…코스피 6000선 회복할까[주간증시전망]",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01633446645646048&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-15T05:05:00.000Z"
-    },
-    {
-     "title": "[주간 증시 전망] 젠슨 황發 불확실성 지속…엔비디아 실적에 쏠린 눈",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=903070",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-15T05:00:00.000Z"
     }
    ],
    "assess": {
@@ -505,14 +466,14 @@
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
     },
     "why": [
-     "S&P 500 -0.4%"
+     "미 10년 금리 +5.1bp"
     ]
    }
   },
@@ -670,6 +631,49 @@
    }
   },
   {
+   "id": "wj9tf",
+   "title": "주간 금시세 7.5% 하락…순금 한 돈 금값 73만2000원",
+   "firstSeen": "2026-11-14T00:02:00.000Z",
+   "lastSeen": "2026-11-15T01:04:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "금시세(금값) 주간 전망",
+     "link": "http://www.kjdaily.com/article.php?aid=1794704537692227227",
+     "host": "kjdaily.com",
+     "at": "2026-11-15T01:04:00.000Z"
+    },
+    {
+     "title": "주간 금시세 7.5% 하락…순금 한 돈 금값 73만2000원",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94197",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-14T15:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "CL=F",
+     "label": "WTI 유가",
+     "change": -0.2,
+     "unit": "%",
+     "z": -0.1
+    },
+    "why": [
+     "WTI 유가 -0.2%"
+    ]
+   }
+  },
+  {
    "id": "seyuyr",
    "title": "강달러에 다시 고개 든 환율…1340원대 재진입하나?",
    "firstSeen": "2026-11-14T20:28:00.000Z",
@@ -697,8 +701,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 7,
-    "spike": 0.1,
+    "score": 6,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -709,6 +713,93 @@
     },
     "why": [
      "원/달러 +0.18%"
+    ]
+   }
+  },
+  {
+   "id": "fe4ntq",
+   "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
+   "firstSeen": "2026-11-14T22:20:00.000Z",
+   "lastSeen": "2026-11-15T07:06:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "정부가 묶은 에너지값… 재정·공기업 부담 '눈덩이'",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3448836",
+     "host": "newscj.com",
+     "at": "2026-11-15T07:06:00.000Z"
+    },
+    {
+     "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=504109",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-14T22:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "14mi3kr",
+   "title": "\"월요일 증시는 어디로\"…개미, '젠슨 황 쇼크' 발목 잡힌 코스피 향방...",
+   "firstSeen": "2026-11-15T00:10:00.000Z",
+   "lastSeen": "2026-11-15T05:00:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'젠슨 황 쇼크'에 발목 잡힌 증시… 엔비디아 실적 분수령될 듯",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3448808",
+     "host": "newscj.com",
+     "at": "2026-11-15T05:00:00.000Z"
+    },
+    {
+     "title": "\"월요일 증시는 어디로\"…개미, '젠슨 황 쇼크' 발목 잡힌 코스피 향방...",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611150008&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-15T00:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -740,8 +831,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 7,
-    "spike": 0.1,
+    "score": 6,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -785,8 +876,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 7,
-    "spike": 0.1,
+    "score": 6,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -799,95 +890,33 @@
      "미 10년 금리 +5.1bp"
     ]
    }
-  },
-  {
-   "id": "1dy4d4g",
-   "title": "트럼프·시진핑·푸틴, APEC서 사상 첫 3자 회담 추진",
-   "firstSeen": "2026-11-14T02:40:00.000Z",
-   "lastSeen": "2026-11-15T06:29:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[D-3 선전APEC] 트럼프·시진핑·푸틴의 만남... 선전 APEC 5대 관전 포인...",
-     "link": "https://www.newspim.com/news/view/20261115000100",
-     "host": "newspim.com",
-     "at": "2026-11-15T06:29:00.000Z"
-    },
-    {
-     "title": "트럼프·시진핑·푸틴, APEC서 사상 첫 3자 회담 추진",
-     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003285013&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
-     "host": "ohmynews.com",
-     "at": "2026-11-14T10:21:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "wj9tf",
-   "title": "주간 금시세 7.5% 하락…순금 한 돈 금값 73만2000원",
-   "firstSeen": "2026-11-14T00:02:00.000Z",
-   "lastSeen": "2026-11-15T01:04:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "금시세(금값) 주간 전망",
-     "link": "http://www.kjdaily.com/article.php?aid=1794704537692227227",
-     "host": "kjdaily.com",
-     "at": "2026-11-15T01:04:00.000Z"
-    },
-    {
-     "title": "주간 금시세 7.5% 하락…순금 한 돈 금값 73만2000원",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94197",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-14T15:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -0.2,
-     "unit": "%",
-     "z": -0.1
-    },
-    "why": [
-     "WTI 유가 -0.2%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-15T08:16:28.621Z",
+   "id": "1nnv078",
+   "level": "caution",
+   "title": "젤렌스키 \"美, '우크라 나토 가입 대가' 돈바스 양도안 질의\"(종합)",
+   "why": [
+    "핵심 단어",
+    "원/달러 +0.18%"
+   ],
+   "link": "https://www.hani.co.kr/arti/international/europe/1287408.html",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-15T08:16:28.621Z",
+   "id": "16gcimi",
+   "level": "caution",
+   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -0.4%"
+   ],
+   "link": "http://coinreaders.com/270390",
+   "delivered": false
+  },
   {
    "at": "2026-11-15T07:27:03.548Z",
    "id": "1yyjm53",
@@ -1094,30 +1123,6 @@
   },
   {
    "at": "2026-11-14T10:12:02.178Z",
-   "id": "s238rd",
-   "level": "caution",
-   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +5.1bp"
-   ],
-   "link": "https://www.sedaily.com/article/20114301?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-14T08:48:00.850Z",
-   "id": "s238rd",
-   "level": "caution",
-   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +5.1bp"
-   ],
-   "link": "https://www.sedaily.com/article/20114301?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-14T07:47:58.745Z",
    "id": "s238rd",
    "level": "caution",
    "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
