@@ -1,7 +1,7 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T23:28:55.855Z",
- "mode": "watch",
+ "updatedAt": "2026-11-15T23:32:08.580Z",
+ "mode": "briefing",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
   {
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-15",
-   "last": 88.29000091552734,
-   "change": -0.3,
+   "last": 88.43000030517578,
+   "change": -0.15,
    "z": -0.1,
    "sd": 2.877420765091161,
    "source": "Yahoo"
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-15",
-   "last": 3882.39990234375,
-   "change": -0.1,
+   "last": 3882.199951171875,
+   "change": -0.11,
    "z": -0.1,
    "sd": 1.3587354696428326,
    "source": "Yahoo"
@@ -123,11 +123,11 @@
  "spikes": {
   "war": 0.2,
   "politics": 0.5,
-  "rates": 1.1,
+  "rates": 1.2,
   "trade": 0.4,
   "fx": -0.3,
-  "energy": -0.1,
-  "market": 0.8,
+  "energy": 0.1,
+  "market": 0.7,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.5
@@ -144,7 +144,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.8,
+   "rate": 3.9,
    "saturated": 1,
    "queries": 3
   },
@@ -159,13 +159,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.6,
-   "saturated": 2,
+   "rate": 4.4,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -269,16 +269,22 @@
   },
   {
    "id": "1s1dczb",
-   "title": "李지지율 0.5%p 오른 36.4%…국힘 43.0%·민주 34.6% [리얼미터]",
+   "title": "국힘 43%·민주 34.6%…與지지율은 현 정부 들어 최저[리얼미터]",
    "firstSeen": "2026-11-15T23:08:00.000Z",
-   "lastSeen": "2026-11-15T23:26:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "lastSeen": "2026-11-15T23:29:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
     "politics"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[속보] 국민의힘 지지율, 민주당 최대 격차로 따돌려…李대통령 국정지...",
+     "link": "https://www.pressian.com/pages/articles/2026111608244636429?utm_source=naver&utm_medium=search",
+     "host": "pressian.com",
+     "at": "2026-11-15T23:29:00.000Z"
+    },
     {
      "title": "李대통령 지지율 36.4%로 횡보…與 34.6%·국힘 43.0% 오차 밖",
      "link": "https://www.yna.co.kr/view/AKR20261116017800001?input=1195m",
@@ -296,18 +302,12 @@
      "link": "https://www.m-economynews.com/news/article.html?no=73069",
      "host": "m-economynews.com",
      "at": "2026-11-15T23:22:00.000Z"
-    },
-    {
-     "title": "李대통령 지지율 36.4%·0.5%p↑…국힘 43.0%·민주 34.6%[리얼미터]",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444847",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-15T23:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
+    "score": 22,
     "spike": 0.5,
     "news": false,
     "reaction": {
@@ -327,8 +327,8 @@
    "title": "[이번주 증시] 'AI 투심' 살아날까…엔비디아 실적·앤트로픽 IPO '주목'",
    "firstSeen": "2026-11-13T22:02:00.000Z",
    "lastSeen": "2026-11-15T23:28:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "count": 11,
+   "sources": 11,
    "topics": [
     "fx"
    ],
@@ -467,8 +467,95 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
-    "spike": 1.1,
+    "score": 19,
+    "spike": 1.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "k86djh",
+   "title": "하나증권 “글로벌 금리 급등에 은행주 방어주 매력 부각..신한·BNK금융...",
+   "firstSeen": "2026-11-15T22:34:00.000Z",
+   "lastSeen": "2026-11-15T22:58:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "하나증권 \"은행주, 글로벌 금리 급등에 방어주 매력…신한·BNK금융 선호...",
+     "link": "http://www.popcornnews.net/news/articleView.html?idxno=140123",
+     "host": "popcornnews.net",
+     "at": "2026-11-15T22:58:00.000Z"
+    },
+    {
+     "title": "하나증권 “글로벌 금리 급등에 은행주 방어주 매력 부각..신한·BNK금융...",
+     "link": "https://kpenews.com/View.aspx?No=4313631",
+     "host": "kpenews.com",
+     "at": "2026-11-15T22:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 16,
+    "spike": 1.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1bl5clf",
+   "title": "[마켓 프리뷰] '황 리스크' 간신히 버틴 증시…엔비디아 실적 대기",
+   "firstSeen": "2026-11-14T22:58:00.000Z",
+   "lastSeen": "2026-11-15T23:10:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[오늘의 투자전략] 美 금리 부담 속 엔비디아 실적 대기…\"코스피, 하방...",
+     "link": "https://www.etoday.co.kr/news/view/2648384",
+     "host": "etoday.co.kr",
+     "at": "2026-11-15T23:10:00.000Z"
+    },
+    {
+     "title": "[마켓 프리뷰] '황 리스크' 간신히 버틴 증시…엔비디아 실적 대기",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346548?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-15T22:45:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 16,
+    "spike": 1.2,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -517,7 +604,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 15,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -528,93 +615,6 @@
     },
     "why": [
      "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "k86djh",
-   "title": "하나증권 “글로벌 금리 급등에 은행주 방어주 매력 부각..신한·BNK금융...",
-   "firstSeen": "2026-11-15T22:34:00.000Z",
-   "lastSeen": "2026-11-15T22:58:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "하나증권 \"은행주, 글로벌 금리 급등에 방어주 매력…신한·BNK금융 선호...",
-     "link": "http://www.popcornnews.net/news/articleView.html?idxno=140123",
-     "host": "popcornnews.net",
-     "at": "2026-11-15T22:58:00.000Z"
-    },
-    {
-     "title": "하나증권 “글로벌 금리 급등에 은행주 방어주 매력 부각..신한·BNK금융...",
-     "link": "https://kpenews.com/View.aspx?No=4313631",
-     "host": "kpenews.com",
-     "at": "2026-11-15T22:34:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 15,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "1bl5clf",
-   "title": "[마켓 프리뷰] '황 리스크' 간신히 버틴 증시…엔비디아 실적 대기",
-   "firstSeen": "2026-11-14T22:58:00.000Z",
-   "lastSeen": "2026-11-15T23:10:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[오늘의 투자전략] 美 금리 부담 속 엔비디아 실적 대기…\"코스피, 하방...",
-     "link": "https://www.etoday.co.kr/news/view/2648384",
-     "host": "etoday.co.kr",
-     "at": "2026-11-15T23:10:00.000Z"
-    },
-    {
-     "title": "[마켓 프리뷰] '황 리스크' 간신히 버틴 증시…엔비디아 실적 대기",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346548?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-15T22:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 15,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
     ]
    }
   },
@@ -674,35 +674,41 @@
    }
   },
   {
-   "id": "gea8zx",
-   "title": "반도체 변동성에 흔들리는 증시…빚투·ELS·대기자금까지 '경고등'",
-   "firstSeen": "2026-11-15T08:38:00.000Z",
-   "lastSeen": "2026-11-15T15:10:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "dlhrxy",
+   "title": "베선트 “엔비디아 새 CEO는 외부서”…젠슨 황은 복귀 논의",
+   "firstSeen": "2026-11-14T22:30:00.000Z",
+   "lastSeen": "2026-11-15T23:30:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "market"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[투자 전략 키워드] 반도체 슈퍼사이클과 변동성의 교차로… 증권가가 ...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627070",
-     "host": "cbci.co.kr",
-     "at": "2026-11-15T15:10:00.000Z"
+     "title": "\"젠슨 황, 엔비디아 CEO 복귀 모색·백악관 지지 확보 시도\"...온라인 청...",
+     "link": "https://www.livebiz.today/news/articleView.html?idxno=206532",
+     "host": "livebiz.today",
+     "at": "2026-11-15T23:30:00.000Z"
     },
     {
-     "title": "반도체 변동성에 흔들리는 증시…빚투·ELS·대기자금까지 '경고등'",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=757300",
-     "host": "econovill.com",
-     "at": "2026-11-15T08:38:00.000Z"
+     "title": "[속보]젠슨 황, 엔비디아 복귀 논의",
+     "link": "https://magazine.hankyung.com/business/article/202611168012b",
+     "host": "magazine.hankyung.com",
+     "at": "2026-11-15T23:08:00.000Z"
+    },
+    {
+     "title": "베선트 “엔비디아 새 CEO는 외부서”…젠슨 황은 복귀 논의",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/16/CMRHQD377JE4HHLN334PDQGUE4/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-15T23:01:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 0.8,
+    "score": 13,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -740,8 +746,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 1.1,
+    "score": 13,
+    "spike": 1.2,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -777,8 +783,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 1.1,
+    "score": 13,
+    "spike": 1.2,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -815,8 +821,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 1.1,
+    "score": 13,
+    "spike": 1.2,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -831,30 +837,30 @@
    }
   },
   {
-   "id": "1wk6kkw",
-   "title": "[채권-주간] 11월 금통위 직전 글로벌·외국인·주가 주시",
-   "firstSeen": "2026-11-15T04:02:00.000Z",
-   "lastSeen": "2026-11-15T04:02:00.000Z",
+   "id": "1qy771p",
+   "title": "끝나지 않는 美 연준의 '인플레이션 전쟁'",
+   "firstSeen": "2026-11-15T04:30:00.000Z",
+   "lastSeen": "2026-11-15T04:30:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "rates",
-    "market"
+    "war",
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[채권-주간] 11월 금통위 직전 글로벌·외국인·주가 주시",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444813",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-15T04:02:00.000Z"
+     "title": "끝나지 않는 美 연준의 '인플레이션 전쟁'",
+     "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=54767",
+     "host": "fortunekorea.co.kr",
+     "at": "2026-11-15T04:30:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 1.1,
+    "score": 13,
+    "spike": 1.2,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -1112,12 +1118,12 @@
   }
  ],
  "briefing": {
-  "id": "2026-11-15-us",
+  "id": "2026-11-16-pre",
   "version": "I1-2026-11-06",
-  "slot": "us",
-  "title": "미국 장 브리핑",
-  "at": "2026-11-15T13:05:52.254Z",
-  "headline": "S&P 500 -0.4%(11.13 기준), 나스닥 -0.91%(11.13 기준), 원/달러 +0.18% · 주요 이슈: 전쟁·지정학, 금리·통화, 선거·정치",
+  "slot": "pre",
+  "title": "장 전 브리핑",
+  "at": "2026-11-15T23:32:08.580Z",
+  "headline": "S&P 500 -0.4%(11.13 기준), 나스닥 -0.91%(11.13 기준), 원/달러 +0.15%(11.15 기준) · 주요 이슈: 전쟁·지정학, 선거·정치, 재난·사고",
   "markets": [
    {
     "symbol": "^GSPC",
@@ -1151,9 +1157,9 @@
     "unit": "%",
     "available": true,
     "date": "2026-11-15",
-    "last": 1336.199951171875,
-    "change": 0.18,
-    "z": 0.3,
+    "last": 1335.739990234375,
+    "change": 0.15,
+    "z": 0.2,
     "sd": 0.6326251329727653,
     "source": "Yahoo"
    },
@@ -1162,11 +1168,11 @@
     "label": "WTI 유가",
     "unit": "%",
     "available": true,
-    "date": "2026-11-13",
-    "last": 88.55999755859375,
-    "change": -0.2,
+    "date": "2026-11-15",
+    "last": 88.43000030517578,
+    "change": -0.15,
     "z": -0.1,
-    "sd": 2.8921201786070414,
+    "sd": 2.877420765091161,
     "source": "Yahoo"
    },
    {
@@ -1198,127 +1204,15 @@
   "unusual": [],
   "issues": [
    {
-    "id": "1nnv078",
-    "title": "\"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\"",
-    "firstSeen": "2026-11-14T10:09:00.000Z",
-    "lastSeen": "2026-11-15T09:29:00.000Z",
-    "count": 9,
-    "sources": 9,
-    "topics": [
-     "war"
-    ],
-    "critical": [
-     "war"
-    ],
-    "links": [
-     {
-      "title": "“돈바스 포기하면 나토 가입” 美, 우크라이나에 첫 제안",
-      "link": "https://www.munhwa.com/article/11631414?ref=naver",
-      "host": "munhwa.com",
-      "at": "2026-11-15T09:29:00.000Z"
-     },
-     {
-      "title": "나토 가입·돈바스 철수 맞교환…美, 우크라에 종전안 타진",
-      "link": "https://www.hankyung.com/article/2026111575231",
-      "host": "hankyung.com",
-      "at": "2026-11-15T08:43:00.000Z"
-     },
-     {
-      "title": "우크라이나 나토 가입 조건이 돈바스 포기?…젤렌스키 고심",
-      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000082905",
-      "host": "jnilbo.com",
-      "at": "2026-11-15T08:23:00.000Z"
-     },
-     {
-      "title": "젤렌스키 “미, 나토 가입 대가로 돈바스 포기 제안”…러, 거부할 듯",
-      "link": "https://www.hani.co.kr/arti/international/europe/1287408.html",
-      "host": "hani.co.kr",
-      "at": "2026-11-15T07:34:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 44,
-     "spike": 0,
-     "news": true,
-     "reaction": {
-      "symbol": "KRW=X",
-      "label": "원/달러",
-      "change": 0.18,
-      "unit": "%",
-      "z": 0.3
-     },
-     "why": [
-      "핵심 단어",
-      "원/달러 +0.18%"
-     ]
-    },
-    "delivered": false
-   },
-   {
-    "id": "1yyjm53",
-    "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
-    "firstSeen": "2026-11-14T10:46:00.000Z",
-    "lastSeen": "2026-11-15T04:51:00.000Z",
-    "count": 3,
-    "sources": 3,
-    "topics": [
-     "rates"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "한은 또 올릴까?...올해 마지막 금통위 앞두고 추가 인상 전망 ‘솔솔’",
-      "link": "https://www.mk.co.kr/article/12209158",
-      "host": "mk.co.kr",
-      "at": "2026-11-15T04:51:00.000Z"
-     },
-     {
-      "title": "[N2 포커스] 미국 연준, '빅스텝'도 거론…올해 마지막 금통위 주목",
-      "link": "https://www.news2day.co.kr/article/20261111500409",
-      "host": "news2day.co.kr",
-      "at": "2026-11-14T22:06:00.000Z"
-     },
-     {
-      "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
-      "link": "https://www.newsis.com/view/NISX20261113_0003867549",
-      "host": "newsis.com",
-      "at": "2026-11-14T21:00:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 34,
-     "spike": 0,
-     "news": true,
-     "reaction": {
-      "symbol": "^TNX",
-      "label": "미 10년 금리",
-      "change": 5.1,
-      "unit": "bp",
-      "z": 0.9
-     },
-     "why": [
-      "핵심 단어",
-      "미 10년 금리 +5.1bp"
-     ]
-    }
-   },
-   {
     "id": "16gcimi",
-    "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
+    "title": "[글로벌 매크로 레이더] 트럼프 '이란과 합의 불필요'…호르무즈 정상화...",
     "firstSeen": "2026-11-14T22:36:00.000Z",
     "lastSeen": "2026-11-15T04:12:00.000Z",
-    "count": 2,
-    "sources": 2,
+    "count": 1,
+    "sources": 1,
     "topics": [
      "war",
-     "politics",
-     "energy"
+     "politics"
     ],
     "critical": [
      "energy"
@@ -1329,20 +1223,14 @@
       "link": "http://coinreaders.com/270390",
       "host": "coinreaders.com",
       "at": "2026-11-15T04:12:00.000Z"
-     },
-     {
-      "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
-      "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=300926",
-      "host": "financialpost.co.kr",
-      "at": "2026-11-14T22:36:00.000Z"
      }
     ],
     "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 31,
-     "spike": 0,
-     "news": true,
+     "level": "watch",
+     "label": "관찰",
+     "score": 32,
+     "spike": 0.5,
+     "news": false,
      "reaction": {
       "symbol": "^GSPC",
       "label": "S&P 500",
@@ -1353,87 +1241,6 @@
      "why": [
       "핵심 단어",
       "S&P 500 -0.4%"
-     ]
-    },
-    "delivered": false
-   },
-   {
-    "id": "18gtay",
-    "title": "'빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴",
-    "firstSeen": "2026-11-15T05:22:00.000Z",
-    "lastSeen": "2026-11-15T05:22:00.000Z",
-    "count": 1,
-    "sources": 1,
-    "topics": [
-     "fx"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "'빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴",
-      "link": "http://www.metroseoul.co.kr/article/20261115500200",
-      "host": "metroseoul.co.kr",
-      "at": "2026-11-15T05:22:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 29,
-     "spike": 0.1,
-     "news": false,
-     "reaction": {
-      "symbol": "^TNX",
-      "label": "미 10년 금리",
-      "change": 5.1,
-      "unit": "bp",
-      "z": 0.9
-     },
-     "why": [
-      "핵심 단어",
-      "미 10년 금리 +5.1bp"
-     ]
-    }
-   },
-   {
-    "id": "1yyjm53",
-    "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
-    "firstSeen": "2026-11-14T10:46:00.000Z",
-    "lastSeen": "2026-11-14T23:12:00.000Z",
-    "count": 1,
-    "sources": 1,
-    "topics": [
-     "rates"
-    ],
-    "critical": [
-     "rates"
-    ],
-    "links": [
-     {
-      "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
-      "link": "http://coinreaders.com/270342",
-      "host": "coinreaders.com",
-      "at": "2026-11-14T23:12:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 28,
-     "spike": 0,
-     "news": false,
-     "reaction": {
-      "symbol": "^TNX",
-      "label": "미 10년 금리",
-      "change": 5.1,
-      "unit": "bp",
-      "z": 0.9
-     },
-     "why": [
-      "핵심 단어",
-      "미 10년 금리 +5.1bp"
      ]
     }
    },
@@ -1462,8 +1269,8 @@
     "assess": {
      "level": "watch",
      "label": "관찰",
-     "score": 28,
-     "spike": 0,
+     "score": 32,
+     "spike": 0.5,
      "news": false,
      "reaction": {
       "symbol": "^GSPC",
@@ -1477,155 +1284,50 @@
       "S&P 500 -0.4%"
      ]
     }
-   }
-  ],
-  "alerts": [
-   {
-    "id": "1nnv078",
-    "title": "\"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\"",
-    "firstSeen": "2026-11-14T10:09:00.000Z",
-    "lastSeen": "2026-11-15T09:29:00.000Z",
-    "count": 9,
-    "sources": 9,
-    "topics": [
-     "war"
-    ],
-    "critical": [
-     "war"
-    ],
-    "links": [
-     {
-      "title": "“돈바스 포기하면 나토 가입” 美, 우크라이나에 첫 제안",
-      "link": "https://www.munhwa.com/article/11631414?ref=naver",
-      "host": "munhwa.com",
-      "at": "2026-11-15T09:29:00.000Z"
-     },
-     {
-      "title": "나토 가입·돈바스 철수 맞교환…美, 우크라에 종전안 타진",
-      "link": "https://www.hankyung.com/article/2026111575231",
-      "host": "hankyung.com",
-      "at": "2026-11-15T08:43:00.000Z"
-     },
-     {
-      "title": "우크라이나 나토 가입 조건이 돈바스 포기?…젤렌스키 고심",
-      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000082905",
-      "host": "jnilbo.com",
-      "at": "2026-11-15T08:23:00.000Z"
-     },
-     {
-      "title": "젤렌스키 “미, 나토 가입 대가로 돈바스 포기 제안”…러, 거부할 듯",
-      "link": "https://www.hani.co.kr/arti/international/europe/1287408.html",
-      "host": "hani.co.kr",
-      "at": "2026-11-15T07:34:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 44,
-     "spike": 0,
-     "news": true,
-     "reaction": {
-      "symbol": "KRW=X",
-      "label": "원/달러",
-      "change": 0.18,
-      "unit": "%",
-      "z": 0.3
-     },
-     "why": [
-      "핵심 단어",
-      "원/달러 +0.18%"
-     ]
-    },
-    "delivered": false
    },
    {
-    "id": "1yyjm53",
-    "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
-    "firstSeen": "2026-11-14T10:46:00.000Z",
-    "lastSeen": "2026-11-15T04:51:00.000Z",
-    "count": 3,
-    "sources": 3,
+    "id": "1s1dczb",
+    "title": "국힘 43%·민주 34.6%…與지지율은 현 정부 들어 최저[리얼미터]",
+    "firstSeen": "2026-11-15T23:08:00.000Z",
+    "lastSeen": "2026-11-15T23:29:00.000Z",
+    "count": 8,
+    "sources": 8,
     "topics": [
-     "rates"
+     "politics"
     ],
-    "critical": [
-     "rates"
-    ],
+    "critical": [],
     "links": [
      {
-      "title": "한은 또 올릴까?...올해 마지막 금통위 앞두고 추가 인상 전망 ‘솔솔’",
-      "link": "https://www.mk.co.kr/article/12209158",
-      "host": "mk.co.kr",
-      "at": "2026-11-15T04:51:00.000Z"
+      "title": "[속보] 국민의힘 지지율, 민주당 최대 격차로 따돌려…李대통령 국정지...",
+      "link": "https://www.pressian.com/pages/articles/2026111608244636429?utm_source=naver&utm_medium=search",
+      "host": "pressian.com",
+      "at": "2026-11-15T23:29:00.000Z"
      },
      {
-      "title": "[N2 포커스] 미국 연준, '빅스텝'도 거론…올해 마지막 금통위 주목",
-      "link": "https://www.news2day.co.kr/article/20261111500409",
-      "host": "news2day.co.kr",
-      "at": "2026-11-14T22:06:00.000Z"
+      "title": "李대통령 지지율 36.4%로 횡보…與 34.6%·국힘 43.0% 오차 밖",
+      "link": "https://www.yna.co.kr/view/AKR20261116017800001?input=1195m",
+      "host": "yna.co.kr",
+      "at": "2026-11-15T23:26:00.000Z"
      },
      {
-      "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
-      "link": "https://www.newsis.com/view/NISX20261113_0003867549",
-      "host": "newsis.com",
-      "at": "2026-11-14T21:00:00.000Z"
+      "title": "李대통령 지지율 36.4% 소폭 반등…국힘 43%·민주 34.6%[리얼미터]",
+      "link": "https://www.sedaily.com/article/20114622?ref=naver",
+      "host": "sedaily.com",
+      "at": "2026-11-15T23:25:00.000Z"
+     },
+     {
+      "title": "李대통령 지지율 36.4% 소폭 상승...국힘 43.0%, 민주당에 8.4%P 앞서",
+      "link": "https://www.m-economynews.com/news/article.html?no=73069",
+      "host": "m-economynews.com",
+      "at": "2026-11-15T23:22:00.000Z"
      }
     ],
     "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 34,
-     "spike": 0,
-     "news": true,
-     "reaction": {
-      "symbol": "^TNX",
-      "label": "미 10년 금리",
-      "change": 5.1,
-      "unit": "bp",
-      "z": 0.9
-     },
-     "why": [
-      "핵심 단어",
-      "미 10년 금리 +5.1bp"
-     ]
-    }
-   },
-   {
-    "id": "16gcimi",
-    "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
-    "firstSeen": "2026-11-14T22:36:00.000Z",
-    "lastSeen": "2026-11-15T04:12:00.000Z",
-    "count": 2,
-    "sources": 2,
-    "topics": [
-     "war",
-     "politics",
-     "energy"
-    ],
-    "critical": [
-     "energy"
-    ],
-    "links": [
-     {
-      "title": "[글로벌 매크로 레이더] 트럼프 '이란과 합의 불필요'…호르무즈 정상화...",
-      "link": "http://coinreaders.com/270390",
-      "host": "coinreaders.com",
-      "at": "2026-11-15T04:12:00.000Z"
-     },
-     {
-      "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
-      "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=300926",
-      "host": "financialpost.co.kr",
-      "at": "2026-11-14T22:36:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 31,
-     "spike": 0,
-     "news": true,
+     "level": "watch",
+     "label": "관찰",
+     "score": 22,
+     "spike": 0.5,
+     "news": false,
      "reaction": {
       "symbol": "^GSPC",
       "label": "S&P 500",
@@ -1634,14 +1336,173 @@
       "z": -0.4
      },
      "why": [
-      "핵심 단어",
       "S&P 500 -0.4%"
      ]
-    },
-    "delivered": false
+    }
+   },
+   {
+    "id": "z3ljqj",
+    "title": "[이번주 증시] 'AI 투심' 살아날까…엔비디아 실적·앤트로픽 IPO '주목'",
+    "firstSeen": "2026-11-13T22:02:00.000Z",
+    "lastSeen": "2026-11-15T23:28:00.000Z",
+    "count": 11,
+    "sources": 11,
+    "topics": [
+     "fx"
+    ],
+    "critical": [],
+    "links": [
+     {
+      "title": "[오늘 증시 전망] 엔비디아 실적 주목",
+      "link": "http://www.kjdaily.com/article.php?aid=1794785166692348276",
+      "host": "kjdaily.com",
+      "at": "2026-11-15T23:28:00.000Z"
+     },
+     {
+      "title": "'젠슨 황 쇼크' 딛고 반등할까…엔비디아 실적·앤트로픽 상장에 쏠린 ...",
+      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000082961",
+      "host": "jnilbo.com",
+      "at": "2026-11-15T23:27:00.000Z"
+     },
+     {
+      "title": "[굿모닝! 글로벌 뉴욕증시] 엔비디아 리더쉽 부재 및 앤트로픽 자금 조...",
+      "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=305041",
+      "host": "newsquest.co.kr",
+      "at": "2026-11-15T23:18:00.000Z"
+     },
+     {
+      "title": "[AI MY 증시전망] 엔비디아 실적 앞둔 코스피…\"AI 불안에 약세 전망\"",
+      "link": "https://www.newspim.com/news/view/20261116000034",
+      "host": "newspim.com",
+      "at": "2026-11-15T23:06:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 20,
+     "spike": 0,
+     "news": false,
+     "reaction": {
+      "symbol": "KRW=X",
+      "label": "원/달러",
+      "change": 0.15,
+      "unit": "%",
+      "z": 0.2
+     },
+     "why": [
+      "원/달러 +0.15%"
+     ]
+    }
+   },
+   {
+    "id": "10pn0zs",
+    "title": "물러난 젠슨 황, 사임 나흘 만 엔비디아 복귀 타진",
+    "firstSeen": "2026-11-15T20:57:00.000Z",
+    "lastSeen": "2026-11-15T23:28:00.000Z",
+    "count": 5,
+    "sources": 5,
+    "topics": [
+     "politics"
+    ],
+    "critical": [],
+    "links": [
+     {
+      "title": "젠슨 황 복귀 추진…엔비디아 경영 혼란 가중",
+      "link": "https://www.asiatime.co.kr/article/20261116500024",
+      "host": "asiatime.co.kr",
+      "at": "2026-11-15T23:28:00.000Z"
+     },
+     {
+      "title": "“사임 나흘 만에 복귀 추진”···젠슨 황 측근들, 백악관 설득 나섰다",
+      "link": "https://www.khan.co.kr/article/202611160823001",
+      "host": "khan.co.kr",
+      "at": "2026-11-15T23:23:00.000Z"
+     },
+     {
+      "title": "젠슨 황, '전시 상황실' 꾸려...엔비디아 CEO 복귀 노려",
+      "link": "https://www.jasm.co.kr/news/view/325381/?sc=Naver",
+      "host": "jasm.co.kr",
+      "at": "2026-11-15T23:14:00.000Z"
+     },
+     {
+      "title": "사임 나흘 만에 복귀 깃발 든 젠슨 황...실리콘밸리 '전시 상황실' 가동",
+      "link": "https://www.insight.co.kr/news/582150",
+      "host": "insight.co.kr",
+      "at": "2026-11-15T23:10:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 19,
+     "spike": 0.5,
+     "news": false,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -0.4,
+      "unit": "%",
+      "z": -0.4
+     },
+     "why": [
+      "S&P 500 -0.4%"
+     ]
+    }
+   },
+   {
+    "id": "z3ljqj",
+    "title": "코스피 한 달간 12% 급락, AI·美 FOMC·엔비디아 실적⋯ ‘운명의 한주...",
+    "firstSeen": "2026-11-13T22:02:00.000Z",
+    "lastSeen": "2026-11-15T22:00:00.000Z",
+    "count": 3,
+    "sources": 3,
+    "topics": [
+     "rates",
+     "market"
+    ],
+    "critical": [],
+    "links": [
+     {
+      "title": "[주간경제일정] 美 소매판매·엔비디아 실적…FOMC 의사록·APEC",
+      "link": "https://biz.sbs.co.kr/article_hub/20000346534?division=NAVER",
+      "host": "biz.sbs.co.kr",
+      "at": "2026-11-15T22:00:00.000Z"
+     },
+     {
+      "title": "[이번주 관전포인트] 엔비디아 실적·FOMC 의사록이 이번 주 증시 방향 ...",
+      "link": "http://www.newskr.kr/news/articleView.html?idxno=108016",
+      "host": "newskr.kr",
+      "at": "2026-11-15T20:50:00.000Z"
+     },
+     {
+      "title": "코스피 한 달간 12% 급락, AI·美 FOMC·엔비디아 실적⋯ ‘운명의 한주...",
+      "link": "https://www.etoday.co.kr/news/view/2648021",
+      "host": "etoday.co.kr",
+      "at": "2026-11-15T20:02:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 19,
+     "spike": 1.2,
+     "news": false,
+     "reaction": {
+      "symbol": "^TNX",
+      "label": "미 10년 금리",
+      "change": 5.1,
+      "unit": "bp",
+      "z": 0.9
+     },
+     "why": [
+      "미 10년 금리 +5.1bp"
+     ]
+    }
    }
   ],
-  "text": "[미국 장 브리핑] 2026-11-15 22시\nS&P 500 -0.4%(11.13 기준), 나스닥 -0.91%(11.13 기준), 원/달러 +0.18% · 주요 이슈: 전쟁·지정학, 금리·통화, 선거·정치\n1. [주의] \"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\" (9곳 보도)\n   https://www.munhwa.com/article/11631414?ref=naver\n2. [주의] '빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나 (3곳 보도)\n   https://www.mk.co.kr/article/12209158\n3. [주의] [국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세' (2곳 보도)\n   http://coinreaders.com/270390\n4. '빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴 (1곳 보도)\n   http://www.metroseoul.co.kr/article/20261115500200\n5. [머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9% (1곳 보도)\n   http://coinreaders.com/270342\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+  "alerts": [],
+  "text": "[장 전 브리핑] 2026-11-16 08시\nS&P 500 -0.4%(11.13 기준), 나스닥 -0.91%(11.13 기준), 원/달러 +0.15%(11.15 기준) · 주요 이슈: 전쟁·지정학, 선거·정치, 재난·사고\n1. [글로벌 매크로 레이더] 트럼프 '이란과 합의 불필요'…호르무즈 정상화... (1곳 보도)\n   http://coinreaders.com/270390\n2. 테러도 해킹도 아닌데 9·11수준 재앙…미국 항공편 셧다운 대체 왜 (1곳 보도)\n   https://www.mk.co.kr/article/12209478\n3. 국힘 43%·민주 34.6%…與지지율은 현 정부 들어 최저[리얼미터] (8곳 보도)\n   https://www.pressian.com/pages/articles/2026111608244636429?utm_source=naver&utm_medium=search\n4. [이번주 증시] 'AI 투심' 살아날까…엔비디아 실적·앤트로픽 IPO '주목' (11곳 보도)\n   http://www.kjdaily.com/article.php?aid=1794785166692348276\n5. 물러난 젠슨 황, 사임 나흘 만 엔비디아 복귀 타진 (5곳 보도)\n   https://www.asiatime.co.kr/article/20261116500024\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
   "delivered": false
  },
  "problems": []
