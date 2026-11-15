@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T00:36:30.711Z",
+ "updatedAt": "2026-11-15T00:54:19.149Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,12 +120,12 @@
  ],
  "spikes": {
   "war": -0.5,
-  "politics": -0.1,
-  "rates": 0.2,
+  "politics": 0,
+  "rates": 0.4,
   "trade": 0.2,
   "fx": -0.4,
   "energy": -0.7,
-  "market": -0.2,
+  "market": -0.1,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.2
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.9,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.4,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.2,
+   "rate": 3.3,
    "saturated": 1,
    "queries": 3
   },
@@ -213,8 +213,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 33,
-    "spike": 0.2,
+    "score": 34,
+    "spike": 0.4,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -253,8 +253,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.2,
+    "score": 31,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -409,8 +409,8 @@
    "title": "[주간증시전망] 젠슨 황 사임 후 엔비디아 실적 발표… 미·중 정상회담...",
    "firstSeen": "2026-11-14T09:18:00.000Z",
    "lastSeen": "2026-11-15T00:28:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "rates"
    ],
@@ -445,7 +445,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 18,
-    "spike": 0.2,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -516,17 +516,23 @@
   },
   {
    "id": "wj9tf",
-   "title": "오늘(14일) 금시세 하락…순금 1돈 금값 73만2000원",
+   "title": "주간 금시세 7.5% 하락…순금 한 돈 금값 73만2000원",
    "firstSeen": "2026-11-14T00:02:00.000Z",
-   "lastSeen": "2026-11-15T00:02:00.000Z",
+   "lastSeen": "2026-11-15T00:40:00.000Z",
    "count": 4,
-   "sources": 3,
+   "sources": 4,
    "topics": [
     "rates",
     "energy"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "주간 금시세(금값) 전망... 월가 분석가들이 진단한 이번 주 금가격 예측...",
+     "link": "https://www.wikitree.co.kr/articles/1174681",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-15T00:40:00.000Z"
+    },
     {
      "title": "금시세·금값 15일",
      "link": "https://www.bntnews.co.kr/article/view/bnt202611150006",
@@ -544,19 +550,13 @@
      "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94197",
      "host": "thefairnews.co.kr",
      "at": "2026-11-14T15:02:00.000Z"
-    },
-    {
-     "title": "오늘(14일) 금시세 하락…순금 1돈 금값 73만2000원",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94178",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-14T00:40:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
-    "spike": 0.2,
+    "score": 15,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -574,14 +574,20 @@
    "id": "qqe5dm",
    "title": "변동성 장세 지속…'젠슨 황 퇴진' 엔비디아 실적에 쏠리는 눈 [주간전...",
    "firstSeen": "2026-11-14T09:18:00.000Z",
-   "lastSeen": "2026-11-15T00:16:00.000Z",
-   "count": 4,
-   "sources": 3,
+   "lastSeen": "2026-11-15T00:42:00.000Z",
+   "count": 5,
+   "sources": 4,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "'젠슨 황 쇼크'에 흔들린 국내 증시…엔비디아 실적 촉각",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261115094146aqo",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-15T00:42:00.000Z"
+    },
     {
      "title": "[이번주 증시 전망] 엔비디아 실적 분수령",
      "link": "http://www.kjdaily.com/article.php?aid=1794701654692225276",
@@ -599,18 +605,12 @@
      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000082723",
      "host": "jnilbo.com",
      "at": "2026-11-14T23:17:00.000Z"
-    },
-    {
-     "title": "변동성 장세 지속…'젠슨 황 퇴진' 엔비디아 실적에 쏠리는 눈 [주간전...",
-     "link": "https://www.hankyung.com/article/2026111355876",
-     "host": "hankyung.com",
-     "at": "2026-11-14T23:01:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 10,
+    "score": 13,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -622,55 +622,6 @@
     },
     "why": [
      "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "8pkt5x",
-   "title": "뉴욕증시 기술주 약세 속 혼조···국제유가도 ‘널뛰기’",
-   "firstSeen": "2026-11-14T01:52:00.000Z",
-   "lastSeen": "2026-11-14T04:18:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시, 엔비디아 여파에 혼조 마감…\"다우 0.10%↑·나스닥 0.91%↓\"",
-     "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=369732",
-     "host": "ftoday.co.kr",
-     "at": "2026-11-14T04:18:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 혼조…반도체주 약세에 나스닥 0.9%↓",
-     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54724",
-     "host": "koreareport.co.kr",
-     "at": "2026-11-14T02:56:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 기술주 약세 속 혼조···국제유가도 ‘널뛰기’",
-     "link": "https://www.ekn.kr/web/view.php?key=20261114024239653",
-     "host": "ekn.kr",
-     "at": "2026-11-14T02:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -0.2,
-     "unit": "%",
-     "z": -0.1
-    },
-    "why": [
-     "WTI 유가 -0.2%"
     ]
    }
   },
@@ -724,9 +675,55 @@
    }
   },
   {
-   "id": "el7z7s",
+   "id": "1m60h9j",
+   "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
+   "firstSeen": "2026-11-14T01:48:00.000Z",
+   "lastSeen": "2026-11-14T17:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 달러화 3주째 강세…국채금리 급등에 19개월 최고권",
+     "link": "https://www.g-enews.com/view.php?ud=2026111419054118449a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-14T17:02:00.000Z"
+    },
+    {
+     "title": "국제유가 상승에 달러 강세…달러인덱스 19개월 만에 최고",
+     "link": "https://www.sedaily.com/article/20114301?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-14T01:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "7b4x5f",
    "title": "급락 딛고 반등한 코스피…다음주 '엔비디아·연준' 변수 주목",
-   "firstSeen": "2026-11-13T22:18:00.000Z",
+   "firstSeen": "2026-11-14T05:00:00.000Z",
    "lastSeen": "2026-11-14T22:00:00.000Z",
    "count": 2,
    "sources": 2,
@@ -752,8 +749,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 8,
-    "spike": 0.2,
+    "score": 9,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -802,8 +799,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 7,
-    "spike": 0.2,
+    "score": 8,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -814,6 +811,49 @@
     },
     "why": [
      "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "12w43g4",
+   "title": "벌써 젠슨 황 복귀 요구? 투자자 서한에 온라인 서명까지",
+   "firstSeen": "2026-11-14T18:00:00.000Z",
+   "lastSeen": "2026-11-15T00:40:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[젠슨 황 스캔들] '젠슨 황 복귀' 요구 확산…온라인 청원 11만명 참여",
+     "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001065",
+     "host": "it.chosun.com",
+     "at": "2026-11-15T00:40:00.000Z"
+    },
+    {
+     "title": "벌써 젠슨 황 복귀 요구? 투자자 서한에 온라인 서명까지",
+     "link": "https://www.kmib.co.kr/article/20261115500079",
+     "host": "kmib.co.kr",
+     "at": "2026-11-14T23:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 8,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -857,49 +897,6 @@
     },
     "why": [
      "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "hxbwle",
-   "title": "유가 하락이 증시 반등 기회될까…문제는 내년 하반기[주末머니]",
-   "firstSeen": "2026-11-14T06:12:00.000Z",
-   "lastSeen": "2026-11-14T21:44:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "9385서 4911까지 출렁인 코스피…내년 반등 변수는",
-     "link": "https://www.kbmaeil.com/article/20261115500023",
-     "host": "kbmaeil.com",
-     "at": "2026-11-14T21:44:00.000Z"
-    },
-    {
-     "title": "유가 하락이 증시 반등 기회될까…문제는 내년 하반기[주末머니]",
-     "link": "https://view.asiae.co.kr/article/2026111214381621860",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-14T06:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -0.2,
-     "unit": "%",
-     "z": -0.1
-    },
-    "why": [
-     "WTI 유가 -0.2%"
     ]
    }
   }
