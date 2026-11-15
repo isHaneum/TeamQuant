@@ -9,7 +9,8 @@ import { fileURLToPath } from 'node:url';
 import { shrinkCov, riskStats, sleeveWeights, effectiveN, quad, RISK_BUDGET_VERSION } from '../../lib/risk-budget.js';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..'), sleep = ms => new Promise(r => setTimeout(r, ms));
-const plan = JSON.parse(readFileSync(join(root, 'data/paper-plan.json'), 'utf8'));
+const arg = k => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; }, PLAN_FILE = arg('--plan') || 'data/paper-plan.json', OUT_FILE = arg('--out') || 'data/sizing-study.json'; // 후보 계획을 잴 때: --plan data/paper-plan.pp4.json --out data/sizing-study.pp4.json
+const plan = JSON.parse(readFileSync(join(root, PLAN_FILE), 'utf8'));
 const ysym = s => /^\d{6}$/.test(s) ? `${s}.KS` : s, isUS = s => !/^\d{6}$/.test(s);
 const held = Object.entries(plan.weights).filter(([, v]) => v.pct > 0).map(([symbol, v]) => ({ symbol, name: v.name, role: v.role, pct: v.pct / 100, us: isUS(symbol) }));
 const core = held.filter(h => h.role === 'core'), sats = held.filter(h => h.role !== 'core'), order = [...core, ...sats], N = order.length;
@@ -75,7 +76,7 @@ walk.ercBand25 = { label: '위험 기여 균등 · 25% 넘게 벗어날 때만 �
 
 const out = { version: RISK_BUDGET_VERSION, generatedAt: new Date().toISOString(), planVersion: plan.version, data: { from: W[0], to: W.at(-1), weeks: R.length, window: WIN, stepWeeks: STEP, source: 'Yahoo Finance 일봉 수정 종가 → 원화 → 주간' }, universe: order.map(h => ({ symbol: h.symbol, name: h.name, role: h.role, pct: pct(h.pct) })), shrink: { delta: Math.round(now.delta * 100) / 100, avgCorr: Math.round(now.avgCorr * 100) / 100 }, snapshot, walk,
   notes: ['수익은 비교하지 않는다(종목을 2026년에 골랐다).', '비교선 = 국가 비중을 맞춘 지수(SPY·KODEX 200) + 같은 현금.', '능동 위험 몫 = 종목을 사고 그만큼 자기 시장 지수를 덜 가진 위치의 추적오차 기여.', '공분산은 표본을 같은-상관 목표로 줄인 값(Ledoit·Wolf).'] };
-writeFileSync(join(root, 'data/sizing-study.json'), JSON.stringify(out, null, 1));
+writeFileSync(join(root, OUT_FILE), JSON.stringify(out, null, 1));
 console.log(JSON.stringify({ data: out.data, shrink: out.shrink }));
 console.log('names', JSON.stringify(snapshot.names));
 for (const [id] of METHODS) console.log(id.padEnd(10), 'vol', snapshot[id].volPct, 'TE', snapshot[id].tePct, 'maxShare', snapshot[id].maxActiveSharePct, 'bets', snapshot[id].effectiveBets, 'satRisk', snapshot[id].satRiskOfTotalPct, JSON.stringify(snapshot[id].weightsPct));

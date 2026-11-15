@@ -84,10 +84,12 @@ test('모의계좌 엔진: 후보 계획은 적용하지 않고 예상 거래대
   const off = engine({ max: 0 }); off.state.doc = off.mk('Z', 9); const s2 = await off.pl.status(); assert.equal(s2.planDoc.version, 'Z'); assert.equal(s2.planChange, null); assert.equal(off.pl._ledger().planAdopted, undefined);
 });
 
-test('후보 계획 파일(data/paper-plan.next.json): 지금 계획과 종목이 같고 개별 종목 합계가 같으며 한도 안이다', () => {
+test('후보 계획 파일(data/paper-plan.next.json): 바탕 계획과 종목이 같고 개별 종목 합계가 같으며 한도 안이다', () => {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '..'), f = join(root, 'data/paper-plan.next.json'); if (!existsSync(f)) return;
-  const next = JSON.parse(readFileSync(f, 'utf8')), plan = JSON.parse(readFileSync(join(root, 'data/paper-plan.json'), 'utf8'));
-  if (next.basedOn !== plan.version) return; // 계획이 바뀐 뒤의 옛 후보는 엔진이 지금 계획과 비교해 보여 줄 뿐이다
+  const next = JSON.parse(readFileSync(f, 'utf8')), baseFile = join(root, next.basedOnFile || 'data/paper-plan.json'), plan = JSON.parse(readFileSync(baseFile, 'utf8'));
+  // 바탕 파일(결정 37부터 data/paper-plan.pp4.json 일 수 있음)이 다시 만들어졌는데 후보를 다시 만들지 않았으면 실패한다.
+  if (!next.basedOnFile && next.basedOn !== plan.version) return; // 예전 후보(바탕 파일 이름 없음)는 엔진이 지금 계획과 비교해 보여 줄 뿐이다
+  assert.equal(next.basedOn, plan.version, `후보(${next.version})의 바탕 ${next.basedOnFile} 이 바뀌었다 — sizing-study 와 build-plan-candidate 를 다시 돌린다`);
   assert.deepEqual(Object.keys(next.weights).sort(), Object.keys(plan.weights).sort()); assert.notEqual(next.version, plan.version);
   const sat = d => Object.values(d.weights).filter(w => w.role === 'satellite'), sum = d => sat(d).reduce((a, w) => a + w.pct, 0);
   assert.ok(Math.abs(sum(next) - sum(plan)) < 0.06, `${sum(next)} vs ${sum(plan)}`);

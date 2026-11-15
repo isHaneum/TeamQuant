@@ -24,7 +24,7 @@ const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' })
 const daysAgo = n => new Date(Date.now() - n * 864e5 + 9 * 3600e3).toISOString().slice(0, 10);
 const marketOf = p => p.currency === 'USD' ? 'US' : 'KR';
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261115b'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261115c'; document.head.append(css);
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
 function addView(id, label, html) {
   const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = id; nav.textContent = label; navHost.append(nav);
@@ -115,7 +115,7 @@ window.addEventListener('teamquant:page', () => { if (document.querySelector('.v
 // 한 줄 배치: 지금 규칙 → 왜 이 규칙인가 → 얼마나 위험한가 → 과거 시장에 넣어 보면 → 규칙을 지켰나 → (접힘) 규칙 바꾸기 · 종목별 목표 비중 · 검증 자료 원표.
 // 계좌마다 규칙은 한 벌이다. 모의계좌 화면은 모의계좌의 규칙(PC 장부, 저장한 적 없으면 기본 규칙)을 읽기 전용으로, 예시·실계좌 화면은 이 브라우저에 저장한 규칙을 보인다.
 // 화면의 과거 숫자는 전부 data/core-validation.json · data/strategy-evidence.json · data/paper-rehearsal.json 에서 읽는다(문구에 숫자를 박지 않는다).
-let evidence = null, strat = null, rehearsal = null, sizing = null;
+let evidence = null, strat = null, rehearsal = null, sizing = null, structure = null;
 const RL = { pf: 'demo', pick: null, pc: null };
 const acct = () => (S.snap?.paper ? 'paper' : S.snap?.demo ? 'demo' : S.snap ? 'real' : 'none');
 const kday = t => new Date(new Date(t).getTime() + 9 * 3600e3).toISOString().slice(0, 10);
@@ -123,6 +123,7 @@ const guard = (name, fn) => { try { return fn(); } catch (e) { console.warn('[�
 const sg = v => (v > 0 ? '+' : '') + v;
 fetch('/data/strategy-evidence.json?v=E1').then(r => r.ok ? r.json() : null).then(d => { strat = d; renderRules(); }).catch(() => {});
 fetch('/data/sizing-study.json?v=RB1').then(r => r.ok ? r.json() : null).then(d => { sizing = d; renderRules(); }).catch(() => {});
+fetch('/data/structure-cards.json?v=SQ1').then(r => r.ok ? r.json() : null).then(d => { structure = d; renderRules(); }).catch(() => {});
 fetch('/data/core-validation.json?v=' + RULES_VERSION).then(r => r.ok ? r.json() : null).then(d => { evidence = d; renderRules(); }).catch(() => {});
 fetch('/data/paper-rehearsal.json').then(r => r.ok ? r.json() : null).then(d => { rehearsal = d; renderRules(); }).catch(() => {});
 
@@ -357,7 +358,7 @@ function renderPlan(plan, saved) {
   const c = ruleCtx(), box = $('#cr-plan'); if (!box) return;
   if (c.kind === 'paper') { const w = Object.entries(c.mock?.planDoc?.weights || {}).filter(([, v]) => v.pct > 0).sort((a, b) => b[1].pct - a[1].pct);
     $('#rl-plan-state').textContent = w.length ? `${w.length}종목 · 합계 ${w.reduce((a, [, v]) => a + v.pct, 0).toFixed(1)}% · 읽기 전용${c.mock?.planChange ? ` · ${c.mock.planChange.days}일 변경 ${c.mock.planChange.used}/${c.mock.planChange.max}` : ''}` : '';
-    box.innerHTML = w.length ? `<div class="table-wrap"><table class="cr-table"><thead><tr><th>종목</th><th>목표</th><th>구분</th></tr></thead><tbody>${w.map(([k, v]) => `<tr><td><b>${esc(v.name || k)}</b> <small class="cr-muted">${esc(k)}</small></td><td>${v.pct}%${v.targetPct ? ` <small class="cr-muted">(끝까지 사면 ${v.targetPct}%)</small>` : ''}</td><td>${v.role === 'core' ? '지수' : v.role === 'satellite' ? '개별 종목' : esc(v.role || '')}</td></tr>`).join('')}</tbody></table></div><p class="rl-note">모의계좌의 계획(${esc(c.mock.planDoc.version || '')})입니다. 종목을 고른 기준은 모의투자 화면에 있습니다.</p>${planChangeHtml(c.mock.planChange)}` : '<p class="cr-muted">모의계좌 계획을 받지 못했습니다.</p>';
+    box.innerHTML = w.length ? `<div class="table-wrap"><table class="cr-table"><thead><tr><th>종목</th><th>목표</th><th>구분</th></tr></thead><tbody>${w.map(([k, v]) => `<tr><td><b>${esc(v.name || k)}</b> <small class="cr-muted">${esc(k)}</small></td><td>${v.pct}%${v.targetPct ? ` <small class="cr-muted">(끝까지 사면 ${v.targetPct}%)</small>` : ''}</td><td>${v.role === 'core' ? '지수' : v.role === 'satellite' ? '개별 종목' : esc(v.role || '')}</td></tr>`).join('')}</tbody></table></div><p class="rl-note">모의계좌의 계획(${esc(c.mock.planDoc.version || '')})입니다. 종목을 고른 기준은 모의투자 화면에 있습니다.</p>${guard('structure', () => structureHtml(c)) || ''}${planChangeHtml(c.mock.planChange)}` : '<p class="cr-muted">모의계좌 계획을 받지 못했습니다.</p>';
     $('#rl-plan-confirm').hidden = true; $('#rl-plan-hist').innerHTML = '';
     $('#cr-fill').hidden = true; $('#rl-plan-actions').hidden = true; return; }
   $('#cr-fill').hidden = false; $('#rl-plan-actions').hidden = false;
@@ -391,16 +392,39 @@ function planHistHtml(saved) {
   const h = (saved?.history || []).filter(x => x.kind === 'plan'); if (!h.length) return '';
   return `<details class="rl-in"><summary>목표 비중을 바꾼 기록 ${h.length}건</summary><ul class="cr-facts">${h.slice().reverse().map(x => `<li>${esc(kday(x.at))} · ${x.first ? '처음 저장' : x.v === 2 ? `변경${Number.isFinite(x.tradedPct) ? ` · 바뀐 크기 총자산의 ${x.tradedPct}%` : ''} · 이유: ${esc(x.reason || '(없음)')}` : '변경(한도를 넣기 전)'}</li>`).join('')}</ul></details>`;
 }
-// 모의계좌: 계획 변경 횟수 · 대기 중인 계획 · 다음 계획 후보(적용 전)와 예상 거래대금. 서버가 계산해 준 값을 그대로 보인다.
+// 구조 질문(결정 37): 지금 계획의 개별 종목과 후보 계획에 새로 들어오는 종목마다 ⑥ 수요·돈 내는 곳 ⑦ 중국 경쟁 · 깨짐 조건 상태 · 출처를 보인다. data/structure-cards.json 을 읽기만 한다.
+const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return '출처'; } };
+function structureHtml(c) {
+  const S = structure; if (!S?.companies || !S.labels) return '';
+  const L = S.labels, w = c.mock?.planDoc?.weights || {}, pc = c.mock?.planChange || {}, cand = pc.pending || pc.candidate || null, clName = cl => L.cluster?.[cl] || cl;
+  const held = Object.entries(w).filter(([, v]) => v.role === 'satellite' && v.pct > 0).map(([k]) => k), incoming = (cand?.diff || []).filter(d => d.toPct > 0 && !(w[d.symbol]?.pct > 0)).map(d => d.symbol);
+  const keys = [...new Set([...held, ...incoming])].filter(k => S.companies[k]); if (!keys.length) return '';
+  const blocked = e => [...(S.rules.exclude.demand.includes(e.demand.grade) ? [`수요 ${L.demand[e.demand.grade]}`] : []), ...(S.rules.exclude.china.includes(e.china.grade) ? [`중국 경쟁 ${L.china[e.china.grade]}`] : []), ...(e.breaks || []).filter(b => b.now === 'met').map(() => '깨짐 조건 충족'), ...(e.asOf && (Date.now() - Date.parse(e.asOf)) / 864e5 > (S.rules.reviewDays || 100) ? [`답이 ${S.rules.reviewDays || 100}일 넘게 묵음`] : [])];
+  const chip = now => `<span class="ct-chip ${now === 'met' ? 'bad' : now === 'clear' ? 'ok' : 'na'}">${esc(L.now[now] || now)}</span>`;
+  const facts = (e, q) => (e[q].facts || []).map(f => `<li>${esc(f.text)} <small class="cr-muted">(${esc(f.period || '')}${f.kind === 'estimate' ? ' · 전망' : ''} · <a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer">${esc(hostOf(f.url))}</a> ${esc(f.date)})</small></li>`).join('');
+  const byCluster = {}; for (const k of held) { const cl = S.companies[k]?.cluster; if (cl) (byCluster[cl] = byCluster[cl] || []).push(S.companies[k].name); }
+  const dup = Object.entries(byCluster).filter(([, v]) => v.length > 1), stop = held.filter(k => S.companies[k] && blocked(S.companies[k]).length);
+  const rows = keys.map(k => { const e = S.companies[k], r = blocked(e), isNew = incoming.includes(k);
+    return `<tr><td><b>${esc(e.name)}</b><small class="cr-muted">묶음 ${esc(clName(e.cluster))}${isNew ? ' · 후보에 새로' : ''}</small></td>
+      <td><b>${esc(L.demand[e.demand.grade])}</b> · ${esc(e.demand.driver)}<small>돈 내는 곳 ${esc(L.payer[e.demand.payer] || '')} · 값은 ${esc(L.pricing[e.demand.pricing] || '')}</small></td>
+      <td><b>${esc(L.china[e.china.grade])}</b> · ${esc((e.china.competitors || []).slice(0, 2).join(', ') || '뚜렷한 경쟁자 없음')}<small>중국 매출 ${e.china.chinaRevenuePct == null ? '미확인' : `${e.china.chinaRevenuePct}%`} · 방어선 ${esc((e.china.defense || []).map(d => L.defense[d] || d).join('·'))}</small></td>
+      <td class="sq-breaks">${(e.breaks || []).map(b => `<div>${chip(b.now)} ${esc(b.text)}${b.evidence ? `<small class="cr-muted">${esc(b.evidence)}</small>` : ''}</div>`).join('')}</td>
+      <td>${r.length ? `<span class="rl-badge warn">막힘</span><small>${esc(r.join(' · '))}</small>` : '<span class="rl-badge ok">통과</span>'}</td></tr>
+      <tr class="sq-more"><td colspan="5"><details class="rl-in"><summary>${esc(e.name)} 근거 ${(e.demand.facts || []).length + (e.china.facts || []).length}건 · ${esc(e.asOf)} 기준</summary><p><b>수요</b> ${esc(e.demand.text)}</p><ul class="cr-facts">${facts(e, 'demand')}</ul><p><b>중국</b> ${esc(e.china.text)}</p><ul class="cr-facts">${facts(e, 'china')}</ul>${(e.unverified || []).length ? `<p class="cr-muted">확인하지 못한 것: ${esc(e.unverified.join(' · '))}</p>` : ''}</details></td></tr>`; }).join('');
+  const lead = `지금 계획의 개별 ${held.length}종목 가운데 <b>${held.length - stop.length}종목</b>이 구조 질문을 통과했습니다.${stop.length ? ` 막힌 종목: ${stop.map(k => `<b>${esc(S.companies[k].name)}</b>(${esc(blocked(S.companies[k]).join(' · '))})`).join(', ')}.` : ''}${dup.length ? ` 깨짐 조건이 같은 묶음에 여러 종목이 있습니다: ${dup.map(([cl, v]) => `${esc(clName(cl))}(${esc(v.join('·'))})`).join(', ')} — 다음 계획 후보에서는 점수가 높은 하나만 담습니다.` : ''}`;
+  return `<div class="rl-sizing rl-sq"><h4 class="rl-h4">종목을 고른 이유 — 구조 질문 ${tip(`투자 방향(인구구조 변화 · 중국의 부상)을 종목마다 두 질문으로 묻습니다. ⑥ 10년 뒤 주력 제품의 수요가 인구·구조 변화로 느는가, 그 돈은 누가 내고 값은 누가 정하는가. ⑦ 같은 것을 만드는 중국 기업이 있는가, 중국 매출 비중과 방어선(기술·인허가 대 정책)은 무엇인가. 수요 역풍 · 중국 경쟁 높음 · 깨짐 조건 충족이면 다음 계획에 담지 않습니다. 답은 출처·날짜가 붙은 사람 판단이라 과거로 검증할 수 없고 ${S.rules.reviewDays}일마다 다시 확인합니다. 수익 예측이 아닙니다.`)}</h4>
+    <p>${lead}</p><div class="table-wrap"><table class="cr-table rl-sqt"><thead><tr><th>종목</th><th>수요 · 돈 내는 곳</th><th>중국 경쟁</th><th>깨짐 조건</th><th>판정</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="rl-note">${esc(S.asOf)} 기준 · ${esc(S.version)} · 깨짐 조건의 "확인 전"은 막지 않습니다(다음 점검에서 확인).</p></div>`;
+}
 function planChangeHtml(pc) {
   if (!pc) return '';
   const tv = t => (t ? `계획이 바뀌는 만큼 사고파는 금액은 약 <b>${Number.isFinite(t.changeKrw) ? manwon(t.changeKrw) : '—'}</b>(총자산의 ${t.changePct}%)입니다. 지금 보유에서 이 계획까지 맞추는 금액은 ${manwon(t.tradedKrw)}${Number.isFinite(t.baseTradedKrw) ? `이고, 지금 계획까지도 ${manwon(t.baseTradedKrw)}이 남아 있습니다(아직 덜 산 종목 포함)` : '입니다'}` : '예상 거래대금은 잔고를 읽은 뒤 계산합니다');
-  const table = d => `<details class="rl-in"><summary>바뀌는 비중 ${d.length}종목</summary><div class="table-wrap"><table class="cr-table rl-size"><thead><tr><th>종목</th><th>지금 계획</th><th>바꾸면</th></tr></thead><tbody>${d.map(x => `<tr><td>${esc(shortName(x.name))}</td><td>${x.fromPct}%</td><td><b>${x.toPct}%</b></td></tr>`).join('')}</tbody></table></div></details>`;
+  const table = (d, why = {}) => `<details class="rl-in"><summary>바뀌는 비중 ${d.length}종목</summary><div class="table-wrap"><table class="cr-table rl-size"><thead><tr><th>종목</th><th>지금 계획</th><th>바꾸면</th></tr></thead><tbody>${d.map(x => `<tr><td>${esc(shortName(x.name))}${x.toPct === 0 && why[x.symbol] ? `<small class="cr-muted rl-why-line">${esc(String(why[x.symbol]).replace(/^전환: /, ''))}</small>` : ''}</td><td>${x.fromPct}%</td><td><b>${x.toPct}%</b></td></tr>`).join('')}</tbody></table></div></details>`;
   const pend = pc.pending, cand = pc.candidate;
   return `<div class="rl-sizing"><h4 class="rl-h4">계획 변경 ${tip(`계획(목표 비중)은 ${pc.days}일 안에 ${pc.max}번까지 바꿀 수 있습니다. 실적 발표나 큰 이슈에는 대응하되 매번 바꾸지는 않게 하는 한도입니다. 한도를 넘는 계획은 받아들이지 않고 지금 계획으로 계속 운용하다가 한도가 풀리면 적용합니다. 공시 대응과 나눠 사기는 규칙이 정한 움직임이라 세지 않습니다.${pc.since ? ` ${kday(pc.since)}부터 셉니다.` : ''}`)}</h4>
     <p>최근 ${pc.days}일 <b>${pc.used}/${pc.max}회</b> 사용${pc.allowedAt ? ` · ${esc(kday(pc.allowedAt))}부터 다시 바꿀 수 있습니다` : ` · ${pc.left}회 남음`}.</p>
-    ${pend ? `<p class="cr-err">새 계획(${esc(pend.version || '')})이 대기 중입니다. 한도를 다 써서 ${pend.allowedAt ? esc(kday(pend.allowedAt)) : '한도가 풀리는 날'}부터 적용됩니다. ${tv(pend.turnover)}.</p>${pend.diff?.length ? table(pend.diff) : ''}` : ''}
-    ${cand ? `<p><b>다음 계획 후보</b> ${tip('아직 적용하지 않은 계획입니다. 적용하면 변경 1회를 쓰고 다음 열린 장에 재조정 주문이 나갑니다. 금액은 지금 보유와 후보 비중의 차이를 단순히 더한 값입니다(1주 단위 · 주문 한도 · 규칙 적용 전).')} ${esc(cand.label || cand.version || '')}. ${tv(cand.turnover)}.</p>${cand.note ? `<p class="rl-note">${esc(cand.note)}</p>` : ''}${cand.diff?.length ? table(cand.diff) : ''}` : ''}
+    ${pend ? `<p class="cr-err">새 계획(${esc(pend.version || '')})이 대기 중입니다. 한도를 다 써서 ${pend.allowedAt ? esc(kday(pend.allowedAt)) : '한도가 풀리는 날'}부터 적용됩니다. ${tv(pend.turnover)}.</p>${pend.diff?.length ? table(pend.diff, pend.reasons) : ''}` : ''}
+    ${cand ? `<p><b>다음 계획 후보</b> ${tip('아직 적용하지 않은 계획입니다. 적용하면 변경 1회를 쓰고 다음 열린 장에 재조정 주문이 나갑니다. 금액은 지금 보유와 후보 비중의 차이를 단순히 더한 값입니다(1주 단위 · 주문 한도 · 규칙 적용 전).')} ${esc(cand.label || cand.version || '')}. ${tv(cand.turnover)}.</p>${cand.note ? `<p class="rl-note">${esc(cand.note)}</p>` : ''}${cand.diff?.length ? table(cand.diff, cand.reasons) : ''}` : ''}
     ${pc.changes?.length ? `<details class="rl-in"><summary>계획을 바꾼 기록 ${pc.changes.length}건</summary><ul class="cr-facts">${pc.changes.slice().reverse().map(x => `<li>${esc(kday(x.at))} · ${esc(x.from || '')} → ${esc(x.to || '')}</li>`).join('')}</ul></details>` : ''}</div>`;
 }
 function savePlan() {

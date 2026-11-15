@@ -1,0 +1,2575 @@
+{
+ "version": "SQ1-2026-11-15",
+ "asOf": "2026-11-15",
+ "rules": {
+  "reviewDays": 100,
+  "exclude": {
+   "demand": [
+    "head"
+   ],
+   "china": [
+    "high"
+   ]
+  },
+  "minFacts": 2
+ },
+ "labels": {
+  "demand": {
+   "tail": "순풍",
+   "neutral": "중립",
+   "head": "역풍"
+  },
+  "china": {
+   "low": "낮음",
+   "mid": "중간",
+   "high": "높음"
+  },
+  "payer": {
+   "public": "국가·공적 보험",
+   "insurer": "민간 보험·PBM",
+   "corporate": "기업 투자·IT 예산",
+   "consumer": "개인",
+   "defense": "국방 예산",
+   "mixed": "여럿"
+  },
+  "pricing": {
+   "company": "회사가 정함",
+   "market": "시장이 정함",
+   "regulated": "국가가 정함"
+  },
+  "defense": {
+   "tech": "기술",
+   "brand": "브랜드",
+   "network": "설치 기반·판매망",
+   "regulation": "인허가",
+   "procurement": "안보 조달",
+   "policy": "정책(수출 통제·관세)"
+  },
+  "now": {
+   "clear": "아님",
+   "met": "충족",
+   "unknown": "확인 전"
+  },
+  "cluster": {
+   "memory": "메모리",
+   "ai-compute": "AI 가속기",
+   "cloud": "클라우드",
+   "cloud-software": "클라우드·소프트웨어",
+   "consumer-hardware": "소비자 기기",
+   "e-commerce": "전자상거래",
+   "payments": "결제망",
+   "glp1-metabolic": "비만·대사 신약",
+   "biosimilar": "바이오시밀러",
+   "cdmo": "바이오 위탁생산",
+   "pharma-big": "대형 제약",
+   "kr-pharma": "국내 제약",
+   "defense-aero": "방산 항공",
+   "civil-aero": "민항 엔진",
+   "shipbuilding": "조선",
+   "construction-machinery": "건설기계",
+   "holding": "지주회사",
+   "components": "전자부품",
+   "networking": "네트워크 장비",
+   "streaming-tv": "TV 스트리밍",
+   "beverages": "음료"
+  }
+ },
+ "questions": {
+  "demand": "⑥ 10년 뒤 이 회사 주력 제품의 수요는 인구·구조 변화로 늘어나는가, 그 돈은 누가 내고 값은 누가 정하는가",
+  "china": "⑦ 같은 것을 만드는 중국 기업이 있는가, 점유율은 어느 쪽으로 가는가, 중국 매출 비중과 방어선(기술·인허가 대 정책)은 무엇인가"
+ },
+ "companies": {
+  "128940": {
+   "name": "한미약품",
+   "cluster": "kr-pharma",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "neutral",
+    "driver": "고령화로 늘어나는 만성질환 처방 · 비만 신약(에페)",
+    "payer": "public",
+    "pricing": "regulated",
+    "text": "국내 매출의 돈은 건강보험이 낸다. 고령화로 처방량은 늘지만 정부가 제네릭·특허만료 약값 산정률을 53.55%에서 45%로 내렸다(2026-08 시행). 국산 첫 GLP-1 비만약 에페가 2026-10-07 허가됐다. [추론] 물량 증가가 약값 인하로 상쇄되는 구조라 중립이다. 비만약은 본인 부담 판매가 될 가능성이 커 돈 내는 쪽이 다르다(미확인).",
+    "facts": [
+     {
+      "text": "제네릭 약가 산정률 53.55% → 45% 확정(2026-03-26 건정심), 8월 1일 시행",
+      "url": "https://www.medigatenews.com/news/1906535371",
+      "date": "2026-03-26",
+      "period": "2026",
+      "kind": "fact"
+     },
+     {
+      "text": "에페글레나타이드 식약처 허가(국산 신약 45호), 3상 40주 위약 보정 체중 감량 8.80%p",
+      "url": "https://news.mtn.co.kr/news-detail/2026100717235113087",
+      "date": "2026-10-07",
+      "period": "2026",
+      "kind": "fact"
+     },
+     {
+      "text": "2026년 3분기 연결 매출 3,774억 원(+4%) · 영업이익 378억 원(−31%)",
+      "url": "https://news.bizwatch.co.kr/article/healthcare/2026/10/29/0007",
+      "date": "2026-10-30",
+      "period": "3Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "high",
+    "competitors": [
+     "중국 제약사(집중구매 입찰)",
+     "중국 바이오텍(기술수출 경쟁)"
+    ],
+    "chinaRevenuePct": 26,
+    "chinaRevenueBasis": "북경한미 2025년 매출 4,024억 원 ÷ 연결 매출 1조5,475억 원(내부거래 제거 전 계산 · 추정)",
+    "defense": [
+     "brand",
+     "regulation"
+    ],
+    "text": "매출의 약 4분의 1이 중국 자회사 북경한미에서 나온다(추정). 북경한미 매출은 2026년 2분기 −29.9%, 3분기 −16%로 2개 분기 연속 줄었고 영업이익은 −96.6%, −75%였다. 원인은 중국 집중구매(VBP) 가격 인하와 주 유통사 채권 회수 지연(8월부터 출하 제한)이다. 기술수출 시장에서는 중국 바이오텍이 세계 기술이전 지출의 약 3분의 1을 차지한다.",
+    "facts": [
+     {
+      "text": "북경한미 2025년 매출 4,024억 원, 그중 룬메이캉 공급 1,543억 원(약 40%)",
+      "url": "https://www.dailypharm.com/user/news/340943",
+      "date": "2026-07-29",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "북경한미 2026년 2분기 매출 607억 원(−29.9%) · 영업이익 6억 원(−96.6%) — 집중구매(VBP) 가격 인하·비수기",
+      "url": "https://www.dailypharm.com/user/news/340943",
+      "date": "2026-07-29",
+      "period": "2Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "북경한미 2026년 3분기 매출 793억 원(−16%) · 영업이익 59억 원(−75%) — 룬메이캉 채권 회수 지연, 8월부터 출하 제한",
+      "url": "https://news.bizwatch.co.kr/article/healthcare/2026/10/29/0007",
+      "date": "2026-10-30",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "2025년 세계 제약 기술이전 지출의 약 33%가 중국 물질",
+      "url": "https://finance.yahoo.com/news/analysis-china-biotech-licensing-boom-092338804.html",
+      "date": "2026",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "bjhanmi-sales",
+     "text": "북경한미 분기 매출 2개 분기 연속 전년 대비 감소",
+     "metric": "북경한미 분기 매출 증가율",
+     "threshold": "2개 분기 연속 0% 미만",
+     "source": "한미약품 분기 실적 발표",
+     "every": "분기",
+     "now": "met",
+     "evidence": "2026년 2분기 −29.9%, 3분기 −16%"
+    },
+    {
+     "id": "kr-drug-price",
+     "text": "약가 인하로 국내(북경한미 제외) 매출이 전년 대비 감소",
+     "metric": "한미약품 별도 매출 증가율",
+     "threshold": "2개 분기 연속 0% 미만",
+     "source": "분기 실적",
+     "every": "분기",
+     "now": "unknown",
+     "evidence": "약가 개편 2026-08 시행 — 영향 확인 전"
+    }
+   ],
+   "unverified": [
+    "연결 기준 중국 매출 비중(내부거래 제거 후)",
+    "에페의 급여 여부와 출시일",
+    "한미약품의 혁신형 제약기업 약가 가산 적용 범위"
+   ]
+  },
+  "207940": {
+   "name": "삼성바이오로직스",
+   "demand": {
+    "grade": "tail",
+    "driver": "바이오의약품 위탁생산(CDMO) 수요 증가, [추론] 고령화로 항암·자가면역 바이오의약품 사용 증가",
+    "payer": "corporate",
+    "pricing": "company",
+    "text": "돈은 글로벌 제약사가 장기 계약으로 낸다. 분할 후 CDMO 단독 기준 2025년 매출 30.3% 성장, 2026년 성장 가이던스를 20%로 상향, 누적 수주 219억달러 이상. [추론] 공장 가동률이 꽉 찬 상태라 계약 가격은 회사 협상력이 큰 편이지만, 최종 약값은 보험자 압력을 받는 제약사 몫.",
+    "facts": [
+     {
+      "text": "분할 후 CDMO 기준 2025년 매출 4조5570억원(+30.3%), 영업이익 2조692억원(+56.6%); 2026년 매출 성장률 15~20% 전망",
+      "url": "https://samsungbiologics.com/media/company-news/samsung-biologics-reports-fourth-quarter-and-fiscal-year-2025-financial-results",
+      "date": "2026-01-21",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "3Q26 매출 1조4903억원(전년 1조2575억원), 영업이익 6401억원(전년 6335억원); 2026년 매출 성장 가이던스 20%로 상향, 누적 수주 219억달러 초과",
+      "url": "https://samsungbiologics.com/media/company-news/samsung-biologics-reports-third-quarter-2026-financial-results",
+      "date": "2026-10-21",
+      "period": "3Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "우시바이오로직스(WuXi Biologics)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 매출 별도 공시 확인 못함. 고객 소재지 기준 유럽 52.0%·미국 38.0%(2025, linkareer 정리 — 원 공시 미확인)",
+    "defense": [
+     "tech",
+     "regulation",
+     "procurement"
+    ],
+    "text": "중국 경쟁자는 우시바이오로직스. BIOSECURE법이 2025-12-18 발효됐지만 기업명을 직접 지정하지 않았고, 우시바이오는 2026년 상반기에도 매출 18.4% 성장, 북미 비중 58.4%로 미국 고객을 유지 중. [추론] 삼성의 방어선은 규모·규제기관 승인 실적(기술·규제)이고 미국 조달 제한은 보조. 중국 매출은 미미할 것으로 보여 mid.",
+    "facts": [
+     {
+      "text": "BIOSECURE법이 FY2026 NDAA(851조)로 2025-12-18 발효. 연방 조달·보조금 제한, 기업명 미지정, OMB가 2026년 12월까지 대상 목록 공표, 기존 계약 5년 유예",
+      "url": "https://www.arnoldporter.com/en/perspectives/advisories/2025/12/the-biosecure-act-becomes-law-in-the-united-states",
+      "date": "2025-12",
+      "period": "2025-12 법 시행",
+      "kind": "fact"
+     },
+     {
+      "text": "우시바이오로직스 2026년 상반기 매출 117.9억위안(+18.4%), 북미 69억위안으로 전체의 58.4%(전년 60억위안)",
+      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/28/wuxi-biologics-posts-43-rise-in-first-half-profit-defying-biotech-headwinds",
+      "date": "2026-08-28",
+      "period": "1H26",
+      "kind": "fact"
+     },
+     {
+      "text": "우시바이오로직스 총 수주잔고 251억달러(2026-06-30), 3년 내 잔고 55억달러(+약 30%)",
+      "url": "https://www.thailand-business-news.com/pr-news/wuxi-biologics-reports-strong-profitable-growth-in-h1-2026",
+      "date": "2026-08-25",
+      "period": "1H26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "cdmo",
+   "breaks": [
+    {
+     "id": "207940-b1",
+     "text": "OMB 목록에 우시바이오가 빠지면 미국 조달 제한 효과 소멸로 본다",
+     "metric": "BIOSECURE 우려기업(BCC) 목록에 WuXi Biologics 포함 여부",
+     "threshold": "2026-12 공표 목록에서 미포함",
+     "source": "OMB 공표 목록·국방부 1260H 목록",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "OMB 대상 목록 2026-12 공표 예정"
+    },
+    {
+     "id": "207940-b2",
+     "text": "우시바이오의 북미 매출이 빠르게 늘면 고객 이탈 가정이 틀린 것",
+     "metric": "WuXi Biologics 북미 매출 YoY",
+     "threshold": "≥ 20% (반기)",
+     "source": "WuXi Biologics 반기·연간 실적(HKEX)",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 상반기 북미 매출 69억 위안(전년 60억, +15%)"
+    },
+    {
+     "id": "207940-b3",
+     "text": "분할 후 기준 매출 성장이 한 자릿수로 떨어지면 구조적 수요 가정 재검토",
+     "metric": "삼성바이오로직스 CDMO 분기 매출 YoY",
+     "threshold": "< 10% (2개 분기 연속)",
+     "source": "회사 분기 실적 보도자료",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 3분기 +18.5%(분할 후 기준 1조4,903억 원, 전년 1조2,575억 원)"
+    }
+   ],
+   "unverified": [
+    "삼성바이오로직스 지역별 매출(중국 포함) 원 공시 — 사업보고서·감사보고서 확인 못함",
+    "글로벌 바이오 CDMO 시장 점유율(회사별) 신뢰할 만한 수치",
+    "OMB의 BIOSECURE 대상 목록 공표 여부(2026-11-15 현재 확인 못함)"
+   ],
+   "dataNote": "회사 IR 보도자료의 'Consolidated earnings for CDMO business, post spin-off basis' 기준(단위 십억원). 4Q25: 매출 1,285.7(전년 950.3, +35.3%), 영업이익 528.3(전년 314.7, +67.9%) [2026-01-21, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-fourth-quarter-and-fiscal-year-2025-financial-results]. FY2025: 매출 4,557.0(전년 3,497.1, +30.3%), 영업이익 2,069.2(전년 1,321.4, +56.6%). 1Q26: 매출 1,257.1(전년 999.5, +257.6), 영업이익 580.8(전년 430.2, +150.6), EBITDA 675.3 [2026-04-22, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-first-quarter-2026-financial-results]. 2Q26: 매출 1,320.9(전년 1,014.2, +306.7), 영업이익 586.4(전년 477.2, +109.2), EBITDA 698.5; 상반기 매출 2,578·영업이익 1,167 [2026-07-23, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-second-quarter-2026-financial-results]. 3Q26: 매출 1,490.3(전년 1,257.5, +232.8), 영업이익 640.1(전년 633.5, +6.6), EBITDA 751.5 [2026-10-21, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-third-quarter-2026-financial-results]. 1Q26~3Q26 보도자료는 증감을 금액으로만 제시. 언론의 증가율: 2Q26 영업이익 +23%(이데일리 2026-07-23, https://en.edaily.co.kr/news/eda202607235134/), 3Q26 매출 +19%·영업이익 +1%(CEO스코어데일리 2026-10-21, https://ceoscoredaily.com/page/view/2026102116495771181). 3Q26 영업이익 정체는 파업 손실·환율 영향이라는 보도. [추론] 우리 데이터의 2025-Q4 이상(영업이익>매출)은 분할 전 연결 1~3Q와 분할 후 재작성 연간치를 섞어 4Q를 역산해서 생긴 것으로 보이며, 위 회사 제시 분할 후 수치로 교체 권장.",
+   "asOf": "2026-11-15",
+   "dataNoteFull": "회사 IR 보도자료의 'Consolidated earnings for CDMO business, post spin-off basis' 기준(단위 십억원). 4Q25: 매출 1,285.7(전년 950.3, +35.3%), 영업이익 528.3(전년 314.7, +67.9%) [2026-01-21, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-fourth-quarter-and-fiscal-year-2025-financial-results]. FY2025: 매출 4,557.0(전년 3,497.1, +30.3%), 영업이익 2,069.2(전년 1,321.4, +56.6%). 1Q26: 매출 1,257.1(전년 999.5, +257.6), 영업이익 580.8(전년 430.2, +150.6), EBITDA 675.3 [2026-04-22, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-first-quarter-2026-financial-results]. 2Q26: 매출 1,320.9(전년 1,014.2, +306.7), 영업이익 586.4(전년 477.2, +109.2), EBITDA 698.5; 상반기 매출 2,578·영업이익 1,167 [2026-07-23, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-second-quarter-2026-financial-results]. 3Q26: 매출 1,490.3(전년 1,257.5, +232.8), 영업이익 640.1(전년 633.5, +6.6), EBITDA 751.5 [2026-10-21, https://samsungbiologics.com/media/company-news/samsung-biologics-reports-third-quarter-2026-financial-results]. 1Q26~3Q26 보도자료는 증감을 금액으로만 제시. 언론의 증가율: 2Q26 영업이익 +23%(이데일리 2026-07-23, https://en.edaily.co.kr/news/eda202607235134/), 3Q26 매출 +19%·영업이익 +1%(CEO스코어데일리 2026-10-21, https://ceoscoredaily.com/page/view/2026102116495771181). 3Q26 영업이익 정체는 파업 손실·환율 영향이라는 보도. [추론] 우리 데이터의 2025-Q4 이상(영업이익>매출)은 분할 전 연결 1~3Q와 분할 후 재작성 연간치를 섞어 4Q를 역산해서 생긴 것으로 보이며, 위 회사 제시 분할 후 수치로 교체 권장."
+  },
+  "000660": {
+   "name": "SK하이닉스",
+   "cluster": "memory",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI 서버 메모리(HBM)·데이터센터 D램",
+    "payer": "corporate",
+    "pricing": "market",
+    "text": "주력 이익은 AI 서버용 HBM 과 서버 D램이다. 단일 고객(업계는 엔비디아로 봄)이 2025년 매출의 23.9%다. [추론] 수요는 AI 투자에 묶여 구조적이지만 메모리 값은 시장이 정해 경기 순환이 크다.",
+    "facts": [
+     {
+      "text": "2025년 매출 97조1,467억 원 · 영업이익 47조2,063억 원",
+      "url": "https://www.koreatimes.co.kr/business/tech-science/20260128/sk-hynix-posts-record-2025-profit-on-ai-memory-boom",
+      "date": "2026-01-28",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "단일 외부 고객 매출 23조2,601억 원(연결 매출의 23.9%), 미국 매출 66조8,851억 원(68.9%)",
+      "url": "http://bizhankook.com/articles/31779.html",
+      "date": "2026-03-18",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "트렌드포스: 2026년 4분기 일반 D램 계약가격 전 분기 대비 10~15% 상승 전망",
+      "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html",
+      "date": "2026-09-30",
+      "period": "4Q26",
+      "kind": "estimate"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "CXMT(D램)",
+     "YMTC(낸드)"
+    ],
+    "chinaRevenuePct": 19.7,
+    "chinaRevenueBasis": "2025 사업보고서 중국 매출 19조1,362억 원 ÷ 매출 97조1,467억 원(계산)",
+    "defense": [
+     "tech",
+     "policy"
+    ],
+    "text": "중국 매출 비중은 2024년 1분기 33% → 2025년 1분기 15%로 줄었고 2025년 연간은 약 20%다. CXMT 가 범용 D램 점유율을 빠르게 늘리지만(한 분기에 4.7% → 7.6%) HBM 은 수율 문제로 늦어지고 있다. 우시·다롄 중국 공장은 미국의 연간 장비 반입 허가에 기대고 있다.",
+    "facts": [
+     {
+      "text": "중국 매출 19조1,362억 원(2025 사업보고서)",
+      "url": "http://bizhankook.com/articles/31779.html",
+      "date": "2026-03-18",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "1분기 중국 매출 2조6,943억 원(15%), 전년 같은 분기 4조911억 원(33%)",
+      "url": "https://ceoscoredaily.com/page/view/2025051613592038130",
+      "date": "2025-05-16",
+      "period": "1Q25",
+      "kind": "fact"
+     },
+     {
+      "text": "카운터포인트: HBM 점유율 2026년 2분기 SK하이닉스 50%(1분기 58%) · 삼성 33% · 마이크론 18%",
+      "url": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share",
+      "date": "2026-08",
+      "period": "2Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "CXMT D램 점유율 2026년 1분기 7.6%(직전 분기 4.7%, Omdia)",
+      "url": "https://www.koreatimes.co.kr/business/companies/20260606/chinese-memory-firms-edge-closer-to-challenging-koreas-chip-giants",
+      "date": "2026-06-06",
+      "period": "1Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "미국, 중국 공장 장비 반입을 VEU 대신 2026년 연간 허가로 승인(용량 확장·기술 고도화는 불허 방침)",
+      "url": "https://invezz.com/news/2025/12/30/samsung-sk-hynix-secure-key-us-approval-why-it-matters-in-global-chip-race/",
+      "date": "2025-12-30",
+      "period": "2026",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "mem-cxmt-share",
+     "text": "CXMT D램 매출 점유율 15% 이상",
+     "metric": "CXMT 세계 D램 매출 점유율",
+     "threshold": "15% 이상",
+     "source": "Omdia·TrendForce 분기 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 1분기 7.6%"
+    },
+    {
+     "id": "mem-cxmt-hbm",
+     "text": "CXMT HBM 이 주요 AI 칩 업체 인증을 받거나 대량 양산 시작",
+     "metric": "CXMT HBM 인증·양산 발표",
+     "threshold": "주요 GPU·가속기 업체 인증 1건 또는 양산 발표",
+     "source": "TrendForce·Digitimes·회사 발표",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-07 수율 약 25%로 2026년 양산 어렵다는 보도"
+    },
+    {
+     "id": "hynix-hbm-lead",
+     "text": "SK하이닉스 HBM 점유율 40% 미만",
+     "metric": "HBM 매출 점유율",
+     "threshold": "40% 미만",
+     "source": "Counterpoint 분기 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 2분기 50%"
+    },
+    {
+     "id": "mem-cn-fab",
+     "text": "미국이 중국 공장 장비 반입 2027년분 연간 허가를 주지 않음",
+     "metric": "미 상무부 연간 허가",
+     "threshold": "2027-01-01 까지 미발급",
+     "source": "Reuters·회사 공시",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "2027년분 아직 미발급이라는 로이터 보도(날짜 미확인)"
+    }
+   ],
+   "unverified": [
+    "2027년분 장비 반입 허가 상태",
+    "CXMT HBM 수율 수치(2차 보도)"
+   ]
+  },
+  "005930": {
+   "name": "삼성전자",
+   "cluster": "memory",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI 서버 메모리(이익의 대부분)",
+    "payer": "corporate",
+    "pricing": "market",
+    "text": "2026년 3분기 영업이익 107.4조 원 가운데 반도체(DS)가 106.5조 원이고 기기(DX)는 적자다. 주력 이익이 사실상 메모리라 수요 판단은 SK하이닉스와 같다. [추론] 기기 사업은 이익을 내지 못하고 있어 메모리 경기에 회사 전체가 묶인다.",
+    "facts": [
+     {
+      "text": "2026년 3분기 매출 195.3조 원 · 영업이익 107.4조 원(4개 분기 연속 최대)",
+      "url": "https://www.koreancenter.or.kr/news/articleView.html?idxno=1431621",
+      "date": "2026-10",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "DS 부문 영업이익 106.5조 원, DX 부문 적자 지속",
+      "url": "https://dealsite.co.kr/articles/171616",
+      "date": "2026-10",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "카운터포인트: 삼성 HBM 점유율 2026년 1분기 21% → 2분기 33%",
+      "url": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share",
+      "date": "2026-08",
+      "period": "2Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "CXMT(D램)",
+     "YMTC(낸드)",
+     "TCL·하이센스(TV)",
+     "샤오미(스마트폰)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "법인별 실적만 확인(중국 판매법인 SSS 2025년 31조9,540억 원) — 연결 기준 중국 비중 미확인",
+    "defense": [
+     "tech",
+     "brand",
+     "policy"
+    ],
+    "text": "메모리에서는 CXMT·YMTC, 기기에서는 TCL·샤오미가 경쟁자다. TV 는 2025년 12월 한 달 TCL 16% · 삼성 13%로 역전된 달이 나왔고(11월까지 누적은 삼성 16% · TCL 12%), 스마트폰은 2025년 삼성 19.1%로 2위다. 중국 매출은 메모리 공세로 정체라는 보도가 있다. [추론] 기기 쪽은 이미 중국 업체에 밀려 적자이고, 남은 이익은 메모리 기술 격차에 걸려 있다.",
+    "facts": [
+     {
+      "text": "중국 판매법인(SSS) 2025년 매출 31조9,540억 원, 중국 생산법인(SCS) 8조6,357억 원 — 중국 매출 정체",
+      "url": "https://mobile.newsis.com/view/NISX20260225_0003526504",
+      "date": "2026-02-26",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "카운터포인트: 2025년 11월까지 TV 점유율 삼성 16% · TCL 12%, 12월 한 달은 TCL 16% · 삼성 13%",
+      "url": "https://www.cepro.com/news/counterpoint-research-tcl-leads-global-tv-shipments-in-december-2025/625346",
+      "date": "2026-01",
+      "period": "2025",
+      "kind": "fact"
+     },
+     {
+      "text": "IDC: 2025년 스마트폰 출하 애플 19.7% · 삼성 19.1%(2억4,120만 대) · 샤오미 1억6,530만 대",
+      "url": "https://www.gsmarena.com/idc_smartphone_shipments_up_23_in_q4_2025_apple_is_the_clear_winner_-news-71096.php",
+      "date": "2026-01",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "CXMT D램 점유율 2026년 1분기 7.6%(직전 분기 4.7%, Omdia)",
+      "url": "https://www.koreatimes.co.kr/business/companies/20260606/chinese-memory-firms-edge-closer-to-challenging-koreas-chip-giants",
+      "date": "2026-06-06",
+      "period": "1Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "mem-cxmt-share",
+     "text": "CXMT D램 매출 점유율 15% 이상",
+     "metric": "CXMT 세계 D램 매출 점유율",
+     "threshold": "15% 이상",
+     "source": "Omdia·TrendForce 분기 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 1분기 7.6%"
+    },
+    {
+     "id": "mem-cxmt-hbm",
+     "text": "CXMT HBM 이 주요 AI 칩 업체 인증을 받거나 대량 양산 시작",
+     "metric": "CXMT HBM 인증·양산 발표",
+     "threshold": "주요 GPU·가속기 업체 인증 1건 또는 양산 발표",
+     "source": "TrendForce·Digitimes·회사 발표",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-07 수율 약 25%로 2026년 양산 어렵다는 보도"
+    },
+    {
+     "id": "samsung-hbm",
+     "text": "삼성 HBM 점유율 25% 미만으로 후퇴",
+     "metric": "HBM 매출 점유율",
+     "threshold": "25% 미만",
+     "source": "Counterpoint 분기 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 2분기 33%"
+    },
+    {
+     "id": "mem-cn-fab",
+     "text": "미국이 중국 공장(시안 낸드) 장비 반입 2027년분 연간 허가를 주지 않음",
+     "metric": "미 상무부 연간 허가",
+     "threshold": "2027-01-01 까지 미발급",
+     "source": "Reuters·회사 공시",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "2027년분 발급 여부 미확인"
+    }
+   ],
+   "unverified": [
+    "연결 기준 중국 매출 비중",
+    "DX 부문 3분기 적자 규모"
+   ]
+  },
+  "009150": {
+   "name": "삼성전기",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI 데이터센터(서버·네트워크·전력)용 MLCC와 FC-BGA 기판, 전장",
+    "payer": "corporate",
+    "pricing": "market",
+    "text": "이익의 대부분은 MLCC(컴포넌트). AI 서버는 GPU·ASIC당 필요한 MLCC 용량이 매년 2배씩 늘고 있다는 게 회사 설명이고, 3Q26 컴포넌트 매출은 36% 늘었다. 돈은 빅테크·서버·자동차 업체가 내고, 가격은 수급이 정한다(공급 부족으로 가격 인상 중).",
+    "facts": [
+     {
+      "text": "3Q26 매출 3조7633억원(+30% YoY), 영업이익 6910억원(+165%) 분기 최대. 컴포넌트 매출 1조8830억원(+36%)으로 AI 데이터센터용(서버·네트워크·전력) 중심",
+      "url": "https://m.samsungsem.com/kr/newsroom/news/view.do?id=10627",
+      "date": "2026-10-28",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "회사 인용 'AI MLCC 법칙': GPU/ASIC당 필요한 MLCC 용량이 매년 2배 증가, 빅테크와 장기공급계약(LTA)으로 대응",
+      "url": "https://m.samsungsem.com/kr/newsroom/news/view.do?id=10627",
+      "date": "2026-10-28",
+      "period": "2026",
+      "kind": "estimate"
+     },
+     {
+      "text": "2025년 부문별 영업이익(백만원): 컴포넌트 609,359, 패키지솔루션 135,226, 광학솔루션 168,746, 합계 913,331",
+      "url": "https://www.samsungsem.com/resources/file/kr/ir/archive/2025_Consolidated_Audit_Report.pdf",
+      "date": "2026-02-19",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "삼성전기 2026년 8월 MLCC 가격 30% 인상, TrendForce는 주류 MLCC 재고 30일 미만이라고 보고",
+      "url": "https://m.theinvestor.co.kr/article/10829505",
+      "date": "2026-08-03",
+      "period": "2026-08",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "high",
+    "competitors": [
+     "펑화가오커(Fenghua Advanced)",
+     "차오저우 싼환(Three-Circle)",
+     "위양(Eyang)"
+    ],
+    "chinaRevenuePct": 38,
+    "chinaRevenueBasis": "2026년 상반기 중국 법인 매출 2조5549억원 / 전체 6조6663억원(뉴스토마토 보도, 법인 소재지 기준). 감사보고서 FY2025: 중국 4,441,764백만원 / 연결 11,314,459백만원",
+    "defense": [
+     "tech"
+    ],
+    "text": "중국 법인 매출 비중이 38%로 높다. 중국 MLCC 업체는 2025년 글로벌 매출 점유율 약 10%까지 올라왔고 펑화는 월 500억개(삼성전기 추정 능력의 절반) 체제를 갖췄다. 다만 AI 서버·전장용 고사양 MLCC에서는 아직 뒤처져, 방어선은 기술. [추론] 중국 비중>25%와 저가 영역 대체 압력으로 루브릭상 high. 단 중국 법인 매출에는 글로벌 고객의 중국 공장 납품이 섞여 있어 실제 중국 업체 의존도는 더 낮을 수 있음.",
+    "facts": [
+     {
+      "text": "DIGITIMES: 펑화·싼환·위양 등 중국 MLCC 업체의 글로벌 점유율이 매출 기준 약 10%로 추정",
+      "url": "https://apps.digitimes.com/news/a20250612PD224.html",
+      "date": "2025-06-12",
+      "period": "2025 추정",
+      "kind": "estimate"
+     },
+     {
+      "text": "펑화 75억위안 투자 완료로 MLCC 월 500억개(삼성전기 추정 능력의 약 절반), 싼환은 홍콩 상장으로 71.6억홍콩달러 조달해 태국·독일 공장 계획. 중국 업체는 AI 서버·전장용 고사양 MLCC에서 아직 뒤처짐",
+      "url": "https://m.theinvestor.co.kr/article/10829505",
+      "date": "2026-08-03",
+      "period": "2026",
+      "kind": "fact"
+     },
+     {
+      "text": "삼성전기 2026년 상반기 중국 법인 매출 약 2조5549억원, 전체 매출(약 6조6663억원)의 38%",
+      "url": "https://newstomato.com/ReadNews.aspx?no=1310718",
+      "date": "2026-08-19",
+      "period": "1H26",
+      "kind": "fact"
+     },
+     {
+      "text": "2025년 지역별 매출(백만원): 국내 내수 425,509·수출 3,201,268, 중국 4,441,764, 동남아 2,368,787, 미주 422,280, 유럽 371,139, 일본 83,712, 합계 11,314,459",
+      "url": "https://www.samsungsem.com/resources/file/kr/ir/archive/2025_Consolidated_Audit_Report.pdf",
+      "date": "2026-02-19",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "components",
+   "breaks": [
+    {
+     "id": "009150-b1",
+     "text": "중국 MLCC 업체 점유율이 15%를 넘으면 저가→중고가 대체가 진행된 것으로 본다",
+     "metric": "중국계 MLCC 업체 합산 글로벌 매출 점유율",
+     "threshold": "≥ 15%",
+     "source": "TrendForce·DIGITIMES 등 연간 추정",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2025년 약 10%(DIGITIMES 추정)"
+    },
+    {
+     "id": "009150-b2",
+     "text": "MLCC 평균판매가격이 2분기 연속 하락하면 AI 수요발 공급 부족 종료",
+     "metric": "삼성전기 MLCC ASP 전분기 대비 증감",
+     "threshold": "2개 분기 연속 하락",
+     "source": "삼성전기 분기 실적 발표·컨퍼런스콜",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026-08 MLCC 가격 30% 인상"
+    },
+    {
+     "id": "009150-b3",
+     "text": "컴포넌트 매출이 전년보다 줄면 AI·전장 구조적 수요 가정 재검토",
+     "metric": "컴포넌트 부문 매출 YoY",
+     "threshold": "< 0%",
+     "source": "삼성전기 분기 실적 보도자료",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 3분기 컴포넌트 매출 +36%"
+    }
+   ],
+   "unverified": [
+    "중국 법인 매출의 최종 고객 구성(중국 업체 vs 글로벌 업체 중국 공장)",
+    "2026년 기준 중국 MLCC 업체 점유율 최신치(2025-06 추정 약 10%가 최신 확인치)",
+    "카메라모듈 부문의 중국 경쟁사 점유율"
+   ],
+   "dataNote": null,
+   "asOf": "2026-11-15"
+  },
+  "010140": {
+   "name": "삼성중공업",
+   "demand": {
+    "grade": "neutral",
+    "driver": "LNG 수출능력 증설(2030년까지)과 FLNG 발주",
+    "payer": "corporate",
+    "pricing": "market",
+    "text": "주력 이익원은 LNG운반선·FLNG. IEA는 2030년까지 사상 최대 규모의 LNG 수출능력 증설을 전망해 운반선 수요를 받친다. 돈은 선주·에너지 기업이 내고, 선가는 클락슨 신조선가 등 시장 사이클이 정한다. [추론] 구조적 동인이 2030년 전후까지라 10년 기준으로는 약하고, 선가는 이미 전년보다 내려가는 중이라 neutral.",
+    "facts": [
+     {
+      "text": "IEA: 2030년까지 신규 LNG 수출능력 약 300bcm/년 증설 전망(사상 최대), 주로 미국·카타르",
+      "url": "https://www.iea.org/news/coming-surge-in-lng-production-is-set-to-reshape-global-gas-markets",
+      "date": "2025-10-27",
+      "period": "2025~2030 전망(Gas 2025)",
+      "kind": "estimate"
+     },
+     {
+      "text": "삼성중공업 2026년 누적 수주 48척·124억달러(FLNG 2기 포함), 연간 목표 139억달러의 89%. LNG운반선 20척(LNG-FSRU 1척 포함)",
+      "url": "https://biz.sbs.co.kr/amp/article/20000338093",
+      "date": "2026-10-02",
+      "period": "2026년 1월~10월 2일",
+      "kind": "fact"
+     },
+     {
+      "text": "클락슨 LNG운반선 기준 신조선가 2억4500만달러(10월 23일), 전년 10월 2억4800만달러에서 300만달러 하락",
+      "url": "https://cyprusshippingnews.com/2026/10/30/lng-carrier-prices-fall-to-245-million-threatening-korean-shipbuilders-margins/",
+      "date": "2026-10-30",
+      "period": "2026-10-23 기준",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "후둥중화조선(Hudong-Zhonghua, CSSC)",
+     "장난조선(Jiangnan, CSSC)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "사업보고서 지역별(선주 국적별) 매출 확인 못함",
+    "defense": [
+     "tech",
+     "policy"
+    ],
+    "text": "전체 신조 수주는 중국이 77%로 압도. 주력인 LNG운반선에서도 중국 점유율이 빠르게 오르고(척수 기준 상반기 57.8%), 장난조선은 클락슨 기준가보다 낮은 척당 2억2500만달러로 수주. 방어선은 LNG 화물창·FLNG 건조 실적 같은 기술·신뢰이고, 미국의 중국 선박 입항수수료(정책)는 2027-01-09까지 유예 중. [추론] 대형 LNG선은 아직 한국이 앞서 mid지만, 추세상 high로 넘어갈 위험이 큼.",
+    "facts": [
+     {
+      "text": "클락슨 기준 2026년 1~10월 전 세계 신조 수주 중국 77%(6136만CGT·2238척), 한국 15%(1195만CGT·296척)",
+      "url": "https://www.steelorbis.com/steel-news/latest-news/china-claims-77-of-new-shipbuilding-orders-globally-in-jan-oct-2026-1488739.htm",
+      "date": "2026-11-06",
+      "period": "2026년 1~10월",
+      "kind": "fact"
+     },
+     {
+      "text": "Veson Nautical 집계 2026년 상반기 LNG운반선 발주 90척 중 중국 52척(57.8%), 한국 37척(41.1%) — 전 선형·척수 기준(클락슨 대형선 기준과 다름)",
+      "url": "https://www.hellenicshippingnews.com/?p=1149714",
+      "date": "2026-09-28",
+      "period": "2026년 상반기",
+      "kind": "fact"
+     },
+     {
+      "text": "2026년 연초~9월 LNG선 수주 한국 40척(61.2%), 중국 26척(38.8%); 전 세계 66척은 클락슨 집계",
+      "url": "https://mbiz.heraldcorp.com/article/10878668",
+      "date": "2026-09-20",
+      "period": "2026년 1월~9월 중순",
+      "kind": "fact"
+     },
+     {
+      "text": "장난조선이 LNG운반선을 척당 2억2500만달러에 수주하며 가격 경쟁 심화(클락슨 기준가 2억4500만달러)",
+      "url": "https://cyprusshippingnews.com/2026/10/30/lng-carrier-prices-fall-to-245-million-threatening-korean-shipbuilders-margins/",
+      "date": "2026-10-30",
+      "period": "2026-10",
+      "kind": "fact"
+     },
+     {
+      "text": "미국, 중국 건조·운영 선박 입항수수료(USTR 301조) 유예를 2027-01-09까지 2개월 연장",
+      "url": "https://gcaptain.com/u-s-formalizes-two-month-extension-of-china-ship-port-fee-suspension/",
+      "date": "2026-11-10",
+      "period": "2026-11-09 발효",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "shipbuilding",
+   "breaks": [
+    {
+     "id": "010140-b1",
+     "text": "대형 LNG운반선 연간 수주에서 중국 점유율이 절반을 넘으면 기술 방어선 붕괴로 본다",
+     "metric": "대형 LNG운반선 연간 수주 척수 중 중국 비중",
+     "threshold": "≥ 50% (연간)",
+     "source": "Clarksons Research 연간·반기 수주 통계(언론 인용)",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 1~9월 클락슨 집계 중국 38.8%(척수 기준 전 선형 집계는 상반기 57.8%로 엇갈림)"
+    },
+    {
+     "id": "010140-b2",
+     "text": "LNG선 신조선가가 중국 할인가 수준까지 내려오면 가격 결정력 상실",
+     "metric": "Clarksons LNG운반선 기준 신조선가",
+     "threshold": "≤ 2억2500만달러",
+     "source": "Clarksons 신조선가 지수(언론 인용)",
+     "every": "월",
+     "now": "clear",
+     "evidence": "2026-10-23 클락슨 기준가 2억4,500만 달러"
+    },
+    {
+     "id": "010140-b3",
+     "text": "미국의 중국 선박 입항수수료가 영구 철회되면 정책 보조 효과 소멸",
+     "metric": "USTR 301조 해운 조치 상태",
+     "threshold": "영구 철회 또는 무기한 유예 확정",
+     "source": "USTR 공지·Federal Register",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2027-01-09 까지 유예(영구 철회 아님)"
+    }
+   ],
+   "unverified": [
+    "삼성중공업 매출 중 중국 선주·중국 지역 비중(사업보고서 지역별 매출표 미확인)",
+    "클락슨 대형선 기준 2026년 1~10월 LNG선 국가별 점유율 원자료",
+    "FLNG 시장의 중국 업체 점유율"
+   ],
+   "dataNote": null,
+   "asOf": "2026-11-15"
+  },
+  "034730": {
+   "name": "SK",
+   "demand": {
+    "grade": "neutral",
+    "driver": "[추론] SK하이닉스(AI 메모리, SK스퀘어 경유)는 구조적 성장, 연결매출 대부분인 SK이노베이션(정유·화학·배터리)은 경기순환",
+    "payer": "mixed",
+    "pricing": "market",
+    "text": "지주회사라 가치 동인이 둘로 갈린다. [추론] 가치의 핵심은 SK스퀘어를 통한 SK하이닉스 간접지분(약 6.5%)으로 AI 메모리 수요의 수혜를 받는다. 반면 연결 매출의 대부분은 SK이노베이션(정유·화학·배터리)으로 유가·정제마진·전기차 수요에 따르는 시장 가격 사업. [추론] 둘을 합치면 neutral.",
+    "facts": [
+     {
+      "text": "SK㈜ 2025년 연결 매출 123,421,967백만원 중 SK이노베이션 부문 순매출 80,215,318백만원, SK텔레콤 16,971,402백만원",
+      "url": "https://sk-inc.com/_UPLOAD/ACTL/79abe9fc-88c2-4db8-b32e-125c528056c3.pdf",
+      "date": "2026-03-11",
+      "period": "FY2025(연결 감사보고서 주석 4)",
+      "kind": "fact"
+     },
+     {
+      "text": "SK㈜→SK스퀘어 32.2%, SK스퀘어→SK하이닉스 약 20%로 실질 지분 약 6.5%. 얼라인파트너스 추정 NAV 약 100조원 대비 시가총액 24.9조원(할인율 약 75%)",
+      "url": "https://www.koreatimes.co.kr/business/20261021/align-partners-reveals-15-stake-in-sk-inc-sees-75-valuation-discount",
+      "date": "2026-10-21",
+      "period": "2026-10",
+      "kind": "estimate"
+     },
+     {
+      "text": "SK스퀘어 2분기 영업이익 19조2354억원(분기 최대), SK하이닉스 실적 호조 영향",
+      "url": "https://www.ddaily.co.kr/page/view/2026081416044303574",
+      "date": "2026-08-14",
+      "period": "2Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "CATL",
+     "BYD",
+     "CXMT(D램)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "연결 지역별 매출에 중국 별도 구분 없음. 아시아(중국 포함) 47,580,357백만원(연결조정 전, FY2025)",
+    "defense": [
+     "tech",
+     "policy"
+    ],
+    "text": "가치의 핵심인 SK하이닉스는 HBM 기술 우위가 방어선이지만 CXMT가 D램 점유율을 늘리는 중(1Q26 매출 기준 7.6%, Omdia/TrendForce). 배터리(SK온)는 중국 밖 시장에서도 중국계 점유율이 56.4%로 급등하고 한국 3사는 26.5%로 하락 — 이 부문은 미국 IRA·관세 같은 정책 의존이 크다. [추론] 핵심 가치는 기술 방어라 mid, 배터리 부문만 보면 high.",
+    "facts": [
+     {
+      "text": "SNE리서치: 2026년 1~9월 중국 제외 EV 배터리 사용량 426.7GWh 중 중국계 6개사 56.4%(전년 43.1%), 한국 3사 26.5%(전년 38.2%), CATL 33.7%(전년 28.6%)",
+      "url": "https://www.koreancenter.or.kr/news/articleView.html?idxno=1434452",
+      "date": "2026-11-04",
+      "period": "2026년 1~9월",
+      "kind": "fact"
+     },
+     {
+      "text": "SK㈜ 2025년 지역별 매출(연결조정 전, 백만원): 국내 143,151,079, 아시아 47,580,357, 유럽 10,568,071, 북미 17,862,761, 기타 28,653, 연결조정 (95,768,954), 합계 123,421,967 — 중국 별도 구분 없음",
+      "url": "https://sk-inc.com/_UPLOAD/ACTL/79abe9fc-88c2-4db8-b32e-125c528056c3.pdf",
+      "date": "2026-03-11",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "holding",
+   "breaks": [
+    {
+     "id": "034730-b1",
+     "text": "중국 밖 시장에서 중국 배터리 점유율이 60%를 넘으면 SK온 회복 가정 폐기",
+     "metric": "SNE리서치 비중국 EV 배터리 사용량 중 중국계 합산 점유율",
+     "threshold": "≥ 60%",
+     "source": "SNE리서치 월간 발표(연합뉴스 인용)",
+     "every": "월",
+     "now": "clear",
+     "evidence": "2026년 1~9월 56.4%"
+    },
+    {
+     "id": "034730-b2",
+     "text": "CXMT의 D램 점유율이 2028년 전망치(11%)에 조기 도달하면 하이닉스 가치 재평가",
+     "metric": "CXMT 글로벌 D램 매출 점유율",
+     "threshold": "≥ 11%",
+     "source": "Omdia·TrendForce 분기 D램 점유율",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 1분기 7.6%"
+    },
+    {
+     "id": "034730-b3",
+     "text": "SK이노베이션 부문 적자가 이어지면 연결 가치 훼손",
+     "metric": "SK이노베이션 연결 영업이익",
+     "threshold": "4개 분기 연속 영업손실",
+     "source": "SK이노베이션 분기 실적 공시",
+     "every": "분기",
+     "now": "unknown",
+     "evidence": "SK이노베이션 부문 분기 손익 미확인"
+    }
+   ],
+   "unverified": [
+    "SK㈜ NAV 항목별 비중(하이닉스 간접지분이 NAV에서 차지하는 비율) 공식 자료",
+    "SK온 2026년 1~9월 비중국 점유율 개별 수치",
+    "SK㈜ 연결 매출 중 중국 비중(아시아에 합산되어 공시)"
+   ],
+   "dataNote": null,
+   "asOf": "2026-11-15"
+  },
+  "047810": {
+   "name": "한국항공우주",
+   "cluster": "defense-aero",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "재무장(국방비 증가)과 경전투기 수출",
+    "payer": "defense",
+    "pricing": "company",
+    "text": "돈을 내는 쪽은 한국과 외국 정부의 국방 예산이다. 나토는 2035년까지 GDP 5%(핵심 국방 3.5%)를 약속했고, KAI 는 FA-50 수출(폴란드·말레이시아·필리핀)과 KF-21 양산 납품을 시작했다.",
+    "facts": [
+     {
+      "text": "나토 헤이그 정상회의: 2035년까지 GDP 5%(핵심 3.5% + 관련 1.5%), 2029년 재검토 조항",
+      "url": "https://europeanwesternbalkans.com/2025/06/25/nato-leaders-agree-to-increase-defence-spending-to-5-of-gdp-at-the-hague-summit/",
+      "date": "2025-06-25",
+      "period": "2035 목표",
+      "kind": "fact"
+     },
+     {
+      "text": "2026년 3분기 매출 1조643억 원, 완제기 수출 매출 2,914억 원(+78%), 수주잔고 26조2,855억 원",
+      "url": "https://m.ceoscoredaily.com/page/view/2026110317442403048",
+      "date": "2026-11-03",
+      "period": "3Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "JF-17(중국·파키스탄)",
+     "훙두 L-15"
+    ],
+    "chinaRevenuePct": 0,
+    "chinaRevenueBasis": "방산 — 중국 매출 없음",
+    "defense": [
+     "procurement",
+     "tech"
+    ],
+    "text": "중국 매출은 없다. 경전투기 수출 시장에서 JF-17(아제르바이잔 최대 40대 46억 달러 등)과 L-15 가 비동맹국 시장에서 경쟁하지만, 미국·나토와 함께 쓰는 나라들의 조달은 중국 기체에 닫혀 있다.",
+    "facts": [
+     {
+      "text": "JF-17: 아제르바이잔 최대 40대(46억 달러), 13개국과 협상 중 6~8곳 진전(로이터 인용)",
+      "url": "https://defencesecurityasia.com/en/13-countries-talks-pakistan-jf-17-thunder-global-fighter-exports/",
+      "date": "2026",
+      "period": "2025~2026",
+      "kind": "fact"
+     },
+     {
+      "text": "말레이시아 FA-50 18대 9.2억 달러 계약(2023-02) — 경전투기 시장에서 FA-50 이 JF-17 과 같은 구간에서 경쟁",
+      "url": "https://www.eurasiantimes.com/light-combat-aircraft-us-backed-fa-50-takes-clear-lead-jf-17/",
+      "date": "2026-07-18",
+      "period": "2023~2026",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "kai-export-loss",
+     "text": "FA-50 과 JF-17·L-15 가 맞붙은 수출 입찰에서 중국계 기체 선정",
+     "metric": "경전투기 입찰 결과",
+     "threshold": "동남아·중동 1건 이상",
+     "source": "국방 언론·정부 발표",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "직접 맞붙은 최근 입찰 결과 미확인"
+    },
+    {
+     "id": "kai-backlog",
+     "text": "수주잔고가 1년 새 20% 넘게 감소",
+     "metric": "KAI 수주잔고",
+     "threshold": "전년 대비 −20%",
+     "source": "KAI 분기 실적",
+     "every": "분기",
+     "now": "unknown",
+     "evidence": "2026년 3분기 26.3조 원 — 1월 기사의 35조 원과 기준 차이 확인 필요"
+    }
+   ],
+   "unverified": [
+    "수주잔고 26.3조 원과 35조 원의 기준 차이",
+    "인도네시아 KF-21 계약 여부"
+   ]
+  },
+  "068270": {
+   "name": "셀트리온",
+   "cluster": "biosimilar",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "고령화로 늘어나는 바이오의약품 지출을 값싼 바이오시밀러로 대체",
+    "payer": "mixed",
+    "pricing": "market",
+    "text": "돈을 내는 쪽(건강보험·PBM)이 재정 압박을 받을수록 값싼 바이오시밀러를 더 쓴다. 2026년 3분기 매출 +53.1%는 유럽 입찰 수주와 미국 PBM 등재 덕분이다. 미국 의약품 관세에서 바이오시밀러는 일단 면제됐다. [추론] 값은 입찰 경쟁으로 내려가 가격 결정력은 약하다.",
+    "facts": [
+     {
+      "text": "2025년 매출 4조1,625억 원(+17%) · 영업이익 1조1,685억 원(+137.5%)",
+      "url": "https://www.asiae.co.kr/en/article/2026020509095060509",
+      "date": "2026-02-05",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "2026년 3분기 매출 1조5,800억 원(+53.1%) · 영업이익 5,253억 원(+74.3%) — 유럽 입찰·미국 PBM 등재",
+      "url": "https://biz.heraldcorp.com/article/10915652",
+      "date": "2026-10",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "미국 232조 의약품 관세: 특허 의약품 100%(한국 15%), 바이오시밀러는 면제 후 1년 뒤 재검토",
+      "url": "https://view.asiae.co.kr/en/article/2026040315351383650",
+      "date": "2026-04-03",
+      "period": "2026",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "헨리우스(트라스투주맙·데노수맙·퍼투주맙)",
+     "바이오테라(베바시주맙·우스테키누맙·토실리주맙)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 매출 미공시(미미한 것으로 봄 · 미확인)",
+    "defense": [
+     "regulation",
+     "network",
+     "tech"
+    ],
+    "text": "중국 바이오시밀러 업체가 2025년부터 미국 허가를 잇달아 받고 있고, 셀트리온 제품과 같은 분자(트라스투주맙·데노수맙·우스테키누맙·베바시주맙)가 겹친다. FDA 승인 의약품 가운데 중국 생산 비중도 늘고 있다. 방어선은 미국·유럽 허가, 직판망, 생산 규모다.",
+    "facts": [
+     {
+      "text": "헨리우스: 퍼투주맙 바이오시밀러 FDA 승인(첫 상호교환 가능, 2025-11-13), 데노수맙 2종 승인(2025-09-02)",
+      "url": "https://gabionline.net/biosimilars/news/fda-approves-poherdy-first-interchangeable-pertuzumab-and-armlupeg-pegfilgrastim-biosimilars",
+      "date": "2025-11",
+      "period": "2025",
+      "kind": "fact"
+     },
+     {
+      "text": "바이오테라: 우스테키누맙(Starjemza) 2025년 FDA 승인, 베바시주맙(Avzivi)·토실리주맙 2023년 승인",
+      "url": "https://gabionline.net/biosimilars/general/chinese-biosimilars-go-global-growth-partnerships-and-challenges",
+      "date": "2025",
+      "period": "2023~2025",
+      "kind": "fact"
+     },
+     {
+      "text": "FDA 승인 신약·바이오시밀러 중 중국 생산 비중 2020~22년 1.8% → 2023~25년 평균 6.7%(GlobalData)",
+      "url": "https://www.pharmamanufacturing.com/quality-risk/supply-chain/article/55407981/manufacturing-of-new-fda-approved-drugs-moving-to-china-globaldata",
+      "date": "2026",
+      "period": "2023~2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "cn-biosim-tender",
+     "text": "중국 업체 바이오시밀러가 셀트리온과 같은 분자로 유럽 주요국 입찰을 따냄",
+     "metric": "유럽 국가 입찰 결과",
+     "threshold": "주력 분자 1건 이상",
+     "source": "GaBI·회사 발표",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "확인한 입찰 결과 없음"
+    },
+    {
+     "id": "us-biosim-tariff",
+     "text": "미국이 바이오시밀러 관세 면제를 끝냄",
+     "metric": "232조 의약품 관세 대상",
+     "threshold": "바이오시밀러 포함",
+     "source": "미 상무부·산업통상부 발표",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-04 면제, 1년 뒤 재검토"
+    }
+   ],
+   "unverified": [
+    "셀트리온 중국 매출 비중",
+    "중국 바이오시밀러의 유럽 점유율"
+   ]
+  },
+  "AAPL": {
+   "name": "애플",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "neutral",
+    "driver": "[추론] 고령화·자동화 같은 구조적 동인 없음. 25억대 설치 기반의 교체 수요와 서비스",
+    "payer": "consumer",
+    "pricing": "company",
+    "text": "이익의 중심은 아이폰과 서비스. FY2026 매출 15%, 아이폰 21% 증가로 강했지만 스마트폰 시장 자체는 메모리 부족으로 2026년 -13.9% 전망. 돈은 소비자가 내고 가격은 애플이 정한다. [추론] 성숙 시장에서 점유율·가격으로 크는 구조라 neutral.",
+    "facts": [
+     {
+      "text": "FY2026 총매출 478,834백만달러(+15%), 아이폰 254,098백만달러(+21%), 서비스 123,301백만달러(+13%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+      "date": "2026-11-03",
+      "period": "FY2026(2026-09-26 종료)",
+      "kind": "fact"
+     },
+     {
+      "text": "IDC: 2026년 세계 스마트폰 출하 -13.9%(10.9억대), 2027년 -1.1%, 2028년 +5.5% 전망. 평균판매가 사상 최고 550달러. 주원인은 메모리 부족",
+      "url": "https://www.idc.com/?p=115254",
+      "date": "2026-05-26",
+      "period": "2026~2028 전망",
+      "kind": "estimate"
+     },
+     {
+      "text": "애플 활성 기기 설치 기반 25억대 돌파(2025년 1월 23.5억대)",
+      "url": "https://appleinsider.com/articles/26/01/29/apple-reaches-25-billion-active-devices-after-record-breaking-quarter",
+      "date": "2026-01-29",
+      "period": "FY1Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "화웨이",
+     "vivo",
+     "OPPO",
+     "샤오미",
+     "아너"
+    ],
+    "chinaRevenuePct": 17.2,
+    "chinaRevenueBasis": "[계산] 10-K FY2026 대중화권(중국 본토·홍콩·대만) 82,378 / 총매출 478,834 (백만달러)",
+    "defense": [
+     "brand",
+     "network"
+    ],
+    "text": "중국 스마트폰 시장 1위는 화웨이(3Q26 21.3%), 애플은 2위(19.5%). 그래도 애플 대중화권 매출은 FY2026에 28% 늘었다. 방어선은 브랜드와 iOS 생태계로 정책 의존이 아니다. [추론] 중국 비중 10~25% + 비정책 방어선이라 mid.",
+    "facts": [
+     {
+      "text": "10-K: 대중화권 매출 FY2026 82,378백만달러(+28%), FY2025 64,377백만달러. 아이폰·맥 판매 증가와 위안화 강세 영향",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+      "date": "2026-11-03",
+      "period": "FY2026",
+      "kind": "fact"
+     },
+     {
+      "text": "Counterpoint: 3Q26 중국 스마트폰 출하 -10%(2012년 이후 3분기 최저), 점유율 화웨이 21.3%, 애플 19.5%",
+      "url": "https://counterpointresearch.com/de/insights/china-smartphone-shipments-hit-14-year-low-in-q3-2026",
+      "date": "2026-10-19",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "IDC 잠정치: 3Q26 중국 출하 5790만대(-15.4%), 화웨이 약 21%(1220만대), 애플 17.8%(-4.3%)",
+      "url": "https://technode.com/2026/10/13/huawei-grows-as-chinas-smartphone-shipments-fall-15-4-in-third-quarter/",
+      "date": "2026-10-13",
+      "period": "3Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "consumer-hardware",
+   "breaks": [
+    {
+     "id": "aapl-b1",
+     "text": "중국 점유율이 15% 아래로 떨어지면 브랜드 방어선 약화로 본다",
+     "metric": "중국 스마트폰 분기 출하 점유율(애플)",
+     "threshold": "< 15% (2개 분기 연속)",
+     "source": "Counterpoint·IDC 분기 중국 스마트폰 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 19.5%(Counterpoint), 17.8%(IDC)"
+    },
+    {
+     "id": "aapl-b2",
+     "text": "대중화권 매출이 1년 내내 줄면 중국 대체 압력이 실적에 반영된 것",
+     "metric": "대중화권 순매출 YoY(10-Q·10-K)",
+     "threshold": "4개 분기 연속 감소",
+     "source": "애플 10-Q·10-K 지역별 매출",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "FY2026 +28%"
+    },
+    {
+     "id": "aapl-b3",
+     "text": "서비스 성장이 5% 아래면 설치 기반 수익화 가정 약화",
+     "metric": "서비스 순매출 YoY",
+     "threshold": "< 5%",
+     "source": "애플 10-Q·10-K",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "FY2026 +13%"
+    }
+   ],
+   "unverified": [
+    "앱스토어 수수료 규제(EU DMA·미국 판결)의 매출 영향 수치",
+    "중국 정부기관·국유기업의 아이폰 사용 제한 범위"
+   ],
+   "dataNote": null
+  },
+  "AMD": {
+   "name": "AMD",
+   "cluster": "ai-compute",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "데이터센터 CPU(EPYC)·AI 가속기(Instinct)",
+    "payer": "corporate",
+    "pricing": "company",
+    "text": "2026년 3분기 매출 134억 달러 가운데 데이터센터가 85억 달러(+97%)로 63.9%다. 돈을 내는 쪽은 클라우드·기업 설비투자다. [추론] 수요는 엔비디아와 같은 AI 투자에 묶여 있고, 가속기 시장에서는 엔비디아를 쫓는 쪽이다.",
+    "facts": [
+     {
+      "text": "2026년 3분기 매출 134억 달러, 데이터센터 85억 달러(+97%) — EPYC 와 Instinct MI450 시리즈",
+      "url": "https://www.constellationr.com/insights/news/amd-q3-shines-data-center-revenue-nearly-doubles",
+      "date": "2026-11",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "데이터센터 비중 63.9%(2분기 58.2%), 4분기 매출 전망 약 170억 달러",
+      "url": "https://pulse2.com/amd-q3-2026/",
+      "date": "2026-11",
+      "period": "3Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "하이곤(x86 서버 CPU)",
+     "화웨이(Ascend)"
+    ],
+    "chinaRevenuePct": 22.4,
+    "chinaRevenueBasis": "2025 10-K 청구지 기준 중국(홍콩 포함) 77.51억 달러 ÷ 외부 매출 346.39억 달러(계산) — PC 용 칩이 중국 조립사로 가는 몫 포함",
+    "defense": [
+     "tech",
+     "network"
+    ],
+    "text": "중국 매출(청구지 기준)은 2025년 약 22%다. 중국 안에서는 하이곤·화웨이가 서버 CPU·AI 가속기를 대체하고 있고, MI308 은 수출 통제로 막혀 2025년 약 4.4억 달러의 재고 관련 비용을 냈다. 중국 밖 데이터센터에서 중국 칩이 AMD 를 대체한다는 근거는 없다.",
+    "facts": [
+     {
+      "text": "중국(홍콩 포함) 매출 2025년 77.51억 달러(2024년 62.31억 달러), 외부 매출 346.39억 달러 — 청구지 기준",
+      "url": "https://app.edgar.tools/companies/AMD/disclosures/segments",
+      "date": "2026-02",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "MI308 수출 통제로 2025년 약 4.4억 달러 순재고 관련 비용",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results",
+      "date": "2026-02",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "IDC: 2025년 중국 AI 가속기 시장 중국 업체 41%, AMD 약 4%(약 16만 개)",
+      "url": "https://www.khaleejtimes.com/business/tech/chinese-chipmakers-claim-nearly-half-of-of-local-market-as-nvidias-lead-shrinks-idc-says",
+      "date": "2026",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "ai-capex",
+     "text": "대형 클라우드 4사의 다음 해 설비투자 전망 합계가 올해보다 줄어듦",
+     "metric": "아마존·마이크로소프트·알파벳·메타 설비투자 가이던스 합계",
+     "threshold": "전년 대비 감소",
+     "source": "각사 분기 실적 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2027년 합계 1조 달러 근접 전망(무디스)"
+    },
+    {
+     "id": "amd-dc",
+     "text": "데이터센터 매출 증가율 2개 분기 연속 15% 미만",
+     "metric": "AMD 데이터센터 부문 전년 대비 증가율",
+     "threshold": "2개 분기 연속 15% 미만",
+     "source": "AMD 분기 실적",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 3분기 +97%"
+    }
+   ],
+   "unverified": [
+    "중국 매출 중 데이터센터 몫",
+    "하이곤 등 중국 서버 CPU 점유율(2026년 수치는 2차 자료뿐)"
+   ]
+  },
+  "AMZN": {
+   "name": "아마존",
+   "cluster": "cloud",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI·클라우드(AWS)와 전자상거래",
+    "payer": "mixed",
+    "pricing": "company",
+    "text": "2026년 3분기 영업이익 281억 달러 가운데 AWS 가 178억 달러(약 63%)이고 AWS 매출은 39.3% 늘었다. [추론] 이익의 주력은 기업의 클라우드·AI 지출이고, 소매는 개인 소비다.",
+    "facts": [
+     {
+      "text": "AWS 3분기 매출 460억 달러(+39.3%), 영업이익 178억 달러 · 전사 영업이익 281억 달러(이익률 13.9%)",
+      "url": "https://aboutamazon.com/news/company-news/amazon-earnings-q3-2026-report",
+      "date": "2026-10-29",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "2026년 현금 설비투자 약 2,200억 달러, AWS 성장 2027·2028년 40% 이상 전망(경영진)",
+      "url": "https://www.unite.ai/?p=498028",
+      "date": "2026-10-29",
+      "period": "2026~2028",
+      "kind": "estimate"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "테무·쉬인(미국 전자상거래)",
+     "알리바바 클라우드(일부 아시아)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 매출 미공시",
+    "defense": [
+     "network",
+     "policy"
+    ],
+    "text": "이익의 주력인 AWS 에는 중국 밖에서 의미 있는 중국 경쟁자가 없다. 소매에서는 테무·쉬인이 경쟁자였지만 미국의 소액 면세 폐지 뒤 미국 이용자가 크게 줄었다(정책이 방어선). 반대로 아마존 상위 판매자의 절반 이상이 중국 판매자라 관세는 공급 쪽 위험이다.",
+    "facts": [
+     {
+      "text": "관세 뒤 테무 미국 이용자 최대 62%, 쉬인 47% 감소 — 2026년 4월에도 관세 전보다 약 30% 낮음",
+      "url": "https://www.measureprotocol.com/insights/shein-temu-shoppers-after-us-tariffs",
+      "date": "2026-05",
+      "period": "2025~2026-04",
+      "kind": "fact"
+     },
+     {
+      "text": "중국 판매자가 아마존 상위 판매자의 50%를 처음 넘음 · 2025년 신규 판매자의 59.9%가 중국",
+      "url": "https://marketplacepulse.com/articles/amazon-seller-registrations-hit-decade-low-in-2025",
+      "date": "2026-01",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "aws-growth",
+     "text": "AWS 매출 증가율 2개 분기 연속 20% 미만",
+     "metric": "AWS 전년 대비 매출 증가율",
+     "threshold": "2개 분기 연속 20% 미만",
+     "source": "아마존 분기 실적",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 3분기 +39.3%"
+    },
+    {
+     "id": "us-cn-tariff",
+     "text": "미국의 대중 관세 유예가 끝나 중국산 소비재 관세 재인상",
+     "metric": "미국 대중 상호관세 유예 상태",
+     "threshold": "유예 종료·재인상",
+     "source": "USTR·백악관 발표",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "유예 기한이 2026년 11월이라는 2차 자료만 확인"
+    }
+   ],
+   "unverified": [
+    "대중 관세 유예 연장 여부(2026-11)",
+    "중국 판매자 매출 비중의 최신 수치"
+   ]
+  },
+  "CAT": {
+   "name": "캐터필러",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "데이터센터 전력(가스터빈·대형 왕복엔진), 광산, 인프라",
+    "payer": "corporate",
+    "pricing": "company",
+    "text": "돈은 건설사·광산·데이터센터·에너지 기업이 설비투자로 낸다. 3Q26 매출 207억달러(+17%) 중 발전이 30% 늘었고 주로 데이터센터용, 수주잔고는 780억달러로 1년 새 약 2배. 2025년 부문 매출도 파워&에너지 27,143백만달러가 건설 24,800백만달러보다 크다. [추론] 데이터센터 전력이 새 구조적 동인이라 tail, 건설 장비 자체는 경기순환.",
+    "facts": [
+     {
+      "text": "3Q26 매출 207억달러(+17%), 파워&에너지 88억달러(+18%), 발전 +30%(데이터센터 고객 주도), 건설 약 80억달러(+18%), 수주잔고 780억달러(전년 대비 약 2배)",
+      "url": "https://www.constructiondive.com/news/caterpillar-posts-highest-sales-quarter-ever-data-centers-q3-2026/873294/",
+      "date": "2026-10-30",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K 부문 매출(백만달러): 건설 24,800, 자원 12,185, 파워&에너지 27,143, 금융 4,220",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/0000018230-26-000008-index.htm",
+      "date": "2026-02-13",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "XCMG(쉬공)",
+     "싼이(Sany)",
+     "중롄중커(Zoomlion)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 별도 공시 없음. 아시아·태평양 11,199 / 연결 67,589 (백만달러, FY2025)",
+    "defense": [
+     "network",
+     "brand",
+     "tech"
+    ],
+    "text": "KHL 옐로테이블 2026(2025년 매출)에서 캐터필러 15.7%로 1위, 중국 13개사 합산 약 20.4%. 중국 굴착기 수출은 2026년 상반기 33.5% 늘어 해외 점유율을 넓히는 중. 방어선은 딜러망·브랜드·광산/발전용 대형 장비 기술(비정책)이고, 미국 관세는 보조. [추론] 일부 장비(굴착기)에서 잠식 → mid.",
+    "facts": [
+     {
+      "text": "KHL 옐로테이블 2026: 상위 50사 매출 2465.28억달러, 캐터필러 374.94억달러(15.7%), 고마쓰 271.20억달러(11.0%), XCMG 142.07억달러(5.8%), 싼이 125.82억달러, 중롄중커 68.12억달러. 중국 13개사 합산 약 488.6억달러(약 20.4%)",
+      "url": "https://finance.sina.cn/2026-05-07/detail-inhxatff4718017.d.html?vt=4",
+      "date": "2026-05-07",
+      "period": "2025 회계연도 매출",
+      "kind": "fact"
+     },
+     {
+      "text": "중국공정기계협회: 2026년 상반기 중국 굴착기 수출 73,295대(+33.5%), 6월 14,547대(+36%)",
+      "url": "https://www.qatar-tribune.com/article/243319/business/chinas-excavator-exports-surge-33-in-first-half-as-industry-pivots-to-electric-power",
+      "date": "2026-07-08",
+      "period": "1H26",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K: 매출 미국 내 32,880, 미국 외 34,709 (백만달러) — 국가별 구분 없음",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/0000018230-26-000008-index.htm",
+      "date": "2026-02-13",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "construction-machinery",
+   "breaks": [
+    {
+     "id": "cat-b1",
+     "text": "중국 업체 합산 점유율이 25%를 넘으면 잠식이 본격화된 것으로 본다",
+     "metric": "KHL 옐로테이블 중국 업체 합산 매출 점유율",
+     "threshold": "≥ 25%",
+     "source": "KHL Yellow Table(매년 4~5월)",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026판(2025년 매출) 약 20.4%"
+    },
+    {
+     "id": "cat-b2",
+     "text": "캐터필러 점유율이 15% 아래로 내려가면 방어선 약화",
+     "metric": "KHL 옐로테이블 캐터필러 점유율",
+     "threshold": "< 15%",
+     "source": "KHL Yellow Table",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026판 15.7%"
+    },
+    {
+     "id": "cat-b3",
+     "text": "수주잔고가 전년보다 줄면 데이터센터 전력 수요 가정 재검토",
+     "metric": "분기말 수주잔고 YoY",
+     "threshold": "< 0%",
+     "source": "캐터필러 분기 실적 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 780억달러(전년 대비 약 2배)"
+    }
+   ],
+   "unverified": [
+    "캐터필러 매출 중 중국 비중(아시아·태평양에 합산)",
+    "옐로테이블 2025판 중국 업체 합산 점유율(추세 비교용)",
+    "Off-Highway Research 기준 중국 외 시장의 중국 업체 점유율"
+   ],
+   "dataNote": null
+  },
+  "CSCO": {
+   "name": "시스코",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI 데이터센터 네트워킹(하이퍼스케일러 Silicon One·광학), 캠퍼스 교체, 보안",
+    "payer": "corporate",
+    "pricing": "company",
+    "text": "돈은 기업 IT 예산과 하이퍼스케일러 설비투자가 낸다. FY2026 하이퍼스케일러 AI 인프라 주문 93억달러(전년의 약 4.5배), 네트워킹 매출 34,668백만달러(전년 28,304). 이더넷 스위치 시장도 2Q26 43.4% 성장. [추론] AI 네트워킹은 구조적 수요라 tail. 다만 하이퍼스케일러 쪽은 엔비디아·아리스타와 경쟁이 치열해 가격력은 기업 시장보다 약함.",
+    "facts": [
+     {
+      "text": "FY2026 매출 633억달러(+12%), 4Q 제품 주문 +35%(하이퍼스케일러 제외 +25%), 하이퍼스케일러 AI 인프라 주문 4Q 약 40억달러·연간 93억달러. FY2027 매출 가이던스 722~734억달러, AI 인프라 매출 75억달러 예상",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+      "date": "2026-08-12",
+      "period": "FY2026(2026-07-25 종료)",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K: 제품별 매출(백만달러) 네트워킹 34,668(FY25 28,304), 보안 8,232, 협업 4,300, 관측 1,095, 서비스 15,030, 합계 63,325",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/0000858877-26-000132-index.htm",
+      "date": "2026-09-02",
+      "period": "FY2026",
+      "kind": "fact"
+     },
+     {
+      "text": "IDC: 2Q26 세계 이더넷 스위치 시장 189억달러(+43.4%), 시스코 54억달러·점유율 28.7%",
+      "url": "https://www.idc.com/resource-center/blog/ethernet-switch-market-surges-43-4-to-18-9b-in-2q26-as-ai-infrastructure-demand-drives-record-datacenter-spending/",
+      "date": "2026-09-11",
+      "period": "2Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "화웨이",
+     "H3C"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 별도 공시 없음. APJC(아시아·일본·중국) 8,914 / 63,325 (백만달러, FY2026)",
+    "defense": [
+     "network",
+     "tech",
+     "procurement"
+    ],
+    "text": "화웨이는 이더넷 스위치 점유율 8.2%(2Q26, 매출 +28.6%)로 시스코(28.7%)를 추격. 미국·동맹국 공공·통신 조달에서는 화웨이가 배제되고, 반대로 중국은 국유기업의 외국 IT 교체를 2027년까지 추진한다는 보도(문서 79호)가 있어 시스코 중국 사업은 줄어드는 쪽. 방어선은 설치 기반·보안 통합(비정책)과 서방 조달 규제. [추론] mid.",
+    "facts": [
+     {
+      "text": "IDC: 2Q26 화웨이 이더넷 스위치 매출 15억달러(+28.6%), 점유율 8.2%; 아리스타 13.4%, HPE(주니퍼 포함) 6.1%",
+      "url": "https://www.idc.com/resource-center/blog/ethernet-switch-market-surges-43-4-to-18-9b-in-2q26-as-ai-infrastructure-demand-drives-record-datacenter-spending/",
+      "date": "2026-09-11",
+      "period": "2Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K 지역 부문 매출(백만달러): 미주 37,799, EMEA 16,613, APJC 8,914 — 중국 별도 구분 없음",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/0000858877-26-000132-index.htm",
+      "date": "2026-09-02",
+      "period": "FY2026",
+      "kind": "fact"
+     },
+     {
+      "text": "WSJ 보도 인용: 중국 '문서 79호'가 금융·에너지 등 국유기업에 2027년까지 외국 소프트웨어 교체를 요구",
+      "url": "https://www.tomshardware.com/tech-industry/china-wants-to-rid-itself-of-western-tech-by-2027-outlines-domestic-alternatives-in-document-79",
+      "date": "2024-03",
+      "period": "2022 지시~2027 목표",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "networking",
+   "breaks": [
+    {
+     "id": "csco-b1",
+     "text": "화웨이 이더넷 스위치 점유율이 10%를 넘으면 해외 잠식 가속으로 본다",
+     "metric": "IDC 분기 이더넷 스위치 매출 점유율(화웨이)",
+     "threshold": "≥ 10%",
+     "source": "IDC Worldwide Quarterly Ethernet Switch Tracker 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2Q26 8.2%"
+    },
+    {
+     "id": "csco-b2",
+     "text": "하이퍼스케일러 AI 인프라 매출이 가이던스에 크게 못 미치면 AI 수요 가정 재검토",
+     "metric": "FY2027 하이퍼스케일러 AI 인프라 매출",
+     "threshold": "< 60억달러 (가이던스 75억달러의 80% 미만)",
+     "source": "시스코 분기 실적 보도자료",
+     "every": "분기",
+     "now": "unknown",
+     "evidence": "FY2027 가이던스 75억달러, 1Q FY27 실적 미확인"
+    },
+    {
+     "id": "csco-b3",
+     "text": "네트워킹 제품 주문이 역성장하면 교체·AI 사이클 종료로 본다",
+     "metric": "분기 네트워킹 제품 주문 YoY",
+     "threshold": "< 0%",
+     "source": "시스코 분기 실적 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "4Q FY26 +40%"
+    }
+   ],
+   "unverified": [
+    "시스코 매출 중 중국 비중(APJC에 합산)",
+    "H3C 등 중국 업체의 중국 외 시장 점유율",
+    "1Q FY2027 실적(2026-11 발표분 확인 못함)"
+   ],
+   "dataNote": null
+  },
+  "GE": {
+   "name": "GE 에어로스페이스",
+   "cluster": "civil-aero",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "항공 여행 증가와 엔진 정비(애프터마켓)",
+    "payer": "corporate",
+    "pricing": "company",
+    "text": "이익의 중심은 이미 팔린 엔진의 정비·부품이다. 2026년 3분기 주문 +49%, 상업 엔진·서비스 매출 +21%, 부품 매출 20% 넘게 증가, 상업 서비스 수주잔고 1,700억 달러 이상이다.",
+    "facts": [
+     {
+      "text": "2026년 3분기 주문 190억 달러(+49%), 매출 141억 달러(+16%), 상업 엔진·서비스 매출 +21%",
+      "url": "https://www.geaerospace.com/news/press-releases/ge-aerospace-announces-third-quarter-2026-results",
+      "date": "2026-10-20",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "상업 서비스 수주잔고 1,700억 달러 이상, 2027년 상업 서비스 두 자릿수 초반 성장 전망",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000040545/000004054526000063/ge3q2026earningsrelease.htm",
+      "date": "2026-10-20",
+      "period": "2026~2027",
+      "kind": "estimate"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "AECC CJ-1000A(C919 용, 개발 중)"
+    ],
+    "chinaRevenuePct": 9.4,
+    "chinaRevenueBasis": "2024년 중국 지역 매출 36.3억 달러 ÷ 지역 합계 387.0억 달러(계산) · 2025년은 중국 별도 공시 없음(아시아 23.6%)",
+    "defense": [
+     "tech",
+     "regulation",
+     "network"
+    ],
+    "text": "중국 엔진 업체는 중국 밖에서 경쟁자가 아니다. 중국은 C919 엔진(LEAP-1C)을 CJ-1000A 로 바꾸려 하고, 미국은 2025년 5월 말 LEAP-1C 수출 허가를 멈췄다가 7월 풀었다. [추론] 중국 위험은 경쟁보다 정책(수출 허가)이다.",
+    "facts": [
+     {
+      "text": "아시아 매출 2025년 108.19억 달러(지역 합계 458.55억 달러) · 2024년 중국 지역 36.3억 달러",
+      "url": "https://app.edgar.tools/companies/GE/disclosures/segments",
+      "date": "2026-01-29",
+      "period": "FY2024~FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "미국, 2025년 5월 말 COMAC 용 LEAP-1C 등 수출 허가 중단 → 7월 재개",
+      "url": "https://mexicobusiness.news/aerospace/news/us-lets-ge-resume-jet-engine-exports-chinas-comac",
+      "date": "2025-07",
+      "period": "2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "ge-cj1000a",
+     "text": "CJ-1000A 가 인증을 받아 C919 양산기에 장착되기 시작",
+     "metric": "중국 민항국 인증·COMAC 발표",
+     "threshold": "양산기 장착 시작",
+     "source": "언론·회사 발표",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "인증 상태 미확인"
+    },
+    {
+     "id": "ge-services",
+     "text": "상업 서비스 매출 증가율 2개 분기 연속 5% 미만",
+     "metric": "상업 엔진·서비스 매출 증가율",
+     "threshold": "2개 분기 연속 5% 미만",
+     "source": "GE 분기 실적",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 3분기 +21%"
+    }
+   ],
+   "unverified": [
+    "2025년 중국 매출 비중",
+    "CJ-1000A 인증 상태"
+   ]
+  },
+  "JNJ": {
+   "name": "존슨앤드존슨",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "고령화에 따른 항암(다잘렉스)·면역·정형외과·심혈관 수요",
+    "payer": "insurer",
+    "pricing": "regulated",
+    "text": "돈은 메디케어·민간보험(PBM)이 낸다. 미국은 IRA 가격협상으로 스텔라라 메디케어 가격이 66% 깎였고(2026년 시행), 얼리다도 2028년 협상 대상. 그래도 2025년 매출 94,193백만달러(2024년 88,821), 3Q26 운영 성장 6.0%로 물량이 가격 인하를 넘는다. [추론] 고령화 수요 + 가격 인하 < 물량이라 tail. 가격은 미국 상업시장은 회사, 메디케어·해외는 정부가 정해 regulated로 표기.",
+    "facts": [
+     {
+      "text": "10-K: 2025년 매출 94,193백만달러(2024년 88,821백만달러). 다잘렉스 14,351(2024년 11,670), 스텔라라 6,078(2024년 10,361) 백만달러",
+      "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/0000200406-26-000016-index.htm",
+      "date": "2026-02-11",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "3Q26 매출 254억달러(+5.9%, 운영 +6.0%), 혁신의약품 운영 +7.9%, 메드테크 +2.5%. 2026년 매출 가이던스 중간값 1012억달러로 상향",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000200406/000020040626000189/a2026q3exhibit991.htm",
+      "date": "2026-10-13",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "CMS 첫 협상 결과(2026-01-01 시행): 스텔라라 30일분 4,695달러(정가 13,836달러, -66%), 자렐토 197달러(정가 517달러, -62%)",
+      "url": "https://cms.gov/files/document/fact-sheet-negotiated-prices-initial-price-applicability-year-2026.pdf",
+      "date": "2024-08",
+      "period": "IPAY 2026",
+      "kind": "fact"
+     },
+     {
+      "text": "Milliman: IPAY 2028 협상 대상 15개 약 선정, 얼리다 포함. 다잘렉스는 희귀의약품 예외 확대로 현 허가 기준 협상 제외",
+      "url": "https://www.milliman.com/en/insight/key-takeaways-third-medicare-drug-price-negotiation",
+      "date": "2026-02-20",
+      "period": "IPAY 2028",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "항서제약(Hengrui)",
+     "이노벤트(Innovent)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 별도 공시 없음. 아시아태평양·아프리카 14,031 / 94,193 (백만달러, FY2025)",
+    "defense": [
+     "tech",
+     "regulation",
+     "brand"
+    ],
+    "text": "J&J 주력 품목의 해외 시장에서 중국산 제품이 점유율을 뺏는다는 수치는 확인 못함. 다만 글로벌 라이선스 아웃 거래 중 중국 비중이 2020년 5%에서 2025년 상반기 32%로 올라, 경쟁 빅파마가 중국 신약으로 파이프라인을 채우는 간접 경쟁이 커진다. 방어선은 특허·허가(규제)·임상 데이터. [추론] 지금은 low.",
+    "facts": [
+     {
+      "text": "Clarivate: 전 세계 바이오제약 라이선스 아웃 거래 중 중국 비중 2020년 5% → 2024년 21% → 2025년 상반기 32%",
+      "url": "https://pharmasource.global/content/chart/china-now-sources-32-of-global-biopharma-out-licensing-deals-up-from-5-in-2020/",
+      "date": "2026-05",
+      "period": "2020~1H25",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K 지역별 매출(백만달러): 미국 53,752, 유럽 21,535, 서반구(미국 외) 4,875, 아시아태평양·아프리카 14,031 — 중국 별도 구분 없음",
+      "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/0000200406-26-000016-index.htm",
+      "date": "2026-02-11",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "pharma-big",
+   "breaks": [
+    {
+     "id": "jnj-b1",
+     "text": "주력 품목이 메디케어 협상 대상에 들어가면 가격 압력이 물량을 넘을 수 있다",
+     "metric": "CMS 협상 대상 목록에 다잘렉스·트렘피아 포함 여부",
+     "threshold": "둘 중 하나라도 포함",
+     "source": "CMS 연간 협상 대상 발표",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "IPAY2028: 다잘렉스 제외(희귀의약품 예외), 얼리다 포함, 트렘피아 미확인"
+    },
+    {
+     "id": "jnj-b2",
+     "text": "스텔라라 잠식을 감안해도 혁신의약품 성장이 꺾이면 고령화 수요 논리 약화",
+     "metric": "혁신의약품 운영 기준 매출 YoY",
+     "threshold": "< 3% (2개 분기 연속)",
+     "source": "J&J 분기 실적 보도자료(8-K)",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 +7.9%"
+    },
+    {
+     "id": "jnj-b3",
+     "text": "라이선스 아웃 거래의 절반 이상이 중국 기원이면 혁신 경쟁 구도가 바뀐 것으로 본다",
+     "metric": "글로벌 라이선스 아웃 거래 중 중국 비중",
+     "threshold": "≥ 50%",
+     "source": "Clarivate·IQVIA 연간 딜 리포트",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2025 상반기 32%(Clarivate)"
+    }
+   ],
+   "unverified": [
+    "J&J 매출 중 중국 비중(아시아태평양·아프리카에 합산)",
+    "트렘피아의 IRA 협상 대상 여부",
+    "3Q26 스텔라라 잠식 효과(690bp) — 1차 자료로 확인 못함"
+   ],
+   "dataNote": null
+  },
+  "KO": {
+   "name": "코카콜라",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "neutral",
+    "driver": "[추론] 신흥국 인구·소득 증가에 따른 물량 증가, 선진국은 성숙",
+    "payer": "consumer",
+    "pricing": "company",
+    "text": "돈은 소비자가 내고, 가격은 브랜드 힘으로 회사(병입사 통해)가 정한다. 3Q26 유기적 매출 7% 증가 중 가격/믹스 기여는 1%, 물량은 인도·중국·멕시코·브라질 주도로 5% 증가. 2023~2025 매출은 45,754→47,061→47,941백만달러로 완만. [추론] 성숙·안정 수요라 neutral.",
+    "facts": [
+     {
+      "text": "3Q26 순매출 +7%(134억달러), 유기적 매출 +7%, 가격/믹스 +1%, 단위 판매량 +5%(인도·중국·멕시코·브라질 주도). 2026년 유기적 성장 가이던스 5% 이상으로 상향",
+      "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1176/coca-cola-reports-third-quarter-2026-results-and-raises-full-year-guidance",
+      "date": "2026-10-27",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K: 순영업수익 2025년 47,941, 2024년 47,061, 2023년 45,754 백만달러(미국 19,127, 해외 28,814)",
+      "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/0001628280-26-010047-index.htm",
+      "date": "2026-02-20",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K: 미국 단위 판매량이 전 세계의 16%, 멕시코·중국·브라질·인도 합계 33%",
+      "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+      "date": "2026-02-20",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "농푸산취안(Nongfu Spring)",
+     "캉스푸(Master Kong)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 별도 공시 없음. 아시아태평양 부문 외부매출 5,328 / 연결 47,941 (백만달러, FY2025). 중국은 원액 판매 구조(병입사 Swire 등)",
+    "defense": [
+     "brand",
+     "network"
+    ],
+    "text": "중국 안에서는 농푸산취안이 차·생수로 급성장(2025년 매출 +22.5%)하지만, 중국 밖에서 코카콜라 주력(탄산)을 위협하는 중국 업체는 확인 못함. 방어선은 브랜드와 병입·유통망. [추론] low.",
+    "facts": [
+     {
+      "text": "10-K 부문 외부매출(백만달러): 북미 19,579, EMEA 10,833, 중남미 6,331, 아시아태평양 5,328, 병입투자 5,726 — 중국 별도 구분 없음",
+      "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/0001628280-26-010047-index.htm",
+      "date": "2026-02-20",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "농푸산취안 2025년 매출 525.53억위안(+22.5%), 차음료 215.96억위안(+29.0%), 생수 187.09억위안(+17.3%)",
+      "url": "https://longportapp.cn/news/280318976",
+      "date": "2026-03",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "3Q26 아시아태평양 단위 판매량 +6%, 가격/믹스 -2%, 유기적 매출 +6%",
+      "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1176/coca-cola-reports-third-quarter-2026-results-and-raises-full-year-guidance",
+      "date": "2026-10-27",
+      "period": "3Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "beverages",
+   "breaks": [
+    {
+     "id": "ko-b1",
+     "text": "물량이 2분기 연속 늘지 않으면 신흥국 성장 가정 재검토",
+     "metric": "글로벌 단위 판매량 YoY",
+     "threshold": "≤ 0% (2개 분기 연속)",
+     "source": "코카콜라 분기 실적 보도자료",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 +5%"
+    },
+    {
+     "id": "ko-b2",
+     "text": "가격/믹스가 마이너스로 돌아서면 가격결정력 약화",
+     "metric": "전사 가격/믹스",
+     "threshold": "< 0% (2개 분기 연속)",
+     "source": "코카콜라 분기 실적 보도자료",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 +1%"
+    },
+    {
+     "id": "ko-b3",
+     "text": "아시아태평양 물량이 줄면 중국·현지 브랜드 잠식 신호로 본다",
+     "metric": "아시아태평양 단위 판매량 YoY",
+     "threshold": "< 0% (2개 분기 연속)",
+     "source": "코카콜라 분기 실적 보도자료",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 +6%"
+    }
+   ],
+   "unverified": [
+    "코카콜라 매출 중 중국 비중(미공시)",
+    "중국 탄산음료 시장 점유율 최신치",
+    "GLP-1 확산이 음료 수요에 미치는 영향 수치"
+   ],
+   "dataNote": null
+  },
+  "LLY": {
+   "name": "일라이릴리",
+   "cluster": "glp1-metabolic",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "비만·당뇨(인크레틴)와 치매 — 고령화·비만 증가",
+    "payer": "mixed",
+    "pricing": "company",
+    "text": "주력은 티르제파타이드(마운자로·젭바운드)다. 2026년 3분기 매출 +39%, 미국 가격은 −7%였지만 물량이 더 늘었다. 2026-07-01 시작한 메디케어 GLP-1 브리지(본인 부담 월 50달러)에 50만 명 넘게 들어왔다. [추론] 돈 내는 쪽이 공적 보험으로 넓어지며 값은 내려가고 물량은 커지는 국면이다.",
+    "facts": [
+     {
+      "text": "2026년 매출 전망 910~920억 달러로 상향, 3분기 매출 244억 달러(+39%)",
+      "url": "https://chemxplore.com/news/lilly-q3-2026-financial-results-guidance",
+      "date": "2026-10-30",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "미국 매출 +34%(가격 −7%) · 메디케어 GLP-1 브리지 2026-07-01 시작, 50만 명 이상",
+      "url": "https://singjupost.com/eli-lilly-lly-q3-2026-earnings-call-transcript/",
+      "date": "2026-10-30",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "2025년 매출 651.79억 달러",
+      "url": "https://app.edgar.tools/companies/LLY/disclosures/revenue",
+      "date": "2026-02",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "이노벤트(마즈두타이드, 중국 출시)",
+     "중국 세마글루타이드 복제약",
+     "중국 바이오텍 GLP-1 후보(서구 제약사에 기술이전)"
+    ],
+    "chinaRevenuePct": 3,
+    "chinaRevenueBasis": "FY2025 10-K 중국 19.51억 달러 ÷ 매출 651.79억 달러(계산)",
+    "defense": [
+     "tech",
+     "regulation"
+    ],
+    "text": "중국 매출은 3.0%다. 중국 안에서는 마즈두타이드 출시와 세마글루타이드 복제약 허가 신청(11곳 이상)으로 값이 빠르게 내려가고 있다. 중국 밖에서는 아직 중국산 GLP-1 이 미국에서 팔리지 않지만, 중국 바이오텍이 세계 기술이전 지출의 약 3분의 1을 차지해 후보물질이 서구 제약사를 통해 들어오고 있다.",
+    "facts": [
+     {
+      "text": "중국 매출 2025년 19.51억 달러(2024년 16.60억 달러)",
+      "url": "https://app.edgar.tools/companies/LLY/disclosures/revenue",
+      "date": "2026-02",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "중국 세마글루타이드 핵심 특허 2026-03-20 만료·복제약 신청 11곳 이상, 티르제파타이드 1회분 약 1,758위안 → 약 500위안(온라인 판매가)",
+      "url": "https://en.jiemian.com/article/14207496.html",
+      "date": "2026",
+      "period": "2026",
+      "kind": "fact"
+     },
+     {
+      "text": "2025년 세계 제약 기술이전 지출의 약 33%가 중국 물질",
+      "url": "https://finance.yahoo.com/news/analysis-china-biotech-licensing-boom-092338804.html",
+      "date": "2026",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "cn-glp1-us",
+     "text": "중국에서 개발된 GLP-1 계열 약이 미국 FDA 비만 적응증 승인",
+     "metric": "FDA 승인",
+     "threshold": "1건 이상",
+     "source": "FDA·회사 발표",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-11-15 기준 확인된 승인 없음"
+    },
+    {
+     "id": "lly-us-price",
+     "text": "미국 가격 하락이 물량 증가를 넘어 미국 매출이 전년 대비 감소",
+     "metric": "일라이릴리 미국 매출 증가율",
+     "threshold": "0% 미만",
+     "source": "분기 실적",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 3분기 미국 매출 +34%(가격 −7%)"
+    }
+   ],
+   "unverified": [
+    "가격 하락 폭(−7% 와 −15% 보도가 엇갈림)",
+    "중국산 GLP-1 후보의 미국 3상 진행 현황"
+   ]
+  },
+  "MA": {
+   "name": "마스터카드",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "현금→카드·디지털 결제 전환, 국경 간 결제, 부가서비스(데이터·보안)",
+    "payer": "mixed",
+    "pricing": "company",
+    "text": "비자와 같은 구조. 3Q26 순매출 14% 증가(결제망 11%, 부가서비스 19%), 총결제액(GDV) 7%, 국경 간 결제 11% 증가. 부가서비스 비중이 커서 수수료 규제 충격을 일부 완화. [추론] tail, 규제가 핵심 변수.",
+    "facts": [
+     {
+      "text": "3Q26 순매출 98억달러(+14%), 결제망 +11%, 부가서비스 +19%, GDV 3.0조달러(+7%), 국경 간 결제 +11%, 처리 건수 +9%. 가맹점 소송 관련 비용 7400만달러",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001141391/000114139126000122/ma09302026-exx991xearnings.htm",
+      "date": "2026-10-29",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K: 2025년 순매출 32,791백만달러(2024년 28,167), 결제망 19,476, 부가서비스 13,315 백만달러",
+      "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/0001141391-26-000013-index.htm",
+      "date": "2026-02-11",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "Nilson: 2025년 6대 글로벌 카드 네트워크 구매 거래 8281.0억건(+7.1%)",
+      "url": "https://nilsonreport.com/articles/global-network-card-results-worldwide-2025/",
+      "date": "2026-06",
+      "period": "2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "유니온페이(UnionPay)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 별도 공시 없음. 아시아태평양·유럽·중동·아프리카 18,747 / 32,791 (백만달러, FY2025)",
+    "defense": [
+     "network",
+     "brand"
+    ],
+    "text": "마스터카드는 넷츠유니온과 손잡고 중국 국내 카드 청산을 하는 외국 네트워크(2020년 준비 승인)지만 중국 매출은 공시하지 않는다. 중국 국내는 유니온페이가 지배. 중국 밖에서 중국 업체의 점유율 잠식 수치는 확인 못함. [추론] low.",
+    "facts": [
+     {
+      "text": "마스터카드는 2020년 넷츠유니온과 중국 카드 청산 준비 승인을 받아 국내 청산 중. 중국 시장은 국유 유니온페이가 지배(라이선스 보유 외국계는 아멕스·마스터카드)",
+      "url": "https://www.timeslive.co.za/news/business/2026-10-13-visa-receives-approval-to-prepare-for-domestic-business-in-china/",
+      "date": "2026-10-13",
+      "period": "2026-10",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K 지역별 순매출(백만달러): 미주 14,044, 아시아태평양·유럽·중동·아프리카 18,747 — 중국 별도 구분 없음",
+      "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/0001141391-26-000013-index.htm",
+      "date": "2026-02-11",
+      "period": "FY2025",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "payments",
+   "breaks": [
+    {
+     "id": "ma-b1",
+     "text": "총결제액 성장이 5% 아래로 꺾이면 디지털 전환 가정 재검토",
+     "metric": "GDV YoY(현지통화)",
+     "threshold": "< 5% (2개 분기 연속)",
+     "source": "마스터카드 분기 실적 보도자료(8-K)",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 +7%"
+    },
+    {
+     "id": "ma-b2",
+     "text": "미국 신용카드경쟁법이 통과되면 가격결정 주체가 바뀐 것으로 본다",
+     "metric": "CCCA(S.3623 등) 입법 상태",
+     "threshold": "상·하원 통과",
+     "source": "Congress.gov",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-08 기준 상원 표결 없음(위원회 계류)"
+    },
+    {
+     "id": "ma-b3",
+     "text": "유니온페이가 글로벌 구매 거래 점유율에서 마스터카드를 넘으면 중국 결제망 확장으로 본다",
+     "metric": "Nilson 연간 글로벌 네트워크 구매 거래 점유율",
+     "threshold": "유니온페이 > 마스터카드",
+     "source": "Nilson Report 연간 글로벌 네트워크 결과",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "2025 수치 유료라 미확인"
+    }
+   ],
+   "unverified": [
+    "마스터카드 중국 합작 청산 사업 매출(미공시)",
+    "Nilson 기준 유니온페이·마스터카드 글로벌 점유율(유료)"
+   ],
+   "dataNote": null
+  },
+  "MSFT": {
+   "name": "마이크로소프트",
+   "cluster": "cloud",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI·클라우드(Azure)와 기업용 소프트웨어",
+    "payer": "corporate",
+    "pricing": "company",
+    "text": "FY2027 1분기(2026-09 마감) 매출 923억 달러(+19%), Azure +48%. 돈을 내는 쪽은 기업 IT 예산이고, 용량이 모자라 설비투자를 늘리는 중이다.",
+    "facts": [
+     {
+      "text": "FY27 1분기 매출 923억 달러(+19%), Azure 332억 달러(+48%), Microsoft Cloud 639억 달러(+30%)",
+      "url": "https://redmondmag.com/articles/2026/10/30/microsoft-revenue-jumps-as-azure-and-ai-demand--fuel-growth.aspx",
+      "date": "2026-10-30",
+      "period": "1Q FY27",
+      "kind": "fact"
+     },
+     {
+      "text": "설비투자(리스 포함) 452억 달러, 다음 분기 500억 달러 넘을 전망",
+      "url": "https://247wallst.com/cards/microsoft-q1-2027-earnings-msft-01m6223bcjxyqzvby9cw8yzzqb",
+      "date": "2026-10",
+      "period": "1Q FY27",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "알리바바 클라우드·화웨이 클라우드(일부 신흥국)"
+    ],
+    "chinaRevenuePct": 1.5,
+    "chinaRevenueBasis": "브래드 스미스 사장 의회 증언(2024년 매출의 약 1.5%)",
+    "defense": [
+     "network",
+     "tech"
+    ],
+    "text": "중국 매출은 약 1.5%다. 중국 클라우드는 일부 신흥국에서 경쟁하지만, 기업용 소프트웨어 설치 기반에서는 경쟁자가 아니다.",
+    "facts": [
+     {
+      "text": "중국은 2024년 매출의 약 1.5%(브래드 스미스 의회 증언)",
+      "url": "https://www.scmp.com/tech/big-tech/article/3266974/microsoft-has-limited-exposure-china-us-lawmakers-still-raise-questions",
+      "date": "2024-06-18",
+      "period": "FY2024",
+      "kind": "fact"
+     },
+     {
+      "text": "2020년에는 매출의 1.8%",
+      "url": "https://www.bloomberg.com/news/articles/2020-01-15/microsoft-s-smith-says-u-s-china-divisions-risk-tech-cold-war",
+      "date": "2020-01-15",
+      "period": "2019",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "azure-growth",
+     "text": "Azure 매출 증가율 2개 분기 연속 25% 미만",
+     "metric": "Azure 전년 대비 증가율",
+     "threshold": "2개 분기 연속 25% 미만",
+     "source": "마이크로소프트 분기 실적",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "FY27 1분기 +48%"
+    },
+    {
+     "id": "ai-capex",
+     "text": "대형 클라우드 4사의 다음 해 설비투자 전망 합계가 올해보다 줄어듦",
+     "metric": "아마존·마이크로소프트·알파벳·메타 설비투자 가이던스 합계",
+     "threshold": "전년 대비 감소",
+     "source": "각사 분기 실적 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2027년 합계 1조 달러 근접 전망(무디스)"
+    }
+   ],
+   "unverified": [
+    "중국 매출 비중의 2025~2026년 수치(2024년 증언이 마지막)"
+   ]
+  },
+  "MU": {
+   "name": "마이크론",
+   "cluster": "memory",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI 서버 메모리(HBM)·데이터센터 D램",
+    "payer": "corporate",
+    "pricing": "market",
+    "text": "FY2026(2026-09 마감) 매출 1,332억 달러(+256%), 4분기 D램이 매출의 73%다. 2030년까지 매출의 35% 이상을 장기 공급 계약 26건으로 묶었고, 2027년 HBM 물량 대부분을 더 높은 값에 계약했다. [추론] 장기 계약이 가격 순환을 일부 줄이지만 메모리 값은 여전히 시장이 정한다.",
+    "facts": [
+     {
+      "text": "FY2026 매출 1,332억 달러(+256%), 4분기 매출 542억 달러 · 영업이익률 82% · D램 398억 달러(73%)",
+      "url": "https://www.trendforce.com/news/2026-10-01/news-micron-fy2026-revenue-surges-256-to-133-2b-locks-in-35-of-revenue-through-2030/",
+      "date": "2026-10-01",
+      "period": "FY2026",
+      "kind": "fact"
+     },
+     {
+      "text": "전략 고객 계약 26건이 2030년까지 매출의 35% 이상 · 2027년 HBM 물량 대부분 계약 완료(가격 상승)",
+      "url": "https://www.trendforce.com/news/2026-10-01/news-micron-fy2026-revenue-surges-256-to-133-2b-locks-in-35-of-revenue-through-2030/",
+      "date": "2026-10-01",
+      "period": "2027~2030",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "mid",
+    "competitors": [
+     "CXMT(D램)",
+     "YMTC(낸드)"
+    ],
+    "chinaRevenuePct": 10.1,
+    "chinaRevenueBasis": "FY2025 중국 본토 약 26.4억 달러(7.1%) + 홍콩 약 11.4억 달러(3.0%) — 집계 사이트 기준(10-K 원문 미확인)",
+    "defense": [
+     "tech",
+     "policy"
+    ],
+    "text": "중국 매출은 FY2023 약 14% → FY2025 약 10%(본토+홍콩)로 줄었다. 2023년 중국 당국의 핵심 기반시설 구매 금지 뒤 중국 서버 시장에서 밀려났다. CXMT 가 범용 D램에서 점유율을 늘리는 것은 삼성·SK하이닉스와 같은 위험이다.",
+    "facts": [
+     {
+      "text": "FY2025 중국 본토 매출 약 26.4억 달러(7.1%, 전년 대비 −13%), 홍콩 약 11.4억 달러(3.0%)",
+      "url": "https://www.globalbankingandfinance.com/markets/mu/annual-report/",
+      "date": "2025-10",
+      "period": "FY2025",
+      "kind": "fact"
+     },
+     {
+      "text": "CXMT D램 점유율 2026년 1분기 7.6%(직전 분기 4.7%, Omdia)",
+      "url": "https://www.koreatimes.co.kr/business/companies/20260606/chinese-memory-firms-edge-closer-to-challenging-koreas-chip-giants",
+      "date": "2026-06-06",
+      "period": "1Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "mem-cxmt-share",
+     "text": "CXMT D램 매출 점유율 15% 이상",
+     "metric": "CXMT 세계 D램 매출 점유율",
+     "threshold": "15% 이상",
+     "source": "Omdia·TrendForce 분기 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2026년 1분기 7.6%"
+    },
+    {
+     "id": "mem-cxmt-hbm",
+     "text": "CXMT HBM 이 주요 AI 칩 업체 인증을 받거나 대량 양산 시작",
+     "metric": "CXMT HBM 인증·양산 발표",
+     "threshold": "주요 GPU·가속기 업체 인증 1건 또는 양산 발표",
+     "source": "TrendForce·Digitimes·회사 발표",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-07 수율 약 25%로 2026년 양산 어렵다는 보도"
+    }
+   ],
+   "unverified": [
+    "FY2026 중국 매출 비중",
+    "HBM 점유율 18%(2차 자료)"
+   ]
+  },
+  "NVDA": {
+   "name": "엔비디아",
+   "cluster": "ai-compute",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "AI 연산(데이터센터 가속기)",
+    "payer": "corporate",
+    "pricing": "company",
+    "text": "주력 이익은 데이터센터 AI 가속기이고, 돈을 내는 쪽은 대형 클라우드 등 기업 설비투자다. 아마존 한 곳의 2026년 설비투자가 약 2,200억 달러다. [추론] 수요는 구조적이지만 소수 고객의 투자 계획에 묶여 있어, 그 투자가 줄면 같이 줄어든다.",
+    "facts": [
+     {
+      "text": "FY2026(2026-01-25 마감) 매출 2,159억 달러 · H20 재고·구매약정 45억 달러 비용",
+      "url": "https://www.marketscreener.com/news/nvidia-annual-report-for-fiscal-year-ending-january-25-2026-form-10-k-ce7e5cd8d18af32d",
+      "date": "2026-02",
+      "period": "FY2026",
+      "kind": "fact"
+     },
+     {
+      "text": "아마존 2026년 현금 설비투자 약 2,200억 달러 재확인(10-29), 메타 1,350~1,450억 달러(10-21)",
+      "url": "https://walnutinvest.com/stats/ai-capex-statistics",
+      "date": "2026-10-29",
+      "period": "2026",
+      "kind": "estimate"
+     },
+     {
+      "text": "무디스: 대형 클라우드 설비투자가 2027년 1조 달러에 근접 전망",
+      "url": "https://datacenterdynamics.com/en/news/moodys-hyperscaler-capex-forecasts-marked-up-by-85bn-to-close-in-on-1trn-by-2027/",
+      "date": "2026",
+      "period": "2027",
+      "kind": "estimate"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "화웨이(Ascend)",
+     "캠브리콘"
+    ],
+    "chinaRevenuePct": 9.1,
+    "chinaRevenueBasis": "FY2026 10-K 고객 본사 기준 중국(홍콩 포함) 196.77억 달러 ÷ 매출 2,159억 달러(계산)",
+    "defense": [
+     "tech",
+     "network"
+    ],
+    "text": "중국 매출 비중은 FY2025 19.2% → FY2026 9.1%로 줄었고, 회사는 다음 분기 중국 데이터센터 매출을 0으로 가정한다. 중국 안에서는 화웨이가 빠르게 따라왔지만(IDC: 2026년 상반기 엔비디아 34% · 화웨이 28%), 중국 밖 대형 고객이 중국 칩을 쓴다는 근거는 없다. [추론] 중국 시장은 경쟁보다 정책(수출 통제)으로 이미 잃었다.",
+    "facts": [
+     {
+      "text": "중국(홍콩 포함) 매출 FY2026 196.77억 달러, FY2025 250.48억 달러(고객 본사 기준)",
+      "url": "https://app.edgar.tools/companies/NVDA/disclosures/segments",
+      "date": "2026-02",
+      "period": "FY2026",
+      "kind": "fact"
+     },
+     {
+      "text": "IDC: 2026년 상반기 중국 데이터센터 AI 칩 점유율 엔비디아 34%(약 67.8만 개), 화웨이 28%(약 57.2만 개)",
+      "url": "https://www.cxodigitalpulse.com/?p=63391",
+      "date": "2026-10-13",
+      "period": "1H26",
+      "kind": "fact"
+     },
+     {
+      "text": "FY2027 1분기 전망에 중국 데이터센터 연산 매출을 넣지 않음",
+      "url": "https://fourweekmba.com/nvidia-china-timeline/",
+      "date": "2026-11-02",
+      "period": "1Q FY2027",
+      "kind": "fact"
+     }
+    ]
+   },
+   "breaks": [
+    {
+     "id": "ai-capex",
+     "text": "대형 클라우드 4사의 다음 해 설비투자 전망 합계가 올해보다 줄어듦",
+     "metric": "아마존·마이크로소프트·알파벳·메타 설비투자 가이던스 합계",
+     "threshold": "전년 대비 감소",
+     "source": "각사 분기 실적 발표",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2027년 합계 1조 달러 근접 전망(무디스)"
+    },
+    {
+     "id": "cn-ai-chip-abroad",
+     "text": "중국 AI 칩(화웨이 등)이 중국 밖 대형 클라우드에 채택",
+     "metric": "중국 밖 클라우드 사업자의 중국 AI 칩 대량 도입 발표",
+     "threshold": "1건 이상",
+     "source": "회사 발표·언론",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-11-15 기준 확인된 채택 없음"
+    }
+   ],
+   "unverified": [
+    "중국 매출 중 데이터센터 몫(10-K 원문 미확인)",
+    "무디스 전망의 발표일"
+   ]
+  },
+  "ROKU": {
+   "name": "로쿠",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "TV 시청의 스트리밍 전환과 CTV 광고 예산 이동",
+    "payer": "corporate",
+    "pricing": "market",
+    "text": "주 이익원은 플랫폼(광고·구독 매출 분배). 미국 TV 시청 중 스트리밍 비중이 49.6%(2026-08)까지 올랐고 3Q26 플랫폼 매출은 23% 증가. 돈은 광고주와 구독 서비스가 내고, 광고 단가는 경매와 경쟁(아마존·구글·삼성·월마트/비지오)이 정한다. 주의: 폭스가 주당 160달러(현금 96달러+폭스 A주 0.9693주)에 인수 계약(2026-06-15), 2027년 상반기 종결 예정이라 종결 시 상장폐지. [추론] 수요는 tail.",
+    "facts": [
+     {
+      "text": "3Q26 순매출 1,502.0백만달러(+24%), 플랫폼 1,308.3백만달러(+23%), 기기 193.7백만달러(+33%), 스트리밍 시간 399억시간(+9%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001428439/000162828026068877/a04fy2026q3exhibit991.htm",
+      "date": "2026-11-02",
+      "period": "3Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "닐슨 Gauge: 2026년 8월 미국 TV 시청 중 스트리밍 49.6%(전월 +0.6%p), 지상파 17.5%, 케이블 18.9%, 유튜브 15.8%",
+      "url": "https://www.nielsen.com/news-center/2026/tv-viewing-cools-off-in-nielsens-august-gauge-reports-as-sports-take-a-breather-and-school-resumes/",
+      "date": "2026-10-22",
+      "period": "2026-08",
+      "kind": "fact"
+     },
+     {
+      "text": "폭스가 로쿠를 주당 160달러(현금 96달러+폭스 A주 0.9693주), 기업가치 약 220억달러에 인수 합의. 주주·규제 승인 후 2027년 상반기 종결 예정",
+      "url": "https://www.sportsvideo.org/2026/06/15/fox-corp-to-acquire-roku-pairs-live-sports-powerhouse-with-major-ctv-platform/",
+      "date": "2026-06-15",
+      "period": "2026-06",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "TCL",
+     "하이센스(Hisense)"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "[추론] 중국 사업 없음. 10-K에 지역별 매출 미공시, 영업은 미국·캐나다·멕시코 중심",
+    "defense": [
+     "network",
+     "brand"
+    ],
+    "text": "로쿠의 주 이익원(미국 CTV 광고 플랫폼)에서 중국 업체가 점유율을 뺏는다는 수치는 확인 못함. 다만 TV 하드웨어는 TCL·하이센스가 빠르게 점유율을 늘려(2025.1~11월 각 12%·11%, 각 +1%p) 운영체제 협상력이 커질 수 있다. 로쿠는 자체 TV로 미국 판매량의 약 8%를 확보해 대응. [추론] low.",
+    "facts": [
+     {
+      "text": "Counterpoint: 2025년 1~11월 세계 TV 출하 점유율 TCL 12%·하이센스 11%(각 +1%p), 삼성 16%, LG 9%",
+      "url": "https://www.koreaherald.com/article/10672741",
+      "date": "2026-02-09",
+      "period": "2025.1~11월",
+      "kind": "fact"
+     },
+     {
+      "text": "Counterpoint: 1Q26 세계 TV 출하 +3%, 삼성 +8%, TCL +22%",
+      "url": "https://counterpointresearch.com/jp/insights/q1-2026-the-battle-for-the-tv-market-begins-will-lg-and-hisense-compete",
+      "date": "2026-05-29",
+      "period": "1Q26",
+      "kind": "fact"
+     },
+     {
+      "text": "로쿠 자체 TV가 미국 TV 판매량의 약 8%, 시청 시간 기준 미국·캐나다·멕시코 1위 TV 스트리밍 플랫폼",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001428439/000162828026068877/a04fy2026q3exhibit991.htm",
+      "date": "2026-11-02",
+      "period": "3Q26",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "streaming-tv",
+   "breaks": [
+    {
+     "id": "roku-b1",
+     "text": "폭스 인수가 무산되면 독립 기업 기준으로 다시 평가",
+     "metric": "폭스-로쿠 합병 진행 상태",
+     "threshold": "계약 해지 또는 규제 불허 공시",
+     "source": "SEC 8-K·양사 보도자료",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-06-15 계약, 2027년 상반기 종결 예정"
+    },
+    {
+     "id": "roku-b2",
+     "text": "플랫폼 매출 성장이 10% 아래로 떨어지면 CTV 구조적 성장 가정 재검토",
+     "metric": "플랫폼 매출 YoY",
+     "threshold": "< 10%",
+     "source": "로쿠 분기 주주서한(8-K)",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "3Q26 +23%"
+    },
+    {
+     "id": "roku-b3",
+     "text": "TCL·하이센스 합산 TV 출하 점유율이 30%를 넘으면 OS 협상력 역전 위험",
+     "metric": "세계 TV 출하 점유율(TCL+하이센스)",
+     "threshold": "≥ 30%",
+     "source": "Counterpoint Global TV Tracker",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "2025.1~11월 TCL 12%·하이센스 11%"
+    }
+   ],
+   "unverified": [
+    "로쿠 매출 중 해외(미국 외) 비중(10-K 미공시)",
+    "하이센스 VIDAA 등 중국계 TV OS의 미국 점유율",
+    "TCL·하이센스 TV 중 Roku OS 탑재 비중"
+   ],
+   "dataNote": null
+  },
+  "V": {
+   "name": "비자",
+   "asOf": "2026-11-15",
+   "demand": {
+    "grade": "tail",
+    "driver": "현금→카드·디지털 결제 전환, 국경 간 전자상거래·여행",
+    "payer": "mixed",
+    "pricing": "company",
+    "text": "돈은 가맹점 수수료(결국 소비자 가격)와 발급사가 내고, 네트워크 수수료는 비자가 정한다. 다만 교환수수료는 EU 등에서 상한 규제가 있고 미국은 가맹점 소송(FY2026 소송충당금 17억달러)과 신용카드경쟁법(CCCA) 압력이 있다. FY2026 순매출 15%, 결제액 9% 증가. [추론] 결제 디지털화는 10년 구조적 흐름이라 tail, 규제가 핵심 변수.",
+    "facts": [
+     {
+      "text": "FY2026 순매출 459억달러(+15%), 결제액 +9%, 국경 간 결제 +13%, 처리 건수 2813억건(+9%). MDL 등 소송충당금 17억달러",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm",
+      "date": "2026-10-27",
+      "period": "FY2026(2026-09-30 종료)",
+      "kind": "fact"
+     },
+     {
+      "text": "Nilson: 2025년 6대 글로벌 카드 네트워크 구매 거래 8281.0억건(+7.1%)",
+      "url": "https://nilsonreport.com/articles/global-network-card-results-worldwide-2025/",
+      "date": "2026-06",
+      "period": "2025",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K: 순매출 미국 17,423, 해외 28,480 (백만달러)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000134/0001403161-26-000134-index.htm",
+      "date": "2026-11-05",
+      "period": "FY2026",
+      "kind": "fact"
+     }
+    ]
+   },
+   "china": {
+    "grade": "low",
+    "competitors": [
+     "유니온페이(UnionPay)",
+     "[추론] 알리페이·위챗페이"
+    ],
+    "chinaRevenuePct": null,
+    "chinaRevenueBasis": "중국 별도 공시 없음. 해외 28,480 / 45,903 (백만달러, FY2026). 중국 국내 청산 라이선스는 아직 없음",
+    "defense": [
+     "network",
+     "brand"
+    ],
+    "text": "중국 국내는 유니온페이와 모바일 지갑이 지배하고, 비자는 2026-10에야 국내 청산 '준비' 승인을 받아 영업 전. 중국 밖에서 유니온페이가 비자 점유율을 잠식한다는 수치는 확인 못함. 방어선은 전 세계 가맹점·발급사 네트워크와 브랜드. [추론] low.",
+    "facts": [
+     {
+      "text": "중국 인민은행이 비자 베이징 법인의 국내 카드 청산기관 설립 준비를 승인(1년 내 준비 후 영업 신청). 중국 2025년 카드 거래액 963.60조위안",
+      "url": "https://www.timeslive.co.za/news/business/2026-10-13-visa-receives-approval-to-prepare-for-domestic-business-in-china/",
+      "date": "2026-10-13",
+      "period": "2026-10",
+      "kind": "fact"
+     },
+     {
+      "text": "10-K: 해외 순매출 28,480백만달러(FY2025 24,367) — 국가별 구분 없음",
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000134/0001403161-26-000134-index.htm",
+      "date": "2026-11-05",
+      "period": "FY2026",
+      "kind": "fact"
+     }
+    ]
+   },
+   "cluster": "payments",
+   "breaks": [
+    {
+     "id": "v-b1",
+     "text": "결제액 성장이 5% 아래로 꺾이면 디지털 전환 가정 재검토",
+     "metric": "결제액 YoY(불변 달러)",
+     "threshold": "< 5% (2개 분기 연속)",
+     "source": "비자 분기 실적 보도자료(8-K)",
+     "every": "분기",
+     "now": "clear",
+     "evidence": "4Q FY26 +9%"
+    },
+    {
+     "id": "v-b2",
+     "text": "미국 신용카드경쟁법이 통과되면 가격결정 주체가 바뀐 것으로 본다",
+     "metric": "CCCA(S.3623 등) 입법 상태",
+     "threshold": "상·하원 통과",
+     "source": "Congress.gov",
+     "every": "수시",
+     "now": "clear",
+     "evidence": "2026-08 기준 상원 표결 없음(위원회 계류)"
+    },
+    {
+     "id": "v-b3",
+     "text": "유니온페이가 글로벌 구매 거래 점유율에서 비자를 넘으면 중국 결제망 확장으로 본다",
+     "metric": "Nilson 연간 글로벌 네트워크 구매 거래 점유율",
+     "threshold": "유니온페이 > 비자",
+     "source": "Nilson Report 연간 글로벌 네트워크 결과",
+     "every": "수시",
+     "now": "unknown",
+     "evidence": "2025 비자 40.76%(발췌), 유니온페이 수치는 유료라 미확인"
+    }
+   ],
+   "unverified": [
+    "비자 매출 중 중국 비중(미공시, 중국 국내 영업 전)",
+    "Nilson 기준 유니온페이 글로벌 점유율(유료)",
+    "CCCA의 2026-08 이후 진행 상황"
+   ],
+   "dataNote": null
+  }
+ },
+ "generatedAt": "2026-11-15T06:39:10.630Z",
+ "note": "답은 출처·날짜가 붙은 사람 판단이다. 수익 예측이 아니고 과거로 검증할 수 없다. 깨짐 조건의 now: clear = 아님 · met = 충족 · unknown = 확인 전."
+}
