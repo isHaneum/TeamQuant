@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T09:47:50.210Z",
+ "updatedAt": "2026-11-15T10:12:13.700Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,12 +120,12 @@
  ],
  "spikes": {
   "war": -0.7,
-  "politics": -0.6,
-  "rates": -0.3,
+  "politics": -0.7,
+  "rates": -0.7,
   "trade": 0.2,
   "fx": -0.3,
-  "energy": -0.7,
-  "market": -0.8,
+  "energy": -0.8,
+  "market": -0.9,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.1
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.2,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.6,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -422,6 +422,47 @@
    }
   },
   {
+   "id": "18fn5d6",
+   "title": "테러도 해킹도 아닌데 9·11수준 재앙…미국 항공편 셧다운 대체 왜",
+   "firstSeen": "2026-11-15T09:52:00.000Z",
+   "lastSeen": "2026-11-15T09:52:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "테러도 해킹도 아닌데 9·11수준 재앙…미국 항공편 셧다운 대체 왜",
+     "link": "https://www.mk.co.kr/article/12209478",
+     "host": "mk.co.kr",
+     "at": "2026-11-15T09:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "qqe5dm",
    "title": "[주간증시전망] 젠슨 황 사임 후 엔비디아 실적 발표… 미·중 정상회담...",
    "firstSeen": "2026-11-14T09:18:00.000Z",
@@ -518,6 +559,61 @@
     "level": "watch",
     "label": "관찰",
     "score": 20,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "1jspb6f",
+   "title": "APEC 정상회의 18일 개막...사상 첫 미중러 정상회담",
+   "firstSeen": "2026-11-15T06:40:00.000Z",
+   "lastSeen": "2026-11-15T09:58:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프의 아세안·APEC 순방, 미중러 정상회담 성사될까?",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=885661",
+     "host": "gokorea.kr",
+     "at": "2026-11-15T09:58:00.000Z"
+    },
+    {
+     "title": "李 대통령 아세안-APEC 순방·오는 목요일 수능…이번 주(16~20일) 주요 일...",
+     "link": "https://www.news1.kr/politics/president/6354527",
+     "host": "news1.kr",
+     "at": "2026-11-15T08:24:00.000Z"
+    },
+    {
+     "title": "李대통령, 16일부터 아세안·APEC 정상회의 순방",
+     "link": "https://www.m-economynews.com/news/article.html?no=73060",
+     "host": "m-economynews.com",
+     "at": "2026-11-15T07:38:00.000Z"
+    },
+    {
+     "title": "APEC 정상회의 18일 개막...사상 첫 미중러 정상회담",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611151542561401",
+     "host": "ytn.co.kr",
+     "at": "2026-11-15T06:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 12,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -800,94 +896,6 @@
     },
     "why": [
      "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "17oobvy",
-   "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
-   "firstSeen": "2026-11-15T04:14:00.000Z",
-   "lastSeen": "2026-11-15T04:33:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "4시간 미 전역 항공 마비, 후폭풍 우려…약 150만명 피해",
-     "link": "https://www.sidae.com/article/2026111513292788466",
-     "host": "sidae.com",
-     "at": "2026-11-15T04:33:00.000Z"
-    },
-    {
-     "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
-     "link": "https://www.news1.kr/world/usa-canada/6354351",
-     "host": "news1.kr",
-     "at": "2026-11-15T04:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
-   "id": "1wbs2wx",
-   "title": "[Weekly Coin] 젠슨 황 사임 충격···비트코인 '폭락'",
-   "firstSeen": "2026-11-15T05:00:00.000Z",
-   "lastSeen": "2026-11-15T05:43:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[가상자산 나침반] 금리·AI주 충격에 7만달러 깨진 비트코인… 다음 고...",
-     "link": "https://www.dt.co.kr/article/12095212?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-15T05:43:00.000Z"
-    },
-    {
-     "title": "[Weekly Coin] 젠슨 황 사임 충격···비트코인 '폭락'",
-     "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=425050",
-     "host": "sisajournal-e.com",
-     "at": "2026-11-15T05:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
     ]
    }
   }
