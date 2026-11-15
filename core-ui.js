@@ -12,7 +12,7 @@ import { resolveStockInput, stockName } from '/lib/instruments.js';
 import { tip } from '/tooltip-ui.js';
 import { mountCandles } from '/lib/candlestick-view.js';
 import { attachStockSearch, quoteOf } from '/stock-search-ui.js';
-import { reviewRules, RULE_LEVELS, RULE_LOCK_DAYS, levelOf, levelRules, changeGate, applyChange } from '/lib/rule-presets.js';
+import { reviewRules, RULE_LEVELS, RULE_LOCK_DAYS, levelOf, levelRules, changeGate, applyChange, PLAN_CHANGE_MAX, PLAN_CHANGE_DAYS, planSig, planChangeGate, planDiff, planTurnover, planChangeSize } from '/lib/rule-presets.js';
 
 const $ = s => document.querySelector(s);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -24,7 +24,7 @@ const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' })
 const daysAgo = n => new Date(Date.now() - n * 864e5 + 9 * 3600e3).toISOString().slice(0, 10);
 const marketOf = p => p.currency === 'USD' ? 'US' : 'KR';
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261115a'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261115b'; document.head.append(css);
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
 function addView(id, label, html) {
   const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = id; nav.textContent = label; navHost.append(nav);
@@ -153,9 +153,10 @@ const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>�
   </details>
   <details class="cr-card rl-fold" id="rl-plan"><summary><b>종목별 목표 비중</b><small id="rl-plan-state"></small></summary>
     <div id="cr-cash"></div>
-    <div class="rl-planhead"><span class="cr-muted">종목마다 총자산(주식 + 현금)에서 차지할 목표 비중 ${tip('오늘 점검은 이 목표에 규칙(200일선·하루 손실 한도)을 적용한 값과 지금 보유를 비교합니다. 규칙 때문에 줄였다가도 조건이 풀리면 다시 이 목표까지 사도록 안내합니다. 목표 비중은 잠그지 않지만 고칠 때마다 기록에 남습니다.')}</span><button type="button" class="text-button" id="cr-fill">지금 비중으로 채우기</button></div>
+    <div class="rl-planhead"><span class="cr-muted">종목마다 총자산(주식 + 현금)에서 차지할 목표 비중 ${tip('오늘 점검은 이 목표에 규칙(200일선·하루 손실 한도)을 적용한 값과 지금 보유를 비교합니다. 규칙 때문에 줄였다가도 조건이 풀리면 다시 이 목표까지 사도록 안내합니다. 목표 비중은 ' + PLAN_CHANGE_DAYS + '일 안에 ' + PLAN_CHANGE_MAX + '번까지 바꿀 수 있습니다(처음 저장은 세지 않음). 바꾸기 전에 사고파는 금액을 보여 주고 이유를 적게 합니다. 실적 발표나 큰 이슈에는 대응하되 매번 바꾸지는 않게 하는 한도입니다.')}</span><button type="button" class="text-button" id="cr-fill">지금 비중으로 채우기</button></div>
     <div id="cr-plan"></div><p class="cr-err" id="rl-plan-err" role="alert"></p>
     <div class="cr-actions" id="rl-plan-actions"><button type="button" class="primary" id="rl-plan-save">목표 비중 저장</button><span class="cr-muted" id="rl-plan-saved"></span></div>
+    <div id="rl-plan-confirm" hidden></div><div id="rl-plan-hist"></div>
   </details>
   <details class="cr-card rl-fold" id="rl-raw"><summary><b>검증 자료 원표</b><small>위 숫자의 출처</small></summary>
     <h4 class="rl-h4">기본 규칙 검증 ${tip('같은 엔진을 2012년부터 날마다 돌린 결과 중 2020~2026(기본값을 고를 때 쓰지 않은 기간)입니다. 현금 이자는 0으로 둬 보수적으로 계산했습니다. 지금 남아 있는 종목으로 만든 묶음이라 생존 편향이 있습니다.')}</h4><div id="cr-evidence"><div class="shimmer ct-skel"></div></div>
@@ -233,7 +234,7 @@ function sizingHtml() {
       <ul class="cr-facts"><li>위험을 같게 나누면 지수와 다르게 움직이는 정도가 연 ${eq.tePct.toFixed(2)}% → <b>${er.tePct.toFixed(2)}%</b>, 가장 큰 종목의 몫이 ${eq.maxActiveSharePct.toFixed(0)}% → ${er.maxActiveSharePct.toFixed(0)}%입니다. 계좌 전체 변동성은 ${eq.volPct.toFixed(1)}% → ${er.volPct.toFixed(1)}%로 거의 같습니다.</li>
       ${wk.equal && wk.erc ? `<li>${esc(wk.equal.from.slice(0, 4))}~${esc(wk.equal.to.slice(0, 4))}년에 4주마다 다시 계산해 본 실제 값: ${wk.equal.tePct.toFixed(2)}% → <b>${wk.erc.tePct.toFixed(2)}%</b>. 예측은 실제의 ${(1 / wk.equal.teRealizedOverForecast).toFixed(2)}배로 조금 높게 나왔습니다.</li>` : ''}
       ${wk.equal && wk.equalBand25 ? `<li>4주마다 다 맞추면 ${wk.equal.rebalances}번 · 한 해 매매 ${wk.equal.turnoverPerYearPct.toFixed(0)}%, 25% 넘게 벗어날 때만 맞추면 ${wk.equalBand25.rebalances}번 · ${wk.equalBand25.turnoverPerYearPct.toFixed(0)}%이고 흔들림은 같습니다(${wk.equalBand25.tePct.toFixed(2)}%).</li>` : ''}
-      <li>수익은 비교하지 않았습니다. 종목을 2026년에 골랐기 때문에 과거 수익을 보면 답을 알고 본 결과가 됩니다. 계획은 그대로 균등입니다.</li></ul>
+      <li>수익은 비교하지 않았습니다. 종목을 2026년에 골랐기 때문에 과거 수익을 보면 답을 알고 본 결과가 됩니다. 계획은 그대로 균등입니다.</li>${S.mock?.planChange?.candidate ? '<li>위험을 같게 나눈 비중은 아래 "종목별 목표 비중"에 다음 계획 후보로 올라와 있습니다(적용 전 · 예상 거래대금 표시).</li>' : ''}</ul>
     </details></div>`;
 }
 function renderRisk() {
@@ -355,8 +356,9 @@ async function savePc() {
 function renderPlan(plan, saved) {
   const c = ruleCtx(), box = $('#cr-plan'); if (!box) return;
   if (c.kind === 'paper') { const w = Object.entries(c.mock?.planDoc?.weights || {}).filter(([, v]) => v.pct > 0).sort((a, b) => b[1].pct - a[1].pct);
-    $('#rl-plan-state').textContent = w.length ? `${w.length}종목 · 합계 ${w.reduce((a, [, v]) => a + v.pct, 0).toFixed(1)}% · 읽기 전용` : '';
-    box.innerHTML = w.length ? `<div class="table-wrap"><table class="cr-table"><thead><tr><th>종목</th><th>목표</th><th>구분</th></tr></thead><tbody>${w.map(([k, v]) => `<tr><td><b>${esc(v.name || k)}</b> <small class="cr-muted">${esc(k)}</small></td><td>${v.pct}%${v.targetPct ? ` <small class="cr-muted">(끝까지 사면 ${v.targetPct}%)</small>` : ''}</td><td>${v.role === 'core' ? '지수' : v.role === 'satellite' ? '개별 종목' : esc(v.role || '')}</td></tr>`).join('')}</tbody></table></div><p class="rl-note">모의계좌의 계획(${esc(c.mock.planDoc.version || '')})입니다. 종목을 고른 기준은 모의투자 화면에 있습니다.</p>` : '<p class="cr-muted">모의계좌 계획을 받지 못했습니다.</p>';
+    $('#rl-plan-state').textContent = w.length ? `${w.length}종목 · 합계 ${w.reduce((a, [, v]) => a + v.pct, 0).toFixed(1)}% · 읽기 전용${c.mock?.planChange ? ` · ${c.mock.planChange.days}일 변경 ${c.mock.planChange.used}/${c.mock.planChange.max}` : ''}` : '';
+    box.innerHTML = w.length ? `<div class="table-wrap"><table class="cr-table"><thead><tr><th>종목</th><th>목표</th><th>구분</th></tr></thead><tbody>${w.map(([k, v]) => `<tr><td><b>${esc(v.name || k)}</b> <small class="cr-muted">${esc(k)}</small></td><td>${v.pct}%${v.targetPct ? ` <small class="cr-muted">(끝까지 사면 ${v.targetPct}%)</small>` : ''}</td><td>${v.role === 'core' ? '지수' : v.role === 'satellite' ? '개별 종목' : esc(v.role || '')}</td></tr>`).join('')}</tbody></table></div><p class="rl-note">모의계좌의 계획(${esc(c.mock.planDoc.version || '')})입니다. 종목을 고른 기준은 모의투자 화면에 있습니다.</p>${planChangeHtml(c.mock.planChange)}` : '<p class="cr-muted">모의계좌 계획을 받지 못했습니다.</p>';
+    $('#rl-plan-confirm').hidden = true; $('#rl-plan-hist').innerHTML = '';
     $('#cr-fill').hidden = true; $('#rl-plan-actions').hidden = true; return; }
   $('#cr-fill').hidden = false; $('#rl-plan-actions').hidden = false;
   const rows = [...new Set([...S.positions.map(p => p.symbol), ...Object.keys(plan)])];
@@ -367,8 +369,8 @@ function renderPlan(plan, saved) {
       return `<tr data-sym="${esc(s)}" data-name="${esc(name)}" data-cur="${esc(p?.currency || v?.currency || 'KRW')}"><td><b>${esc(name)}</b>${isLeveraged({ symbol: s, name }) ? '<small class="bad">레버리지·인버스</small>' : ''}</td><td>${now.toFixed(1)}%</td><td><span class="cr-in"><input type="number" class="cr-plan-in" value="${Number.isFinite(planPctOf(v)) ? planPctOf(v) : 0}" min="0" max="100" step="0.5" inputmode="decimal"><em>%</em></span></td><td>${p ? '' : '<button type="button" class="text-button cr-del">빼기</button>'}</td></tr>`; }).join('')}</tbody>
     <tfoot><tr><td>합계</td><td></td><td id="cr-plan-sum"></td><td></td></tr></tfoot></table></div>
     <form id="cr-add" class="cr-addrow"><input id="cr-add-sym" list="symbols" placeholder="종목 추가 (예: KODEX 200, SPY)" autocomplete="off"><button type="submit" class="secondary">추가</button></form>`;
-  const sum = () => { const t = [...document.querySelectorAll('.cr-plan-in')].reduce((a, i) => a + (Number(i.value) || 0), 0); $('#cr-plan-sum').textContent = `${t.toFixed(1)}% · 현금 ${(100 - t).toFixed(1)}%`; $('#rl-plan-state').textContent = `${document.querySelectorAll('.cr-plan-in').length}종목 · 합계 ${t.toFixed(1)}% · 현금 ${(100 - t).toFixed(1)}%${saved ? '' : ' · 저장 전'}`; };
-  document.querySelectorAll('.cr-plan-in').forEach(i => i.oninput = sum); sum();
+  const sum = () => { const t = [...document.querySelectorAll('.cr-plan-in')].reduce((a, i) => a + (Number(i.value) || 0), 0); $('#cr-plan-sum').textContent = `${t.toFixed(1)}% · 현금 ${(100 - t).toFixed(1)}%`; $('#rl-plan-state').textContent = `${document.querySelectorAll('.cr-plan-in').length}종목 · 합계 ${t.toFixed(1)}% · 현금 ${(100 - t).toFixed(1)}%${saved ? planGateText(c.saved) : ' · 저장 전'}`; };
+  document.querySelectorAll('.cr-plan-in').forEach(i => i.oninput = () => { sum(); $('#rl-plan-confirm').hidden = true; }); sum(); $('#rl-plan-hist').innerHTML = planHistHtml(c.saved);
   document.querySelectorAll('.cr-del').forEach(b => b.onclick = () => { b.closest('tr').remove(); sum(); });
   $('#cr-add').onsubmit = async ev => { ev.preventDefault(); const t = $('#cr-add-sym').value.trim(); if (!t) return; try { const sym = /^[A-Za-z][A-Za-z.\-]{0,9}$/.test(t) ? t.toUpperCase() : (await resolveStockInput(t)).split('.')[0]; const tr = document.createElement('tr'); const name = /^[A-Z]/.test(sym) ? sym : stockName(sym); tr.dataset.sym = sym; tr.dataset.name = name; tr.dataset.cur = /^[A-Z]/.test(sym) ? 'USD' : 'KRW'; tr.innerHTML = `<td><b>${esc(name)}</b></td><td>0.0%</td><td><span class="cr-in"><input type="number" class="cr-plan-in" value="5" min="0" max="100" step="0.5"><em>%</em></span></td><td><button type="button" class="text-button cr-del">빼기</button></td>`; $('#cr-plan tbody').append(tr); tr.querySelector('.cr-plan-in').oninput = sum; tr.querySelector('.cr-del').onclick = () => { tr.remove(); sum(); }; $('#cr-add-sym').value = ''; sum(); } catch (e2) { $('#rl-plan-err').textContent = e2.message; } };
 }
@@ -378,11 +380,50 @@ function readPlan(rules) {
   const sum = Object.values(plan).reduce((a, v) => a + v.pct, 0); if (sum > 100 - rules.minCash + 0.05) errors.push(`목표 합계 ${sum.toFixed(1)}%가 (100 − 현금 최소 ${rules.minCash}%)를 넘습니다.`);
   return { plan, errors };
 }
+// 계획 변경 한도(결정 36): 처음 저장은 바로 되고, 그 뒤에는 30일 안에 2번까지 · 바꾸기 전에 사고파는 금액을 보이고 이유를 받는다(lib/rule-presets.js planChangeGate).
+// 한도를 넣기 전에 저장한 기록(v 없음)은 세지 않는다. 브라우저 저장소를 지우면 풀리는 자기 약속 장치다(규칙 잠금과 같다).
+const planChangesOf = saved => (saved?.history || []).filter(h => h.kind === 'plan' && h.v === 2 && !h.first);
+const planGateText = saved => { const g = planChangeGate(planChangesOf(saved)); return ` · ${PLAN_CHANGE_DAYS}일 변경 ${g.used}/${g.max}${g.ok ? '' : ` · ${kday(g.allowedAt)}부터 가능`}`; };
+const manwon = v => `${Math.round(v / 1e4).toLocaleString('ko-KR')}만 원`;
+const planEstimate = plan => planTurnover({ positions: S.positions, cashKrw: Number.isFinite(S.cash) ? S.cash : 0, plan });
+const shortName = n => String(n || '').replace(/\s*\(.*\)$/, '');
+function planHistHtml(saved) {
+  const h = (saved?.history || []).filter(x => x.kind === 'plan'); if (!h.length) return '';
+  return `<details class="rl-in"><summary>목표 비중을 바꾼 기록 ${h.length}건</summary><ul class="cr-facts">${h.slice().reverse().map(x => `<li>${esc(kday(x.at))} · ${x.first ? '처음 저장' : x.v === 2 ? `변경${Number.isFinite(x.tradedPct) ? ` · 바뀐 크기 총자산의 ${x.tradedPct}%` : ''} · 이유: ${esc(x.reason || '(없음)')}` : '변경(한도를 넣기 전)'}</li>`).join('')}</ul></details>`;
+}
+// 모의계좌: 계획 변경 횟수 · 대기 중인 계획 · 다음 계획 후보(적용 전)와 예상 거래대금. 서버가 계산해 준 값을 그대로 보인다.
+function planChangeHtml(pc) {
+  if (!pc) return '';
+  const tv = t => (t ? `계획이 바뀌는 만큼 사고파는 금액은 약 <b>${Number.isFinite(t.changeKrw) ? manwon(t.changeKrw) : '—'}</b>(총자산의 ${t.changePct}%)입니다. 지금 보유에서 이 계획까지 맞추는 금액은 ${manwon(t.tradedKrw)}${Number.isFinite(t.baseTradedKrw) ? `이고, 지금 계획까지도 ${manwon(t.baseTradedKrw)}이 남아 있습니다(아직 덜 산 종목 포함)` : '입니다'}` : '예상 거래대금은 잔고를 읽은 뒤 계산합니다');
+  const table = d => `<details class="rl-in"><summary>바뀌는 비중 ${d.length}종목</summary><div class="table-wrap"><table class="cr-table rl-size"><thead><tr><th>종목</th><th>지금 계획</th><th>바꾸면</th></tr></thead><tbody>${d.map(x => `<tr><td>${esc(shortName(x.name))}</td><td>${x.fromPct}%</td><td><b>${x.toPct}%</b></td></tr>`).join('')}</tbody></table></div></details>`;
+  const pend = pc.pending, cand = pc.candidate;
+  return `<div class="rl-sizing"><h4 class="rl-h4">계획 변경 ${tip(`계획(목표 비중)은 ${pc.days}일 안에 ${pc.max}번까지 바꿀 수 있습니다. 실적 발표나 큰 이슈에는 대응하되 매번 바꾸지는 않게 하는 한도입니다. 한도를 넘는 계획은 받아들이지 않고 지금 계획으로 계속 운용하다가 한도가 풀리면 적용합니다. 공시 대응과 나눠 사기는 규칙이 정한 움직임이라 세지 않습니다.${pc.since ? ` ${kday(pc.since)}부터 셉니다.` : ''}`)}</h4>
+    <p>최근 ${pc.days}일 <b>${pc.used}/${pc.max}회</b> 사용${pc.allowedAt ? ` · ${esc(kday(pc.allowedAt))}부터 다시 바꿀 수 있습니다` : ` · ${pc.left}회 남음`}.</p>
+    ${pend ? `<p class="cr-err">새 계획(${esc(pend.version || '')})이 대기 중입니다. 한도를 다 써서 ${pend.allowedAt ? esc(kday(pend.allowedAt)) : '한도가 풀리는 날'}부터 적용됩니다. ${tv(pend.turnover)}.</p>${pend.diff?.length ? table(pend.diff) : ''}` : ''}
+    ${cand ? `<p><b>다음 계획 후보</b> ${tip('아직 적용하지 않은 계획입니다. 적용하면 변경 1회를 쓰고 다음 열린 장에 재조정 주문이 나갑니다. 금액은 지금 보유와 후보 비중의 차이를 단순히 더한 값입니다(1주 단위 · 주문 한도 · 규칙 적용 전).')} ${esc(cand.label || cand.version || '')}. ${tv(cand.turnover)}.</p>${cand.note ? `<p class="rl-note">${esc(cand.note)}</p>` : ''}${cand.diff?.length ? table(cand.diff) : ''}` : ''}
+    ${pc.changes?.length ? `<details class="rl-in"><summary>계획을 바꾼 기록 ${pc.changes.length}건</summary><ul class="cr-facts">${pc.changes.slice().reverse().map(x => `<li>${esc(kday(x.at))} · ${esc(x.from || '')} → ${esc(x.to || '')}</li>`).join('')}</ul></details>` : ''}</div>`;
+}
 function savePlan() {
-  const c = ruleCtx(); if (c.readOnly) return; const { plan, errors } = readPlan(c.rules); $('#rl-plan-err').textContent = errors.join(' '); if (errors.length) return;
-  const prev = c.saved || { rules: c.rules }, entry = { at: new Date().toISOString(), kind: 'plan', changed: ['plan'], reason: '' };
+  const c = ruleCtx(); if (c.readOnly) return; const { plan, errors } = readPlan(c.rules), box = $('#rl-plan-confirm'); $('#rl-plan-err').textContent = errors.join(' '); $('#rl-plan-saved').textContent = ''; box.hidden = true; if (errors.length) return;
+  const prevPlan = c.saved?.plan || null; if (!prevPlan) return commitPlan(plan, { first: true });
+  if (planSig(prevPlan) === planSig(plan)) { $('#rl-plan-err').textContent = '바뀐 값이 없습니다.'; return; }
+  const g = planChangeGate(planChangesOf(c.saved));
+  if (!g.ok) { $('#rl-plan-err').textContent = `${PLAN_CHANGE_DAYS}일 안에 ${g.max}번 바꿨습니다. ${kday(g.allowedAt)}부터 바꿀 수 있습니다.`; return; }
+  const diff = planDiff(prevPlan, plan), t1 = planEstimate(plan), t0 = planEstimate(prevPlan), size = planChangeSize(prevPlan, plan, t1?.totalKrw ?? null);
+  box.dataset.sig = planSig(plan); box.hidden = false;
+  box.innerHTML = `<div class="rl-confirm"><h4>계획 변경 확인</h4><table class="cr-table"><tbody>
+      <tr><td>바뀌는 비중</td><td>${diff.map(d => `${esc(shortName(d.name))} ${d.fromPct}% → <b>${d.toPct}%</b>`).join(' · ') || '없음'}</td></tr>
+      <tr><td>사고파는 금액 ${tip('지금 보유와 새 목표의 차이를 단순히 더한 값입니다. 1주 단위, 주문 한도, 200일선 같은 규칙을 적용하기 전이라 실제 할 일과 다를 수 있습니다.')}</td><td>${t1 ? `계획이 바뀌는 만큼 약 <b>${manwon(size.changeKrw)}</b> · 총자산의 ${size.changePct}%<br><small class="cr-muted">지금 보유에서 새 계획까지 ${manwon(t1.tradedKrw)}${t0 ? ` · 지금 계획까지 ${manwon(t0.tradedKrw)}` : ''}</small>` : `비중 차이 합계 ${size.changePct}% · 보유 자료가 없어 금액은 계산하지 못했습니다`}</td></tr>
+      <tr><td>변경 횟수</td><td>${PLAN_CHANGE_DAYS}일 안 <b>${g.used + 1}번째</b> · ${g.max}번까지</td></tr></tbody></table>
+    <label class="ck-field"><span>바꾸는 이유 (10자 이상 · 기록에 남음)</span><input id="rl-plan-reason" maxlength="300" placeholder="예: 3분기 실적에서 매출 성장이 꺾여 비중을 줄임"></label>
+    <div class="cr-actions"><button type="button" class="primary" id="rl-plan-commit">확정</button><button type="button" class="text-button" id="rl-plan-cancel">취소</button><span class="cr-err" id="rl-plan-commit-err"></span></div></div>`;
+}
+function commitPlan(plan, { first = false } = {}) {
+  const c = ruleCtx(); if (c.readOnly) return; const reason = first ? '' : String($('#rl-plan-reason')?.value || '').trim();
+  if (!first) { const g = planChangeGate(planChangesOf(c.saved)); if (!g.ok) { $('#rl-plan-commit-err').textContent = `${kday(g.allowedAt)}부터 바꿀 수 있습니다.`; return; } if (reason.length < 10) { $('#rl-plan-commit-err').textContent = '바꾸는 이유를 10자 이상 적어 주십시오.'; return; } }
+  const prev = c.saved || { rules: c.rules }, t = planEstimate(plan), entry = { at: new Date().toISOString(), kind: 'plan', v: 2, first, changed: ['plan'], reason: reason.slice(0, 300), tradedPct: first ? (t?.tradedPct ?? null) : planChangeSize(c.saved?.plan, plan).changePct };
   if (!save({ ...prev, rules: c.rules, plan, history: [...(prev.history || []), entry].slice(-20) })) { $('#rl-plan-err').textContent = '이 브라우저에 저장하지 못했습니다(저장 공간 차단).'; return; }
-  renderRules(); S.loading = loadAll(); $('#rl-plan-saved').textContent = '저장했습니다';
+  $('#rl-plan-confirm').hidden = true; renderRules(); S.loading = loadAll(); $('#rl-plan-saved').textContent = '저장했습니다';
 }
 function renderCash() {
   const box = $('#cr-cash'); if (!box) return; if (acct() === 'paper' || acct() === 'none') { box.innerHTML = ''; return; }
@@ -410,7 +451,7 @@ function renderStrategyEvidence() {
 function renderRules() {
   guard('now', renderNow); guard('why', renderWhy); guard('risk', renderRisk); guard('past', renderPast);
   guard('change', () => renderChange({ keepForm: $('#rl-change')?.open && RL.pick === 'custom' })); guard('pc', renderPcBlock);
-  guard('plan', () => { if ($('#rl-plan')?.open && document.activeElement?.closest?.('#cr-plan')) return; const { plan, planSaved } = current(); renderPlan(plan, planSaved); });
+  guard('plan', () => { if ($('#rl-plan')?.open && (document.activeElement?.closest?.('#cr-plan') || $('#rl-plan-confirm')?.hidden === false)) return; const { plan, planSaved } = current(); renderPlan(plan, planSaved); });
   guard('cash', renderCash); guard('evidence', renderEvidence); guard('strategy', renderStrategyEvidence);
   guard('recent', () => { const d = $('#rl-recent'); if (d) d.hidden = acct() === 'none'; });
 }
@@ -422,6 +463,8 @@ rulesPage.addEventListener('click', e => {
   if (t.id === 'rl-cancel') { $('#rl-confirm').hidden = true; return; }
   if (t.id === 'cq-pc') return void savePc();
   if (t.id === 'rl-plan-save') return savePlan();
+  if (t.id === 'rl-plan-cancel') { $('#rl-plan-confirm').hidden = true; return; }
+  if (t.id === 'rl-plan-commit') { const { plan, errors } = readPlan(ruleCtx().rules); if (errors.length || planSig(plan) !== $('#rl-plan-confirm').dataset.sig) return savePlan(); return commitPlan(plan); }
   if (t.id === 'cr-fill') { const p = initialPlan(S.positions, S.cash, ruleCtx().rules); renderPlan(Object.fromEntries(Object.entries(p).map(([k, v]) => [k, { pct: v }])), false); }
 });
 rulesPage.addEventListener('change', e => { if (e.target.name === 'rl-level') { RL.pick = e.target.value; $('#rl-confirm').hidden = true; renderChange({ keepForm: true }); } });
