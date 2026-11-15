@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T05:27:10.485Z",
+ "updatedAt": "2026-11-15T05:47:18.962Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": -0.7,
-  "rates": -0.1,
-  "trade": 0.2,
+  "war": -0.5,
+  "politics": -0.8,
+  "rates": 0,
+  "trade": 0.4,
   "fx": 0.1,
-  "energy": -0.9,
-  "market": -0.9,
+  "energy": -1,
+  "market": -1,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.6
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.2,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.8,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.8,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -183,6 +183,64 @@
   }
  },
  "issues": [
+  {
+   "id": "1nnv078",
+   "title": "젤렌스키 \"美, 돈바스 철수 대가로 나토 가입 제안…처음 제기\"",
+   "firstSeen": "2026-11-14T10:09:00.000Z",
+   "lastSeen": "2026-11-15T05:42:00.000Z",
+   "count": 14,
+   "sources": 12,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "美, 처음으로 “돈바스 포기하면 나토 가입” 제안…러 공습에 머스크 ...",
+     "link": "https://www.joongang.co.kr/article/25478718",
+     "host": "joongang.co.kr",
+     "at": "2026-11-15T05:42:00.000Z"
+    },
+    {
+     "title": "미국, 우크라에 '나토 가입 대가' 돈바스 철군 첫 타진…젤렌스키 \"조건...",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261115010005465",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-15T01:08:00.000Z"
+    },
+    {
+     "title": "美, 푸틴 입맛대로 젤렌스키 요리? “나토-돈바스 맞바꿀까” 첫 타진…...",
+     "link": "https://www.seoul.co.kr/news/international/2026/11/15/20261115500008?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-14T23:50:00.000Z"
+    },
+    {
+     "title": "美, 우크라에 \"돈바스 영토-나토 맞교환\" 첫 타진",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01154566645646048&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-14T23:19:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 45,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 0.18,
+     "unit": "%",
+     "z": 0.3
+    },
+    "why": [
+     "핵심 단어",
+     "원/달러 +0.18%"
+    ]
+   }
+  },
   {
    "id": "1yyjm53",
    "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
@@ -404,61 +462,6 @@
    }
   },
   {
-   "id": "1nnv078",
-   "title": "나토 가입하면 돈바스 내줄 수 있냐…미국이 젤렌스키에게 물었다",
-   "firstSeen": "2026-11-14T10:09:00.000Z",
-   "lastSeen": "2026-11-15T01:08:00.000Z",
-   "count": 15,
-   "sources": 12,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미국, 우크라에 '나토 가입 대가' 돈바스 철군 첫 타진…젤렌스키 \"조건...",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261115010005465",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-15T01:08:00.000Z"
-    },
-    {
-     "title": "美, 푸틴 입맛대로 젤렌스키 요리? “나토-돈바스 맞바꿀까” 첫 타진…...",
-     "link": "https://www.seoul.co.kr/news/international/2026/11/15/20261115500008?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-14T23:50:00.000Z"
-    },
-    {
-     "title": "美, 우크라에 \"돈바스 영토-나토 맞교환\" 첫 타진",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01154566645646048&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-14T23:19:00.000Z"
-    },
-    {
-     "title": "\"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\"",
-     "link": "https://monthly.chosun.com/news/articleView.html?idxno=71966",
-     "host": "monthly.chosun.com",
-     "at": "2026-11-14T22:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
    "id": "qqe5dm",
    "title": "[주간증시전망] 젠슨 황 사임 후 엔비디아 실적 발표… 미·중 정상회담...",
    "firstSeen": "2026-11-14T09:18:00.000Z",
@@ -572,14 +575,20 @@
    "id": "ef8p29",
    "title": "'9천피'에 발행된 ELS, 내달 만기 도래…원금 손실 경고",
    "firstSeen": "2026-11-14T21:15:00.000Z",
-   "lastSeen": "2026-11-15T04:22:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-15T05:40:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "코스피 고점에 발행된 ELS '비상'…다음 달부터 만기 도래",
+     "link": "https://www.newsis.com/view/NISX20261115_0003868509",
+     "host": "newsis.com",
+     "at": "2026-11-15T05:40:00.000Z"
+    },
     {
      "title": "'9000피' 때 팔린 ELS, 내달부터 만기…코스피 42% 급락에 긴장",
      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731703",
@@ -597,18 +606,12 @@
      "link": "https://www.ajunews.com/view/20261115112126781",
      "host": "ajunews.com",
      "at": "2026-11-15T02:26:00.000Z"
-    },
-    {
-     "title": "‘9천피’ 고점에 발행된 ELS 만기 도래…원금 손실 우려 확산",
-     "link": "https://www.dt.co.kr/article/12095153?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-15T01:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 16,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -722,6 +725,49 @@
    }
   },
   {
+   "id": "1op18fx",
+   "title": "대만 첨단기술 종사자 3명, 中출장 갔다가 출국제한으로 발묶여",
+   "firstSeen": "2026-11-15T05:07:00.000Z",
+   "lastSeen": "2026-11-15T05:30:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "中당국, 출장왔던 대만 첨단기술 종사자 3명 출국 제한",
+     "link": "https://www.dt.co.kr/article/12095211?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-15T05:30:00.000Z"
+    },
+    {
+     "title": "대만 첨단기술 종사자 3명, 中출장 갔다가 출국제한으로 발묶여",
+     "link": "https://www.yna.co.kr/view/AKR20261115028400083?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-15T05:07:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "seyuyr",
    "title": "강달러에 다시 고개 든 환율…1340원대 재진입하나?",
    "firstSeen": "2026-11-14T20:28:00.000Z",
@@ -808,93 +854,76 @@
    }
   },
   {
-   "id": "fe4ntq",
-   "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
-   "firstSeen": "2026-11-14T22:20:00.000Z",
-   "lastSeen": "2026-11-15T02:20:00.000Z",
+   "id": "1xzzcwk",
+   "title": "[Weekly Coin] 젠슨 황 사임 충격···비트코인 '폭락'",
+   "firstSeen": "2026-11-14T01:43:00.000Z",
+   "lastSeen": "2026-11-15T05:43:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
+    "rates",
+    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "빚내서 버티는 개미들…증시 급락에 투자 부담 '눈덩이'",
-     "link": "https://www.mediapen.com/news/view/1137538",
-     "host": "mediapen.com",
-     "at": "2026-11-15T02:20:00.000Z"
+     "title": "[가상자산 나침반] 금리·AI주 충격에 7만달러 깨진 비트코인…연준 의...",
+     "link": "https://www.dt.co.kr/article/12095212?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-15T05:43:00.000Z"
     },
     {
-     "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=504109",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-14T22:20:00.000Z"
+     "title": "[Weekly Coin] 젠슨 황 사임 충격···비트코인 '폭락'",
+     "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=425050",
+     "host": "sisajournal-e.com",
+     "at": "2026-11-15T05:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 6,
-    "spike": 0,
+    "score": 7,
+    "spike": 0.1,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
     },
     "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "ym7ivf",
-   "title": "'빚투' 30% 삼전·닉스에 집중…증시 변동성 키워",
-   "firstSeen": "2026-11-15T01:14:00.000Z",
-   "lastSeen": "2026-11-15T03:40:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "삼전·닉스에 빚투 7조…변동성 키우는 뇌관 되나",
-     "link": "https://www.newsis.com/view/NISX20261115_0003868527",
-     "host": "newsis.com",
-     "at": "2026-11-15T03:40:00.000Z"
-    },
-    {
-     "title": "'빚투' 30% 삼전·닉스에 집중…증시 변동성 키워",
-     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=315387",
-     "host": "straightnews.co.kr",
-     "at": "2026-11-15T02:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
+     "미 10년 금리 +5.1bp"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-15T05:47:18.962Z",
+   "id": "1nnv078",
+   "level": "caution",
+   "title": "젤렌스키 \"美, 돈바스 철수 대가로 나토 가입 제안…처음 제기\"",
+   "why": [
+    "핵심 단어",
+    "원/달러 +0.18%"
+   ],
+   "link": "https://www.joongang.co.kr/article/25478718",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-15T05:47:18.962Z",
+   "id": "16gcimi",
+   "level": "caution",
+   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -0.4%"
+   ],
+   "link": "http://coinreaders.com/270390",
+   "delivered": false
+  },
   {
    "at": "2026-11-15T05:13:21.904Z",
    "id": "1yyjm53",
@@ -1109,30 +1138,6 @@
     "미 10년 금리 +5.1bp"
    ],
    "link": "https://www.sedaily.com/article/20114301?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-14T02:18:13.804Z",
-   "id": "mxrumr",
-   "level": "caution",
-   "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +5.1bp"
-   ],
-   "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140003&t=NN",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-14T01:47:35.484Z",
-   "id": "s238rd",
-   "level": "caution",
-   "title": "美 생산자물가 상승률 약 4년 만에 최고…연준, 12월 ‘빅스텝’ 밟을까",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +5.1bp"
-   ],
-   "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=130869",
    "delivered": false
   }
  ],
