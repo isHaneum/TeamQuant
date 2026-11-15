@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T03:16:16.939Z",
+ "updatedAt": "2026-11-15T03:29:28.891Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,8 +119,8 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": 0.1,
+  "war": -0.7,
+  "politics": -0.1,
   "rates": -0.5,
   "trade": 0.4,
   "fx": 0.1,
@@ -132,12 +132,12 @@
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.1,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.2,
+   "rate": 3.1,
    "saturated": 1,
    "queries": 3
   },
@@ -310,61 +310,6 @@
    }
   },
   {
-   "id": "xsxx82",
-   "title": "'젠슨황 스캔들'에 짓눌린 증시…엔비디아 실적·앤트로픽 상장 주시",
-   "firstSeen": "2026-11-14T15:02:00.000Z",
-   "lastSeen": "2026-11-15T02:26:00.000Z",
-   "count": 10,
-   "sources": 10,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아 실적·앤트로픽 상장 앞둔 AI株…젠슨 황 퇴진 충격 넘을까",
-     "link": "https://www.kukinews.com/article/view/kuk202611150011",
-     "host": "kukinews.com",
-     "at": "2026-11-15T02:26:00.000Z"
-    },
-    {
-     "title": "엔비디아 실적·앤트로픽 상장…AI 투심 회복 분수령",
-     "link": "https://www.news2day.co.kr/article/20261115500025",
-     "host": "news2day.co.kr",
-     "at": "2026-11-15T02:08:00.000Z"
-    },
-    {
-     "title": "젠슨 황 파문 넘어설 'AI빅위크' 온다 엔비디아 실적 발표에 앤트로픽 ...",
-     "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=366153",
-     "host": "smedaily.co.kr",
-     "at": "2026-11-15T01:44:00.000Z"
-    },
-    {
-     "title": "[미국증시 레이더] 뉴욕증시, 엔비디아 실적·앤트로픽 상장 주목…AMD ...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627042",
-     "host": "cbci.co.kr",
-     "at": "2026-11-15T01:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 21,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
    "id": "1nnv078",
    "title": "젤렌스키 “미국, ‘나토 가입 대가’ 동부 영토 양도 질의”",
    "firstSeen": "2026-11-14T10:09:00.000Z",
@@ -472,6 +417,61 @@
     },
     "why": [
      "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "xsxx82",
+   "title": "'젠슨황 스캔들'에 짓눌린 증시…엔비디아 실적·앤트로픽 상장 주시",
+   "firstSeen": "2026-11-14T15:02:00.000Z",
+   "lastSeen": "2026-11-15T02:26:00.000Z",
+   "count": 10,
+   "sources": 10,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 실적·앤트로픽 상장 앞둔 AI株…젠슨 황 퇴진 충격 넘을까",
+     "link": "https://www.kukinews.com/article/view/kuk202611150011",
+     "host": "kukinews.com",
+     "at": "2026-11-15T02:26:00.000Z"
+    },
+    {
+     "title": "엔비디아 실적·앤트로픽 상장…AI 투심 회복 분수령",
+     "link": "https://www.news2day.co.kr/article/20261115500025",
+     "host": "news2day.co.kr",
+     "at": "2026-11-15T02:08:00.000Z"
+    },
+    {
+     "title": "젠슨 황 파문 넘어설 'AI빅위크' 온다 엔비디아 실적 발표에 앤트로픽 ...",
+     "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=366153",
+     "host": "smedaily.co.kr",
+     "at": "2026-11-15T01:44:00.000Z"
+    },
+    {
+     "title": "[미국증시 레이더] 뉴욕증시, 엔비디아 실적·앤트로픽 상장 주목…AMD ...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627042",
+     "host": "cbci.co.kr",
+     "at": "2026-11-15T01:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 20,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -642,10 +642,10 @@
    }
   },
   {
-   "id": "18ghe2l",
-   "title": "코스피 9000 찍고 4000선 후퇴…2027년 삼성전자·SK하이닉스 다시 뜰까",
-   "firstSeen": "2026-11-14T22:16:00.000Z",
-   "lastSeen": "2026-11-15T01:50:00.000Z",
+   "id": "1jrpqf1",
+   "title": "삼성전자·SK하이닉스 주간 전망…엔비디아 주문이 관건",
+   "firstSeen": "2026-11-14T04:28:00.000Z",
+   "lastSeen": "2026-11-15T02:20:00.000Z",
    "count": 4,
    "sources": 4,
    "topics": [
@@ -653,6 +653,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "'빚투' 30% 삼전·닉스에 집중…증시 변동성 키워",
+     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=315387",
+     "host": "straightnews.co.kr",
+     "at": "2026-11-15T02:20:00.000Z"
+    },
     {
      "title": "삼성전자·SK하이닉스에 '빚투' 7조원 집중…증시 변동성 확대 우려",
      "link": "https://www.ajunews.com/view/20261115102924632",
@@ -670,67 +676,12 @@
      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16276906",
      "host": "topstarnews.net",
      "at": "2026-11-14T23:32:00.000Z"
-    },
-    {
-     "title": "코스피 9000 찍고 4000선 후퇴…2027년 삼성전자·SK하이닉스 다시 뜰까",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=504108",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-14T22:16:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 12,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "1is2wyf",
-   "title": "“엔비디아 아직도 믿으세요?”…월가 경고에도 개미들 ‘폭풍 매수’ ...",
-   "firstSeen": "2026-11-14T03:22:00.000Z",
-   "lastSeen": "2026-11-15T02:27:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아 급락이 기회?…서학개미 1천억원 매수",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611151126552nX",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-15T02:27:00.000Z"
-    },
-    {
-     "title": "젠슨 황 스캔들에도 엔비디아 4800억원 ‘폭풍 매수’한 서학개미...베팅...",
-     "link": "https://www.chosun.com/economy/money/2026/11/15/OBXICIBGM5FI7AU4YOLSBT2W4E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-15T01:04:00.000Z"
-    },
-    {
-     "title": "“엔비디아 아직도 믿으세요?”…월가 경고에도 개미들 ‘폭풍 매수’ ...",
-     "link": "https://www.ekn.kr/web/view.php?key=20261114028239640",
-     "host": "ekn.kr",
-     "at": "2026-11-14T03:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -876,35 +827,67 @@
    }
   },
   {
-   "id": "fe4ntq",
-   "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
-   "firstSeen": "2026-11-14T22:20:00.000Z",
-   "lastSeen": "2026-11-15T02:20:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "n0nk5g",
+   "title": "미중 무역휴전부터 한중 FTA까지…韓 경제의 APEC 관전 포인트",
+   "firstSeen": "2026-11-14T21:35:00.000Z",
+   "lastSeen": "2026-11-14T22:00:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "market"
+    "war",
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "빚내서 버티는 개미들…증시 급락에 투자 부담 '눈덩이'",
-     "link": "https://www.mediapen.com/news/view/1137538",
-     "host": "mediapen.com",
-     "at": "2026-11-15T02:20:00.000Z"
-    },
-    {
-     "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=504109",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-14T22:20:00.000Z"
+     "title": "미중 무역휴전부터 한중 FTA까지…韓 경제의 APEC 관전 포인트",
+     "link": "https://www.news1.kr/economy/trend/6353648",
+     "host": "news1.kr",
+     "at": "2026-11-14T22:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 6,
-    "spike": 0,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "98e8wa",
+   "title": "한화에어로, 국내 첫 1만 파운드급 항공엔진 독자 개발 나서",
+   "firstSeen": "2026-11-14T05:04:00.000Z",
+   "lastSeen": "2026-11-15T02:16:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "한화에어로, 국내 첫 1만 파운드급 항공엔진 독자 개발 나서",
+     "link": "https://www.knnews.co.kr/news/articleView.php?idxno=1555081",
+     "host": "knnews.co.kr",
+     "at": "2026-11-15T02:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
