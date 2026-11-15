@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T03:48:01.679Z",
+ "updatedAt": "2026-11-15T04:14:59.327Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": -0.7,
-  "politics": -0.2,
-  "rates": -0.5,
+  "war": -0.5,
+  "politics": -0.3,
+  "rates": -0.4,
   "trade": 0.4,
   "fx": 0.1,
   "energy": -0.9,
-  "market": -0.2,
+  "market": -0.6,
   "credit": -0.2,
   "disaster": 0,
-  "policy": -0.2
+  "policy": -0.6
  },
  "rates": {
   "war": {
-   "rate": 0.8,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.8,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.2,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -162,8 +162,8 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.1,
-   "saturated": 1,
+   "rate": 2.4,
+   "saturated": 0,
    "queries": 3
   },
   "credit": {
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   }
@@ -226,6 +226,54 @@
     "why": [
      "핵심 단어",
      "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1jb1w3g",
+   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
+   "firstSeen": "2026-11-13T02:16:00.000Z",
+   "lastSeen": "2026-11-15T04:12:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics",
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "[글로벌 매크로 레이더] 트럼프 '이란과 합의 불필요'…호르무즈 정상화...",
+     "link": "http://coinreaders.com/270390",
+     "host": "coinreaders.com",
+     "at": "2026-11-15T04:12:00.000Z"
+    },
+    {
+     "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
+     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=300926",
+     "host": "financialpost.co.kr",
+     "at": "2026-11-14T22:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 31,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -0.4%"
     ]
    }
   },
@@ -311,11 +359,11 @@
   },
   {
    "id": "1nnv078",
-   "title": "젤렌스키 “미국, ‘나토 가입 대가’ 동부 영토 양도 질의”",
+   "title": "나토 가입과 돈바스 맞교환?…러시아-우크라 종전 협상안 검토",
    "firstSeen": "2026-11-14T10:09:00.000Z",
    "lastSeen": "2026-11-15T01:08:00.000Z",
-   "count": 12,
-   "sources": 9,
+   "count": 15,
+   "sources": 12,
    "topics": [
     "war"
    ],
@@ -334,16 +382,16 @@
      "at": "2026-11-14T23:50:00.000Z"
     },
     {
-     "title": "젤렌스키 \"미국이 나토 가입 대가로 돈바스 양도안 제시\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611150633304406",
-     "host": "ytn.co.kr",
-     "at": "2026-11-14T21:33:00.000Z"
+     "title": "美, 우크라에 \"돈바스 영토-나토 맞교환\" 첫 타진",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01154566645646048&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-14T23:19:00.000Z"
     },
     {
-     "title": "젤렌스키 \"美, '나토 가입 대신 돈바스서 철군' 첫 제안\"(종합)",
-     "link": "https://www.newsis.com/view/NISX20261115_0003868286",
-     "host": "newsis.com",
-     "at": "2026-11-14T20:31:00.000Z"
+     "title": "\"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\"",
+     "link": "https://monthly.chosun.com/news/articleView.html?idxno=71966",
+     "host": "monthly.chosun.com",
+     "at": "2026-11-14T22:46:00.000Z"
     }
    ],
    "assess": {
@@ -587,65 +635,10 @@
    }
   },
   {
-   "id": "1nnv078",
-   "title": "나토 가입과 돈바스 맞교환?…러시아-우크라 종전 협상안 검토",
-   "firstSeen": "2026-11-14T10:09:00.000Z",
-   "lastSeen": "2026-11-14T23:19:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美, 우크라에 \"돈바스 영토-나토 맞교환\" 첫 타진",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01154566645646048&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-14T23:19:00.000Z"
-    },
-    {
-     "title": "\"美, 러ㆍ우 종전협상에서 나토 가입과 돈바스 맞교환 제안\"",
-     "link": "https://monthly.chosun.com/news/articleView.html?idxno=71966",
-     "host": "monthly.chosun.com",
-     "at": "2026-11-14T22:46:00.000Z"
-    },
-    {
-     "title": "美, 우크라에 ‘돈바스 철수·나토 가입’ 맞교환 타진…종전 협상 새 ...",
-     "link": "https://www.kukinews.com/article/view/kuk202611140037",
-     "host": "kukinews.com",
-     "at": "2026-11-14T12:48:00.000Z"
-    },
-    {
-     "title": "나토 가입과 돈바스 맞교환?…러시아-우크라 종전 협상안 검토",
-     "link": "https://view.asiae.co.kr/article/2026111419500159873",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-14T10:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 12,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
-   "id": "1jrpqf1",
-   "title": "삼성전자·SK하이닉스 주간 전망…엔비디아 주문이 관건",
-   "firstSeen": "2026-11-14T04:28:00.000Z",
-   "lastSeen": "2026-11-15T02:20:00.000Z",
+   "id": "18ghe2l",
+   "title": "코스피 9000 찍고 4000선 후퇴…2027년 삼성전자·SK하이닉스 다시 뜰까",
+   "firstSeen": "2026-11-14T22:16:00.000Z",
+   "lastSeen": "2026-11-15T01:50:00.000Z",
    "count": 4,
    "sources": 4,
    "topics": [
@@ -653,12 +646,6 @@
    ],
    "critical": [],
    "links": [
-    {
-     "title": "'빚투' 30% 삼전·닉스에 집중…증시 변동성 키워",
-     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=315387",
-     "host": "straightnews.co.kr",
-     "at": "2026-11-15T02:20:00.000Z"
-    },
     {
      "title": "삼성전자·SK하이닉스에 '빚투' 7조원 집중…증시 변동성 확대 우려",
      "link": "https://www.ajunews.com/view/20261115102924632",
@@ -676,6 +663,12 @@
      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16276906",
      "host": "topstarnews.net",
      "at": "2026-11-14T23:32:00.000Z"
+    },
+    {
+     "title": "코스피 9000 찍고 4000선 후퇴…2027년 삼성전자·SK하이닉스 다시 뜰까",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=504108",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-14T22:16:00.000Z"
     }
    ],
    "assess": {
@@ -783,50 +776,6 @@
    }
   },
   {
-   "id": "7b4x5f",
-   "title": "급락 딛고 반등한 코스피…다음주 '엔비디아·연준' 변수 주목",
-   "firstSeen": "2026-11-14T05:00:00.000Z",
-   "lastSeen": "2026-11-14T23:36:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피 급락에 단기 ELS 상환 변수…1786억원 만기 도래",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611150003",
-     "host": "sentv.co.kr",
-     "at": "2026-11-14T23:36:00.000Z"
-    },
-    {
-     "title": "급락 딛고 반등한 코스피…다음주 '엔비디아·연준' 변수 주목",
-     "link": "https://daily.hankooki.com/news/articleView.html?idxno=1425040",
-     "host": "daily.hankooki.com",
-     "at": "2026-11-14T05:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
    "id": "fe4ntq",
    "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
    "firstSeen": "2026-11-14T22:20:00.000Z",
@@ -871,7 +820,7 @@
   },
   {
    "id": "ym7ivf",
-   "title": "삼전닉스 ‘빚투’에 7조 몰렸다…증시 변동성 키우나",
+   "title": "'빚투' 30% 삼전·닉스에 집중…증시 변동성 키워",
    "firstSeen": "2026-11-15T01:14:00.000Z",
    "lastSeen": "2026-11-15T03:40:00.000Z",
    "count": 2,
@@ -888,10 +837,53 @@
      "at": "2026-11-15T03:40:00.000Z"
     },
     {
-     "title": "삼전닉스 ‘빚투’에 7조 몰렸다…증시 변동성 키우나",
-     "link": "https://www.dt.co.kr/article/12095151?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-15T01:14:00.000Z"
+     "title": "'빚투' 30% 삼전·닉스에 집중…증시 변동성 키워",
+     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=315387",
+     "host": "straightnews.co.kr",
+     "at": "2026-11-15T02:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 6,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
+   "id": "100c7vo",
+   "title": "무인수상함 내세운 HD현대·안두릴… ‘해상 FSD’로 美 시장 조준",
+   "firstSeen": "2026-11-15T03:01:00.000Z",
+   "lastSeen": "2026-11-15T03:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "disaster"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[르포] \"글로벌 특수선 시장 선도\"…HD현대, 무인수상함으로 美 시장 정...",
+     "link": "https://www.thebigdata.co.kr/view.php?ud=2026111217303080630ecbf9426b_23",
+     "host": "thebigdata.co.kr",
+     "at": "2026-11-15T03:02:00.000Z"
+    },
+    {
+     "title": "무인수상함 내세운 HD현대·안두릴… ‘해상 FSD’로 美 시장 조준",
+     "link": "https://biz.chosun.com/industry/company/2026/11/15/IZAJHDN3JJH3LCWBAPKS7TULJE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-15T03:01:00.000Z"
     }
    ],
    "assess": {
@@ -914,6 +906,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-15T04:14:59.327Z",
+   "id": "1jb1w3g",
+   "level": "caution",
+   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -0.4%"
+   ],
+   "link": "http://coinreaders.com/270390",
+   "delivered": false
+  },
   {
    "at": "2026-11-15T03:48:01.679Z",
    "id": "1yyjm53",
@@ -1140,18 +1144,6 @@
     "미 10년 금리 +5.1bp"
    ],
    "link": "https://www.sentv.co.kr/article/view/sentv202611140006",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-13T23:32:06.405Z",
-   "id": "mxrumr",
-   "level": "caution",
-   "title": "젠슨 황 후폭풍에 AMD도 9% 급락...12월 ‘빅스텝’ 가능성은 후퇴 [데일...",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +5.1bp"
-   ],
-   "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611140003&t=NN",
    "delivered": false
   }
  ],
