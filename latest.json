@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T15:27:42.080Z",
+ "updatedAt": "2026-11-15T15:47:19.632Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,13 +119,13 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": -1,
+  "war": -0.7,
+  "politics": -0.9,
   "rates": -0.9,
-  "trade": -1.6,
+  "trade": -1.4,
   "fx": -0.3,
   "energy": -1,
-  "market": -1.4,
+  "market": -1.2,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.6
@@ -137,17 +137,17 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.6,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 1.8,
+   "rate": 2,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 0.7,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
@@ -427,8 +427,8 @@
    "title": "[주간증시전망] 젠슨 황 사임 후 엔비디아 실적 발표… 미·중 정상회담...",
    "firstSeen": "2026-11-14T09:18:00.000Z",
    "lastSeen": "2026-11-15T15:08:00.000Z",
-   "count": 17,
-   "sources": 16,
+   "count": 20,
+   "sources": 17,
    "topics": [
     "rates",
     "market"
@@ -454,10 +454,10 @@
      "at": "2026-11-15T15:00:00.000Z"
     },
     {
-     "title": "[주간 증시 전망대] 엔비디아 실적·FOMC 의사록 주목…코스피, 반등 시...",
-     "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=731362",
-     "host": "the-biz.co.kr",
-     "at": "2026-11-15T08:00:00.000Z"
+     "title": "젠슨 황 이슈에 여전한 시장 불확실성...\"엔비디아 실적 등이 관건\"",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611151812509219",
+     "host": "ytn.co.kr",
+     "at": "2026-11-15T09:12:00.000Z"
     }
    ],
    "assess": {
@@ -584,6 +584,55 @@
    }
   },
   {
+   "id": "ef8p29",
+   "title": "코스피 고점에 발행된 ELS '비상'…다음 달부터 만기 도래",
+   "firstSeen": "2026-11-14T21:15:00.000Z",
+   "lastSeen": "2026-11-15T15:30:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[코스피 급락과 기초자산 부진] '9천피' 고점 당시 발행된 고수익 ELS, 1...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627091",
+     "host": "cbci.co.kr",
+     "at": "2026-11-15T15:30:00.000Z"
+    },
+    {
+     "title": "‘9천피’서 발행 ELS, 12월부터 만기 도래",
+     "link": "https://www.segye.com/newsView/20261115508899?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-15T12:22:00.000Z"
+    },
+    {
+     "title": "코스피 고점에 발행된 ELS '비상'…다음 달부터 만기 도래",
+     "link": "https://www.newsis.com/view/NISX20261115_0003868509",
+     "host": "newsis.com",
+     "at": "2026-11-15T05:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.4,
+     "unit": "%",
+     "z": -0.4
+    },
+    "why": [
+     "S&P 500 -0.4%"
+    ]
+   }
+  },
+  {
    "id": "1jspb6f",
    "title": "APEC 정상회의 18일 개막...사상 첫 미중러 정상회담",
    "firstSeen": "2026-11-15T06:40:00.000Z",
@@ -678,49 +727,6 @@
     },
     "why": [
      "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
-   "id": "oiefj7",
-   "title": "한진칼 주가 24만5천원 찍고 급락…주간 3.77% 상승",
-   "firstSeen": "2026-11-14T15:32:00.000Z",
-   "lastSeen": "2026-11-15T02:11:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 한 주간 상승...\"엔비디아 실적 발표 관건\"",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611151111159989",
-     "host": "ytn.co.kr",
-     "at": "2026-11-15T02:11:00.000Z"
-    },
-    {
-     "title": "한진칼 주가 24만5천원 찍고 급락…주간 3.77% 상승",
-     "link": "http://www.kjdaily.com/article.php?aid=1794670239692218276",
-     "host": "kjdaily.com",
-     "at": "2026-11-14T15:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
     ]
    }
   },
