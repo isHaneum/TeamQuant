@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-15T11:47:53.728Z",
+ "updatedAt": "2026-11-15T12:17:45.266Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,13 +120,13 @@
  ],
  "spikes": {
   "war": -1.1,
-  "politics": -1,
+  "politics": -1.1,
   "rates": -0.9,
-  "trade": -0.1,
-  "fx": -0.3,
-  "energy": -1.3,
-  "market": -1.1,
-  "credit": 0.1,
+  "trade": -0.9,
+  "fx": 0.1,
+  "energy": -1.2,
+  "market": -1.3,
+  "credit": -0.2,
   "disaster": 0,
   "policy": -0.6
  },
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
@@ -147,12 +147,12 @@
    "queries": 3
   },
   "trade": {
-   "rate": 3.3,
-   "saturated": 1,
+   "rate": 2.5,
+   "saturated": 0,
    "queries": 2
   },
   "fx": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   },
@@ -162,12 +162,12 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.4,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "credit": {
-   "rate": 0.2,
+   "rate": 0,
    "saturated": 0,
    "queries": 2
   },
@@ -342,46 +342,6 @@
    }
   },
   {
-   "id": "1yyjm53",
-   "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
-   "firstSeen": "2026-11-14T10:46:00.000Z",
-   "lastSeen": "2026-11-14T23:12:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
-     "link": "http://coinreaders.com/270342",
-     "host": "coinreaders.com",
-     "at": "2026-11-14T23:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": 5.1,
-     "unit": "bp",
-     "z": 0.9
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 +5.1bp"
-    ]
-   }
-  },
-  {
    "id": "18gtay",
    "title": "'빅스텝' 공포 가상자산 시장 강타…비트코인 6만달러대 후퇴",
    "firstSeen": "2026-11-15T05:22:00.000Z",
@@ -400,6 +360,46 @@
      "link": "http://www.metroseoul.co.kr/article/20261115500200",
      "host": "metroseoul.co.kr",
      "at": "2026-11-15T05:22:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 29,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
+   "id": "1yyjm53",
+   "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
+   "firstSeen": "2026-11-14T10:46:00.000Z",
+   "lastSeen": "2026-11-14T23:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "[머니 확률표] 월러 '50bp 인상 검토' 발언…연준 12월 빅스텝 확률 9%",
+     "link": "http://coinreaders.com/270342",
+     "host": "coinreaders.com",
+     "at": "2026-11-14T23:12:00.000Z"
     }
    ],
    "assess": {
@@ -727,6 +727,137 @@
    }
   },
   {
+   "id": "seyuyr",
+   "title": "강달러에 다시 고개 든 환율…1340원대 재진입하나?",
+   "firstSeen": "2026-11-14T20:28:00.000Z",
+   "lastSeen": "2026-11-15T01:54:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[이번주 환율] 강달러에도 1330원대 지킨 환율…이번주 APEC 회담에 촉각",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147081",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-15T01:54:00.000Z"
+    },
+    {
+     "title": "강달러에 다시 고개 든 환율…1340원대 재진입하나?",
+     "link": "https://www.dt.co.kr/article/12095097?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-14T20:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 0.18,
+     "unit": "%",
+     "z": 0.3
+    },
+    "why": [
+     "원/달러 +0.18%"
+    ]
+   }
+  },
+  {
+   "id": "17oobvy",
+   "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
+   "firstSeen": "2026-11-15T04:14:00.000Z",
+   "lastSeen": "2026-11-15T04:33:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "4시간 미 전역 항공 마비, 후폭풍 우려…약 150만명 피해",
+     "link": "https://www.sidae.com/article/2026111513292788466",
+     "host": "sidae.com",
+     "at": "2026-11-15T04:33:00.000Z"
+    },
+    {
+     "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
+     "link": "https://www.news1.kr/world/usa-canada/6354351",
+     "host": "news1.kr",
+     "at": "2026-11-15T04:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": 0.18,
+     "unit": "%",
+     "z": 0.3
+    },
+    "why": [
+     "원/달러 +0.18%"
+    ]
+   }
+  },
+  {
+   "id": "1wbs2wx",
+   "title": "[Weekly Coin] 젠슨 황 사임 충격···비트코인 '폭락'",
+   "firstSeen": "2026-11-15T05:00:00.000Z",
+   "lastSeen": "2026-11-15T05:43:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[가상자산 나침반] 금리·AI주 충격에 7만달러 깨진 비트코인… 다음 고...",
+     "link": "https://www.dt.co.kr/article/12095212?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-15T05:43:00.000Z"
+    },
+    {
+     "title": "[Weekly Coin] 젠슨 황 사임 충격···비트코인 '폭락'",
+     "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=425050",
+     "host": "sisajournal-e.com",
+     "at": "2026-11-15T05:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 7,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": 5.1,
+     "unit": "bp",
+     "z": 0.9
+    },
+    "why": [
+     "미 10년 금리 +5.1bp"
+    ]
+   }
+  },
+  {
    "id": "wj9tf",
    "title": "주간 금시세 7.5% 하락…순금 한 돈 금값 73만2000원",
    "firstSeen": "2026-11-14T00:02:00.000Z",
@@ -768,139 +899,21 @@
      "WTI 유가 -0.2%"
     ]
    }
-  },
-  {
-   "id": "seyuyr",
-   "title": "강달러에 다시 고개 든 환율…1340원대 재진입하나?",
-   "firstSeen": "2026-11-14T20:28:00.000Z",
-   "lastSeen": "2026-11-15T01:54:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[이번주 환율] 강달러에도 1330원대 지킨 환율…이번주 APEC 회담에 촉각",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147081",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-15T01:54:00.000Z"
-    },
-    {
-     "title": "강달러에 다시 고개 든 환율…1340원대 재진입하나?",
-     "link": "https://www.dt.co.kr/article/12095097?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-14T20:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
-  },
-  {
-   "id": "fe4ntq",
-   "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
-   "firstSeen": "2026-11-14T22:20:00.000Z",
-   "lastSeen": "2026-11-15T07:06:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "정부가 묶은 에너지값… 재정·공기업 부담 '눈덩이'",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3448836",
-     "host": "newscj.com",
-     "at": "2026-11-15T07:06:00.000Z"
-    },
-    {
-     "title": "기름값 잡으려다 재정 부담 눈덩이…SK이노베이션·에쓰오일 향방은?",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=504109",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-14T22:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.4,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "S&P 500 -0.4%"
-    ]
-   }
-  },
-  {
-   "id": "17oobvy",
-   "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
-   "firstSeen": "2026-11-15T04:14:00.000Z",
-   "lastSeen": "2026-11-15T04:33:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "4시간 미 전역 항공 마비, 후폭풍 우려…약 150만명 피해",
-     "link": "https://www.sidae.com/article/2026111513292788466",
-     "host": "sidae.com",
-     "at": "2026-11-15T04:33:00.000Z"
-    },
-    {
-     "title": "美항공 '4시간 마비' 후폭풍…손실 수십억달러, 보상은 환불뿐",
-     "link": "https://www.news1.kr/world/usa-canada/6354351",
-     "host": "news1.kr",
-     "at": "2026-11-15T04:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 6,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": 0.18,
-     "unit": "%",
-     "z": 0.3
-    },
-    "why": [
-     "원/달러 +0.18%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-15T12:17:45.266Z",
+   "id": "1yyjm53",
+   "level": "caution",
+   "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 +5.1bp"
+   ],
+   "link": "https://www.mk.co.kr/article/12209158",
+   "delivered": false
+  },
   {
    "at": "2026-11-15T11:47:53.728Z",
    "id": "1nnv078",
@@ -1120,18 +1133,6 @@
   {
    "at": "2026-11-15T04:28:09.723Z",
    "id": "16gcimi",
-   "level": "caution",
-   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -0.4%"
-   ],
-   "link": "http://coinreaders.com/270390",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-15T04:14:59.327Z",
-   "id": "1jb1w3g",
    "level": "caution",
    "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
    "why": [
