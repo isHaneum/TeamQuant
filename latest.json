@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-16T11:15:13.171Z",
+ "updatedAt": "2026-11-16T11:30:57.589Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,7 +62,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 1335.550048828125,
+   "last": 1335.5799560546875,
    "change": 0.13,
    "z": 0.2,
    "sd": 0.6326251329727653,
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 88.4000015258789,
-   "change": -0.18,
-   "z": -0.1,
+   "last": 88.16999816894531,
+   "change": -0.44,
+   "z": -0.2,
    "sd": 2.877420765091161,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 3875.39990234375,
-   "change": -0.28,
-   "z": -0.2,
+   "last": 3878.699951171875,
+   "change": -0.2,
+   "z": -0.1,
    "sd": 1.3587354696428326,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 20.010000228881836,
-   "change": 3.68,
+   "last": 20.020000457763672,
+   "change": 3.73,
    "z": 0.3,
    "sd": 11.756874015413716,
    "source": "Yahoo",
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
+  "war": -0.4,
   "politics": -0.7,
   "rates": -0.1,
-  "trade": 0.2,
+  "trade": 0.4,
   "fx": -0.2,
   "energy": -0.8,
-  "market": -0.2,
+  "market": -0.4,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 1.1,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 2,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.7,
+   "rate": 2.4,
    "saturated": 1,
    "queries": 3
   },
@@ -365,6 +365,62 @@
    }
   },
   {
+   "id": "lv7sai",
+   "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
+   "firstSeen": "2026-11-15T21:59:00.000Z",
+   "lastSeen": "2026-11-16T11:22:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "war",
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "외국인 '팔자'에 삼전닉스 '뚝'…\"앤트로픽·엔비디아 영향\"",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848523&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-16T11:22:00.000Z"
+    },
+    {
+     "title": "앤트로픽 상장 앞두고 中 투자자 퇴짜…美 AI 패권전쟁 격화",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=883885",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-16T10:18:00.000Z"
+    },
+    {
+     "title": "엔비디아 실적·앤트로픽 IPO… 'AI 빅위크' 숨죽인 글로벌 증시",
+     "link": "https://www.dt.co.kr/article/12095501?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-16T08:47:00.000Z"
+    },
+    {
+     "title": "[나이스 증시전망] 주목되는 엔비디아 실적과 앤트로픽 상장",
+     "link": "https://www.niceeconomy.co.kr/news/articleView.html?idxno=91841",
+     "host": "niceeconomy.co.kr",
+     "at": "2026-11-16T07:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "코스피 -3.59%"
+    ]
+   }
+  },
+  {
    "id": "127dgy1",
    "title": "삼성전자·SK하이닉스 거래 32% 급증…주가 급락 속 집중도 반등",
    "firstSeen": "2026-11-16T01:54:00.000Z",
@@ -405,62 +461,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 16,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.59,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.59%"
-    ]
-   }
-  },
-  {
-   "id": "lv7sai",
-   "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
-   "firstSeen": "2026-11-15T21:59:00.000Z",
-   "lastSeen": "2026-11-16T10:18:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war",
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "앤트로픽 상장 앞두고 中 투자자 퇴짜…美 AI 패권전쟁 격화",
-     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=883885",
-     "host": "hansbiz.co.kr",
-     "at": "2026-11-16T10:18:00.000Z"
-    },
-    {
-     "title": "엔비디아 실적·앤트로픽 IPO… 'AI 빅위크' 숨죽인 글로벌 증시",
-     "link": "https://www.dt.co.kr/article/12095501?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-16T08:47:00.000Z"
-    },
-    {
-     "title": "[나이스 증시전망] 주목되는 엔비디아 실적과 앤트로픽 상장",
-     "link": "https://www.niceeconomy.co.kr/news/articleView.html?idxno=91841",
-     "host": "niceeconomy.co.kr",
-     "at": "2026-11-16T07:30:00.000Z"
-    },
-    {
-     "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
-     "link": "https://www.tokenpost.kr/news/economy/438754",
-     "host": "tokenpost.kr",
-     "at": "2026-11-15T23:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 15,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -531,6 +531,63 @@
    }
   },
   {
+   "id": "14vpvsf",
+   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
+   "firstSeen": "2026-11-16T01:32:00.000Z",
+   "lastSeen": "2026-11-16T09:04:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "war",
+    "politics",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'젠슨 황 없는' 엔비디아 실적 발표… 코스피 반등 열쇠 될까",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261117010006207",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-16T09:04:00.000Z"
+    },
+    {
+     "title": "[투자전략 따라잡기] 젠슨 황 없는 엔비디아 실적 공개 임박",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346685?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T05:51:00.000Z"
+    },
+    {
+     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T05:51:00.000Z"
+    },
+    {
+     "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
+     "link": "https://www.hankookilbo.com/news/article/A2026111611360000737?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-16T04:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 13,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "코스피 -3.59%"
+    ]
+   }
+  },
+  {
    "id": "c2duxn",
    "title": "[이번주 관전포인트] 엔비디아 실적·FOMC 의사록이 이번 주 증시 방향 ...",
    "firstSeen": "2026-11-15T20:50:00.000Z",
@@ -559,56 +616,6 @@
      "link": "http://www.newskr.kr/news/articleView.html?idxno=108016",
      "host": "newskr.kr",
      "at": "2026-11-15T20:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 12,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.59,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.59%"
-    ]
-   }
-  },
-  {
-   "id": "1cmmidh",
-   "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
-   "firstSeen": "2026-11-15T23:10:00.000Z",
-   "lastSeen": "2026-11-16T10:12:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[머니 확률표] 연준 3연속 금리 인상 확률 34%…하루 새 6%p 상승",
-     "link": "http://coinreaders.com/270648",
-     "host": "coinreaders.com",
-     "at": "2026-11-16T10:12:00.000Z"
-    },
-    {
-     "title": "1340원대 다시 넘보는 환율…미 연준 금리 인상 전망에 상승 압력",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=757349",
-     "host": "econovill.com",
-     "at": "2026-11-16T02:14:00.000Z"
-    },
-    {
-     "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
-     "link": "https://www.ajunews.com/view/20261116093402334",
-     "host": "ajunews.com",
-     "at": "2026-11-16T00:38:00.000Z"
     }
    ],
    "assess": {
@@ -679,36 +686,34 @@
    }
   },
   {
-   "id": "jyjznw",
-   "title": "앤트로픽 IPO에 쏠린 눈…AI주 반등 이끌까",
-   "firstSeen": "2026-11-16T05:46:00.000Z",
-   "lastSeen": "2026-11-16T09:04:00.000Z",
+   "id": "nx61be",
+   "title": "엔비디아 여진에 D램 담합 소송까지... 코스피 3.59% 급락 [마감시황]",
+   "firstSeen": "2026-11-16T06:46:00.000Z",
+   "lastSeen": "2026-11-16T11:12:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "politics",
-    "fx",
-    "policy"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "'젠슨 황 없는' 엔비디아 실적 발표… 코스피 반등 열쇠 될까",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261117010006207",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-16T09:04:00.000Z"
+     "title": "젠슨 황·담합 소송에 코스피 3.6% 뚝‥엔비디아 실적 반등 계기 될까?",
+     "link": "https://imnews.imbc.com/replay/2026/nwdesk/article/6866080_37004.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-16T11:12:00.000Z"
     },
     {
-     "title": "엔비디아 17일 실적 발표···코스피 반등 이끌까",
-     "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2493143",
-     "host": "enewstoday.co.kr",
-     "at": "2026-11-16T09:00:00.000Z"
+     "title": "['클릭' 증시] 젠슨 황 충격에 D램 담합 소송까지...美 셔먼법 부담",
+     "link": "http://www.00news.co.kr/news/articleView.html?idxno=108096",
+     "host": "00news.co.kr",
+     "at": "2026-11-16T08:54:00.000Z"
     },
     {
-     "title": "앤트로픽 IPO에 쏠린 눈…AI주 반등 이끌까",
-     "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200484",
-     "host": "mstoday.co.kr",
-     "at": "2026-11-16T05:46:00.000Z"
+     "title": "엔비디아 여진에 D램 담합 소송까지... 코스피 3.59% 급락 [마감시황]",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2019172",
+     "host": "m-i.kr",
+     "at": "2026-11-16T06:46:00.000Z"
     }
    ],
    "assess": {
@@ -759,59 +764,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 11,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.59,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.59%"
-    ]
-   }
-  },
-  {
-   "id": "14vpvsf",
-   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
-   "firstSeen": "2026-11-16T01:32:00.000Z",
-   "lastSeen": "2026-11-16T05:51:00.000Z",
-   "count": 3,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[투자전략 따라잡기] 젠슨 황 없는 엔비디아 실적 공개 임박",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346685?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
-    },
-    {
-     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
-    },
-    {
-     "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
-     "link": "https://www.hankookilbo.com/news/article/A2026111611360000737?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-16T04:44:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 10,
-    "spike": 0,
+    "score": 12,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -869,8 +823,52 @@
    }
   },
   {
-   "id": "1tieept",
-   "title": "트럼프, 시진핑 회담 앞두고 핵심광물 공급망 한계 직면…중국 의존도 ...",
+   "id": "1cmmidh",
+   "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
+   "firstSeen": "2026-11-15T23:10:00.000Z",
+   "lastSeen": "2026-11-16T02:14:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "1340원대 다시 넘보는 환율…미 연준 금리 인상 전망에 상승 압력",
+     "link": "https://www.econovill.com/news/articleView.html?idxno=757349",
+     "host": "econovill.com",
+     "at": "2026-11-16T02:14:00.000Z"
+    },
+    {
+     "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
+     "link": "https://www.ajunews.com/view/20261116093402334",
+     "host": "ajunews.com",
+     "at": "2026-11-16T00:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 9,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "코스피 -3.59%"
+    ]
+   }
+  },
+  {
+   "id": "pwfnu9",
+   "title": "[시선집중] 문일현 “미중러, 합의 가능성 無. 중국이 원하는 건 시진핑...",
    "firstSeen": "2026-11-16T01:06:00.000Z",
    "lastSeen": "2026-11-16T01:06:00.000Z",
    "count": 2,
@@ -881,15 +879,15 @@
    "critical": [],
    "links": [
     {
-     "title": "[시선집중] 문일현 “미중러, 합의 가능성 無. 중국이 원하는 건 시진핑...",
-     "link": "https://n.news.naver.com/mnews/article/214/0001535808?sid=100",
-     "host": "n.news.naver.com",
-     "at": "2026-11-16T01:06:00.000Z"
-    },
-    {
      "title": "트럼프, 시진핑 회담 앞두고 핵심광물 공급망 한계 직면…중국 의존도 ...",
      "link": "https://www.pennmike.com/news/articleView.html?idxno=131900",
      "host": "pennmike.com",
+     "at": "2026-11-16T01:06:00.000Z"
+    },
+    {
+     "title": "[시선집중] 문일현 “미중러, 합의 가능성 無. 중국이 원하는 건 시진핑...",
+     "link": "https://n.news.naver.com/mnews/article/214/0001535808?sid=100",
+     "host": "n.news.naver.com",
      "at": "2026-11-16T01:06:00.000Z"
     }
    ],
