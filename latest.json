@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-16T05:15:43.561Z",
+ "updatedAt": "2026-11-16T05:29:41.974Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 5102.669921875,
-   "change": -3.55,
-   "z": -1.2,
+   "last": 5096.9501953125,
+   "change": -3.66,
+   "z": -1.3,
    "sd": 2.9187701550933647,
    "source": "Yahoo",
    "checked": true
@@ -23,9 +23,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 670.7899780273438,
-   "change": -4.13,
-   "z": -1.5,
+   "last": 669.969970703125,
+   "change": -4.24,
+   "z": -1.6,
    "sd": 2.682150101043285,
    "source": "Yahoo",
    "checked": true
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 1333.47998046875,
-   "change": -0.02,
+   "last": 1333.6800537109375,
+   "change": -0.01,
    "z": 0,
    "sd": 0.6326251329727653,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 88.33000183105469,
-   "change": -0.26,
+   "last": 88.38999938964844,
+   "change": -0.19,
    "z": -0.1,
    "sd": 2.877420765091161,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 3871.60009765625,
-   "change": -0.38,
-   "z": -0.3,
+   "last": 3876.199951171875,
+   "change": -0.26,
+   "z": -0.2,
    "sd": 1.3587354696428326,
    "source": "Yahoo"
   },
@@ -121,11 +121,11 @@
  "spikes": {
   "war": -0.6,
   "politics": 0.1,
-  "rates": 0.2,
+  "rates": 0,
   "trade": -0.1,
   "fx": -0.3,
-  "energy": -0.4,
-  "market": 0.1,
+  "energy": -0.7,
+  "market": -0.1,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.5
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.9,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.4,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.3,
+   "rate": 3,
    "saturated": 1,
    "queries": 3
   },
@@ -183,6 +183,47 @@
   }
  },
  "issues": [
+  {
+   "id": "18fn5d6",
+   "title": "테러도 해킹도 아닌데 9·11수준 재앙…미국 항공편 셧다운 대체 왜",
+   "firstSeen": "2026-11-15T09:52:00.000Z",
+   "lastSeen": "2026-11-15T09:52:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "테러도 해킹도 아닌데 9·11수준 재앙…미국 항공편 셧다운 대체 왜",
+     "link": "https://www.mk.co.kr/article/12209478",
+     "host": "mk.co.kr",
+     "at": "2026-11-15T09:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.66,
+     "unit": "%",
+     "z": -1.3
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -3.66%"
+    ]
+   }
+  },
   {
    "id": "1msonti",
    "title": "“북한은 외국 침공 계획 없어, 이란이 더 위험해”…미국이 본 차이점...",
@@ -209,59 +250,18 @@
     "level": "watch",
     "label": "관찰",
     "score": 33,
-    "spike": 0.2,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
      "핵심 단어",
-     "코스피 -3.55%"
-    ]
-   }
-  },
-  {
-   "id": "18fn5d6",
-   "title": "테러도 해킹도 아닌데 9·11수준 재앙…미국 항공편 셧다운 대체 왜",
-   "firstSeen": "2026-11-15T09:52:00.000Z",
-   "lastSeen": "2026-11-15T09:52:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "disaster"
-   ],
-   "critical": [
-    "disaster"
-   ],
-   "links": [
-    {
-     "title": "테러도 해킹도 아닌데 9·11수준 재앙…미국 항공편 셧다운 대체 왜",
-     "link": "https://www.mk.co.kr/article/12209478",
-     "host": "mk.co.kr",
-     "at": "2026-11-15T09:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.55,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
@@ -305,18 +305,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
-    "spike": 0.1,
+    "score": 22,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
@@ -361,72 +361,72 @@
     "level": "watch",
     "label": "관찰",
     "score": 21,
-    "spike": 0.2,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
   {
-   "id": "3p8dv2",
-   "title": "[마켓 브리핑] 엔비디아, 승계 작업 불확실성…반도체주 낙폭 확대",
-   "firstSeen": "2026-11-15T22:42:00.000Z",
-   "lastSeen": "2026-11-16T05:12:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "1s1dczb",
+   "title": "이 대통령 지지율 0.5%p 오른 36.4%.. 민주 34.6%·국힘 43%",
+   "firstSeen": "2026-11-15T23:08:00.000Z",
+   "lastSeen": "2026-11-16T05:24:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "market"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[食전食후] 하락 전환 코스피, 오후 4%대 낙폭 확대…삼전·SK닉스 '급락...",
-     "link": "https://www.ajunews.com/view/20261116140541286",
-     "host": "ajunews.com",
-     "at": "2026-11-16T05:12:00.000Z"
+     "title": "이재명 대통령 지지율이 무려 '71.8%'를 기록한 지역",
+     "link": "https://www.wikitree.co.kr/articles/1174986",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-16T05:24:00.000Z"
     },
     {
-     "title": "코스피, 장중 낙폭 확대…한때 5,100선 위협",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261116115037PGQ",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-16T02:51:00.000Z"
+     "title": "李지지율 36.4%, 0.5%p 반등했지만 ..국힘 43% VS 민주 34.6% '오차 밖'[리...",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=326895",
+     "host": "thepublic.kr",
+     "at": "2026-11-16T04:58:00.000Z"
     },
     {
-     "title": "'엔비디아 경계감' 외인 매도에…코스피 낙폭 3% 확대[장중시황]",
-     "link": "https://www.news1.kr/finance/general-stock/6355087",
-     "host": "news1.kr",
-     "at": "2026-11-16T01:56:00.000Z"
+     "title": "李대통령 지지율 36.4%…국힘 43.0% 민주 34.6% (리얼미터)",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5083861",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-16T04:38:00.000Z"
     },
     {
-     "title": "[마켓 브리핑] 엔비디아, 승계 작업 불확실성…반도체주 낙폭 확대",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346547?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-15T22:42:00.000Z"
+     "title": "이재명 대통령 지지율 36.4%…전주보다 0.5%p 상승",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3753059",
+     "host": "gukjenews.com",
+     "at": "2026-11-16T03:20:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 16,
+    "score": 20,
     "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
@@ -470,73 +470,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 16,
-    "spike": 0.1,
+    "score": 17,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
-    ]
-   }
-  },
-  {
-   "id": "1s1dczb",
-   "title": "이 대통령 지지율 0.5%p 오른 36.4%.. 민주 34.6%·국힘 43%",
-   "firstSeen": "2026-11-15T23:08:00.000Z",
-   "lastSeen": "2026-11-16T04:58:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "李지지율 36.4%, 0.5%p 반등했지만 ..국힘 43% VS 민주 34.6% '오차 밖'[리...",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=326895",
-     "host": "thepublic.kr",
-     "at": "2026-11-16T04:58:00.000Z"
-    },
-    {
-     "title": "李대통령 지지율 36.4%…국힘 43.0% 민주 34.6% (리얼미터)",
-     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5083861",
-     "host": "shinailbo.co.kr",
-     "at": "2026-11-16T04:38:00.000Z"
-    },
-    {
-     "title": "이재명 대통령 지지율 36.4%…전주보다 0.5%p 상승",
-     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3753059",
-     "host": "gukjenews.com",
-     "at": "2026-11-16T03:20:00.000Z"
-    },
-    {
-     "title": "이 대통령 지지율 0.5%p 오른 36.4%.. 민주 34.6%·국힘 43%",
-     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67638?feed=na",
-     "host": "jibs.co.kr",
-     "at": "2026-11-16T02:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 16,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.55,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
@@ -580,25 +525,25 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 16,
-    "spike": 0.1,
+    "score": 17,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
   {
-   "id": "1wbs2wx",
+   "id": "1i4fpv1",
    "title": "[증시전망대] '젠슨 황 충격'에 움츠러든 코스피…앤트로픽 IPO·엔비디...",
-   "firstSeen": "2026-11-15T05:00:00.000Z",
+   "firstSeen": "2026-11-15T23:40:00.000Z",
    "lastSeen": "2026-11-16T01:23:00.000Z",
    "count": 5,
    "sources": 5,
@@ -639,14 +584,14 @@
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -0.38,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 3.21,
      "unit": "%",
-     "z": -0.3
+     "z": 0.3
     },
     "why": [
-     "금 -0.38%"
+     "VIX 변동성 +3.21%"
     ]
    }
   },
@@ -686,17 +631,67 @@
     "level": "watch",
     "label": "관찰",
     "score": 14,
-    "spike": 0.2,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
+    ]
+   }
+  },
+  {
+   "id": "3p8dv2",
+   "title": "[마켓 브리핑] 엔비디아, 승계 작업 불확실성…반도체주 낙폭 확대",
+   "firstSeen": "2026-11-15T22:42:00.000Z",
+   "lastSeen": "2026-11-16T02:51:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피, 장중 낙폭 확대…한때 5,100선 위협",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261116115037PGQ",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-16T02:51:00.000Z"
+    },
+    {
+     "title": "'엔비디아 경계감' 외인 매도에…코스피 낙폭 3% 확대[장중시황]",
+     "link": "https://www.news1.kr/finance/general-stock/6355087",
+     "host": "news1.kr",
+     "at": "2026-11-16T01:56:00.000Z"
+    },
+    {
+     "title": "[마켓 브리핑] 엔비디아, 승계 작업 불확실성…반도체주 낙폭 확대",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346547?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-15T22:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 14,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.66,
+     "unit": "%",
+     "z": -1.3
+    },
+    "why": [
+     "코스피 -3.66%"
     ]
    }
   },
@@ -737,17 +732,66 @@
     "level": "watch",
     "label": "관찰",
     "score": 14,
-    "spike": 0.2,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
+    ]
+   }
+  },
+  {
+   "id": "bbq6ef",
+   "title": "민주당 지지율 34.6% 급락... 이재명 정부 출범 후 최저 [리얼미터]",
+   "firstSeen": "2026-11-15T23:11:00.000Z",
+   "lastSeen": "2026-11-16T04:55:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"민주당 지지율 34.6% 정부 출범 후 최저\"… 국민의힘 43.0%로 오차범위...",
+     "link": "https://theopiniontimes.news/%eb%af%bc%ec%a3%bc%eb%8b%b9-%ec%a7%80%ec%a7%80%ec%9c%a8-34-6-%ec%a0%95%eb%b6%80-%ec%b6%9c%eb%b2%94-%ed%9b%84-%ec%b5%9c%ec%a0%80-%ea%b5%ad%eb%af%bc%ec%9d%98%ed%9e%98-43-0%eb%a1%9c/",
+     "host": "theopiniontimes.news",
+     "at": "2026-11-16T04:55:00.000Z"
+    },
+    {
+     "title": "국민의힘 43% vs 민주당 34.6%… 與 지지율, 이재명 정부 출범 후 최저",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261747",
+     "host": "mediawatch.kr",
+     "at": "2026-11-16T02:46:00.000Z"
+    },
+    {
+     "title": "민주당 지지율 34.6% 급락... 이재명 정부 출범 후 최저 [리얼미터]",
+     "link": "https://www.insight.co.kr/news/582192",
+     "host": "insight.co.kr",
+     "at": "2026-11-16T02:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 14,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.66,
+     "unit": "%",
+     "z": -1.3
+    },
+    "why": [
+     "코스피 -3.66%"
     ]
    }
   },
@@ -787,164 +831,104 @@
     "level": "watch",
     "label": "관찰",
     "score": 14,
-    "spike": 0.2,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
   {
-   "id": "gc1oh9",
-   "title": "중국, 선전 APEC서 정상 간 자유교류 축소…미중러 첫 회담에 '신얄타' ...",
-   "firstSeen": "2026-11-15T23:12:00.000Z",
-   "lastSeen": "2026-11-16T01:06:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "c2duxn",
+   "title": "[이번주 관전포인트] 엔비디아 실적·FOMC 의사록이 이번 주 증시 방향 ...",
+   "firstSeen": "2026-11-15T20:50:00.000Z",
+   "lastSeen": "2026-11-16T01:22:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "politics"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "트럼프, 시진핑 회담 앞두고 핵심광물 공급망 한계 직면…중국 의존도 ...",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=131900",
-     "host": "pennmike.com",
-     "at": "2026-11-16T01:06:00.000Z"
+     "title": "반도체 수출 331% 폭증에도 코스피 불안 … 엔비디아 실적·FOMC 변수",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/16/2026111650067.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-16T01:22:00.000Z"
     },
     {
-     "title": "[시선집중] 문일현 “미중러, 합의 가능성 無. 중국이 원하는 건 시진핑...",
-     "link": "https://n.news.naver.com/mnews/article/214/0001535808?sid=100",
-     "host": "n.news.naver.com",
-     "at": "2026-11-16T01:06:00.000Z"
-    },
-    {
-     "title": "중국, 선전 APEC서 정상 간 자유교류 축소…미중러 첫 회담에 '신얄타' ...",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261116010005744",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-15T23:12:00.000Z"
+     "title": "[이번주 관전포인트] 엔비디아 실적·FOMC 의사록이 이번 주 증시 방향 ...",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=108016",
+     "host": "newskr.kr",
+     "at": "2026-11-15T20:50:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 13,
-    "spike": 0.1,
+    "score": 11,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   },
   {
-   "id": "bbq6ef",
-   "title": "민주당 지지율 34.6% 급락... 이재명 정부 출범 후 최저 [리얼미터]",
-   "firstSeen": "2026-11-15T23:11:00.000Z",
-   "lastSeen": "2026-11-16T04:55:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1cmmidh",
+   "title": "美 반도체주 급락에 환율 상승 경계…외국인 수급 변수[외환브리핑]",
+   "firstSeen": "2026-11-15T23:10:00.000Z",
+   "lastSeen": "2026-11-15T23:30:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
+    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"민주당 지지율 34.6% 정부 출범 후 최저\"… 국민의힘 43.0%로 오차범위...",
-     "link": "https://theopiniontimes.news/%eb%af%bc%ec%a3%bc%eb%8b%b9-%ec%a7%80%ec%a7%80%ec%9c%a8-34-6-%ec%a0%95%eb%b6%80-%ec%b6%9c%eb%b2%94-%ed%9b%84-%ec%b5%9c%ec%a0%80-%ea%b5%ad%eb%af%bc%ec%9d%98%ed%9e%98-43-0%eb%a1%9c/",
-     "host": "theopiniontimes.news",
-     "at": "2026-11-16T04:55:00.000Z"
+     "title": "[투자자 순매수 TOP5] 외국인 수급 엇갈려…삼성전자 순매수·SK하이닉스...",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346562?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-15T23:30:00.000Z"
     },
     {
-     "title": "국민의힘 43% vs 민주당 34.6%… 與 지지율, 이재명 정부 출범 후 최저",
-     "link": "https://www.mediawatch.kr/news/article.html?no=261747",
-     "host": "mediawatch.kr",
-     "at": "2026-11-16T02:46:00.000Z"
-    },
-    {
-     "title": "민주당 지지율 34.6% 급락... 이재명 정부 출범 후 최저 [리얼미터]",
-     "link": "https://www.insight.co.kr/news/582192",
-     "host": "insight.co.kr",
-     "at": "2026-11-16T02:10:00.000Z"
+     "title": "美 반도체주 급락에 환율 상승 경계…외국인 수급 변수[외환브리핑]",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01338246645646376&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-15T23:10:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 13,
-    "spike": 0.1,
+    "score": 11,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -3.55,
+     "change": -3.66,
      "unit": "%",
-     "z": -1.2
+     "z": -1.3
     },
     "why": [
-     "코스피 -3.55%"
-    ]
-   }
-  },
-  {
-   "id": "10pn0zs",
-   "title": "사임 나흘 만 복귀 시동 건 젠슨 황…변수는?",
-   "firstSeen": "2026-11-15T20:57:00.000Z",
-   "lastSeen": "2026-11-16T05:06:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황, 사임 나흘 만에 복귀 추진…백악관 지지 확보 여부 주목",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2019030",
-     "host": "m-i.kr",
-     "at": "2026-11-16T05:06:00.000Z"
-    },
-    {
-     "title": "[젠슨 황 리스크] 사임 나흘 만에 복귀 움직임…실리콘밸리 지지 확산",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731796",
-     "host": "ebn.co.kr",
-     "at": "2026-11-16T04:20:00.000Z"
-    },
-    {
-     "title": "사임 나흘 만 복귀 시동 건 젠슨 황…변수는?",
-     "link": "https://monthly.chosun.com/news/articleView.html?idxno=71976",
-     "host": "monthly.chosun.com",
-     "at": "2026-11-16T04:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 13,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.55,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.55%"
+     "코스피 -3.66%"
     ]
    }
   }
