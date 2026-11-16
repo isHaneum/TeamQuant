@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-16T20:47:51.745Z",
+ "updatedAt": "2026-11-16T21:12:33.720Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 7405.8701171875,
-   "change": -2.06,
-   "z": -2.2,
+   "last": 7416.58984375,
+   "change": -1.92,
+   "z": -2.1,
    "sd": 0.9309920057332112,
    "source": "Yahoo",
    "checked": true
@@ -51,9 +51,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 24482.337890625,
-   "change": -2.6,
-   "z": -2,
+   "last": 24509.7578125,
+   "change": -2.49,
+   "z": -1.9,
    "sd": 1.3165292824773231,
    "source": "Yahoo",
    "checked": true
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 1335.3299560546875,
-   "change": 0.12,
+   "last": 1335.6099853515625,
+   "change": 0.14,
    "z": 0.2,
    "sd": 0.6326251329727653,
    "source": "Yahoo"
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 85.55000305175781,
-   "change": -3.4,
+   "last": 85.48999786376953,
+   "change": -3.47,
    "z": -1.2,
    "sd": 2.877420765091161,
    "source": "Yahoo"
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 3856.5,
-   "change": -0.77,
+   "last": 3854.300048828125,
+   "change": -0.82,
    "z": -0.6,
    "sd": 1.3587354696428326,
    "source": "Yahoo"
@@ -100,8 +100,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 23.709999084472656,
-   "change": 22.85,
+   "last": 23.600000381469727,
+   "change": 22.28,
    "z": 1.9,
    "sd": 11.756874015413716,
    "source": "Yahoo",
@@ -121,20 +121,20 @@
   }
  ],
  "spikes": {
-  "war": -0.9,
+  "war": -0.5,
   "politics": -0.9,
-  "rates": -0.6,
+  "rates": -0.4,
   "trade": -0.1,
   "fx": -0.2,
   "energy": -1.1,
-  "market": -1.2,
-  "credit": 0.1,
+  "market": -0.5,
+  "credit": -0.1,
   "disaster": 0,
   "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 0.4,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -144,7 +144,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.3,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -164,12 +164,12 @@
    "queries": 1
   },
   "market": {
-   "rate": 1,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
   "credit": {
-   "rate": 0.2,
+   "rate": 0,
    "saturated": 0,
    "queries": 2
   },
@@ -185,6 +185,52 @@
   }
  },
  "issues": [
+  {
+   "id": "dzv7s1",
+   "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
+   "firstSeen": "2026-11-15T23:37:00.000Z",
+   "lastSeen": "2026-11-16T13:22:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "美·이스라엘, 이란 에너지 시설 추가 공습 계획…중동 긴장 다시 고조",
+     "link": "https://www.newspim.com/news/view/20261116001423",
+     "host": "newspim.com",
+     "at": "2026-11-16T13:22:00.000Z"
+    },
+    {
+     "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
+     "link": "https://www.news1.kr/world/middleeast-africa/6354665",
+     "host": "news1.kr",
+     "at": "2026-11-15T23:37:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 45,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 22.28,
+     "unit": "%",
+     "z": 1.9
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +22.28%"
+    ]
+   }
+  },
   {
    "id": "1pwdj95",
    "title": "[기자수첩] 사이드카, 경보음은 죄가 없다",
@@ -209,19 +255,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
+    "score": 45,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -249,19 +295,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
+    "score": 45,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -289,19 +335,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
+    "score": 45,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -329,65 +375,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
+    "score": 45,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.06%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "irufi0",
-   "title": "\"미·이, 이란 에너지시설 추가 공격 계획\"…항모 3대 중동 집결(종합)",
-   "firstSeen": "2026-11-16T02:49:00.000Z",
-   "lastSeen": "2026-11-16T13:22:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "美·이스라엘, 이란 에너지 시설 추가 공습 계획…중동 긴장 다시 고조",
-     "link": "https://www.newspim.com/news/view/20261116001423",
-     "host": "newspim.com",
-     "at": "2026-11-16T13:22:00.000Z"
-    },
-    {
-     "title": "\"미·이, 이란 에너지시설 추가 공격 계획\"…항모 3대 중동 집결(종합)",
-     "link": "https://www.news1.kr/world/usa-canada/6355189",
-     "host": "news1.kr",
-     "at": "2026-11-16T02:49:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 45,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 22.85,
-     "unit": "%",
-     "z": 1.9
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +22.85%"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -421,23 +421,23 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": 22.85,
+     "change": 22.28,
      "unit": "%",
      "z": 1.9
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +22.85%"
+     "VIX 변동성 +22.28%"
     ]
    }
   },
   {
-   "id": "12fhkzs",
-   "title": "코스피 3.59% 급락해 5,100선 턱걸이...외국인·기관 동반 매도",
-   "firstSeen": "2026-11-16T07:08:00.000Z",
+   "id": "1i4fpv1",
+   "title": "[개장 시황] 젠슨 황 사임 충격에 흔들린 코스피, 외국인 3,200억 매도 공...",
+   "firstSeen": "2026-11-15T23:40:00.000Z",
    "lastSeen": "2026-11-16T15:00:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "count": 11,
+   "sources": 11,
    "topics": [
     "market"
    ],
@@ -450,6 +450,12 @@
      "at": "2026-11-16T15:00:00.000Z"
     },
     {
+     "title": "'젠슨 황 쇼크' 지속…코스피 5,100선 턱걸이",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261116200637PYF",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-16T11:07:00.000Z"
+    },
+    {
      "title": "코스피, 외국인·기관 매도에 3.59% 급락…장중 5100선 붕괴",
      "link": "https://www.goodkyung.com/news/articleView.html?idxno=293513",
      "host": "goodkyung.com",
@@ -460,12 +466,6 @@
      "link": "https://www.bigtanews.co.kr/article/view/big202611160030",
      "host": "bigtanews.co.kr",
      "at": "2026-11-16T08:22:00.000Z"
-    },
-    {
-     "title": "외국인 1.4조 매도에 코스피 3.59% 급락···5100선 턱걸이",
-     "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=719583",
-     "host": "newsfreezone.co.kr",
-     "at": "2026-11-16T07:40:00.000Z"
     }
    ],
    "assess": {
@@ -477,12 +477,122 @@
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "173kymc",
+   "title": "뉴욕증시, 기술주 약세에 하락 출발",
+   "firstSeen": "2026-11-16T14:50:00.000Z",
+   "lastSeen": "2026-11-16T21:12:00.000Z",
+   "count": 9,
+   "sources": 8,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[서울데이터랩]미국 증시, 기술주·반도체주 급락에 일제히 하락 마감…...",
+     "link": "https://www.seoul.co.kr/news/economy/securities/2026/11/17/20261117500006?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-16T21:12:00.000Z"
+    },
+    {
+     "title": "[속보] 뉴욕증시, 하락⋯나스닥 2.49%↓",
+     "link": "https://www.etoday.co.kr/news/view/2648933",
+     "host": "etoday.co.kr",
+     "at": "2026-11-16T21:08:00.000Z"
+    },
+    {
+     "title": "[속보]뉴욕증시, 엔비디아 등 AI주 급락 속 하락 마감…나스닥 2.49%↓",
+     "link": "https://www.newsis.com/view/NISX20261117_0003870635",
+     "host": "newsis.com",
+     "at": "2026-11-16T21:07:00.000Z"
+    },
+    {
+     "title": "[속보] 반도체 충격에 뉴욕증시 하락…다우지수 700포인트 빠져",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346869?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T21:03:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "105w8y1",
+   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
+   "firstSeen": "2026-11-16T04:38:00.000Z",
+   "lastSeen": "2026-11-16T21:07:00.000Z",
+   "count": 8,
+   "sources": 7,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황 복귀론 제동 건 엔비디아 이사회…트럼프는 \"젠슨 황 복귀, 나쁜...",
+     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8499",
+     "host": "moneystorm.kr",
+     "at": "2026-11-16T21:07:00.000Z"
+    },
+    {
+     "title": "젠슨 황 복귀 요구 커지는 실리콘밸리…엔비디아 실적 발표에 쏠린 눈",
+     "link": "https://www.kukinews.com/article/view/kuk202611160260",
+     "host": "kukinews.com",
+     "at": "2026-11-16T21:02:00.000Z"
+    },
+    {
+     "title": "트럼프, 젠슨 황 CEO 복귀 지지…엔비디아 이사회는 논의 안 해",
+     "link": "https://www.aitimes.com/news/articleView.html?idxno=217468",
+     "host": "aitimes.com",
+     "at": "2026-11-16T20:54:00.000Z"
+    },
+    {
+     "title": "[핫이슈] 엔비디아 이사회 \"젠슨 황 복귀 검토 안 해\"…삼성전자·SK하이...",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=93687",
+     "host": "the-today.com",
+     "at": "2026-11-16T20:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -526,18 +636,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
+    "score": 34,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -545,7 +655,7 @@
    "id": "11lxl60",
    "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
    "firstSeen": "2026-11-15T23:32:00.000Z",
-   "lastSeen": "2026-11-16T20:38:00.000Z",
+   "lastSeen": "2026-11-16T21:10:00.000Z",
    "count": 6,
    "sources": 5,
    "topics": [
@@ -554,6 +664,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[속보]엔비디아 실적 앞두고 반도체주 급락…나스닥 2.5%↓",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01371046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-16T21:10:00.000Z"
+    },
     {
      "title": "엔비디아 실적 앞두고 뉴욕증시 급락…AI 투자 불안에 글로벌 금융시장...",
      "link": "https://www.geconomy.co.kr/news/article.html?no=325732",
@@ -571,86 +687,23 @@
      "link": "https://www.newspim.com/news/view/20261116001439",
      "host": "newspim.com",
      "at": "2026-11-16T14:27:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 프리뷰, 주가지수 선물 하락…엔비디아 실적·앤스로픽 상장 ...",
-     "link": "https://www.newspim.com/news/view/20261116001408",
-     "host": "newspim.com",
-     "at": "2026-11-16T13:55:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
+    "score": 33,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "105w8y1",
-   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
-   "firstSeen": "2026-11-16T04:38:00.000Z",
-   "lastSeen": "2026-11-16T20:28:00.000Z",
-   "count": 5,
-   "sources": 4,
-   "topics": [
-    "war",
-    "politics",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[핫이슈] 엔비디아 이사회 \"젠슨 황 복귀 검토 안 해\"…삼성전자·SK하이...",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93687",
-     "host": "the-today.com",
-     "at": "2026-11-16T20:28:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 없는' 엔비디아 실적 발표… 코스피 반등 열쇠 될까",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261117010006207",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-16T09:04:00.000Z"
-    },
-    {
-     "title": "[투자전략 따라잡기] 젠슨 황 없는 엔비디아 실적 공개 임박",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346685?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
-    },
-    {
-     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.06,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -734,18 +787,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
@@ -789,128 +842,68 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   },
   {
-   "id": "s8v0oo",
-   "title": "美, 중국 AI칩 원격 이용도 통제… 젠슨 황 파문 '일파만파'",
-   "firstSeen": "2026-11-16T02:59:00.000Z",
-   "lastSeen": "2026-11-16T20:42:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "fznct2",
+   "title": "공정위 과징금에도 국고채 10년물 입찰 호조…\"12월 공급축소 대비\"",
+   "firstSeen": "2026-11-16T05:06:00.000Z",
+   "lastSeen": "2026-11-16T20:30:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "trade"
+    "rates",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "美, 중국의 AI칩 원격 이용도 통제…동남아 우회로 겨냥",
-     "link": "https://www.kbmaeil.com/article/20261117500003",
-     "host": "kbmaeil.com",
-     "at": "2026-11-16T20:42:00.000Z"
-    },
-    {
-     "title": "‘젠슨황 쇼크’ 미, AI칩 중국 원격접속 차단… 동남아도 통제",
-     "link": "https://www.kmib.co.kr/article/20261117500036",
-     "host": "kmib.co.kr",
+     "title": "[국고채 금리] \"위험자산은 피하자\"… 공정위 과징금 여파 뚫고 국고채...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627489",
+     "host": "cbci.co.kr",
      "at": "2026-11-16T20:30:00.000Z"
     },
     {
-     "title": "미, AI칩 중국 원격접속 차단…동남아도 통제",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261117051852Q5o",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-16T20:19:00.000Z"
+     "title": "담합 과징금 후 첫 10년물 입찰 ‘양호’…연말에도 채권 매수세 견조",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=02735526645646376&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-16T06:56:00.000Z"
     },
     {
-     "title": "美, 중국 AI칩 원격 이용도 통제… 젠슨 황 파문 '일파만파'",
-     "link": "https://www.dkilbo.com/news/articleView.html?idxno=561021",
-     "host": "dkilbo.com",
-     "at": "2026-11-16T20:04:00.000Z"
+     "title": "공정위 과징금에도 국고채 10년물 입찰 호조…\"12월 공급축소 대비\"",
+     "link": "https://www.yna.co.kr/view/AKR20261116099900008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-16T05:06:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
+    "score": 26,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -2.06,
+     "change": -1.92,
      "unit": "%",
-     "z": -2.2
+     "z": -2.1
     },
     "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "qkxyrh",
-   "title": "'젠슨황 복귀' 힘주는 트럼프...\"앨리스 황, 중국 스파이 아닐 수도\"",
-   "firstSeen": "2026-11-16T17:11:00.000Z",
-   "lastSeen": "2026-11-16T20:39:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 “앨리스 황, 스파이 아닐 수도… 中 자극하고 싶지 않아”",
-     "link": "https://www.chosun.com/international/us/2026/11/17/VLFZCTUEAFFU5PREM5W25I7EYM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-16T20:39:00.000Z"
-    },
-    {
-     "title": "트럼프 \"앨리스 황, 간첩 아닐 수도…中 자극 원치 않아\"",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261117052639eEc",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-16T20:27:00.000Z"
-    },
-    {
-     "title": "美 중국 AI 반도체 우회 접근 차단…트럼프 \"앨리스 황 스파이 아닐수도...",
-     "link": "https://view.asiae.co.kr/article/2026111705115625348",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-16T20:11:00.000Z"
-    },
-    {
-     "title": "'젠슨황 복귀' 힘주는 트럼프...\"앨리스 황, 중국 스파이 아닐 수도\"",
-     "link": "https://www.mt.co.kr/world/2026/11/17/2026111705072487883",
-     "host": "mt.co.kr",
-     "at": "2026-11-16T20:09:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.06,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "S&P 500 -2.06%(평소의 2.2배)"
+     "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
   }
