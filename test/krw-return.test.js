@@ -43,10 +43,12 @@ test('모의·예시처럼 계좌 합계가 없으면 달러 기준임을 basis 
   assert.equal(holdingsReturn(normalizeTossHoldings({ items: [item('KRW', 100, 110)] }, null)).basis, 'krw');
 });
 
-test('환율이 없으면 숫자를 만들지 않는다', () => {
+test('환율이 없으면 원화 금액은 만들지 않고, 토스가 준 손익률만 그대로 보인다(F19)', () => {
   const r = holdingsReturn(normalizeTossHoldings(fake, null));
-  assert.ok(!Number.isFinite(r.value));
-  assert.ok(!Number.isFinite(r.returnPct));
+  assert.ok(!Number.isFinite(r.value) && !Number.isFinite(r.cost) && !Number.isFinite(r.pnl));
+  assert.equal(r.returnPct, 5);
+  assert.equal(r.basis, 'purchase_fx');
+  assert.ok(!Number.isFinite(holdingsReturn(normalizeTossHoldings({ items: fake.items }, null)).returnPct), '토스 합계도 없으면 수익률도 없음');
 });
 
 test('자산 추이: 오늘 원금선 끝점은 산 날 환율 원금(costKrwNow)을 쓴다', () => {

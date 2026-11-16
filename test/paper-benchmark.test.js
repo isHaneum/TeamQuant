@@ -1,7 +1,7 @@
 // 비교선(순수 함수): 계획 → 국가 비중·현금 정의 · 가치 지수(환율 환산·빈 날 끌어오기·from 에 1.0) · 절차 vs 비교선 비교 · 평가점 2개 미만이면 null · 읽기(캐시·갱신 실패 시 마지막 값·범위). 네트워크 없음.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { benchmarkDefinition, benchmarkSeries, compare, createBenchmarkReader, BENCHMARK_LABEL, BENCHMARK_LEGS, BENCHMARK_HOLD_REASON, BENCHMARK_STALE_NOTE } from '../lib/paper-benchmark.js';
+import { benchmarkDefinition, benchmarkSeries, compare, createBenchmarkReader, closeAvailableAt, BENCHMARK_LABEL, BENCHMARK_LEGS, BENCHMARK_HOLD_REASON, BENCHMARK_STALE_NOTE } from '../lib/paper-benchmark.js';
 
 const near = (a, b, eps = 1e-9) => assert.ok(Math.abs(a - b) < eps, `${a} ≠ ${b}`);
 const cs = pairs => pairs.map(([date, close]) => ({ date, open: close, close }));
@@ -23,7 +23,9 @@ test('가치 지수: from 에 1.0 · 국내분은 KODEX 종가 비율 · 미국�
   assert.deepEqual(s.map(p => p.date), ['2026-11-06', '2026-11-07', '2026-11-08', '2026-11-09', '2026-11-10']);
   near(s[0].value, 1); near(s[1].value, 1, 1e-9); near(s[2].value, 1);
   near(s[3].value, 0.5 + 0.2 * 1.1 + 0.3 * 1.05);               // 환율 환산: 500×1470 / (500×1400) = 1.05
-  near(s[4].value, 0.5 + 0.2 * 1.1 + 0.3 * (550 * 1470) / (500 * 1400)); // KODEX 봉 없음 → 1.1 유지
+  // KODEX 봉 없음 → 1.1 유지 · BM3: SPY 11-10 종가(550)는 한국 11-11 아침에야 나오므로 한국 11-10 에는 11-09 종가(500) — 예전 기대값(550)은 그 시각에 없던 값이었다
+  near(s[4].value, 0.5 + 0.2 * 1.1 + 0.3 * (500 * 1470) / (500 * 1400));
+  near(benchmarkSeries({ from: '2026-11-06', to: '2026-11-11', weights: { KR: 20, US: 30, cash: 50 }, krCandles: kr, usCandles: us, fxCandles: fx }).at(-1).value, 0.5 + 0.2 * 1.1 + 0.3 * (550 * 1470) / (500 * 1400)); // 한국 11-11 에는 11-10 종가
   // 시작값은 from 이하 마지막 종가(11-06 100, 11-05 95 아님) · from 이전 봉이 없으면 첫 봉
   near(benchmarkSeries({ from: '2026-11-08', to: '2026-11-09', weights: { KR: 100, US: 0, cash: 0 }, krCandles: kr })[1].value, 1.1);
   near(benchmarkSeries({ from: '2026-11-01', to: '2026-11-09', weights: { KR: 100, US: 0, cash: 0 }, krCandles: kr }).at(-1).value, 110 / 95);
@@ -73,9 +75,28 @@ test('BM2: 미국분 환율은 계좌 평가점 환율(marks.fx) — 일봉 종�
   assert.ok(Math.abs(s.at(-1).value - 1.02) < 1e-9, '평가점 환율 1300→1326 = +2%');
   assert.equal(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, usCandles: us, fxCandles: fx, fxMarks: [{ date: '2026-11-10', fx: 1326 }] }).at(-1).value, 1, '첫 평가점이 from 뒤면 일봉 종가(1400→1400)');
   assert.ok(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, usCandles: us, fxCandles: [], fxMarks: [{ date: '2026-11-09', fx: 1300 }] }), '평가점 환율이 있으면 환율 봉이 없어도 계산');
-  const def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } }); assert.equal(def.version, 'BM2-2026-11-16');
+  const def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } }); assert.equal(def.version, 'BM3-2026-11-17');
   const r = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : fx }) })(def, [{ date: '2026-11-09', total: 100, fx: 1300 }, { date: '2026-11-10', total: 102, fx: 1326 }]);
   assert.deepEqual([r.benchRetPct, r.diffPp], [2, 0]);
+});
+
+test('BM3: 평가 시각에 끝난 장의 종가만 쓴다 — 지수만 든 계좌는 차이 0%p (교차 검증 F15 회귀) · 국내 16:00 KST · 미국 뉴욕 17:00(서머타임)', async () => {
+  // SPY 만 든 계좌: 11-09(월) 23:50 KST 평가점의 미국 종가는 11-06(금) 600 이 마지막(11-09 종가 612 는 한국 11-10 07:00 에 나옴). 11-16 23:50 KST 는 11-13 종가 612.
+  const us = cs([['2026-11-06', 600], ['2026-11-09', 612], ['2026-11-10', 612], ['2026-11-13', 612], ['2026-11-16', 630]]), def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } });
+  const marks = [{ date: '2026-11-09', total: 100, fx: 1300, at: '2026-11-09T14:50:00Z' }, { date: '2026-11-16', total: 102, fx: 1300, at: '2026-11-16T14:50:00Z' }];
+  const r = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : [] }) })(def, marks);
+  assert.deepEqual([r.ownRetPct, r.benchRetPct, r.diffPp], [2, 2, 0], 'BM2 는 시작값으로 612(미래 값)를 써 비교선 +2.94% · 계좌 −0.94%p 로 나왔다');
+  // 시각이 없는 평가점은 그 한국 날짜 끝(23:59:59)으로 본다 → 같은 결과
+  const r2 = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : [] }) })(def, marks.map(({ at, ...m }) => m));
+  assert.equal(r2.diffPp, 0);
+  // 국내: 16:00 KST 전 평가점은 전날 종가, 뒤면 그날 종가
+  const kr = cs([['2026-11-06', 100], ['2026-11-09', 110], ['2026-11-10', 121]]), w = { KR: 100, US: 0, cash: 0 };
+  near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T01:00:00Z', '2026-11-10': '2026-11-10T09:00:00Z' } }).at(-1).value, 121 / 100); // 시작 10:00 KST → 11-06 종가
+  near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T08:00:00Z', '2026-11-10': '2026-11-10T09:00:00Z' } }).at(-1).value, 121 / 110); // 시작 17:00 KST → 11-09 종가
+  // 미국 종가가 쓰이는 시각: 겨울 = 뉴욕 17:00 EST = 22:00Z, 여름 = 17:00 EDT = 21:00Z
+  assert.equal(new Date(closeAvailableAt('2026-11-16', 'US')).toISOString(), '2026-11-16T22:00:00.000Z');
+  assert.equal(new Date(closeAvailableAt('2026-07-01', 'US')).toISOString(), '2026-07-01T21:00:00.000Z');
+  assert.equal(new Date(closeAvailableAt('2026-11-16', 'KR')).toISOString(), '2026-11-16T07:00:00.000Z');
 });
 
 test('비교: 시작 = 첫 평가점 총자산, 지금 = 마지막 평가점 · 비교선은 그 날짜 이하 마지막 점 · diffPp = 절차 − 비교선 · 평가점 2개 미만·비교선 없음은 null', () => {

@@ -29,11 +29,47 @@ test('체결을 되돌려 월말 보유 수량과 원금을 복원한다', () =>
   assert.equal(jan.value, 10 * 105);
   assert.equal(feb.value, 15 * 125);
   assert.equal(now.value, 12 * 140);
-  // 원금: 지금 1300 → 3월 매도(390) 되돌리면 1690, 2월 매수(600) 되돌리면 1090, 1월 매수(1000) 되돌리면 90
-  assert.equal(feb.principal, 1690);
-  assert.equal(jan.principal, 1090);
-  // 기간 손익 = 마지막(1680-1300) - 처음(0-90) = 470
+  // 원금 = 그때 들고 있던 주식의 원가(이동평균): 1월 말 10주 × 100 = 1000, 2월 말 1000 + 600 = 1600, 첫 매수 전 0.
+  //   예전 기대값(1월 1090 · 2월 1690)은 3월 매도를 판 금액(390)으로 되더한 값이라 틀렸다(2026-11-17 교차 검증 F18).
+  assert.equal(feb.principal, 1600);
+  assert.equal(jan.principal, 1000);
+  assert.equal(dec.principal, 0);
+  // 기간 손익 = 마지막 평가 1680 − 처음 평가 0 − 그 사이 순매수(1000 + 600 − 390) = 470 (판 이익 포함)
   assert.equal(t.periodGain, 470);
+});
+
+test('이익을 보고 판 적이 있어도 그 전 달의 넣은 돈·손익은 그때 원가 기준(F18 회귀) · 기간 손익은 판 이익까지 센다', () => {
+  const orders = [order('AAA', 'BUY', 100, 10000, '2026-06-10T01:00:00Z'), order('AAA', 'SELL', 50, 20000, '2026-09-10T01:00:00Z')];
+  const positions = [{ symbol: 'AAA', currency: 'KRW', quantity: 50, cost: 500000, value: 1000000 }];
+  const c = { AAA: candles([['2026-06-30', 12000], ['2026-07-31', 13000], ['2026-08-31', 15000], ['2026-09-30', 20000], ['2026-10-30', 20000]]) };
+  const t = buildAssetTimeline({ positions, orders, candlesBySymbol: c, today: '2026-11-17', months: 7, coverageFrom: '2026-01-01' });
+  const by = Object.fromEntries(t.points.map(p => [p.month, p]));
+  assert.deepEqual([by['2026-05'].value, by['2026-05'].principal], [0, 0]);              // 예전: 넣은 돈 50만 · 손익 −50만
+  assert.deepEqual([by['2026-06'].value, by['2026-06'].principal], [1200000, 1000000]); // 예전: 넣은 돈 150만 · 손익 −30만
+  assert.deepEqual([by['2026-09'].value, by['2026-09'].principal], [1000000, 500000]);
+  assert.equal(t.periodGain, 1000000);
+});
+
+test('범위 앞부터 들고 있던 종목은 지금 원가에서 거꾸로 되돌린다 · 다 판 뒤 다시 산 종목은 그 매도 전 원금을 비운다', () => {
+  const c = { AAA: candles([['2026-01-30', 120], ['2026-02-27', 130], ['2026-03-13', 150]]) };
+  // 범위 앞부터 30주(평균 100) → 2월 10일 10주 매도 → 지금 20주 원가 2000
+  const t1 = buildAssetTimeline({ positions: [{ symbol: 'AAA', currency: 'KRW', quantity: 20, cost: 2000, value: 3000 }], orders: [order('AAA', 'SELL', 10, 140, '2026-02-10T01:00:00Z')], candlesBySymbol: c, today: '2026-03-15', months: 3 });
+  assert.equal(t1.points[0].principal, 3000);
+  assert.equal(t1.points[1].principal, 2000);
+  // 범위 앞 10주 → 2월 10일 10주 모두 매도 → 3월 1일 5주 매수(지금 5주 원가 500): 1월 말 원가는 알 수 없음
+  const t2 = buildAssetTimeline({ positions: [{ symbol: 'AAA', currency: 'KRW', quantity: 5, cost: 500, value: 750 }], orders: [order('AAA', 'SELL', 10, 140, '2026-02-10T01:00:00Z'), order('AAA', 'BUY', 5, 100, '2026-03-01T01:00:00Z')], candlesBySymbol: c, today: '2026-03-15', months: 3 });
+  assert.equal(t2.points[0].principal, null);
+  assert.equal(t2.points[1].principal, 0);
+  assert.ok(t2.warnings.some(w => /다 판 뒤 다시 산/.test(w)));
+});
+
+test('미국 종목 원금: 산 날 환율 원금 합(costKrwNow)에서 나눈 평균 환율 · 범위 안에서 산 미국 종목은 체결일 환율', () => {
+  // AA: 범위 앞부터 보유(달러 원가 100) · BB: 2월 10일 1주 $50 매수(그날 환율 1400 → 70,000원) · 지금 원화 원금 합 220,000 → AA 평균 환율 1500
+  const positions = [{ symbol: 'AA', currency: 'USD', quantity: 1, cost: 100, value: 120 }, { symbol: 'BB', currency: 'USD', quantity: 1, cost: 50, value: 60 }];
+  const t = buildAssetTimeline({ positions, orders: [order('BB', 'BUY', 1, 50, '2026-02-10T01:00:00Z', 'USD')], candlesBySymbol: { AA: candles([['2026-01-30', 110]]), BB: candles([['2026-01-30', 45]]) }, fxCandles: candles([['2026-01-30', 1450], ['2026-02-10', 1400]]), fxNow: 1300, today: '2026-03-15', months: 3, costKrwNow: 220000 });
+  assert.equal(t.points[0].principal, 150000);
+  assert.equal(t.points[1].principal, 220000);
+  assert.equal(t.points.at(-1).principal, 220000);
 });
 
 test('조회 범위 밖이나 수량이 안 맞는 달은 비워 둔다', () => {
@@ -65,6 +101,17 @@ test('매매 성적표: 지수보다 많이 오른 매수는 잘 산 매수, 판
   assert.equal(r.sells.grade, 'bad');
   assert.equal(r.regret.symbol, 'BBB');
   assert.equal(fillsFrom(orders).length, 2);
+});
+
+test('매매 성적표: 미국 체결은 뉴욕 날짜의 지수 종가와 비교한다(F06 회귀 · 한국 날짜로는 다음 장 종가였음)', () => {
+  // 2026-11-09T16:00Z = 뉴욕 11-09 11:00 = 한국 11-10 01:00. 지수: 11-09 종가 100, 11-10 종가 102, 지금 110.
+  const orders = [order('USX', 'BUY', 1, 50, '2026-11-09T16:00:00Z', 'USD')];
+  const idx = { name: 'S&P500', candles: candles([['2026-11-06', 98], ['2026-11-09', 100], ['2026-11-10', 102], ['2026-11-20', 110]]) };
+  const r = reviewTrades(orders, { candlesBySymbol: { USX: candles([['2026-11-20', 60]]) }, indexFor: () => idx, today: '2026-11-21' });
+  assert.equal(r.rows[0].market, 10);  // 110/100 − 1 (예전: 110/102 − 1 = 7.8)
+  assert.equal(r.rows[0].edge, 10);    // 주식 +20% − 지수 +10%
+  assert.equal(fillsFrom(orders)[0].date, '2026-11-10');
+  assert.equal(fillsFrom(orders)[0].marketDate, '2026-11-09');
 });
 
 test('최근 며칠 안의 체결은 평가를 보류한다', () => {

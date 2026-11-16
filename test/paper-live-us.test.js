@@ -198,14 +198,16 @@ test('헤드라인 비교선(엔진): 기준선에 계획의 국가 비중·현�
   // 지수·환율에 11-09 → 11-10 변화를 붙인다: KODEX 200 +2%, SPY 그대로, 환율 +1% → 비교선(KR 20 · US 30 · 현금 50) = 0.5 + 0.2×1.02 + 0.3×1.01 = 1.007 (+0.7%)
   // BM2(2026-11-16): 미국분 환율은 평가점 환율(그 시각 읽은 KRW=X 마지막 값)이다. 그래서 11-10 봉은 11-10 이 된 뒤에만 보이게 한다(첫 평가점 1400 · 다음 날 1414).
   const extra = { '069500': [70000, 71400], SPY: [180, 180], 'KRW=X': [1400, 1414] };
-  const rm = async (sym, range) => { if (sym === '069500' && range === '1y') reads['069500']++; const d = await readMarket(sym, range); const x = extra[sym]; return x ? { candles: [...d.candles.filter(c => c.date < '2026-11-09'), { date: '2026-11-09', open: x[0], close: x[0] }, ...(t >= Date.parse('2026-11-10T00:00:00+09:00') ? [{ date: '2026-11-10', open: x[1], close: x[1] }] : [])] } : d; };
+  // BM3(2026-11-17): 평가 시각에 끝난 장의 종가만 쓴다. 첫 평가점(11-09 10:30 KST)에 보이는 마지막 종가는 11-06(금)이므로 11-06 도 같은 값으로 붙인다.
+  const rm = async (sym, range) => { if (sym === '069500' && range === '1y') reads['069500']++; const d = await readMarket(sym, range); const x = extra[sym]; return x ? { candles: [...d.candles.filter(c => c.date < '2026-11-06'), { date: '2026-11-06', open: x[0], close: x[0] }, { date: '2026-11-09', open: x[0], close: x[0] }, ...(t >= Date.parse('2026-11-10T00:00:00+09:00') ? [{ date: '2026-11-10', open: x[1], close: x[1] }] : [])] } : d; };
   let pl = createPaperLive({ client: b.client, store, readMarket: rm, now: () => t, limits: { maxOrderKrw: 20_000_000, maxDailyKrw: 60_000_000 } });
   await pl.run({ rules, plan }); // plan: 삼성전자 20 / NVDA 20 / SPY 10 → KR 20 · US 30 · 현금 50
   let st = await pl.status();
   assert.deepEqual(st.baseline.benchmark.weights, { KR: 20, US: 30, cash: 50 }); assert.equal(st.baseline.benchmark.label, '국가 비중·현금 일치 지수 투자'); assert.equal(st.baseline.benchmark.legs.US.symbol, 'SPY'); assert.equal(st.baseline.benchmark.legs.KR.symbol, '069500');
   assert.equal(st.benchmark.diffPp, null, '평가점이 하나면 비교 없음'); assert.equal(st.benchmark.error, null); assert.equal(st.benchmark.days, 1); assert.deepEqual(st.benchmark.weights, { KR: 20, US: 30, cash: 50 });
   // 다음 날: 절차 총자산 +1%(현금 변동) vs 비교선 +0.7% → 지수 대비 +0.3%p
-  b.state.cash = 50_500_000; t += 864e5; st = await pl.status();
+  // BM3: 11-10 국내 종가는 16:00 KST 뒤에야 쓰이므로 다음 평가점은 17:30 KST(예전 시나리오의 10:30 은 그 시각에 없던 11-10 종가를 썼다)
+  b.state.cash = 50_500_000; t += 864e5 + 7 * 3600e3; st = await pl.status();
   const own = (st.marks.at(-1).total / st.marks[0].total - 1) * 100; assert.ok(Math.abs(own - 1) < 1e-9);
   assert.equal(st.benchmark.ownRetPct, 1); assert.ok(Math.abs(st.benchmark.benchRetPct - 0.7) < 1e-9, String(st.benchmark.benchRetPct)); assert.ok(Math.abs(st.benchmark.diffPp - (st.benchmark.ownRetPct - st.benchmark.benchRetPct)) < 0.011); assert.equal(st.benchmark.diffPp, 0.3);
   assert.deepEqual([st.benchmark.from, st.benchmark.asOf, st.benchmark.days, st.benchmark.error], ['2026-11-09', '2026-11-10', 2, null]);
