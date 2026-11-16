@@ -24,3 +24,18 @@
 /* 2026-11-09 더보기 드롭다운: 메뉴 줄(nav)의 overflow:auto가 절대 위치 메뉴를 잘라 보이지 않던 결함 수정. 메뉴 줄은 줄바꿈으로 처리하고 잘라내지 않는다. */
 .overview-nav nav{overflow:visible!important;white-space:normal!important}
 .workspace-more>div{max-width:calc(100vw - 24px)}
+
+/* 2026-11-16 한 줄 머리글: 브랜드 줄(70px)과 메뉴 줄(71px)이 둘 다 위에 고정돼 141px 를 늘 차지했다. 메뉴를 아이콘 옆으로 옮겨 60px 한 줄로 합친다(workspace-ui.js tq-onebar). */
+body.tq-onebar .topbar{height:60px;gap:12px;padding:0 24px}
+body.tq-onebar .topbar .brand{flex:none;gap:0;border-radius:10px}
+body.tq-onebar .topbar .brand>span:not(.brand-mark){display:none}
+body.tq-onebar .topbar .brand-mark{width:34px;height:34px;border-radius:10px;background:none;overflow:hidden}
+body.tq-onebar .topbar .brand-mark svg{display:block;width:100%;height:100%}
+body.tq-onebar .topbar .brand:focus-visible{outline:2px solid #245ad1;outline-offset:3px}
+body.tq-onebar .topbar .workspace-main{flex:1;min-width:0;align-self:stretch;flex-wrap:nowrap;gap:2px;padding:0 0 0 6px}
+body.tq-onebar .topbar .workspace-more{align-self:stretch;display:flex}
+body.tq-onebar .topbar .workspace-main>button,body.tq-onebar .topbar .workspace-more>summary{height:60px;display:flex;align-items:center;padding:3px 14px 0;font-size:16px;white-space:nowrap}
+body.tq-onebar .topbar .top-actions{flex:none;flex-wrap:nowrap}
+body.tq-onebar .sidebar.overview-nav{display:none!important}
+@media(max-width:700px){body.tq-onebar .topbar{padding:0 10px;gap:4px}body.tq-onebar .topbar .brand-mark{width:30px;height:30px;border-radius:9px}body.tq-onebar .topbar .workspace-main{padding:0}body.tq-onebar .topbar .workspace-main>button,body.tq-onebar .topbar .workspace-more>summary{font-size:15px;padding:3px 7px 0}body.tq-onebar .workspace-settings-button{padding:7px 10px}}
+@media(max-width:400px){body.tq-onebar .topbar .workspace-main>button,body.tq-onebar .topbar .workspace-more>summary{font-size:14px;padding:3px 5px 0}}
