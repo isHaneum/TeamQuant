@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-16T21:12:33.720Z",
+ "updatedAt": "2026-11-16T21:27:08.565Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 1335.6099853515625,
-   "change": 0.14,
+   "last": 1335.489990234375,
+   "change": 0.13,
    "z": 0.2,
    "sd": 0.6326251329727653,
    "source": "Yahoo"
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 85.48999786376953,
-   "change": -3.47,
+   "last": 85.4000015258789,
+   "change": -3.57,
    "z": -1.2,
    "sd": 2.877420765091161,
    "source": "Yahoo"
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 3854.300048828125,
-   "change": -0.82,
+   "last": 3853.800048828125,
+   "change": -0.84,
    "z": -0.6,
    "sd": 1.3587354696428326,
    "source": "Yahoo"
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 23.600000381469727,
-   "change": 22.28,
-   "z": 1.9,
+   "last": 23.020000457763672,
+   "change": 19.27,
+   "z": 1.6,
    "sd": 11.756874015413716,
    "source": "Yahoo",
    "checked": true
@@ -123,11 +123,11 @@
  "spikes": {
   "war": -0.5,
   "politics": -0.9,
-  "rates": -0.4,
+  "rates": -0.3,
   "trade": -0.1,
   "fx": -0.2,
   "energy": -1.1,
-  "market": -0.5,
+  "market": -0.1,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.4
@@ -144,7 +144,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.6,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -164,8 +164,8 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.1,
-   "saturated": 0,
+   "rate": 2.8,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -185,52 +185,6 @@
   }
  },
  "issues": [
-  {
-   "id": "dzv7s1",
-   "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
-   "firstSeen": "2026-11-15T23:37:00.000Z",
-   "lastSeen": "2026-11-16T13:22:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "美·이스라엘, 이란 에너지 시설 추가 공습 계획…중동 긴장 다시 고조",
-     "link": "https://www.newspim.com/news/view/20261116001423",
-     "host": "newspim.com",
-     "at": "2026-11-16T13:22:00.000Z"
-    },
-    {
-     "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
-     "link": "https://www.news1.kr/world/middleeast-africa/6354665",
-     "host": "news1.kr",
-     "at": "2026-11-15T23:37:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 45,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 22.28,
-     "unit": "%",
-     "z": 1.9
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +22.28%"
-    ]
-   }
-  },
   {
    "id": "1pwdj95",
    "title": "[기자수첩] 사이드카, 경보음은 죄가 없다",
@@ -392,6 +346,107 @@
    }
   },
   {
+   "id": "dzv7s1",
+   "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
+   "firstSeen": "2026-11-15T23:37:00.000Z",
+   "lastSeen": "2026-11-16T13:22:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "美·이스라엘, 이란 에너지 시설 추가 공습 계획…중동 긴장 다시 고조",
+     "link": "https://www.newspim.com/news/view/20261116001423",
+     "host": "newspim.com",
+     "at": "2026-11-16T13:22:00.000Z"
+    },
+    {
+     "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
+     "link": "https://www.news1.kr/world/middleeast-africa/6354665",
+     "host": "news1.kr",
+     "at": "2026-11-15T23:37:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 40,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 19.27,
+     "unit": "%",
+     "z": 1.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +19.27%"
+    ]
+   }
+  },
+  {
+   "id": "1fnb3hd",
+   "title": "[속보]미국증시 나스닥 1.42% 급락…다우·S&P500 동반 하락, 엔비디아 실...",
+   "firstSeen": "2026-11-16T15:00:00.000Z",
+   "lastSeen": "2026-11-16T21:24:00.000Z",
+   "count": 14,
+   "sources": 13,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시, 기술주 약세에 하락⋯나스닥 2.49%↓ [상보]",
+     "link": "https://www.etoday.co.kr/news/view/2648937",
+     "host": "etoday.co.kr",
+     "at": "2026-11-16T21:24:00.000Z"
+    },
+    {
+     "title": "[속보]엔비디아 또 4%대 급락…나스닥 2.5%↓",
+     "link": "https://www.munhwa.com/article/11631734?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-16T21:20:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 일제히 하락…엔비디아 4.1%↓",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261117061900h7x",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-16T21:19:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 여진에 일제히 하락…나스닥 2.49%↓",
+     "link": "https://www.newspim.com/news/view/20261117000013",
+     "host": "newspim.com",
+     "at": "2026-11-16T21:17:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "16na7tr",
    "title": "종전 협상에도 러·우 공습전 치열…에너지·군사시설 집중 타격(종합)",
    "firstSeen": "2026-11-16T15:49:00.000Z",
@@ -415,40 +470,34 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
+    "score": 37,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": 22.28,
+     "change": 19.27,
      "unit": "%",
-     "z": 1.9
+     "z": 1.6
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +22.28%"
+     "VIX 변동성 +19.27%"
     ]
    }
   },
   {
-   "id": "1i4fpv1",
-   "title": "[개장 시황] 젠슨 황 사임 충격에 흔들린 코스피, 외국인 3,200억 매도 공...",
-   "firstSeen": "2026-11-15T23:40:00.000Z",
-   "lastSeen": "2026-11-16T15:00:00.000Z",
-   "count": 11,
-   "sources": 11,
+   "id": "12fhkzs",
+   "title": "코스피 3.59% 급락해 5,100선 턱걸이...외국인·기관 동반 매도",
+   "firstSeen": "2026-11-16T07:08:00.000Z",
+   "lastSeen": "2026-11-16T11:07:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
-    {
-     "title": "[심층분석] 코스피 5100선 붕괴에 코스닥 4%대 급락…검은 월요일 직격탄...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94381",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-16T15:00:00.000Z"
-    },
     {
      "title": "'젠슨 황 쇼크' 지속…코스피 5,100선 턱걸이",
      "link": "http://www.yonhapnewstv.co.kr/news/MYH20261116200637PYF",
@@ -466,116 +515,12 @@
      "link": "https://www.bigtanews.co.kr/article/view/big202611160030",
      "host": "bigtanews.co.kr",
      "at": "2026-11-16T08:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 37,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "173kymc",
-   "title": "뉴욕증시, 기술주 약세에 하락 출발",
-   "firstSeen": "2026-11-16T14:50:00.000Z",
-   "lastSeen": "2026-11-16T21:12:00.000Z",
-   "count": 9,
-   "sources": 8,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[서울데이터랩]미국 증시, 기술주·반도체주 급락에 일제히 하락 마감…...",
-     "link": "https://www.seoul.co.kr/news/economy/securities/2026/11/17/20261117500006?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-16T21:12:00.000Z"
     },
     {
-     "title": "[속보] 뉴욕증시, 하락⋯나스닥 2.49%↓",
-     "link": "https://www.etoday.co.kr/news/view/2648933",
-     "host": "etoday.co.kr",
-     "at": "2026-11-16T21:08:00.000Z"
-    },
-    {
-     "title": "[속보]뉴욕증시, 엔비디아 등 AI주 급락 속 하락 마감…나스닥 2.49%↓",
-     "link": "https://www.newsis.com/view/NISX20261117_0003870635",
-     "host": "newsis.com",
-     "at": "2026-11-16T21:07:00.000Z"
-    },
-    {
-     "title": "[속보] 반도체 충격에 뉴욕증시 하락…다우지수 700포인트 빠져",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346869?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T21:03:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "105w8y1",
-   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
-   "firstSeen": "2026-11-16T04:38:00.000Z",
-   "lastSeen": "2026-11-16T21:07:00.000Z",
-   "count": 8,
-   "sources": 7,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황 복귀론 제동 건 엔비디아 이사회…트럼프는 \"젠슨 황 복귀, 나쁜...",
-     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8499",
-     "host": "moneystorm.kr",
-     "at": "2026-11-16T21:07:00.000Z"
-    },
-    {
-     "title": "젠슨 황 복귀 요구 커지는 실리콘밸리…엔비디아 실적 발표에 쏠린 눈",
-     "link": "https://www.kukinews.com/article/view/kuk202611160260",
-     "host": "kukinews.com",
-     "at": "2026-11-16T21:02:00.000Z"
-    },
-    {
-     "title": "트럼프, 젠슨 황 CEO 복귀 지지…엔비디아 이사회는 논의 안 해",
-     "link": "https://www.aitimes.com/news/articleView.html?idxno=217468",
-     "host": "aitimes.com",
-     "at": "2026-11-16T20:54:00.000Z"
-    },
-    {
-     "title": "[핫이슈] 엔비디아 이사회 \"젠슨 황 복귀 검토 안 해\"…삼성전자·SK하이...",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93687",
-     "host": "the-today.com",
-     "at": "2026-11-16T20:28:00.000Z"
+     "title": "외국인 1.4조 매도에 코스피 3.59% 급락···5100선 턱걸이",
+     "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=719583",
+     "host": "newsfreezone.co.kr",
+     "at": "2026-11-16T07:40:00.000Z"
     }
    ],
    "assess": {
@@ -652,41 +597,97 @@
    }
   },
   {
-   "id": "11lxl60",
-   "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
-   "firstSeen": "2026-11-15T23:32:00.000Z",
-   "lastSeen": "2026-11-16T21:10:00.000Z",
+   "id": "105w8y1",
+   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
+   "firstSeen": "2026-11-16T04:38:00.000Z",
+   "lastSeen": "2026-11-16T21:02:00.000Z",
    "count": 6,
    "sources": 5,
    "topics": [
-    "rates",
-    "market"
+    "war",
+    "politics",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[속보]엔비디아 실적 앞두고 반도체주 급락…나스닥 2.5%↓",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01371046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
+     "title": "젠슨 황 복귀 요구 커지는 실리콘밸리…엔비디아 실적 발표에 쏠린 눈",
+     "link": "https://www.kukinews.com/article/view/kuk202611160260",
+     "host": "kukinews.com",
+     "at": "2026-11-16T21:02:00.000Z"
+    },
+    {
+     "title": "[핫이슈] 엔비디아 이사회 \"젠슨 황 복귀 검토 안 해\"…삼성전자·SK하이...",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=93687",
+     "host": "the-today.com",
+     "at": "2026-11-16T20:28:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 없는' 엔비디아 실적 발표… 코스피 반등 열쇠 될까",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261117010006207",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-16T09:04:00.000Z"
+    },
+    {
+     "title": "[투자전략 따라잡기] 젠슨 황 없는 엔비디아 실적 공개 임박",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346685?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T05:51:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "qkxyrh",
+   "title": "트럼프 “앨리스 황, 스파이 아닐 수도… 젠슨 황 복귀 ‘나쁜 생각’ ...",
+   "firstSeen": "2026-11-16T17:11:00.000Z",
+   "lastSeen": "2026-11-16T21:20:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프 \"젠슨황 불륜녀 中스파이 아닐 수도…中자극 원치않아\"(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261117002151071?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-16T21:20:00.000Z"
+    },
+    {
+     "title": "트럼프 “앨리스황 중국 스파이 아닐 수도”…젠슨황 복귀론엔 “나쁜...",
+     "link": "https://www.dt.co.kr/article/12095566?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-16T21:17:00.000Z"
+    },
+    {
+     "title": "'젠슨황 스캔들' 美, AI반도체 中 원격접속 차단...트럼프 \"스파이 아닐...",
+     "link": "https://www.ikbc.co.kr/article/view/kbc202611170001",
+     "host": "ikbc.co.kr",
      "at": "2026-11-16T21:10:00.000Z"
     },
     {
-     "title": "엔비디아 실적 앞두고 뉴욕증시 급락…AI 투자 불안에 글로벌 금융시장...",
-     "link": "https://www.geconomy.co.kr/news/article.html?no=325732",
-     "host": "geconomy.co.kr",
-     "at": "2026-11-16T20:38:00.000Z"
-    },
-    {
-     "title": "[속보] 뉴욕증시 일제 하락, 엔비디아 실적 발표·앤스로픽 IPO 앞두고 기...",
-     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3753992",
-     "host": "gukjenews.com",
-     "at": "2026-11-16T14:34:00.000Z"
-    },
-    {
-     "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...엔비디아 실적 앞두고 반도체주 급...",
-     "link": "https://www.newspim.com/news/view/20261116001439",
-     "host": "newspim.com",
-     "at": "2026-11-16T14:27:00.000Z"
+     "title": "트럼프 \"앨리스 황, 스파이 아닐 수도\"...미, AI반도체 중국 원격접속 차...",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611170610278373",
+     "host": "ytn.co.kr",
+     "at": "2026-11-16T21:10:00.000Z"
     }
    ],
    "assess": {
@@ -803,46 +804,47 @@
    }
   },
   {
-   "id": "1fnb3hd",
-   "title": "[속보]미국증시 나스닥 1.42% 급락…다우·S&P500 동반 하락, 엔비디아 실...",
-   "firstSeen": "2026-11-16T15:00:00.000Z",
-   "lastSeen": "2026-11-16T20:32:00.000Z",
+   "id": "11lxl60",
+   "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
+   "firstSeen": "2026-11-15T23:32:00.000Z",
+   "lastSeen": "2026-11-16T21:10:00.000Z",
    "count": 4,
-   "sources": 4,
+   "sources": 3,
    "topics": [
+    "rates",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "미국증시 마감 1시간 前...4대지수·엔비디아·반도체ETF '급락'",
-     "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=173233",
-     "host": "choicenews.co.kr",
-     "at": "2026-11-16T20:32:00.000Z"
+     "title": "[속보]엔비디아 실적 앞두고 반도체주 급락…나스닥 2.5%↓",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01371046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-16T21:10:00.000Z"
     },
     {
-     "title": "[뉴욕증시 개장] 반도체주 급락에 나스닥 1.9% 하락…필라델피아반도체...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94404",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-16T15:30:00.000Z"
+     "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...엔비디아 실적 앞두고 반도체주 급...",
+     "link": "https://www.newspim.com/news/view/20261116001439",
+     "host": "newspim.com",
+     "at": "2026-11-16T14:27:00.000Z"
     },
     {
-     "title": "미국증시 장초반 나스닥 1.79% 급락…엔비디아 불안에 SK하이닉스·마이...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16278189",
-     "host": "topstarnews.net",
-     "at": "2026-11-16T15:12:00.000Z"
+     "title": "뉴욕증시 프리뷰, 주가지수 선물 하락…엔비디아 실적·앤스로픽 상장 ...",
+     "link": "https://www.newspim.com/news/view/20261116001408",
+     "host": "newspim.com",
+     "at": "2026-11-16T13:55:00.000Z"
     },
     {
-     "title": "[속보]미국증시 나스닥 1.42% 급락…다우·S&P500 동반 하락, 엔비디아 실...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627513",
-     "host": "cbci.co.kr",
-     "at": "2026-11-16T15:00:00.000Z"
+     "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
+     "link": "https://www.tokenpost.kr/news/economy/438754",
+     "host": "tokenpost.kr",
+     "at": "2026-11-15T23:32:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
+    "score": 27,
     "spike": 0,
     "news": false,
     "reaction": {
