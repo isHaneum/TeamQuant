@@ -470,7 +470,8 @@ function paperText(m, at) { const ret = m.startTotal > 0 && m.total > 0 ? (m.tot
 function syncState() {
   const none = !snapshot && connection === 'error';
   $('#hm-connect').hidden = !none; root.classList.toggle('hm-state-connect', none);
-  $('#hm-demo').hidden = !(snapshot?.demo && !snapshot?.paper); $('#hm-paper').hidden = !snapshot?.paper; if (snapshot?.paper) $('#hm-paper-text').textContent = paperText(snapshot.paperMeta || {}, snapshot.fetchedAt);
+  // 2026-11-16 간결 화면: 띠에는 핵심 숫자(시작 대비)만, 나머지 설명은 마우스를 올리면 보이게(title).
+  $('#hm-demo').hidden = !(snapshot?.demo && !snapshot?.paper); $('#hm-paper').hidden = !snapshot?.paper; if (snapshot?.paper) { const m = snapshot.paperMeta || {}, ret = m.startTotal > 0 && m.total > 0 ? (m.total / m.startTotal - 1) * 100 : null, el = $('#hm-paper-text'); el.textContent = `한투 모의계좌 · 가상 1억${ret === null ? '' : ` · 시작 대비 ${pct(ret)}`}`; el.title = paperText(m, snapshot.fetchedAt); }
   if (none) $('#hm-connect-state').textContent = document.querySelector('#toss-status')?.textContent || '';
 }
 $('#hm-connect-go').onclick = () => { document.querySelector('[data-view="settings"]')?.click(); setTimeout(() => { const i = document.querySelector('#workspace-connections input:not([type="checkbox"])'); i?.focus(); i?.scrollIntoView({ block: 'center' }); }, 200); };
