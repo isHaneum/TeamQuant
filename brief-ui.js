@@ -8,7 +8,7 @@ import { TARGETS } from '/lib/portfolio-advice.js';
 import { findBestFit, periodStart, josa } from '/lib/strategy-lab.js';
 import { currentSituation, groupOf, GROUPS, SITUATION_VERSION } from '/lib/situation.js';
 import { fundamentals, candles, indexSeries as sharedIndex, getStyle } from '/lib/client-data.js';
-import { buildAssetTimeline, koreaDay } from '/lib/asset-timeline.js';
+import { buildAssetTimeline, koreaDay, holdingsReturn } from '/lib/asset-timeline.js';
 import { reviewTrades } from '/lib/trade-review.js';
 import { kstStamp } from '/lib/paper-public.js';
 import { marketReasons, marketQuery } from '/lib/market-reasons.js';
@@ -165,7 +165,9 @@ const nameOf = symbol => snapshot?.positions?.find(p => p.symbol === symbol)?.na
 // ── 숫자 요약 ───────────────────────────────────────────────
 function renderKpis(positions) {
   const sum = key => positions.reduce((s, p) => s + (p[key] ?? NaN), 0);
-  const value = sum('valueKrw'), cost = sum('costKrw'), gain = value - cost, daily = sum('dailyKrw');
+  // 2026-11-16: 원금·손익·수익률은 holdingsReturn(토스 계좌 합계 = 미국 주식 원금은 산 날 환율). 예전에는 원금도 오늘 환율로 바꿔 달러 기준이 됐다(산 뒤 원화가 강해지면 토스보다 높게 나옴).
+  const R = holdingsReturn(snapshot), value = R.value, cost = R.cost, gain = R.pnl, daily = sum('dailyKrw');
+  const retTip = R.basis === 'purchase_fx' ? `토스 계산과 같은 방식입니다. 평가액은 오늘 환율, 미국 주식 원금은 산 날 원화로 셉니다.${Number.isFinite(R.currentFxPct) ? ` 원금까지 오늘 환율로 바꾸면 ${pct(R.currentFxPct)}(달러 기준)인데, 산 뒤 환율이 바뀐 만큼이 빠진 값입니다.` : ''}${Number.isFinite(R.returnAfterCostPct) ? ` 팔 때 수수료·세금을 빼면 ${pct(R.returnAfterCostPct)}.` : ''} 현금은 빠져 있습니다.` : R.basis === 'current_fx' ? '미국 종목 원금을 산 날 환율로 알 수 없어 오늘 환율로 바꿨습니다. 그래서 달러 기준이고, 산 뒤 환율이 바뀐 만큼(환차손익)은 빠져 있습니다.' : '';
   const ok = list => list.filter(b => b?.available);
   const done = ok([...briefs.values()]), total = positions.reduce((s, p) => s + (p.valueKrw || 0), 0);
   const weighted = done.length === positions.length && total ? done.reduce((s, b) => s + (positions.find(p => p.symbol === b.symbol)?.valueKrw || 0) / total * b.price.dayReturn, 0) : null;
@@ -173,8 +175,8 @@ function renderKpis(positions) {
   const when = snapshot?.fetchedAt ? new Date(snapshot.fetchedAt).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }) : '';
   const tiles = [
     ['지금 평가액', won(value), cashInfo ? `현금 포함 총자산 ${won(value + cashInfo.amount)}` : `${positions.length}종목 · ${when} 조회 · 현금 제외`, ''],
-    ['넣은 돈 (매입 원금)', won(cost), '지금 보유 종목을 산 금액', ''],
-    ['평가 손익', signedWon(gain), cost ? `수익률 ${pct(gain / cost * 100)}` : '', toneClass(gain)],
+    ['넣은 돈 (매입 원금)', won(cost), R.basis === 'purchase_fx' ? '미국 주식은 산 날 환율' : R.basis === 'current_fx' ? '미국 주식은 오늘 환율로 환산' : '지금 보유 종목을 산 금액', ''],
+    [`평가 손익${retTip ? ' ' + tip(retTip) : ''}`, signedWon(gain), Number.isFinite(R.returnPct) ? `수익률 ${pct(R.returnPct)}${R.basis === 'current_fx' ? ' · 달러 기준' : ''}` : '', toneClass(gain)],
     ['오늘 변동', Number.isFinite(daily) ? signedWon(daily) : Number.isFinite(dayPct) ? pct(dayPct) : '계산 중…', Number.isFinite(daily) ? pct(dayPct) : '보유 비중 기준', toneClass(Number.isFinite(daily) ? daily : dayPct)]
   ];
   $('#hm-kpis').innerHTML = tiles.map(([l, v, s, t], i) => `<div style="--i:${i}"><span>${l}</span><b class="${t}">${esc(v)}</b><small>${esc(s)}</small></div>`).join('');
@@ -202,7 +204,7 @@ function renderList(positions) {
     const j = f && !f.error ? scoreStock(f, { style, price: p.price, brief: b, weightPct: p.weightPct, weightLimit: TARGETS[style].single }) : null;
     return `<li style="--i:${i}"><button type="button" data-symbol="${esc(p.symbol)}">
       <div class="hm-row"><strong>${esc(p.name)}</strong><span class="hm-day ${toneClass(day)}">${day === null ? '' : pct(day)}</span></div>
-      <div class="hm-row hm-sub"><span>${won(p.valueKrw)}</span><span class="${toneClass(p.returnPct)}">내 수익 ${pct(p.returnPct)}</span></div>
+      <div class="hm-row hm-sub"><span>${won(p.valueKrw)}</span><span class="${toneClass(p.returnPct)}">내 수익${p.currency === 'USD' ? '(달러)' : ''} ${pct(p.returnPct)}</span></div>
       <div class="hm-weight" title="보유 비중"><i style="--w:${Math.max(2, p.weightPct || 0).toFixed(1)}%"></i><small>${Number.isFinite(p.weightPct) ? p.weightPct.toFixed(0) + '%' : ''}</small></div>
       <p class="hm-reason">${oneLiner(b, p)}</p>
       ${j ? `<span class="pf-stance ${({ buy: 's-buy', hold: 's-hold', trim: 's-trim', unknown: 's-unknown' })[j.stance]}">${esc(j.label)}</span>` : ''}
@@ -217,7 +219,7 @@ let detailRun = 0;
 async function openDetail(symbol) {
   const run = ++detailRun, b = briefs.get(symbol), p = snapshot?.positions?.find(x => x.symbol === symbol);
   $('#hm-d-title').textContent = p?.name || nameOf(symbol);
-  $('#hm-d-sub').textContent = `${symbol}${b?.available ? ` · 오늘 ${pct(b.price.dayReturn)}` : ''}${p ? ` · 내 수익 ${pct(p.returnPct)}` : ''}`;
+  $('#hm-d-sub').textContent = `${symbol}${b?.available ? ` · 오늘 ${pct(b.price.dayReturn)}` : ''}${p ? ` · 내 수익${p.currency === 'USD' ? '(달러 기준)' : ''} ${pct(p.returnPct)}` : ''}`;
   const draw = () => { if (run !== detailRun) return; $('#hm-d-body').innerHTML = !b ? '<p class="hm-note">아직 분석 중입니다. 잠시 뒤 다시 눌러 주십시오.</p>' : !b.available ? `<p class="hm-note">${esc(b.headline)}</p>` : detailHtml(b, p); };
   draw(); if (!dialog.open) dialog.showModal();
   if (!b?.available) return;
@@ -389,7 +391,8 @@ async function loadHistory(positions, run, signal) {
   const fxCandles = [...currencies.values()].includes('USD') ? (await getJson('/api/market?symbol=KRW%3DX&range=1y', signal).catch(() => null))?.candles || [] : [];
   if (run !== epoch) return;
   const oldest = report.orders.map(o => koreaDay(o.orderedAt)).sort()[0];
-  const timeline = buildAssetTimeline({ positions, orders: report.orders, candlesBySymbol, fxCandles, fxNow: snapshot.fx?.midRate ?? null, today: to, coverageFrom: report.paginationComplete ? from : oldest, months: 12 });
+  const R = holdingsReturn(snapshot); // 원금선 오늘 끝점: 토스 계좌 합계가 있으면 산 날 환율 원금(없으면 달러 기준 그대로)
+  const timeline = buildAssetTimeline({ positions, orders: report.orders, candlesBySymbol, fxCandles, fxNow: snapshot.fx?.midRate ?? null, today: to, coverageFrom: report.paginationComplete ? from : oldest, months: 12, costKrwNow: R.basis === 'purchase_fx' ? R.cost : null });
   renderTrend(timeline, report);
   renderGrade(reviewTrades(report.orders, { candlesBySymbol, indexFor: s => indexes.get(s), priceNow: Object.fromEntries(positions.map(p => [p.symbol, p.price])), fxNow: snapshot.fx?.midRate ?? 1, today: to }));
 }
