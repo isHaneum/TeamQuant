@@ -15,16 +15,21 @@ try {
   if (!log.verify()) throw new Error('동의 기록의 해시 체인이 맞지 않습니다(파일이 바뀜). 기록을 확인하세요.');
   if (cmd === 'status') for (const id of ids) console.log(line(id));
   else if (cmd === 'review') {
-    const rl = createInterface({ input: process.stdin, output: process.stdout });
+    // 2026-11-16 고침: rl.question 을 여러 번 쓰면 파이프 입력에서 첫 질문 뒤 남은 줄을 잃고 멈췄다 → 줄을 차례로 받는 반복자로 읽는다.
+    //   입력이 끝나면(EOF) 남은 조항은 묻지도 기록하지도 않는다(답 없음 ≠ 거절).
+    const rl = createInterface({ input: process.stdin, output: process.stdout }), lines = rl[Symbol.asyncIterator]();
+    const ask = async q => { rl.setPrompt(q); rl.prompt(); const { value, done } = await lines.next(); if (!process.stdin.isTTY) process.stdout.write('\n'); return done ? null : String(value).trim(); };
     for (const id of ids) {
       if (log.valid(id, params(id))) { console.log(`${id} 이미 동의함(같은 문구) — 건너뜀`); continue; }
       console.log(`\n[${id}] ${PC_CLAUSES[id].title}\n${clauseText(id, params(id))}\n`);
-      const a = (await rl.question("동의하면 '동의' 라고 입력하세요(그 밖의 입력은 거절로 기록): ")).trim();
-      const e = a === '동의' ? log.accept(id, params(id)) : log.decline(id, params(id)); console.log(`→ ${e.choice === 'accept' ? '동의' : '거절'} 기록(${e.decidedAt})`);
+      const a = await ask("동의하면 '동의' 라고 입력하세요(그 밖의 입력은 거절로 기록): ");
+      if (a === null) { console.log('입력이 끝남 — 남은 조항은 기록하지 않음'); break; }
+      const e = a === '동의' ? log.accept(id, params(id), { via: 'pc-cli' }) : log.decline(id, params(id), { via: 'pc-cli' }); console.log(`→ ${e.choice === 'accept' ? '동의' : '거절'} 기록(${e.decidedAt})`);
     }
     rl.close(); console.log(''); for (const id of ids) console.log(line(id));
+    console.log('\n공개(C6)는 다음 게시 때부터 반영됩니다. 실계좌 자동 기록(C9)은 PC 서버를 다시 시작하면 켜집니다 — PowerShell: Stop-Process -Id (Get-NetTCPConnection -LocalPort 8766 -State Listen).OwningProcess  (지킴이가 10분 안에 다시 띄움)');
   } else if (cmd === 'withdraw') {
     const id = process.argv[3]; if (!ids.includes(id)) throw new Error(`철회할 조항: ${ids.join(' · ')}`);
-    log.withdraw(id, params(id)); console.log(`${id} 동의를 철회했습니다. ${PC_CLAUSES[id].gate} 은(는) 다음 실행부터 멈춥니다.`);
+    log.withdraw(id, params(id), { via: 'pc-cli' }); console.log(`${id} 동의를 철회했습니다. ${PC_CLAUSES[id].gate} 은(는) 다음 실행부터 멈춥니다.`);
   } else { console.log('명령: status | review | withdraw <조항>'); process.exitCode = 2; }
 } catch (e) { console.error(`실패: ${e.message}`); process.exitCode = 1; }
