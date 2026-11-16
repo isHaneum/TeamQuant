@@ -196,8 +196,9 @@ test('헤드라인 비교선(엔진): 기준선 전의 평가점(운용을 정�
 test('헤드라인 비교선(엔진): 기준선에 계획의 국가 비중·현금 정의가 붙고 · status().benchmark 의 diffPp = 절차 − 비교선(환율 환산) · 30분 캐시 · 지수를 못 읽으면 정의만 남고 숫자는 null(던지지 않음) · 옛 장부의 기준선은 적재 때 정의를 만들어 저장 · 공개 스냅샷에 실림', async () => {
   let t = kstMonday1030(); const b = fakeBroker({ cash: 50_000_000 }); const store = createLedgerStore(tmp()); const reads = { '069500': 0 };
   // 지수·환율에 11-09 → 11-10 변화를 붙인다: KODEX 200 +2%, SPY 그대로, 환율 +1% → 비교선(KR 20 · US 30 · 현금 50) = 0.5 + 0.2×1.02 + 0.3×1.01 = 1.007 (+0.7%)
+  // BM2(2026-11-16): 미국분 환율은 평가점 환율(그 시각 읽은 KRW=X 마지막 값)이다. 그래서 11-10 봉은 11-10 이 된 뒤에만 보이게 한다(첫 평가점 1400 · 다음 날 1414).
   const extra = { '069500': [70000, 71400], SPY: [180, 180], 'KRW=X': [1400, 1414] };
-  const rm = async (sym, range) => { if (sym === '069500' && range === '1y') reads['069500']++; const d = await readMarket(sym, range); const x = extra[sym]; return x ? { candles: [...d.candles.filter(c => c.date < '2026-11-09'), { date: '2026-11-09', open: x[0], close: x[0] }, { date: '2026-11-10', open: x[1], close: x[1] }] } : d; };
+  const rm = async (sym, range) => { if (sym === '069500' && range === '1y') reads['069500']++; const d = await readMarket(sym, range); const x = extra[sym]; return x ? { candles: [...d.candles.filter(c => c.date < '2026-11-09'), { date: '2026-11-09', open: x[0], close: x[0] }, ...(t >= Date.parse('2026-11-10T00:00:00+09:00') ? [{ date: '2026-11-10', open: x[1], close: x[1] }] : [])] } : d; };
   let pl = createPaperLive({ client: b.client, store, readMarket: rm, now: () => t, limits: { maxOrderKrw: 20_000_000, maxDailyKrw: 60_000_000 } });
   await pl.run({ rules, plan }); // plan: 삼성전자 20 / NVDA 20 / SPY 10 → KR 20 · US 30 · 현금 50
   let st = await pl.status();

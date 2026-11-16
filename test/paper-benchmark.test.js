@@ -67,6 +67,17 @@ test('읽기(createBenchmarkReader): 성공만 30분 캐시 · TTL 뒤 갱신에
   assert.equal(await bf(null, marks), null);
 });
 
+test('BM2: 미국분 환율은 계좌 평가점 환율(marks.fx) — 일봉 종가와 섞지 않고, 첫 평가점이 from 보다 늦으면 일봉 종가 · 계좌가 환율만큼 오른 것은 비교선도 같이 오른다', async () => {
+  const us = cs([['2026-11-09', 100], ['2026-11-10', 100]]), fx = cs([['2026-11-09', 1400], ['2026-11-10', 1400]]), w = { KR: 0, US: 100, cash: 0 };
+  const s = benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, usCandles: us, fxCandles: fx, fxMarks: [{ date: '2026-11-09', fx: 1300 }, { date: '2026-11-10', fx: 1326 }] });
+  assert.ok(Math.abs(s.at(-1).value - 1.02) < 1e-9, '평가점 환율 1300→1326 = +2%');
+  assert.equal(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, usCandles: us, fxCandles: fx, fxMarks: [{ date: '2026-11-10', fx: 1326 }] }).at(-1).value, 1, '첫 평가점이 from 뒤면 일봉 종가(1400→1400)');
+  assert.ok(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, usCandles: us, fxCandles: [], fxMarks: [{ date: '2026-11-09', fx: 1300 }] }), '평가점 환율이 있으면 환율 봉이 없어도 계산');
+  const def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } }); assert.equal(def.version, 'BM2-2026-11-16');
+  const r = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : fx }) })(def, [{ date: '2026-11-09', total: 100, fx: 1300 }, { date: '2026-11-10', total: 102, fx: 1326 }]);
+  assert.deepEqual([r.benchRetPct, r.diffPp], [2, 0]);
+});
+
 test('비교: 시작 = 첫 평가점 총자산, 지금 = 마지막 평가점 · 비교선은 그 날짜 이하 마지막 점 · diffPp = 절차 − 비교선 · 평가점 2개 미만·비교선 없음은 null', () => {
   const series = [{ date: '2026-11-06', value: 1 }, { date: '2026-11-07', value: 1 }, { date: '2026-11-08', value: 1 }, { date: '2026-11-09', value: 1.05 }, { date: '2026-11-10', value: 1.02 }];
   const marks = [{ date: '2026-11-06', total: 100_000_000 }, { date: '2026-11-09', total: 103_000_000 }, { date: '2026-11-10', total: 110_000_000 }];
