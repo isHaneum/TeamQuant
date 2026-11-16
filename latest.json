@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-16T12:26:28.215Z",
+ "updatedAt": "2026-11-16T13:00:12.942Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 1333.93994140625,
-   "change": 0.01,
-   "z": 0,
+   "last": 1334.3299560546875,
+   "change": 0.04,
+   "z": 0.1,
    "sd": 0.6326251329727653,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 87.76000213623047,
-   "change": -0.9,
+   "last": 87.77999877929688,
+   "change": -0.88,
    "z": -0.3,
    "sd": 2.877420765091161,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 3873.699951171875,
-   "change": -0.32,
-   "z": -0.2,
+   "last": 3872.300048828125,
+   "change": -0.36,
+   "z": -0.3,
    "sd": 1.3587354696428326,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 20.540000915527344,
-   "change": 6.42,
+   "last": 20.389999389648438,
+   "change": 5.65,
    "z": 0.5,
    "sd": 11.756874015413716,
    "source": "Yahoo",
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
+  "war": -0.5,
   "politics": -1,
   "rates": -0.9,
   "trade": 0.2,
   "fx": -0.2,
   "energy": -1.2,
-  "market": -0.7,
+  "market": -1,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 1.2,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.8,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -226,6 +226,52 @@
     "why": [
      "핵심 단어",
      "코스피 -3.59%"
+    ]
+   }
+  },
+  {
+   "id": "irufi0",
+   "title": "\"미·이, 이란 에너지시설 추가 공격 계획\"…항모 3대 중동 집결(종합)",
+   "firstSeen": "2026-11-16T02:49:00.000Z",
+   "lastSeen": "2026-11-16T12:34:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "美, 중동에 항모전단 3개 집결…이란과 전면전 재개 위기",
+     "link": "http://www.4th.kr/news/articleView.html?idxno=2122001",
+     "host": "4th.kr",
+     "at": "2026-11-16T12:34:00.000Z"
+    },
+    {
+     "title": "\"미·이, 이란 에너지시설 추가 공격 계획\"…항모 3대 중동 집결(종합)",
+     "link": "https://www.news1.kr/world/usa-canada/6355189",
+     "host": "news1.kr",
+     "at": "2026-11-16T02:49:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 31,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 5.65,
+     "unit": "%",
+     "z": 0.5
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +5.65%"
     ]
    }
   },
@@ -310,17 +356,64 @@
    }
   },
   {
+   "id": "1nrqta8",
+   "title": "“드론 테러, 장비만으론 못 막는다”…항공보안학회, 국회서 항공 보안...",
+   "firstSeen": "2026-11-16T12:58:00.000Z",
+   "lastSeen": "2026-11-16T12:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "“드론 테러, 장비만으론 못 막는다”…항공보안학회, 국회서 항공 보안...",
+     "link": "https://www.ekn.kr/web/view.php?key=20261116021400477",
+     "host": "ekn.kr",
+     "at": "2026-11-16T12:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -3.59%"
+    ]
+   }
+  },
+  {
    "id": "1cg0pkh",
    "title": "코스피, 외국인 ‘팔자’에 5100선 턱걸이⋯삼전닉스 동반 급락",
    "firstSeen": "2026-11-16T05:09:00.000Z",
-   "lastSeen": "2026-11-16T09:44:00.000Z",
-   "count": 18,
-   "sources": 17,
+   "lastSeen": "2026-11-16T12:30:00.000Z",
+   "count": 19,
+   "sources": 18,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "코스피, 3%대 낙폭에 5100선 턱걸이...SK스퀘어, 삼성전기 하락",
+     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447252",
+     "host": "econonews.co.kr",
+     "at": "2026-11-16T12:30:00.000Z"
+    },
     {
      "title": "외국인·기관 동반 매도에 코스피 3거래일 연속 하락…5100선서 마감",
      "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=89633",
@@ -338,18 +431,69 @@
      "link": "https://biz.sbs.co.kr/article_hub/20000346797?division=NAVER",
      "host": "biz.sbs.co.kr",
      "at": "2026-11-16T09:10:00.000Z"
-    },
-    {
-     "title": "코스피, 외국인·기관 매도에 3.59% 급락…장중 5100선 붕괴",
-     "link": "https://www.goodkyung.com/news/articleView.html?idxno=293513",
-     "host": "goodkyung.com",
-     "at": "2026-11-16T08:26:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 23,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "코스피 -3.59%"
+    ]
+   }
+  },
+  {
+   "id": "14vpvsf",
+   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
+   "firstSeen": "2026-11-16T01:32:00.000Z",
+   "lastSeen": "2026-11-16T12:44:00.000Z",
+   "count": 6,
+   "sources": 5,
+   "topics": [
+    "war",
+    "politics",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황 복귀론에 갑질 폭로까지…미 재무 “후임은 엔비디아 밖에서”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714267&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-16T12:44:00.000Z"
+    },
+    {
+     "title": "젠슨 황·담합 소송에 코스피 3.6% 뚝‥엔비디아 실적 반등 계기 될까?",
+     "link": "https://imnews.imbc.com/replay/2026/nwdesk/article/6866080_37004.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-16T11:12:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 없는' 엔비디아 실적 발표… 코스피 반등 열쇠 될까",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261117010006207",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-16T09:04:00.000Z"
+    },
+    {
+     "title": "[투자전략 따라잡기] 젠슨 황 없는 엔비디아 실적 공개 임박",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346685?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T05:51:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 19,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -476,59 +620,57 @@
    }
   },
   {
-   "id": "14vpvsf",
-   "title": "엔비디아, 中 불법 판매로 실적 부풀렸나…美 재무, 젠슨 황 복귀 차단...",
-   "firstSeen": "2026-11-16T01:32:00.000Z",
-   "lastSeen": "2026-11-16T11:12:00.000Z",
-   "count": 5,
+   "id": "x5ilsi",
+   "title": "美가 띄운 ‘돈바스 영토·나토 맞교환’ 카드…현실성 있나 따져보니 ...",
+   "firstSeen": "2026-11-16T01:43:00.000Z",
+   "lastSeen": "2026-11-16T12:52:00.000Z",
+   "count": 4,
    "sources": 4,
    "topics": [
-    "war",
-    "politics",
-    "policy"
+    "war"
    ],
    "critical": [],
    "links": [
     {
-     "title": "젠슨 황·담합 소송에 코스피 3.6% 뚝‥엔비디아 실적 반등 계기 될까?",
-     "link": "https://imnews.imbc.com/replay/2026/nwdesk/article/6866080_37004.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-16T11:12:00.000Z"
+     "title": "'우크라 나토 가입·돈바스 맞교환' 미국 제안에 러 \"노코멘트\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611162152329332",
+     "host": "ytn.co.kr",
+     "at": "2026-11-16T12:52:00.000Z"
     },
     {
-     "title": "'젠슨 황 없는' 엔비디아 실적 발표… 코스피 반등 열쇠 될까",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261117010006207",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-16T09:04:00.000Z"
+     "title": "‘우크라이나 나토 가입·돈바스 맞교환’ 미국 제안에 러 “노코멘트”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714212&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-16T12:14:00.000Z"
     },
     {
-     "title": "[투자전략 따라잡기] 젠슨 황 없는 엔비디아 실적 공개 임박",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346685?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
+     "title": "'우크라 나토 가입·돈바스 맞교환' 美제안에 러 \"노코멘트\"",
+     "link": "https://www.yna.co.kr/view/AKR20261116171200109?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-16T10:33:00.000Z"
     },
     {
-     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
+     "title": "美가 띄운 ‘돈바스 영토·나토 맞교환’ 카드…현실성 있나 따져보니 ...",
+     "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261116601004&wlog_tag3=naver",
+     "host": "nownews.seoul.co.kr",
+     "at": "2026-11-16T01:43:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 16,
+    "score": 12,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.59,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 5.65,
      "unit": "%",
-     "z": -1.2
+     "z": 0.5
     },
     "why": [
-     "코스피 -3.59%"
+     "VIX 변동성 +5.65%"
     ]
    }
   },
@@ -561,6 +703,56 @@
      "link": "http://www.newskr.kr/news/articleView.html?idxno=108016",
      "host": "newskr.kr",
      "at": "2026-11-15T20:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 12,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -3.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "코스피 -3.59%"
+    ]
+   }
+  },
+  {
+   "id": "1cmmidh",
+   "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
+   "firstSeen": "2026-11-15T23:10:00.000Z",
+   "lastSeen": "2026-11-16T10:12:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[머니 확률표] 연준 3연속 금리 인상 확률 34%…하루 새 6%p 상승",
+     "link": "http://coinreaders.com/270648",
+     "host": "coinreaders.com",
+     "at": "2026-11-16T10:12:00.000Z"
+    },
+    {
+     "title": "1340원대 다시 넘보는 환율…미 연준 금리 인상 전망에 상승 압력",
+     "link": "https://www.econovill.com/news/articleView.html?idxno=757349",
+     "host": "econovill.com",
+     "at": "2026-11-16T02:14:00.000Z"
+    },
+    {
+     "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
+     "link": "https://www.ajunews.com/view/20261116093402334",
+     "host": "ajunews.com",
+     "at": "2026-11-16T00:38:00.000Z"
     }
    ],
    "assess": {
@@ -631,9 +823,9 @@
    }
   },
   {
-   "id": "gc1oh9",
+   "id": "1sh4ack",
    "title": "트럼프, APEC서 19일 13시45분 미중회담…15시30분 미중러 3자 회담",
-   "firstSeen": "2026-11-15T23:12:00.000Z",
+   "firstSeen": "2026-11-16T06:50:00.000Z",
    "lastSeen": "2026-11-16T11:39:00.000Z",
    "count": 3,
    "sources": 3,
@@ -727,190 +919,21 @@
      "코스피 -3.59%"
     ]
    }
-  },
-  {
-   "id": "irufi0",
-   "title": "트럼프, 이란과 협상도 추가 공격도 보류하나···경제제재로 압박 지...",
-   "firstSeen": "2026-11-16T00:20:00.000Z",
-   "lastSeen": "2026-11-16T02:49:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"미·이, 이란 에너지시설 추가 공격 계획\"…항모 3대 중동 집결(종합)",
-     "link": "https://www.news1.kr/world/usa-canada/6355189",
-     "host": "news1.kr",
-     "at": "2026-11-16T02:49:00.000Z"
-    },
-    {
-     "title": "트럼프, 이란과 협상도 추가 공격도 보류하나···경제제재로 압박 지...",
-     "link": "https://www.smartbizn.com/news/articleView.html?idxno=159491",
-     "host": "smartbizn.com",
-     "at": "2026-11-16T00:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 11,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.59,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.59%"
-    ]
-   }
-  },
-  {
-   "id": "x5ilsi",
-   "title": "美가 띄운 ‘돈바스 영토·나토 맞교환’ 카드…현실성 있나 따져보니 ...",
-   "firstSeen": "2026-11-16T01:43:00.000Z",
-   "lastSeen": "2026-11-16T12:14:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "‘우크라이나 나토 가입·돈바스 맞교환’ 미국 제안에 러 “노코멘트”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714212&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-16T12:14:00.000Z"
-    },
-    {
-     "title": "'우크라 나토 가입·돈바스 맞교환' 美제안에 러 \"노코멘트\"",
-     "link": "https://www.yna.co.kr/view/AKR20261116171200109?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-16T10:33:00.000Z"
-    },
-    {
-     "title": "美가 띄운 ‘돈바스 영토·나토 맞교환’ 카드…현실성 있나 따져보니 ...",
-     "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261116601004&wlog_tag3=naver",
-     "host": "nownews.seoul.co.kr",
-     "at": "2026-11-16T01:43:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 6.42,
-     "unit": "%",
-     "z": 0.5
-    },
-    "why": [
-     "VIX 변동성 +6.42%"
-    ]
-   }
-  },
-  {
-   "id": "1bi0rhh",
-   "title": "마통 잔액, 4년3개월 만에 최대 수준...고스란히 삼전닉스 빚투 外 [한강...",
-   "firstSeen": "2026-11-15T22:02:00.000Z",
-   "lastSeen": "2026-11-16T08:45:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[김지영의 생존투자] 1년 전 수준으로 돌아간 빚투… 코스피, 바닥 다지...",
-     "link": "https://www.dt.co.kr/article/12095499?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-16T08:45:00.000Z"
-    },
-    {
-     "title": "마통 잔액, 4년3개월 만에 최대 수준...고스란히 삼전닉스 빚투 外 [한강...",
-     "link": "https://www.segye.com/newsView/20261115509315?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-15T22:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.59,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.59%"
-    ]
-   }
-  },
-  {
-   "id": "1cmmidh",
-   "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
-   "firstSeen": "2026-11-15T23:10:00.000Z",
-   "lastSeen": "2026-11-16T02:14:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "1340원대 다시 넘보는 환율…미 연준 금리 인상 전망에 상승 압력",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=757349",
-     "host": "econovill.com",
-     "at": "2026-11-16T02:14:00.000Z"
-    },
-    {
-     "title": "환율, 1330원대 등락…강달러·외국인 매도에 상승 압력",
-     "link": "https://www.ajunews.com/view/20261116093402334",
-     "host": "ajunews.com",
-     "at": "2026-11-16T00:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 9,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.59,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "코스피 -3.59%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-16T13:00:12.942Z",
+   "id": "irufi0",
+   "level": "caution",
+   "title": "\"미·이, 이란 에너지시설 추가 공격 계획\"…항모 3대 중동 집결(종합)",
+   "why": [
+    "핵심 단어",
+    "VIX 변동성 +5.65%"
+   ],
+   "link": "http://www.4th.kr/news/articleView.html?idxno=2122001",
+   "delivered": false
+  },
   {
    "at": "2026-11-16T12:26:28.215Z",
    "id": "kfwi89",
@@ -1137,18 +1160,6 @@
     "원/달러 +0.18%"
    ],
    "link": "https://www.munhwa.com/article/11631414?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-15T11:47:53.728Z",
-   "id": "16gcimi",
-   "level": "caution",
-   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -0.4%"
-   ],
-   "link": "http://coinreaders.com/270390",
    "delivered": false
   }
  ],
