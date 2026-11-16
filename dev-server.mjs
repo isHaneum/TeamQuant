@@ -22,7 +22,7 @@ import { fetchNews } from "./lib/news.js";
 import { fetchCompanyBrief } from "./lib/dart.js";
 import { fetchKisAccount } from "./lib/kis.js";
 import { getResearchStatus, startResearchRefresh } from "./lib/research-job.js";
-import { applyKeyFiles, kisReadOnlySettings } from "./lib/key-files.js";
+import { applyKeyFiles, kisReadOnlySettings, applyVaultEnv } from "./lib/key-files.js";
 import { readFileSync } from "node:fs";
 import { createKisClient } from "./lib/kis-orders.js";
 import { createKisReader } from "./lib/kis-reader.js";
@@ -35,31 +35,40 @@ import { createPaperLive, createLedgerStore, ledgerDir } from "./lib/paper-live.
 import { publicSnapshot } from "./lib/paper-public.js";
 import { writeFileSync } from "node:fs";
 import { execFile } from "node:child_process";
+import { getVault, minimalEnv } from "./lib/vault.js";
+import { createConsentLog, PUBLISH_SCOPE } from "./lib/consent.js";
+import { mkdirSync as mkdirSyncTq } from "node:fs";
 
+const safeError=e=>String(e?.message||'요청을 처리하지 못했습니다.').replace(/[A-Za-z]:[\\/][^\s'"]*/g,'<경로>').replace(/\/(?:Users|home)\/[^\s'"]*/g,'<경로>').slice(0,300); // 2026-11-16: 오류 응답에 PC 경로(사용자 이름)를 싣지 않는다
 const root = fileURLToPath(new URL(".", import.meta.url));
 for (const file of [".env", ".env.local"]) {
   try { process.loadEnvFile(join(root, file)); } catch (error) { if (error.code !== "ENOENT") throw error; }
 }
 // 키 파일(.env.local 의 *_KEY_FILE 경로)을 환경 변수로 올린다. 값은 로그에 남기지 않는다.
-const keyFiles = applyKeyFiles(process.env);
+// 2026-11-16 금고: 키·토큰·장부·기록을 암호화해 둔다(lib/vault.js). 키는 금고 비밀이 먼저, 없으면 예전 키 파일. 동의 기록(lib/consent.js)이 공개(C6)·실계좌 기록(C9)을 막는다.
+const vault = getVault(), vaultEnv = applyVaultEnv(process.env, vault), consentLog = createConsentLog({ vault });
+const keyFiles = applyKeyFiles(process.env, { vault });
+if (vault) console.log(`[금고] 켜짐 · 비밀 ${vault.listSecrets().length}개${vaultEnv.length ? " · 환경 변수 " + vaultEnv.length + "개 채움" : ""}`);
 if (keyFiles.kis.reason) console.log(`[KIS] ${keyFiles.kis.reason}`); if (keyFiles.dart.reason) console.log(`[DART] ${keyFiles.dart.reason}`);
 const port = Number(process.env.PORT || 8766);
 const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8", ".zip":"application/zip" };
 
-const historyStore=createHistoryStore({publicRoots:[root]});
+const historyStore=createHistoryStore({publicRoots:[root],vault});
 const historyRecorder=createHistoryRecorder({store:historyStore});
-const performanceStore=createPerformanceStore({publicRoots:[root]});
-const investments=createInvestmentStore({publicRoots:[root,join(root,'..')]});
-const cashStore=createCashStore({publicRoots:[root,join(root,'..')]});
+const performanceStore=createPerformanceStore({publicRoots:[root],vault});
+const investments=createInvestmentStore({publicRoots:[root,join(root,'..')],vault});
+const cashStore=createCashStore({publicRoots:[root,join(root,'..')],vault});
 const fetchTossHoldings=createTossReader({onSnapshot:historyRecorder.snapshot,onFailure:historyRecorder.failure});
 // 한투 모의계좌 실행 엔진(모의 키가 있을 때만). 실전 모드(prod)에서는 만들지 않는다.
-let paperLive=null;try{if(keyFiles.kis.configured&&keyFiles.kis.mode==='vps'){let limits={};try{limits=process.env.PAPER_LIVE_LIMITS?JSON.parse(process.env.PAPER_LIVE_LIMITS):{};}catch{}const defaultPlan=()=>{try{const d=JSON.parse(readFileSync(join(root,'data/paper-plan.json'),'utf8'));return Object.fromEntries(Object.entries(d.weights||{}).map(([k,v])=>[k,{pct:v.pct,name:v.name,currency:v.currency,...(v.exit?{exit:true}:{})}]));}catch{return null;}};const defaultPlanVersion=()=>{try{return JSON.parse(readFileSync(join(root,'data/paper-plan.json'),'utf8')).version||null;}catch{return null;}};paperLive=createPaperLive({client:createKisClient({tokenFile:join(ledgerDir(),'kis-vps-token.json')}),store:createLedgerStore(ledgerDir()),readMarket:fetchHeldMarketSeries,defaultPlan,defaultPlanVersion,defaultPlanDoc:()=>{try{return JSON.parse(readFileSync(join(root,'data/paper-plan.json'),'utf8'));}catch{return null;}},nextPlanDoc:()=>{try{return JSON.parse(readFileSync(join(root,'data/paper-plan.next.json'),'utf8'));}catch{return null;}},planChangeMax:/^[0-9]+$/.test(process.env.PAPER_LIVE_PLAN_CHANGES||'')?Number(process.env.PAPER_LIVE_PLAN_CHANGES):2,planChangeDays:Number(process.env.PAPER_LIVE_PLAN_CHANGE_DAYS)>0?Number(process.env.PAPER_LIVE_PLAN_CHANGE_DAYS):30,thesisCard:k=>{try{return JSON.parse(readFileSync(join(root,'data/thesis-cards.json'),'utf8')).cards.find(c=>c.key===k)||null;}catch{return null;}},limits,prefsCooldownDays:Number.isFinite(Number(process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS))&&process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS!==''&&process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS!==undefined?Number(process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS):28,principalKrw:Number(process.env.PAPER_LIVE_PRINCIPAL)>0?Number(process.env.PAPER_LIVE_PRINCIPAL):null});
+let paperLive=null;try{if(keyFiles.kis.configured&&keyFiles.kis.mode==='vps'){let limits={};try{limits=process.env.PAPER_LIVE_LIMITS?JSON.parse(process.env.PAPER_LIVE_LIMITS):{};}catch{}const defaultPlan=()=>{try{const d=JSON.parse(readFileSync(join(root,'data/paper-plan.json'),'utf8'));return Object.fromEntries(Object.entries(d.weights||{}).map(([k,v])=>[k,{pct:v.pct,name:v.name,currency:v.currency,...(v.exit?{exit:true}:{})}]));}catch{return null;}};const defaultPlanVersion=()=>{try{return JSON.parse(readFileSync(join(root,'data/paper-plan.json'),'utf8')).version||null;}catch{return null;}};paperLive=createPaperLive({client:createKisClient({tokenFile:join(ledgerDir(),'kis-vps-token.json'),vault}),store:createLedgerStore(ledgerDir(),{vault}),readMarket:fetchHeldMarketSeries,defaultPlan,defaultPlanVersion,defaultPlanDoc:()=>{try{return JSON.parse(readFileSync(join(root,'data/paper-plan.json'),'utf8'));}catch{return null;}},nextPlanDoc:()=>{try{return JSON.parse(readFileSync(join(root,'data/paper-plan.next.json'),'utf8'));}catch{return null;}},planChangeMax:/^[0-9]+$/.test(process.env.PAPER_LIVE_PLAN_CHANGES||'')?Number(process.env.PAPER_LIVE_PLAN_CHANGES):2,planChangeDays:Number(process.env.PAPER_LIVE_PLAN_CHANGE_DAYS)>0?Number(process.env.PAPER_LIVE_PLAN_CHANGE_DAYS):30,thesisCard:k=>{try{return JSON.parse(readFileSync(join(root,'data/thesis-cards.json'),'utf8')).cards.find(c=>c.key===k)||null;}catch{return null;}},limits,prefsCooldownDays:Number.isFinite(Number(process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS))&&process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS!==''&&process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS!==undefined?Number(process.env.PAPER_LIVE_PREFS_COOLDOWN_DAYS):28,principalKrw:Number(process.env.PAPER_LIVE_PRINCIPAL)>0?Number(process.env.PAPER_LIVE_PRINCIPAL):null});
 // 공개 스냅샷: 모의계좌는 가상 돈이라 누구나 봐도 된다. status() 를 줄여(계좌번호·경로·주문번호 제외) data/paper-live-public.json 에 적고(PAPER_LIVE_PUBLISH_REPO 에도),
 // PAPER_LIVE_PUBLISH=1 이면 하루 한 번(16:00 KST 뒤) 그 파일 하나만 커밋·푸시한다. 다른 변경은 건드리지 않는다(pathspec 커밋).
 const publicRepo=process.env.PAPER_LIVE_PUBLISH_REPO||null,publicFiles=[join(root,'data','paper-live-public.json'),...(publicRepo&&publicRepo!==root?[join(publicRepo,'data','paper-live-public.json')]:[])];
-const git=(args,timeout)=>new Promise(res=>execFile('git',args,{timeout,windowsHide:true},(e,out,err)=>res({ok:!e,out:String(out||''),err:String(err||'')})));
-paperLive.publishPublic=async({push=false}={})=>{const st=await paperLive.status();if(!st.balance){console.log(`[KIS 공개] 잔고를 읽지 못해 이번 게시는 건너뜀(${String(st.error||'').slice(0,80)})`);return {written:0,pushed:null,skipped:true,error:st.error||'잔고 조회 실패'};}const pub=publicSnapshot(st,{asOf:new Date().toISOString()});let written=0;for(const f of publicFiles){try{writeFileSync(f,JSON.stringify(pub,null,1));written++;}catch(e){console.log(`[KIS 공개] 쓰기 실패: ${e.message}`);}}
-  let pushed=null;if(push&&publicRepo){const day=pub.asOf.slice(0,10);const c=await git(['-C',publicRepo,'commit','-q','-m',`Mock account snapshot ${day}\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>`,'--','data/paper-live-public.json'],60e3);if(!c.ok)pushed={ok:false,note:/nothing to commit|no changes|nothing added/.test(c.out+c.err)?'변화 없음':'커밋 실패'};else{const p=await git(['-C',publicRepo,'push','-q'],120e3);pushed={ok:p.ok,note:p.ok?'푸시 완료':'푸시 실패'};}console.log(`[KIS 공개] ${pub.asOf} ${pushed.note}`);}
+// git 은 비밀 없는 최소 환경으로, 저장소 훅을 끈 채로 부른다(OneDrive 안 저장소의 .git/hooks 가 바뀌어도 실행되지 않게).
+const gitHooksOff=join(process.env.LOCALAPPDATA||root,'TeamQuant','no-git-hooks');try{mkdirSyncTq(gitHooksOff,{recursive:true});}catch{}
+const git=(args,timeout)=>new Promise(res=>execFile('git',['-c','core.hooksPath='+gitHooksOff,...args],{timeout,windowsHide:true,env:minimalEnv(process.env)},(e,out,err)=>res({ok:!e,out:String(out||''),err:String(err||'')})));
+paperLive.publishPublic=async({push=false}={})=>{if(!consentLog.valid('C6',PUBLISH_SCOPE)){if(push)console.log('[KIS 공개] 모의계좌 공개 동의(C6)가 없어 게시하지 않음 — node scripts/consent.mjs review');return {written:0,pushed:null,skipped:true,error:'공개 동의(C6) 없음'};}const st=await paperLive.status();if(!st.balance){console.log(`[KIS 공개] 잔고를 읽지 못해 이번 게시는 건너뜀(${String(st.error||'').slice(0,80)})`);return {written:0,pushed:null,skipped:true,error:st.error||'잔고 조회 실패'};}const pub=publicSnapshot(st,{asOf:new Date().toISOString()});let written=0;for(const f of publicFiles){try{writeFileSync(f,JSON.stringify(pub,null,1));written++;}catch(e){console.log(`[KIS 공개] 쓰기 실패: ${e.message}`);}}
+  let pushed=null;if(push&&publicRepo){const day=pub.asOf.slice(0,10);const c=await git(['-C',publicRepo,'commit','-q','-m',`Mock account snapshot ${day}\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>`,'--','data/paper-live-public.json'],60e3);if(!c.ok)pushed={ok:false,note:/nothing to commit|no changes|nothing added/.test(c.out+c.err)?'변화 없음':'커밋 실패'};else{const br=await git(['-C',publicRepo,'rev-parse','--abbrev-ref','HEAD'],10e3),ahead=await git(['-C',publicRepo,'rev-list','--count','@{u}..HEAD'],10e3);if(br.out.trim()!=='main'||ahead.out.trim()!=='1')pushed={ok:false,note:`푸시 보류(브랜치 ${br.out.trim()||'?'} · 올릴 커밋 ${ahead.out.trim()||'?'}개 — 스냅샷 커밋 1개일 때만 올림)`};else{const p=await git(['-C',publicRepo,'push','-q','origin','HEAD:main'],120e3);pushed={ok:p.ok,note:p.ok?'푸시 완료':'푸시 실패'};}}console.log(`[KIS 공개] ${pub.asOf} ${pushed.note}`);}
   return {...pub,written,pushed};};
 // 자동 실행(PAPER_LIVE_AUTO=1): 10분마다 확인. 시장이 열려 있고 금요일·급함·계획 변경·첫 운용일 때만 하루 한 번 보낸다. 그 밖에는 점검만.
 if(process.env.PAPER_LIVE_AUTO==='1'){let publishedDay=null,publicWroteAt=0;const autoTick=async()=>{try{const r=await paperLive.autoRun();if(r.ran)console.log(`[KIS 자동] ${new Date().toISOString()} ${r.market} ${r.reason}: 할 일 ${r.items} · 보냄 ${r.sent} · 차단 ${r.blocked}`);}catch(e){console.log(`[KIS 자동] 실패: ${e.message}`);}
@@ -76,7 +85,7 @@ if(paperLive){const watchSymbols=()=>{try{const d=paperLive.planDoc?.()||JSON.pa
   setInterval(issueTick,10*60e3).unref();setTimeout(issueTick,60e3).unref();paperLive.issueScan=()=>issueWatch.scan();console.log('[이슈 대응] 위성 종목 공시 감시 켜짐(10분마다 · DART · SEC 8-K)');}
 // 결정 24: REAL_RECORD_SOURCE=toss 면 실제 돈이 있는 토스 종합계좌를 같은 방식(읽기 전용 · 하루 한 점 · 해시 체인 · 공개 안 함)으로 기록한다. 토스 리더는 화면용(onSnapshot 보유 기록)과 따로 만든다.
 function startRealTick(label){const realTick=async()=>{try{const s=await realRecord.status();if(s.error)console.log(`[실계좌] 평가 보류 (조회 실패)`);}catch(e){console.log(`[실계좌] 기록 실패 (${e.code||'error'})`);}};setInterval(realTick,25*60e3).unref();setTimeout(realTick,45e3).unref();console.log(`[실계좌] ${label} 읽기 전용 기록 준비 (주문 기능 없음 · 25분마다 평가 · 공개 안 함)`);}
-let realRecord=null;try{const ro=process.env.REAL_RECORD_SOURCE==='toss'?{configured:false}:kisReadOnlySettings(process.env);if(process.env.REAL_RECORD_SOURCE==='toss'){realRecord=createRealRecord({reader:createTossRecordReader({read:createTossReader()}),store:createLedgerStore(ledgerDir(),{prefix:'real'}),readMarket:fetchHeldMarketSeries});startRealTick('토스 종합계좌');}else if(ro.configured){realRecord=createRealRecord({reader:createKisReader({settings:ro,tokenFile:join(ledgerDir(),'kis-prod-token.json')}),store:createLedgerStore(ledgerDir(),{prefix:'kis-prod'}),readMarket:fetchHeldMarketSeries});
+let realRecord=null;if(!consentLog.valid('C9')&&(process.env.REAL_RECORD_SOURCE==='toss'||process.env.KIS_REAL_READONLY==='1'))console.log('[실계좌] 조회 동의(C9)가 없어 자동 기록을 켜지 않습니다 — node scripts/consent.mjs review 뒤 서버를 다시 시작');else try{const ro=process.env.REAL_RECORD_SOURCE==='toss'?{configured:false}:kisReadOnlySettings(process.env,{vault});if(process.env.REAL_RECORD_SOURCE==='toss'){realRecord=createRealRecord({reader:createTossRecordReader({read:createTossReader()}),store:createLedgerStore(ledgerDir(),{prefix:'real',vault}),readMarket:fetchHeldMarketSeries});startRealTick('토스 종합계좌');}else if(ro.configured){realRecord=createRealRecord({reader:createKisReader({settings:ro,tokenFile:join(ledgerDir(),'kis-prod-token.json'),vault}),store:createLedgerStore(ledgerDir(),{prefix:'kis-prod',vault}),readMarket:fetchHeldMarketSeries});
   const realTick=async()=>{try{const s=await realRecord.status();if(s.error)console.log(`[KIS 실계좌] 평가 보류 (조회 실패)`);}catch(e){console.log(`[KIS 실계좌] 기록 실패 (${e.code||'error'})`);}};setInterval(realTick,25*60e3).unref();setTimeout(realTick,45e3).unref();
   console.log(`[KIS 실계좌] ${ro.accountMasked} 읽기 전용 기록 준비 (주문 기능 없음 · 25분마다 평가 · 공개 안 함)`);}else if(process.env.KIS_REAL_READONLY==='1')console.log(`[KIS 실계좌] ${ro.reason}`);}catch(e){console.log(`[KIS 실계좌] 준비 실패 (${e.code||'error'})`);}
 const bridge=createLocalBridge({port,paperLive,realRecord,devices:createDeviceStore({publicRoots:[root,join(root,'..')]}),readHoldings:fetchTossHoldings,readOrders:input=>fetchTossHoldings.orders(input),readMarket:fetchHeldMarketSeries,readNews:fetchNews,readStatus:()=>localStatus(),performance:performanceStore,investments,cash:cashStore,readHistory:async()=>{const r=await historyStore.list({limit:1000});return {...r,records:r.records.map(x=>({id:x.id,accountId:x.accountId,observedAt:x.observedAt,status:x.status,errorCode:x.errorCode,data:x.data?{totals:x.data.totals,fx:x.data.fx,cashKnown:false}:null}))};}});
@@ -107,27 +116,27 @@ http.createServer(async (request, response) => {
     if (url.pathname === '/api/dart') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       try { const data = await fetchCompanyBrief(url.searchParams.get('code') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(data)); }
-      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:safeError(error)})); }
     }
     if (url.pathname === '/api/fundamentals') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       try { const data = await fetchFundamentals(url.searchParams.get('symbol') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'private, max-age=600'}); return response.end(JSON.stringify(data)); }
-      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:safeError(error)})); }
     }
     if (url.pathname === '/api/quote') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       try { const q = await fetchQuote(url.searchParams.get('symbol') || ''); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(q)); }
-      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:safeError(error)})); }
     }
     if (url.pathname === '/api/market-overview') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       try { const ind = url.searchParams.get('industry'); const v = ind ? await fetchIndustryStocks(ind) : await fetchMarketOverview({ market: String(url.searchParams.get('market') || 'KOSPI').toUpperCase() }); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(v)); }
-      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:safeError(error)})); }
     }
     if (url.pathname === '/api/issues') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
       try { const { data } = await readIssueFeed(url.searchParams, { localDir: join(root, '.issue-data') }); response.writeHead(200, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'}); return response.end(JSON.stringify(data === null ? { available: false } : { available: true, ...(Array.isArray(data) ? { items: data } : data) })); }
-      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:error.message})); }
+      catch (error) { response.writeHead(error.status || 502, {'Content-Type':'application/json; charset=utf-8'}); return response.end(JSON.stringify({error:safeError(error)})); }
     }
     if (url.pathname === '/api/news') {
       if (request.method !== 'GET') { response.writeHead(405, {'Allow':'GET'}); return response.end(); }
@@ -164,17 +173,17 @@ http.createServer(async (request, response) => {
     }
     const requested = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
     // Only public application assets. Never expose .env, model files or SQLite journals.
-    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|brief-ui\.js|brief\.css|lab-ui\.js|lab\.css|portfolio-ui\.js|tooltip-ui\.js|demo-ui\.js|issues-ui\.js|issues\.css|response-ui\.js|core-ui\.js|core\.css|paper-ui\.js|paper-account-ui\.js|sector-ui\.js|market-ui\.js|market\.css|stock-search-ui\.js|company-ui\.js|growth-ui\.js|lib\/(?:client-data|company-lab|core-rules|core-risk|report-card|paper-trading|paper-public|strategy-review|sectors|rule-presets|situation|situation-strategies|issue-bot|risk-models|shock-analogs|market-response|strategy-lab|stock-score|move-explain|portfolio-advice|backtest|oos-validation|market-brief|asset-timeline|trade-review|market-reasons|trading-habits|dca-advisor|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names|situation-stats|shock-study|risk-model-report|core-validation|strategy-evidence|company-history|growth-study|growth-outlook|growth-ledger|growth-universe|growth-strategy|paper-rehearsal|sectors|paper-plan|paper-live-public|sizing-study|structure-cards)\.json)$/.test(requested)){
+    if(!/^(?:downloads\/TeamQuant-PC\.zip|index\.html|styles\.css|typography\.css|overview\.css|overview-ui\.js|planner-ui\.js|planner\.css|investor-ui\.js|connected-workspace-ui\.js|workspace-ui\.js|workspace\.css|account-ui\.js|toss-ui\.js|bridge-client\.js|asset-hub-ui\.js|performance-ui\.js|performance-view-ui\.js|orders-ui\.js|help-ui\.js|consent-ui\.js|app\.js|ml-ui\.js|news-ui\.js|journey-ui\.js|flow-ui\.js|brief-ui\.js|brief\.css|lab-ui\.js|lab\.css|portfolio-ui\.js|tooltip-ui\.js|demo-ui\.js|issues-ui\.js|issues\.css|response-ui\.js|core-ui\.js|core\.css|paper-ui\.js|paper-account-ui\.js|sector-ui\.js|market-ui\.js|market\.css|stock-search-ui\.js|company-ui\.js|growth-ui\.js|lib\/(?:client-data|company-lab|core-rules|core-risk|report-card|paper-trading|paper-public|strategy-review|sectors|rule-presets|situation|situation-strategies|issue-bot|risk-models|shock-analogs|market-response|strategy-lab|stock-score|move-explain|portfolio-advice|backtest|oos-validation|market-brief|asset-timeline|trade-review|market-reasons|trading-habits|dca-advisor|natural-language|instruments|comparison|portfolio|briefing|asset-workspace|performance-view|product-catalog|performance-import|performance-math|performance-benchmark|last-observation|investor-tools|candlestick-view|account-view|trusted-device|holdings-overview|goal-engine|allocation-planner)\.js|data\/(?:ml-report|stock-names|situation-stats|shock-study|risk-model-report|core-validation|strategy-evidence|company-history|growth-study|growth-outlook|growth-ledger|growth-universe|growth-strategy|paper-rehearsal|sectors|paper-plan|paper-live-public|sizing-study|structure-cards)\.json)$/.test(requested)){
       response.writeHead(404);return response.end();
     }
     const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");
     const filePath = join(root, safePath);
     const content = await readFile(filePath);
-    response.writeHead(200, { "Content-Type": types[extname(filePath)] || "application/octet-stream" });
+    response.writeHead(200, { "Content-Type": types[extname(filePath)] || "application/octet-stream", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "no-referrer", "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data: blob: https:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'" });
     response.end(content);
   } catch (error) {
     const status = error.status || (error.code === "ENOENT" ? 404 : 400);
     response.writeHead(status, { "Content-Type":"application/json; charset=utf-8" });
-    response.end(JSON.stringify({ error: error.message }));
+    response.end(JSON.stringify({ error: safeError(error) }));
   }
 }).listen(port, "127.0.0.1", () => console.log(`Team Quant simulator: http://127.0.0.1:${port}`));

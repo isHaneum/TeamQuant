@@ -26,3 +26,18 @@ devices/
 
 # 이슈 봇 결과(issue-data 브랜치 작업 폴더)
 .issue-data/
+
+# 2026-11-16 보안 검토: 키·토큰·장부·금고·개인 모듈이 실수로 공개 저장소에 들어가지 않게
+*.key
+*.tqe
+tq-recovery*
+personal/
+kis-*-token.json
+kis-vps-[0-9]*.json
+kis-prod-[0-9]*.json
+real-toss*.json
+toss-dca.json
+dca-config.json
+consent-log.json
+keyring.v1.json
+kek.v1.dpapi

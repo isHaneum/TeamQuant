@@ -95,7 +95,7 @@ test('체결은 조회 시각과 무관하게 같다: 같은 KST 날 10:00 과 1
 test('공개 스냅샷 없음: real-record 는 paper-public 을 쓰지 않고, dev-server 는 실계좌 기록을 publishPublic·공개 파일 쓰기에 넘기지 않는다', () => {
   const root = new URL('../', import.meta.url), rr = readFileSync(new URL('lib/real-record.js', root), 'utf8'), dev = readFileSync(new URL('dev-server.mjs', root), 'utf8');
   assert.doesNotMatch(rr, /from '\.\/paper-public|publicSnapshot|writeFileSync|process\.env/, 'import 도 호출도 없다(주석의 언급만 허용)');
-  assert.match(dev, /realRecord=createRealRecord\(/); assert.match(dev, /createLedgerStore\(ledgerDir\(\),\{prefix:'kis-prod'\}\)/); assert.match(dev, /'kis-prod-token\.json'/);
+  assert.match(dev, /realRecord=createRealRecord\(/); assert.match(dev, /createLedgerStore\(ledgerDir\(\),\{prefix:'kis-prod'(,vault)?\}\)/); assert.match(dev, /'kis-prod-token\.json'/);
   for (const line of dev.split(/\r?\n/)) if (/realRecord/.test(line)) assert.doesNotMatch(line, /publishPublic|publicSnapshot|writeFileSync|paper-live-public/, '실계좌 기록은 공개 경로에 닿지 않는다');
   assert.doesNotMatch(dev, /createKisClient\([^)]*ro\b/, '실전 설정이 주문 클라이언트에 들어가지 않는다');
 });

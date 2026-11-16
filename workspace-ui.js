@@ -91,3 +91,5 @@ $('#overview .page-head #ov-refresh').hidden=true;
 // 2026-11-05: 머리말 정리. 상단 보안 문구는 설정의 ⓘ로, 홈의 '과거 투자 성과'는 더보기로 일원화.
 note.hidden=true;
 for(const b of document.querySelectorAll('#overview .page-head .ov-actions button'))if(b.textContent==='과거 투자 성과')b.hidden=true;
+// 2026-11-16 사용자 확인 조항(consent-ui.js): 설정 화면이 만들어진 뒤에 붙인다(동의 관리 칸이 설정에 들어가야 하므로).
+import('/consent-ui.js').catch(()=>{});

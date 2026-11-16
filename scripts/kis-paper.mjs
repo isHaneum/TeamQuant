@@ -9,7 +9,8 @@
 import { join, resolve, dirname } from 'node:path';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { applyKeyFiles } from '../lib/key-files.js';
+import { applyKeyFiles, applyVaultEnv } from '../lib/key-files.js';
+import { getVault } from '../lib/vault.js';
 import { createKisClient } from '../lib/kis-orders.js';
 import { createPaperLive, createLedgerStore, ledgerDir } from '../lib/paper-live.js';
 import { fetchHeldMarketSeries } from '../lib/market.js';
@@ -31,7 +32,8 @@ if (process.argv[2] === 'verify') {
   process.exit(v.ok && !x.mismatches.length ? 0 : 1);
 }
 for (const f of ['.env', '.env.local']) { try { process.loadEnvFile(join(root, f)); } catch { } }
-const keys = applyKeyFiles(process.env);
+const vault = getVault(); applyVaultEnv(process.env, vault); // 2026-11-16 금고(키·토큰·장부 암호화)
+const keys = applyKeyFiles(process.env, { vault });
 const args = process.argv.slice(2), cmd = args[0] || 'status';
 const opt = n => { const i = args.indexOf('--' + n); return i >= 0 ? args[i + 1] : null; };
 const won = v => Number.isFinite(v) ? `${Math.round(v).toLocaleString('ko-KR')}원` : '—';
@@ -43,8 +45,8 @@ let limits = {}; try { limits = process.env.PAPER_LIVE_LIMITS ? JSON.parse(proce
 console.log(`키: DART ${keys.dart.configured ? '설정됨' : '없음' + (keys.dart.reason ? ' (' + keys.dart.reason + ')' : '')} · KIS ${keys.kis.mode} ${keys.kis.configured ? '설정됨 ' + keys.kis.accountMasked : '없음 (' + keys.kis.reason + ')'}`);
 if (!keys.kis.configured) process.exit(2);
 process.on('unhandledRejection', e => { console.error(`실패: ${e?.message || e}${e?.code ? ' (' + e.code + ')' : ''}`); process.exit(1); });
-const client = createKisClient({ tokenFile: join(ledgerDir(), 'kis-vps-token.json') });
-const pl = createPaperLive({ client, store: createLedgerStore(ledgerDir()), readMarket: fetchHeldMarketSeries, limits });
+const client = createKisClient({ tokenFile: join(ledgerDir(), 'kis-vps-token.json'), vault });
+const pl = createPaperLive({ client, store: createLedgerStore(ledgerDir(), { vault }), readMarket: fetchHeldMarketSeries, limits });
 const showItems = items => { for (const i of items) console.log(`  ${i.ok ? '통과' : '차단'} ${i.name}(${i.symbol}) ${i.side === 'BUY' ? '매수' : '매도'} ${i.qty ?? '—'}주 @${i.currency === 'USD' ? '$' + (i.price ?? 0).toFixed(2) : won(i.price)} = ${won(i.amountKrw)} · ${i.why}${i.blocks.length ? '\n      - ' + i.blocks.join('\n      - ') : ''}${i.warnings?.length ? '\n      ! ' + i.warnings.join(' / ') : ''}`); };
 
 if (cmd === 'status') {
