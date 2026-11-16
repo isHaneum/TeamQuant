@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-16T22:28:01.331Z",
+ "updatedAt": "2026-11-16T22:48:14.614Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-16",
-   "last": 1335.6400146484375,
-   "change": 0.14,
+   "last": 1335.8299560546875,
+   "change": 0.15,
    "z": 0.2,
    "sd": 0.6326251329727653,
    "source": "Yahoo"
@@ -121,35 +121,35 @@
   }
  ],
  "spikes": {
-  "war": 0.5,
-  "politics": -0.2,
-  "rates": 1.1,
-  "trade": -0.1,
+  "war": 0.7,
+  "politics": -0.3,
+  "rates": 1.3,
+  "trade": 0.4,
   "fx": -0.2,
-  "energy": -0.1,
-  "market": 0.5,
+  "energy": 0.8,
+  "market": 1,
   "credit": -0.1,
   "disaster": 0,
-  "policy": -0.4
+  "policy": 0
  },
  "rates": {
   "war": {
-   "rate": 2.2,
+   "rate": 2.4,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.4,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.8,
+   "rate": 4.1,
    "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 3.3,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -159,13 +159,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 4.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.8,
-   "saturated": 1,
+   "rate": 4.6,
+   "saturated": 2,
    "queries": 3
   },
   "credit": {
@@ -179,7 +179,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -209,8 +209,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 53,
-    "spike": 1.1,
+    "score": 55,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -249,8 +249,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 0.5,
+    "score": 53,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -289,8 +289,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 0.5,
+    "score": 53,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -335,8 +335,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 44,
-    "spike": 0.5,
+    "score": 46,
+    "spike": 0.7,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -352,47 +352,103 @@
    }
   },
   {
-   "id": "1fnb3hd",
-   "title": "[속보]미국증시 나스닥 1.42% 급락…다우·S&P500 동반 하락, 엔비디아 실...",
-   "firstSeen": "2026-11-16T15:00:00.000Z",
-   "lastSeen": "2026-11-16T22:23:00.000Z",
-   "count": 19,
-   "sources": 16,
+   "id": "1fzepvy",
+   "title": "뉴욕증시, AI주 급락에 나스닥 2.5%↓…유가도 공급과잉 전망속 3%대↓",
+   "firstSeen": "2026-11-16T21:29:00.000Z",
+   "lastSeen": "2026-11-16T22:43:00.000Z",
+   "count": 11,
+   "sources": 10,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 4% 급락에 뉴욕증시 휘청…나스닥 2.49% 하락",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000083356",
+     "host": "jnilbo.com",
+     "at": "2026-11-16T22:43:00.000Z"
+    },
+    {
+     "title": "[오늘의 글로벌마켓] 뉴욕증시, 엔비디아 등 AI주 휘청...나스닥 2.5%↓",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147155",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-16T22:40:00.000Z"
+    },
+    {
+     "title": "[오늘의 증시]엔비디아 4%대 급락에 美 AI주 '와르르'…코스피 하락 출발...",
+     "link": "https://www.newsis.com/view/NISX20261117_0003870651",
+     "host": "newsis.com",
+     "at": "2026-11-16T22:24:00.000Z"
+    },
+    {
+     "title": "[데일리 머니마켓] 나스닥 2.49% 급락",
+     "link": "https://www.bigtanews.co.kr/article/view/big202611170001",
+     "host": "bigtanews.co.kr",
+     "at": "2026-11-16T22:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "5jxk1h",
+   "title": "뉴욕증시, 젠슨 황 사임 여파에 일제히 하락…반도체지수 5.3% 급락",
+   "firstSeen": "2026-11-16T08:08:00.000Z",
+   "lastSeen": "2026-11-16T22:42:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "젠슨 황 사임 여파 계속, 뉴욕증시 일제히 하락…엔비디아 4.1%↓",
-     "link": "https://www.sidae.com/article/2026111707131096034",
-     "host": "sidae.com",
-     "at": "2026-11-16T22:23:00.000Z"
+     "title": "AI 매도세 계속, 뉴욕증시 일제히 하락‥엔비디아 4.1%↓",
+     "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6866182_37012.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-16T22:42:00.000Z"
     },
     {
-     "title": "[속보] 뉴욕증시 주요 기술주 일제히 하락…엔비디아 4.12%·마이크론 7....",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627575",
-     "host": "cbci.co.kr",
-     "at": "2026-11-16T22:20:00.000Z"
+     "title": "젠슨황 사임 여파에 뉴욕증시 하락…나스닥 2.5%↓",
+     "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=366214",
+     "host": "smedaily.co.kr",
+     "at": "2026-11-16T22:38:00.000Z"
     },
     {
-     "title": "AI 매도세 계속, 뉴욕증시 일제히 하락…엔비디아 4.1%↓(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261117008651072?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-16T22:20:00.000Z"
+     "title": "美 증시, AI 빅테크 7개 종목 일제히 하락…엔비디아 4.1% 급락에 나스닥...",
+     "link": "https://www.aitimes.kr/news/articleView.html?idxno=42749",
+     "host": "aitimes.kr",
+     "at": "2026-11-16T22:36:00.000Z"
     },
     {
-     "title": "[속보]뉴욕증시 3대 지수 일제히 급락…나스닥 626포인트 폭락, 다우 5만...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627574",
-     "host": "cbci.co.kr",
-     "at": "2026-11-16T22:16:00.000Z"
+     "title": "AI 매도세 지속에 뉴욕증시 급락…다우지수 1.41%↓",
+     "link": "http://www.inews24.com/view/2026886",
+     "host": "inews24.com",
+     "at": "2026-11-16T22:29:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.5,
+    "score": 44,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -430,8 +486,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.5,
+    "score": 43,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -447,104 +503,47 @@
    }
   },
   {
-   "id": "mjx3r8",
-   "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-   "firstSeen": "2026-11-16T05:51:00.000Z",
-   "lastSeen": "2026-11-16T22:17:00.000Z",
-   "count": 10,
-   "sources": 9,
+   "id": "19bcck9",
+   "title": "[뉴욕증시 마감시황] 엔비디아 실적 앞두고 美반도체주 급락…SK하이닉...",
+   "firstSeen": "2026-11-16T21:29:00.000Z",
+   "lastSeen": "2026-11-16T22:42:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "politics"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "트럼프 “젠슨황 스캔들 상태, 중국 스파이 아닐 수도…중국 자극 원치...",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714516&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-16T22:17:00.000Z"
+     "title": "[오늘의 이슈] 엔비디아 실적 앞두고 반도체주 다시 흔들",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=108052",
+     "host": "newskr.kr",
+     "at": "2026-11-16T22:42:00.000Z"
     },
     {
-     "title": "트럼프 “젠슨 황 복귀 나쁜 생각 아냐”…앨리스 황 스파이 의혹에는 ...",
-     "link": "https://www.kyeonggi.com/article/20261117580007",
-     "host": "kyeonggi.com",
-     "at": "2026-11-16T22:14:00.000Z"
+     "title": "[마켓 브리핑] 뉴욕증시, 엔비디아 실적 앞두고 경계감 확대",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346874?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T22:33:00.000Z"
     },
     {
-     "title": "트럼프 “앨리스 황, 中 스파이 아닐 수도…中 자극하고 싶지 않아”",
-     "link": "https://www.dailian.co.kr/news/view/1715815/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-16T22:03:00.000Z"
+     "title": "[넥스트-샷] 엔비디아 실적 하루 앞두고···반도체·서버·클라우드 동...",
+     "link": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=261233",
+     "host": "womaneconomy.co.kr",
+     "at": "2026-11-16T22:30:00.000Z"
     },
     {
-     "title": "트럼프 \"앨리스 황, 中 스파이 아닐 수도…中 자극하고 싶지 않아\"",
-     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/17/2026111790059.html",
-     "host": "news.tvchosun.com",
-     "at": "2026-11-16T22:02:00.000Z"
+     "title": "미국증시 나스닥 2.49% 급락…엔비디아 실적 앞두고 반도체 5.28%↓, SK하...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16278449",
+     "host": "topstarnews.net",
+     "at": "2026-11-16T22:04:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "11lxl60",
-   "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
-   "firstSeen": "2026-11-15T23:32:00.000Z",
-   "lastSeen": "2026-11-16T22:12:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war",
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "앤트로픽 IPO, 중국 자본 막혔다 \"AI 기업 상장에도 안보 잣대\"",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=757465",
-     "host": "econovill.com",
-     "at": "2026-11-16T22:12:00.000Z"
-    },
-    {
-     "title": "비트코인 6만 5,000달러 깨졌다…앤트로픽 상장 앞두고 스페이스X 때 흐...",
-     "link": "https://www.wikitree.co.kr/articles/1175097",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-16T13:10:00.000Z"
-    },
-    {
-     "title": "앤트로픽 상장 앞두고 中 투자자 퇴짜…美 AI 패권전쟁 격화",
-     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=883885",
-     "host": "hansbiz.co.kr",
-     "at": "2026-11-16T10:18:00.000Z"
-    },
-    {
-     "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
-     "link": "https://www.tokenpost.kr/news/economy/438754",
-     "host": "tokenpost.kr",
-     "at": "2026-11-15T23:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 37,
-    "spike": 1.1,
+    "score": 40,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -598,8 +597,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 1.1,
+    "score": 39,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -617,9 +616,9 @@
    "id": "zjvhr9",
    "title": "미 달러화 강세…기술주 매도發 안전자산 선호에 5일째↑",
    "firstSeen": "2026-11-16T15:02:00.000Z",
-   "lastSeen": "2026-11-16T20:26:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-16T22:42:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "rates",
     "fx",
@@ -627,6 +626,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "원·달러 NDF 0.15원 상승, 안전자산 선호",
+     "link": "https://www.etoday.co.kr/news/view/2648955",
+     "host": "etoday.co.kr",
+     "at": "2026-11-16T22:42:00.000Z"
+    },
     {
      "title": "美국채 금리 하락·10년물 5.117%…워시 'AI 실망' 경고에 안전자산 선호",
      "link": "https://www.news1.kr/world/usa-canada/6356047",
@@ -649,8 +654,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 1.1,
+    "score": 39,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -665,11 +670,11 @@
    }
   },
   {
-   "id": "1fzepvy",
-   "title": "[뉴욕마감]AI주 투매에 나스닥 2.49% 급락…고점 대비 10%↓ 조정 진입",
-   "firstSeen": "2026-11-16T21:29:00.000Z",
-   "lastSeen": "2026-11-16T22:06:00.000Z",
-   "count": 4,
+   "id": "1fnb3hd",
+   "title": "[뉴욕증시 개장] 반도체주 급락에 나스닥 1.9% 하락…필라델피아반도체...",
+   "firstSeen": "2026-11-16T15:00:00.000Z",
+   "lastSeen": "2026-11-16T22:32:00.000Z",
+   "count": 5,
    "sources": 4,
    "topics": [
     "market"
@@ -677,35 +682,35 @@
    "critical": [],
    "links": [
     {
-     "title": "엔비디아발 AI주 급락…나스닥 2.5% 털썩[월스트리트in]",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01784326645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-16T22:06:00.000Z"
+     "title": "뉴욕증시, 엔비디아發 반도체주 급락에 일제히 하락…나스닥 2.49%↓",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026111707234391408",
+     "host": "newsway.co.kr",
+     "at": "2026-11-16T22:32:00.000Z"
     },
     {
-     "title": "[굿모닝 美 증시] 엔비디아발 AI주 투매에 뉴욕증시 하락…나스닥 2.5%↓",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261117010006238",
-     "host": "asiatoday.co.kr",
+     "title": "[뉴욕증시 마감] 엔비디아 실적 앞두고 반도체주 급락…나스닥 2.5% 하락",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94407",
+     "host": "thefairnews.co.kr",
      "at": "2026-11-16T22:02:00.000Z"
     },
     {
-     "title": "[뉴욕증시]젠슨 황 스캔들 후폭풍…AI주 투매에 나스닥 2.5% ↓",
-     "link": "https://view.asiae.co.kr/article/2026111705514345395",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-16T21:45:00.000Z"
+     "title": "글로벌 반도체주 급락에도 중국 장비주는 상한가",
+     "link": "https://weekly.donga.com/3/all/11/6461404/1",
+     "host": "weekly.donga.com",
+     "at": "2026-11-16T22:02:00.000Z"
     },
     {
-     "title": "[뉴욕마감]AI주 투매에 나스닥 2.49% 급락…고점 대비 10%↓ 조정 진입",
-     "link": "https://www.news1.kr/world/international-economy/6356061",
-     "host": "news1.kr",
-     "at": "2026-11-16T21:29:00.000Z"
+     "title": "뉴욕증시 AI 우려에 급락…코스피 반도체주 다시 시험대",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731902",
+     "host": "ebn.co.kr",
+     "at": "2026-11-16T21:48:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0.5,
+    "score": 38,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -720,43 +725,89 @@
    }
   },
   {
-   "id": "oaz047",
-   "title": "‘블루쓰나미’ 후 급락한 미 국채 금리와 유가, 다시 슬금슬금 오른다",
-   "firstSeen": "2026-11-16T08:34:00.000Z",
-   "lastSeen": "2026-11-16T21:44:00.000Z",
+   "id": "11lxl60",
+   "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
+   "firstSeen": "2026-11-15T23:32:00.000Z",
+   "lastSeen": "2026-11-16T13:10:00.000Z",
    "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "비트코인 6만 5,000달러 깨졌다…앤트로픽 상장 앞두고 스페이스X 때 흐...",
+     "link": "https://www.wikitree.co.kr/articles/1175097",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-16T13:10:00.000Z"
+    },
+    {
+     "title": "앤트로픽 상장 앞두고 中 투자자 퇴짜…美 AI 패권전쟁 격화",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=883885",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-16T10:18:00.000Z"
+    },
+    {
+     "title": "[국제금융 브리핑] 엔비디아 실적·앤트로픽 상장 시험대...연준 금리인...",
+     "link": "https://www.tokenpost.kr/news/economy/438754",
+     "host": "tokenpost.kr",
+     "at": "2026-11-15T23:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "qup20l",
+   "title": "달러, 2025년 5월 이후 최고…연준 추가 금리 인상 전망에 미국 국채금리...",
+   "firstSeen": "2026-11-16T01:14:00.000Z",
+   "lastSeen": "2026-11-16T22:42:00.000Z",
+   "count": 2,
    "sources": 2,
    "topics": [
     "rates",
+    "fx",
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[금/유가] 공급 과잉 우려에 유가 급락…美 금리 인상 전망에 금값도 하...",
-     "link": "https://www.newspim.com/news/view/20261117000014",
+     "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
+     "link": "https://www.newspim.com/news/view/20261117000031",
      "host": "newspim.com",
-     "at": "2026-11-16T21:44:00.000Z"
+     "at": "2026-11-16T22:42:00.000Z"
     },
     {
-     "title": "미 국채 금리·유가 반등…불확실성 확대",
-     "link": "https://www.khan.co.kr/article/202611162038045",
-     "host": "khan.co.kr",
-     "at": "2026-11-16T11:38:00.000Z"
-    },
-    {
-     "title": "‘블루쓰나미’ 후 급락한 미 국채 금리와 유가, 다시 슬금슬금 오른다",
-     "link": "https://www.khan.co.kr/article/202611161734001",
-     "host": "khan.co.kr",
-     "at": "2026-11-16T08:34:00.000Z"
+     "title": "달러, 2025년 5월 이후 최고…연준 추가 금리 인상 전망에 미국 국채금리...",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261116010005901",
+     "host": "asiatoday.co.kr",
+     "at": "2026-11-16T02:10:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 32,
-    "spike": 1.1,
+    "score": 33,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -799,8 +850,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 1.1,
+    "score": 33,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -815,84 +866,42 @@
    }
   },
   {
-   "id": "12kh4b7",
-   "title": "미 연준 의장 \"AI, 성장 촉진하지만 실업·주가 하락 위험도\"",
-   "firstSeen": "2026-11-16T21:28:00.000Z",
-   "lastSeen": "2026-11-16T22:12:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "워시 연준 의장 \"AI 경제 영향 대비 다양한 시나리오 검토\"",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01826966645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-16T22:12:00.000Z"
-    },
-    {
-     "title": "미 연준 의장 \"AI, 성장 촉진하지만 실업·주가 하락 위험도\"",
-     "link": "https://news.mtn.co.kr/article/2026111706271486126",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-16T21:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "uzivqz",
-   "title": "[가장 보통의 투자] 시험장에선 '저 안경 뭐야?', 증시에선 '관련주 뭐야...",
-   "firstSeen": "2026-11-16T06:02:00.000Z",
-   "lastSeen": "2026-11-16T22:06:00.000Z",
+   "id": "vq9oyd",
+   "title": "미중러 정상회의 앞두고 우크라, 러시아에 대규모 드론 공격",
+   "firstSeen": "2026-11-16T09:46:00.000Z",
+   "lastSeen": "2026-11-16T22:02:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "market"
+    "war",
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "AI 관련주 동반 약세… 엔비디아 4%·마이크론 8% 뚝",
-     "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001185",
-     "host": "it.chosun.com",
-     "at": "2026-11-16T22:06:00.000Z"
+     "title": "트럼프 “중러와 3자회담에 우크라·이란 논의”…‘제2 얄타회담’ 우...",
+     "link": "https://biz.heraldcorp.com/article/10939088?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-16T22:02:00.000Z"
     },
     {
-     "title": "나무가 주가 30% 급등 상한가…AI 스마트 안경 관련주 강세",
-     "link": "http://www.kjdaily.com/article.php?aid=1794846613692571276",
-     "host": "kjdaily.com",
-     "at": "2026-11-16T16:32:00.000Z"
+     "title": "\"미중러 우크라·이란 논의\"‥'제2의 얄타' 우려",
+     "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6866135_37012.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-16T21:06:00.000Z"
     },
     {
-     "title": "[가장 보통의 투자] 시험장에선 '저 안경 뭐야?', 증시에선 '관련주 뭐야...",
-     "link": "https://bizhankook.com/articles/eyewear-stock-investment-trends.html",
-     "host": "bizhankook.com",
-     "at": "2026-11-16T06:02:00.000Z"
+     "title": "미중러 정상회의 앞두고 우크라, 러시아에 대규모 드론 공격",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03535846645646376&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-16T09:46:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.5,
+    "score": 31,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
