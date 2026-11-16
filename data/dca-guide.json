@@ -1,0 +1,84 @@
+{
+  "version": "DG1",
+  "checked": "2026-11-16",
+  "lockDays": 28,
+  "note": "월급 적립 화면(lib/dca-guide.js)이 읽는 숫자. 세법은 2026-11 현행, 비용은 각 기준일의 집계. 바뀌면 이 파일만 고치고 checked 날짜를 올린다.",
+  "tax": {
+    "pension": {
+      "cap": 6000000,
+      "capWithIrp": 9000000,
+      "rateLow": 0.165,
+      "rateHigh": 0.132,
+      "lowSalary": 55000000,
+      "earlyTax": 0.165,
+      "lockAge": 55,
+      "laterTax": "3.3~5.5%",
+      "src": [
+        { "t": "소득세법 제59조의3(연금계좌세액공제) · 현행", "u": "https://www.law.go.kr/법령/소득세법", "d": "현행 법령" },
+        { "t": "택스넷 · 2026년 세제개편안 정부안 정리", "u": "https://www.taxnet.co.kr/contents/taxnetpost/post-detail?id=5008", "d": "2026-09" }
+      ]
+    },
+    "irp": {
+      "riskyMax": 0.7,
+      "src": [{ "t": "근로자퇴직급여 보장법 시행령(위험자산 70% 한도) · 현행", "u": "https://www.law.go.kr/법령/근로자퇴직급여보장법시행령", "d": "현행 법령" }]
+    },
+    "isa": {
+      "yearCap": 20000000,
+      "totalCap": 100000000,
+      "taxFree": 2000000,
+      "taxFreeLow": 4000000,
+      "lowSalary": 50000000,
+      "overRate": 0.099,
+      "years": 3,
+      "pending": "2026-08-03 정부 세제개편안(생산적금융 ISA 신설, 일반 ISA 계약기간 제한 등)은 2026-11 기준 국회 심의 중이라 반영하지 않음",
+      "src": [
+        { "t": "조세특례제한법 제91조의18(개인종합자산관리계좌) · 현행", "u": "https://www.law.go.kr/법령/조세특례제한법", "d": "현행 법령" },
+        { "t": "KB Think · 서민형 ISA 조건", "u": "https://kbthink.com/investment/101/low-to-middle-income-isa.html", "d": "2026-08-28" },
+        { "t": "tilnote · ISA 비과세 한도와 2027년 개편안(2026년 11월 기준)", "u": "https://tilnote.io/pages/6af10f9a0f59636c15a69d17", "d": "2026-11-09" }
+      ]
+    },
+    "general": { "rate": 0.154 }
+  },
+  "fees": { "broker": 0.00015, "brokerNote": "온라인 국내 주식·ETF 매매 수수료 0.015% 기준(증권사·이벤트마다 다름)" },
+  "timing": {
+    "frequencyMax": 0.0039,
+    "waitDip": [0.044, 0.126],
+    "src": "S&P500(SPY) 1993~2026, 10년 구간을 한 달씩 옮겨 가며 계산(팀 계산, 2026-11-13). 매일 대비 매주 −0.08%, 매달 −0.39%(최종 금액). 5·10·20% 하락을 기다렸다 사면 최종 금액이 중앙값 기준 4.4·8.9·12.6% 적음."
+  },
+  "categories": [
+    {
+      "id": "us500",
+      "label": "미국 대표 500개 회사",
+      "index": "S&P500",
+      "abroad": true,
+      "asOf": "2026-08-31",
+      "minAumEok": 1000,
+      "src": { "t": "시그널플래너 · 연금 ETF 스캐너 집계(실부담 비용)", "u": "https://blog.signalplanner.co.kr/15744/", "d": "2026-09-28" },
+      "items": [
+        { "name": "ACE 미국S&P500", "cost": 0.0958, "aumEok": 39430 },
+        { "name": "TIGER 미국S&P500", "cost": 0.0976, "aumEok": 203775 },
+        { "name": "RISE 미국S&P500", "cost": 0.0978, "aumEok": 14738 },
+        { "name": "KODEX 미국S&P500", "cost": 0.1093, "aumEok": 100591 },
+        { "name": "SOL 미국S&P500", "cost": 0.1405, "aumEok": 2946 },
+        { "name": "WON 미국S&P500", "cost": 0.2678, "aumEok": 882 },
+        { "name": "PLUS 미국S&P500", "cost": 0.2967, "aumEok": 447 },
+        { "name": "KIWOOM 미국S&P500", "cost": 0.3112, "aumEok": 795 }
+      ]
+    },
+    {
+      "id": "kr200",
+      "label": "한국 대표 200개 회사",
+      "index": "코스피200",
+      "abroad": false,
+      "asOf": "2026-03-06",
+      "src": { "t": "매일신문 · 코스콤 ETF체크 집계(실부담비용)", "u": "https://www.imaeil.com/page/view/2026030609231654800", "d": "2026-03-06" },
+      "items": [
+        { "name": "RISE 200", "cost": 0.0543 },
+        { "name": "ACE 200", "cost": 0.0603 },
+        { "name": "TIGER 200", "cost": 0.0883 },
+        { "name": "KODEX 200", "cost": 0.1857 }
+      ]
+    }
+  ],
+  "missing": "나스닥100·금은 믿을 만한 최신 비용 비교 자료를 찾지 못해 아직 넣지 않음(2026-11-16)."
+}

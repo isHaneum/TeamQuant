@@ -24,7 +24,7 @@ const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' })
 const daysAgo = n => new Date(Date.now() - n * 864e5 + 9 * 3600e3).toISOString().slice(0, 10);
 const marketOf = p => p.currency === 'USD' ? 'US' : 'KR';
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261115c'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261116d'; document.head.append(css);
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
 function addView(id, label, html) {
   const nav = document.createElement('button'); nav.className = 'nav-button'; nav.dataset.view = id; nav.textContent = label; navHost.append(nav);
@@ -134,6 +134,7 @@ const ruleValue = (d, v) => (d.type === 'bool' ? (v ? '켬' : '끔') : `${v}${d.
 
 const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>규칙 ${tip('한 번 정해 두면 오늘 점검과 주문 점검이 이 기준으로 계산합니다. 규칙은 예측이 아니라 손실을 줄이기 위한 한도이고, 매수·매도 지시가 아닙니다. 예시 자산·내 계좌의 규칙은 이 브라우저(프로필별)에만 저장되고, 모의계좌의 규칙은 운영 PC의 장부에 있습니다.')}</h1><p id="rl-sub">정해 둔 규칙과 그 근거</p></div></div>
 <div class="rl">
+  <article class="cr-card" id="rl-dca"><div class="shimmer ct-skel"></div></article>
   <article class="cr-card" id="rl-now"><div class="shimmer ct-skel"></div></article>
   <div class="rl-two">
     <article class="cr-card" id="rl-why"><header><h3>왜 이 규칙인가 ${tip('규칙마다 두는 이유와, 같은 엔진을 과거 자료에 돌려 잰 숫자입니다. "정한 값"은 비교 자료 없이 정한 것입니다. 과거 숫자는 지금 남아 있는 대형주로 만든 묶음이라 실제보다 좋게 나오는 쪽으로 치우쳐 있습니다.')}</h3></header><div id="rl-why-body"><div class="shimmer ct-skel"></div></div></article>
@@ -164,6 +165,8 @@ const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>�
     <h4 class="rl-h4">운용 방식 비교 ${tip('54개 대형주(한국 25 · 미국 29)에서 무작위로 6종목을 뽑은 포트폴리오 120개를, 1,000만 원으로 시작해 매달 50만 원씩 넣으며 2016년부터 운용한 결과입니다. 방식은 2016~2020년 자료로 고르고 표에는 2021년 이후만 보입니다. 지금 남아 있는 대형주라 생존 편향이 있습니다.')}</h4><div id="cr-strategy"><div class="shimmer ct-skel"></div></div>
   </details>
 </div>`);
+// 월급 적립(결정 41): 따로 불러와서, 실패해도 아래 규칙 화면은 그대로 둔다.
+import('/dca-guide-ui.js').then(m => m.mountDcaGuide(document.querySelector('#rl-dca'))).catch(e => { console.warn('[월급 적립]', e); document.querySelector('#rl-dca')?.remove(); });
 
 // 이 화면이 보는 규칙: 모의계좌는 모의계좌의 것(읽기 전용), 그 밖에는 브라우저에 저장한 것.
 function ruleCtx() {
