@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T12:31:56.877Z",
+ "updatedAt": "2026-11-17T12:47:47.719Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,7 +62,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1336.5799560546875,
+   "last": 1336.6199951171875,
    "change": 0.25,
    "z": 0.4,
    "sd": 0.6309606838243439,
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 86.19000244140625,
-   "change": 0.55,
-   "z": 0.2,
+   "last": 86.4000015258789,
+   "change": 0.79,
+   "z": 0.3,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3866,
-   "change": 0.34,
-   "z": 0.3,
+   "last": 3857.699951171875,
+   "change": 0.12,
+   "z": 0.1,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 22.600000381469727,
-   "change": -1.35,
+   "last": 22.700000762939453,
+   "change": -0.92,
    "z": -0.1,
    "sd": 11.968928417352235,
    "source": "Yahoo",
@@ -119,7 +119,7 @@
   }
  ],
  "spikes": {
-  "war": 0,
+  "war": 0.1,
   "politics": -1,
   "rates": -0.7,
   "trade": -0.1,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 1.3,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -299,6 +299,62 @@
    }
   },
   {
+   "id": "jmhpc4",
+   "title": "트럼프 \"희토류 열달 내 中 따라잡을 것…이란전 해결 가까워져\"",
+   "firstSeen": "2026-11-17T12:26:00.000Z",
+   "lastSeen": "2026-11-17T12:45:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프 “10개월 내 희토류 생산 중국 따라잡아…이란전 해결 가까워져...",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715432&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-17T12:45:00.000Z"
+    },
+    {
+     "title": "트럼프 “中희토류 10개월 안에 따라잡을 것…이란전 해결 가까워져”[...",
+     "link": "https://biz.heraldcorp.com/article/10940395?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-17T12:39:00.000Z"
+    },
+    {
+     "title": "트럼프 \"美 희토류 생산, 10개월 안에 중국 따라잡을 것\"",
+     "link": "https://www.ajunews.com/view/20261117213221582",
+     "host": "ajunews.com",
+     "at": "2026-11-17T12:36:00.000Z"
+    },
+    {
+     "title": "트럼프 \"희토류 열달 내 中 따라잡을 것…이란전 끝 가까워져\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261117213225Bgd",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-17T12:33:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 32,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "1u56dka",
    "title": "“미군 F-15 전투기 격추했다” 공습 영상 7개월 만에 공개한 이란…워...",
    "firstSeen": "2026-11-17T07:03:00.000Z",
@@ -322,8 +378,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
-    "spike": 0,
+    "score": 29,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "KRW=X",
@@ -429,7 +485,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 26,
-    "spike": 0,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -444,84 +500,34 @@
    }
   },
   {
-   "id": "zhokpq",
-   "title": "국고채 일제히 약세…外人 10선 순매도·성장률 상향 우려",
-   "firstSeen": "2026-11-17T04:24:00.000Z",
-   "lastSeen": "2026-11-17T11:24:00.000Z",
+   "id": "p61kno",
+   "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
+   "firstSeen": "2026-11-17T05:28:00.000Z",
+   "lastSeen": "2026-11-17T12:32:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "내년 세계 성장률 3.2% 소폭 상향…‘인공지능 산업’ 투자가 흐름 좌우",
-     "link": "https://www.khan.co.kr/article/202611172024005",
-     "host": "khan.co.kr",
-     "at": "2026-11-17T11:24:00.000Z"
-    },
-    {
-     "title": "IMF, 올해 韓 성장률 3.9%로 상향…내년 3.3% 전망",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03860566645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-17T05:02:00.000Z"
-    },
-    {
-     "title": "국고채 일제히 약세…外人 10선 순매도·성장률 상향 우려",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445165",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-17T04:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 26,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1azee94",
-   "title": "코스피, 결국 '5000선' 붕괴… 환율, 1330원대 후반으로 올라",
-   "firstSeen": "2026-11-17T00:49:00.000Z",
-   "lastSeen": "2026-11-17T11:36:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "'달러 강세·美 기술주 급락' 원·달러 환율, 1330원대 후반으로 올라.....",
-     "link": "https://www.betanews.net/article/view/beta202611170124",
-     "host": "betanews.net",
-     "at": "2026-11-17T11:36:00.000Z"
+     "title": "지슨·인디에프 29%대 급등…코스피 5천선 붕괴",
+     "link": "http://www.kjdaily.com/article.php?aid=1794918617692714276",
+     "host": "kjdaily.com",
+     "at": "2026-11-17T12:32:00.000Z"
     },
     {
-     "title": "결국 5000피 붕괴… ‘젠슨 황 날벼락’",
-     "link": "https://www.dt.co.kr/article/12095774?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-17T10:21:00.000Z"
+     "title": "[주식마감] 'AI 시험 부정행위 논란'에 지슨 이틀 연속 상한가… 인디에...",
+     "link": "https://www.ggilbo.com/news/articleView.html?idxno=1193787",
+     "host": "ggilbo.com",
+     "at": "2026-11-17T10:40:00.000Z"
     },
     {
-     "title": "코스피, 결국 '5000선' 붕괴… 환율, 1330원대 후반으로 올라",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3449516",
-     "host": "newscj.com",
-     "at": "2026-11-17T07:30:00.000Z"
+     "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
+     "link": "https://www.ppss.kr/news/articleView.html?idxno=321356",
+     "host": "ppss.kr",
+     "at": "2026-11-17T05:28:00.000Z"
     }
    ],
    "assess": {
@@ -727,50 +733,6 @@
    }
   },
   {
-   "id": "9qtr9g",
-   "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
-   "firstSeen": "2026-11-17T01:29:00.000Z",
-   "lastSeen": "2026-11-17T11:22:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[시론담론] 젠슨 황의 엔비디아 복귀 가능성",
-     "link": "https://www.jemin.com/news/articleView.html?idxno=847544",
-     "host": "jemin.com",
-     "at": "2026-11-17T11:22:00.000Z"
-    },
-    {
-     "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
-     "link": "https://www.sedaily.com/article/20115281?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-17T01:29:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 23,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "1dhc73l",
    "title": "삼성·하이닉스 동반 급락…코스피 3.59% 하락",
    "firstSeen": "2026-11-16T23:20:00.000Z",
@@ -898,9 +860,64 @@
      "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
+  },
+  {
+   "id": "zhokpq",
+   "title": "국고채 일제히 약세…外人 10선 순매도·성장률 상향 우려",
+   "firstSeen": "2026-11-17T04:24:00.000Z",
+   "lastSeen": "2026-11-17T05:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "IMF, 올해 韓 성장률 3.9%로 상향…내년 3.3% 전망",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03860566645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-17T05:02:00.000Z"
+    },
+    {
+     "title": "국고채 일제히 약세…外人 10선 순매도·성장률 상향 우려",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445165",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-17T04:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-17T12:47:47.719Z",
+   "id": "w1bb7g",
+   "level": "caution",
+   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.92%(평소의 2.1배)"
+   ],
+   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715129&ref=A",
+   "delivered": false
+  },
   {
    "at": "2026-11-17T11:47:47.030Z",
    "id": "w1bb7g",
@@ -1120,18 +1137,6 @@
   {
    "at": "2026-11-16T09:38:55.877Z",
    "id": "kfwi89",
-   "level": "caution",
-   "title": "美 연준 ‘빅스텝’ 가능성… 12월 금리인상 폭은?",
-   "why": [
-    "핵심 단어",
-    "코스피 -3.59%"
-   ],
-   "link": "https://biz.heraldcorp.com/article/10938690?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-16T08:54:04.986Z",
-   "id": "1ml4c42",
    "level": "caution",
    "title": "美 연준 ‘빅스텝’ 가능성… 12월 금리인상 폭은?",
    "why": [
