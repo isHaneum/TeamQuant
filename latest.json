@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T11:12:36.227Z",
+ "updatedAt": "2026-11-17T11:27:45.978Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1335.93994140625,
-   "change": 0.2,
+   "last": 1335.469970703125,
+   "change": 0.17,
    "z": 0.3,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 86.05999755859375,
-   "change": 0.4,
-   "z": 0.1,
+   "last": 86.12000274658203,
+   "change": 0.47,
+   "z": 0.2,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3857.699951171875,
-   "change": 0.12,
+   "last": 3860.10009765625,
+   "change": 0.18,
    "z": 0.1,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 23.530000686645508,
-   "change": 2.71,
+   "last": 23.360000610351562,
+   "change": 1.96,
    "z": 0.2,
    "sd": 11.968928417352235,
    "source": "Yahoo",
@@ -121,12 +121,12 @@
  "spikes": {
   "war": -0.1,
   "politics": -0.5,
-  "rates": -0.1,
+  "rates": -0.2,
   "trade": -0.1,
   "fx": 0.3,
   "energy": -1,
-  "market": 0.2,
-  "credit": 0.1,
+  "market": 0.1,
+  "credit": -0.2,
   "disaster": 0,
   "policy": -0.3
  },
@@ -142,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 2,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
@@ -162,12 +162,12 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.3,
+   "rate": 3.1,
    "saturated": 1,
    "queries": 3
   },
   "credit": {
-   "rate": 0.2,
+   "rate": 0,
    "saturated": 0,
    "queries": 2
   },
@@ -227,8 +227,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 55,
-    "spike": 0.2,
+    "score": 54,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -379,13 +379,13 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": 0.2,
+     "change": 0.17,
      "unit": "%",
      "z": 0.3
     },
     "why": [
      "핵심 단어",
-     "원/달러 +0.2%"
+     "원/달러 +0.17%"
     ]
    }
   },
@@ -445,55 +445,6 @@
    }
   },
   {
-   "id": "gvm1k6",
-   "title": "코스피 5천선 아래로…2월 수준으로 돌아가",
-   "firstSeen": "2026-11-17T08:56:00.000Z",
-   "lastSeen": "2026-11-17T10:48:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "‘1만피’ 넘보던 코스피…2월 수준 회귀",
-     "link": "http://www.segyebiz.com/newsView/20261117518237?OutUrl=naver",
-     "host": "segyebiz.com",
-     "at": "2026-11-17T10:48:00.000Z"
-    },
-    {
-     "title": "코스피 결국 5천선도 밀렸다…지수 2월 초 수준으로 회귀",
-     "link": "https://www.pressian.com/pages/articles/2026111718391737570?utm_source=naver&utm_medium=search",
-     "host": "pressian.com",
-     "at": "2026-11-17T10:41:00.000Z"
-    },
-    {
-     "title": "코스피 5천선 아래로…2월 수준으로 돌아가",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715177&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-17T10:09:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 27,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "1v31xij",
    "title": "[37th SRE][Best Report]미국·이란 전쟁에 엇갈린 산업별 명암",
    "firstSeen": "2026-11-17T03:02:00.000Z",
@@ -530,6 +481,55 @@
     "label": "관찰",
     "score": 26,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "gvm1k6",
+   "title": "코스피 5천선 아래로…2월 수준으로 돌아가",
+   "firstSeen": "2026-11-17T08:56:00.000Z",
+   "lastSeen": "2026-11-17T10:48:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "‘1만피’ 넘보던 코스피…2월 수준 회귀",
+     "link": "http://www.segyebiz.com/newsView/20261117518237?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-17T10:48:00.000Z"
+    },
+    {
+     "title": "코스피 결국 5천선도 밀렸다…지수 2월 초 수준으로 회귀",
+     "link": "https://www.pressian.com/pages/articles/2026111718391737570?utm_source=naver&utm_medium=search",
+     "host": "pressian.com",
+     "at": "2026-11-17T10:41:00.000Z"
+    },
+    {
+     "title": "코스피 5천선 아래로…2월 수준으로 돌아가",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715177&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-17T10:09:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 26,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -639,136 +639,6 @@
    }
   },
   {
-   "id": "cxx0sk",
-   "title": "나스닥 급락에 비트코인도 5.52% 하락…알레아 리서치, “전면적 자금 ...",
-   "firstSeen": "2026-11-17T03:22:00.000Z",
-   "lastSeen": "2026-11-17T06:20:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아 불확실성에 뉴욕증시 급락…나스닥 2.49%↓",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=327087",
-     "host": "thepublic.kr",
-     "at": "2026-11-17T06:20:00.000Z"
-    },
-    {
-     "title": "나스닥 급락에 비트코인도 5.52% 하락…알레아 리서치, “전면적 자금 ...",
-     "link": "https://www.tokenpost.kr/news/insights/439558",
-     "host": "tokenpost.kr",
-     "at": "2026-11-17T03:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 24,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "p61kno",
-   "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
-   "firstSeen": "2026-11-17T05:28:00.000Z",
-   "lastSeen": "2026-11-17T10:40:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[주식마감] 'AI 시험 부정행위 논란'에 지슨 이틀 연속 상한가… 인디에...",
-     "link": "https://www.ggilbo.com/news/articleView.html?idxno=1193787",
-     "host": "ggilbo.com",
-     "at": "2026-11-17T10:40:00.000Z"
-    },
-    {
-     "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
-     "link": "https://www.ppss.kr/news/articleView.html?idxno=321356",
-     "host": "ppss.kr",
-     "at": "2026-11-17T05:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 24,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "gvm1k6",
-   "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
-   "firstSeen": "2026-11-17T08:56:00.000Z",
-   "lastSeen": "2026-11-17T10:21:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "5000선 아래로 '털썩' 2월로 돌아간 코스피",
-     "link": "https://www.mk.co.kr/article/12211563",
-     "host": "mk.co.kr",
-     "at": "2026-11-17T10:21:00.000Z"
-    },
-    {
-     "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
-     "link": "https://www.hankyung.com/article/2026111726951",
-     "host": "hankyung.com",
-     "at": "2026-11-17T08:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 24,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "zw3j7j",
    "title": "[AI MY 뉴스] 17일 중국증시 'APEC·엔비디아 실적 앞두고 경계심, 기술주...",
    "firstSeen": "2026-11-16T23:31:00.000Z",
@@ -799,6 +669,50 @@
     "label": "관찰",
     "score": 23,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "9qtr9g",
+   "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
+   "firstSeen": "2026-11-17T01:29:00.000Z",
+   "lastSeen": "2026-11-17T11:22:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[시론담론] 젠슨 황의 엔비디아 복귀 가능성",
+     "link": "https://www.jemin.com/news/articleView.html?idxno=847544",
+     "host": "jemin.com",
+     "at": "2026-11-17T11:22:00.000Z"
+    },
+    {
+     "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
+     "link": "https://www.sedaily.com/article/20115281?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-17T01:29:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -856,6 +770,49 @@
    }
   },
   {
+   "id": "cxx0sk",
+   "title": "나스닥 급락에 비트코인도 5.52% 하락…알레아 리서치, “전면적 자금 ...",
+   "firstSeen": "2026-11-17T03:22:00.000Z",
+   "lastSeen": "2026-11-17T06:20:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 불확실성에 뉴욕증시 급락…나스닥 2.49%↓",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=327087",
+     "host": "thepublic.kr",
+     "at": "2026-11-17T06:20:00.000Z"
+    },
+    {
+     "title": "나스닥 급락에 비트코인도 5.52% 하락…알레아 리서치, “전면적 자금 ...",
+     "link": "https://www.tokenpost.kr/news/insights/439558",
+     "host": "tokenpost.kr",
+     "at": "2026-11-17T03:22:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "zhokpq",
    "title": "국고채 일제히 약세…外人 10선 순매도·성장률 상향 우려",
    "firstSeen": "2026-11-17T04:24:00.000Z",
@@ -885,6 +842,49 @@
     "label": "관찰",
     "score": 23,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "p61kno",
+   "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
+   "firstSeen": "2026-11-17T05:28:00.000Z",
+   "lastSeen": "2026-11-17T10:40:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[주식마감] 'AI 시험 부정행위 논란'에 지슨 이틀 연속 상한가… 인디에...",
+     "link": "https://www.ggilbo.com/news/articleView.html?idxno=1193787",
+     "host": "ggilbo.com",
+     "at": "2026-11-17T10:40:00.000Z"
+    },
+    {
+     "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
+     "link": "https://www.ppss.kr/news/articleView.html?idxno=321356",
+     "host": "ppss.kr",
+     "at": "2026-11-17T05:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
