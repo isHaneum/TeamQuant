@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T04:15:58.521Z",
+ "updatedAt": "2026-11-17T04:28:35.809Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 4993.72,
-   "change": -2.09,
+   "last": 5003.35986328125,
+   "change": -1.9,
    "z": -0.7,
    "sd": 2.9231269293312696,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,12 +23,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 654,
-   "change": -1.75,
+   "last": 654.6799926757812,
+   "change": -1.65,
    "z": -0.6,
    "sd": 2.724793547207968,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -64,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1337.3299560546875,
-   "change": 0.31,
-   "z": 0.5,
+   "last": 1336.719970703125,
+   "change": 0.26,
+   "z": 0.4,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
   },
@@ -76,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 84.9800033569336,
-   "change": -0.86,
+   "last": 84.98999786376953,
+   "change": -0.85,
    "z": -0.3,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
@@ -88,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3871.60009765625,
-   "change": 0.48,
-   "z": 0.4,
+   "last": 3868.89990234375,
+   "change": 0.41,
+   "z": 0.3,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -121,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
+  "war": -0.5,
   "politics": -0.4,
-  "rates": 0.5,
+  "rates": 0.3,
   "trade": 0.1,
   "fx": -0.2,
-  "energy": -0.1,
+  "energy": 0,
   "market": 0.9,
   "credit": 0.1,
   "disaster": 0,
@@ -134,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 1.1,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -144,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 2.9,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
@@ -190,10 +188,11 @@
    "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
    "firstSeen": "2026-11-16T18:02:00.000Z",
    "lastSeen": "2026-11-17T04:02:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "count": 3,
+   "sources": 3,
    "topics": [
     "rates",
+    "market",
     "credit"
    ],
    "critical": [
@@ -207,6 +206,12 @@
      "at": "2026-11-17T04:02:00.000Z"
     },
     {
+     "title": "연준 의장 “AI 투자 실패 시 경기침체·주가 급락” 경고",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714890&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-17T03:20:00.000Z"
+    },
+    {
      "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
      "link": "https://www.g-enews.com/view.php?ud=2026111620180311479a1f309431_1",
      "host": "g-enews.com",
@@ -214,10 +219,10 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 52,
-    "spike": 0.5,
+    "level": "urgent",
+    "label": "긴급",
+    "score": 58,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -336,8 +341,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 0.5,
+    "score": 47,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -356,14 +361,20 @@
    "id": "19bcck9",
    "title": "[마켓 브리핑] 뉴욕증시, 엔비디아 실적 앞두고 경계감 확대",
    "firstSeen": "2026-11-16T21:29:00.000Z",
-   "lastSeen": "2026-11-17T03:40:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "lastSeen": "2026-11-17T04:20:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "코스피, 엔비디아 실적 앞두고 약세 지속…장중 5000선 이탈",
+     "link": "https://www.g-enews.com/view.php?ud=202611171301237826923c501012_1",
+     "host": "g-enews.com",
+     "at": "2026-11-17T04:20:00.000Z"
+    },
     {
      "title": "엔비디아 실적에 쏠리는 눈…日닛케이 1.18%↓[Asia오전]",
      "link": "https://www.mt.co.kr/world/2026/11/17/2026111711160448034",
@@ -381,18 +392,68 @@
      "link": "https://www.newsq.co.kr/news/articleView.html?idxno=500921",
      "host": "newsq.co.kr",
      "at": "2026-11-17T02:28:00.000Z"
-    },
-    {
-     "title": "[개장시황] 코스피, 외국인 매도에 5000선 이탈…엔비디아 실적 앞두고...",
-     "link": "https://www.meconomynews.com/news/articleView.html?idxno=203764",
-     "host": "meconomynews.com",
-     "at": "2026-11-17T01:56:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
+    "score": 43,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "mjx3r8",
+   "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
+   "firstSeen": "2026-11-16T05:51:00.000Z",
+   "lastSeen": "2026-11-17T04:28:00.000Z",
+   "count": 7,
+   "sources": 6,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프·머스크 지지에도 엔비디아 \"젠슨 황 복귀 논의 안 한다\"",
+     "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=338509",
+     "host": "mediatoday.co.kr",
+     "at": "2026-11-17T04:28:00.000Z"
+    },
+    {
+     "title": "트럼프 \"젠슨 황 엔비디아 CEO 복귀 반대하지 않아\"…\"큰 교훈 얻었을 것...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398547",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-17T04:26:00.000Z"
+    },
+    {
+     "title": "머스크 등 美 빅테크 거물들, 젠슨 황 엔비디아 CEO 복귀 촉구…청원 17...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398548",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-17T04:26:00.000Z"
+    },
+    {
+     "title": "젠슨 황 복귀, 트럼프는 찬성·이사회는 반대",
+     "link": "https://www.naeil.com/news/read/609059?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-17T04:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
     "spike": 0.9,
     "news": false,
     "reaction": {
@@ -524,21 +585,15 @@
    "id": "1b2ix70",
    "title": "젠슨 황發 AI 매도세 지속...반도체지수 5.3% 급락 [데일리국제금융]",
    "firstSeen": "2026-11-16T21:56:00.000Z",
-   "lastSeen": "2026-11-17T02:25:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-16T23:38:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
-    {
-     "title": "코스피, 1%대 하락 지속…'5천피' 사수 공방전",
-     "link": "https://www.yna.co.kr/view/AKR20261117077700008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T02:25:00.000Z"
-    },
     {
      "title": "뉴욕증시 일제히 하락…국제유가, 급락",
      "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=883954",
@@ -556,62 +611,12 @@
      "link": "https://www.hankyung.com/article/2026111706616",
      "host": "hankyung.com",
      "at": "2026-11-16T22:15:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 39,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "mjx3r8",
-   "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-   "firstSeen": "2026-11-16T05:51:00.000Z",
-   "lastSeen": "2026-11-17T04:06:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황 복귀, 트럼프는 찬성·이사회는 반대",
-     "link": "https://www.naeil.com/news/read/609059?ref=naver",
-     "host": "naeil.com",
-     "at": "2026-11-17T04:06:00.000Z"
     },
     {
-     "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
-     "link": "https://www.sedaily.com/article/20115281?ref=naver",
+     "title": "젠슨 황發 AI 매도세 지속...반도체지수 5.3% 급락 [데일리국제금융]",
+     "link": "https://www.sedaily.com/article/20115164?ref=naver",
      "host": "sedaily.com",
-     "at": "2026-11-17T01:29:00.000Z"
-    },
-    {
-     "title": "\"엔비디아 이사회, 젠슨 황 복귀 논의 없다\"…엔비디아 4%대 급락·AI주 ...",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=757478",
-     "host": "econovill.com",
-     "at": "2026-11-16T23:56:00.000Z"
-    },
-    {
-     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
+     "at": "2026-11-16T21:56:00.000Z"
     }
    ],
    "assess": {
@@ -633,47 +638,47 @@
    }
   },
   {
-   "id": "1ferw0v",
-   "title": "블룸버그 \"내년 韓성장률 3.6%…반도체 생산 빠르게 늘면 4% 가능\"",
-   "firstSeen": "2026-11-16T08:19:00.000Z",
-   "lastSeen": "2026-11-16T13:15:00.000Z",
+   "id": "nb2tb1",
+   "title": "코스피, 나흘 연속 하락…장중 5,000선 다시 무너져",
+   "firstSeen": "2026-11-17T01:31:00.000Z",
+   "lastSeen": "2026-11-17T03:51:00.000Z",
    "count": 4,
-   "sources": 4,
+   "sources": 3,
    "topics": [
-    "rates"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "블룸버그 “내년 韓성장률 3.6%…반도체 생산 빠르게 늘면 4% 가능”",
-     "link": "https://biz.heraldcorp.com/article/10939044?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-16T13:15:00.000Z"
+     "title": "코스피, 美 AI주 급락에 내려…나흘 연속 하락",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261117125052YrM",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-17T03:51:00.000Z"
     },
     {
-     "title": "블룸버그 \"내년 반도체 생산 늘면 韓 성장률 4%대 가능\"...반도체 명목 ...",
-     "link": "https://www.betanews.net/article/view/beta202611160132",
-     "host": "betanews.net",
-     "at": "2026-11-16T12:16:00.000Z"
+     "title": "코스피 5,000선 붕괴 위기, 반도체 업종까지 흔들리는 이유는?",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886069",
+     "host": "gokorea.kr",
+     "at": "2026-11-17T03:40:00.000Z"
     },
     {
-     "title": "\"내년 반도체 생산 더 늘면 韓 성장률 4% 넘는다\"… 블룸버그, 상방 시나...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398541",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-16T08:34:00.000Z"
+     "title": "코스피 장중 5,000선 하회와 AI 반도체 불안까지 이시각 주요뉴스",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445152",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-17T02:52:00.000Z"
     },
     {
-     "title": "블룸버그 \"내년 韓성장률 3.6%…반도체 생산 빠르게 늘면 4% 가능\"",
-     "link": "https://www.yna.co.kr/view/AKR20261116154500008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-16T08:19:00.000Z"
+     "title": "코스피, 나흘 연속 하락…장중 5,000선 다시 무너져",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261117103040Udm",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-17T01:31:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0.5,
+    "score": 34,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -737,41 +742,47 @@
    }
   },
   {
-   "id": "nb2tb1",
-   "title": "코스피, 나흘 연속 하락…장중 5,000선 다시 무너져",
-   "firstSeen": "2026-11-17T01:31:00.000Z",
-   "lastSeen": "2026-11-17T03:40:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1ferw0v",
+   "title": "블룸버그 \"내년 韓성장률 3.6%…반도체 생산 빠르게 늘면 4% 가능\"",
+   "firstSeen": "2026-11-16T08:19:00.000Z",
+   "lastSeen": "2026-11-16T13:15:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "market"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피 5,000선 붕괴 위기, 반도체 업종까지 흔들리는 이유는?",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886069",
-     "host": "gokorea.kr",
-     "at": "2026-11-17T03:40:00.000Z"
+     "title": "블룸버그 “내년 韓성장률 3.6%…반도체 생산 빠르게 늘면 4% 가능”",
+     "link": "https://biz.heraldcorp.com/article/10939044?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-16T13:15:00.000Z"
     },
     {
-     "title": "코스피 장중 5,000선 하회와 AI 반도체 불안까지 이시각 주요뉴스",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445152",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-17T02:52:00.000Z"
+     "title": "블룸버그 \"내년 반도체 생산 늘면 韓 성장률 4%대 가능\"...반도체 명목 ...",
+     "link": "https://www.betanews.net/article/view/beta202611160132",
+     "host": "betanews.net",
+     "at": "2026-11-16T12:16:00.000Z"
     },
     {
-     "title": "코스피, 나흘 연속 하락…장중 5,000선 다시 무너져",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261117103040Udm",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-17T01:31:00.000Z"
+     "title": "\"내년 반도체 생산 더 늘면 韓 성장률 4% 넘는다\"… 블룸버그, 상방 시나...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398541",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-16T08:34:00.000Z"
+    },
+    {
+     "title": "블룸버그 \"내년 韓성장률 3.6%…반도체 생산 빠르게 늘면 4% 가능\"",
+     "link": "https://www.yna.co.kr/view/AKR20261116154500008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-16T08:19:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0.9,
+    "score": 31,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -786,35 +797,89 @@
    }
   },
   {
-   "id": "19rh7pj",
-   "title": "워시 연준 의장 \"AI가 불러올 미래, 3개 시나리오 분석 중\"",
-   "firstSeen": "2026-11-16T18:55:00.000Z",
-   "lastSeen": "2026-11-17T03:20:00.000Z",
+   "id": "f963g5",
+   "title": "외국인 하루 새 1조3800억 매도 공세…엔비디아·앤트로픽이 코스피 반...",
+   "firstSeen": "2026-11-16T11:22:00.000Z",
+   "lastSeen": "2026-11-17T04:28:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[장중시황] 코스피 5000선 붕괴⋯외국인 1조원 순매도",
+     "link": "https://www.viva100.com/article/20261117500291",
+     "host": "viva100.com",
+     "at": "2026-11-17T04:28:00.000Z"
+    },
+    {
+     "title": "코스피, 오후 들어 낙폭 확대…외국인 매도에 5000선 붕괴",
+     "link": "https://www.etoday.co.kr/news/view/2649206",
+     "host": "etoday.co.kr",
+     "at": "2026-11-17T04:16:00.000Z"
+    },
+    {
+     "title": "코스피 장중 4984까지 추락…외국인 5850억원 매도에 5000선 위태",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000083546",
+     "host": "jnilbo.com",
+     "at": "2026-11-17T02:32:00.000Z"
+    },
+    {
+     "title": "외국인 하루 새 1조3800억 매도 공세…엔비디아·앤트로픽이 코스피 반...",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=303846",
+     "host": "widedaily.com",
+     "at": "2026-11-17T01:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "xvg4zv",
+   "title": "짐 폴슨 \"기술주 과열 조정시 S&P500지수 최대 15% 하락 가능\"",
+   "firstSeen": "2026-11-17T01:50:00.000Z",
+   "lastSeen": "2026-11-17T03:00:00.000Z",
    "count": 3,
    "sources": 2,
    "topics": [
-    "rates",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "연준 의장 “AI 투자 실패 시 경기침체·주가 급락” 경고",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714890&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-17T03:20:00.000Z"
+     "title": "삼성SDI, 45만7000원으로 2거래일 연속 하락…미국 기술주 급락에 투자심...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627704",
+     "host": "cbci.co.kr",
+     "at": "2026-11-17T03:00:00.000Z"
     },
     {
-     "title": "연준 의장 “AI 투자 실패 시 경기침체·주가 급락” 경고",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714805&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-17T02:02:00.000Z"
+     "title": "日 증시, 美 기술주 약세에 1%대 하락",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445147",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-17T02:22:00.000Z"
     },
     {
-     "title": "워시 연준 의장 \"AI가 불러올 미래, 3개 시나리오 분석 중\"",
-     "link": "https://www.news2day.co.kr/article/20261117500052",
-     "host": "news2day.co.kr",
-     "at": "2026-11-17T00:30:00.000Z"
+     "title": "짐 폴슨 \"기술주 과열 조정시 S&P500지수 최대 15% 하락 가능\"",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445136",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-17T01:50:00.000Z"
     }
    ],
    "assess": {
@@ -877,55 +942,21 @@
      "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
-  },
-  {
-   "id": "z7y7k9",
-   "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
-   "firstSeen": "2026-11-16T22:04:00.000Z",
-   "lastSeen": "2026-11-16T23:36:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴욕환시] 달러 닷새째↑…안전선호 속 'DXY' 1년7개월來 최고",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445067",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-16T23:36:00.000Z"
-    },
-    {
-     "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
-     "link": "https://www.newspim.com/news/view/20261117000031",
-     "host": "newspim.com",
-     "at": "2026-11-16T22:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-17T04:28:35.809Z",
+   "id": "w1bb7g",
+   "level": "urgent",
+   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.92%(평소의 2.1배)"
+   ],
+   "link": "https://www.naeil.com/news/read/609056?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-17T04:15:58.521Z",
    "id": "w1bb7g",
@@ -1152,18 +1183,6 @@
     "VIX 변동성 +3.21%"
    ],
    "link": "https://www.seoul.co.kr/news/international/europe/2026/11/16/20261116014007?wlog_tag3=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-15T14:27:24.330Z",
-   "id": "1yyjm53",
-   "level": "caution",
-   "title": "'빅스텝'까지 거론되는 美 연준…한은, 내주 금리 올리나",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 +5.1bp"
-   ],
-   "link": "https://www.mk.co.kr/article/12209158",
    "delivered": false
   }
  ],
