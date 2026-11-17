@@ -75,7 +75,7 @@ test('BM2: 미국분 환율은 계좌 평가점 환율(marks.fx) — 일봉 종�
   assert.ok(Math.abs(s.at(-1).value - 1.02) < 1e-9, '평가점 환율 1300→1326 = +2%');
   assert.equal(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, usCandles: us, fxCandles: fx, fxMarks: [{ date: '2026-11-10', fx: 1326 }] }).at(-1).value, 1, '첫 평가점이 from 뒤면 일봉 종가(1400→1400)');
   assert.ok(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, usCandles: us, fxCandles: [], fxMarks: [{ date: '2026-11-09', fx: 1300 }] }), '평가점 환율이 있으면 환율 봉이 없어도 계산');
-  const def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } }); assert.equal(def.version, 'BM3-2026-11-17');
+  const def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } }); assert.equal(def.version, 'BM4-2026-11-18');
   const r = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : fx }) })(def, [{ date: '2026-11-09', total: 100, fx: 1300 }, { date: '2026-11-10', total: 102, fx: 1326 }]);
   assert.deepEqual([r.benchRetPct, r.diffPp], [2, 0]);
 });
@@ -97,6 +97,16 @@ test('BM3: 평가 시각에 끝난 장의 종가만 쓴다 — 지수만 든 계
   assert.equal(new Date(closeAvailableAt('2026-11-16', 'US')).toISOString(), '2026-11-16T22:00:00.000Z');
   assert.equal(new Date(closeAvailableAt('2026-07-01', 'US')).toISOString(), '2026-07-01T21:00:00.000Z');
   assert.equal(new Date(closeAvailableAt('2026-11-16', 'KR')).toISOString(), '2026-11-16T07:00:00.000Z');
+  // BM4: 평가점에 지수 가격이 있으면 그 날짜는 그 값(장중 평가점의 지금 가격), 없는 날짜는 BM3 그대로
+  near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T08:00:00Z', '2026-11-10': '2026-11-10T02:00:00Z' }, idxMarks: [{ date: '2026-11-10', KR: 115 }] }).at(-1).value, 115 / 110); // 11:00 KST 평가점: BM3 라면 11-09 종가 110 → 0% 였다
+  near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T08:00:00Z', '2026-11-10': '2026-11-10T02:00:00Z' } }).at(-1).value, 1);
+});
+
+test('BM4 reader: 평가점 idx(KR·US 다리)를 비교선에 쓰고 method 는 BM4', async () => {
+  const us = cs([['2026-11-06', 600], ['2026-11-09', 612], ['2026-11-16', 624]]), def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } });
+  const marks = [{ date: '2026-11-09', total: 100, fx: 1300, at: '2026-11-09T14:50:00Z', idx: { US: { date: '2026-11-09', close: 606 } } }, { date: '2026-11-16', total: 103, fx: 1300, at: '2026-11-16T14:50:00Z', idx: { US: { date: '2026-11-16', close: 618 } } }];
+  const r = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : [] }) })(def, marks);
+  assert.equal(r.method, 'BM4-2026-11-18'); assert.deepEqual([r.ownRetPct, r.benchRetPct, r.diffPp], [3, 1.98, 1.02], '606 → 618 = +1.98% (BM3 는 600 → 612 = +2%)');
 });
 
 test('비교: 시작 = 첫 평가점 총자산, 지금 = 마지막 평가점 · 비교선은 그 날짜 이하 마지막 점 · diffPp = 절차 − 비교선 · 평가점 2개 미만·비교선 없음은 null', () => {

@@ -10,7 +10,7 @@ import { gradeNews, newsLevel, createIssueWatch } from '../lib/issue-watch.js';
 
 function setup({ price = 70000, card = null, dip = null } = {}) {
   const flat = close => { const out = []; for (let t = Date.parse('2025-06-01'); t <= Date.parse('2026-12-31'); t += 864e5) { const d = new Date(t); if (d.getUTCDay() && d.getUTCDay() !== 6) out.push({ date: d.toISOString().slice(0, 10), open: close, close }); } return out; };
-  const readMarket = async s => ({ candles: flat(s === 'KRW=X' ? 1400 : 70000) }); // 지수는 그대로(0%)
+  const readMarket = async s => ({ candles: flat(s === 'KRW=X' ? 1400 : s === '^VIX' ? 20 : 70000) }); // 지수는 그대로(0%) · VIX 20(공포 예비 규칙 비발동)
   const state = { t: Date.parse('2026-11-16T01:30:00Z'), price, card, dip };
   const client = { settings: () => ({ mode: 'vps', accountMasked: '****2787' }), async price(code) { return { code, market: 'KR', currency: 'KRW', exchange: 'KRX', price: code === '005930' ? state.price : 70000, upper: 0, lower: 0, halted: false }; },
     async balance() { const v = 43 * state.price; return { cash: 100_000_000 - v, total: 100_000_000, stock: v, positions: [{ symbol: '005930', name: '삼성전자', market: 'KR', currency: 'KRW', qty: 43, price: state.price, value: v, valueKrw: v }], cashUsd: 0, stockUsd: 0 }; },

@@ -27,7 +27,7 @@ function broker({ cash = 50_000_000, positions = [] } = {}) {
   const fill = (odno, qty) => { const o = orders.find(x => x.odno === odno); o.filled = qty; o.remaining = o.qty - qty; o.avgPrice = o.price; o.status = qty >= o.qty ? 'filled' : 'partial'; };
   return { client, state, orders, fill };
 }
-const readMarket = async s => ({ candles: candles(520, s === 'KRW=X' ? 1400 : isKr(s) ? 70000 : 100, s.length + 3) });
+const readMarket = async s => ({ candles: candles(520, s === 'KRW=X' ? 1400 : s === '^VIX' ? 20 : isKr(s) ? 70000 : 100, s.length + 3) }); // VIX 20: 공포 예비 규칙(결정 46) 비발동
 const tmp = () => mkdtempSync(join(tmpdir(), 'tq-limits-'));
 const rules = { maxSingle: 25, minCash: 10, dailyLoss: 2.5, maxTrades30: 8 };
 const KR_1302 = Date.parse('2026-11-09T04:02:00Z'), US_2338 = Date.parse('2026-11-09T14:38:00Z'); // 월요일 13:02 KST · 23:38 KST = 09:38 ET
