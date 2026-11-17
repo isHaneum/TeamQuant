@@ -60,7 +60,22 @@ test('범위 앞부터 들고 있던 종목은 지금 원가에서 거꾸로 되
   const t2 = buildAssetTimeline({ positions: [{ symbol: 'AAA', currency: 'KRW', quantity: 5, cost: 500, value: 750 }], orders: [order('AAA', 'SELL', 10, 140, '2026-02-10T01:00:00Z'), order('AAA', 'BUY', 5, 100, '2026-03-01T01:00:00Z')], candlesBySymbol: c, today: '2026-03-15', months: 3 });
   assert.equal(t2.points[0].principal, null);
   assert.equal(t2.points[1].principal, 0);
-  assert.ok(t2.warnings.some(w => /다 판 뒤 다시 산/.test(w)));
+  assert.ok(t2.warnings.some(w => /범위 안에서 다 판 종목/.test(w)));
+  // 다시 사지 않고 다 판 종목도 그 매도 전 원가를 모른다 — 안내 문구가 '다시 산'이라고 하지 않는다(2026-11-17 재점검)
+  const t3 = buildAssetTimeline({ positions: [], orders: [order('AAA', 'SELL', 10, 140, '2026-02-10T01:00:00Z')], candlesBySymbol: c, today: '2026-03-15', months: 3 });
+  assert.deepEqual([t3.points[0].value, t3.points[0].principal], [1200, null]);
+  assert.ok(t3.warnings.some(w => /범위 안에서 다 판 종목/.test(w)) && !t3.warnings.some(w => /다시 산/.test(w)));
+});
+
+test('같은 날 산 뒤 판 체결은 입력 순서와 상관없이 시각 순으로 원금을 센다(2026-11-17 재점검 · 토스 이력은 최신 먼저)', () => {
+  const c = { AAA: candles([['2026-01-30', 100], ['2026-02-27', 120], ['2026-03-13', 130]]) };
+  const buy = order('AAA', 'BUY', 10, 100, '2026-02-10T01:00:00Z'), sell = order('AAA', 'SELL', 4, 110, '2026-02-10T05:00:00Z');
+  const positions = [{ symbol: 'AAA', currency: 'KRW', quantity: 6, cost: 600, value: 780 }];
+  for (const orders of [[buy, sell], [sell, buy]]) {
+    const t = buildAssetTimeline({ positions, orders, candlesBySymbol: c, today: '2026-03-15', months: 3, coverageFrom: '2025-12-01' });
+    assert.equal(t.points[1].principal, 600); // 10주 × 100 − 판 4주 × 평균 100
+  }
+  assert.deepEqual(fillsFrom([sell, buy]).map(f => f.side), ['BUY', 'SELL']);
 });
 
 test('미국 종목 원금: 산 날 환율 원금 합(costKrwNow)에서 나눈 평균 환율 · 범위 안에서 산 미국 종목은 체결일 환율', () => {

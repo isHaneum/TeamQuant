@@ -218,7 +218,9 @@ test('헤드라인 비교선(엔진): 기준선에 계획의 국가 비중·현�
   const pl2 = createPaperLive({ client: b.client, store, readMarket: bad, now: () => t }); const st2 = await pl2.status();
   assert.deepEqual(st2.benchmark.weights, { KR: 20, US: 30, cash: 50 }); assert.equal(st2.benchmark.diffPp, null); assert.equal(st2.benchmark.benchRetPct, null); assert.equal(st2.benchmark.error, '지수 시세를 읽지 못해 비교를 보류');
   // 공개 스냅샷: 정의와 숫자가 실리고 계좌번호가 없다
-  const pub = publicSnapshot(st); assert.deepEqual(pub.benchmark, { version: st.benchmark.version, label: '국가 비중·현금 일치 지수 투자', weights: { KR: 20, US: 30, cash: 50 }, legs: { KR: { symbol: '069500', name: 'KODEX 200', currency: 'KRW' }, US: { symbol: 'SPY', name: 'S&P500 ETF', currency: 'USD' } }, ownRetPct: 1, benchRetPct: 0.7, diffPp: 0.3, days: 2, from: '2026-11-09', asOf: '2026-11-10', error: null });
+  // method = 계산 방식(paper-benchmark.js BENCHMARK_VERSION). version 은 기준선 날 고정한 정의의 판이라 옛 장부에서는 BM1 로 남는다(2026-11-17 재점검).
+  assert.match(st.benchmark.method, /^BM\d+-/);
+  const pub = publicSnapshot(st); assert.deepEqual(pub.benchmark, { version: st.benchmark.version, method: st.benchmark.method, label: '국가 비중·현금 일치 지수 투자', weights: { KR: 20, US: 30, cash: 50 }, legs: { KR: { symbol: '069500', name: 'KODEX 200', currency: 'KRW' }, US: { symbol: 'SPY', name: 'S&P500 ETF', currency: 'USD' } }, ownRetPct: 1, benchRetPct: 0.7, diffPp: 0.3, days: 2, from: '2026-11-09', asOf: '2026-11-10', error: null });
   assert.ok(!JSON.stringify(pub.benchmark).includes('2787'));
   // 옛 장부: 기준선은 있는데 benchmark 가 없으면 적재 때 계획에서 정의를 만들어 저장한다(시각이 붙은 기록이 아니라 정의이므로 되메우기가 아니다)
   const store2 = createLedgerStore(tmp()); store2.save('2787', { version: 'L6-old', mode: 'vps', account: '****2787', killSwitch: false, orders: [], runs: [], marks: [], baseline: { at: '2026-11-09T01:00:00Z', from: '2026-11-09', capitalKrw: 1e8, plan: { '005930': { pct: 30, name: '삼성전자', currency: 'KRW' }, SPY: { pct: 20, name: 'S&P500 ETF', currency: 'USD' } }, rules: {}, planVersion: 'x' } });

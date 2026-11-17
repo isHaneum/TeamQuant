@@ -35,6 +35,9 @@ test('공개 스냅샷: 계좌번호·장부 경로·주문 번호·증권사 �
   assert.equal(pub.recentOrders[0].filledQty, 100); assert.equal(pub.recentOrders[0].odno, undefined);
   assert.equal(pub.prefs.cadence, 'monthly'); assert.equal(pub.hypotheses[0].thesis, 'HBM'); assert.equal(pub.planDoc.version, 'PP1');
   assert.equal(pub.runs[0].blockedReasons['장 시작 전'], 1); assert.equal(pub.auto[0].reason, '첫 운용');
+  // 평가점에 시각·환율이 있으면 함께 싣는다(비교선을 공개 파일만으로 다시 계산 · 2026-11-17 재점검) · 없으면 키도 없다
+  const withAt = publicSnapshot({ ...status, marks: [{ date: '2026-11-09', total: 1, cash: 1, stock: 0, at: '2026-11-09T14:38:40Z', fx: 1346.63 }, { date: '2026-11-10', total: 2, cash: 1, stock: 1 }] });
+  assert.deepEqual([withAt.marks[0].at, withAt.marks[0].fx], ['2026-11-09T14:38:40Z', 1346.63]); assert.ok(!('at' in withAt.marks[1]) && !('fx' in withAt.marks[1]));
   // 잔고를 못 읽은 상태는 메시지만 바뀐다
   assert.ok(publicSnapshot({ ...status, error: '잔고 조회 실패: token' }).error.includes('마지막 기록'));
   assert.equal(publicSnapshot({}).balance, null);
