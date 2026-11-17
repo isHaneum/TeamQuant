@@ -1,0 +1,34 @@
+{
+  "version": "DC1-2026-11-17",
+  "note": "하락 매수 검증 카드(결정 45). 하루 1번 Claude Code 분석 루틴(analyst-daily)이 씁니다. verdict: allow = 첫 매수가 −15%·−30%에서 더 산다 · hold = 사지 않는다(다음 확인까지) · forbid = 근거가 깨져 사지 않는다. 카드가 없는 종목은 기존 규칙(근거 카드 통과 + 이슈 없음)만 본다. until 이 지나면 카드는 없는 것으로 봅니다. 사실(facts)에는 출처·날짜가 있어야 하고 [추론] 은 표시합니다. 모의계좌 전용 · 투자 권유가 아닙니다.",
+  "cards": {
+    "000660": {
+      "asOf": "2026-11-17",
+      "verdict": "allow",
+      "cause": "customer",
+      "reason": "하락 원인은 최대 고객(엔비디아) 지배구조 충격·외국인 매도·이익 지속성 의심. 깨짐 조건 4개 모두 이상 없음, 2027~28 생산능력 절반 이상 장기계약, 2027 클라우드 투자 전망 증가 유지. D램 담합 소송은 기록만(전례 벌금 1.85억 달러 = 분기 영업이익의 0.3%).",
+      "until": "2026-12-17",
+      "facts": [
+        { "text": "3Q26 매출 104.6조 · 영업이익 83.3조(이익률 80%) · 2030년까지 공급 부족 전망 · HBM4 4분기 주력 · 2027 HBM 조건 합의", "url": "https://www.webull.com/news/15822865136734208", "date": "2026-10-28" },
+        { "text": "장기계약이 2027~2028 생산능력의 절반 이상", "url": "https://www.tikr.com/ko/blog/sk-hynix-is-down-57-from-its-high-with-half-of-2027-and-2028-capacity-already-contracted", "date": "2026-11-08" },
+        { "text": "외국인 11-02~06 SK하이닉스 5.4조 순매도(최다)", "url": "https://news.bizwatch.co.kr/article/market/2026/11/05/0035", "date": "2026-11-05" },
+        { "text": "2027 하이퍼스케일러 투자 전망: 모건스탠리 +29% · UBS +25% · TrendForce +50% — 축소 가이던스 없음", "url": "https://seekingalpha.com/news/4629570-cloud-capex-forecast-calls-for-29-jump-in-2027-as-compute-demand-exceeds-capacity-ms", "date": "2026-11" },
+        { "text": "데이터센터 건설 지연: 2026년 예정 용량의 30~50% 지연 전망(Currence) · 뉴욕주 50MW 이상 허가 동결 — 수요 계약·가이던스에는 아직 미반영 [추론]", "url": "https://www.latitudemedia.com/news/up-to-half-of-the-worlds-data-centers-may-be-delayed-this-year/", "date": "2026-07" },
+        { "text": "D램 담합 집단소송(2026-06 제기, 3배 배상 청구, 금액 미명시) · 11-16 법원이 기각 요청 거부 · 전례: 2005년 하이닉스 벌금 1.85억 달러, 2018년 유사 소송 기각", "url": "https://news.mtn.co.kr/news-detail/2026070216393783471", "date": "2026-11-16" }
+      ],
+      "watch": ["엔비디아 실적(11-18 KST)과 CEO 선임", "4대 클라우드 2027 투자 가이던스(1~2월 실적 발표)", "HBM 점유율 40% 미만(Counterpoint 분기)"]
+    },
+    "NVDA": {
+      "asOf": "2026-11-17",
+      "verdict": "hold",
+      "cause": "company",
+      "reason": "CEO 사임(11-12) 뒤 이사회가 복귀를 검토하지 않고 스파이 연루 의혹을 조사 중. 지배구조 불확실성이 풀리기 전(실적 11-18 KST · 후임 CEO)에는 보류. 수요 깨짐 조건(클라우드 투자 감소)은 이상 없음.",
+      "until": "2026-12-01",
+      "facts": [
+        { "text": "NVIDIA, CEO 교체 발표 — 젠슨 황 사임, 콜레트 크레스 임시 CEO", "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition", "date": "2026-11-12" },
+        { "text": "이사회, 황 복귀 검토 안 함 · 중국 스파이 연루 의혹 조사(CNBC 보도) · 11-16 종가 156.14, 2025-07 이후 최저", "url": "https://www.tradingview.com/news/stocktwits:f3397139a094b:0-s-p-500-dow-nasdaq-end-lower-as-investors-hold-back-ahead-of-nvidia-earnings-anthropic-ipo-this-week-nvda-tsla-ant-in-focus/", "date": "2026-11-16" }
+      ],
+      "watch": ["11-18 실적과 가이던스", "후임 CEO 선임", "조사 결과"]
+    }
+  }
+}
