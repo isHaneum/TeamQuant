@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T22:27:03.494Z",
+ "updatedAt": "2026-11-17T22:47:25.904Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1334.8699951171875,
-   "change": 0.12,
+   "last": 1334.699951171875,
+   "change": 0.11,
    "z": 0.2,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
@@ -121,31 +121,31 @@
   }
  ],
  "spikes": {
-  "war": 2.8,
-  "politics": 0.4,
-  "rates": 0.8,
+  "war": 3,
+  "politics": 0.5,
+  "rates": 1.3,
   "trade": 0.3,
   "fx": 0.3,
-  "energy": 0.8,
-  "market": 0.8,
+  "energy": 1,
+  "market": 1,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.3
  },
  "rates": {
   "war": {
-   "rate": 4.1,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.7,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.2,
-   "saturated": 0,
+   "rate": 4.1,
+   "saturated": 1,
    "queries": 3
   },
   "trade": {
@@ -159,13 +159,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4.3,
+   "rate": 4.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.2,
-   "saturated": 1,
+   "rate": 4.4,
+   "saturated": 2,
    "queries": 3
   },
   "credit": {
@@ -229,8 +229,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 66,
-    "spike": 2.8,
+    "score": 68,
+    "spike": 3,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -241,6 +241,7 @@
     },
     "why": [
      "핵심 단어",
+     "기사 급증(평소 대비 3σ)",
      "VIX 변동성 +11.13%"
     ]
    }
@@ -270,8 +271,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 2.8,
+    "score": 54,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -282,6 +283,7 @@
     },
     "why": [
      "핵심 단어",
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -1.03%"
     ]
    }
@@ -290,7 +292,7 @@
    "id": "bgi1yb",
    "title": "뉴욕 연은 총재, '빅스텝' 반대…\"극적 조치 필요 없어\"",
    "firstSeen": "2026-11-17T14:02:00.000Z",
-   "lastSeen": "2026-11-17T22:14:00.000Z",
+   "lastSeen": "2026-11-17T22:33:00.000Z",
    "count": 4,
    "sources": 4,
    "topics": [
@@ -301,16 +303,16 @@
    ],
    "links": [
     {
+     "title": "뉴욕연은 총재 ‘빅스텝’ 반대 시사...12월 0.25%P 인상 확률 97%",
+     "link": "https://www.sedaily.com/article/20115689?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-17T22:33:00.000Z"
+    },
+    {
      "title": "뉴욕 연은 총재 “큰 폭으로 금리 올릴 상황 아니다”…12월 ‘빅스텝’...",
      "link": "https://www.chosun.com/economy/int_economy/2026/11/18/HOVGQOSJPRC5VEZLNZNKH3F6LU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
      "host": "chosun.com",
      "at": "2026-11-17T22:14:00.000Z"
-    },
-    {
-     "title": "뉴욕 연은 총재, 12월 ‘빅스텝’에 신중론…“극적 조치 불필요”",
-     "link": "https://biz.heraldcorp.com/article/10940508?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-17T22:13:00.000Z"
     },
     {
      "title": "뉴욕 연은 총재, ‘빅스텝’ 반대 시사…“극적 조치 필요없어”",
@@ -328,8 +330,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 45,
-    "spike": 0.8,
+    "score": 49,
+    "spike": 1.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -381,8 +383,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 42,
-    "spike": 0.8,
+    "score": 46,
+    "spike": 1.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -401,9 +403,9 @@
    "id": "22mx65",
    "title": "中선전 APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담 주목",
    "firstSeen": "2026-11-17T21:10:00.000Z",
-   "lastSeen": "2026-11-17T22:14:00.000Z",
-   "count": 5,
-   "sources": 4,
+   "lastSeen": "2026-11-17T22:36:00.000Z",
+   "count": 6,
+   "sources": 5,
    "topics": [
     "war",
     "politics",
@@ -411,6 +413,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "中선전 APEC 오늘 개막…미중러 사상 첫 3자회담에 세계 이목",
+     "link": "https://biz.heraldcorp.com/article/10940531?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-17T22:36:00.000Z"
+    },
     {
      "title": "'APEC' 오늘 선전서 개막…미중러 첫 3자회담·북미 접촉 주목",
      "link": "https://www.slist.kr/news/articleView.html?idxno=782607",
@@ -428,19 +436,53 @@
      "link": "https://www.fnnews.com/news/202611180653099131",
      "host": "fnnews.com",
      "at": "2026-11-17T22:05:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 42,
+    "spike": 3,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
     },
+    "why": [
+     "기사 급증(평소 대비 3σ)",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "vc3zd1",
+   "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
+   "firstSeen": "2026-11-17T22:10:00.000Z",
+   "lastSeen": "2026-11-17T22:10:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
     {
-     "title": "내일 사상 첫 미·중·러 3자회담…관전 포인트는? [글로벌 뉴스픽]",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347163?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-17T21:28:00.000Z"
+     "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886138",
+     "host": "gokorea.kr",
+     "at": "2026-11-17T22:10:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 2.8,
+    "score": 40,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -450,6 +492,47 @@
      "z": -1.1
     },
     "why": [
+     "핵심 단어",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "bttz0s",
+   "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+   "firstSeen": "2026-11-17T22:13:00.000Z",
+   "lastSeen": "2026-11-17T22:13:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+     "link": "https://biz.heraldcorp.com/article/10940508?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-17T22:13:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
      "S&P 500 -1.03%"
     ]
    }
@@ -484,8 +567,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 37,
-    "spike": 0.8,
+    "score": 39,
+    "spike": 1,
     "news": true,
     "reaction": {
      "symbol": "CL=F",
@@ -497,46 +580,6 @@
     "why": [
      "핵심 단어",
      "WTI 유가 -0.13%"
-    ]
-   }
-  },
-  {
-   "id": "vc3zd1",
-   "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
-   "firstSeen": "2026-11-17T22:10:00.000Z",
-   "lastSeen": "2026-11-17T22:10:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886138",
-     "host": "gokorea.kr",
-     "at": "2026-11-17T22:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -1.03%"
     ]
    }
   },
@@ -578,11 +621,11 @@
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 2.8,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 36,
+    "spike": 3,
+    "news": true,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
@@ -591,85 +634,106 @@
      "z": 0.9
     },
     "why": [
+     "기사 급증(평소 대비 3σ)",
      "VIX 변동성 +11.13%"
     ]
    }
   },
   {
-   "id": "gvm1k6",
-   "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
-   "firstSeen": "2026-11-17T08:56:00.000Z",
-   "lastSeen": "2026-11-17T10:21:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "19kpmdo",
+   "title": "뉴욕증시, NSA 기밀통신망 마비에 하락⋯다우 1.64%↓ [종합]",
+   "firstSeen": "2026-11-17T14:38:00.000Z",
+   "lastSeen": "2026-11-17T21:59:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "war",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美증시, 기밀통신망 마비에 하락 지속...다우지수, 5개월만에 최저 [데일...",
+     "link": "https://www.sedaily.com/article/20115686?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-17T21:59:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시] 통신망 마비·다우 1.6%↓, 필리지수 반등···엔비디아 시...",
+     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643137",
+     "host": "seoulfn.com",
+     "at": "2026-11-17T21:55:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, NSA 기밀통신망 마비에 하락⋯다우 1.64%↓ [종합]",
+     "link": "https://www.etoday.co.kr/news/view/2649486",
+     "host": "etoday.co.kr",
+     "at": "2026-11-17T21:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 33,
+    "spike": 3,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 11.13,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "기사 급증(평소 대비 3σ)",
+     "VIX 변동성 +11.13%"
+    ]
+   }
+  },
+  {
+   "id": "fsyrwc",
+   "title": "미국증시 장초반 하락…수입물가 1.1%·엔비디아 실적 경계, 다우 0.66%↓",
+   "firstSeen": "2026-11-17T14:42:00.000Z",
+   "lastSeen": "2026-11-17T22:44:00.000Z",
+   "count": 14,
+   "sources": 12,
+   "topics": [
+    "rates",
+    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "5000선 아래로 '털썩' 2월로 돌아간 코스피",
-     "link": "https://www.mk.co.kr/article/12211563",
-     "host": "mk.co.kr",
-     "at": "2026-11-17T10:21:00.000Z"
+     "title": "[오늘의 글로벌마켓] 뉴욕증시, 엔비디아 실적 앞둔 경계감 속 하락세",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147195",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-17T22:44:00.000Z"
     },
     {
-     "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
-     "link": "https://www.hankyung.com/article/2026111726951",
-     "host": "hankyung.com",
-     "at": "2026-11-17T08:56:00.000Z"
+     "title": "뉴욕증시, 엔비디아 경계·NSA 통신망 장애에 하락 마감",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41707",
+     "host": "globale.co.kr",
+     "at": "2026-11-17T22:42:00.000Z"
+    },
+    {
+     "title": "엔비디아 실적 경계감에 NSA 통신망 장애까지⋯뉴욕증시 일제히 하락 마...",
+     "link": "https://www.ziksir.com/news/articleView.html?idxno=153702",
+     "host": "ziksir.com",
+     "at": "2026-11-17T22:36:00.000Z"
+    },
+    {
+     "title": "젠슨 황 부재 속 엔비디아 4일 연속 하락세에 뉴욕 증시 동반 마감 하락...",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611180732314567",
+     "host": "ytn.co.kr",
+     "at": "2026-11-17T22:32:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 2.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "1qjnv2i",
-   "title": "APEC 개막 앞둔 중국 선전 활기…최고경영자 서밋 성황",
-   "firstSeen": "2026-11-17T11:50:00.000Z",
-   "lastSeen": "2026-11-17T21:20:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "선전 APEC 개막…19일 첫 미·중·러 정상회담",
-     "link": "https://www.kbmaeil.com/article/20261118500022",
-     "host": "kbmaeil.com",
-     "at": "2026-11-17T21:20:00.000Z"
-    },
-    {
-     "title": "APEC 개막 앞둔 중국 선전 활기…최고경영자 서밋 성황",
-     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1544096",
-     "host": "obsnews.co.kr",
-     "at": "2026-11-17T11:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 2.8,
+    "score": 32,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -713,8 +777,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 2.8,
+    "score": 32,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -724,55 +788,36 @@
      "z": -1.1
     },
     "why": [
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -1.03%"
     ]
    }
   },
   {
-   "id": "fsyrwc",
-   "title": "미국증시 장초반 하락…수입물가 1.1%·엔비디아 실적 경계, 다우 0.66%↓",
-   "firstSeen": "2026-11-17T14:42:00.000Z",
-   "lastSeen": "2026-11-17T22:24:00.000Z",
-   "count": 16,
-   "sources": 13,
+   "id": "gvm1k6",
+   "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
+   "firstSeen": "2026-11-17T08:56:00.000Z",
+   "lastSeen": "2026-11-17T08:56:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "rates",
-    "fx",
-    "energy",
+    "war",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[뉴욕증시] 엔비디아 실적 앞두고 일제히 하락...나스닥 나흘째 하락",
-     "link": "https://www.jasm.co.kr/news/view/325595/?sc=Naver",
-     "host": "jasm.co.kr",
-     "at": "2026-11-17T22:24:00.000Z"
-    },
-    {
-     "title": "[속보]뉴욕증시 동반 하락…다우 848포인트 급락, 나스닥도 약세",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627999",
-     "host": "cbci.co.kr",
-     "at": "2026-11-17T22:24:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 미 안보국 전산장애 여파 하락 다우 1.64%↓...국제유가 WTI 0...",
-     "link": "https://www.public25.com/news/articleView.html?idxno=58595",
-     "host": "public25.com",
-     "at": "2026-11-17T22:22:00.000Z"
-    },
-    {
-     "title": "[채권/외환] 美 국채금리 하락·달러 약세…엔비디아 실적 앞두고 안전...",
-     "link": "https://www.newspim.com/news/view/20261118000035",
-     "host": "newspim.com",
-     "at": "2026-11-17T22:18:00.000Z"
+     "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
+     "link": "https://www.hankyung.com/article/2026111726951",
+     "host": "hankyung.com",
+     "at": "2026-11-17T08:56:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
-    "spike": 0.8,
+    "score": 29,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -782,6 +827,7 @@
      "z": -1.1
     },
     "why": [
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -1.03%"
     ]
    }
@@ -811,8 +857,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 2.8,
+    "score": 29,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -822,6 +868,7 @@
      "z": -1.1
     },
     "why": [
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -1.03%"
     ]
    }
@@ -849,8 +896,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 2.8,
+    "score": 29,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -860,50 +907,49 @@
      "z": -1.1
     },
     "why": [
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "1rhypl3",
-   "title": "美 10월 소매판매 0.2% 증가…고물가에 소비 둔화",
-   "firstSeen": "2026-11-17T14:07:00.000Z",
-   "lastSeen": "2026-11-17T14:07:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 10월 소매판매 0.2% 증가…고물가에 소비 둔화",
-     "link": "https://www.newspim.com/news/view/20261117001384",
-     "host": "newspim.com",
-     "at": "2026-11-17T14:07:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 27,
-    "spike": 2.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -1.03%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-17T22:47:25.904Z",
+   "id": "mew0va",
+   "level": "caution",
+   "title": "러시아 \"우크라이나 나토 가입 수용 안 할 것\"",
+   "why": [
+    "기사 급증(평소 대비 3σ)",
+    "VIX 변동성 +11.13%"
+   ],
+   "link": "https://www.ajunews.com/view/20261118061008702",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-17T22:47:25.904Z",
+   "id": "22mx65",
+   "level": "caution",
+   "title": "中선전 APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담 주목",
+   "why": [
+    "기사 급증(평소 대비 3σ)",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://biz.heraldcorp.com/article/10940531?ref=naver",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-17T22:47:25.904Z",
+   "id": "19kpmdo",
+   "level": "caution",
+   "title": "뉴욕증시, NSA 기밀통신망 마비에 하락⋯다우 1.64%↓ [종합]",
+   "why": [
+    "기사 급증(평소 대비 3σ)",
+    "VIX 변동성 +11.13%"
+   ],
+   "link": "https://www.sedaily.com/article/20115686?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-17T22:12:46.502Z",
    "id": "w1bb7g",
@@ -1104,42 +1150,6 @@
    "why": [
     "핵심 단어",
     "VIX 변동성 +18.7%"
-   ],
-   "link": "https://www.newspim.com/news/view/20261116001423",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-16T14:54:23.242Z",
-   "id": "dzv7s1",
-   "level": "caution",
-   "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
-   "why": [
-    "핵심 단어",
-    "WTI 유가 -1.93%"
-   ],
-   "link": "https://www.newspim.com/news/view/20261116001423",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-16T14:02:31.893Z",
-   "id": "irufi0",
-   "level": "caution",
-   "title": "\"미·이, 이란 에너지시설 추가 공격 계획\"…항모 3대 중동 집결(종합)",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +6.89%"
-   ],
-   "link": "http://www.4th.kr/news/articleView.html?idxno=2122001",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-16T13:31:48.899Z",
-   "id": "dzv7s1",
-   "level": "caution",
-   "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +6.27%"
    ],
    "link": "https://www.newspim.com/news/view/20261116001423",
    "delivered": false
