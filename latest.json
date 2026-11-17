@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T05:13:46.469Z",
+ "updatedAt": "2026-11-17T05:27:26.398Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 4980.71,
-   "change": -2.35,
-   "z": -0.8,
+   "last": 4993.47021484375,
+   "change": -2.1,
+   "z": -0.7,
    "sd": 2.9231269293312696,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,12 +23,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 651.83,
-   "change": -2.08,
-   "z": -0.8,
+   "last": 653.5800170898438,
+   "change": -1.81,
+   "z": -0.7,
    "sd": 2.724793547207968,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -64,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1337.47998046875,
-   "change": 0.32,
-   "z": 0.5,
+   "last": 1336.280029296875,
+   "change": 0.23,
+   "z": 0.4,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
   },
@@ -76,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 84.9800033569336,
-   "change": -0.86,
+   "last": 85.01000213623047,
+   "change": -0.83,
    "z": -0.3,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
@@ -88,7 +86,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3876.89990234375,
+   "last": 3877,
    "change": 0.62,
    "z": 0.5,
    "sd": 1.3153647543330618,
@@ -122,9 +120,9 @@
  ],
  "spikes": {
   "war": -0.2,
-  "politics": -0.8,
-  "rates": -0.6,
-  "trade": 0.1,
+  "politics": -0.9,
+  "rates": -0.5,
+  "trade": 0.4,
   "fx": -0.2,
   "energy": -0.8,
   "market": 0.9,
@@ -139,17 +137,17 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.3,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -360,152 +358,40 @@
    }
   },
   {
-   "id": "1fnb3hd",
-   "title": "[데일리 머니마켓] 나스닥 2.49% 급락",
-   "firstSeen": "2026-11-16T15:00:00.000Z",
-   "lastSeen": "2026-11-17T04:53:00.000Z",
-   "count": 10,
-   "sources": 9,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AI 매도세 계속돼 美증시 일제히 하락…엔비디아 4.1%↓",
-     "link": "https://www.fnnews.com/news/202611170947101944",
-     "host": "fnnews.com",
-     "at": "2026-11-17T04:53:00.000Z"
-    },
-    {
-     "title": "나스닥 급락에 비트코인도 5.52% 하락…알레아 리서치, “전면적 자금 ...",
-     "link": "https://www.tokenpost.kr/news/insights/439558",
-     "host": "tokenpost.kr",
-     "at": "2026-11-17T03:22:00.000Z"
-    },
-    {
-     "title": "[증시타임] 뉴욕증시 또 급락, AI 중심의 상승장 끝나가나?",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346898?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-17T01:19:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 일제히 하락…국제유가, 급락",
-     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=883954",
-     "host": "hansbiz.co.kr",
-     "at": "2026-11-16T23:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 44,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "19bcck9",
-   "title": "[마켓 브리핑] 뉴욕증시, 엔비디아 실적 앞두고 경계감 확대",
-   "firstSeen": "2026-11-16T21:29:00.000Z",
-   "lastSeen": "2026-11-17T04:20:00.000Z",
-   "count": 9,
-   "sources": 9,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 엔비디아 실적 앞두고 약세 지속…장중 5000선 이탈",
-     "link": "https://www.g-enews.com/view.php?ud=202611171301237826923c501012_1",
-     "host": "g-enews.com",
-     "at": "2026-11-17T04:20:00.000Z"
-    },
-    {
-     "title": "엔비디아 실적에 쏠리는 눈…日닛케이 1.18%↓[Asia오전]",
-     "link": "https://www.mt.co.kr/world/2026/11/17/2026111711160448034",
-     "host": "mt.co.kr",
-     "at": "2026-11-17T03:40:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 없는' 첫 엔비디아 실적 발표…시장이 확인하려는 5가지",
-     "link": "https://www.news1.kr/world/international-economy/6356474",
-     "host": "news1.kr",
-     "at": "2026-11-17T02:34:00.000Z"
-    },
-    {
-     "title": "韓·美 반도체주 동반 급락…코스피, 엔비디아 실적이 분수령 [뉴스큐]",
-     "link": "https://www.newsq.co.kr/news/articleView.html?idxno=500921",
-     "host": "newsq.co.kr",
-     "at": "2026-11-17T02:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "11hw36e",
-   "title": "코스피 장중 5000붕괴 … 젠슨황 여파에 美 반도체 5% 급락",
-   "firstSeen": "2026-11-16T23:04:00.000Z",
-   "lastSeen": "2026-11-17T04:51:00.000Z",
+   "id": "f963g5",
+   "title": "외국인 하루 새 1조3800억 매도 공세…엔비디아·앤트로픽이 코스피 반...",
+   "firstSeen": "2026-11-16T11:22:00.000Z",
+   "lastSeen": "2026-11-17T05:10:00.000Z",
    "count": 8,
-   "sources": 7,
+   "sources": 8,
    "topics": [
-    "market",
-    "policy"
+    "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "삼성전기 주가 4%대 하락…코스피 5000선 붕괴 속 75만원선 사수하나?",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627737",
+     "host": "cbci.co.kr",
+     "at": "2026-11-17T05:10:00.000Z"
+    },
+    {
+     "title": "[속보]코스피 장중 5000선 재붕괴..외인 1.1조 매도",
+     "link": "https://www.fnnews.com/news/202611171408261156",
+     "host": "fnnews.com",
+     "at": "2026-11-17T05:10:00.000Z"
+    },
+    {
+     "title": "[증시 프리즘] 코스피, 5000선 사수 안간힘…외국인 1조원대 매도에 반도...",
+     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8525",
+     "host": "moneystorm.kr",
+     "at": "2026-11-17T05:03:00.000Z"
+    },
     {
      "title": "코스피 또 장중 5000선 붕괴…엔비디아 등 美기술주 하락 여파",
      "link": "https://www.donga.com/news/Economy/article/all/20261117/135038964/2",
      "host": "donga.com",
      "at": "2026-11-17T04:51:00.000Z"
-    },
-    {
-     "title": "[특징주] 美 반도체주 쇼크 여파에…국내 소부장주 일제히 약세",
-     "link": "https://www.etoday.co.kr/news/view/2649212",
-     "host": "etoday.co.kr",
-     "at": "2026-11-17T04:30:00.000Z"
-    },
-    {
-     "title": "엔비디아·AI 규제 투매 여파...코스피, 사흘 째 하락",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611171155331063",
-     "host": "ytn.co.kr",
-     "at": "2026-11-17T02:55:00.000Z"
-    },
-    {
-     "title": "[올댓차이나] 홍콩 증시, 美 반도체주 급락 여파로 내림세… H주 0.95%↓",
-     "link": "https://www.newsis.com/view/NISX20261117_0003871326",
-     "host": "newsis.com",
-     "at": "2026-11-17T02:35:00.000Z"
     }
    ],
    "assess": {
@@ -527,40 +413,42 @@
    }
   },
   {
-   "id": "f963g5",
-   "title": "외국인 하루 새 1조3800억 매도 공세…엔비디아·앤트로픽이 코스피 반...",
-   "firstSeen": "2026-11-16T11:22:00.000Z",
-   "lastSeen": "2026-11-17T05:10:00.000Z",
+   "id": "1fnb3hd",
+   "title": "[데일리 머니마켓] 나스닥 2.49% 급락",
+   "firstSeen": "2026-11-16T15:00:00.000Z",
+   "lastSeen": "2026-11-17T03:22:00.000Z",
    "count": 7,
    "sources": 7,
    "topics": [
-    "market"
+    "trade",
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[속보]코스피 장중 5000선 재붕괴..외인 1.1조 매도",
-     "link": "https://www.fnnews.com/news/202611171408261156",
-     "host": "fnnews.com",
-     "at": "2026-11-17T05:10:00.000Z"
+     "title": "나스닥 급락에 비트코인도 5.52% 하락…알레아 리서치, “전면적 자금 ...",
+     "link": "https://www.tokenpost.kr/news/insights/439558",
+     "host": "tokenpost.kr",
+     "at": "2026-11-17T03:22:00.000Z"
     },
     {
-     "title": "삼성전기 주가 4%대 하락…코스피 5000선 붕괴 속 75만원선 사수하나?",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627737",
-     "host": "cbci.co.kr",
-     "at": "2026-11-17T05:10:00.000Z"
+     "title": "[굿모닝 마켓] 뉴욕증시, '젠슨황 후폭풍' 계속…나스닥 2.49%↓",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346895?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T23:30:00.000Z"
     },
     {
-     "title": "[증시 프리즘] 코스피, 5000선 사수 안간힘…외국인 1조원대 매도에 반도...",
-     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8525",
-     "host": "moneystorm.kr",
-     "at": "2026-11-17T05:03:00.000Z"
+     "title": "美 대중 반도체 수출규제 강화에 나스닥 2.49% 급락 [뉴욕증시]",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2019351",
+     "host": "m-i.kr",
+     "at": "2026-11-16T23:20:00.000Z"
     },
     {
-     "title": "코스피 100포인트 넘게 급락하며 5000선 붕괴",
-     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3754563",
-     "host": "gukjenews.com",
-     "at": "2026-11-17T04:46:00.000Z"
+     "title": "뉴욕증시, 3대 지수 동반 하락...나스닥 2.49%↓",
+     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81656",
+     "host": "issuenbiz.com",
+     "at": "2026-11-16T23:08:00.000Z"
     }
    ],
    "assess": {
@@ -582,47 +470,151 @@
    }
   },
   {
-   "id": "mjx3r8",
-   "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-   "firstSeen": "2026-11-16T05:51:00.000Z",
-   "lastSeen": "2026-11-17T04:28:00.000Z",
+   "id": "11hw36e",
+   "title": "'젠슨황 여파' 美 급락에 코스피 4900선 … 삼전닉스 1~2%↓",
+   "firstSeen": "2026-11-16T23:04:00.000Z",
+   "lastSeen": "2026-11-17T04:30:00.000Z",
    "count": 6,
-   "sources": 5,
+   "sources": 6,
    "topics": [
-    "politics",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "트럼프·머스크 지지에도 엔비디아 \"젠슨 황 복귀 논의 안 한다\"",
-     "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=338509",
-     "host": "mediatoday.co.kr",
-     "at": "2026-11-17T04:28:00.000Z"
+     "title": "[특징주] 美 반도체주 쇼크 여파에…국내 소부장주 일제히 약세",
+     "link": "https://www.etoday.co.kr/news/view/2649212",
+     "host": "etoday.co.kr",
+     "at": "2026-11-17T04:30:00.000Z"
     },
     {
-     "title": "트럼프 \"젠슨 황 엔비디아 CEO 복귀 반대하지 않아\"…\"큰 교훈 얻었을 것...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398547",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-17T04:26:00.000Z"
+     "title": "[올댓차이나] 홍콩 증시, 美 반도체주 급락 여파로 내림세… H주 0.95%↓",
+     "link": "https://www.newsis.com/view/NISX20261117_0003871326",
+     "host": "newsis.com",
+     "at": "2026-11-17T02:35:00.000Z"
     },
     {
-     "title": "머스크 등 美 빅테크 거물들, 젠슨 황 엔비디아 CEO 복귀 촉구…청원 17...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398548",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-17T04:26:00.000Z"
+     "title": "삼성전자 주가 장중 2%대 내려, 젠슨 황 사임 여파에 미국 반도체주 약...",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452160",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-17T02:24:00.000Z"
     },
     {
-     "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
-     "link": "https://www.sedaily.com/article/20115281?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-17T01:29:00.000Z"
+     "title": "美 반도체주 급락에 코스피 5,000선 위협…외국인 매도세",
+     "link": "https://www.mediaus.co.kr/news/articleView.html?idxno=319033",
+     "host": "mediaus.co.kr",
+     "at": "2026-11-17T01:36:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 40,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "mjx3r8",
+   "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
+   "firstSeen": "2026-11-16T05:51:00.000Z",
+   "lastSeen": "2026-11-17T04:53:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "AI 매도세 계속돼 美증시 일제히 하락…엔비디아 4.1%↓",
+     "link": "https://www.fnnews.com/news/202611170947101944",
+     "host": "fnnews.com",
+     "at": "2026-11-17T04:53:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 일제히 하락…국제유가, 급락",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=883954",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-16T23:38:00.000Z"
+    },
+    {
+     "title": "‘젠슨 황 파장 지속’ 뉴욕증시 일제히 하락…엔비디아 4.1%·SK하이닉스...",
+     "link": "https://biz.heraldcorp.com/article/10939143?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-16T22:48:00.000Z"
+    },
+    {
+     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T05:51:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1fnb3hd",
+   "title": "삼성·하이닉스 동반 급락…코스피 3.59% 하락",
+   "firstSeen": "2026-11-16T15:00:00.000Z",
+   "lastSeen": "2026-11-17T02:56:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "에이피알 주가 8%대 급락 22만원선까지 밀려…코스피·코스닥 동반 약세",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627701",
+     "host": "cbci.co.kr",
+     "at": "2026-11-17T02:56:00.000Z"
+    },
+    {
+     "title": "韓·美 반도체주 동반 급락…코스피, 엔비디아 실적이 분수령 [뉴스큐]",
+     "link": "https://www.newsq.co.kr/news/articleView.html?idxno=500921",
+     "host": "newsq.co.kr",
+     "at": "2026-11-17T02:28:00.000Z"
+    },
+    {
+     "title": "삼성·하이닉스 동반 급락…코스피 3.59% 하락",
+     "link": "https://www.sedaily.com/article/20115283?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-17T01:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
     "spike": 0.9,
     "news": false,
     "reaction": {
@@ -815,28 +807,29 @@
    }
   },
   {
-   "id": "1fnb3hd",
-   "title": "삼성·하이닉스 동반 급락…코스피 3.59% 하락",
-   "firstSeen": "2026-11-16T15:00:00.000Z",
-   "lastSeen": "2026-11-17T02:56:00.000Z",
+   "id": "1l0lfgj",
+   "title": "\"엔비디아 이사회, 젠슨 황 복귀 논의 없다\"…엔비디아 4%대 급락·AI주 ...",
+   "firstSeen": "2026-11-16T15:26:00.000Z",
+   "lastSeen": "2026-11-17T04:28:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
+    "politics",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "에이피알 주가 8%대 급락 22만원선까지 밀려…코스피·코스닥 동반 약세",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627701",
-     "host": "cbci.co.kr",
-     "at": "2026-11-17T02:56:00.000Z"
+     "title": "트럼프·머스크 지지에도 엔비디아 \"젠슨 황 복귀 논의 안 한다\"",
+     "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=338509",
+     "host": "mediatoday.co.kr",
+     "at": "2026-11-17T04:28:00.000Z"
     },
     {
-     "title": "삼성·하이닉스 동반 급락…코스피 3.59% 하락",
-     "link": "https://www.sedaily.com/article/20115283?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-17T01:30:00.000Z"
+     "title": "\"엔비디아 이사회, 젠슨 황 복귀 논의 없다\"…엔비디아 4%대 급락·AI주 ...",
+     "link": "https://www.econovill.com/news/articleView.html?idxno=757478",
+     "host": "econovill.com",
+     "at": "2026-11-16T23:56:00.000Z"
     }
    ],
    "assess": {
