@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T15:13:53.904Z",
+ "updatedAt": "2026-11-17T15:27:27.943Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 7392.080078125,
-   "change": -0.33,
-   "z": -0.3,
+   "last": 7386.35986328125,
+   "change": -0.41,
+   "z": -0.4,
    "sd": 0.9608979579017324,
    "source": "Yahoo",
    "checked": true
@@ -51,8 +51,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 24452.951171875,
-   "change": -0.23,
+   "last": 24427.224609375,
+   "change": -0.34,
    "z": -0.2,
    "sd": 1.3519484657118128,
    "source": "Yahoo",
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1336.43994140625,
-   "change": 0.24,
-   "z": 0.4,
+   "last": 1336.18994140625,
+   "change": 0.22,
+   "z": 0.3,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
   },
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 86.8499984741211,
-   "change": 1.32,
-   "z": 0.5,
+   "last": 86.76000213623047,
+   "change": 1.21,
+   "z": 0.4,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
   },
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3864.800048828125,
-   "change": 0.31,
-   "z": 0.2,
+   "last": 3858.699951171875,
+   "change": 0.15,
+   "z": 0.1,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 22.450000762939453,
-   "change": -2.01,
-   "z": -0.2,
+   "last": 22.809999465942383,
+   "change": -0.44,
+   "z": 0,
    "sd": 11.968928417352235,
    "source": "Yahoo",
    "checked": true
@@ -113,17 +113,17 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-17",
-   "last": 5.1519999504089355,
-   "change": 3.1,
-   "z": 0.6,
+   "last": 5.144999980926514,
+   "change": 2.4,
+   "z": 0.4,
    "sd": 5.447127683076426,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -0.4,
+  "war": -0.3,
   "politics": -0.8,
-  "rates": -0.4,
+  "rates": -0.6,
   "trade": -0.1,
   "fx": -0.2,
   "energy": -1,
@@ -134,7 +134,7 @@
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -144,7 +144,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.6,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
@@ -268,13 +268,13 @@
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": 1.32,
+     "change": 1.21,
      "unit": "%",
-     "z": 0.5
+     "z": 0.4
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 +1.32%"
+     "WTI 유가 +1.21%"
     ]
    }
   },
@@ -319,12 +319,53 @@
    }
   },
   {
-   "id": "1c9802r",
-   "title": "[증시 프리즘] '5000선 ' 붕괴…코스피 4거래일 연속 하락, 9개월여 만에...",
-   "firstSeen": "2026-11-17T07:22:00.000Z",
+   "id": "h295fd",
+   "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
+   "firstSeen": "2026-11-17T15:25:00.000Z",
+   "lastSeen": "2026-11-17T15:25:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
+     "link": "https://www.news1.kr/world/middleeast-africa/6357344",
+     "host": "news1.kr",
+     "at": "2026-11-17T15:25:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -2.59,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -2.59%"
+    ]
+   }
+  },
+  {
+   "id": "ige8r9",
+   "title": "코스피 종가, 9개월만 5000선 붕괴...\"투심냉각, 저점매수보단 유지\"",
+   "firstSeen": "2026-11-17T06:34:00.000Z",
    "lastSeen": "2026-11-17T15:00:00.000Z",
-   "count": 16,
-   "sources": 16,
+   "count": 13,
+   "sources": 13,
    "topics": [
     "rates"
    ],
@@ -419,12 +460,12 @@
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": 1.32,
+     "change": 1.21,
      "unit": "%",
-     "z": 0.5
+     "z": 0.4
     },
     "why": [
-     "WTI 유가 +1.32%"
+     "WTI 유가 +1.21%"
     ]
    }
   },
@@ -487,14 +528,20 @@
    "id": "px29d9",
    "title": "[월가 영수증] 엔비디아(NVDA) 실적 앞둔 美 선물 약세… 소매판매·금리...",
    "firstSeen": "2026-11-17T12:42:00.000Z",
-   "lastSeen": "2026-11-17T14:58:00.000Z",
-   "count": 6,
-   "sources": 5,
+   "lastSeen": "2026-11-17T15:14:00.000Z",
+   "count": 7,
+   "sources": 6,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "뉴욕증시, 엔비디아 실적 앞두고 방향 탐색…3대 지수 약세",
+     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101448",
+     "host": "newsian.co.kr",
+     "at": "2026-11-17T15:14:00.000Z"
+    },
     {
      "title": "골드만삭스 \"미 증시 등락 속 완만한 상승\" 전망…엔비디아 실적 앞두고",
      "link": "https://www.tokenpost.kr/news/market/439868",
@@ -512,18 +559,12 @@
      "link": "https://www.newspim.com/news/view/20261117001387",
      "host": "newspim.com",
      "at": "2026-11-17T14:25:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시 개장전] 엔비디아 실적 앞두고 나스닥 선물 0.4%↑…다우 선물...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94563",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-17T13:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 16,
+    "score": 17,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -579,62 +620,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 15,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
-     "unit": "%",
-     "z": -0.9
-    },
-    "why": [
-     "코스피 -2.59%"
-    ]
-   }
-  },
-  {
-   "id": "jmhpc4",
-   "title": "트럼프 “中희토류 10개월 안에 따라잡을 것…이란전 해결 가까워져”[...",
-   "firstSeen": "2026-11-17T12:26:00.000Z",
-   "lastSeen": "2026-11-17T14:53:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 “10개월 안에 중국 희토류 따라잡겠다”",
-     "link": "https://www.segye.com/newsView/20261117520198?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-17T14:53:00.000Z"
-    },
-    {
-     "title": "트럼프 “10개월내 美 희토류 생산, 中 따라잡을 것”",
-     "link": "https://www.newsis.com/view/NISX20261117_0003872268",
-     "host": "newsis.com",
-     "at": "2026-11-17T13:48:00.000Z"
-    },
-    {
-     "title": "트럼프 \"10개월 내 中 희토류 생산 따라잡는다…이란전 종식 임박\"",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=05379206645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-17T13:36:00.000Z"
-    },
-    {
-     "title": "트럼프 “中희토류 10개월 안에 따라잡을 것…이란전 해결 가까워져”[...",
-     "link": "https://biz.heraldcorp.com/article/10940395?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-17T12:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 12,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -728,6 +713,56 @@
      "link": "https://www.ppss.kr/news/articleView.html?idxno=321356",
      "host": "ppss.kr",
      "at": "2026-11-17T05:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 11,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -2.59,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "코스피 -2.59%"
+    ]
+   }
+  },
+  {
+   "id": "gvm1k6",
+   "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
+   "firstSeen": "2026-11-17T08:56:00.000Z",
+   "lastSeen": "2026-11-17T15:21:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "반도체주 추풍낙엽… 연초로 돌아간 코스피, 5000 무너졌다",
+     "link": "https://www.kmib.co.kr/article/20261117501957",
+     "host": "kmib.co.kr",
+     "at": "2026-11-17T15:21:00.000Z"
+    },
+    {
+     "title": "5000선 아래로 '털썩' 2월로 돌아간 코스피",
+     "link": "https://www.mk.co.kr/article/12211563",
+     "host": "mk.co.kr",
+     "at": "2026-11-17T10:21:00.000Z"
+    },
+    {
+     "title": "AI투심 악화 직격탄…2월로 돌아간 코스피",
+     "link": "https://www.hankyung.com/article/2026111726951",
+     "host": "hankyung.com",
+     "at": "2026-11-17T08:56:00.000Z"
     }
    ],
    "assess": {
@@ -889,52 +924,6 @@
     "label": "관찰",
     "score": 9,
     "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
-     "unit": "%",
-     "z": -0.9
-    },
-    "why": [
-     "코스피 -2.59%"
-    ]
-   }
-  },
-  {
-   "id": "1yjgp4h",
-   "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
-   "firstSeen": "2026-11-16T22:42:00.000Z",
-   "lastSeen": "2026-11-16T23:36:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴욕환시] 달러 닷새째↑…안전선호 속 'DXY' 1년7개월來 최고",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445067",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-16T23:36:00.000Z"
-    },
-    {
-     "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
-     "link": "https://www.newspim.com/news/view/20261117000031",
-     "host": "newspim.com",
-     "at": "2026-11-16T22:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 8,
-    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
