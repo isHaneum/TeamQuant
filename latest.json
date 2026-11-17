@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T18:16:47.974Z",
+ "updatedAt": "2026-11-17T18:29:57.719Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 7332.58984375,
-   "change": -1.13,
-   "z": -1.2,
+   "last": 7352.52978515625,
+   "change": -0.86,
+   "z": -0.9,
    "sd": 0.9608979579017324,
    "source": "Yahoo",
    "checked": true
@@ -51,9 +51,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 24243.12890625,
-   "change": -1.09,
-   "z": -0.8,
+   "last": 24327.06640625,
+   "change": -0.75,
+   "z": -0.6,
    "sd": 1.3519484657118128,
    "source": "Yahoo",
    "checked": true
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1334.43994140625,
-   "change": 0.09,
-   "z": 0.1,
+   "last": 1334.949951171875,
+   "change": 0.13,
+   "z": 0.2,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
   },
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 86.52999877929688,
-   "change": 0.94,
+   "last": 86.55999755859375,
+   "change": 0.98,
    "z": 0.3,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3866,
-   "change": 0.34,
-   "z": 0.3,
+   "last": 3863.300048828125,
+   "change": 0.27,
+   "z": 0.2,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 26.229999542236328,
-   "change": 14.49,
-   "z": 1.2,
+   "last": 25.959999084472656,
+   "change": 13.31,
+   "z": 1.1,
    "sd": 11.968928417352235,
    "source": "Yahoo",
    "checked": true
@@ -121,20 +121,20 @@
   }
  ],
  "spikes": {
-  "war": -0.7,
+  "war": -0.9,
   "politics": -1.4,
   "rates": -0.9,
   "trade": -0.1,
   "fx": -0.2,
   "energy": -1.1,
-  "market": -0.8,
+  "market": -0.9,
   "credit": -0.1,
   "disaster": 0,
   "policy": 0.2
  },
  "rates": {
   "war": {
-   "rate": 0.6,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
@@ -164,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.7,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -222,19 +222,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 37,
+    "score": 36,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.1
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
@@ -262,60 +262,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
+    "score": 30,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": 14.49,
+     "change": 13.31,
      "unit": "%",
-     "z": 1.2
+     "z": 1.1
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +14.49%"
-    ]
-   }
-  },
-  {
-   "id": "h295fd",
-   "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
-   "firstSeen": "2026-11-17T15:25:00.000Z",
-   "lastSeen": "2026-11-17T15:25:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
-     "link": "https://www.news1.kr/world/middleeast-africa/6357344",
-     "host": "news1.kr",
-     "at": "2026-11-17T15:25:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
@@ -360,6 +319,47 @@
    }
   },
   {
+   "id": "h295fd",
+   "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
+   "firstSeen": "2026-11-17T15:25:00.000Z",
+   "lastSeen": "2026-11-17T15:25:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
+     "link": "https://www.news1.kr/world/middleeast-africa/6357344",
+     "host": "news1.kr",
+     "at": "2026-11-17T15:25:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
+     "unit": "%",
+     "z": 1.1
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +13.31%"
+    ]
+   }
+  },
+  {
    "id": "mew0va",
    "title": "러 \"우크라 나토 가입 수용 안할 것\"…美제안 사실상 거부",
    "firstSeen": "2026-11-17T10:16:00.000Z",
@@ -399,18 +399,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 22,
+    "score": 21,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": 14.49,
+     "change": 13.31,
      "unit": "%",
-     "z": 1.2
+     "z": 1.1
     },
     "why": [
-     "VIX 변동성 +14.49%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
@@ -454,128 +454,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "S&P 500 -1.13%"
-    ]
-   }
-  },
-  {
-   "id": "1syy9ir",
-   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-   "firstSeen": "2026-11-17T01:41:00.000Z",
-   "lastSeen": "2026-11-17T16:30:00.000Z",
-   "count": 6,
-   "sources": 5,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴스이슈&비즈] 젠슨황·앤트로픽·금리 '삼중고'에 코스피 9개월만에...",
-     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81700",
-     "host": "issuenbiz.com",
-     "at": "2026-11-17T16:30:00.000Z"
-    },
-    {
-     "title": "국고채 금리 혼조 마감…코스피 5,000선 붕괴에 중단기물 하락",
-     "link": "http://www.kjdaily.com/article.php?aid=1794929615692614276",
-     "host": "kjdaily.com",
-     "at": "2026-11-17T15:36:00.000Z"
-    },
-    {
-     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-17T08:04:00.000Z"
-    },
-    {
-     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-17T07:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
     "score": 19,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.1
     },
     "why": [
-     "S&P 500 -1.13%"
-    ]
-   }
-  },
-  {
-   "id": "68v4kk",
-   "title": "IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…통화·재정 '긴축' 주문",
-   "firstSeen": "2026-11-17T05:53:00.000Z",
-   "lastSeen": "2026-11-17T08:45:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AI 호황에 달아오른 韓 경제…IMF, 통화·재정 '동시 브레이크' 주문",
-     "link": "https://www.news1.kr/economy/trend/6357005",
-     "host": "news1.kr",
-     "at": "2026-11-17T08:45:00.000Z"
-    },
-    {
-     "title": "[종합] IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…미래대응기금 환영 속...",
-     "link": "https://www.newspim.com/news/view/20261117001075",
-     "host": "newspim.com",
-     "at": "2026-11-17T07:00:00.000Z"
-    },
-    {
-     "title": "IMF, 韓 성장률 3.3%→3.9% 전망…물가 불안에 통화·재정 '긴축' 주문",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=04323046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-17T06:51:00.000Z"
-    },
-    {
-     "title": "IMF \"올해 韓 성장률 3.9% 전망… 고물가에 통화·재정 긴축 중요\"",
-     "link": "https://www.hankookilbo.com/news/article/A2026111714310002701?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-17T06:31:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 19,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
@@ -619,73 +509,128 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 19,
+    "score": 18,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.1
     },
     "why": [
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
   {
-   "id": "1x0tnst",
-   "title": "젠슨 황 \"이사회가 부르면 엔비디아 CEO로 돌아갈 것\"",
-   "firstSeen": "2026-11-17T16:21:00.000Z",
-   "lastSeen": "2026-11-17T17:32:00.000Z",
-   "count": 5,
+   "id": "1syy9ir",
+   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
+   "firstSeen": "2026-11-17T01:41:00.000Z",
+   "lastSeen": "2026-11-17T16:30:00.000Z",
+   "count": 6,
    "sources": 5,
    "topics": [
-    "trade"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[전문]닷새만에 침묵 깬 젠슨 황 \"이사회가 원하면 복귀\"",
-     "link": "https://www.hankyung.com/article/202611183159i",
-     "host": "hankyung.com",
-     "at": "2026-11-17T17:32:00.000Z"
+     "title": "[뉴스이슈&비즈] 젠슨황·앤트로픽·금리 '삼중고'에 코스피 9개월만에...",
+     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81700",
+     "host": "issuenbiz.com",
+     "at": "2026-11-17T16:30:00.000Z"
     },
     {
-     "title": "젠슨 황, \"이사회 원하면 CEO 복귀하겠다\" 입장 밝혀",
-     "link": "https://www.ajunews.com/view/20261118021031661",
-     "host": "ajunews.com",
-     "at": "2026-11-17T17:14:00.000Z"
+     "title": "국고채 금리 혼조 마감…코스피 5,000선 붕괴에 중단기물 하락",
+     "link": "http://www.kjdaily.com/article.php?aid=1794929615692614276",
+     "host": "kjdaily.com",
+     "at": "2026-11-17T15:36:00.000Z"
     },
     {
-     "title": "젠슨 황 “이사회가 원한다면 엔비디아 CEO 복귀하겠다”",
-     "link": "https://www.mk.co.kr/article/12211834",
-     "host": "mk.co.kr",
-     "at": "2026-11-17T16:51:00.000Z"
+     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-17T08:04:00.000Z"
     },
     {
-     "title": "[속보] 젠슨 황 “이사회 요청하면 엔비디아 최고경영자로 복귀하겠다”",
-     "link": "https://www.hani.co.kr/arti/international/america/1287842.html",
-     "host": "hani.co.kr",
-     "at": "2026-11-17T16:32:00.000Z"
+     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-17T07:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
+    "score": 16,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -2.59,
      "unit": "%",
-     "z": -1.2
+     "z": -0.9
     },
     "why": [
-     "S&P 500 -1.13%"
+     "코스피 -2.59%"
+    ]
+   }
+  },
+  {
+   "id": "68v4kk",
+   "title": "IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…통화·재정 '긴축' 주문",
+   "firstSeen": "2026-11-17T05:53:00.000Z",
+   "lastSeen": "2026-11-17T08:45:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "AI 호황에 달아오른 韓 경제…IMF, 통화·재정 '동시 브레이크' 주문",
+     "link": "https://www.news1.kr/economy/trend/6357005",
+     "host": "news1.kr",
+     "at": "2026-11-17T08:45:00.000Z"
+    },
+    {
+     "title": "[종합] IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…미래대응기금 환영 속...",
+     "link": "https://www.newspim.com/news/view/20261117001075",
+     "host": "newspim.com",
+     "at": "2026-11-17T07:00:00.000Z"
+    },
+    {
+     "title": "IMF, 韓 성장률 3.3%→3.9% 전망…물가 불안에 통화·재정 '긴축' 주문",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=04323046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-17T06:51:00.000Z"
+    },
+    {
+     "title": "IMF \"올해 韓 성장률 3.9% 전망… 고물가에 통화·재정 긴축 중요\"",
+     "link": "https://www.hankookilbo.com/news/article/A2026111714310002701?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-17T06:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 16,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -2.59,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "코스피 -2.59%"
     ]
    }
   },
@@ -730,18 +675,73 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 17,
+    "score": 16,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.1
     },
     "why": [
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
+    ]
+   }
+  },
+  {
+   "id": "1x0tnst",
+   "title": "젠슨 황 \"이사회가 부르면 엔비디아 CEO로 돌아갈 것\"",
+   "firstSeen": "2026-11-17T16:21:00.000Z",
+   "lastSeen": "2026-11-17T17:32:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[전문]닷새만에 침묵 깬 젠슨 황 \"이사회가 원하면 복귀\"",
+     "link": "https://www.hankyung.com/article/202611183159i",
+     "host": "hankyung.com",
+     "at": "2026-11-17T17:32:00.000Z"
+    },
+    {
+     "title": "젠슨 황, \"이사회 원하면 CEO 복귀하겠다\" 입장 밝혀",
+     "link": "https://www.ajunews.com/view/20261118021031661",
+     "host": "ajunews.com",
+     "at": "2026-11-17T17:14:00.000Z"
+    },
+    {
+     "title": "젠슨 황 “이사회가 원한다면 엔비디아 CEO 복귀하겠다”",
+     "link": "https://www.mk.co.kr/article/12211834",
+     "host": "mk.co.kr",
+     "at": "2026-11-17T16:51:00.000Z"
+    },
+    {
+     "title": "[속보] 젠슨 황 “이사회 요청하면 엔비디아 최고경영자로 복귀하겠다”",
+     "link": "https://www.hani.co.kr/arti/international/america/1287842.html",
+     "host": "hani.co.kr",
+     "at": "2026-11-17T16:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 15,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -2.59,
+     "unit": "%",
+     "z": -0.9
+    },
+    "why": [
+     "코스피 -2.59%"
     ]
    }
   },
@@ -787,18 +787,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 17,
+    "score": 15,
     "spike": 0.2,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.1
     },
     "why": [
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
@@ -837,18 +837,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
+    "score": 11,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.1
     },
     "why": [
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
@@ -886,18 +886,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
+    "score": 11,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 13.31,
      "unit": "%",
-     "z": -1.2
+     "z": 1.1
     },
     "why": [
-     "S&P 500 -1.13%"
+     "VIX 변동성 +13.31%"
     ]
    }
   },
@@ -935,18 +935,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 12,
+    "score": 9,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -2.59,
      "unit": "%",
-     "z": -1.2
+     "z": -0.9
     },
     "why": [
-     "S&P 500 -1.13%"
+     "코스피 -2.59%"
     ]
    }
   }
