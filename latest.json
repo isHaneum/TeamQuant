@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T16:28:32.423Z",
+ "updatedAt": "2026-11-17T16:47:54.585Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 7333.1298828125,
-   "change": -1.13,
-   "z": -1.2,
+   "last": 7313.080078125,
+   "change": -1.4,
+   "z": -1.5,
    "sd": 0.9608979579017324,
    "source": "Yahoo",
    "checked": true
@@ -51,9 +51,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 24227.3359375,
-   "change": -1.15,
-   "z": -0.9,
+   "last": 24153.794921875,
+   "change": -1.45,
+   "z": -1.1,
    "sd": 1.3519484657118128,
    "source": "Yahoo",
    "checked": true
@@ -64,7 +64,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1334.8900146484375,
+   "last": 1334.8199462890625,
    "change": 0.12,
    "z": 0.2,
    "sd": 0.6309606838243439,
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 86.94000244140625,
-   "change": 1.42,
-   "z": 0.5,
+   "last": 86.55000305175781,
+   "change": 0.97,
+   "z": 0.3,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
   },
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 24.799999237060547,
-   "change": 8.25,
-   "z": 0.7,
+   "last": 26.229999542236328,
+   "change": 14.49,
+   "z": 1.2,
    "sd": 11.968928417352235,
    "source": "Yahoo",
    "checked": true
@@ -113,24 +113,24 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-17",
-   "last": 5.115000247955322,
-   "change": -0.6,
-   "z": -0.1,
+   "last": 5.10099983215332,
+   "change": -2,
+   "z": -0.4,
    "sd": 5.447127683076426,
    "source": "Yahoo"
   }
  ],
  "spikes": {
   "war": 0,
-  "politics": -1,
-  "rates": -0.2,
+  "politics": -1.1,
+  "rates": -0.3,
   "trade": -0.1,
   "fx": -0.2,
   "energy": -1,
   "market": 0.7,
   "credit": -0.1,
   "disaster": 0,
-  "policy": -0.3
+  "policy": 0.2
  },
  "rates": {
   "war": {
@@ -139,12 +139,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.4,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.9,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -164,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.9,
+   "rate": 4,
    "saturated": 1,
    "queries": 3
   },
@@ -179,7 +179,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -222,19 +222,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 37,
+    "score": 42,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -263,19 +263,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
+    "score": 36,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -303,19 +303,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
+    "score": 31,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": 8.25,
+     "change": 14.49,
      "unit": "%",
-     "z": 0.7
+     "z": 1.2
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +8.25%"
+     "VIX 변동성 +14.49%"
     ]
    }
   },
@@ -343,8 +343,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 28,
-    "spike": 0,
+    "score": 30,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -361,11 +361,11 @@
   },
   {
    "id": "1hsxaij",
-   "title": "외국인 1조4520억원 팔자에 코스피 5000 붕괴...개미도 '패닉'",
+   "title": "코스피, 9개월 만에 최저…외국인 1.4조 '팔자'에 5000선 무너져",
    "firstSeen": "2026-11-17T07:42:00.000Z",
    "lastSeen": "2026-11-17T15:32:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "count": 6,
+   "sources": 6,
    "topics": [
     "market"
    ],
@@ -378,12 +378,6 @@
      "at": "2026-11-17T15:32:00.000Z"
     },
     {
-     "title": "코스피 5000선 붕괴…외국인 매도 속 AI 불확실성 확대",
-     "link": "https://www.vegannews.co.kr/news/article.html?no=406710",
-     "host": "vegannews.co.kr",
-     "at": "2026-11-17T14:16:00.000Z"
-    },
-    {
      "title": "'5천피' 붕괴…코스피, 9개월 만에 최저치 4968",
      "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=565627",
      "host": "idaegu.co.kr",
@@ -394,23 +388,29 @@
      "link": "http://www.queen.co.kr/news/articleView.html?idxno=466497",
      "host": "queen.co.kr",
      "at": "2026-11-17T09:06:00.000Z"
+    },
+    {
+     "title": "[마감 시황] 코스피, 외국인 1.4조원 대규모 '팔자'에 9개월 만에 5,000선...",
+     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281540",
+     "host": "businesskorea.co.kr",
+     "at": "2026-11-17T08:34:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
+    "score": 29,
     "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -419,8 +419,8 @@
    "title": "뉴욕증시 혼조세 출발… 나스닥 강보합 vs 다우 0.70% 하락",
    "firstSeen": "2026-11-17T14:38:00.000Z",
    "lastSeen": "2026-11-17T15:33:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "count": 6,
+   "sources": 6,
    "topics": [
     "market"
    ],
@@ -439,33 +439,88 @@
      "at": "2026-11-17T15:00:00.000Z"
     },
     {
-     "title": "뉴욕증시 혼조세 출발… 엔비디아 실적 발표 주목",
-     "link": "https://biz.chosun.com/international/international_economy/2026/11/17/727SWDAITVCFJID6LDKXEHXQOU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-17T14:56:00.000Z"
-    },
-    {
      "title": "[뉴욕개장] 나스닥 0.07% 상승 출발…엔비디아 실적 앞두고 혼조세",
      "link": "https://www.news1.kr/world/usa-canada/6357337",
      "host": "news1.kr",
      "at": "2026-11-17T14:50:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 실적 발표 대기하며 하락 출발",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445216",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-17T14:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
+    "score": 29,
     "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
+    ]
+   }
+  },
+  {
+   "id": "px29d9",
+   "title": "[월가 영수증] 엔비디아(NVDA) 실적 앞둔 美 선물 약세… 소매판매·금리...",
+   "firstSeen": "2026-11-17T12:42:00.000Z",
+   "lastSeen": "2026-11-17T15:52:00.000Z",
+   "count": 7,
+   "sources": 5,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[뉴욕증시 개장] 엔비디아 실적 앞두고 3대 지수 하락…다우 0.7%↓",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94565",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-17T15:52:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 실적 앞두고 방향 탐색…3대 지수 약세",
+     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101448",
+     "host": "newsian.co.kr",
+     "at": "2026-11-17T15:14:00.000Z"
+    },
+    {
+     "title": "골드만삭스 \"미 증시 등락 속 완만한 상승\" 전망…엔비디아 실적 앞두고",
+     "link": "https://www.tokenpost.kr/news/market/439868",
+     "host": "tokenpost.kr",
+     "at": "2026-11-17T14:58:00.000Z"
+    },
+    {
+     "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...엔비디아 실적 앞두고 반도체주 반...",
+     "link": "https://www.newspim.com/news/view/20261117001387",
+     "host": "newspim.com",
+     "at": "2026-11-17T14:25:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 25,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.4,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -511,27 +566,27 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
+    "score": 25,
     "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   },
   {
-   "id": "px29d9",
-   "title": "[월가 영수증] 엔비디아(NVDA) 실적 앞둔 美 선물 약세… 소매판매·금리...",
-   "firstSeen": "2026-11-17T12:42:00.000Z",
-   "lastSeen": "2026-11-17T15:52:00.000Z",
-   "count": 7,
+   "id": "1syy9ir",
+   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
+   "firstSeen": "2026-11-17T01:41:00.000Z",
+   "lastSeen": "2026-11-17T16:30:00.000Z",
+   "count": 6,
    "sources": 5,
    "topics": [
     "rates"
@@ -539,100 +594,45 @@
    "critical": [],
    "links": [
     {
-     "title": "[뉴욕증시 개장] 엔비디아 실적 앞두고 3대 지수 하락…다우 0.7%↓",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94565",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-17T15:52:00.000Z"
+     "title": "[뉴스이슈&비즈] 젠슨황·앤트로픽·금리 '삼중고'에 코스피 9개월만에...",
+     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81700",
+     "host": "issuenbiz.com",
+     "at": "2026-11-17T16:30:00.000Z"
     },
     {
-     "title": "뉴욕증시, 엔비디아 실적 앞두고 방향 탐색…3대 지수 약세",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101448",
-     "host": "newsian.co.kr",
-     "at": "2026-11-17T15:14:00.000Z"
+     "title": "국고채 금리 혼조 마감…코스피 5,000선 붕괴에 중단기물 하락",
+     "link": "http://www.kjdaily.com/article.php?aid=1794929615692614276",
+     "host": "kjdaily.com",
+     "at": "2026-11-17T15:36:00.000Z"
     },
     {
-     "title": "골드만삭스 \"미 증시 등락 속 완만한 상승\" 전망…엔비디아 실적 앞두고",
-     "link": "https://www.tokenpost.kr/news/market/439868",
-     "host": "tokenpost.kr",
-     "at": "2026-11-17T14:58:00.000Z"
+     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-17T08:04:00.000Z"
     },
     {
-     "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...엔비디아 실적 앞두고 반도체주 반...",
-     "link": "https://www.newspim.com/news/view/20261117001387",
-     "host": "newspim.com",
-     "at": "2026-11-17T14:25:00.000Z"
+     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-17T07:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
-    ]
-   }
-  },
-  {
-   "id": "mew0va",
-   "title": "러 \"우크라 나토 가입 수용 안할 것\"…美제안 사실상 거부",
-   "firstSeen": "2026-11-17T10:16:00.000Z",
-   "lastSeen": "2026-11-17T15:49:00.000Z",
-   "count": 9,
-   "sources": 8,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "러 \"우크라 나토 가입 수용 안 할 것\" 미 제안 사실상 거부",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261118004901cSV",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-17T15:49:00.000Z"
-    },
-    {
-     "title": "러 \"우크라 나토 가입 수용 안할 것\"…美제안 사실상 거부(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261117164851109?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T14:58:00.000Z"
-    },
-    {
-     "title": "러 “우크라 나토 가입 수용하지 않을 것”…美는 돈바스 철수 타진",
-     "link": "https://www.joongang.co.kr/article/25479523",
-     "host": "joongang.co.kr",
-     "at": "2026-11-17T12:08:00.000Z"
-    },
-    {
-     "title": "러시아 \"우크라이나 나토 가입 수용 안 할 것\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611172055001479",
-     "host": "ytn.co.kr",
-     "at": "2026-11-17T11:55:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 19,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 8.25,
-     "unit": "%",
-     "z": 0.7
-    },
-    "why": [
-     "VIX 변동성 +8.25%"
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -676,18 +676,73 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 19,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
+    ]
+   }
+  },
+  {
+   "id": "mew0va",
+   "title": "러 \"우크라 나토 가입 수용 안할 것\"…美제안 사실상 거부",
+   "firstSeen": "2026-11-17T10:16:00.000Z",
+   "lastSeen": "2026-11-17T15:49:00.000Z",
+   "count": 9,
+   "sources": 8,
+   "topics": [
+    "war"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "러 \"우크라 나토 가입 수용 안 할 것\" 미 제안 사실상 거부",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261118004901cSV",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-17T15:49:00.000Z"
+    },
+    {
+     "title": "러 \"우크라 나토 가입 수용 안할 것\"…美제안 사실상 거부(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261117164851109?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-17T14:58:00.000Z"
+    },
+    {
+     "title": "러 “우크라 나토 가입 수용하지 않을 것”…美는 돈바스 철수 타진",
+     "link": "https://www.joongang.co.kr/article/25479523",
+     "host": "joongang.co.kr",
+     "at": "2026-11-17T12:08:00.000Z"
+    },
+    {
+     "title": "러시아 \"우크라이나 나토 가입 수용 안 할 것\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611172055001479",
+     "host": "ytn.co.kr",
+     "at": "2026-11-17T11:55:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 14.49,
+     "unit": "%",
+     "z": 1.2
+    },
+    "why": [
+     "VIX 변동성 +14.49%"
     ]
    }
   },
@@ -726,18 +781,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
+    "score": 22,
     "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -775,18 +830,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
+    "score": 22,
     "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -825,73 +880,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
+    "score": 22,
     "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
-    ]
-   }
-  },
-  {
-   "id": "1syy9ir",
-   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-   "firstSeen": "2026-11-17T01:41:00.000Z",
-   "lastSeen": "2026-11-17T15:36:00.000Z",
-   "count": 5,
-   "sources": 4,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국고채 금리 혼조 마감…코스피 5,000선 붕괴에 중단기물 하락",
-     "link": "http://www.kjdaily.com/article.php?aid=1794929615692614276",
-     "host": "kjdaily.com",
-     "at": "2026-11-17T15:36:00.000Z"
-    },
-    {
-     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-17T08:04:00.000Z"
-    },
-    {
-     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-17T07:42:00.000Z"
-    },
-    {
-     "title": "젠슨황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261117065451008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T07:33:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 16,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.13,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   },
@@ -925,18 +925,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 19,
     "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.13,
+     "change": -1.4,
      "unit": "%",
-     "z": -1.2
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.13%"
+     "S&P 500 -1.4%"
     ]
    }
   }
