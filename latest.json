@@ -1,7 +1,7 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T23:27:52.265Z",
- "mode": "watch",
+ "updatedAt": "2026-11-17T23:31:49.224Z",
+ "mode": "briefing",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
   {
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.83000183105469,
-   "change": 0.13,
+   "last": 85.80999755859375,
+   "change": 0.1,
    "z": 0,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3856.199951171875,
-   "change": 0.08,
+   "last": 3855.60009765625,
+   "change": 0.07,
    "z": 0.1,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
@@ -123,7 +123,7 @@
  "spikes": {
   "war": 3.1,
   "politics": 0.9,
-  "rates": 1.6,
+  "rates": 1.7,
   "trade": 0.5,
   "fx": 0.3,
   "energy": 1.5,
@@ -139,12 +139,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 2.2,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 4.4,
+   "rate": 4.6,
    "saturated": 1,
    "queries": 3
   },
@@ -187,16 +187,15 @@
  "issues": [
   {
    "id": "3vxrfz",
-   "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러",
+   "title": "[국제유가] 호르무즈 긴장 고조에 반등",
    "firstSeen": "2026-11-17T21:18:00.000Z",
    "lastSeen": "2026-11-17T23:16:00.000Z",
-   "count": 9,
-   "sources": 8,
+   "count": 7,
+   "sources": 6,
    "topics": [
     "war",
     "fx",
-    "energy",
-    "market"
+    "energy"
    ],
    "critical": [
     "energy"
@@ -209,12 +208,6 @@
      "at": "2026-11-17T23:16:00.000Z"
     },
     {
-     "title": "美 증시, 엔비디아 불안에 3대 지수 급락···중동 충돌에 유가 상승",
-     "link": "https://www.smartbizn.com/news/articleView.html?idxno=159778",
-     "host": "smartbizn.com",
-     "at": "2026-11-17T23:06:00.000Z"
-    },
-    {
      "title": "\"중동 긴장 고조, 유가 상승세 지속…미국-이란 갈등의 영향은?\"",
      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886142",
      "host": "gokorea.kr",
@@ -225,35 +218,41 @@
      "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887543",
      "host": "getnews.co.kr",
      "at": "2026-11-17T22:10:00.000Z"
+    },
+    {
+     "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러대 ,0.76% 상승",
+     "link": "https://www.fnnews.com/news/202611180632512282",
+     "host": "fnnews.com",
+     "at": "2026-11-17T21:37:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 70,
+    "score": 67,
     "spike": 3.1,
     "news": true,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 11.13,
      "unit": "%",
-     "z": -1.1
+     "z": 0.9
     },
     "why": [
      "핵심 단어",
      "기사 급증(평소 대비 3.1σ)",
-     "S&P 500 -1.03%"
+     "VIX 변동성 +11.13%"
     ]
    }
   },
   {
-   "id": "8ho8ti",
-   "title": "뉴욕 연은 총재, ‘빅스텝’ 반대 시사…“극적 조치 필요없어”",
-   "firstSeen": "2026-11-17T22:08:00.000Z",
+   "id": "vc3zd1",
+   "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
+   "firstSeen": "2026-11-17T22:10:00.000Z",
    "lastSeen": "2026-11-17T23:22:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "rates"
    ],
@@ -268,15 +267,15 @@
      "at": "2026-11-17T23:22:00.000Z"
     },
     {
-     "title": "미국 12월 '빅스텝 공포' 달랜 뉴욕연은 총재…\"극적인 조치 불필요\"",
-     "link": "https://www.mt.co.kr/world/2026/11/18/2026111807475137491",
-     "host": "mt.co.kr",
-     "at": "2026-11-17T22:52:00.000Z"
-    },
-    {
      "title": "뉴욕 연은 총재 \"극적인 조치 불필요\"…12월 빅스텝 반대 시사",
      "link": "https://view.asiae.co.kr/article/2026111807525587929",
      "host": "view.asiae.co.kr",
+     "at": "2026-11-17T22:52:00.000Z"
+    },
+    {
+     "title": "미국 12월 '빅스텝 공포' 달랜 뉴욕연은 총재…\"극적인 조치 불필요\"",
+     "link": "https://www.mt.co.kr/world/2026/11/18/2026111807475137491",
+     "host": "mt.co.kr",
      "at": "2026-11-17T22:52:00.000Z"
     },
     {
@@ -290,7 +289,7 @@
     "level": "caution",
     "label": "주의",
     "score": 55,
-    "spike": 1.6,
+    "spike": 1.7,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -342,8 +341,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 48,
-    "spike": 1.6,
+    "score": 49,
+    "spike": 1.7,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -355,6 +354,98 @@
     "why": [
      "핵심 단어",
      "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "bttz0s",
+   "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+   "firstSeen": "2026-11-17T22:13:00.000Z",
+   "lastSeen": "2026-11-17T22:14:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "뉴욕 연은 총재 “큰 폭으로 금리 올릴 상황 아니다”…12월 ‘빅스텝’...",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/18/HOVGQOSJPRC5VEZLNZNKH3F6LU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-17T22:14:00.000Z"
+    },
+    {
+     "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+     "link": "https://biz.heraldcorp.com/article/10940508?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-17T22:13:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 46,
+    "spike": 1.7,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "7x4vqg",
+   "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+   "firstSeen": "2026-11-17T22:13:00.000Z",
+   "lastSeen": "2026-11-17T23:28:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
+     "link": "https://www.etoday.co.kr/news/view/2649533",
+     "host": "etoday.co.kr",
+     "at": "2026-11-17T23:28:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=67950",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-17T22:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 43,
+    "spike": 1.5,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 0.07,
+     "unit": "%",
+     "z": 0.1
+    },
+    "why": [
+     "핵심 단어",
+     "금 +0.07%"
     ]
    }
   },
@@ -417,86 +508,6 @@
    }
   },
   {
-   "id": "vc3zd1",
-   "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
-   "firstSeen": "2026-11-17T22:10:00.000Z",
-   "lastSeen": "2026-11-17T22:10:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886138",
-     "host": "gokorea.kr",
-     "at": "2026-11-17T22:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 42,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "bttz0s",
-   "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
-   "firstSeen": "2026-11-17T22:13:00.000Z",
-   "lastSeen": "2026-11-17T22:13:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
-     "link": "https://biz.heraldcorp.com/article/10940508?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-17T22:13:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 42,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
    "id": "1s0yoqn",
    "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
    "firstSeen": "2026-11-17T22:48:00.000Z",
@@ -526,13 +537,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 0.08,
+     "change": 0.07,
      "unit": "%",
      "z": 0.1
     },
     "why": [
      "핵심 단어",
-     "금 +0.08%"
+     "금 +0.07%"
     ]
    }
   },
@@ -639,6 +650,57 @@
    }
   },
   {
+   "id": "kmn8z",
+   "title": "국제유가 혼조…중동 원유 수출 회복에 공급 과잉 우려",
+   "firstSeen": "2026-11-17T20:13:00.000Z",
+   "lastSeen": "2026-11-17T23:30:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[국제유가] 유조선 피격에 상승…공급 과잉 우려 여전",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-17T23:30:00.000Z"
+    },
+    {
+     "title": "美·이란 무력 충돌에 국제유가 상승...공급 과잉 전망에 상승폭 제한",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=564682",
+     "host": "joongangenews.com",
+     "at": "2026-11-17T23:24:00.000Z"
+    },
+    {
+     "title": "국제유가 혼조…중동 원유 수출 회복에 공급 과잉 우려",
+     "link": "https://www.news1.kr/world/usa-canada/6357379",
+     "host": "news1.kr",
+     "at": "2026-11-17T20:13:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 34,
+    "spike": 3.1,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 11.13,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "기사 급증(평소 대비 3.1σ)",
+     "VIX 변동성 +11.13%"
+    ]
+   }
+  },
+  {
    "id": "zw3j7j",
    "title": "골드만삭스 \"미 증시 등락 속 완만한 상승\" 전망…엔비디아 실적 앞두고",
    "firstSeen": "2026-11-16T23:31:00.000Z",
@@ -680,8 +742,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 32,
-    "spike": 1.6,
+    "score": 33,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -692,51 +754,6 @@
     },
     "why": [
      "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "kmn8z",
-   "title": "국제유가 혼조…중동 원유 수출 회복에 공급 과잉 우려",
-   "firstSeen": "2026-11-17T20:13:00.000Z",
-   "lastSeen": "2026-11-17T23:24:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美·이란 무력 충돌에 국제유가 상승...공급 과잉 전망에 상승폭 제한",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=564682",
-     "host": "joongangenews.com",
-     "at": "2026-11-17T23:24:00.000Z"
-    },
-    {
-     "title": "국제유가 혼조…중동 원유 수출 회복에 공급 과잉 우려",
-     "link": "https://www.news1.kr/world/usa-canada/6357379",
-     "host": "news1.kr",
-     "at": "2026-11-17T20:13:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 3.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 11.13,
-     "unit": "%",
-     "z": 0.9
-    },
-    "why": [
-     "기사 급증(평소 대비 3.1σ)",
-     "VIX 변동성 +11.13%"
     ]
    }
   },
@@ -790,8 +807,8 @@
    "title": "뉴욕증시, 3대 지수 동반 하락 마감… 공포지수 11.6% 급등·S&P500 7월 이...",
    "firstSeen": "2026-11-17T21:25:00.000Z",
    "lastSeen": "2026-11-17T23:26:00.000Z",
-   "count": 11,
-   "sources": 11,
+   "count": 10,
+   "sources": 10,
    "topics": [
     "market"
    ],
@@ -827,6 +844,62 @@
     "label": "관찰",
     "score": 30,
     "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "y8b3be",
+   "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저(종합)",
+   "firstSeen": "2026-11-17T21:25:00.000Z",
+   "lastSeen": "2026-11-17T23:30:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "AI 불확실성에 전산 장애까지... S&P500 7월 이후 최저 [뉴욕증시]",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2019878",
+     "host": "m-i.kr",
+     "at": "2026-11-17T23:30:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 투자 불안에 4거래일째 하락…S&P500 7월 이후 최저 [투자...",
+     "link": "https://biz.heraldcorp.com/article/10940559?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-17T23:09:00.000Z"
+    },
+    {
+     "title": "AI 투자 불안에 뉴욕증시 나흘째 하락 … S&P500 7월 이후 최저",
+     "link": "https://www.newdaily.co.kr/site/data/html/2026/11/18/2026111850025.html",
+     "host": "newdaily.co.kr",
+     "at": "2026-11-17T23:02:00.000Z"
+    },
+    {
+     "title": "[오늘의 글로벌마켓] 뉴욕증시, 엔비디아 실적 앞둔 경계감 속 하락세",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147195",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-17T22:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -878,50 +951,57 @@
      "S&P 500 -1.03%"
     ]
    }
-  },
-  {
-   "id": "12howcm",
-   "title": "애프터 블루웨이브…K산업 손익계산서 [스페셜리포트]",
-   "firstSeen": "2026-11-17T12:01:00.000Z",
-   "lastSeen": "2026-11-17T12:01:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "trade",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "애프터 블루웨이브…K산업 손익계산서 [스페셜리포트]",
-     "link": "https://www.mk.co.kr/article/12207812",
-     "host": "mk.co.kr",
-     "at": "2026-11-17T12:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 3.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "기사 급증(평소 대비 3.1σ)",
-     "S&P 500 -1.03%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-17T23:31:49.224Z",
+   "id": "kmn8z",
+   "level": "caution",
+   "title": "국제유가 혼조…중동 원유 수출 회복에 공급 과잉 우려",
+   "why": [
+    "기사 급증(평소 대비 3.1σ)",
+    "VIX 변동성 +11.13%"
+   ],
+   "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-17T23:31:49.224Z",
+   "id": "vc3zd1",
+   "level": "caution",
+   "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://www.ajunews.com/view/20261118080934814",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-17T23:31:49.224Z",
+   "id": "bttz0s",
+   "level": "caution",
+   "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://www.chosun.com/economy/int_economy/2026/11/18/HOVGQOSJPRC5VEZLNZNKH3F6LU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-17T23:31:49.224Z",
+   "id": "7x4vqg",
+   "level": "caution",
+   "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+   "why": [
+    "핵심 단어",
+    "금 +0.07%"
+   ],
+   "link": "https://www.etoday.co.kr/news/view/2649533",
+   "delivered": false
+  },
   {
    "at": "2026-11-17T23:27:52.265Z",
    "id": "w1bb7g",
@@ -1114,74 +1194,26 @@
    ],
    "link": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611170020&t=NNv",
    "delivered": false
-  },
-  {
-   "at": "2026-11-17T08:18:31.299Z",
-   "id": "w1bb7g",
-   "level": "caution",
-   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.92%(평소의 2.1배)"
-   ],
-   "link": "https://www.ekoreanews.co.kr/news/articleView.html?idxno=89255",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T07:05:34.315Z",
-   "id": "w1bb7g",
-   "level": "caution",
-   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.92%(평소의 2.1배)"
-   ],
-   "link": "https://www.naeil.com/news/read/609056?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T06:48:48.601Z",
-   "id": "w1bb7g",
-   "level": "caution",
-   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.92%(평소의 2.1배)"
-   ],
-   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715006&ref=A",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T05:47:42.915Z",
-   "id": "w1bb7g",
-   "level": "urgent",
-   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.92%(평소의 2.1배)"
-   ],
-   "link": "https://www.naeil.com/news/read/609056?ref=naver",
-   "delivered": false
   }
  ],
  "briefing": {
-  "id": "2026-11-17-us",
+  "id": "2026-11-18-pre",
   "version": "I1-2026-11-06",
-  "slot": "us",
-  "title": "미국 장 브리핑",
-  "at": "2026-11-17T13:07:13.664Z",
-  "headline": "S&P 500 -1.92%(11.16 기준), 나스닥 -2.49%(11.16 기준), 원/달러 +0.22% · 주요 이슈: 금리·통화, 증시 급변, 신용·금융위기",
+  "slot": "pre",
+  "title": "장 전 브리핑",
+  "at": "2026-11-17T23:31:49.224Z",
+  "headline": "S&P 500 -1.03%(11.17 기준), 나스닥 -0.74%(11.17 기준), 원/달러 +0.15%(11.17 기준) · 주요 이슈: 전쟁·지정학, 환율·달러, 유가·원자재",
   "markets": [
    {
     "symbol": "^GSPC",
     "label": "S&P 500",
     "unit": "%",
     "available": true,
-    "date": "2026-11-16",
-    "last": 7416.58984375,
-    "change": -1.92,
-    "z": -2.1,
-    "sd": 0.9309920057332112,
+    "date": "2026-11-17",
+    "last": 7340.52978515625,
+    "change": -1.03,
+    "z": -1.1,
+    "sd": 0.9608979579017324,
     "source": "Yahoo",
     "checked": true
    },
@@ -1190,11 +1222,11 @@
     "label": "나스닥",
     "unit": "%",
     "available": true,
-    "date": "2026-11-16",
-    "last": 24509.759765625,
-    "change": -2.49,
-    "z": -1.9,
-    "sd": 1.3165292824773231,
+    "date": "2026-11-17",
+    "last": 24328.3828125,
+    "change": -0.74,
+    "z": -0.5,
+    "sd": 1.3519484657118128,
     "source": "Yahoo",
     "checked": true
    },
@@ -1204,9 +1236,9 @@
     "unit": "%",
     "available": true,
     "date": "2026-11-17",
-    "last": 1336.219970703125,
-    "change": 0.22,
-    "z": 0.4,
+    "last": 1335.25,
+    "change": 0.15,
+    "z": 0.2,
     "sd": 0.6309606838243439,
     "source": "Yahoo"
    },
@@ -1216,9 +1248,9 @@
     "unit": "%",
     "available": true,
     "date": "2026-11-17",
-    "last": 86.33999633789062,
-    "change": 0.72,
-    "z": 0.2,
+    "last": 85.80999755859375,
+    "change": 0.1,
+    "z": 0,
     "sd": 2.9057921059628393,
     "source": "Yahoo"
    },
@@ -1228,9 +1260,9 @@
     "unit": "%",
     "available": true,
     "date": "2026-11-17",
-    "last": 22.690000534057617,
-    "change": -0.96,
-    "z": -0.1,
+    "last": 25.459999084472656,
+    "change": 11.13,
+    "z": 0.9,
     "sd": 11.968928417352235,
     "source": "Yahoo",
     "checked": true
@@ -1240,28 +1272,145 @@
     "label": "미 10년 금리",
     "unit": "bp",
     "available": true,
-    "date": "2026-11-16",
-    "last": 5.120999813079834,
-    "change": -3.3,
-    "z": -0.6,
-    "sd": 5.441270699469513,
+    "date": "2026-11-17",
+    "last": 5.102999687194824,
+    "change": -1.8,
+    "z": -0.3,
+    "sd": 5.447127683076426,
     "source": "Yahoo"
    }
   ],
-  "unusual": [
-   "S&P 500 -1.92% — 평소 하루 움직임의 2.1배"
-  ],
+  "unusual": [],
   "issues": [
    {
+    "id": "3vxrfz",
+    "title": "[국제유가] 호르무즈 긴장 고조에 반등",
+    "firstSeen": "2026-11-17T21:18:00.000Z",
+    "lastSeen": "2026-11-17T23:16:00.000Z",
+    "count": 7,
+    "sources": 6,
+    "topics": [
+     "war",
+     "fx",
+     "energy"
+    ],
+    "critical": [
+     "energy"
+    ],
+    "links": [
+     {
+      "title": "국제유가, 미·이란 무력 충돌에 소폭 상승⋯브렌트유 93달러대",
+      "link": "https://www.viva100.com/article/20261118500087",
+      "host": "viva100.com",
+      "at": "2026-11-17T23:16:00.000Z"
+     },
+     {
+      "title": "\"중동 긴장 고조, 유가 상승세 지속…미국-이란 갈등의 영향은?\"",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886142",
+      "host": "gokorea.kr",
+      "at": "2026-11-17T22:12:00.000Z"
+     },
+     {
+      "title": "국제유가, 중동 리스크 고조에 소폭 상승…브렌트유 93달러대",
+      "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887543",
+      "host": "getnews.co.kr",
+      "at": "2026-11-17T22:10:00.000Z"
+     },
+     {
+      "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러대 ,0.76% 상승",
+      "link": "https://www.fnnews.com/news/202611180632512282",
+      "host": "fnnews.com",
+      "at": "2026-11-17T21:37:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 67,
+     "spike": 3.1,
+     "news": true,
+     "reaction": {
+      "symbol": "^VIX",
+      "label": "VIX 변동성",
+      "change": 11.13,
+      "unit": "%",
+      "z": 0.9
+     },
+     "why": [
+      "핵심 단어",
+      "기사 급증(평소 대비 3.1σ)",
+      "VIX 변동성 +11.13%"
+     ]
+    }
+   },
+   {
+    "id": "vc3zd1",
+    "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
+    "firstSeen": "2026-11-17T22:10:00.000Z",
+    "lastSeen": "2026-11-17T23:22:00.000Z",
+    "count": 5,
+    "sources": 5,
+    "topics": [
+     "rates"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "美 뉴욕 연은 총재, 12월 '빅스텝'에 선 그어…\"극적인 조치 불필요\"",
+      "link": "https://www.ajunews.com/view/20261118080934814",
+      "host": "ajunews.com",
+      "at": "2026-11-17T23:22:00.000Z"
+     },
+     {
+      "title": "뉴욕 연은 총재 \"극적인 조치 불필요\"…12월 빅스텝 반대 시사",
+      "link": "https://view.asiae.co.kr/article/2026111807525587929",
+      "host": "view.asiae.co.kr",
+      "at": "2026-11-17T22:52:00.000Z"
+     },
+     {
+      "title": "미국 12월 '빅스텝 공포' 달랜 뉴욕연은 총재…\"극적인 조치 불필요\"",
+      "link": "https://www.mt.co.kr/world/2026/11/18/2026111807475137491",
+      "host": "mt.co.kr",
+      "at": "2026-11-17T22:52:00.000Z"
+     },
+     {
+      "title": "뉴욕연은 총재 ‘빅스텝’ 반대 시사...12월 0.25%P 인상 확률 97%",
+      "link": "https://www.sedaily.com/article/20115689?ref=naver",
+      "host": "sedaily.com",
+      "at": "2026-11-17T22:33:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 55,
+     "spike": 1.7,
+     "news": true,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -1.03,
+      "unit": "%",
+      "z": -1.1
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 -1.03%"
+     ]
+    },
+    "delivered": false
+   },
+   {
     "id": "w1bb7g",
-    "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
+    "title": "연준 이사 “AI가 뱅크런 부를 수도”",
     "firstSeen": "2026-11-16T18:02:00.000Z",
-    "lastSeen": "2026-11-17T09:31:00.000Z",
-    "count": 4,
-    "sources": 4,
+    "lastSeen": "2026-11-17T22:14:00.000Z",
+    "count": 3,
+    "sources": 3,
     "topics": [
      "rates",
-     "market",
      "credit"
     ],
     "critical": [
@@ -1269,10 +1418,10 @@
     ],
     "links": [
      {
-      "title": "연준 의장, “AI 투자 실패 시 경기침체·주가 급락” 경고",
-      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715129&ref=A",
-      "host": "news.kbs.co.kr",
-      "at": "2026-11-17T09:31:00.000Z"
+      "title": "월러 연준 이사 \"토큰화금융도 중앙은행 결제망이 중요 역할해야\"",
+      "link": "https://www.edaily.co.kr/News/Read?newsId=01705606645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "host": "edaily.co.kr",
+      "at": "2026-11-17T22:14:00.000Z"
      },
      {
       "title": "미 연준, AI가 바꿀 경제 대비한다…의장·이사 잇달아 영향 점검",
@@ -1285,301 +1434,310 @@
       "link": "https://www.naeil.com/news/read/609056?ref=naver",
       "host": "naeil.com",
       "at": "2026-11-17T04:02:00.000Z"
-     },
-     {
-      "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-      "link": "https://www.g-enews.com/view.php?ud=2026111620180311479a1f309431_1",
-      "host": "g-enews.com",
-      "at": "2026-11-16T18:02:00.000Z"
      }
     ],
     "assess": {
      "level": "caution",
      "label": "주의",
-     "score": 54,
-     "spike": 0,
+     "score": 49,
+     "spike": 1.7,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
       "label": "S&P 500",
-      "change": -1.92,
+      "change": -1.03,
       "unit": "%",
-      "z": -2.1
+      "z": -1.1
      },
      "why": [
       "핵심 단어",
-      "S&P 500 -1.92%(평소의 2.1배)"
+      "S&P 500 -1.03%"
      ]
     }
    },
    {
-    "id": "68v4kk",
-    "title": "IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…통화·재정 '긴축' 주문",
-    "firstSeen": "2026-11-17T05:53:00.000Z",
-    "lastSeen": "2026-11-17T08:45:00.000Z",
-    "count": 7,
-    "sources": 7,
+    "id": "bttz0s",
+    "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+    "firstSeen": "2026-11-17T22:13:00.000Z",
+    "lastSeen": "2026-11-17T22:14:00.000Z",
+    "count": 2,
+    "sources": 2,
     "topics": [
      "rates"
     ],
-    "critical": [],
+    "critical": [
+     "rates"
+    ],
     "links": [
      {
-      "title": "AI 호황에 달아오른 韓 경제…IMF, 통화·재정 '동시 브레이크' 주문",
-      "link": "https://www.news1.kr/economy/trend/6357005",
-      "host": "news1.kr",
-      "at": "2026-11-17T08:45:00.000Z"
+      "title": "뉴욕 연은 총재 “큰 폭으로 금리 올릴 상황 아니다”…12월 ‘빅스텝’...",
+      "link": "https://www.chosun.com/economy/int_economy/2026/11/18/HOVGQOSJPRC5VEZLNZNKH3F6LU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "host": "chosun.com",
+      "at": "2026-11-17T22:14:00.000Z"
      },
      {
-      "title": "IMF, 한국 올해 성장률 3.9% 전망…가계엔 아직 먼 호황",
-      "link": "http://www.newskr.kr/news/articleView.html?idxno=108077",
-      "host": "newskr.kr",
-      "at": "2026-11-17T07:34:00.000Z"
-     },
-     {
-      "title": "[종합] IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…미래대응기금 환영 속...",
-      "link": "https://www.newspim.com/news/view/20261117001075",
-      "host": "newspim.com",
-      "at": "2026-11-17T07:00:00.000Z"
-     },
-     {
-      "title": "IMF, 韓 성장률 3.3%→3.9% 전망…물가 불안에 통화·재정 '긴축' 주문",
-      "link": "https://www.edaily.co.kr/News/Read?newsId=04323046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-      "host": "edaily.co.kr",
-      "at": "2026-11-17T06:51:00.000Z"
+      "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+      "link": "https://biz.heraldcorp.com/article/10940508?ref=naver",
+      "host": "biz.heraldcorp.com",
+      "at": "2026-11-17T22:13:00.000Z"
      }
     ],
     "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 34,
-     "spike": 0,
-     "news": false,
+     "level": "caution",
+     "label": "주의",
+     "score": 46,
+     "spike": 1.7,
+     "news": true,
      "reaction": {
       "symbol": "^GSPC",
       "label": "S&P 500",
-      "change": -1.92,
+      "change": -1.03,
       "unit": "%",
-      "z": -2.1
+      "z": -1.1
      },
      "why": [
-      "S&P 500 -1.92%(평소의 2.1배)"
+      "핵심 단어",
+      "S&P 500 -1.03%"
      ]
-    }
+    },
+    "delivered": false
    },
    {
-    "id": "jmhpc4",
-    "title": "트럼프 \"희토류 열달 내 中 따라잡을 것…이란전 해결 가까워져\"",
-    "firstSeen": "2026-11-17T12:26:00.000Z",
-    "lastSeen": "2026-11-17T12:53:00.000Z",
+    "id": "7x4vqg",
+    "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+    "firstSeen": "2026-11-17T22:13:00.000Z",
+    "lastSeen": "2026-11-17T23:28:00.000Z",
+    "count": 2,
+    "sources": 2,
+    "topics": [
+     "energy"
+    ],
+    "critical": [
+     "energy"
+    ],
+    "links": [
+     {
+      "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
+      "link": "https://www.etoday.co.kr/news/view/2649533",
+      "host": "etoday.co.kr",
+      "at": "2026-11-17T23:28:00.000Z"
+     },
+     {
+      "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+      "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=67950",
+      "host": "newsroad.co.kr",
+      "at": "2026-11-17T22:32:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 43,
+     "spike": 1.5,
+     "news": true,
+     "reaction": {
+      "symbol": "GC=F",
+      "label": "금",
+      "change": 0.07,
+      "unit": "%",
+      "z": 0.1
+     },
+     "why": [
+      "핵심 단어",
+      "금 +0.07%"
+     ]
+    },
+    "delivered": false
+   },
+   {
+    "id": "22mx65",
+    "title": "中선전 APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담 주목",
+    "firstSeen": "2026-11-17T21:10:00.000Z",
+    "lastSeen": "2026-11-17T23:00:00.000Z",
     "count": 6,
     "sources": 6,
     "topics": [
      "war",
-     "politics"
+     "politics",
+     "trade"
     ],
     "critical": [],
     "links": [
      {
-      "title": "트럼프 “10개월 안 희토류 생산 중국 따라잡을 것”…미·중 회담 앞두...",
-      "link": "https://www.khan.co.kr/article/202611172153001",
-      "host": "khan.co.kr",
-      "at": "2026-11-17T12:53:00.000Z"
+      "title": "APEC 정상회의 오늘 중국 선전서 개막...사상 첫 미중러 3자회담 주목",
+      "link": "https://www.m-economynews.com/news/article.html?no=73196",
+      "host": "m-economynews.com",
+      "at": "2026-11-17T23:00:00.000Z"
      },
      {
-      "title": "트럼프 “10개월 내 희토류 생산 중국 따라잡아…이란전 해결 가까워져...",
-      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715432&ref=A",
-      "host": "news.kbs.co.kr",
-      "at": "2026-11-17T12:45:00.000Z"
-     },
-     {
-      "title": "트럼프 “中희토류 10개월 안에 따라잡을 것…이란전 해결 가까워져”[...",
-      "link": "https://biz.heraldcorp.com/article/10940395?ref=naver",
+      "title": "中선전 APEC 오늘 개막…미중러 사상 첫 3자회담에 세계 이목",
+      "link": "https://biz.heraldcorp.com/article/10940531?ref=naver",
       "host": "biz.heraldcorp.com",
-      "at": "2026-11-17T12:39:00.000Z"
+      "at": "2026-11-17T22:36:00.000Z"
      },
      {
-      "title": "트럼프 \"美 희토류 생산, 10개월 안에 중국 따라잡을 것\"",
-      "link": "https://www.ajunews.com/view/20261117213221582",
-      "host": "ajunews.com",
-      "at": "2026-11-17T12:36:00.000Z"
+      "title": "'APEC' 오늘 선전서 개막…미중러 첫 3자회담·북미 접촉 주목",
+      "link": "https://www.slist.kr/news/articleView.html?idxno=782607",
+      "host": "slist.kr",
+      "at": "2026-11-17T22:14:00.000Z"
+     },
+     {
+      "title": "APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담",
+      "link": "https://biz.sbs.co.kr/article_hub/20000347181?division=NAVER",
+      "host": "biz.sbs.co.kr",
+      "at": "2026-11-17T22:11:00.000Z"
      }
     ],
     "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 33,
-     "spike": 0,
-     "news": false,
+     "level": "caution",
+     "label": "주의",
+     "score": 42,
+     "spike": 3.1,
+     "news": true,
      "reaction": {
       "symbol": "^GSPC",
       "label": "S&P 500",
-      "change": -1.92,
+      "change": -1.03,
       "unit": "%",
-      "z": -2.1
+      "z": -1.1
      },
      "why": [
-      "S&P 500 -1.92%(평소의 2.1배)"
-     ]
-    }
-   },
-   {
-    "id": "1u56dka",
-    "title": "“미군 F-15 전투기 격추했다” 공습 영상 7개월 만에 공개한 이란…워...",
-    "firstSeen": "2026-11-17T07:03:00.000Z",
-    "lastSeen": "2026-11-17T07:03:00.000Z",
-    "count": 1,
-    "sources": 1,
-    "topics": [
-     "war"
-    ],
-    "critical": [
-     "war"
-    ],
-    "links": [
-     {
-      "title": "“미군 F-15 전투기 격추했다” 공습 영상 7개월 만에 공개한 이란…워...",
-      "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560376",
-      "host": "ichannela.com",
-      "at": "2026-11-17T07:03:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 28,
-     "spike": 0,
-     "news": false,
-     "reaction": {
-      "symbol": "KRW=X",
-      "label": "원/달러",
-      "change": 0.22,
-      "unit": "%",
-      "z": 0.4
-     },
-     "why": [
-      "핵심 단어",
-      "원/달러 +0.22%"
-     ]
-    }
-   },
-   {
-    "id": "1syy9ir",
-    "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-    "firstSeen": "2026-11-17T01:41:00.000Z",
-    "lastSeen": "2026-11-17T08:04:00.000Z",
-    "count": 4,
-    "sources": 3,
-    "topics": [
-     "rates"
-    ],
-    "critical": [],
-    "links": [
-     {
-      "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
-      "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
-      "host": "fntoday.co.kr",
-      "at": "2026-11-17T08:04:00.000Z"
-     },
-     {
-      "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
-      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
-      "host": "news.sbs.co.kr",
-      "at": "2026-11-17T07:42:00.000Z"
-     },
-     {
-      "title": "젠슨황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20261117065451008?input=1195m",
-      "host": "yna.co.kr",
-      "at": "2026-11-17T07:33:00.000Z"
-     },
-     {
-      "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-      "link": "https://www.yna.co.kr/view/AKR20261117065400008?input=1195m",
-      "host": "yna.co.kr",
-      "at": "2026-11-17T01:41:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 27,
-     "spike": 0,
-     "news": false,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": -1.92,
-      "unit": "%",
-      "z": -2.1
-     },
-     "why": [
-      "S&P 500 -1.92%(평소의 2.1배)"
-     ]
-    }
-   },
-   {
-    "id": "1v31xij",
-    "title": "[37th SRE][Best Report]미국·이란 전쟁에 엇갈린 산업별 명암",
-    "firstSeen": "2026-11-17T03:02:00.000Z",
-    "lastSeen": "2026-11-17T05:58:00.000Z",
-    "count": 3,
-    "sources": 3,
-    "topics": [
-     "war",
-     "politics"
-    ],
-    "critical": [],
-    "links": [
-     {
-      "title": "밴스 美 부통령 \"이란 전쟁 장기전으로 끌고 가지 않을 것\"…트럼프 임...",
-      "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398552",
-      "host": "fntoday.co.kr",
-      "at": "2026-11-17T05:58:00.000Z"
-     },
-     {
-      "title": "이란 주변에 美 항공모함 3척 집결...전쟁 또 터지나?",
-      "link": "https://www.g-enews.com/view.php?ud=202611171406383307e250e8e188_1",
-      "host": "g-enews.com",
-      "at": "2026-11-17T05:12:00.000Z"
-     },
-     {
-      "title": "[37th SRE][Best Report]미국·이란 전쟁에 엇갈린 산업별 명암",
-      "link": "https://www.edaily.co.kr/News/Read?newsId=03552246645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-      "host": "edaily.co.kr",
-      "at": "2026-11-17T03:02:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "watch",
-     "label": "관찰",
-     "score": 26,
-     "spike": 0,
-     "news": false,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": -1.92,
-      "unit": "%",
-      "z": -2.1
-     },
-     "why": [
-      "S&P 500 -1.92%(평소의 2.1배)"
+      "기사 급증(평소 대비 3.1σ)",
+      "S&P 500 -1.03%"
      ]
     }
    }
   ],
   "alerts": [
    {
+    "id": "3vxrfz",
+    "title": "[국제유가] 호르무즈 긴장 고조에 반등",
+    "firstSeen": "2026-11-17T21:18:00.000Z",
+    "lastSeen": "2026-11-17T23:16:00.000Z",
+    "count": 7,
+    "sources": 6,
+    "topics": [
+     "war",
+     "fx",
+     "energy"
+    ],
+    "critical": [
+     "energy"
+    ],
+    "links": [
+     {
+      "title": "국제유가, 미·이란 무력 충돌에 소폭 상승⋯브렌트유 93달러대",
+      "link": "https://www.viva100.com/article/20261118500087",
+      "host": "viva100.com",
+      "at": "2026-11-17T23:16:00.000Z"
+     },
+     {
+      "title": "\"중동 긴장 고조, 유가 상승세 지속…미국-이란 갈등의 영향은?\"",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886142",
+      "host": "gokorea.kr",
+      "at": "2026-11-17T22:12:00.000Z"
+     },
+     {
+      "title": "국제유가, 중동 리스크 고조에 소폭 상승…브렌트유 93달러대",
+      "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887543",
+      "host": "getnews.co.kr",
+      "at": "2026-11-17T22:10:00.000Z"
+     },
+     {
+      "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러대 ,0.76% 상승",
+      "link": "https://www.fnnews.com/news/202611180632512282",
+      "host": "fnnews.com",
+      "at": "2026-11-17T21:37:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 67,
+     "spike": 3.1,
+     "news": true,
+     "reaction": {
+      "symbol": "^VIX",
+      "label": "VIX 변동성",
+      "change": 11.13,
+      "unit": "%",
+      "z": 0.9
+     },
+     "why": [
+      "핵심 단어",
+      "기사 급증(평소 대비 3.1σ)",
+      "VIX 변동성 +11.13%"
+     ]
+    }
+   },
+   {
+    "id": "vc3zd1",
+    "title": "존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로?",
+    "firstSeen": "2026-11-17T22:10:00.000Z",
+    "lastSeen": "2026-11-17T23:22:00.000Z",
+    "count": 5,
+    "sources": 5,
+    "topics": [
+     "rates"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "美 뉴욕 연은 총재, 12월 '빅스텝'에 선 그어…\"극적인 조치 불필요\"",
+      "link": "https://www.ajunews.com/view/20261118080934814",
+      "host": "ajunews.com",
+      "at": "2026-11-17T23:22:00.000Z"
+     },
+     {
+      "title": "뉴욕 연은 총재 \"극적인 조치 불필요\"…12월 빅스텝 반대 시사",
+      "link": "https://view.asiae.co.kr/article/2026111807525587929",
+      "host": "view.asiae.co.kr",
+      "at": "2026-11-17T22:52:00.000Z"
+     },
+     {
+      "title": "미국 12월 '빅스텝 공포' 달랜 뉴욕연은 총재…\"극적인 조치 불필요\"",
+      "link": "https://www.mt.co.kr/world/2026/11/18/2026111807475137491",
+      "host": "mt.co.kr",
+      "at": "2026-11-17T22:52:00.000Z"
+     },
+     {
+      "title": "뉴욕연은 총재 ‘빅스텝’ 반대 시사...12월 0.25%P 인상 확률 97%",
+      "link": "https://www.sedaily.com/article/20115689?ref=naver",
+      "host": "sedaily.com",
+      "at": "2026-11-17T22:33:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 55,
+     "spike": 1.7,
+     "news": true,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -1.03,
+      "unit": "%",
+      "z": -1.1
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 -1.03%"
+     ]
+    },
+    "delivered": false
+   },
+   {
     "id": "w1bb7g",
-    "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
+    "title": "연준 이사 “AI가 뱅크런 부를 수도”",
     "firstSeen": "2026-11-16T18:02:00.000Z",
-    "lastSeen": "2026-11-17T09:31:00.000Z",
-    "count": 4,
-    "sources": 4,
+    "lastSeen": "2026-11-17T22:14:00.000Z",
+    "count": 3,
+    "sources": 3,
     "topics": [
      "rates",
-     "market",
      "credit"
     ],
     "critical": [
@@ -1587,10 +1745,10 @@
     ],
     "links": [
      {
-      "title": "연준 의장, “AI 투자 실패 시 경기침체·주가 급락” 경고",
-      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715129&ref=A",
-      "host": "news.kbs.co.kr",
-      "at": "2026-11-17T09:31:00.000Z"
+      "title": "월러 연준 이사 \"토큰화금융도 중앙은행 결제망이 중요 역할해야\"",
+      "link": "https://www.edaily.co.kr/News/Read?newsId=01705606645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "host": "edaily.co.kr",
+      "at": "2026-11-17T22:14:00.000Z"
      },
      {
       "title": "미 연준, AI가 바꿀 경제 대비한다…의장·이사 잇달아 영향 점검",
@@ -1603,35 +1761,181 @@
       "link": "https://www.naeil.com/news/read/609056?ref=naver",
       "host": "naeil.com",
       "at": "2026-11-17T04:02:00.000Z"
-     },
-     {
-      "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-      "link": "https://www.g-enews.com/view.php?ud=2026111620180311479a1f309431_1",
-      "host": "g-enews.com",
-      "at": "2026-11-16T18:02:00.000Z"
      }
     ],
     "assess": {
      "level": "caution",
      "label": "주의",
-     "score": 54,
-     "spike": 0,
+     "score": 49,
+     "spike": 1.7,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
       "label": "S&P 500",
-      "change": -1.92,
+      "change": -1.03,
       "unit": "%",
-      "z": -2.1
+      "z": -1.1
      },
      "why": [
       "핵심 단어",
-      "S&P 500 -1.92%(평소의 2.1배)"
+      "S&P 500 -1.03%"
+     ]
+    }
+   },
+   {
+    "id": "bttz0s",
+    "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+    "firstSeen": "2026-11-17T22:13:00.000Z",
+    "lastSeen": "2026-11-17T22:14:00.000Z",
+    "count": 2,
+    "sources": 2,
+    "topics": [
+     "rates"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "뉴욕 연은 총재 “큰 폭으로 금리 올릴 상황 아니다”…12월 ‘빅스텝’...",
+      "link": "https://www.chosun.com/economy/int_economy/2026/11/18/HOVGQOSJPRC5VEZLNZNKH3F6LU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "host": "chosun.com",
+      "at": "2026-11-17T22:14:00.000Z"
+     },
+     {
+      "title": "뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다”",
+      "link": "https://biz.heraldcorp.com/article/10940508?ref=naver",
+      "host": "biz.heraldcorp.com",
+      "at": "2026-11-17T22:13:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 46,
+     "spike": 1.7,
+     "news": true,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -1.03,
+      "unit": "%",
+      "z": -1.1
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 -1.03%"
+     ]
+    },
+    "delivered": false
+   },
+   {
+    "id": "7x4vqg",
+    "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+    "firstSeen": "2026-11-17T22:13:00.000Z",
+    "lastSeen": "2026-11-17T23:28:00.000Z",
+    "count": 2,
+    "sources": 2,
+    "topics": [
+     "energy"
+    ],
+    "critical": [
+     "energy"
+    ],
+    "links": [
+     {
+      "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
+      "link": "https://www.etoday.co.kr/news/view/2649533",
+      "host": "etoday.co.kr",
+      "at": "2026-11-17T23:28:00.000Z"
+     },
+     {
+      "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+      "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=67950",
+      "host": "newsroad.co.kr",
+      "at": "2026-11-17T22:32:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 43,
+     "spike": 1.5,
+     "news": true,
+     "reaction": {
+      "symbol": "GC=F",
+      "label": "금",
+      "change": 0.07,
+      "unit": "%",
+      "z": 0.1
+     },
+     "why": [
+      "핵심 단어",
+      "금 +0.07%"
+     ]
+    },
+    "delivered": false
+   },
+   {
+    "id": "22mx65",
+    "title": "中선전 APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담 주목",
+    "firstSeen": "2026-11-17T21:10:00.000Z",
+    "lastSeen": "2026-11-17T23:00:00.000Z",
+    "count": 6,
+    "sources": 6,
+    "topics": [
+     "war",
+     "politics",
+     "trade"
+    ],
+    "critical": [],
+    "links": [
+     {
+      "title": "APEC 정상회의 오늘 중국 선전서 개막...사상 첫 미중러 3자회담 주목",
+      "link": "https://www.m-economynews.com/news/article.html?no=73196",
+      "host": "m-economynews.com",
+      "at": "2026-11-17T23:00:00.000Z"
+     },
+     {
+      "title": "中선전 APEC 오늘 개막…미중러 사상 첫 3자회담에 세계 이목",
+      "link": "https://biz.heraldcorp.com/article/10940531?ref=naver",
+      "host": "biz.heraldcorp.com",
+      "at": "2026-11-17T22:36:00.000Z"
+     },
+     {
+      "title": "'APEC' 오늘 선전서 개막…미중러 첫 3자회담·북미 접촉 주목",
+      "link": "https://www.slist.kr/news/articleView.html?idxno=782607",
+      "host": "slist.kr",
+      "at": "2026-11-17T22:14:00.000Z"
+     },
+     {
+      "title": "APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담",
+      "link": "https://biz.sbs.co.kr/article_hub/20000347181?division=NAVER",
+      "host": "biz.sbs.co.kr",
+      "at": "2026-11-17T22:11:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "caution",
+     "label": "주의",
+     "score": 42,
+     "spike": 3.1,
+     "news": true,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -1.03,
+      "unit": "%",
+      "z": -1.1
+     },
+     "why": [
+      "기사 급증(평소 대비 3.1σ)",
+      "S&P 500 -1.03%"
      ]
     }
    }
   ],
-  "text": "[미국 장 브리핑] 2026-11-17 22시\nS&P 500 -1.92%(11.16 기준), 나스닥 -2.49%(11.16 기준), 원/달러 +0.22% · 주요 이슈: 금리·통화, 증시 급변, 신용·금융위기\n· S&P 500 -1.92% — 평소 하루 움직임의 2.1배\n1. [주의] AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고 (4곳 보도)\n   https://news.kbs.co.kr/news/pc/view/view.do?ncd=8715129&ref=A\n2. IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…통화·재정 '긴축' 주문 (7곳 보도)\n   https://www.news1.kr/economy/trend/6357005\n3. 트럼프 \"희토류 열달 내 中 따라잡을 것…이란전 해결 가까워져\" (6곳 보도)\n   https://www.khan.co.kr/article/202611172153001\n4. “미군 F-15 전투기 격추했다” 공습 영상 7개월 만에 공개한 이란…워... (1곳 보도)\n   https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560376\n5. 젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피 (3곳 보도)\n   https://www.fntoday.co.kr/news/articleView.html?idxno=398756\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+  "text": "[장 전 브리핑] 2026-11-18 08시\nS&P 500 -1.03%(11.17 기준), 나스닥 -0.74%(11.17 기준), 원/달러 +0.15%(11.17 기준) · 주요 이슈: 전쟁·지정학, 환율·달러, 유가·원자재\n1. [주의] [국제유가] 호르무즈 긴장 고조에 반등 (6곳 보도)\n   https://www.viva100.com/article/20261118500087\n2. [주의] 존 윌리엄스의 '빅스텝' 금리 인상 반대, 연준 정책 방향은 어디로? (5곳 보도)\n   https://www.ajunews.com/view/20261118080934814\n3. [주의] 연준 이사 “AI가 뱅크런 부를 수도” (3곳 보도)\n   https://www.edaily.co.kr/News/Read?newsId=01705606645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article\n4. [주의] 뉴욕 연은총재, 12월 ‘빅스텝’ 신중론…“극적조치 필요없다” (2곳 보도)\n   https://www.chosun.com/economy/int_economy/2026/11/18/HOVGQOSJPRC5VEZLNZNKH3F6LU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news\n5. [주의] 뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락 (2곳 보도)\n   https://www.etoday.co.kr/news/view/2649533\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
   "delivered": false
  },
  "problems": []
