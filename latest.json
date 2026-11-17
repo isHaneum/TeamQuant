@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T09:47:55.481Z",
+ "updatedAt": "2026-11-17T10:14:26.738Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1336.4200439453125,
-   "change": 0.24,
+   "last": 1336.2900390625,
+   "change": 0.23,
    "z": 0.4,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.98999786376953,
-   "change": 0.31,
+   "last": 85.93000030517578,
+   "change": 0.24,
    "z": 0.1,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3866.300048828125,
-   "change": 0.35,
-   "z": 0.3,
+   "last": 3863.89990234375,
+   "change": 0.28,
+   "z": 0.2,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 24.170000076293945,
-   "change": 5.5,
-   "z": 0.5,
+   "last": 23.670000076293945,
+   "change": 3.32,
+   "z": 0.3,
    "sd": 11.968928417352235,
    "source": "Yahoo",
    "checked": true
@@ -120,11 +120,11 @@
  ],
  "spikes": {
   "war": -0.2,
-  "politics": -0.3,
-  "rates": 0.5,
-  "trade": 0.1,
+  "politics": -0.5,
+  "rates": 0.4,
+  "trade": -0.1,
   "fx": 0.3,
-  "energy": -0.6,
+  "energy": -0.7,
   "market": 1.1,
   "credit": 0.3,
   "disaster": 0,
@@ -132,22 +132,22 @@
  },
  "rates": {
   "war": {
-   "rate": 1.2,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.2,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.9,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
+   "rate": 3.3,
    "saturated": 1,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.7,
+   "rate": 4.6,
    "saturated": 2,
    "queries": 3
   },
@@ -283,8 +283,64 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 39,
-    "spike": 0.5,
+    "score": 38,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1c9802r",
+   "title": "[증시 프리즘] '5000선 ' 붕괴…코스피 4거래일 연속 하락, 9개월여 만에...",
+   "firstSeen": "2026-11-17T07:22:00.000Z",
+   "lastSeen": "2026-11-17T09:50:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피, 9개월여 만에 종가 5,000선 붕괴···고점 대비 47% 빠져",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41705",
+     "host": "globale.co.kr",
+     "at": "2026-11-17T09:50:00.000Z"
+    },
+    {
+     "title": "코스피 5000선 붕괴 마감…9개월여 만에 최저 수준",
+     "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=268878",
+     "host": "whitepaper.co.kr",
+     "at": "2026-11-17T08:44:00.000Z"
+    },
+    {
+     "title": "외국인 1.4조원 '매도 폭탄'…9개월여 만에 종가 5000선 붕괴",
+     "link": "https://www.sisajournal.com/news/articleView.html?idxno=394356",
+     "host": "sisajournal.com",
+     "at": "2026-11-17T07:41:00.000Z"
+    },
+    {
+     "title": "[증시 프리즘] '5000선 ' 붕괴…코스피 4거래일 연속 하락, 9개월여 만에...",
+     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8534",
+     "host": "moneystorm.kr",
+     "at": "2026-11-17T07:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -350,111 +406,6 @@
    }
   },
   {
-   "id": "1c9802r",
-   "title": "[증시 프리즘] '5000선 ' 붕괴…코스피 4거래일 연속 하락, 9개월여 만에...",
-   "firstSeen": "2026-11-17T07:22:00.000Z",
-   "lastSeen": "2026-11-17T08:44:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피 5000선 붕괴 마감…9개월여 만에 최저 수준",
-     "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=268878",
-     "host": "whitepaper.co.kr",
-     "at": "2026-11-17T08:44:00.000Z"
-    },
-    {
-     "title": "외국인 1.4조원 '매도 폭탄'…9개월여 만에 종가 5000선 붕괴",
-     "link": "https://www.sisajournal.com/news/articleView.html?idxno=394356",
-     "host": "sisajournal.com",
-     "at": "2026-11-17T07:41:00.000Z"
-    },
-    {
-     "title": "[증시 프리즘] '5000선 ' 붕괴…코스피 4거래일 연속 하락, 9개월여 만에...",
-     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8534",
-     "host": "moneystorm.kr",
-     "at": "2026-11-17T07:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1syy9ir",
-   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-   "firstSeen": "2026-11-17T01:41:00.000Z",
-   "lastSeen": "2026-11-17T08:04:00.000Z",
-   "count": 4,
-   "sources": 3,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-17T08:04:00.000Z"
-    },
-    {
-     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-17T07:42:00.000Z"
-    },
-    {
-     "title": "젠슨황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261117065451008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T07:33:00.000Z"
-    },
-    {
-     "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-     "link": "https://www.yna.co.kr/view/AKR20261117065400008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T01:41:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "1yjgp4h",
    "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
    "firstSeen": "2026-11-16T22:42:00.000Z",
@@ -480,49 +431,6 @@
      "link": "https://www.newspim.com/news/view/20261117000031",
      "host": "newspim.com",
      "at": "2026-11-16T22:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "11hw36e",
-   "title": "'젠슨황 여파' 美 급락에 코스피 4900선 … 삼전닉스 1~2%↓",
-   "firstSeen": "2026-11-16T23:04:00.000Z",
-   "lastSeen": "2026-11-17T08:29:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "붕괴된 5천선…젠슨황 여파·앤트로픽 상장에 코스피 타격",
-     "link": "https://www.nocutnews.co.kr/news/6608361?utm_source=naver&utm_medium=article&utm_campaign=20261117172840",
-     "host": "nocutnews.co.kr",
-     "at": "2026-11-17T08:29:00.000Z"
-    },
-    {
-     "title": "'젠슨황 여파' 美 급락에 코스피 4900선 … 삼전닉스 1~2%↓",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/17/2026111750055.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-17T00:46:00.000Z"
     }
    ],
    "assess": {
@@ -587,6 +495,61 @@
    }
   },
   {
+   "id": "1syy9ir",
+   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
+   "firstSeen": "2026-11-17T01:41:00.000Z",
+   "lastSeen": "2026-11-17T08:04:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-17T08:04:00.000Z"
+    },
+    {
+     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-17T07:42:00.000Z"
+    },
+    {
+     "title": "젠슨황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261117065451008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-17T07:33:00.000Z"
+    },
+    {
+     "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
+     "link": "https://www.yna.co.kr/view/AKR20261117065400008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-17T01:41:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "1bo0m6p",
    "title": "코스피 나흘째 휘청…AI 투자 불안·미국 고금리·자금 이탈 겹쳤다",
    "firstSeen": "2026-11-17T02:00:00.000Z",
@@ -620,54 +583,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "fh7n1u",
-   "title": "[금리·물가 예측] 유가 급락에 11월 CPI '-0.1% 초과' 확률 44%…하루 새...",
-   "firstSeen": "2026-11-16T23:12:00.000Z",
-   "lastSeen": "2026-11-17T04:12:00.000Z",
-   "count": 2,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[코인 예측] 이더리움(ETH) 연말 전 1,500달러 하락 확률 32%…하루 새 4...",
-     "link": "http://coinreaders.com/270890",
-     "host": "coinreaders.com",
-     "at": "2026-11-17T04:12:00.000Z"
-    },
-    {
-     "title": "[금리·물가 예측] 유가 급락에 11월 CPI '-0.1% 초과' 확률 44%…하루 새...",
-     "link": "http://coinreaders.com/270892",
-     "host": "coinreaders.com",
-     "at": "2026-11-17T04:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
     "score": 29,
-    "spike": 1.1,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -850,6 +767,83 @@
      "link": "https://www.newspim.com/news/view/20261117000026",
      "host": "newspim.com",
      "at": "2026-11-16T22:41:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "t9t6s",
+   "title": "버크셔 3분기 포트폴리오 재편…델타항공·레나 늘리고 BofA 비중 축소",
+   "firstSeen": "2026-11-17T00:18:00.000Z",
+   "lastSeen": "2026-11-17T00:18:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "버크셔 3분기 포트폴리오 재편…델타항공·레나 늘리고 BofA 비중 축소",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445095",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-17T00:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "173jyz4",
+   "title": "[이명진 칼럼] 도둑이 매를 들고 설치는 시대, 반드시 이겨내야 한다",
+   "firstSeen": "2026-11-17T00:20:00.000Z",
+   "lastSeen": "2026-11-17T00:20:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[이명진 칼럼] 도둑이 매를 들고 설치는 시대, 반드시 이겨내야 한다",
+     "link": "https://www.pennmike.com/news/articleView.html?idxno=131992",
+     "host": "pennmike.com",
+     "at": "2026-11-17T00:20:00.000Z"
     }
    ],
    "assess": {
