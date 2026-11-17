@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T15:27:27.943Z",
+ "updatedAt": "2026-11-17T15:48:03.404Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 7386.35986328125,
-   "change": -0.41,
-   "z": -0.4,
+   "last": 7301.8798828125,
+   "change": -1.55,
+   "z": -1.6,
    "sd": 0.9608979579017324,
    "source": "Yahoo",
    "checked": true
@@ -51,9 +51,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 24427.224609375,
-   "change": -0.34,
-   "z": -0.2,
+   "last": 24066.259765625,
+   "change": -1.81,
+   "z": -1.3,
    "sd": 1.3519484657118128,
    "source": "Yahoo",
    "checked": true
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1336.18994140625,
-   "change": 0.22,
-   "z": 0.3,
+   "last": 1336.25,
+   "change": 0.23,
+   "z": 0.4,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
   },
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 86.76000213623047,
-   "change": 1.21,
-   "z": 0.4,
+   "last": 86.2699966430664,
+   "change": 0.64,
+   "z": 0.2,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
   },
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3858.699951171875,
-   "change": 0.15,
-   "z": 0.1,
+   "last": 3879.5,
+   "change": 0.69,
+   "z": 0.5,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 22.809999465942383,
-   "change": -0.44,
-   "z": 0,
+   "last": 23.540000915527344,
+   "change": 2.75,
+   "z": 0.2,
    "sd": 11.968928417352235,
    "source": "Yahoo",
    "checked": true
@@ -113,9 +113,9 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-17",
-   "last": 5.144999980926514,
-   "change": 2.4,
-   "z": 0.4,
+   "last": 5.13100004196167,
+   "change": 1,
+   "z": 0.2,
    "sd": 5.447127683076426,
    "source": "Yahoo"
   }
@@ -123,11 +123,11 @@
  "spikes": {
   "war": -0.3,
   "politics": -0.8,
-  "rates": -0.6,
+  "rates": -0.4,
   "trade": -0.1,
   "fx": -0.2,
   "energy": -1,
-  "market": 0.3,
+  "market": 0.5,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.3
@@ -144,7 +144,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.3,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -164,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.4,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 3
   },
@@ -222,19 +222,115 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 34,
+    "score": 43,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
      "핵심 단어",
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
+    ]
+   }
+  },
+  {
+   "id": "h295fd",
+   "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
+   "firstSeen": "2026-11-17T15:25:00.000Z",
+   "lastSeen": "2026-11-17T15:25:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
+     "link": "https://www.news1.kr/world/middleeast-africa/6357344",
+     "host": "news1.kr",
+     "at": "2026-11-17T15:25:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
+     "unit": "%",
+     "z": -1.6
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -1.55%"
+    ]
+   }
+  },
+  {
+   "id": "ige8r9",
+   "title": "코스피 종가, 9개월만 5000선 붕괴...\"투심냉각, 저점매수보단 유지\"",
+   "firstSeen": "2026-11-17T06:34:00.000Z",
+   "lastSeen": "2026-11-17T15:32:00.000Z",
+   "count": 13,
+   "sources": 13,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "외국인, 1.4조 넘게 던졌다… 9개월 만에 다시 ‘4천피’",
+     "link": "https://www.chosun.com/economy/stock-finance/2026/11/18/MNLJDAELCBB7RISG3FJKIKDDQM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-17T15:32:00.000Z"
+    },
+    {
+     "title": "코스피, 9개월 만에 종가 5,000선 붕괴… 'AI 흔들·수급 공백·고금리' ...",
+     "link": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=435637",
+     "host": "dailysportshankook.co.kr",
+     "at": "2026-11-17T15:00:00.000Z"
+    },
+    {
+     "title": "코스피 5000선 붕괴…외국인 매도 속 AI 불확실성 확대",
+     "link": "https://www.vegannews.co.kr/news/article.html?no=406710",
+     "host": "vegannews.co.kr",
+     "at": "2026-11-17T14:16:00.000Z"
+    },
+    {
+     "title": "코스피, 반도체 이슈에 5000선 '붕괴'...종가 기준 9개월 만",
+     "link": "https://www.betanews.net/article/view/beta202611170140",
+     "host": "betanews.net",
+     "at": "2026-11-17T14:04:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 29,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
+     "unit": "%",
+     "z": -1.6
+    },
+    "why": [
+     "S&P 500 -1.55%"
     ]
    }
   },
@@ -266,15 +362,15 @@
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": 1.21,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 0.69,
      "unit": "%",
-     "z": 0.4
+     "z": 0.5
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 +1.21%"
+     "금 +0.69%"
     ]
    }
   },
@@ -319,157 +415,6 @@
    }
   },
   {
-   "id": "h295fd",
-   "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
-   "firstSeen": "2026-11-17T15:25:00.000Z",
-   "lastSeen": "2026-11-17T15:25:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "\"이란 호르무즈 해협 케슘섬서 잇단 폭발음\"",
-     "link": "https://www.news1.kr/world/middleeast-africa/6357344",
-     "host": "news1.kr",
-     "at": "2026-11-17T15:25:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
-     "unit": "%",
-     "z": -0.9
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -2.59%"
-    ]
-   }
-  },
-  {
-   "id": "ige8r9",
-   "title": "코스피 종가, 9개월만 5000선 붕괴...\"투심냉각, 저점매수보단 유지\"",
-   "firstSeen": "2026-11-17T06:34:00.000Z",
-   "lastSeen": "2026-11-17T15:00:00.000Z",
-   "count": 13,
-   "sources": 13,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 9개월 만에 종가 5,000선 붕괴… 'AI 흔들·수급 공백·고금리' ...",
-     "link": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=435637",
-     "host": "dailysportshankook.co.kr",
-     "at": "2026-11-17T15:00:00.000Z"
-    },
-    {
-     "title": "코스피 5000선 붕괴…외국인 매도 속 AI 불확실성 확대",
-     "link": "https://www.vegannews.co.kr/news/article.html?no=406710",
-     "host": "vegannews.co.kr",
-     "at": "2026-11-17T14:16:00.000Z"
-    },
-    {
-     "title": "코스피, 반도체 이슈에 5000선 '붕괴'...종가 기준 9개월 만",
-     "link": "https://www.betanews.net/article/view/beta202611170140",
-     "host": "betanews.net",
-     "at": "2026-11-17T14:04:00.000Z"
-    },
-    {
-     "title": "'5천피' 붕괴…코스피, 9개월 만에 최저치 4968",
-     "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=565627",
-     "host": "idaegu.co.kr",
-     "at": "2026-11-17T12:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
-     "unit": "%",
-     "z": -0.9
-    },
-    "why": [
-     "코스피 -2.59%"
-    ]
-   }
-  },
-  {
-   "id": "mew0va",
-   "title": "러 \"우크라 나토 가입 수용 안할 것\"…美제안 사실상 거부",
-   "firstSeen": "2026-11-17T10:16:00.000Z",
-   "lastSeen": "2026-11-17T14:58:00.000Z",
-   "count": 8,
-   "sources": 7,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "러 \"우크라 나토 가입 수용 안할 것\"…美제안 사실상 거부(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261117164851109?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T14:58:00.000Z"
-    },
-    {
-     "title": "러 “우크라 나토 가입 수용하지 않을 것”…美는 돈바스 철수 타진",
-     "link": "https://www.joongang.co.kr/article/25479523",
-     "host": "joongang.co.kr",
-     "at": "2026-11-17T12:08:00.000Z"
-    },
-    {
-     "title": "러시아 \"우크라이나 나토 가입 수용 안 할 것\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611172055001479",
-     "host": "ytn.co.kr",
-     "at": "2026-11-17T11:55:00.000Z"
-    },
-    {
-     "title": "러시아 \"우크라 나토 가입 수용 안 할 것\"…종전 협상 다시 난항",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5231421",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-17T10:53:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 18,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": 1.21,
-     "unit": "%",
-     "z": 0.4
-    },
-    "why": [
-     "WTI 유가 +1.21%"
-    ]
-   }
-  },
-  {
    "id": "68v4kk",
    "title": "IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…통화·재정 '긴축' 주문",
    "firstSeen": "2026-11-17T05:53:00.000Z",
@@ -509,18 +454,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 17,
+    "score": 26,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   },
@@ -564,18 +509,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 17,
+    "score": 26,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   },
@@ -583,14 +528,20 @@
    "id": "19kpmdo",
    "title": "뉴욕증시 혼조세 출발… 나스닥 강보합 vs 다우 0.70% 하락",
    "firstSeen": "2026-11-17T14:38:00.000Z",
-   "lastSeen": "2026-11-17T14:56:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-17T15:33:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "trade"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "뉴욕 증시, 엔비디아 실적 발표 주시하며 하락 출발",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611180033326168",
+     "host": "ytn.co.kr",
+     "at": "2026-11-17T15:33:00.000Z"
+    },
     {
      "title": "뉴욕증시 혼조세 출발… 엔비디아 실적 발표 주목",
      "link": "https://biz.chosun.com/international/international_economy/2026/11/17/727SWDAITVCFJID6LDKXEHXQOU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
@@ -608,29 +559,78 @@
      "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445216",
      "host": "news.einfomax.co.kr",
      "at": "2026-11-17T14:42:00.000Z"
-    },
-    {
-     "title": "다우 0.92% 하락 출발…나스닥은 0.21% 올라 엇갈렸다",
-     "link": "https://www.tokenpost.kr/news/market/439862",
-     "host": "tokenpost.kr",
-     "at": "2026-11-17T14:38:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 15,
+    "score": 25,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
+    ]
+   }
+  },
+  {
+   "id": "1syy9ir",
+   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
+   "firstSeen": "2026-11-17T01:41:00.000Z",
+   "lastSeen": "2026-11-17T15:36:00.000Z",
+   "count": 5,
+   "sources": 4,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국고채 금리 혼조 마감…코스피 5,000선 붕괴에 중단기물 하락",
+     "link": "http://www.kjdaily.com/article.php?aid=1794929615692614276",
+     "host": "kjdaily.com",
+     "at": "2026-11-17T15:36:00.000Z"
+    },
+    {
+     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-17T08:04:00.000Z"
+    },
+    {
+     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-17T07:42:00.000Z"
+    },
+    {
+     "title": "젠슨황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261117065451008?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-17T07:33:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
+     "unit": "%",
+     "z": -1.6
+    },
+    "why": [
+     "S&P 500 -1.55%"
     ]
    }
   },
@@ -669,18 +669,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 11,
-    "spike": 0.3,
+    "score": 22,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   },
@@ -718,18 +718,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 11,
-    "spike": 0.3,
+    "score": 22,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   },
@@ -768,172 +768,154 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 11,
-    "spike": 0.3,
+    "score": 22,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   },
   {
-   "id": "1syy9ir",
-   "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-   "firstSeen": "2026-11-17T01:41:00.000Z",
-   "lastSeen": "2026-11-17T08:04:00.000Z",
-   "count": 4,
-   "sources": 3,
+   "id": "1yjgp4h",
+   "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
+   "firstSeen": "2026-11-16T22:42:00.000Z",
+   "lastSeen": "2026-11-16T23:36:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "rates"
+    "rates",
+    "fx",
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"코스피, 9개월 만에 종가 5,000선 붕괴\"… 엔비디아·앤트로픽·미 금리...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398756",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-17T08:04:00.000Z"
+     "title": "[뉴욕환시] 달러 닷새째↑…안전선호 속 'DXY' 1년7개월來 최고",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445067",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-16T23:36:00.000Z"
     },
     {
-     "title": "젠슨 황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850214&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-17T07:42:00.000Z"
-    },
-    {
-     "title": "젠슨황·앤트로픽·금리…'삼중고'에 5,000선 무너진 코스피(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261117065451008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T07:33:00.000Z"
-    },
-    {
-     "title": "젠슨황·앤트로픽·금리…'삼중고'에 짓눌린 코스피",
-     "link": "https://www.yna.co.kr/view/AKR20261117065400008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T01:41:00.000Z"
+     "title": "[채권/외환] 美 국채금리, 유가 급락에 하락…달러는 19개월 만에 최고",
+     "link": "https://www.newspim.com/news/view/20261117000031",
+     "host": "newspim.com",
+     "at": "2026-11-16T22:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 10,
-    "spike": 0,
+    "score": 19,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   },
   {
-   "id": "1v31xij",
-   "title": "[37th SRE][Best Report]미국·이란 전쟁에 엇갈린 산업별 명암",
-   "firstSeen": "2026-11-17T03:02:00.000Z",
-   "lastSeen": "2026-11-17T05:58:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "6anurx",
+   "title": "엔비디아 고점서 35% 급락…공매도 평가이익 240억달러",
+   "firstSeen": "2026-11-16T23:00:00.000Z",
+   "lastSeen": "2026-11-17T01:37:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "war",
-    "politics"
+    "fx",
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "밴스 美 부통령 \"이란 전쟁 장기전으로 끌고 가지 않을 것\"…트럼프 임...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=398552",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-17T05:58:00.000Z"
+     "title": "엔비디아 고점서 35% 빠지는 동안…공매도 세력 3조5천억 챙겼다",
+     "link": "https://www.imaeil.com/page/view/2026111710233111178",
+     "host": "imaeil.com",
+     "at": "2026-11-17T01:37:00.000Z"
     },
     {
-     "title": "이란 주변에 美 항공모함 3척 집결...전쟁 또 터지나?",
-     "link": "https://www.g-enews.com/view.php?ud=202611171406383307e250e8e188_1",
-     "host": "g-enews.com",
-     "at": "2026-11-17T05:12:00.000Z"
-    },
-    {
-     "title": "[37th SRE][Best Report]미국·이란 전쟁에 엇갈린 산업별 명암",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03552246645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-17T03:02:00.000Z"
+     "title": "엔비디아 고점서 35% 급락…공매도 평가이익 240억달러",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731908",
+     "host": "ebn.co.kr",
+     "at": "2026-11-16T23:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 9,
-    "spike": 0,
+    "score": 19,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   },
   {
-   "id": "113k1ci",
-   "title": "[투자 노하우] 현지시간 16일 뉴욕증시 3대지수 일제히 하락",
-   "firstSeen": "2026-11-17T07:58:00.000Z",
-   "lastSeen": "2026-11-17T15:00:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1t3n11c",
+   "title": "코스피 5000선 붕괴…두 달 새 시총 1700조 증발",
+   "firstSeen": "2026-11-17T06:56:00.000Z",
+   "lastSeen": "2026-11-17T07:54:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "rates"
+    "politics",
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[속보] 미국 뉴욕증시 일제히 하락…다우 317포인트 밀리고 나스닥 약보...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627937",
-     "host": "cbci.co.kr",
-     "at": "2026-11-17T15:00:00.000Z"
+     "title": "'엔비디아 실적 하루 앞'…코스피 5000선 붕괴",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1320785&inflow=N",
+     "host": "newstomato.com",
+     "at": "2026-11-17T07:54:00.000Z"
     },
     {
-     "title": "[뉴욕증시]반도체 반등에도 일제히 하락 중",
-     "link": "https://view.asiae.co.kr/article/2026111723591358335",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-17T14:59:00.000Z"
-    },
-    {
-     "title": "[투자 노하우] 현지시간 16일 뉴욕증시 3대지수 일제히 하락",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347076?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-17T07:58:00.000Z"
+     "title": "코스피 5000선 붕괴…두 달 새 시총 1700조 증발",
+     "link": "http://www.metroseoul.co.kr/article/20261117500437",
+     "host": "metroseoul.co.kr",
+     "at": "2026-11-17T06:56:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 9,
-    "spike": 0,
+    "score": 19,
+    "spike": 0.5,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -2.59,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.55,
      "unit": "%",
-     "z": -0.9
+     "z": -1.6
     },
     "why": [
-     "코스피 -2.59%"
+     "S&P 500 -1.55%"
     ]
    }
   }
