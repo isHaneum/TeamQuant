@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T23:11:47.887Z",
+ "updatedAt": "2026-11-17T23:27:52.265Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1335.1700439453125,
-   "change": 0.14,
+   "last": 1335.25,
+   "change": 0.15,
    "z": 0.2,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.9000015258789,
-   "change": 0.21,
-   "z": 0.1,
+   "last": 85.83000183105469,
+   "change": 0.13,
+   "z": 0,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
   },
@@ -121,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 3.3,
+  "war": 3.1,
   "politics": 0.9,
   "rates": 1.6,
   "trade": 0.5,
   "fx": 0.3,
-  "energy": 1.6,
+  "energy": 1.5,
   "market": 1,
   "credit": 0.1,
   "disaster": 0,
@@ -134,7 +134,7 @@
  },
  "rates": {
   "war": {
-   "rate": 4.6,
+   "rate": 4.4,
    "saturated": 1,
    "queries": 3
   },
@@ -159,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6,
+   "rate": 5.7,
    "saturated": 0,
    "queries": 1
   },
@@ -187,20 +187,33 @@
  "issues": [
   {
    "id": "3vxrfz",
-   "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러대",
+   "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러",
    "firstSeen": "2026-11-17T21:18:00.000Z",
-   "lastSeen": "2026-11-17T22:12:00.000Z",
-   "count": 10,
-   "sources": 9,
+   "lastSeen": "2026-11-17T23:16:00.000Z",
+   "count": 9,
+   "sources": 8,
    "topics": [
     "war",
     "fx",
-    "energy"
+    "energy",
+    "market"
    ],
    "critical": [
     "energy"
    ],
    "links": [
+    {
+     "title": "국제유가, 미·이란 무력 충돌에 소폭 상승⋯브렌트유 93달러대",
+     "link": "https://www.viva100.com/article/20261118500087",
+     "host": "viva100.com",
+     "at": "2026-11-17T23:16:00.000Z"
+    },
+    {
+     "title": "美 증시, 엔비디아 불안에 3대 지수 급락···중동 충돌에 유가 상승",
+     "link": "https://www.smartbizn.com/news/articleView.html?idxno=159778",
+     "host": "smartbizn.com",
+     "at": "2026-11-17T23:06:00.000Z"
+    },
     {
      "title": "\"중동 긴장 고조, 유가 상승세 지속…미국-이란 갈등의 영향은?\"",
      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886142",
@@ -212,37 +225,25 @@
      "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887543",
      "host": "getnews.co.kr",
      "at": "2026-11-17T22:10:00.000Z"
-    },
-    {
-     "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러대 ,0.76% 상승",
-     "link": "https://www.fnnews.com/news/202611180632512282",
-     "host": "fnnews.com",
-     "at": "2026-11-17T21:37:00.000Z"
-    },
-    {
-     "title": "국제유가, 중동 긴장 고조에 소폭 상승‥브렌트유 93달러대",
-     "link": "https://imnews.imbc.com/news/2026/world/article/6866476_36925.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-17T21:36:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 70,
-    "spike": 3.3,
+    "spike": 3.1,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 11.13,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
      "unit": "%",
-     "z": 0.9
+     "z": -1.1
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.3σ)",
-     "VIX 변동성 +11.13%"
+     "기사 급증(평소 대비 3.1σ)",
+     "S&P 500 -1.03%"
     ]
    }
   },
@@ -250,9 +251,9 @@
    "id": "8ho8ti",
    "title": "뉴욕 연은 총재, ‘빅스텝’ 반대 시사…“극적 조치 필요없어”",
    "firstSeen": "2026-11-17T22:08:00.000Z",
-   "lastSeen": "2026-11-17T22:52:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-17T23:22:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "rates"
    ],
@@ -261,10 +262,10 @@
    ],
    "links": [
     {
-     "title": "뉴욕 연은 총재 \"극적인 조치 불필요\"…12월 빅스텝 반대 시사",
-     "link": "https://view.asiae.co.kr/article/2026111807525587929",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-17T22:52:00.000Z"
+     "title": "美 뉴욕 연은 총재, 12월 '빅스텝'에 선 그어…\"극적인 조치 불필요\"",
+     "link": "https://www.ajunews.com/view/20261118080934814",
+     "host": "ajunews.com",
+     "at": "2026-11-17T23:22:00.000Z"
     },
     {
      "title": "미국 12월 '빅스텝 공포' 달랜 뉴욕연은 총재…\"극적인 조치 불필요\"",
@@ -273,22 +274,22 @@
      "at": "2026-11-17T22:52:00.000Z"
     },
     {
+     "title": "뉴욕 연은 총재 \"극적인 조치 불필요\"…12월 빅스텝 반대 시사",
+     "link": "https://view.asiae.co.kr/article/2026111807525587929",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-17T22:52:00.000Z"
+    },
+    {
      "title": "뉴욕연은 총재 ‘빅스텝’ 반대 시사...12월 0.25%P 인상 확률 97%",
      "link": "https://www.sedaily.com/article/20115689?ref=naver",
      "host": "sedaily.com",
      "at": "2026-11-17T22:33:00.000Z"
-    },
-    {
-     "title": "뉴욕 연은 총재 “큰 폭으로 금리 올릴 상황 아니다”…12월 ‘빅스텝’...",
-     "link": "https://www.chosun.com/economy/int_economy/2026/11/18/HOVGQOSJPRC5VEZLNZNKH3F6LU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-17T22:14:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 54,
+    "score": 55,
     "spike": 1.6,
     "news": true,
     "reaction": {
@@ -399,8 +400,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 43,
-    "spike": 3.3,
+    "score": 42,
+    "spike": 3.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -410,7 +411,7 @@
      "z": -1.1
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.1σ)",
      "S&P 500 -1.03%"
     ]
    }
@@ -519,67 +520,61 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 1.6,
+    "score": 40,
+    "spike": 1.5,
     "news": false,
     "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": 0.21,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 0.08,
      "unit": "%",
      "z": 0.1
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 +0.21%"
+     "금 +0.08%"
     ]
    }
   },
   {
-   "id": "zw3j7j",
-   "title": "골드만삭스 \"미 증시 등락 속 완만한 상승\" 전망…엔비디아 실적 앞두고",
-   "firstSeen": "2026-11-16T23:31:00.000Z",
-   "lastSeen": "2026-11-17T23:08:00.000Z",
-   "count": 13,
-   "sources": 12,
+   "id": "jn9kpk",
+   "title": "트럼프·시진핑·푸틴 한자리에…미중러 정상회담 관전포인트",
+   "firstSeen": "2026-11-17T00:52:00.000Z",
+   "lastSeen": "2026-11-17T23:18:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "rates",
-    "fx",
-    "market"
+    "war",
+    "politics",
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "엔비디아 실적 경계감에 뉴욕증시 일제히 하락…다우 1.64%↓",
-     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81702",
-     "host": "issuenbiz.com",
-     "at": "2026-11-17T23:08:00.000Z"
+     "title": "[선전 APEC] 이재명·푸틴 새벽 도착, 오후엔 트럼프…시진핑 주재 환영...",
+     "link": "https://www.ajunews.com/view/20261118081153816",
+     "host": "ajunews.com",
+     "at": "2026-11-17T23:18:00.000Z"
     },
     {
-     "title": "[오늘의 글로벌마켓] 뉴욕증시, 엔비디아 실적 앞둔 경계감 속 하락세",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147195",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-17T22:44:00.000Z"
+     "title": "[선전 APEC] 트럼프·시진핑·푸틴 3자 회담에 쏠리는 눈…무역·우크라...",
+     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101452",
+     "host": "newsian.co.kr",
+     "at": "2026-11-17T21:38:00.000Z"
     },
     {
-     "title": "[마켓 프리뷰] 엔비디아 실적·앤트로픽 상장 앞두고 경계감 고조",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347174?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-17T22:36:00.000Z"
-    },
-    {
-     "title": "엔비디아 실적 경계감에 NSA 통신망 장애까지⋯뉴욕증시 일제히 하락 마...",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=153702",
-     "host": "ziksir.com",
-     "at": "2026-11-17T22:36:00.000Z"
+     "title": "트럼프·시진핑·푸틴 한자리에…미중러 정상회담 관전포인트",
+     "link": "https://www.voakorea.com/a/8224627.html",
+     "host": "voakorea.com",
+     "at": "2026-11-17T16:07:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 1.6,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 35,
+    "spike": 3.1,
+    "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -588,6 +583,7 @@
      "z": -1.1
     },
     "why": [
+     "기사 급증(평소 대비 3.1σ)",
      "S&P 500 -1.03%"
     ]
    }
@@ -627,7 +623,7 @@
     "level": "caution",
     "label": "주의",
     "score": 34,
-    "spike": 3.3,
+    "spike": 3.1,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -637,43 +633,55 @@
      "z": 0.9
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.1σ)",
      "VIX 변동성 +11.13%"
     ]
    }
   },
   {
-   "id": "1711vw7",
-   "title": "트럼프·시진핑·푸틴 한자리에…미중러 정상회담 관전포인트",
-   "firstSeen": "2026-11-17T01:30:00.000Z",
-   "lastSeen": "2026-11-17T21:38:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "zw3j7j",
+   "title": "골드만삭스 \"미 증시 등락 속 완만한 상승\" 전망…엔비디아 실적 앞두고",
+   "firstSeen": "2026-11-16T23:31:00.000Z",
+   "lastSeen": "2026-11-17T22:36:00.000Z",
+   "count": 8,
+   "sources": 7,
    "topics": [
-    "war",
-    "politics",
-    "trade"
+    "rates",
+    "fx",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[선전 APEC] 트럼프·시진핑·푸틴 3자 회담에 쏠리는 눈…무역·우크라...",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101452",
-     "host": "newsian.co.kr",
-     "at": "2026-11-17T21:38:00.000Z"
+     "title": "[마켓 프리뷰] 엔비디아 실적·앤트로픽 상장 앞두고 경계감 고조",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347174?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-17T22:36:00.000Z"
     },
     {
-     "title": "트럼프·시진핑·푸틴 한자리에…미중러 정상회담 관전포인트",
-     "link": "https://www.voakorea.com/a/8224627.html",
-     "host": "voakorea.com",
-     "at": "2026-11-17T16:07:00.000Z"
+     "title": "[마켓 브리핑] 젠슨 황 없는 엔비디아 첫 실적 발표 앞두고 관망세",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347173?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-17T22:36:00.000Z"
+    },
+    {
+     "title": "[채권/외환] 美 국채금리 하락·달러 약세…엔비디아 실적 앞두고 안전...",
+     "link": "https://www.newspim.com/news/view/20261118000035",
+     "host": "newspim.com",
+     "at": "2026-11-17T22:18:00.000Z"
+    },
+    {
+     "title": "[글로벌증시] 뉴욕증시 또 하락…엔비디아 실적에 촉각",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH2026111806505762m",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-17T21:52:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 3.3,
+    "score": 32,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -683,8 +691,52 @@
      "z": -1.1
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "kmn8z",
+   "title": "국제유가 혼조…중동 원유 수출 회복에 공급 과잉 우려",
+   "firstSeen": "2026-11-17T20:13:00.000Z",
+   "lastSeen": "2026-11-17T23:24:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美·이란 무력 충돌에 국제유가 상승...공급 과잉 전망에 상승폭 제한",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=564682",
+     "host": "joongangenews.com",
+     "at": "2026-11-17T23:24:00.000Z"
+    },
+    {
+     "title": "국제유가 혼조…중동 원유 수출 회복에 공급 과잉 우려",
+     "link": "https://www.news1.kr/world/usa-canada/6357379",
+     "host": "news1.kr",
+     "at": "2026-11-17T20:13:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 3.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 11.13,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "기사 급증(평소 대비 3.1σ)",
+     "VIX 변동성 +11.13%"
     ]
    }
   },
@@ -718,7 +770,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 31,
-    "spike": 3.3,
+    "spike": 3.1,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -728,8 +780,63 @@
      "z": 0.9
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.1σ)",
      "VIX 변동성 +11.13%"
+    ]
+   }
+  },
+  {
+   "id": "y8b3be",
+   "title": "뉴욕증시, 3대 지수 동반 하락 마감… 공포지수 11.6% 급등·S&P500 7월 이...",
+   "firstSeen": "2026-11-17T21:25:00.000Z",
+   "lastSeen": "2026-11-17T23:26:00.000Z",
+   "count": 11,
+   "sources": 11,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시 3대 지수 하락…엔비디아 실적 경계·NSA 장애 겹쳐",
+     "link": "https://www.sentv.co.kr/article/view/sentv202611180012",
+     "host": "sentv.co.kr",
+     "at": "2026-11-17T23:26:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 3대 지수 동반 하락…나스닥 7개월 만에 최저",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=579869&class=53&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-17T23:18:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 전산장애·실적 경계에 하락…엔비디아 '깜짝 실적'에 반등[뉴...",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01843366645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-17T22:53:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI투자에 대한 불안감 고조 등 영향 일제히 하락⋯엔비디아 ...",
+     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447329",
+     "host": "econonews.co.kr",
+     "at": "2026-11-17T22:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "S&P 500 -1.03%"
     ]
    }
   },
@@ -756,8 +863,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 3.3,
+    "score": 29,
+    "spike": 3.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -767,7 +874,7 @@
      "z": -1.1
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.1σ)",
      "S&P 500 -1.03%"
     ]
    }
@@ -797,8 +904,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 3.3,
+    "score": 29,
+    "spike": 3.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -808,91 +915,50 @@
      "z": -1.1
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "jmhpc4",
-   "title": "트럼프 “中희토류 10개월 안에 따라잡을 것…이란전 해결 가까워져”[...",
-   "firstSeen": "2026-11-17T12:26:00.000Z",
-   "lastSeen": "2026-11-17T12:39:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 “中희토류 10개월 안에 따라잡을 것…이란전 해결 가까워져”[...",
-     "link": "https://biz.heraldcorp.com/article/10940395?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-17T12:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 3.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "기사 급증(평소 대비 3.3σ)",
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "1rhypl3",
-   "title": "美 10월 소매판매 0.2% 증가…고물가에 소비 둔화",
-   "firstSeen": "2026-11-17T14:07:00.000Z",
-   "lastSeen": "2026-11-17T14:07:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 10월 소매판매 0.2% 증가…고물가에 소비 둔화",
-     "link": "https://www.newspim.com/news/view/20261117001384",
-     "host": "newspim.com",
-     "at": "2026-11-17T14:07:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 3.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "기사 급증(평소 대비 3.3σ)",
+     "기사 급증(평소 대비 3.1σ)",
      "S&P 500 -1.03%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-17T23:27:52.265Z",
+   "id": "w1bb7g",
+   "level": "caution",
+   "title": "연준 이사 “AI가 뱅크런 부를 수도”",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://www.edaily.co.kr/News/Read?newsId=01705606645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-17T23:27:52.265Z",
+   "id": "jn9kpk",
+   "level": "caution",
+   "title": "트럼프·시진핑·푸틴 한자리에…미중러 정상회담 관전포인트",
+   "why": [
+    "기사 급증(평소 대비 3.1σ)",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://www.ajunews.com/view/20261118081153816",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-17T23:27:52.265Z",
+   "id": "3vxrfz",
+   "level": "caution",
+   "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러",
+   "why": [
+    "핵심 단어",
+    "기사 급증(평소 대비 3.1σ)",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://www.viva100.com/article/20261118500087",
+   "delivered": false
+  },
   {
    "at": "2026-11-17T23:11:47.887Z",
    "id": "8ho8ti",
@@ -1095,42 +1161,6 @@
     "S&P 500 -1.92%(평소의 2.1배)"
    ],
    "link": "https://www.naeil.com/news/read/609056?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T04:28:35.809Z",
-   "id": "w1bb7g",
-   "level": "urgent",
-   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.92%(평소의 2.1배)"
-   ],
-   "link": "https://www.naeil.com/news/read/609056?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T04:15:58.521Z",
-   "id": "w1bb7g",
-   "level": "caution",
-   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.92%(평소의 2.1배)"
-   ],
-   "link": "https://www.naeil.com/news/read/609056?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-16T23:27:19.592Z",
-   "id": "dzv7s1",
-   "level": "caution",
-   "title": "이란은 바레인 치고 후티는 예멘군 반격 격퇴…중동 긴장 고조",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +18.7%"
-   ],
-   "link": "https://www.newspim.com/news/view/20261116001423",
    "delivered": false
   }
  ],
