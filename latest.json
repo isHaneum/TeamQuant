@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T19:47:50.360Z",
+ "updatedAt": "2026-11-17T20:13:56.849Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 7322.64013671875,
-   "change": -1.27,
-   "z": -1.3,
+   "last": 7309.60009765625,
+   "change": -1.44,
+   "z": -1.5,
    "sd": 0.9608979579017324,
    "source": "Yahoo",
    "checked": true
@@ -51,9 +51,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 24236.6015625,
-   "change": -1.11,
-   "z": -0.8,
+   "last": 24183.89453125,
+   "change": -1.33,
+   "z": -1,
    "sd": 1.3519484657118128,
    "source": "Yahoo",
    "checked": true
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1335.1700439453125,
-   "change": 0.14,
+   "last": 1335.3499755859375,
+   "change": 0.16,
    "z": 0.2,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.87000274658203,
-   "change": 0.17,
-   "z": 0.1,
+   "last": 85.36000061035156,
+   "change": -0.42,
+   "z": -0.1,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
   },
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3854.5,
-   "change": 0.04,
-   "z": 0,
+   "last": 3848.699951171875,
+   "change": -0.11,
+   "z": -0.1,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 26.06999969482422,
-   "change": 13.79,
-   "z": 1.2,
+   "last": 26.780000686645508,
+   "change": 16.89,
+   "z": 1.4,
    "sd": 11.968928417352235,
    "source": "Yahoo",
    "checked": true
@@ -121,20 +121,20 @@
   }
  ],
  "spikes": {
-  "war": -1.3,
+  "war": -1.1,
   "politics": -1.3,
   "rates": -1.2,
   "trade": -0.2,
   "fx": -0.2,
   "energy": -1.1,
-  "market": -1.8,
+  "market": -1.6,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.3
  },
  "rates": {
   "war": {
-   "rate": 0,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 3
   },
@@ -144,7 +144,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.3,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 3
   },
@@ -164,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 0.1,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
@@ -222,19 +222,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 39,
+    "score": 42,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
@@ -263,19 +263,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
+    "score": 36,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
@@ -303,19 +303,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
+    "score": 34,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": 13.79,
+     "change": 16.89,
      "unit": "%",
-     "z": 1.2
+     "z": 1.4
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 +13.79%"
+     "VIX 변동성 +16.89%"
     ]
    }
   },
@@ -399,73 +399,129 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 22,
+    "score": 25,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": 13.79,
+     "change": 16.89,
      "unit": "%",
-     "z": 1.2
+     "z": 1.4
     },
     "why": [
-     "VIX 변동성 +13.79%"
+     "VIX 변동성 +16.89%"
     ]
    }
   },
   {
-   "id": "19kpmdo",
-   "title": "뉴욕증시 혼조세 출발… 나스닥 강보합 vs 다우 0.70% 하락",
-   "firstSeen": "2026-11-17T14:38:00.000Z",
-   "lastSeen": "2026-11-17T18:12:00.000Z",
+   "id": "68v4kk",
+   "title": "IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…통화·재정 '긴축' 주문",
+   "firstSeen": "2026-11-17T05:53:00.000Z",
+   "lastSeen": "2026-11-17T08:45:00.000Z",
    "count": 7,
    "sources": 7,
    "topics": [
-    "market"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "유럽증시, 기술주가 하락 주도하면서 1.75% 하락… 엔비디아 실적 발표...",
-     "link": "https://www.newspim.com/news/view/20261118000023",
-     "host": "newspim.com",
-     "at": "2026-11-17T18:12:00.000Z"
-    },
-    {
-     "title": "뉴욕 증시, 엔비디아 실적 발표 주시하며 하락 출발",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611180033326168",
-     "host": "ytn.co.kr",
-     "at": "2026-11-17T15:33:00.000Z"
-    },
-    {
-     "title": "[속보] 미국 뉴욕증시 일제히 하락…다우 317포인트 밀리고 나스닥 약보...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627937",
-     "host": "cbci.co.kr",
-     "at": "2026-11-17T15:00:00.000Z"
-    },
-    {
-     "title": "[뉴욕개장] 나스닥 0.07% 상승 출발…엔비디아 실적 앞두고 혼조세",
-     "link": "https://www.news1.kr/world/usa-canada/6357337",
+     "title": "AI 호황에 달아오른 韓 경제…IMF, 통화·재정 '동시 브레이크' 주문",
+     "link": "https://www.news1.kr/economy/trend/6357005",
      "host": "news1.kr",
-     "at": "2026-11-17T14:50:00.000Z"
+     "at": "2026-11-17T08:45:00.000Z"
+    },
+    {
+     "title": "IMF, 한국 올해 성장률 3.9% 전망…가계엔 아직 먼 호황",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=108077",
+     "host": "newskr.kr",
+     "at": "2026-11-17T07:34:00.000Z"
+    },
+    {
+     "title": "[종합] IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…미래대응기금 환영 속...",
+     "link": "https://www.newspim.com/news/view/20261117001075",
+     "host": "newspim.com",
+     "at": "2026-11-17T07:00:00.000Z"
+    },
+    {
+     "title": "IMF, 韓 성장률 3.3%→3.9% 전망…물가 불안에 통화·재정 '긴축' 주문",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=04323046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-17T06:51:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 22,
+    "score": 25,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
+    ]
+   }
+  },
+  {
+   "id": "px29d9",
+   "title": "[월가 영수증] 엔비디아(NVDA) 실적 앞둔 美 선물 약세… 소매판매·금리...",
+   "firstSeen": "2026-11-17T12:42:00.000Z",
+   "lastSeen": "2026-11-17T19:16:00.000Z",
+   "count": 7,
+   "sources": 5,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아가 누른 코스피, 실적이 만회할까",
+     "link": "https://www.mt.co.kr/stock/2026/11/18/2026111719550672404",
+     "host": "mt.co.kr",
+     "at": "2026-11-17T19:16:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시 개장] 엔비디아 실적 앞두고 3대 지수 하락…다우 0.7%↓",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94565",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-17T15:52:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 실적 앞두고 방향 탐색…3대 지수 약세",
+     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101448",
+     "host": "newsian.co.kr",
+     "at": "2026-11-17T15:14:00.000Z"
+    },
+    {
+     "title": "미국증시 장초반 하락…수입물가 1.1%·엔비디아 실적 경계, 다우 0.66%↓",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16279319",
+     "host": "topstarnews.net",
+     "at": "2026-11-17T14:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 25,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.44,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "S&P 500 -1.44%"
     ]
    }
   },
@@ -509,73 +565,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
-    ]
-   }
-  },
-  {
-   "id": "68v4kk",
-   "title": "IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…통화·재정 '긴축' 주문",
-   "firstSeen": "2026-11-17T05:53:00.000Z",
-   "lastSeen": "2026-11-17T08:45:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AI 호황에 달아오른 韓 경제…IMF, 통화·재정 '동시 브레이크' 주문",
-     "link": "https://www.news1.kr/economy/trend/6357005",
-     "host": "news1.kr",
-     "at": "2026-11-17T08:45:00.000Z"
-    },
-    {
-     "title": "[종합] IMF \"AI 투자로 韓 잠재성장률 2.5%까지\"…미래대응기금 환영 속...",
-     "link": "https://www.newspim.com/news/view/20261117001075",
-     "host": "newspim.com",
-     "at": "2026-11-17T07:00:00.000Z"
-    },
-    {
-     "title": "IMF, 韓 성장률 3.3%→3.9% 전망…물가 불안에 통화·재정 '긴축' 주문",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=04323046645646704&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-17T06:51:00.000Z"
-    },
-    {
-     "title": "IMF \"올해 韓 성장률 3.9% 전망… 고물가에 통화·재정 긴축 중요\"",
-     "link": "https://www.hankookilbo.com/news/article/A2026111714310002701?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-17T06:31:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 21,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.27,
-     "unit": "%",
-     "z": -1.3
-    },
-    "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
@@ -619,129 +620,73 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
   {
-   "id": "px29d9",
-   "title": "[월가 영수증] 엔비디아(NVDA) 실적 앞둔 美 선물 약세… 소매판매·금리...",
-   "firstSeen": "2026-11-17T12:42:00.000Z",
-   "lastSeen": "2026-11-17T19:16:00.000Z",
+   "id": "19kpmdo",
+   "title": "뉴욕증시 혼조세 출발… 나스닥 강보합 vs 다우 0.70% 하락",
+   "firstSeen": "2026-11-17T14:38:00.000Z",
+   "lastSeen": "2026-11-17T15:33:00.000Z",
    "count": 6,
-   "sources": 5,
+   "sources": 6,
    "topics": [
-    "rates"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "엔비디아가 누른 코스피, 실적이 만회할까",
-     "link": "https://www.mt.co.kr/stock/2026/11/18/2026111719550672404",
-     "host": "mt.co.kr",
-     "at": "2026-11-17T19:16:00.000Z"
+     "title": "뉴욕 증시, 엔비디아 실적 발표 주시하며 하락 출발",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611180033326168",
+     "host": "ytn.co.kr",
+     "at": "2026-11-17T15:33:00.000Z"
     },
     {
-     "title": "[뉴욕증시 개장] 엔비디아 실적 앞두고 3대 지수 하락…다우 0.7%↓",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94565",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-17T15:52:00.000Z"
+     "title": "[속보] 미국 뉴욕증시 일제히 하락…다우 317포인트 밀리고 나스닥 약보...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627937",
+     "host": "cbci.co.kr",
+     "at": "2026-11-17T15:00:00.000Z"
     },
     {
-     "title": "뉴욕증시, 엔비디아 실적 앞두고 방향 탐색…3대 지수 약세",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101448",
-     "host": "newsian.co.kr",
-     "at": "2026-11-17T15:14:00.000Z"
+     "title": "[뉴욕개장] 나스닥 0.07% 상승 출발…엔비디아 실적 앞두고 혼조세",
+     "link": "https://www.news1.kr/world/usa-canada/6357337",
+     "host": "news1.kr",
+     "at": "2026-11-17T14:50:00.000Z"
     },
     {
-     "title": "미국증시 장초반 하락…수입물가 1.1%·엔비디아 실적 경계, 다우 0.66%↓",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16279319",
-     "host": "topstarnews.net",
+     "title": "뉴욕증시, 엔비디아 실적 발표 대기하며 하락 출발",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445216",
+     "host": "news.einfomax.co.kr",
      "at": "2026-11-17T14:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
-    ]
-   }
-  },
-  {
-   "id": "vkiebu",
-   "title": "[브라질증시] 이보베스파 16만9000선 하회…재정 불확실성·유가 급락에...",
-   "firstSeen": "2026-11-16T22:41:00.000Z",
-   "lastSeen": "2026-11-17T16:46:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아 급락에 뉴욕증시 동반 하락",
-     "link": "https://www.radiokorea.com/news/article.php?uid=509814",
-     "host": "radiokorea.com",
-     "at": "2026-11-17T16:46:00.000Z"
-    },
-    {
-     "title": "미국증시 전망, 나스닥 2.49% 급락 뒤 반등 시도…엔비디아 실적·10년물...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16279308",
-     "host": "topstarnews.net",
-     "at": "2026-11-17T14:06:00.000Z"
-    },
-    {
-     "title": "엔비디아 불확실성에 뉴욕증시 급락…나스닥 2.49%↓",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=327087",
-     "host": "thepublic.kr",
-     "at": "2026-11-17T06:20:00.000Z"
-    },
-    {
-     "title": "[브라질증시] 이보베스파 16만9000선 하회…재정 불확실성·유가 급락에...",
-     "link": "https://www.newspim.com/news/view/20261117000026",
-     "host": "newspim.com",
-     "at": "2026-11-16T22:41:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.27,
-     "unit": "%",
-     "z": -1.3
-    },
-    "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
@@ -787,56 +732,51 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 17,
+    "score": 20,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
   {
-   "id": "1x0tnst",
-   "title": "젠슨 황, \"이사회 원하면 CEO 복귀하겠다\" 입장 밝혀",
-   "firstSeen": "2026-11-17T16:21:00.000Z",
-   "lastSeen": "2026-11-17T19:37:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "vkiebu",
+   "title": "[브라질증시] 이보베스파 16만9000선 하회…재정 불확실성·유가 급락에...",
+   "firstSeen": "2026-11-16T22:41:00.000Z",
+   "lastSeen": "2026-11-17T16:46:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "trade"
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "젠슨 황 “이사회가 원하면 복귀”…사임 닷새 만에 입 열었다",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01226726645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-17T19:37:00.000Z"
+     "title": "엔비디아 급락에 뉴욕증시 동반 하락",
+     "link": "https://www.radiokorea.com/news/article.php?uid=509814",
+     "host": "radiokorea.com",
+     "at": "2026-11-17T16:46:00.000Z"
     },
     {
-     "title": "젠슨 황 \"부르면 돌아갈 것\"…\"엔비디아 이사회, 복귀 검토 안 해\"",
-     "link": "https://www.newspim.com/news/view/20261118000025",
+     "title": "엔비디아 불확실성에 뉴욕증시 급락…나스닥 2.49%↓",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=327087",
+     "host": "thepublic.kr",
+     "at": "2026-11-17T06:20:00.000Z"
+    },
+    {
+     "title": "[브라질증시] 이보베스파 16만9000선 하회…재정 불확실성·유가 급락에...",
+     "link": "https://www.newspim.com/news/view/20261117000026",
      "host": "newspim.com",
-     "at": "2026-11-17T18:45:00.000Z"
-    },
-    {
-     "title": "[전문]닷새만에 침묵 깬 젠슨 황 \"이사회가 원하면 복귀\"",
-     "link": "https://www.hankyung.com/article/202611183159i",
-     "host": "hankyung.com",
-     "at": "2026-11-17T17:32:00.000Z"
-    },
-    {
-     "title": "젠슨 황, \"이사회 원하면 CEO 복귀하겠다\" 입장 밝혀",
-     "link": "https://www.ajunews.com/view/20261118021031661",
-     "host": "ajunews.com",
-     "at": "2026-11-17T17:14:00.000Z"
+     "at": "2026-11-16T22:41:00.000Z"
     }
    ],
    "assess": {
@@ -848,12 +788,12 @@
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
@@ -892,67 +832,116 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 14,
+    "score": 17,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
     ]
    }
   },
   {
-   "id": "p61kno",
-   "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
-   "firstSeen": "2026-11-17T05:28:00.000Z",
-   "lastSeen": "2026-11-17T12:32:00.000Z",
+   "id": "ige8r9",
+   "title": "코스피 종가, 9개월만 5000선 붕괴...\"투심냉각, 저점매수보단 유지\"",
+   "firstSeen": "2026-11-17T06:34:00.000Z",
+   "lastSeen": "2026-11-17T15:00:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "market"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "지슨·인디에프 29%대 급등…코스피 5천선 붕괴",
-     "link": "http://www.kjdaily.com/article.php?aid=1794918617692714276",
-     "host": "kjdaily.com",
-     "at": "2026-11-17T12:32:00.000Z"
+     "title": "코스피, 9개월 만에 종가 5,000선 붕괴… 'AI 흔들·수급 공백·고금리' ...",
+     "link": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=435637",
+     "host": "dailysportshankook.co.kr",
+     "at": "2026-11-17T15:00:00.000Z"
     },
     {
-     "title": "[주식마감] 'AI 시험 부정행위 논란'에 지슨 이틀 연속 상한가… 인디에...",
-     "link": "https://www.ggilbo.com/news/articleView.html?idxno=1193787",
-     "host": "ggilbo.com",
-     "at": "2026-11-17T10:40:00.000Z"
+     "title": "코스피, 반도체 이슈에 5000선 '붕괴'...종가 기준 9개월 만",
+     "link": "https://www.betanews.net/article/view/beta202611170140",
+     "host": "betanews.net",
+     "at": "2026-11-17T14:04:00.000Z"
     },
     {
-     "title": "[오늘의 특징주] AI 부정행위 대책에 지슨 급등...텔레칩스·가온칩스도...",
-     "link": "https://www.ppss.kr/news/articleView.html?idxno=321356",
-     "host": "ppss.kr",
-     "at": "2026-11-17T05:28:00.000Z"
+     "title": "코스피 종가, 9개월만 5000선 붕괴...\"투심냉각, 저점매수보단 유지\"",
+     "link": "https://www.pennmike.com/news/articleView.html?idxno=132058",
+     "host": "pennmike.com",
+     "at": "2026-11-17T07:38:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 14,
+    "score": 17,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
-     "change": -1.27,
+     "change": -1.44,
      "unit": "%",
-     "z": -1.3
+     "z": -1.5
     },
     "why": [
-     "S&P 500 -1.27%"
+     "S&P 500 -1.44%"
+    ]
+   }
+  },
+  {
+   "id": "bgi1yb",
+   "title": "미 세인트루이스 연은 총재 \"내년 봄까지 최대 4차례 금리 인상 필요\"",
+   "firstSeen": "2026-11-17T14:02:00.000Z",
+   "lastSeen": "2026-11-17T18:00:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "해맥 美 연은 총재, 최종 금리 상향 가능성 시사",
+     "link": "https://www.g-enews.com/view.php?ud=2026111718241322399a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-17T18:00:00.000Z"
+    },
+    {
+     "title": "세인트루이스 연은 총재 \"내년 봄 전까지 여러 차례 금리 인상 필요\"",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445217",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-17T14:48:00.000Z"
+    },
+    {
+     "title": "미 세인트루이스 연은 총재 \"내년 봄까지 최대 4차례 금리 인상 필요\"",
+     "link": "https://www.newspim.com/news/view/20261117001383",
+     "host": "newspim.com",
+     "at": "2026-11-17T14:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 17,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.44,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "S&P 500 -1.44%"
     ]
    }
   }
