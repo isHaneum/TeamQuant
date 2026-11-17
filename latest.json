@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-17T03:47:48.302Z",
+ "updatedAt": "2026-11-17T04:15:58.521Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 5038.49,
-   "change": -1.22,
-   "z": -0.4,
+   "last": 4993.72,
+   "change": -2.09,
+   "z": -0.7,
    "sd": 2.9231269293312696,
    "source": "네이버 현재가",
    "live": true,
@@ -24,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 659.83,
-   "change": -0.87,
-   "z": -0.3,
+   "last": 654,
+   "change": -1.75,
+   "z": -0.6,
    "sd": 2.724793547207968,
    "source": "네이버 현재가",
    "live": true,
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 1337.93994140625,
-   "change": 0.35,
-   "z": 0.6,
+   "last": 1337.3299560546875,
+   "change": 0.31,
+   "z": 0.5,
    "sd": 0.6309606838243439,
    "source": "Yahoo"
   },
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.08000183105469,
-   "change": -0.75,
+   "last": 84.9800033569336,
+   "change": -0.86,
    "z": -0.3,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3876.60009765625,
-   "change": 0.61,
-   "z": 0.5,
+   "last": 3871.60009765625,
+   "change": 0.48,
+   "z": 0.4,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -121,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 0,
-  "politics": -0.3,
-  "rates": 0.7,
+  "war": -0.3,
+  "politics": -0.4,
+  "rates": 0.5,
   "trade": 0.1,
   "fx": -0.2,
-  "energy": 0.2,
+  "energy": -0.1,
   "market": 0.9,
   "credit": 0.1,
   "disaster": 0,
@@ -134,17 +134,17 @@
  },
  "rates": {
   "war": {
-   "rate": 1.4,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.2,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.3,
+   "rate": 2.9,
    "saturated": 0,
    "queries": 3
   },
@@ -159,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3.3,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 1
   },
@@ -185,6 +185,53 @@
   }
  },
  "issues": [
+  {
+   "id": "w1bb7g",
+   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
+   "firstSeen": "2026-11-16T18:02:00.000Z",
+   "lastSeen": "2026-11-17T04:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "연준 이사 “AI가 뱅크런 부를 수도”",
+     "link": "https://www.naeil.com/news/read/609056?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-17T04:02:00.000Z"
+    },
+    {
+     "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
+     "link": "https://www.g-enews.com/view.php?ud=2026111620180311479a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-16T18:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 52,
+    "spike": 0.5,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
   {
    "id": "1pwdj95",
    "title": "[기자수첩] 사이드카, 경보음은 죄가 없다",
@@ -289,8 +336,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
-    "spike": 0.7,
+    "score": 49,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -301,62 +348,6 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "11hw36e",
-   "title": "코스피 장중 5000붕괴 … 젠슨황 여파에 美 반도체 5% 급락",
-   "firstSeen": "2026-11-16T23:04:00.000Z",
-   "lastSeen": "2026-11-17T02:55:00.000Z",
-   "count": 10,
-   "sources": 8,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아·AI 규제 투매 여파...코스피, 사흘 째 하락",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611171155331063",
-     "host": "ytn.co.kr",
-     "at": "2026-11-17T02:55:00.000Z"
-    },
-    {
-     "title": "[올댓차이나] 홍콩 증시, 美 반도체주 급락 여파로 내림세… H주 0.95%↓",
-     "link": "https://www.newsis.com/view/NISX20261117_0003871326",
-     "host": "newsis.com",
-     "at": "2026-11-17T02:35:00.000Z"
-    },
-    {
-     "title": "삼성전자 주가 장중 2%대 내려, 젠슨 황 사임 여파에 미국 반도체주 약...",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452160",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-17T02:24:00.000Z"
-    },
-    {
-     "title": "미 AI주 투매 충격에 장중 5천선 붕괴",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611171053454440",
-     "host": "ytn.co.kr",
-     "at": "2026-11-17T01:53:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 44,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
      "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
@@ -474,6 +465,62 @@
    }
   },
   {
+   "id": "11hw36e",
+   "title": "코스피 장중 5000붕괴 … 젠슨황 여파에 美 반도체 5% 급락",
+   "firstSeen": "2026-11-16T23:04:00.000Z",
+   "lastSeen": "2026-11-17T02:55:00.000Z",
+   "count": 7,
+   "sources": 6,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아·AI 규제 투매 여파...코스피, 사흘 째 하락",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611171155331063",
+     "host": "ytn.co.kr",
+     "at": "2026-11-17T02:55:00.000Z"
+    },
+    {
+     "title": "[올댓차이나] 홍콩 증시, 美 반도체주 급락 여파로 내림세… H주 0.95%↓",
+     "link": "https://www.newsis.com/view/NISX20261117_0003871326",
+     "host": "newsis.com",
+     "at": "2026-11-17T02:35:00.000Z"
+    },
+    {
+     "title": "삼성전자 주가 장중 2%대 내려, 젠슨 황 사임 여파에 미국 반도체주 약...",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452160",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-17T02:24:00.000Z"
+    },
+    {
+     "title": "코스피 장 초반 5000선 하회…미국 반도체주 급락 여파",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3754256",
+     "host": "gukjenews.com",
+     "at": "2026-11-17T01:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "1b2ix70",
    "title": "젠슨 황發 AI 매도세 지속...반도체지수 5.3% 급락 [데일리국제금융]",
    "firstSeen": "2026-11-16T21:56:00.000Z",
@@ -530,6 +577,62 @@
    }
   },
   {
+   "id": "mjx3r8",
+   "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
+   "firstSeen": "2026-11-16T05:51:00.000Z",
+   "lastSeen": "2026-11-17T04:06:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황 복귀, 트럼프는 찬성·이사회는 반대",
+     "link": "https://www.naeil.com/news/read/609059?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-17T04:06:00.000Z"
+    },
+    {
+     "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
+     "link": "https://www.sedaily.com/article/20115281?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-17T01:29:00.000Z"
+    },
+    {
+     "title": "\"엔비디아 이사회, 젠슨 황 복귀 논의 없다\"…엔비디아 4%대 급락·AI주 ...",
+     "link": "https://www.econovill.com/news/articleView.html?idxno=757478",
+     "host": "econovill.com",
+     "at": "2026-11-16T23:56:00.000Z"
+    },
+    {
+     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
+     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-16T05:51:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.92,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -1.92%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "1ferw0v",
    "title": "블룸버그 \"내년 韓성장률 3.6%…반도체 생산 빠르게 늘면 4% 가능\"",
    "firstSeen": "2026-11-16T08:19:00.000Z",
@@ -569,8 +672,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 0.7,
+    "score": 33,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -585,67 +688,10 @@
    }
   },
   {
-   "id": "zuamn4",
-   "title": "[국제금융 브리핑] 미국, 중국 AI칩 원격접속도 통제...S&P500 1.92% 하락",
-   "firstSeen": "2026-11-16T17:44:00.000Z",
-   "lastSeen": "2026-11-17T03:16:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war",
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AI칩 중국 원격접속 차단‥'젠슨 황 파문' 뒷북조치",
-     "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6866253_36967.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-17T03:16:00.000Z"
-    },
-    {
-     "title": "미국, AI 반도체 중국 원격 접속 차단…엔비디아 “안보 문제 조사”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8714888&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-17T03:16:00.000Z"
-    },
-    {
-     "title": "젠슨 황 스캔들 후폭풍···미, 중국의 AI 반도체 원격 이용까지 통제",
-     "link": "https://www.khan.co.kr/article/202611171149001",
-     "host": "khan.co.kr",
-     "at": "2026-11-17T02:49:00.000Z"
-    },
-    {
-     "title": "[국제금융 브리핑] 미국, 중국 AI칩 원격접속도 통제...S&P500 1.92% 하락",
-     "link": "https://www.tokenpost.kr/news/economy/439445",
-     "host": "tokenpost.kr",
-     "at": "2026-11-16T23:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "mjx3r8",
-   "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-   "firstSeen": "2026-11-16T05:51:00.000Z",
-   "lastSeen": "2026-11-17T01:29:00.000Z",
+   "id": "egd8y5",
+   "title": "[특징주] 계양전기, 현대차 5개 차종 부품 공급사 선정 소식에 상한가 ...",
+   "firstSeen": "2026-11-17T01:22:00.000Z",
+   "lastSeen": "2026-11-17T04:04:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
@@ -654,22 +700,22 @@
    "critical": [],
    "links": [
     {
-     "title": "복귀 노리는 젠슨 황 vs “쇄신 필요” 베선트…엔비디아 둘러싼 충돌",
-     "link": "https://www.sedaily.com/article/20115281?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-17T01:29:00.000Z"
+     "title": "코스피 옵토닉스 상장일·계양전기 상한가",
+     "link": "https://www.bntnews.co.kr/article/view/bnt202611170118",
+     "host": "bntnews.co.kr",
+     "at": "2026-11-17T04:04:00.000Z"
     },
     {
-     "title": "\"엔비디아 이사회, 젠슨 황 복귀 논의 없다\"…엔비디아 4%대 급락·AI주 ...",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=757478",
-     "host": "econovill.com",
-     "at": "2026-11-16T23:56:00.000Z"
+     "title": "[오전장] 옵토닉스 183% 급등·계양전기 상한가",
+     "link": "http://www.kjdaily.com/article.php?aid=1794886866692595276",
+     "host": "kjdaily.com",
+     "at": "2026-11-17T03:42:00.000Z"
     },
     {
-     "title": "[셀럽의 한 수] 젠슨 황, 엔비디아 복귀? 주가 추가 하락 경고",
-     "link": "https://biz.sbs.co.kr/article_hub/20000346686?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-16T05:51:00.000Z"
+     "title": "[특징주] 계양전기, 현대차 5개 차종 부품 공급사 선정 소식에 상한가 ...",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=303842",
+     "host": "widedaily.com",
+     "at": "2026-11-17T01:22:00.000Z"
     }
    ],
    "assess": {
@@ -877,54 +923,21 @@
      "S&P 500 -1.92%(평소의 2.1배)"
     ]
    }
-  },
-  {
-   "id": "19bcck9",
-   "title": "엔비디아 고점서 35% 급락…공매도 평가이익 240억달러",
-   "firstSeen": "2026-11-16T21:29:00.000Z",
-   "lastSeen": "2026-11-17T01:37:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "fx",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아 고점서 35% 빠지는 동안…공매도 세력 3조5천억 챙겼다",
-     "link": "https://www.imaeil.com/page/view/2026111710233111178",
-     "host": "imaeil.com",
-     "at": "2026-11-17T01:37:00.000Z"
-    },
-    {
-     "title": "엔비디아 고점서 35% 급락…공매도 평가이익 240억달러",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1731908",
-     "host": "ebn.co.kr",
-     "at": "2026-11-16T23:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.92,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -1.92%(평소의 2.1배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-17T04:15:58.521Z",
+   "id": "w1bb7g",
+   "level": "caution",
+   "title": "AI 매매 알고리즘 쏠림…美 연준 바 이사, 금융시장 혼란 경고",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.92%(평소의 2.1배)"
+   ],
+   "link": "https://www.naeil.com/news/read/609056?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-16T23:27:19.592Z",
    "id": "dzv7s1",
@@ -1151,18 +1164,6 @@
     "미 10년 금리 +5.1bp"
    ],
    "link": "https://www.mk.co.kr/article/12209158",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-15T14:11:56.075Z",
-   "id": "16gcimi",
-   "level": "caution",
-   "title": "[국제유가] 트럼프 \"이란 합의 불필요\"…지정학적 긴장에 '혼조세'",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -0.4%"
-   ],
-   "link": "http://coinreaders.com/270390",
    "delivered": false
   }
  ],
