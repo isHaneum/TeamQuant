@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T10:14:13.635Z",
+ "updatedAt": "2026-11-18T10:27:19.939Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1331.9300537109375,
-   "change": -0.28,
-   "z": -0.4,
+   "last": 1331.47998046875,
+   "change": -0.31,
+   "z": -0.5,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 83.36000061035156,
-   "change": -3.08,
+   "last": 83.38999938964844,
+   "change": -3.05,
    "z": -1.1,
    "sd": 2.889304327196342,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 3777,
-   "change": -2.26,
-   "z": -1.7,
+   "last": 3774.699951171875,
+   "change": -2.32,
+   "z": -1.8,
    "sd": 1.3147264686671092,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 23.540000915527344,
-   "change": -7.54,
+   "last": 23.739999771118164,
+   "change": -6.76,
    "z": -0.6,
    "sd": 12.0264913975254,
    "source": "Yahoo",
@@ -120,7 +120,7 @@
  ],
  "spikes": {
   "war": 0.1,
-  "politics": 1,
+  "politics": 0.3,
   "rates": 1.6,
   "trade": -0.1,
   "fx": -0.1,
@@ -128,7 +128,7 @@
   "market": -0.1,
   "credit": 0.3,
   "disaster": 0,
-  "policy": 0.8
+  "policy": 0.2
  },
  "rates": {
   "war": {
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.9,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.7,
+   "rate": 2.6,
    "saturated": 1,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.7,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -227,19 +227,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 56,
+    "score": 58,
     "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.26,
+     "change": -2.32,
      "unit": "%",
-     "z": -1.7
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.26%"
+     "금 -2.32%"
     ]
    }
   },
@@ -382,6 +382,47 @@
    }
   },
   {
+   "id": "1yg5c4w",
+   "title": "미군, 이란 남부 케슘섬 공습… 기간시설 마비 노린 ‘정전 폭탄’ 투하...",
+   "firstSeen": "2026-11-18T05:43:00.000Z",
+   "lastSeen": "2026-11-18T05:43:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "미군, 이란 남부 케슘섬 공습… 기간시설 마비 노린 ‘정전 폭탄’ 투하...",
+     "link": "https://biz.chosun.com/international/international_general/2026/11/18/UIL6U4DAORDFFNWN24RUCHGJYU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-18T05:43:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 41,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.32,
+     "unit": "%",
+     "z": -1.8
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.32%"
+    ]
+   }
+  },
+  {
    "id": "1apc2kn",
    "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
    "firstSeen": "2026-11-17T23:28:00.000Z",
@@ -405,19 +446,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 39,
+    "score": 40,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.26,
+     "change": -2.32,
      "unit": "%",
-     "z": -1.7
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.26%"
+     "금 -2.32%"
     ]
    }
   },
@@ -445,100 +486,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 39,
+    "score": 40,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.26,
+     "change": -2.32,
      "unit": "%",
-     "z": -1.7
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.26%"
-    ]
-   }
-  },
-  {
-   "id": "1yg5c4w",
-   "title": "미군, 이란 남부 케슘섬 공습… 기간시설 마비 노린 ‘정전 폭탄’ 투하...",
-   "firstSeen": "2026-11-18T05:43:00.000Z",
-   "lastSeen": "2026-11-18T05:43:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "미군, 이란 남부 케슘섬 공습… 기간시설 마비 노린 ‘정전 폭탄’ 투하...",
-     "link": "https://biz.chosun.com/international/international_general/2026/11/18/UIL6U4DAORDFFNWN24RUCHGJYU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-18T05:43:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 39,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.26,
-     "unit": "%",
-     "z": -1.7
-    },
-    "why": [
-     "핵심 단어",
-     "금 -2.26%"
-    ]
-   }
-  },
-  {
-   "id": "1x2kor1",
-   "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
-   "firstSeen": "2026-11-18T02:00:00.000Z",
-   "lastSeen": "2026-11-18T02:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
-     "link": "https://www.kbmaeil.com/article/20261117500771",
-     "host": "kbmaeil.com",
-     "at": "2026-11-18T02:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -1.03%"
+     "금 -2.32%"
     ]
    }
   },
@@ -583,63 +543,47 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
+    "score": 32,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.26,
+     "change": -2.32,
      "unit": "%",
-     "z": -1.7
+     "z": -1.8
     },
     "why": [
-     "금 -2.26%"
+     "금 -2.32%"
     ]
    }
   },
   {
-   "id": "vo389f",
-   "title": "트럼프, 중국 선전 도착...시진핑 직접 영접",
-   "firstSeen": "2026-11-18T09:19:00.000Z",
-   "lastSeen": "2026-11-18T10:04:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "id": "1x2kor1",
+   "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
+   "firstSeen": "2026-11-18T02:00:00.000Z",
+   "lastSeen": "2026-11-18T02:00:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "politics"
+    "credit"
    ],
-   "critical": [],
+   "critical": [
+    "credit"
+   ],
    "links": [
     {
-     "title": "시진핑, 中 도착 트럼프 공항서 직접 영접…악수·포옹도",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=782899",
-     "host": "slist.kr",
-     "at": "2026-11-18T10:04:00.000Z"
-    },
-    {
-     "title": "트럼프, 6개월 만에 중국 방문…시진핑 직접 영접",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2020403",
-     "host": "m-i.kr",
-     "at": "2026-11-18T10:00:00.000Z"
-    },
-    {
-     "title": "시진핑, 공항까지 나가 트럼프 영접…군용기 환영 비행도",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852567&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-18T09:59:00.000Z"
-    },
-    {
-     "title": "'등 토닥, 포옹'…시진핑, 中 도착 트럼프 공항서 직접 영접",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611180179&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-18T09:57:00.000Z"
+     "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
+     "link": "https://www.kbmaeil.com/article/20261117500771",
+     "host": "kbmaeil.com",
+     "at": "2026-11-18T02:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 1,
+    "score": 32,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -649,7 +593,156 @@
      "z": -1.1
     },
     "why": [
+     "핵심 단어",
      "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "1j1ncfi",
+   "title": "선전 APEC 개막...첫 미중러 정상회담, 북미 접촉 여부에도 촉각",
+   "firstSeen": "2026-11-18T05:29:00.000Z",
+   "lastSeen": "2026-11-18T07:58:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics",
+    "rates",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'제2의 얄타' 우려 속 미중러 담판…북미 접촉은 여전히 안갯속",
+     "link": "https://www.mt.co.kr/world/2026/11/18/2026111815084279721",
+     "host": "mt.co.kr",
+     "at": "2026-11-18T07:58:00.000Z"
+    },
+    {
+     "title": "선전 APEC 개막...첫 미중러 정상회담, 북미 접촉 여부에도 촉각",
+     "link": "https://www.fnnews.com/news/202611181336037478",
+     "host": "fnnews.com",
+     "at": "2026-11-18T05:29:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.32,
+     "unit": "%",
+     "z": -1.8
+    },
+    "why": [
+     "금 -2.32%"
+    ]
+   }
+  },
+  {
+   "id": "7qr52c",
+   "title": "사상 초유의 미중러 정상회담... '얄타'가 거론되는 이유 [김종성의 '히...",
+   "firstSeen": "2026-11-18T05:41:00.000Z",
+   "lastSeen": "2026-11-18T07:38:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "rates",
+    "disaster"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[사사건건] 첫 미중러 정상회담, 성과 예상해보면?",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8716213&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-18T07:38:00.000Z"
+    },
+    {
+     "title": "사상 초유의 미중러 정상회담... '얄타'가 거론되는 이유 [김종성의 '히...",
+     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003286066&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+     "host": "ohmynews.com",
+     "at": "2026-11-18T05:41:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.32,
+     "unit": "%",
+     "z": -1.8
+    },
+    "why": [
+     "금 -2.32%"
+    ]
+   }
+  },
+  {
+   "id": "1aggl0i",
+   "title": "국제유가, 미·이란 무력 충돌에 소폭 상승⋯브렌트유 93달러대",
+   "firstSeen": "2026-11-17T23:16:00.000Z",
+   "lastSeen": "2026-11-18T08:46:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "war",
+    "fx",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "미·이란 재차 충돌에 브렌트유·WTI 가격 상승",
+     "link": "http://www.e2news.com/news/articleView.html?idxno=336239",
+     "host": "e2news.com",
+     "at": "2026-11-18T08:46:00.000Z"
+    },
+    {
+     "title": "중동 분쟁 지속에 유가 소폭 올라, 공급 과잉 전망은 상승폭 제한",
+     "link": "http://www.e-platform.net/news/articleView.html?idxno=107086",
+     "host": "e-platform.net",
+     "at": "2026-11-18T00:28:00.000Z"
+    },
+    {
+     "title": "국제유가 중동 군사적 긴장 고조에 상승 흐름",
+     "link": "http://www.srtimes.kr/news/articleView.html?idxno=217914",
+     "host": "srtimes.kr",
+     "at": "2026-11-18T00:02:00.000Z"
+    },
+    {
+     "title": "[국제유가] 중동 긴장 고조…소폭 상승",
+     "link": "http://www.segyebiz.com/newsView/20261118503506?OutUrl=naver",
+     "host": "segyebiz.com",
+     "at": "2026-11-17T23:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.32,
+     "unit": "%",
+     "z": -1.8
+    },
+    "why": [
+     "금 -2.32%"
     ]
    }
   },
@@ -710,210 +803,97 @@
    }
   },
   {
-   "id": "1j1ncfi",
-   "title": "선전 APEC 개막...첫 미중러 정상회담, 북미 접촉 여부에도 촉각",
-   "firstSeen": "2026-11-18T05:29:00.000Z",
-   "lastSeen": "2026-11-18T07:58:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "9re99a",
+   "title": "가상자산 침체 직격탄, 업비트-빗썸 예치금 9개월 새 2조5000억 줄며 30% ...",
+   "firstSeen": "2026-11-18T00:50:00.000Z",
+   "lastSeen": "2026-11-18T00:50:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
     "war",
-    "politics",
-    "rates",
-    "trade"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "'제2의 얄타' 우려 속 미중러 담판…북미 접촉은 여전히 안갯속",
-     "link": "https://www.mt.co.kr/world/2026/11/18/2026111815084279721",
-     "host": "mt.co.kr",
-     "at": "2026-11-18T07:58:00.000Z"
-    },
-    {
-     "title": "선전 APEC 개막...첫 미중러 정상회담, 북미 접촉 여부에도 촉각",
-     "link": "https://www.fnnews.com/news/202611181336037478",
-     "host": "fnnews.com",
-     "at": "2026-11-18T05:29:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.26,
-     "unit": "%",
-     "z": -1.7
-    },
-    "why": [
-     "금 -2.26%"
-    ]
-   }
-  },
-  {
-   "id": "7qr52c",
-   "title": "사상 초유의 미중러 정상회담... '얄타'가 거론되는 이유 [김종성의 '히...",
-   "firstSeen": "2026-11-18T05:41:00.000Z",
-   "lastSeen": "2026-11-18T07:38:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "rates",
-    "disaster"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[사사건건] 첫 미중러 정상회담, 성과 예상해보면?",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8716213&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-18T07:38:00.000Z"
-    },
-    {
-     "title": "사상 초유의 미중러 정상회담... '얄타'가 거론되는 이유 [김종성의 '히...",
-     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003286066&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
-     "host": "ohmynews.com",
-     "at": "2026-11-18T05:41:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.26,
-     "unit": "%",
-     "z": -1.7
-    },
-    "why": [
-     "금 -2.26%"
-    ]
-   }
-  },
-  {
-   "id": "1aggl0i",
-   "title": "국제유가, 미·이란 무력 충돌에 소폭 상승⋯브렌트유 93달러대",
-   "firstSeen": "2026-11-17T23:16:00.000Z",
-   "lastSeen": "2026-11-18T08:46:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "war",
-    "fx",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미·이란 재차 충돌에 브렌트유·WTI 가격 상승",
-     "link": "http://www.e2news.com/news/articleView.html?idxno=336239",
-     "host": "e2news.com",
-     "at": "2026-11-18T08:46:00.000Z"
-    },
-    {
-     "title": "중동 분쟁 지속에 유가 소폭 올라, 공급 과잉 전망은 상승폭 제한",
-     "link": "http://www.e-platform.net/news/articleView.html?idxno=107086",
-     "host": "e-platform.net",
-     "at": "2026-11-18T00:28:00.000Z"
-    },
-    {
-     "title": "국제유가 중동 군사적 긴장 고조에 상승 흐름",
-     "link": "http://www.srtimes.kr/news/articleView.html?idxno=217914",
-     "host": "srtimes.kr",
-     "at": "2026-11-18T00:02:00.000Z"
-    },
-    {
-     "title": "[국제유가] 중동 긴장 고조…소폭 상승",
-     "link": "http://www.segyebiz.com/newsView/20261118503506?OutUrl=naver",
-     "host": "segyebiz.com",
-     "at": "2026-11-17T23:44:00.000Z"
+     "title": "가상자산 침체 직격탄, 업비트-빗썸 예치금 9개월 새 2조5000억 줄며 30% ...",
+     "link": "https://hbnpress.com/news/view/1065573893176748",
+     "host": "hbnpress.com",
+     "at": "2026-11-18T00:50:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 28,
-    "spike": 0.1,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.26,
+     "change": -2.32,
      "unit": "%",
-     "z": -1.7
+     "z": -1.8
     },
     "why": [
-     "금 -2.26%"
+     "금 -2.32%"
     ]
    }
   },
   {
-   "id": "gtqyyw",
-   "title": "\"수능날 착각하지 마세요\"...프리마켓은 휴장, 정규장은 10시부터",
-   "firstSeen": "2026-11-18T09:07:00.000Z",
-   "lastSeen": "2026-11-18T09:53:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "1ywt3j1",
+   "title": "'꿈의 9000' 축포 5개월 만에 반토막…'반도체 착시'가 부른 코스피 비극",
+   "firstSeen": "2026-11-18T05:02:00.000Z",
+   "lastSeen": "2026-11-18T05:02:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "rates"
+    "war",
+    "rates",
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "수능일 주식시장 오전 10시 개장…넥스트레이드 프리마켓은 쉰다",
-     "link": "https://www.kizmom.com/news/articleView.html?idxno=114056",
-     "host": "kizmom.com",
-     "at": "2026-11-18T09:53:00.000Z"
-    },
-    {
-     "title": "국내 증시 정규장, 수능일은 오전 10시 개장",
-     "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2494325",
-     "host": "enewstoday.co.kr",
-     "at": "2026-11-18T09:45:00.000Z"
-    },
-    {
-     "title": "수능일 주식 거래 오전 10시부터…프리마켓은 휴장",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=04385366645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-18T09:13:00.000Z"
-    },
-    {
-     "title": "\"수능날 착각하지 마세요\"...프리마켓은 휴장, 정규장은 10시부터",
-     "link": "https://www.hankyung.com/article/202611185520i",
-     "host": "hankyung.com",
-     "at": "2026-11-18T09:07:00.000Z"
+     "title": "'꿈의 9000' 축포 5개월 만에 반토막…'반도체 착시'가 부른 코스피 비극",
+     "link": "https://www.etoday.co.kr/news/view/2649686",
+     "host": "etoday.co.kr",
+     "at": "2026-11-18T05:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
+    "score": 28,
     "spike": 1.6,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.32,
      "unit": "%",
-     "z": -1.1
+     "z": -1.8
     },
     "why": [
-     "S&P 500 -1.03%"
+     "금 -2.32%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-18T10:27:19.939Z",
+   "id": "9hxasb",
+   "level": "caution",
+   "title": "'루피아화 가치 사상 최저' 인니, 기준금리 0.25%p 깜짝 인상",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000347398?division=NAVER",
+   "delivered": false
+  },
   {
    "at": "2026-11-18T09:47:53.420Z",
    "id": "1ol9lsh",
@@ -1140,18 +1120,6 @@
     "금 -1.57%"
    ],
    "link": "https://www.etoday.co.kr/news/view/2649533",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-18T02:47:55.823Z",
-   "id": "1s0yoqn",
-   "level": "caution",
-   "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
-   "why": [
-    "핵심 단어",
-    "금 -1.57%"
-   ],
-   "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
    "delivered": false
   }
  ],
