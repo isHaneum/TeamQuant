@@ -375,7 +375,7 @@ function renderPlan(plan, saved) {
   const total = S.positions.reduce((a, p) => a + p.valueKrw, 0) + (Number.isFinite(S.cash) ? S.cash : 0);
   box.innerHTML = `${saved ? '' : '<p class="cr-note">저장한 목표가 없어 지금 비중으로 채워 두었습니다. 고친 뒤 저장하십시오.</p>'}
     <div class="table-wrap"><table class="cr-table"><thead><tr><th>종목</th><th>지금</th><th>목표</th><th></th></tr></thead><tbody>${rows.map(s => { const p = S.positions.find(x => x.symbol === s), v = plan[s], name = p?.name || v?.name || stockName(s), now = p && total ? p.valueKrw / total * 100 : 0;
-      return `<tr data-sym="${esc(s)}" data-name="${esc(name)}" data-cur="${esc(p?.currency || v?.currency || 'KRW')}"><td><b>${esc(name)}</b>${isLeveraged({ symbol: s, name }) ? '<small class="bad">레버리지·인버스</small>' : ''}</td><td>${now.toFixed(1)}%</td><td><span class="cr-in"><input type="number" class="cr-plan-in" value="${Number.isFinite(planPctOf(v)) ? planPctOf(v) : 0}" min="0" max="100" step="0.5" inputmode="decimal"><em>%</em></span></td><td>${p ? '' : '<button type="button" class="text-button cr-del">빼기</button>'}</td></tr>`; }).join('')}</tbody>
+      const core = isIndexEtf({ symbol: s, name }); return `<tr data-sym="${esc(s)}" data-name="${esc(name)}" data-cur="${esc(p?.currency || v?.currency || 'KRW')}" data-core="${core ? 1 : 0}"><td><b>${esc(name)}</b>${isLeveraged({ symbol: s, name }) ? '<small class="bad">레버리지·인버스</small>' : core ? ' <small class="cr-muted">핵심 지수 · 상한 예외</small>' : ''}</td><td>${now.toFixed(1)}%</td><td><span class="cr-in"><input type="number" class="cr-plan-in" value="${Number.isFinite(planPctOf(v)) ? planPctOf(v) : 0}" min="0" max="100" step="0.5" inputmode="decimal"><em>%</em></span></td><td>${p ? '' : '<button type="button" class="text-button cr-del">빼기</button>'}</td></tr>`; }).join('')}</tbody>
     <tfoot><tr><td>합계</td><td></td><td id="cr-plan-sum"></td><td></td></tr></tfoot></table></div>
     <form id="cr-add" class="cr-addrow"><input id="cr-add-sym" list="symbols" placeholder="종목 추가 (예: KODEX 200, SPY)" autocomplete="off"><button type="submit" class="secondary">추가</button></form>`;
   const sum = () => { const t = [...document.querySelectorAll('.cr-plan-in')].reduce((a, i) => a + (Number(i.value) || 0), 0); $('#cr-plan-sum').textContent = `${t.toFixed(1)}% · 현금 ${(100 - t).toFixed(1)}%`; $('#rl-plan-state').textContent = `${document.querySelectorAll('.cr-plan-in').length}종목 · 합계 ${t.toFixed(1)}% · 현금 ${(100 - t).toFixed(1)}%${saved ? planGateText(c.saved) : ' · 저장 전'}`; };
@@ -385,7 +385,7 @@ function renderPlan(plan, saved) {
 }
 function readPlan(rules) {
   const plan = {}, errors = [];
-  for (const tr of document.querySelectorAll('#cr-plan tbody tr')) { const v = Number(tr.querySelector('.cr-plan-in')?.value); if (v > 0) plan[tr.dataset.sym] = { pct: v, name: tr.dataset.name, currency: tr.dataset.cur }; if (v > rules.maxSingle) errors.push(`${tr.dataset.name} 목표 ${v}%가 한 종목 최대 비중 ${rules.maxSingle}%를 넘습니다.`); }
+  for (const tr of document.querySelectorAll('#cr-plan tbody tr')) { const v = Number(tr.querySelector('.cr-plan-in')?.value), core = tr.dataset.core === '1'; if (v > 0) plan[tr.dataset.sym] = { pct: v, name: tr.dataset.name, currency: tr.dataset.cur, ...(core ? { capExempt: true } : {}) }; if (!core && v > rules.maxSingle) errors.push(`${tr.dataset.name} 목표 ${v}%가 한 종목 최대 비중 ${rules.maxSingle}%를 넘습니다.`); }
   const sum = Object.values(plan).reduce((a, v) => a + v.pct, 0); if (sum > 100 - rules.minCash + 0.05) errors.push(`목표 합계 ${sum.toFixed(1)}%가 (100 − 현금 최소 ${rules.minCash}%)를 넘습니다.`);
   return { plan, errors };
 }
