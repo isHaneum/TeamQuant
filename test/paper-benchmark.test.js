@@ -82,7 +82,8 @@ test('BM2: 미국분 환율은 계좌 평가점 환율(marks.fx) — 일봉 종�
 
 test('BM3: 평가 시각에 끝난 장의 종가만 쓴다 — 지수만 든 계좌는 차이 0%p (교차 검증 F15 회귀) · 국내 16:00 KST · 미국 뉴욕 17:00(서머타임)', async () => {
   // SPY 만 든 계좌: 11-09(월) 23:50 KST 평가점의 미국 종가는 11-06(금) 600 이 마지막(11-09 종가 612 는 한국 11-10 07:00 에 나옴). 11-16 23:50 KST 는 11-13 종가 612.
-  const us = cs([['2026-11-06', 600], ['2026-11-09', 612], ['2026-11-10', 612], ['2026-11-13', 612], ['2026-11-16', 630]]), def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } });
+  // 시가가 없는 봉으로 시험한다 — 시가가 있으면 장중 평가점은 그날 시가를 쓴다(아래 'BM4 보완' 시험)
+  const us = cs([['2026-11-06', 600], ['2026-11-09', 612], ['2026-11-10', 612], ['2026-11-13', 612], ['2026-11-16', 630]]).map(({ open, ...c }) => c), def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } });
   const marks = [{ date: '2026-11-09', total: 100, fx: 1300, at: '2026-11-09T14:50:00Z' }, { date: '2026-11-16', total: 102, fx: 1300, at: '2026-11-16T14:50:00Z' }];
   const r = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : [] }) })(def, marks);
   assert.deepEqual([r.ownRetPct, r.benchRetPct, r.diffPp], [2, 2, 0], 'BM2 는 시작값으로 612(미래 값)를 써 비교선 +2.94% · 계좌 −0.94%p 로 나왔다');
@@ -90,7 +91,7 @@ test('BM3: 평가 시각에 끝난 장의 종가만 쓴다 — 지수만 든 계
   const r2 = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : [] }) })(def, marks.map(({ at, ...m }) => m));
   assert.equal(r2.diffPp, 0);
   // 국내: 16:00 KST 전 평가점은 전날 종가, 뒤면 그날 종가
-  const kr = cs([['2026-11-06', 100], ['2026-11-09', 110], ['2026-11-10', 121]]), w = { KR: 100, US: 0, cash: 0 };
+  const kr = cs([['2026-11-06', 100], ['2026-11-09', 110], ['2026-11-10', 121]]).map(({ open, ...c }) => c), w = { KR: 100, US: 0, cash: 0 };
   near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T01:00:00Z', '2026-11-10': '2026-11-10T09:00:00Z' } }).at(-1).value, 121 / 100); // 시작 10:00 KST → 11-06 종가
   near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T08:00:00Z', '2026-11-10': '2026-11-10T09:00:00Z' } }).at(-1).value, 121 / 110); // 시작 17:00 KST → 11-09 종가
   // 미국 종가가 쓰이는 시각: 겨울 = 뉴욕 17:00 EST = 22:00Z, 여름 = 17:00 EDT = 21:00Z
@@ -100,6 +101,18 @@ test('BM3: 평가 시각에 끝난 장의 종가만 쓴다 — 지수만 든 계
   // BM4: 평가점에 지수 가격이 있으면 그 날짜는 그 값(장중 평가점의 지금 가격), 없는 날짜는 BM3 그대로
   near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T08:00:00Z', '2026-11-10': '2026-11-10T02:00:00Z' }, idxMarks: [{ date: '2026-11-10', KR: 115 }] }).at(-1).value, 115 / 110); // 11:00 KST 평가점: BM3 라면 11-09 종가 110 → 0% 였다
   near(benchmarkSeries({ from: '2026-11-09', to: '2026-11-10', weights: w, krCandles: kr, markAt: { '2026-11-09': '2026-11-09T08:00:00Z', '2026-11-10': '2026-11-10T02:00:00Z' } }).at(-1).value, 1);
+});
+
+test('BM4 보완: 지수 가격이 없는 장중 평가점은 그날 시가 — 시작 평가점이 09:38 ET 라면 11-06 종가가 아니라 11-09 시가(재검증 2026-11-18)', async () => {
+  const us = [{ date: '2026-11-06', open: 598, close: 600 }, { date: '2026-11-09', open: 606, close: 612 }, { date: '2026-11-16', open: 624, close: 630 }], def = benchmarkDefinition({ SPY: { pct: 100, currency: 'USD' } });
+  const marks = [{ date: '2026-11-09', total: 100, fx: 1300, at: '2026-11-09T14:38:00Z' }, { date: '2026-11-16', total: 103, fx: 1300, at: '2026-11-16T14:50:00Z' }];
+  const r = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : [] }) })(def, marks);
+  assert.deepEqual([r.benchRetPct, r.diffPp], [2.97, 0.03], '606 → 624 (BM3 는 600 → 612 = +2% 로 개장 갭을 비교선에 더 줌)');
+  // 장이 닫힌 시각(23:00 ET 일요일)이면 끝난 장의 종가 그대로 · 시가가 없는 봉이면 종가 규칙으로
+  const r2 = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us : [] }) })(def, marks.map(m => ({ ...m, at: m.date + 'T04:00:00Z' })));
+  assert.equal(r2.benchRetPct, 2, '11-09 04:00Z = 11-08(일) 23:00 ET → 11-06 종가 · 11-16 04:00Z = 11-15(일) 23:00 ET → 11-09 종가 612');
+  const r3 = await createBenchmarkReader({ readMarket: async sym => ({ candles: sym === 'SPY' ? us.map(({ open, ...c }) => c) : [] }) })(def, marks);
+  assert.equal(r3.benchRetPct, 2);
 });
 
 test('BM4 reader: 평가점 idx(KR·US 다리)를 비교선에 쓰고 method 는 BM4', async () => {
