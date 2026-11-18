@@ -1,0 +1,435 @@
+{
+ "prereg": "PREREG-B.md",
+ "market": {
+  "SP500": {
+   "name": "S&P500 총수익",
+   "from": "1990-01-02",
+   "to": "2026-11-16",
+   "whole": {
+    "V0": {
+     "cagr": 9.48,
+     "mdd": -45.4,
+     "trades": 54,
+     "vsV0Pct": 0,
+     "cagrVsV0": 0
+    },
+    "V1": {
+     "cagr": 7.72,
+     "mdd": -18.1,
+     "trades": 224,
+     "vsV0Pct": -45.1,
+     "cagrVsV0": -1.77
+    },
+    "V3": {
+     "cagr": 9.3,
+     "mdd": -53.7,
+     "trades": 125,
+     "vsV0Pct": -5.9,
+     "cagrVsV0": -0.18
+    },
+    "V5": {
+     "cagr": 8.62,
+     "mdd": -28.4,
+     "trades": 224,
+     "vsV0Pct": -25.3,
+     "cagrVsV0": -0.86
+    },
+    "V6": {
+     "cagr": 9.61,
+     "mdd": -53.2,
+     "trades": 125,
+     "vsV0Pct": 4.2,
+     "cagrVsV0": 0.12
+    }
+   },
+   "rolling": {
+    "V1": {
+     "windows": 27,
+     "beatV0Share": 25.9,
+     "medianVsV0Pct": -16.9,
+     "worstVsV0Pct": -38.9,
+     "bestVsV0Pct": 41.3
+    },
+    "V3": {
+     "windows": 27,
+     "beatV0Share": 44.4,
+     "medianVsV0Pct": -5.7,
+     "worstVsV0Pct": -21.4,
+     "bestVsV0Pct": 13.8
+    },
+    "V5": {
+     "windows": 27,
+     "beatV0Share": 29.6,
+     "medianVsV0Pct": -9.3,
+     "worstVsV0Pct": -24.5,
+     "bestVsV0Pct": 21.8
+    },
+    "V6": {
+     "windows": 27,
+     "beatV0Share": 44.4,
+     "medianVsV0Pct": -2.6,
+     "worstVsV0Pct": -13.6,
+     "bestVsV0Pct": 7.8
+    }
+   },
+   "halves": {
+    "V1": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": -23.6,
+     "secondHalfVsV0Pct": -34.6
+    },
+    "V3": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": -24.1,
+     "secondHalfVsV0Pct": 26.6
+    },
+    "V5": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": -13.1,
+     "secondHalfVsV0Pct": -21.7
+    },
+    "V6": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": -12.7,
+     "secondHalfVsV0Pct": 16.3
+    }
+   }
+  },
+  "NDX": {
+   "name": "나스닥100(가격)",
+   "from": "1990-01-02",
+   "to": "2026-11-16",
+   "whole": {
+    "V0": {
+     "cagr": 12.11,
+     "mdd": -73.6,
+     "trades": 49,
+     "vsV0Pct": 0,
+     "cagrVsV0": 0
+    },
+    "V1": {
+     "cagr": 10.53,
+     "mdd": -45.7,
+     "trades": 253,
+     "vsV0Pct": -40.6,
+     "cagrVsV0": -1.57
+    },
+    "V3": {
+     "cagr": 12.3,
+     "mdd": -76.8,
+     "trades": 124,
+     "vsV0Pct": 6.4,
+     "cagrVsV0": 0.19
+    },
+    "V5": {
+     "cagr": 11.64,
+     "mdd": -57.5,
+     "trades": 253,
+     "vsV0Pct": -14.2,
+     "cagrVsV0": -0.47
+    },
+    "V6": {
+     "cagr": 12.59,
+     "mdd": -76.8,
+     "trades": 124,
+     "vsV0Pct": 17.1,
+     "cagrVsV0": 0.48
+    }
+   },
+   "rolling": {
+    "V1": {
+     "windows": 27,
+     "beatV0Share": 33.3,
+     "medianVsV0Pct": -25.5,
+     "worstVsV0Pct": -58.1,
+     "bestVsV0Pct": 134.8
+    },
+    "V3": {
+     "windows": 27,
+     "beatV0Share": 40.7,
+     "medianVsV0Pct": -5.4,
+     "worstVsV0Pct": -28.4,
+     "bestVsV0Pct": 39.8
+    },
+    "V5": {
+     "windows": 27,
+     "beatV0Share": 37,
+     "medianVsV0Pct": -13.9,
+     "worstVsV0Pct": -42.5,
+     "bestVsV0Pct": 77.6
+    },
+    "V6": {
+     "windows": 27,
+     "beatV0Share": 44.4,
+     "medianVsV0Pct": -1.8,
+     "worstVsV0Pct": -18.4,
+     "bestVsV0Pct": 20.8
+    }
+   },
+   "halves": {
+    "V1": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": -4.9,
+     "secondHalfVsV0Pct": -49.9
+    },
+    "V3": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": -23.9,
+     "secondHalfVsV0Pct": 28.2
+    },
+    "V5": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": 5.3,
+     "secondHalfVsV0Pct": -34.7
+    },
+    "V6": {
+     "split": "2008-06-03",
+     "firstHalfVsV0Pct": -12.7,
+     "secondHalfVsV0Pct": 17.8
+    }
+   }
+  },
+  "KOSPI": {
+   "name": "코스피(가격)",
+   "from": "1997-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "V0": {
+     "cagr": 7.06,
+     "mdd": -55.7,
+     "trades": 27,
+     "vsV0Pct": 0,
+     "cagrVsV0": 0
+    },
+    "V1": {
+     "cagr": 7.63,
+     "mdd": -37.8,
+     "trades": 235,
+     "vsV0Pct": 17.3,
+     "cagrVsV0": 0.57
+    },
+    "V3": {
+     "cagr": 8.59,
+     "mdd": -50.5,
+     "trades": 50,
+     "vsV0Pct": 52.8,
+     "cagrVsV0": 1.53
+    },
+    "V5": {
+     "cagr": 7.37,
+     "mdd": -39.2,
+     "trades": 235,
+     "vsV0Pct": 9,
+     "cagrVsV0": 0.31
+    },
+    "V6": {
+     "cagr": 8.18,
+     "mdd": -53.4,
+     "trades": 50,
+     "vsV0Pct": 36.4,
+     "cagrVsV0": 1.12
+    }
+   },
+   "rolling": {
+    "V1": {
+     "windows": 20,
+     "beatV0Share": 25,
+     "medianVsV0Pct": -18.8,
+     "worstVsV0Pct": -46.3,
+     "bestVsV0Pct": 56.4
+    },
+    "V3": {
+     "windows": 20,
+     "beatV0Share": 50,
+     "medianVsV0Pct": 0.3,
+     "worstVsV0Pct": -14.9,
+     "bestVsV0Pct": 25
+    },
+    "V5": {
+     "windows": 20,
+     "beatV0Share": 20,
+     "medianVsV0Pct": -11.6,
+     "worstVsV0Pct": -29.7,
+     "bestVsV0Pct": 27.6
+    },
+    "V6": {
+     "windows": 20,
+     "beatV0Share": 50,
+     "medianVsV0Pct": 1,
+     "worstVsV0Pct": -6.9,
+     "bestVsV0Pct": 15.8
+    }
+   },
+   "halves": {
+    "V1": {
+     "split": "2011-11-22",
+     "firstHalfVsV0Pct": 76,
+     "secondHalfVsV0Pct": -36.8
+    },
+    "V3": {
+     "split": "2011-11-22",
+     "firstHalfVsV0Pct": 27.2,
+     "secondHalfVsV0Pct": 22
+    },
+    "V5": {
+     "split": "2011-11-22",
+     "firstHalfVsV0Pct": 31.9,
+     "secondHalfVsV0Pct": -21.6
+    },
+    "V6": {
+     "split": "2011-11-22",
+     "firstHalfVsV0Pct": 18.8,
+     "secondHalfVsV0Pct": 13.2
+    }
+   }
+  },
+  "SPKRW": {
+   "name": "S&P500 원화(가격)",
+   "from": "2004-01-02",
+   "to": "2026-11-16",
+   "whole": {
+    "V0": {
+     "cagr": 8.3,
+     "mdd": -27.9,
+     "trades": 39,
+     "vsV0Pct": 0,
+     "cagrVsV0": 0
+    },
+    "V1": {
+     "cagr": 3.11,
+     "mdd": -27.6,
+     "trades": 285,
+     "vsV0Pct": -67.5,
+     "cagrVsV0": -5.19
+    },
+    "V3": {
+     "cagr": 8.22,
+     "mdd": -30,
+     "trades": 130,
+     "vsV0Pct": -1.7,
+     "cagrVsV0": -0.08
+    },
+    "V5": {
+     "cagr": 5.54,
+     "mdd": -24.5,
+     "trades": 285,
+     "vsV0Pct": -44.6,
+     "cagrVsV0": -2.76
+    },
+    "V6": {
+     "cagr": 8.42,
+     "mdd": -29.1,
+     "trades": 130,
+     "vsV0Pct": 2.5,
+     "cagrVsV0": 0.12
+    }
+   },
+   "rolling": {
+    "V1": {
+     "windows": 13,
+     "beatV0Share": 0,
+     "medianVsV0Pct": -41.9,
+     "worstVsV0Pct": -47.5,
+     "bestVsV0Pct": -35
+    },
+    "V3": {
+     "windows": 13,
+     "beatV0Share": 46.2,
+     "medianVsV0Pct": -2.2,
+     "worstVsV0Pct": -13.4,
+     "bestVsV0Pct": 2.6
+    },
+    "V5": {
+     "windows": 13,
+     "beatV0Share": 0,
+     "medianVsV0Pct": -25.6,
+     "worstVsV0Pct": -29.3,
+     "bestVsV0Pct": -20.3
+    },
+    "V6": {
+     "windows": 13,
+     "beatV0Share": 53.8,
+     "medianVsV0Pct": 0.3,
+     "worstVsV0Pct": -6.7,
+     "bestVsV0Pct": 2.5
+    }
+   },
+   "halves": {
+    "V1": {
+     "split": "2015-06-09",
+     "firstHalfVsV0Pct": -36.6,
+     "secondHalfVsV0Pct": -50
+    },
+    "V3": {
+     "split": "2015-06-09",
+     "firstHalfVsV0Pct": -10.2,
+     "secondHalfVsV0Pct": 7.4
+    },
+    "V5": {
+     "split": "2015-06-09",
+     "firstHalfVsV0Pct": -21.5,
+     "secondHalfVsV0Pct": -31.2
+    },
+    "V6": {
+     "split": "2015-06-09",
+     "firstHalfVsV0Pct": -5,
+     "secondHalfVsV0Pct": 5.9
+    }
+   }
+  }
+ },
+ "verdict": {
+  "V1": {
+   "pass": false,
+   "fails": [
+    "SP500 10년창 25.9%",
+    "SP500 반기 -23.6/-34.6",
+    "NDX 10년창 33.3%",
+    "NDX 반기 -4.9/-49.9",
+    "KOSPI 10년창 25%",
+    "KOSPI 반기 76/-36.8",
+    "SPKRW 10년창 0%",
+    "SPKRW 반기 -36.6/-50",
+    "SPKRW CAGR -5.19%p"
+   ]
+  },
+  "V3": {
+   "pass": false,
+   "fails": [
+    "SP500 10년창 44.4%",
+    "SP500 반기 -24.1/26.6",
+    "NDX 10년창 40.7%",
+    "NDX 반기 -23.9/28.2",
+    "KOSPI 10년창 50%",
+    "SPKRW 10년창 46.2%",
+    "SPKRW 반기 -10.2/7.4"
+   ]
+  },
+  "V5": {
+   "pass": false,
+   "fails": [
+    "SP500 10년창 29.6%",
+    "SP500 반기 -13.1/-21.7",
+    "NDX 10년창 37%",
+    "NDX 반기 5.3/-34.7",
+    "KOSPI 10년창 20%",
+    "KOSPI 반기 31.9/-21.6",
+    "SPKRW 10년창 0%",
+    "SPKRW 반기 -21.5/-31.2",
+    "SPKRW CAGR -2.76%p"
+   ]
+  },
+  "V6": {
+   "pass": false,
+   "fails": [
+    "SP500 10년창 44.4%",
+    "SP500 반기 -12.7/16.3",
+    "NDX 10년창 44.4%",
+    "NDX 반기 -12.7/17.8",
+    "KOSPI 10년창 50%",
+    "SPKRW 10년창 53.8%",
+    "SPKRW 반기 -5/5.9"
+   ]
+  }
+ }
+}

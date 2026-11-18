@@ -90,7 +90,7 @@ test('결정 45: 소송·과징금·파업 기사는 기록(note)으로 넘기�
   assert.ok(r.events.some(e => e.level === 'note'));
 });
 
-test('200일선 규칙: 위성 종목은 200일 평균 아래여도 산다 · 같은 조건의 지수(핵심)는 사지 않는다(결정 28)', async () => {
+test('200일선 규칙: 위성 종목(결정 28)도 핵심 지수(결정 47 · 공포 사다리와 충돌 · 사전 등록 시험에서 추세 변형 전부 미달)도 200일 평균 아래에서 산다', async () => {
   const down = (start) => { const out = []; let p = start; for (let t = Date.parse('2025-06-01'); t <= Date.parse('2026-11-16'); t += 864e5) { const d = new Date(t); if (d.getUTCDay() && d.getUTCDay() !== 6) { p *= 0.999; out.push({ date: d.toISOString().slice(0, 10), open: p, close: p }); } } return out; };
   const readMarket = async s => ({ candles: s === 'KRW=X' ? down(1400).map(c => ({ ...c, open: 1400, close: 1400 })) : down(300) }); // 미국 두 종목 모두 내리막(200일 평균 아래)
   const client = { settings: () => ({ mode: 'vps', accountMasked: '****2787' }), async price(code) { return { code, market: 'US', currency: 'USD', exchange: 'NASD', price: 200, upper: null, lower: null, halted: false }; }, async balance() { return { cash: 100_000_000, total: 100_000_000, stock: 0, positions: [], cashUsd: 0, stockUsd: 0 }; }, async buyingPower() { return { maxQty: 1e6, cashQty: 1e6 }; }, async place() { return { odno: '1', orgno: '' }; }, async cancel() { return {}; }, async orders() { return []; } };
@@ -98,5 +98,5 @@ test('200일선 규칙: 위성 종목은 200일 평균 아래여도 산다 · �
   const pl = createPaperLive({ client, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-200-'))), readMarket, now: () => Date.parse('2026-11-16T15:30:00Z'), defaultPlan: () => Object.fromEntries(Object.entries(doc.weights).map(([k, v]) => [k, { pct: v.pct, name: v.name, currency: v.currency }])), defaultPlanVersion: () => 'T1', defaultPlanDoc: () => doc, limits: { maxOrderKrw: 30_000_000, maxDailyKrw: 100_000_000 } });
   const pv = await pl.preview({ rules: { maxSingle: 25, minCash: 10, dailyLoss: 2.5, maxTrades30: 8, trendUS: true }, rebalance: true });
   assert.ok(pv.items.some(i => i.symbol === 'NVDA' && i.side === 'BUY' && i.ok), JSON.stringify(pv.items.map(i => [i.symbol, i.side, i.ok, i.blocks])));
-  assert.ok(!pv.items.some(i => i.symbol === 'SPY' && i.side === 'BUY'), '지수는 200일선 아래면 사지 않는다');
+  assert.ok(pv.items.some(i => i.symbol === 'SPY' && i.side === 'BUY' && i.ok), '핵심 지수도 200일선 아래에서 산다(결정 47) — 전에는 비중 0 으로 두었다');
 });

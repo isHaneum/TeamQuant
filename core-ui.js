@@ -10,6 +10,7 @@ import {candles as fetchCandles, getJson } from '/lib/client-data.js';
 import { privateRead } from '/bridge-client.js';
 import { resolveStockInput, stockName } from '/lib/instruments.js';
 import { tip } from '/tooltip-ui.js';
+import { classify } from '/lib/sectors.js';
 import { mountCandles } from '/lib/candlestick-view.js';
 import { attachStockSearch, quoteOf } from '/stock-search-ui.js';
 import { reviewRules, RULE_LEVELS, RULE_LOCK_DAYS, levelOf, levelRules, changeGate, applyChange, PLAN_CHANGE_MAX, PLAN_CHANGE_DAYS, planSig, planChangeGate, planDiff, planTurnover, planChangeSize } from '/lib/rule-presets.js';
@@ -23,6 +24,8 @@ const tone = v => v > 0 ? 'up' : v < 0 ? 'down' : 'flat';
 const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' }).format(new Date());
 const daysAgo = n => new Date(Date.now() - n * 864e5 + 9 * 3600e3).toISOString().slice(0, 10);
 const marketOf = p => p.currency === 'USD' ? 'US' : 'KR';
+// 200일선 규칙은 지수 ETF 에만(결정 28·47): 실계좌·예시 홈 점검이 개별 종목(알파벳·엔비디아)에 "0%로 줄이기"를 띄우던 것을 고침(2026-11-18). 모의계좌는 paper-live 가 계획 역할로 같은 판단을 한다.
+const isIndexEtf = p => classify(p.symbol, p.name) === 'index';
 
 const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/core.css?v=20261116d'; document.head.append(css);
 const navHost = document.querySelector('.overview-nav nav') || document.querySelector('.sidebar nav');
@@ -60,7 +63,7 @@ async function loadAll() {
   const cashP = (async () => { if (S.snap?.demo) { S.cash = S.snap.demoCash; S.cashSource = S.snap.paper ? '모의계좌 예수금' : '예시'; return; } if (Number.isFinite(S.cash)) return; try { const c = await privateRead('cash-get'); if (Number.isFinite(c?.latest?.amount)) { S.cash = c.latest.amount; S.cashSource = 'PC 기록 ' + String(c.latest.recordedAt || '').slice(0, 10); } } catch {} })();
   await fxP;
   await Promise.all([...want.values()].map(async p => {
-    try { const d = await fetchCandles(p.symbol, p.currency, '2y'); S.candles[p.symbol] = d.candles; S.risk[p.symbol] = assetRisk(d.candles, { market: marketOf(p) }); S.series[p.symbol] = krwReturns(d.candles, p.currency, S.fxCandles); }
+    try { const d = await fetchCandles(p.symbol, p.currency, '2y'); S.candles[p.symbol] = d.candles; S.risk[p.symbol] = assetRisk(d.candles, { market: marketOf(p), trendUS: isIndexEtf(p) }); S.series[p.symbol] = krwReturns(d.candles, p.currency, S.fxCandles); }
     catch (e) { S.risk[p.symbol] = { ok: false, reason: e.message }; }
   }));
   await Promise.all([ordersP, cashP]);
@@ -537,7 +540,7 @@ $('#cp-form').onsubmit = async ev => {
     const o = await chosen(), side = preP.querySelector('[name="cp-side"]:checked').value, amt = Number($('#cp-amt').value);
     if (!(amt >= 1000)) throw new Error('금액을 1,000원 이상으로 넣어 주십시오.');
     let risk = S.risk[o.symbol], extra = {};
-    if (!risk) { const d = await fetchCandles(o.symbol, o.currency, '2y'); o.currency = d.currency === 'USD' ? 'USD' : o.currency; risk = assetRisk(d.candles, { market: marketOf(o) }); extra = { [o.symbol]: krwReturns(d.candles, o.currency, S.fxCandles) }; }
+    if (!risk) { const d = await fetchCandles(o.symbol, o.currency, '2y'); o.currency = d.currency === 'USD' ? 'USD' : o.currency; risk = assetRisk(d.candles, { market: marketOf(o), trendUS: isIndexEtf(o) }); extra = { [o.symbol]: krwReturns(d.candles, o.currency, S.fxCandles) }; }
     const s = state(extra), r = preTradeCheck(s, { ...o, side, amountKrw: amt }, risk);
     if (r.error) throw new Error(r.error);
     const maxBuy = side === 'BUY' ? maxBuyAmount(s, o, risk) : null;

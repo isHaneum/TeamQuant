@@ -8,13 +8,13 @@ import { createPaperLive, createLedgerStore } from '../lib/paper-live.js';
 import { publicSnapshot } from '../lib/paper-public.js';
 
 function days(from, to, f) { const out = []; for (let t = Date.parse(from); t <= Date.parse(to); t += 864e5) { const d = new Date(t); if (d.getUTCDay() && d.getUTCDay() !== 6) { const date = d.toISOString().slice(0, 10); const c = f(date); out.push({ date, open: c, close: c }); } } return out; }
-function setup() {
+function setup(corePct = 10) {
   const state = { t: Date.parse('2026-11-16T01:30:00Z'), vix: () => 20, vixTo: '2026-12-31', spy: () => 600 }; // 뉴욕 날짜 2026-11-15(일) → 11-13(금)까지가 끝난 세션
   const readMarket = async s => ({ candles: s === '^VIX' ? days('2025-06-01', state.vixTo, state.vix) : s === 'SPY' ? days('2021-06-01', state.spyTo || '2026-12-31', state.spy) : days('2025-06-01', '2026-12-31', () => (s === 'KRW=X' ? 1400 : 70000)) });
   const client = { settings: () => ({ mode: 'vps', accountMasked: '****2787' }), async price(code) { return { code, market: 'KR', currency: 'KRW', exchange: 'KRX', price: 70000, upper: 0, lower: 0, halted: false }; },
     async balance() { return { cash: 100_000_000, total: 100_000_000, stock: 0, positions: [], cashUsd: 0, stockUsd: 0 }; },
     async buyingPower() { return { maxQty: 1e6, cashQty: 1e6 }; }, async place() { return { odno: '1', orgno: '' }; }, async cancel() { return {}; }, async orders() { return []; } };
-  const doc = { version: 'T1', reservePct: 15, weights: { '069500': { pct: 10, name: 'KODEX 200', currency: 'KRW', role: 'core' }, '005930': { pct: 3, targetPct: 5, tranche: 1, name: '삼성전자', currency: 'KRW', role: 'satellite' } } };
+  const doc = { version: 'T1', reservePct: 15, weights: { '069500': { pct: corePct, name: 'KODEX 200', currency: 'KRW', role: 'core', sector: 'index' }, '005930': { pct: 3, targetPct: 5, tranche: 1, name: '삼성전자', currency: 'KRW', role: 'satellite' } } };
   const plan = () => Object.fromEntries(Object.entries(doc.weights).map(([k, v]) => [k, { pct: v.pct, name: v.name, currency: v.currency }]));
   const pl = createPaperLive({ client, store: createLedgerStore(mkdtempSync(join(tmpdir(), 'tq-fear-'))), readMarket, now: () => state.t, defaultPlan: plan, defaultPlanVersion: () => 'T1', defaultPlanDoc: () => doc, limits: { maxOrderKrw: 30_000_000, maxDailyKrw: 100_000_000 } });
   return { pl, state, doc };
@@ -64,6 +64,13 @@ test('새 최고점 날에는 VIX 가 30 을 넘어도 단계를 켜지 않는�
 test('자동 실행도 공포 단계를 먼저 갱신한다(공개 동의가 없어 status 가 불리지 않아도) → 계획 변경 +F:1 로 그날 재조정', async () => {
   const { pl, state } = setup(); state.t = Date.parse('2026-11-16T02:00:00Z'); state.vix = d => (d >= '2026-11-12' ? 33 : 20); // 11:00 KST 월요일 · 국내 장중
   const r = await pl.autoRun(); assert.equal(r.ran, true); assert.equal(r.market, 'KR'); assert.match(r.reason, /\+F:1/);
+});
+
+test('결정 47: 핵심 지수 ETF 는 한 종목 상한(25%)의 예외 — 계획 24% + 공포 1단계 5%p = 29% 를 그대로 산다(전에는 계산에서 25 로 잘리고 주문 보호에도 막혔다)', async () => {
+  const { pl, state } = setup(24); state.vix = d => (d >= '2026-11-12' ? 33 : 20); const st = await pl.status(); assert.equal(st.fear.step, 1);
+  const pv = await pl.preview({ rules: R, rebalance: true }), it = pv.items.find(x => x.symbol === '069500');
+  nearKrw(it.amountKrw, 29_000_000, '핵심 24 + 5'); assert.equal(it.ok, true, it.blocks.join(' | '));
+  assert.equal(pv.evaluation.checks.find(c => c.id === 'maxSingle').ok, true);
 });
 
 test('S&P500 ETF 새 최고점 → 단계 해제 · 비중 되돌림 · 되채움 기록 · 공개 파일에 fear', async () => {
