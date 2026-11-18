@@ -1,0 +1,2303 @@
+{
+ "prereg": "PREREG-C.md",
+ "index": {
+  "^SP500TR": {
+   "name": "S&P500 총수익",
+   "from": "1990-01-02",
+   "to": "2026-11-16",
+   "whole": {
+    "H": {
+     "cagr": 9.32,
+     "mdd": -47.7,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 8.08,
+     "mdd": -35,
+     "trades": 6,
+     "cagrVsH": -1.24,
+     "vsHPct": -34.3
+    },
+    "GRID": {
+     "cagr": 2.79,
+     "mdd": -11.2,
+     "trades": 102,
+     "cagrVsH": -6.53,
+     "vsHPct": -89.7
+    },
+    "GRIDV": {
+     "cagr": 2.79,
+     "mdd": -11.2,
+     "trades": 95,
+     "cagrVsH": -6.53,
+     "vsHPct": -89.7
+    },
+    "TRIM": {
+     "cagr": 2.56,
+     "mdd": -7.5,
+     "trades": 100,
+     "cagrVsH": -6.76,
+     "vsHPct": -90.5
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 27,
+     "beatHShare": 29.6,
+     "medianVsHPct": 0,
+     "worstVsHPct": -10.1
+    },
+    "GRID": {
+     "windows": 27,
+     "beatHShare": 11.1,
+     "medianVsHPct": -25.9,
+     "worstVsHPct": -55.5
+    },
+    "GRIDV": {
+     "windows": 27,
+     "beatHShare": 11.1,
+     "medianVsHPct": -25.6,
+     "worstVsHPct": -55.5
+    },
+    "TRIM": {
+     "windows": 27,
+     "beatHShare": 11.1,
+     "medianVsHPct": -30.6,
+     "worstVsHPct": -58.9
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2008-06-03",
+     "first": -8.2,
+     "second": -6.5
+    },
+    "GRID": {
+     "split": "2008-06-03",
+     "first": -52.3,
+     "second": -70.7
+    },
+    "GRIDV": {
+     "split": "2008-06-03",
+     "first": -52.2,
+     "second": -68
+    },
+    "TRIM": {
+     "split": "2008-06-03",
+     "first": -55.9,
+     "second": -75
+    }
+   }
+  },
+  "^NDX": {
+   "name": "나스닥100",
+   "from": "1990-01-02",
+   "to": "2026-11-16",
+   "whole": {
+    "H": {
+     "cagr": 12.32,
+     "mdd": -79.5,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 10.43,
+     "mdd": -59.6,
+     "trades": 9,
+     "cagrVsH": -1.89,
+     "vsHPct": -46.5
+    },
+    "GRID": {
+     "cagr": 2.89,
+     "mdd": -21.7,
+     "trades": 193,
+     "cagrVsH": -9.43,
+     "vsHPct": -96.1
+    },
+    "GRIDV": {
+     "cagr": 2.89,
+     "mdd": -21.7,
+     "trades": 175,
+     "cagrVsH": -9.43,
+     "vsHPct": -96.1
+    },
+    "TRIM": {
+     "cagr": 2.39,
+     "mdd": -14.8,
+     "trades": 171,
+     "cagrVsH": -9.93,
+     "vsHPct": -96.7
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 27,
+     "beatHShare": 40.7,
+     "medianVsHPct": -0.8,
+     "worstVsHPct": -31.6
+    },
+    "GRID": {
+     "windows": 27,
+     "beatHShare": 11.1,
+     "medianVsHPct": -36,
+     "worstVsHPct": -83.7
+    },
+    "GRIDV": {
+     "windows": 27,
+     "beatHShare": 11.1,
+     "medianVsHPct": -36.6,
+     "worstVsHPct": -83.7
+    },
+    "TRIM": {
+     "windows": 27,
+     "beatHShare": 11.1,
+     "medianVsHPct": -46.2,
+     "worstVsHPct": -86.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2008-06-03",
+     "first": 0.5,
+     "second": -17
+    },
+    "GRID": {
+     "split": "2008-06-03",
+     "first": -66.3,
+     "second": -81.9
+    },
+    "GRIDV": {
+     "split": "2008-06-03",
+     "first": -66.3,
+     "second": -82.3
+    },
+    "TRIM": {
+     "split": "2008-06-03",
+     "first": -71.8,
+     "second": -85.4
+    }
+   }
+  },
+  "^KS11": {
+   "name": "코스피",
+   "from": "1997-01-03",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 5.73,
+     "mdd": -42.9,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 6.11,
+     "mdd": -43.3,
+     "trades": 6,
+     "cagrVsH": 0.39,
+     "vsHPct": 11.5
+    },
+    "GRID": {
+     "cagr": 2.53,
+     "mdd": -35.9,
+     "trades": 178,
+     "cagrVsH": -3.2,
+     "vsHPct": -60
+    },
+    "GRIDV": {
+     "cagr": 2.52,
+     "mdd": -35.9,
+     "trades": 160,
+     "cagrVsH": -3.2,
+     "vsHPct": -60.1
+    },
+    "TRIM": {
+     "cagr": 2.17,
+     "mdd": -22.8,
+     "trades": 166,
+     "cagrVsH": -3.55,
+     "vsHPct": -64
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 20,
+     "beatHShare": 30,
+     "medianVsHPct": 0,
+     "worstVsHPct": -7.9
+    },
+    "GRID": {
+     "windows": 20,
+     "beatHShare": 30,
+     "medianVsHPct": -7.4,
+     "worstVsHPct": -49.8
+    },
+    "GRIDV": {
+     "windows": 20,
+     "beatHShare": 30,
+     "medianVsHPct": -5,
+     "worstVsHPct": -49.9
+    },
+    "TRIM": {
+     "windows": 20,
+     "beatHShare": 20,
+     "medianVsHPct": -15.2,
+     "worstVsHPct": -54.9
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2011-11-22",
+     "first": 23.3,
+     "second": -0.2
+    },
+    "GRID": {
+     "split": "2011-11-22",
+     "first": -28.6,
+     "second": -24.3
+    },
+    "GRIDV": {
+     "split": "2011-11-22",
+     "first": -28.8,
+     "second": -24.4
+    },
+    "TRIM": {
+     "split": "2011-11-22",
+     "first": -35.7,
+     "second": -35.9
+    }
+   }
+  }
+ },
+ "stock": {
+  "AAPL": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 20.21,
+     "mdd": -75.3,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 16.6,
+     "mdd": -60.4,
+     "trades": 21,
+     "cagrVsH": -3.61,
+     "vsHPct": -72.1
+    },
+    "GRID": {
+     "cagr": 2.72,
+     "mdd": -38.5,
+     "trades": 464,
+     "cagrVsH": -17.49,
+     "vsHPct": -99.9
+    },
+    "GRIDV": {
+     "cagr": 2.71,
+     "mdd": -38.5,
+     "trades": 426,
+     "cagrVsH": -17.5,
+     "vsHPct": -99.9
+    },
+    "TRIM": {
+     "cagr": 2.37,
+     "mdd": -29.5,
+     "trades": 435,
+     "cagrVsH": -17.83,
+     "vsHPct": -99.9
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 37.5,
+     "medianVsHPct": -13.3,
+     "worstVsHPct": -49.5
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 21.9,
+     "medianVsHPct": -74.1,
+     "worstVsHPct": -95.3
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 21.9,
+     "medianVsHPct": -74.5,
+     "worstVsHPct": -95.4
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 21.9,
+     "medianVsHPct": -78,
+     "worstVsHPct": -96.5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": 10.2,
+     "second": -60.5
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -85.2,
+     "second": -97.8
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -85.3,
+     "second": -97.9
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -87.2,
+     "second": -98.2
+    }
+   }
+  },
+  "MSFT": {
+   "from": "1986-03-13",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 23.38,
+     "mdd": -69.3,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 17.28,
+     "mdd": -46.1,
+     "trades": 13,
+     "cagrVsH": -6.09,
+     "vsHPct": -87.3
+    },
+    "GRID": {
+     "cagr": 3.1,
+     "mdd": -11.8,
+     "trades": 302,
+     "cagrVsH": -20.28,
+     "vsHPct": -99.9
+    },
+    "GRIDV": {
+     "cagr": 3.09,
+     "mdd": -11.8,
+     "trades": 278,
+     "cagrVsH": -20.28,
+     "vsHPct": -99.9
+    },
+    "TRIM": {
+     "cagr": 2.65,
+     "mdd": -11.3,
+     "trades": 270,
+     "cagrVsH": -20.72,
+     "vsHPct": -99.9
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 30,
+     "beatHShare": 20,
+     "medianVsHPct": -14.4,
+     "worstVsHPct": -59.1
+    },
+    "GRID": {
+     "windows": 30,
+     "beatHShare": 16.7,
+     "medianVsHPct": -64.1,
+     "worstVsHPct": -96.8
+    },
+    "GRIDV": {
+     "windows": 30,
+     "beatHShare": 16.7,
+     "medianVsHPct": -64,
+     "worstVsHPct": -96.8
+    },
+    "TRIM": {
+     "windows": 30,
+     "beatHShare": 10,
+     "medianVsHPct": -69.4,
+     "worstVsHPct": -97.5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2006-07-06",
+     "first": -67.2,
+     "second": -39.5
+    },
+    "GRID": {
+     "split": "2006-07-06",
+     "first": -98.6,
+     "second": -90.1
+    },
+    "GRIDV": {
+     "split": "2006-07-06",
+     "first": -98.6,
+     "second": -90.6
+    },
+    "TRIM": {
+     "split": "2006-07-06",
+     "first": -98.8,
+     "second": -91.1
+    }
+   }
+  },
+  "AMZN": {
+   "from": "1997-05-15",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 28.35,
+     "mdd": -93.2,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 23.6,
+     "mdd": -77.2,
+     "trades": 23,
+     "cagrVsH": -4.76,
+     "vsHPct": -67.2
+    },
+    "GRID": {
+     "cagr": 4.66,
+     "mdd": -19.8,
+     "trades": 468,
+     "cagrVsH": -23.69,
+     "vsHPct": -99.8
+    },
+    "GRIDV": {
+     "cagr": 4.66,
+     "mdd": -19.8,
+     "trades": 436,
+     "cagrVsH": -23.69,
+     "vsHPct": -99.8
+    },
+    "TRIM": {
+     "cagr": 3.04,
+     "mdd": -15.2,
+     "trades": 420,
+     "cagrVsH": -25.32,
+     "vsHPct": -99.8
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 19,
+     "beatHShare": 15.8,
+     "medianVsHPct": -17.5,
+     "worstVsHPct": -40.7
+    },
+    "GRID": {
+     "windows": 19,
+     "beatHShare": 5.3,
+     "medianVsHPct": -80.7,
+     "worstVsHPct": -87.9
+    },
+    "GRIDV": {
+     "windows": 19,
+     "beatHShare": 5.3,
+     "medianVsHPct": -80.6,
+     "worstVsHPct": -87.8
+    },
+    "TRIM": {
+     "windows": 19,
+     "beatHShare": 5.3,
+     "medianVsHPct": -82.4,
+     "worstVsHPct": -91.3
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2012-02-14",
+     "first": -13.9,
+     "second": -39
+    },
+    "GRID": {
+     "split": "2012-02-14",
+     "first": -95.2,
+     "second": -88.1
+    },
+    "GRIDV": {
+     "split": "2012-02-14",
+     "first": -95.2,
+     "second": -87.9
+    },
+    "TRIM": {
+     "split": "2012-02-14",
+     "first": -97,
+     "second": -89.9
+    }
+   }
+  },
+  "GOOGL": {
+   "from": "2004-08-19",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 20.9,
+     "mdd": -59.4,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 16.25,
+     "mdd": -46.4,
+     "trades": 6,
+     "cagrVsH": -4.66,
+     "vsHPct": -58.2
+    },
+    "GRID": {
+     "cagr": 4.34,
+     "mdd": -5.3,
+     "trades": 156,
+     "cagrVsH": -16.57,
+     "vsHPct": -96.2
+    },
+    "GRIDV": {
+     "cagr": 4.32,
+     "mdd": -5.3,
+     "trades": 143,
+     "cagrVsH": -16.58,
+     "vsHPct": -96.2
+    },
+    "TRIM": {
+     "cagr": 3.77,
+     "mdd": -5.3,
+     "trades": 140,
+     "cagrVsH": -17.13,
+     "vsHPct": -96.7
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 12,
+     "beatHShare": 16.7,
+     "medianVsHPct": -8.8,
+     "worstVsHPct": -19.6
+    },
+    "GRID": {
+     "windows": 12,
+     "beatHShare": 0,
+     "medianVsHPct": -48.6,
+     "worstVsHPct": -68.5
+    },
+    "GRIDV": {
+     "windows": 12,
+     "beatHShare": 0,
+     "medianVsHPct": -47.6,
+     "worstVsHPct": -69
+    },
+    "TRIM": {
+     "windows": 12,
+     "beatHShare": 0,
+     "medianVsHPct": -56.9,
+     "worstVsHPct": -76.3
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2015-10-01",
+     "first": -26.4,
+     "second": -17.5
+    },
+    "GRID": {
+     "split": "2015-10-01",
+     "first": -74.8,
+     "second": -68.5
+    },
+    "GRIDV": {
+     "split": "2015-10-01",
+     "first": -74.9,
+     "second": -69
+    },
+    "TRIM": {
+     "split": "2015-10-01",
+     "first": -77.5,
+     "second": -74
+    }
+   }
+  },
+  "NVDA": {
+   "from": "1999-01-22",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 32.45,
+     "mdd": -85.5,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 28.23,
+     "mdd": -69.8,
+     "trades": 28,
+     "cagrVsH": -4.22,
+     "vsHPct": -59.4
+    },
+    "GRID": {
+     "cagr": 4.43,
+     "mdd": -15.8,
+     "trades": 538,
+     "cagrVsH": -28.02,
+     "vsHPct": -99.9
+    },
+    "GRIDV": {
+     "cagr": 4.35,
+     "mdd": -15.8,
+     "trades": 506,
+     "cagrVsH": -28.11,
+     "vsHPct": -99.9
+    },
+    "TRIM": {
+     "cagr": 2.72,
+     "mdd": -9.3,
+     "trades": 477,
+     "cagrVsH": -29.74,
+     "vsHPct": -99.9
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 52.9,
+     "medianVsHPct": 16.6,
+     "worstVsHPct": -68
+    },
+    "GRID": {
+     "windows": 17,
+     "beatHShare": 5.9,
+     "medianVsHPct": -81.8,
+     "worstVsHPct": -98.8
+    },
+    "GRIDV": {
+     "windows": 17,
+     "beatHShare": 5.9,
+     "medianVsHPct": -80.7,
+     "worstVsHPct": -98.8
+    },
+    "TRIM": {
+     "windows": 17,
+     "beatHShare": 0,
+     "medianVsHPct": -78.1,
+     "worstVsHPct": -99.1
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2012-12-18",
+     "first": 99.7,
+     "second": -72.1
+    },
+    "GRID": {
+     "split": "2012-12-18",
+     "first": -50.8,
+     "second": -99.4
+    },
+    "GRIDV": {
+     "split": "2012-12-18",
+     "first": -51.9,
+     "second": -99.4
+    },
+    "TRIM": {
+     "split": "2012-12-18",
+     "first": -69,
+     "second": -99.5
+    }
+   }
+  },
+  "JPM": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 11.01,
+     "mdd": -68.5,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 9.93,
+     "mdd": -52,
+     "trades": 13,
+     "cagrVsH": -1.09,
+     "vsHPct": -33.7
+    },
+    "GRID": {
+     "cagr": 2.53,
+     "mdd": -11.2,
+     "trades": 341,
+     "cagrVsH": -8.48,
+     "vsHPct": -96.4
+    },
+    "GRIDV": {
+     "cagr": 2.54,
+     "mdd": -11,
+     "trades": 302,
+     "cagrVsH": -8.47,
+     "vsHPct": -96.4
+    },
+    "TRIM": {
+     "cagr": 2.35,
+     "mdd": -9.3,
+     "trades": 292,
+     "cagrVsH": -8.66,
+     "vsHPct": -96.7
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 65.6,
+     "medianVsHPct": 10.2,
+     "worstVsHPct": -29.4
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 15.6,
+     "medianVsHPct": -31.7,
+     "worstVsHPct": -81
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 15.6,
+     "medianVsHPct": -36.5,
+     "worstVsHPct": -81
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 6.3,
+     "medianVsHPct": -43.5,
+     "worstVsHPct": -83.7
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": 14.4,
+     "second": -17.3
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -68.8,
+     "second": -78.3
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -68.6,
+     "second": -79.4
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -71,
+     "second": -82
+    }
+   }
+  },
+  "JNJ": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 13.52,
+     "mdd": -35.1,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 10.57,
+     "mdd": -26.3,
+     "trades": 7,
+     "cagrVsH": -2.95,
+     "vsHPct": -66.8
+    },
+    "GRID": {
+     "cagr": 2.96,
+     "mdd": -4.8,
+     "trades": 154,
+     "cagrVsH": -10.56,
+     "vsHPct": -98.3
+    },
+    "GRIDV": {
+     "cagr": 2.96,
+     "mdd": -4.8,
+     "trades": 142,
+     "cagrVsH": -10.56,
+     "vsHPct": -98.3
+    },
+    "TRIM": {
+     "cagr": 2.57,
+     "mdd": -4,
+     "trades": 134,
+     "cagrVsH": -10.95,
+     "vsHPct": -98.6
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 12.5,
+     "medianVsHPct": -3,
+     "worstVsHPct": -20.3
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 3.1,
+     "medianVsHPct": -31.3,
+     "worstVsHPct": -73.2
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 6.3,
+     "medianVsHPct": -31.2,
+     "worstVsHPct": -73.2
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": -36.5,
+     "worstVsHPct": -76
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -44.3,
+     "second": -14.6
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -91.2,
+     "second": -65.1
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -91.2,
+     "second": -65.5
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -92.5,
+     "second": -69.1
+    }
+   }
+  },
+  "XOM": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 11.11,
+     "mdd": -60.7,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 8.96,
+     "mdd": -41.3,
+     "trades": 5,
+     "cagrVsH": -2.14,
+     "vsHPct": -55.8
+    },
+    "GRID": {
+     "cagr": 2.88,
+     "mdd": -4.8,
+     "trades": 161,
+     "cagrVsH": -8.22,
+     "vsHPct": -96
+    },
+    "GRIDV": {
+     "cagr": 2.93,
+     "mdd": -4.8,
+     "trades": 143,
+     "cagrVsH": -8.18,
+     "vsHPct": -95.9
+    },
+    "TRIM": {
+     "cagr": 2.77,
+     "mdd": -4.8,
+     "trades": 148,
+     "cagrVsH": -8.33,
+     "vsHPct": -96.2
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": -1.6,
+     "worstVsHPct": -9.5
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 18.8,
+     "medianVsHPct": -28,
+     "worstVsHPct": -53.4
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 15.6,
+     "medianVsHPct": -28.1,
+     "worstVsHPct": -53.4
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 9.4,
+     "medianVsHPct": -35.2,
+     "worstVsHPct": -57.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -33.8,
+     "second": -7.2
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -85.6,
+     "second": -52.6
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -85.4,
+     "second": -52.9
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -86.2,
+     "second": -57.9
+    }
+   }
+  },
+  "PG": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 11.3,
+     "mdd": -52.3,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 9.33,
+     "mdd": -34.4,
+     "trades": 7,
+     "cagrVsH": -1.96,
+     "vsHPct": -52.5
+    },
+    "GRID": {
+     "cagr": 2.83,
+     "mdd": -7.9,
+     "trades": 152,
+     "cagrVsH": -8.47,
+     "vsHPct": -96.4
+    },
+    "GRIDV": {
+     "cagr": 2.88,
+     "mdd": -7.9,
+     "trades": 126,
+     "cagrVsH": -8.42,
+     "vsHPct": -96.3
+    },
+    "TRIM": {
+     "cagr": 2.61,
+     "mdd": -6.4,
+     "trades": 129,
+     "cagrVsH": -8.69,
+     "vsHPct": -96.7
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 15.6,
+     "medianVsHPct": 0,
+     "worstVsHPct": -23.3
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": -28.6,
+     "worstVsHPct": -74.5
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": -28.6,
+     "worstVsHPct": -74.5
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": -32.9,
+     "worstVsHPct": -76.2
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -29.6,
+     "second": -7.4
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -87.4,
+     "second": -51.4
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -87.1,
+     "second": -51
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -88.5,
+     "second": -55.8
+    }
+   }
+  },
+  "KO": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 12.32,
+     "mdd": -53.7,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 10.02,
+     "mdd": -32.1,
+     "trades": 8,
+     "cagrVsH": -2.31,
+     "vsHPct": -58.1
+    },
+    "GRID": {
+     "cagr": 2.96,
+     "mdd": -6.2,
+     "trades": 166,
+     "cagrVsH": -9.36,
+     "vsHPct": -97.4
+    },
+    "GRIDV": {
+     "cagr": 3.01,
+     "mdd": -6.2,
+     "trades": 153,
+     "cagrVsH": -9.32,
+     "vsHPct": -97.3
+    },
+    "TRIM": {
+     "cagr": 2.74,
+     "mdd": -4.5,
+     "trades": 152,
+     "cagrVsH": -9.58,
+     "vsHPct": -97.6
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 25,
+     "medianVsHPct": 0,
+     "worstVsHPct": -31.2
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 18.8,
+     "medianVsHPct": -17.3,
+     "worstVsHPct": -82.2
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 18.8,
+     "medianVsHPct": -18.5,
+     "worstVsHPct": -82.2
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 18.8,
+     "medianVsHPct": -27.4,
+     "worstVsHPct": -85.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -27.4,
+     "second": -15.9
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -85.5,
+     "second": -64.8
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -85.2,
+     "second": -65.2
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -86.7,
+     "second": -69.6
+    }
+   }
+  },
+  "INTC": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 11.74,
+     "mdd": -81.7,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 11.09,
+     "mdd": -61.3,
+     "trades": 18,
+     "cagrVsH": -0.66,
+     "vsHPct": -21.8
+    },
+    "GRID": {
+     "cagr": 2.56,
+     "mdd": -21.2,
+     "trades": 451,
+     "cagrVsH": -9.18,
+     "vsHPct": -97.2
+    },
+    "GRIDV": {
+     "cagr": 2.53,
+     "mdd": -21.2,
+     "trades": 428,
+     "cagrVsH": -9.22,
+     "vsHPct": -97.3
+    },
+    "TRIM": {
+     "cagr": 2.28,
+     "mdd": -11.9,
+     "trades": 372,
+     "cagrVsH": -9.46,
+     "vsHPct": -97.5
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 53.1,
+     "medianVsHPct": 5.3,
+     "worstVsHPct": -46.9
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 31.3,
+     "medianVsHPct": -27,
+     "worstVsHPct": -93.2
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 31.3,
+     "medianVsHPct": -27,
+     "worstVsHPct": -93.2
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": -37.4,
+     "worstVsHPct": -94.1
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -25.8,
+     "second": 37.6
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -93.7,
+     "second": -40.1
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -93.8,
+     "second": -39.2
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -94.4,
+     "second": -47.8
+    }
+   }
+  },
+  "CSCO": {
+   "from": "1990-02-16",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 21.16,
+     "mdd": -89.2,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 16.79,
+     "mdd": -68.5,
+     "trades": 15,
+     "cagrVsH": -4.37,
+     "vsHPct": -74
+    },
+    "GRID": {
+     "cagr": 3.37,
+     "mdd": -10.9,
+     "trades": 358,
+     "cagrVsH": -17.79,
+     "vsHPct": -99.7
+    },
+    "GRIDV": {
+     "cagr": 3.37,
+     "mdd": -10.9,
+     "trades": 339,
+     "cagrVsH": -17.79,
+     "vsHPct": -99.7
+    },
+    "TRIM": {
+     "cagr": 2.54,
+     "mdd": -7.6,
+     "trades": 321,
+     "cagrVsH": -18.62,
+     "vsHPct": -99.8
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 26,
+     "beatHShare": 53.8,
+     "medianVsHPct": 5.5,
+     "worstVsHPct": -68.8
+    },
+    "GRID": {
+     "windows": 26,
+     "beatHShare": 23.1,
+     "medianVsHPct": -29.3,
+     "worstVsHPct": -98.7
+    },
+    "GRIDV": {
+     "windows": 26,
+     "beatHShare": 26.9,
+     "medianVsHPct": -27,
+     "worstVsHPct": -98.7
+    },
+    "TRIM": {
+     "windows": 26,
+     "beatHShare": 23.1,
+     "medianVsHPct": -38.2,
+     "worstVsHPct": -99
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2008-06-26",
+     "first": -59,
+     "second": -1.3
+    },
+    "GRID": {
+     "split": "2008-06-26",
+     "first": -98.8,
+     "second": -63.6
+    },
+    "GRIDV": {
+     "split": "2008-06-26",
+     "first": -98.8,
+     "second": -61.4
+    },
+    "TRIM": {
+     "split": "2008-06-26",
+     "first": -99.1,
+     "second": -69.1
+    }
+   }
+  },
+  "GE": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 9.75,
+     "mdd": -83.1,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 8.76,
+     "mdd": -64,
+     "trades": 10,
+     "cagrVsH": -1,
+     "vsHPct": -31.8
+    },
+    "GRID": {
+     "cagr": 2.84,
+     "mdd": -6.9,
+     "trades": 267,
+     "cagrVsH": -6.91,
+     "vsHPct": -93.4
+    },
+    "GRIDV": {
+     "cagr": 2.85,
+     "mdd": -6.9,
+     "trades": 245,
+     "cagrVsH": -6.91,
+     "vsHPct": -93.4
+    },
+    "TRIM": {
+     "cagr": 2.61,
+     "mdd": -5.4,
+     "trades": 243,
+     "cagrVsH": -7.14,
+     "vsHPct": -94
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 65.6,
+     "medianVsHPct": 4.8,
+     "worstVsHPct": -27.1
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 43.8,
+     "medianVsHPct": -1.8,
+     "worstVsHPct": -78.2
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 43.8,
+     "medianVsHPct": -4.6,
+     "worstVsHPct": -78.2
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 43.8,
+     "medianVsHPct": -10.4,
+     "worstVsHPct": -82.1
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -35.9,
+     "second": 38.6
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -86.9,
+     "second": -39.4
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -86.9,
+     "second": -41.6
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -88.1,
+     "second": -40.8
+    }
+   }
+  },
+  "F": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 6.51,
+     "mdd": -91.7,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 8.13,
+     "mdd": -75.8,
+     "trades": 20,
+     "cagrVsH": 1.62,
+     "vsHPct": 88.1
+    },
+    "GRID": {
+     "cagr": 2.99,
+     "mdd": -10.3,
+     "trades": 377,
+     "cagrVsH": -3.51,
+     "vsHPct": -75.4
+    },
+    "GRIDV": {
+     "cagr": 2.98,
+     "mdd": -10.3,
+     "trades": 343,
+     "cagrVsH": -3.53,
+     "vsHPct": -75.6
+    },
+    "TRIM": {
+     "cagr": 2.71,
+     "mdd": -8.8,
+     "trades": 347,
+     "cagrVsH": -3.8,
+     "vsHPct": -78.1
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 68.8,
+     "medianVsHPct": 11.5,
+     "worstVsHPct": -31.9
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 62.5,
+     "medianVsHPct": 13.6,
+     "worstVsHPct": -62.9
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 46.9,
+     "medianVsHPct": -6.3,
+     "worstVsHPct": -62.9
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 34.4,
+     "medianVsHPct": -18.4,
+     "worstVsHPct": -69.6
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": 30,
+     "second": 59
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -56.3,
+     "second": -2.7
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -56.6,
+     "second": -22.1
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -61,
+     "second": -38.6
+    }
+   }
+  },
+  "PFE": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 9.43,
+     "mdd": -67.4,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 8.14,
+     "mdd": -46.5,
+     "trades": 7,
+     "cagrVsH": -1.29,
+     "vsHPct": -39.2
+    },
+    "GRID": {
+     "cagr": 2.81,
+     "mdd": -9,
+     "trades": 229,
+     "cagrVsH": -6.62,
+     "vsHPct": -92.7
+    },
+    "GRIDV": {
+     "cagr": 2.78,
+     "mdd": -9.2,
+     "trades": 223,
+     "cagrVsH": -6.65,
+     "vsHPct": -92.8
+    },
+    "TRIM": {
+     "cagr": 2.51,
+     "mdd": -6.3,
+     "trades": 212,
+     "cagrVsH": -6.92,
+     "vsHPct": -93.5
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 43.8,
+     "medianVsHPct": -2,
+     "worstVsHPct": -36.5
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": -24.7,
+     "worstVsHPct": -87.1
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": -21.2,
+     "worstVsHPct": -87.1
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 25,
+     "medianVsHPct": -36.9,
+     "worstVsHPct": -88.7
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -29.8,
+     "second": 8.5
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -83.7,
+     "second": -28.7
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -83.9,
+     "second": -29.7
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -85.6,
+     "second": -38.4
+    }
+   }
+  },
+  "WMT": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 14.84,
+     "mdd": -43.6,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 11.79,
+     "mdd": -30.3,
+     "trades": 9,
+     "cagrVsH": -3.05,
+     "vsHPct": -67.6
+    },
+    "GRID": {
+     "cagr": 2.96,
+     "mdd": -5.6,
+     "trades": 217,
+     "cagrVsH": -11.88,
+     "vsHPct": -99
+    },
+    "GRIDV": {
+     "cagr": 2.99,
+     "mdd": -5.6,
+     "trades": 209,
+     "cagrVsH": -11.85,
+     "vsHPct": -99
+    },
+    "TRIM": {
+     "cagr": 2.63,
+     "mdd": -5.6,
+     "trades": 195,
+     "cagrVsH": -12.21,
+     "vsHPct": -99.1
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 3.1,
+     "medianVsHPct": -2.9,
+     "worstVsHPct": -26.7
+    },
+    "GRID": {
+     "windows": 32,
+     "beatHShare": 12.5,
+     "medianVsHPct": -30.8,
+     "worstVsHPct": -77.7
+    },
+    "GRIDV": {
+     "windows": 32,
+     "beatHShare": 12.5,
+     "medianVsHPct": -32.3,
+     "worstVsHPct": -77.4
+    },
+    "TRIM": {
+     "windows": 32,
+     "beatHShare": 9.4,
+     "medianVsHPct": -37.6,
+     "worstVsHPct": -82.2
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -38.1,
+     "second": -20.5
+    },
+    "GRID": {
+     "split": "2005-11-28",
+     "first": -92.3,
+     "second": -74.7
+    },
+    "GRIDV": {
+     "split": "2005-11-28",
+     "first": -92.2,
+     "second": -74.9
+    },
+    "TRIM": {
+     "split": "2005-11-28",
+     "first": -93.3,
+     "second": -78.7
+    }
+   }
+  },
+  "005930.KS": {
+   "from": "2000-01-04",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "cagr": 13.28,
+     "mdd": -46.4,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 11.54,
+     "mdd": -43.5,
+     "trades": 7,
+     "cagrVsH": -1.74,
+     "vsHPct": -34.1
+    },
+    "GRID": {
+     "cagr": 3.25,
+     "mdd": -36.9,
+     "trades": 253,
+     "cagrVsH": -10.03,
+     "vsHPct": -91.7
+    },
+    "GRIDV": {
+     "cagr": 3.25,
+     "mdd": -36.9,
+     "trades": 235,
+     "cagrVsH": -10.03,
+     "vsHPct": -91.7
+    },
+    "TRIM": {
+     "cagr": 2.53,
+     "mdd": -15.7,
+     "trades": 230,
+     "cagrVsH": -10.75,
+     "vsHPct": -93.1
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 17.6,
+     "medianVsHPct": -5.9,
+     "worstVsHPct": -14.4
+    },
+    "GRID": {
+     "windows": 17,
+     "beatHShare": 0,
+     "medianVsHPct": -40.5,
+     "worstVsHPct": -58.1
+    },
+    "GRIDV": {
+     "windows": 17,
+     "beatHShare": 0,
+     "medianVsHPct": -40.5,
+     "worstVsHPct": -58
+    },
+    "TRIM": {
+     "windows": 17,
+     "beatHShare": 0,
+     "medianVsHPct": -49.8,
+     "worstVsHPct": -63.7
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2013-03-07",
+     "first": 1,
+     "second": -13.5
+    },
+    "GRID": {
+     "split": "2013-03-07",
+     "first": -52.5,
+     "second": -69.8
+    },
+    "GRIDV": {
+     "split": "2013-03-07",
+     "first": -52.5,
+     "second": -69.8
+    },
+    "TRIM": {
+     "split": "2013-03-07",
+     "first": -60.6,
+     "second": -74.9
+    }
+   }
+  },
+  "000660.KS": {
+   "from": "2000-01-04",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "cagr": 2.52,
+     "mdd": -59.3,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 9.02,
+     "mdd": -93.1,
+     "trades": 26,
+     "cagrVsH": 6.5,
+     "vsHPct": 421.3
+    },
+    "GRID": {
+     "cagr": -1.29,
+     "mdd": -79.6,
+     "trades": 502,
+     "cagrVsH": -3.81,
+     "vsHPct": -63.8
+    },
+    "GRIDV": {
+     "cagr": -1.3,
+     "mdd": -79.6,
+     "trades": 487,
+     "cagrVsH": -3.81,
+     "vsHPct": -63.9
+    },
+    "TRIM": {
+     "cagr": -0.02,
+     "mdd": -56.2,
+     "trades": 493,
+     "cagrVsH": -2.54,
+     "vsHPct": -49
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 58.8,
+     "medianVsHPct": 4,
+     "worstVsHPct": -38.1
+    },
+    "GRID": {
+     "windows": 17,
+     "beatHShare": 11.8,
+     "medianVsHPct": -48.1,
+     "worstVsHPct": -88.6
+    },
+    "GRIDV": {
+     "windows": 17,
+     "beatHShare": 11.8,
+     "medianVsHPct": -48.1,
+     "worstVsHPct": -88.6
+    },
+    "TRIM": {
+     "windows": 17,
+     "beatHShare": 17.6,
+     "medianVsHPct": -55.6,
+     "worstVsHPct": -90.3
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2013-03-07",
+     "first": 9.9,
+     "second": -42.1
+    },
+    "GRID": {
+     "split": "2013-03-07",
+     "first": -1.6,
+     "second": -93.4
+    },
+    "GRIDV": {
+     "split": "2013-03-07",
+     "first": -1.8,
+     "second": -93.4
+    },
+    "TRIM": {
+     "split": "2013-03-07",
+     "first": 38.8,
+     "second": -94.4
+    }
+   }
+  },
+  "005380.KS": {
+   "from": "2000-01-04",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "cagr": 10.78,
+     "mdd": -66.3,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 11.19,
+     "mdd": -47.7,
+     "trades": 12,
+     "cagrVsH": 0.41,
+     "vsHPct": 10.4
+    },
+    "GRID": {
+     "cagr": 2.94,
+     "mdd": -43.7,
+     "trades": 278,
+     "cagrVsH": -7.84,
+     "vsHPct": -86.1
+    },
+    "GRIDV": {
+     "cagr": 2.94,
+     "mdd": -43.7,
+     "trades": 251,
+     "cagrVsH": -7.84,
+     "vsHPct": -86.1
+    },
+    "TRIM": {
+     "cagr": 2.29,
+     "mdd": -32,
+     "trades": 264,
+     "cagrVsH": -8.49,
+     "vsHPct": -88.3
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 76.5,
+     "medianVsHPct": 10.1,
+     "worstVsHPct": -26
+    },
+    "GRID": {
+     "windows": 17,
+     "beatHShare": 29.4,
+     "medianVsHPct": -23.4,
+     "worstVsHPct": -83
+    },
+    "GRIDV": {
+     "windows": 17,
+     "beatHShare": 29.4,
+     "medianVsHPct": -21.8,
+     "worstVsHPct": -83
+    },
+    "TRIM": {
+     "windows": 17,
+     "beatHShare": 23.5,
+     "medianVsHPct": -40,
+     "worstVsHPct": -84.2
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2013-03-07",
+     "first": 2.7,
+     "second": 24.4
+    },
+    "GRID": {
+     "split": "2013-03-07",
+     "first": -80.7,
+     "second": -10.7
+    },
+    "GRIDV": {
+     "split": "2013-03-07",
+     "first": -80.7,
+     "second": -9
+    },
+    "TRIM": {
+     "split": "2013-03-07",
+     "first": -83.7,
+     "second": -22
+    }
+   }
+  },
+  "035420.KS": {
+   "from": "2002-10-29",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "cagr": 18.57,
+     "mdd": -66.8,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 15.02,
+     "mdd": -49.4,
+     "trades": 6,
+     "cagrVsH": -3.55,
+     "vsHPct": -51.9
+    },
+    "GRID": {
+     "cagr": 4.12,
+     "mdd": -14.6,
+     "trades": 276,
+     "cagrVsH": -14.45,
+     "vsHPct": -95.6
+    },
+    "GRIDV": {
+     "cagr": 4.12,
+     "mdd": -14.6,
+     "trades": 270,
+     "cagrVsH": -14.45,
+     "vsHPct": -95.6
+    },
+    "TRIM": {
+     "cagr": 2.99,
+     "mdd": -11.6,
+     "trades": 256,
+     "cagrVsH": -15.58,
+     "vsHPct": -96.6
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 14,
+     "beatHShare": 42.9,
+     "medianVsHPct": -2.1,
+     "worstVsHPct": -42.3
+    },
+    "GRID": {
+     "windows": 14,
+     "beatHShare": 14.3,
+     "medianVsHPct": -39.2,
+     "worstVsHPct": -89.2
+    },
+    "GRIDV": {
+     "windows": 14,
+     "beatHShare": 14.3,
+     "medianVsHPct": -38.3,
+     "worstVsHPct": -89.2
+    },
+    "TRIM": {
+     "windows": 14,
+     "beatHShare": 0,
+     "medianVsHPct": -53.7,
+     "worstVsHPct": -91
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2014-09-02",
+     "first": -56.7,
+     "second": 11.4
+    },
+    "GRID": {
+     "split": "2014-09-02",
+     "first": -96,
+     "second": 23.6
+    },
+    "GRIDV": {
+     "split": "2014-09-02",
+     "first": -96,
+     "second": 23.7
+    },
+    "TRIM": {
+     "split": "2014-09-02",
+     "first": -96.9,
+     "second": 10
+    }
+   }
+  }
+ },
+ "short": {
+  "PLTR": {
+   "from": "2020-09-30",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 46.39,
+     "mdd": -72.2,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 42.05,
+     "mdd": -64.8,
+     "trades": 7,
+     "cagrVsH": -4.34,
+     "vsHPct": -16.8
+    },
+    "GRID": {
+     "cagr": 8.39,
+     "mdd": -31.6,
+     "trades": 153,
+     "cagrVsH": -38,
+     "vsHPct": -84.2
+    },
+    "GRIDV": {
+     "cagr": 8.39,
+     "mdd": -31.6,
+     "trades": 150,
+     "cagrVsH": -37.99,
+     "vsHPct": -84.1
+    },
+    "TRIM": {
+     "cagr": 10.04,
+     "mdd": -6.6,
+     "trades": 145,
+     "cagrVsH": -36.34,
+     "vsHPct": -82.6
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    },
+    "GRID": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    },
+    "GRIDV": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    },
+    "TRIM": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2023-10-23",
+     "first": 24.5,
+     "second": -23.5
+    },
+    "GRID": {
+     "split": "2023-10-23",
+     "first": 4.3,
+     "second": -72.8
+    },
+    "GRIDV": {
+     "split": "2023-10-23",
+     "first": 4.3,
+     "second": -72.7
+    },
+    "TRIM": {
+     "split": "2023-10-23",
+     "first": 16.7,
+     "second": -78.9
+    }
+   }
+  },
+  "TEM": {
+   "from": "2024-06-14",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "cagr": 13.7,
+     "mdd": -46.8,
+     "trades": 0,
+     "cagrVsH": 0,
+     "vsHPct": 0
+    },
+    "RB": {
+     "cagr": 23.97,
+     "mdd": -43.7,
+     "trades": 4,
+     "cagrVsH": 10.28,
+     "vsHPct": 23.4
+    },
+    "GRID": {
+     "cagr": 21.53,
+     "mdd": -25.4,
+     "trades": 98,
+     "cagrVsH": 7.83,
+     "vsHPct": 17.5
+    },
+    "GRIDV": {
+     "cagr": 21.53,
+     "mdd": -25.4,
+     "trades": 98,
+     "cagrVsH": 7.83,
+     "vsHPct": 17.5
+    },
+    "TRIM": {
+     "cagr": 6.76,
+     "mdd": -21.6,
+     "trades": 93,
+     "cagrVsH": -6.94,
+     "vsHPct": -14.2
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    },
+    "GRID": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    },
+    "GRIDV": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    },
+    "TRIM": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2025-09-03",
+     "first": 11.7,
+     "second": 10.9
+    },
+    "GRID": {
+     "split": "2025-09-03",
+     "first": -1.9,
+     "second": 21.6
+    },
+    "GRIDV": {
+     "split": "2025-09-03",
+     "first": -1.9,
+     "second": 21.6
+    },
+    "TRIM": {
+     "split": "2025-09-03",
+     "first": -27.7,
+     "second": 21
+    }
+   }
+  }
+ },
+ "verdict": {
+  "RB": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 29.6%",
+    "^NDX 40.7%",
+    "^KS11 30%"
+   ],
+   "stockShareBeat70": 5,
+   "stockPass": false,
+   "stockMedianCagrVsH": -2.14,
+   "stockMedianHalves": [
+    -26.4,
+    -13.5
+   ],
+   "stockWinCount": "3/20 전체 기간에서 보유보다 나음"
+  },
+  "GRID": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 11.1%",
+    "^NDX 11.1%",
+    "^KS11 30%"
+   ],
+   "stockShareBeat70": 0,
+   "stockPass": false,
+   "stockMedianCagrVsH": -9.36,
+   "stockMedianHalves": [
+    -85.5,
+    -64.8
+   ],
+   "stockWinCount": "0/20 전체 기간에서 보유보다 나음"
+  },
+  "GRIDV": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 11.1%",
+    "^NDX 11.1%",
+    "^KS11 30%"
+   ],
+   "stockShareBeat70": 0,
+   "stockPass": false,
+   "stockMedianCagrVsH": -9.32,
+   "stockMedianHalves": [
+    -85.3,
+    -65.2
+   ],
+   "stockWinCount": "0/20 전체 기간에서 보유보다 나음"
+  },
+  "TRIM": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 11.1%",
+    "^NDX 11.1%",
+    "^KS11 20%"
+   ],
+   "stockShareBeat70": 0,
+   "stockPass": false,
+   "stockMedianCagrVsH": -9.58,
+   "stockMedianHalves": [
+    -86.7,
+    -69.1
+   ],
+   "stockWinCount": "0/20 전체 기간에서 보유보다 나음"
+  }
+ }
+}
