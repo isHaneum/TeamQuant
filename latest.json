@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T02:18:52.823Z",
+ "updatedAt": "2026-11-18T02:29:53.498Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 4958.29,
-   "change": -0.21,
-   "z": -0.1,
+   "last": 5009.39990234375,
+   "change": -1.79,
+   "z": -0.6,
    "sd": 2.9231269293312696,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,9 +23,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 648.67,
-   "change": -0.21,
-   "z": -0.1,
+   "last": 653.21,
+   "change": 0.48,
+   "z": 0.2,
    "sd": 2.724793547207968,
    "source": "네이버 현재가",
    "live": true,
@@ -64,9 +63,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1328.97998046875,
-   "change": -0.5,
-   "z": -0.8,
+   "last": 1328.47998046875,
+   "change": -0.54,
+   "z": -0.9,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -76,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.11000061035156,
-   "change": -1.05,
+   "last": 85.13999938964844,
+   "change": -1.01,
    "z": -0.4,
    "sd": 2.889304327196342,
    "source": "Yahoo"
@@ -121,12 +120,12 @@
   }
  ],
  "spikes": {
-  "war": 2.6,
-  "politics": -0.3,
-  "rates": 1.1,
+  "war": 2.4,
+  "politics": -0.2,
+  "rates": 1.2,
   "trade": 0.4,
   "fx": -0.2,
-  "energy": 0.1,
+  "energy": 0,
   "market": 1,
   "credit": 0.3,
   "disaster": 0,
@@ -134,17 +133,17 @@
  },
  "rates": {
   "war": {
-   "rate": 3.9,
+   "rate": 3.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.7,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 3
   },
@@ -159,7 +158,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 1
   },
@@ -211,8 +210,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 2.6,
+    "score": 50,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -263,8 +262,55 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 44,
-    "spike": 1.1,
+    "score": 45,
+    "spike": 1.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "cjvefu",
+   "title": "연준 이사 “AI가 뱅크런 부를 수도”",
+   "firstSeen": "2026-11-17T04:02:00.000Z",
+   "lastSeen": "2026-11-17T08:10:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "미 연준, AI가 바꿀 경제 대비한다…의장·이사 잇달아 영향 점검",
+     "link": "https://www.aitimes.com/news/articleView.html?idxno=217490",
+     "host": "aitimes.com",
+     "at": "2026-11-17T08:10:00.000Z"
+    },
+    {
+     "title": "연준 이사 “AI가 뱅크런 부를 수도”",
+     "link": "https://www.naeil.com/news/read/609056?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-17T04:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 42,
+    "spike": 1.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -321,8 +367,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
-    "spike": 2.6,
+    "score": 40,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -333,53 +379,6 @@
     },
     "why": [
      "금 -1.61%"
-    ]
-   }
-  },
-  {
-   "id": "cjvefu",
-   "title": "연준 이사 “AI가 뱅크런 부를 수도”",
-   "firstSeen": "2026-11-17T04:02:00.000Z",
-   "lastSeen": "2026-11-17T08:10:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "미 연준, AI가 바꿀 경제 대비한다…의장·이사 잇달아 영향 점검",
-     "link": "https://www.aitimes.com/news/articleView.html?idxno=217490",
-     "host": "aitimes.com",
-     "at": "2026-11-17T08:10:00.000Z"
-    },
-    {
-     "title": "연준 이사 “AI가 뱅크런 부를 수도”",
-     "link": "https://www.naeil.com/news/read/609056?ref=naver",
-     "host": "naeil.com",
-     "at": "2026-11-17T04:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 41,
-    "spike": 1.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -1.03%"
     ]
    }
   },
@@ -413,8 +412,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 35,
-    "spike": 0.1,
+    "score": 34,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
@@ -459,8 +458,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 35,
-    "spike": 0.1,
+    "score": 34,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
@@ -472,6 +471,103 @@
     "why": [
      "핵심 단어",
      "금 -1.61%"
+    ]
+   }
+  },
+  {
+   "id": "1x2kor1",
+   "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
+   "firstSeen": "2026-11-18T02:00:00.000Z",
+   "lastSeen": "2026-11-18T02:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
+     "link": "https://www.kbmaeil.com/article/20261117500771",
+     "host": "kbmaeil.com",
+     "at": "2026-11-18T02:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 32,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "fsyrwc",
+   "title": "[뉴욕증시] 전산 장애·실적 경계 '하락', 반도체 '반등'···엔비디아 ...",
+   "firstSeen": "2026-11-17T14:42:00.000Z",
+   "lastSeen": "2026-11-18T02:18:00.000Z",
+   "count": 10,
+   "sources": 9,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국채선물 하락 출발…엔비디아 실적 호조에 코스피 5천선 탈환",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445337",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-18T02:18:00.000Z"
+    },
+    {
+     "title": "엔비디아 '깜짝 실적'에 AI 거품론 진정…美 증시 반등 동력 되나?",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=579895&class=18&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-18T02:09:00.000Z"
+    },
+    {
+     "title": "코스피, 엔비디아 '깜짝 실적'에 2%대 급등…삼전·하닉 4~6%↑",
+     "link": "http://www.beyondpost.co.kr/view.php?ud=202611180935048317be44c0aacd_30",
+     "host": "beyondpost.co.kr",
+     "at": "2026-11-18T00:38:00.000Z"
+    },
+    {
+     "title": "[크립토 브리핑] 비트코인 8800만원대 반등…엔비디아 '깜짝 실적'에 한...",
+     "link": "https://www.techm.kr/news/articleView.html?idxno=157463",
+     "host": "techm.kr",
+     "at": "2026-11-18T00:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 31,
+    "spike": 1.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "S&P 500 -1.03%"
     ]
    }
   },
@@ -511,8 +607,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 2.6,
+    "score": 31,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -562,8 +658,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 2.6,
+    "score": 31,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -613,8 +709,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 2.6,
+    "score": 31,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -664,8 +760,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 2.6,
+    "score": 31,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -715,8 +811,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 2.6,
+    "score": 31,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -731,57 +827,23 @@
    }
   },
   {
-   "id": "1x2kor1",
-   "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
-   "firstSeen": "2026-11-18T02:00:00.000Z",
-   "lastSeen": "2026-11-18T02:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "250억 뱅크런 딛고 전국 정점 섰다…구룡포수협, 105년 만의 ‘연간 1위...",
-     "link": "https://www.kbmaeil.com/article/20261117500771",
-     "host": "kbmaeil.com",
-     "at": "2026-11-18T02:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
    "id": "ggqepj",
    "title": "코스피, 엔비디아 호실적 훈풍에 3%대 급등 출발 … '오천피' 재탈환",
    "firstSeen": "2026-11-17T23:09:00.000Z",
-   "lastSeen": "2026-11-18T01:51:00.000Z",
-   "count": 21,
-   "sources": 21,
+   "lastSeen": "2026-11-18T02:26:00.000Z",
+   "count": 11,
+   "sources": 11,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "日 닛케이, 엔비디아 호실적에 1% 가까이 올라 59,000선 회복",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445339",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-18T02:26:00.000Z"
+    },
     {
      "title": "코스피, 엔비디아 호실적에 3%대 급등…5100선 회복",
      "link": "https://www.greened.kr/news/articleView.html?idxno=354898",
@@ -795,16 +857,10 @@
      "at": "2026-11-18T01:48:00.000Z"
     },
     {
-     "title": "코스피, 엔비디아 호실적에 하루 만에 5000선 탈환…2%대 반등",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611180077",
-     "host": "sentv.co.kr",
-     "at": "2026-11-18T01:38:00.000Z"
-    },
-    {
-     "title": "젠슨 황 없는 엔비디아, 코스피 살렸다…하루만에 5000선 회복 [투자360]",
-     "link": "https://biz.heraldcorp.com/article/10940881?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-18T01:24:00.000Z"
+     "title": "엔비디아 훈풍에…코스피 5,000선 탈환",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261118102206Qaf",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-18T01:22:00.000Z"
     }
    ],
    "assess": {
@@ -853,8 +909,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 2.6,
+    "score": 28,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -867,65 +923,21 @@
      "금 -1.61%"
     ]
    }
-  },
-  {
-   "id": "fsyrwc",
-   "title": "[뉴욕증시] 전산 장애·실적 경계 '하락', 반도체 '반등'···엔비디아 ...",
-   "firstSeen": "2026-11-17T14:42:00.000Z",
-   "lastSeen": "2026-11-18T02:09:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "엔비디아 '깜짝 실적'에 AI 거품론 진정…美 증시 반등 동력 되나?",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579895&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-18T02:09:00.000Z"
-    },
-    {
-     "title": "코스피, 엔비디아 '깜짝 실적'에 2%대 급등…삼전·하닉 4~6%↑",
-     "link": "http://www.beyondpost.co.kr/view.php?ud=202611180935048317be44c0aacd_30",
-     "host": "beyondpost.co.kr",
-     "at": "2026-11-18T00:38:00.000Z"
-    },
-    {
-     "title": "[크립토 브리핑] 비트코인 8800만원대 반등…엔비디아 '깜짝 실적'에 한...",
-     "link": "https://www.techm.kr/news/articleView.html?idxno=157463",
-     "host": "techm.kr",
-     "at": "2026-11-18T00:32:00.000Z"
-    },
-    {
-     "title": "[뉴욕마켓워치] 엔비디아 실적 경계 속 美 전산장애 공포…주식·달러↓...",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445273",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-18T00:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "S&P 500 -1.03%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-18T02:29:53.498Z",
+   "id": "vc3zd1",
+   "level": "caution",
+   "title": "연준 내 금리 인상 논쟁 가열...뉴욕 연은 총재 \"빅스텝 반대\" vs 월러 \"...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://www.fnnews.com/news/202611180853328234",
+   "delivered": false
+  },
   {
    "at": "2026-11-18T02:18:52.823Z",
    "id": "cjvefu",
@@ -1153,18 +1165,6 @@
     "S&P 500 -1.03%"
    ],
    "link": "https://www.viva100.com/article/20261118500087",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T23:11:47.887Z",
-   "id": "8ho8ti",
-   "level": "caution",
-   "title": "뉴욕 연은 총재, ‘빅스텝’ 반대 시사…“극적 조치 필요없어”",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.03%"
-   ],
-   "link": "https://view.asiae.co.kr/article/2026111807525587929",
    "delivered": false
   }
  ],
