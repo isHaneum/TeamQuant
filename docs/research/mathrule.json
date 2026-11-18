@@ -1,0 +1,2951 @@
+{
+ "prereg": "PREREG-E.md",
+ "index": {
+  "^SP500TR": {
+   "name": "S&P500 총수익",
+   "from": "1990-01-02",
+   "to": "2026-11-16",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.9,
+     "trades": 442,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -19.4,
+     "vsHPerYrPct": -0.58,
+     "mdd": -48.6,
+     "trades": 444,
+     "sells": 2,
+     "medGainAtSell": 83.8
+    },
+    "NT": {
+     "vsHPct": -25.7,
+     "vsHPerYrPct": -0.8,
+     "mdd": -46.3,
+     "trades": 448,
+     "sells": 5,
+     "medGainAtSell": 64.4
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.8,
+     "trades": 446,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.9,
+     "trades": 442,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1.6,
+     "vsHPerYrPct": 0.04,
+     "mdd": -54.3,
+     "trades": 493,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 27,
+     "beatHShare": 7.4,
+     "medianVsHPct": 0,
+     "worstVsHPct": -6.8,
+     "bestVsHPct": 3.6
+    },
+    "NT": {
+     "windows": 27,
+     "beatHShare": 14.8,
+     "medianVsHPct": -3.3,
+     "worstVsHPct": -8.9,
+     "bestVsHPct": 2
+    },
+    "V1": {
+     "windows": 27,
+     "beatHShare": 59.3,
+     "medianVsHPct": 0.2,
+     "worstVsHPct": 0,
+     "bestVsHPct": 5.2
+    },
+    "V2": {
+     "windows": 27,
+     "beatHShare": 44.4,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 2.7
+    },
+    "F": {
+     "windows": 27,
+     "beatHShare": 88.9,
+     "medianVsHPct": 2.2,
+     "worstVsHPct": -2.1,
+     "bestVsHPct": 4.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2008-06-03",
+     "first": -5.3,
+     "second": -8.9
+    },
+    "NT": {
+     "split": "2008-06-03",
+     "first": -9.9,
+     "second": -13.2
+    },
+    "V1": {
+     "split": "2008-06-03",
+     "first": 0.1,
+     "second": 0.5
+    },
+    "V2": {
+     "split": "2008-06-03",
+     "first": 0,
+     "second": 0.5
+    },
+    "F": {
+     "split": "2008-06-03",
+     "first": 1.5,
+     "second": 4
+    }
+   }
+  },
+  "^NDX": {
+   "name": "나스닥100",
+   "from": "1990-01-02",
+   "to": "2026-11-16",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -81.7,
+     "trades": 442,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -18.9,
+     "vsHPerYrPct": -0.57,
+     "mdd": -73.4,
+     "trades": 446,
+     "sells": 3,
+     "medGainAtSell": 89.4
+    },
+    "NT": {
+     "vsHPct": -27.5,
+     "vsHPerYrPct": -0.87,
+     "mdd": -80.4,
+     "trades": 448,
+     "sells": 4,
+     "medGainAtSell": 83.5
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -81.6,
+     "trades": 447,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -81.6,
+     "trades": 446,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1,
+     "vsHPerYrPct": 0.03,
+     "mdd": -82.3,
+     "trades": 488,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 27,
+     "beatHShare": 22.2,
+     "medianVsHPct": -1.7,
+     "worstVsHPct": -16.3,
+     "bestVsHPct": 11.1
+    },
+    "NT": {
+     "windows": 27,
+     "beatHShare": 14.8,
+     "medianVsHPct": -4,
+     "worstVsHPct": -9.7,
+     "bestVsHPct": 2.7
+    },
+    "V1": {
+     "windows": 27,
+     "beatHShare": 55.6,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": -0.7,
+     "bestVsHPct": 5.1
+    },
+    "V2": {
+     "windows": 27,
+     "beatHShare": 40.7,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 4.9
+    },
+    "F": {
+     "windows": 27,
+     "beatHShare": 66.7,
+     "medianVsHPct": 3.1,
+     "worstVsHPct": -6.3,
+     "bestVsHPct": 9.5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2008-06-03",
+     "first": 2.2,
+     "second": -14.1
+    },
+    "NT": {
+     "split": "2008-06-03",
+     "first": -10.9,
+     "second": -14.4
+    },
+    "V1": {
+     "split": "2008-06-03",
+     "first": 0.3,
+     "second": 0.3
+    },
+    "V2": {
+     "split": "2008-06-03",
+     "first": 0.2,
+     "second": 0.3
+    },
+    "F": {
+     "split": "2008-06-03",
+     "first": -0.3,
+     "second": 6.5
+    }
+   }
+  },
+  "^KS11": {
+   "name": "코스피",
+   "from": "1997-01-03",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -51.4,
+     "trades": 358,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -4.3,
+     "vsHPerYrPct": -0.15,
+     "mdd": -48.2,
+     "trades": 360,
+     "sells": 2,
+     "medGainAtSell": 84.3
+    },
+    "NT": {
+     "vsHPct": -4.1,
+     "vsHPerYrPct": -0.14,
+     "mdd": -48.3,
+     "trades": 369,
+     "sells": 5,
+     "medGainAtSell": 0
+    },
+    "V1": {
+     "vsHPct": 1.2,
+     "vsHPerYrPct": 0.04,
+     "mdd": -52.4,
+     "trades": 370,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0.5,
+     "vsHPerYrPct": 0.02,
+     "mdd": -50.8,
+     "trades": 361,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 20,
+     "beatHShare": 10,
+     "medianVsHPct": 0,
+     "worstVsHPct": -5.6,
+     "bestVsHPct": 5.3
+    },
+    "NT": {
+     "windows": 20,
+     "beatHShare": 40,
+     "medianVsHPct": -0.2,
+     "worstVsHPct": -6.5,
+     "bestVsHPct": 4.1
+    },
+    "V1": {
+     "windows": 20,
+     "beatHShare": 75,
+     "medianVsHPct": 1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 4.1
+    },
+    "V2": {
+     "windows": 20,
+     "beatHShare": 60,
+     "medianVsHPct": 0.5,
+     "worstVsHPct": 0,
+     "bestVsHPct": 4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2011-11-22",
+     "first": -2.3,
+     "second": -3
+    },
+    "NT": {
+     "split": "2011-11-22",
+     "first": 1,
+     "second": -3.1
+    },
+    "V1": {
+     "split": "2011-11-22",
+     "first": 3,
+     "second": 0.4
+    },
+    "V2": {
+     "split": "2011-11-22",
+     "first": 1.1,
+     "second": 0.6
+    }
+   }
+  }
+ },
+ "stock": {
+  "AAPL": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -79.3,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -39.1,
+     "vsHPerYrPct": -1.18,
+     "mdd": -72.1,
+     "trades": 510,
+     "sells": 6,
+     "medGainAtSell": 95.8
+    },
+    "NT": {
+     "vsHPct": -29.6,
+     "vsHPerYrPct": -0.83,
+     "mdd": -78.6,
+     "trades": 506,
+     "sells": 3,
+     "medGainAtSell": 98
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -78.3,
+     "trades": 511,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -78.8,
+     "trades": 507,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1,
+     "vsHPerYrPct": 0.02,
+     "mdd": -79.8,
+     "trades": 564,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 21.9,
+     "medianVsHPct": -8.8,
+     "worstVsHPct": -25.4,
+     "bestVsHPct": 17.9
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": -1.3,
+     "worstVsHPct": -11.1,
+     "bestVsHPct": 9.4
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 65.6,
+     "medianVsHPct": 0.3,
+     "worstVsHPct": 0,
+     "bestVsHPct": 11.8
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 56.3,
+     "medianVsHPct": 0.2,
+     "worstVsHPct": 0,
+     "bestVsHPct": 14.2
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 100,
+     "medianVsHPct": 3.7,
+     "worstVsHPct": 1,
+     "bestVsHPct": 9.5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": 5.7,
+     "second": -33
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -2.3,
+     "second": -16.7
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0.7,
+     "second": 0
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0.3,
+     "second": 0
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 4.6,
+     "second": 2.6
+    }
+   }
+  },
+  "MSFT": {
+   "from": "1986-03-13",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -69.2,
+     "trades": 488,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -54,
+     "vsHPerYrPct": -1.89,
+     "mdd": -59.7,
+     "trades": 493,
+     "sells": 5,
+     "medGainAtSell": 97.2
+    },
+    "NT": {
+     "vsHPct": -23.6,
+     "vsHPerYrPct": -0.66,
+     "mdd": -67.5,
+     "trades": 490,
+     "sells": 2,
+     "medGainAtSell": 99.9
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -69.2,
+     "trades": 488,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -69.2,
+     "trades": 488,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.1,
+     "vsHPerYrPct": 0,
+     "mdd": -69.3,
+     "trades": 537,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 30,
+     "beatHShare": 6.7,
+     "medianVsHPct": -4.7,
+     "worstVsHPct": -29.2,
+     "bestVsHPct": 2.6
+    },
+    "NT": {
+     "windows": 30,
+     "beatHShare": 10,
+     "medianVsHPct": -1.5,
+     "worstVsHPct": -11.9,
+     "bestVsHPct": 2.1
+    },
+    "V1": {
+     "windows": 30,
+     "beatHShare": 53.3,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 5.9
+    },
+    "V2": {
+     "windows": 30,
+     "beatHShare": 36.7,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 3.1
+    },
+    "F": {
+     "windows": 30,
+     "beatHShare": 96.7,
+     "medianVsHPct": 1.4,
+     "worstVsHPct": -3.5,
+     "bestVsHPct": 5.8
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2006-07-06",
+     "first": -33.1,
+     "second": -21.1
+    },
+    "NT": {
+     "split": "2006-07-06",
+     "first": -3.3,
+     "second": -16.2
+    },
+    "V1": {
+     "split": "2006-07-06",
+     "first": 0,
+     "second": 0.1
+    },
+    "V2": {
+     "split": "2006-07-06",
+     "first": 0,
+     "second": 0.1
+    },
+    "F": {
+     "split": "2006-07-06",
+     "first": 0.1,
+     "second": 3.7
+    }
+   }
+  },
+  "AMZN": {
+   "from": "1997-05-15",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -93.9,
+     "trades": 354,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -36.8,
+     "vsHPerYrPct": -1.54,
+     "mdd": -89.3,
+     "trades": 362,
+     "sells": 6,
+     "medGainAtSell": 95.3
+    },
+    "NT": {
+     "vsHPct": -16.8,
+     "vsHPerYrPct": -0.62,
+     "mdd": -93.9,
+     "trades": 355,
+     "sells": 1,
+     "medGainAtSell": 99.2
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -93.9,
+     "trades": 354,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -93.9,
+     "trades": 354,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.7,
+     "vsHPerYrPct": 0.03,
+     "mdd": -94.2,
+     "trades": 419,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 19,
+     "beatHShare": 10.5,
+     "medianVsHPct": -9.6,
+     "worstVsHPct": -18,
+     "bestVsHPct": 27
+    },
+    "NT": {
+     "windows": 19,
+     "beatHShare": 31.6,
+     "medianVsHPct": 0,
+     "worstVsHPct": -12.1,
+     "bestVsHPct": 9.1
+    },
+    "V1": {
+     "windows": 19,
+     "beatHShare": 52.6,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 2.9
+    },
+    "V2": {
+     "windows": 19,
+     "beatHShare": 42.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 2.7
+    },
+    "F": {
+     "windows": 19,
+     "beatHShare": 100,
+     "medianVsHPct": 2.8,
+     "worstVsHPct": 1.3,
+     "bestVsHPct": 9.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2012-02-14",
+     "first": -8,
+     "second": -18
+    },
+    "NT": {
+     "split": "2012-02-14",
+     "first": 0,
+     "second": -12.6
+    },
+    "V1": {
+     "split": "2012-02-14",
+     "first": 0,
+     "second": 0
+    },
+    "V2": {
+     "split": "2012-02-14",
+     "first": 0,
+     "second": 0
+    },
+    "F": {
+     "split": "2012-02-14",
+     "first": 1.3,
+     "second": 5.3
+    }
+   }
+  },
+  "GOOGL": {
+   "from": "2004-08-19",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -62.4,
+     "trades": 267,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -27.7,
+     "vsHPerYrPct": -1.44,
+     "mdd": -56.6,
+     "trades": 270,
+     "sells": 3,
+     "medGainAtSell": 87.6
+    },
+    "NT": {
+     "vsHPct": -15.4,
+     "vsHPerYrPct": -0.75,
+     "mdd": -62.4,
+     "trades": 268,
+     "sells": 1,
+     "medGainAtSell": 80.3
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -62.4,
+     "trades": 267,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -62.4,
+     "trades": 267,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1.2,
+     "vsHPerYrPct": 0.06,
+     "mdd": -64.2,
+     "trades": 298,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 12,
+     "beatHShare": 8.3,
+     "medianVsHPct": -5.3,
+     "worstVsHPct": -8.9,
+     "bestVsHPct": 1.3
+    },
+    "NT": {
+     "windows": 12,
+     "beatHShare": 0,
+     "medianVsHPct": -3.5,
+     "worstVsHPct": -9,
+     "bestVsHPct": 0
+    },
+    "V1": {
+     "windows": 12,
+     "beatHShare": 66.7,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 1.5
+    },
+    "V2": {
+     "windows": 12,
+     "beatHShare": 41.7,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 1.6
+    },
+    "F": {
+     "windows": 12,
+     "beatHShare": 100,
+     "medianVsHPct": 2.9,
+     "worstVsHPct": 0.8,
+     "bestVsHPct": 5.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2015-10-01",
+     "first": -8.1,
+     "second": -8.6
+    },
+    "NT": {
+     "split": "2015-10-01",
+     "first": -6.8,
+     "second": 0
+    },
+    "V1": {
+     "split": "2015-10-01",
+     "first": 0,
+     "second": 0
+    },
+    "V2": {
+     "split": "2015-10-01",
+     "first": 0,
+     "second": 0
+    },
+    "F": {
+     "split": "2015-10-01",
+     "first": 0.3,
+     "second": 5.9
+    }
+   }
+  },
+  "NVDA": {
+   "from": "1999-01-22",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -88.1,
+     "trades": 334,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -48.1,
+     "vsHPerYrPct": -2.33,
+     "mdd": -84.2,
+     "trades": 341,
+     "sells": 6,
+     "medGainAtSell": 98.1
+    },
+    "NT": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -88.1,
+     "trades": 334,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -88.1,
+     "trades": 334,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -88.1,
+     "trades": 334,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 2.5,
+     "vsHPerYrPct": 0.09,
+     "mdd": -86.1,
+     "trades": 386,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 35.3,
+     "medianVsHPct": -14.6,
+     "worstVsHPct": -36,
+     "bestVsHPct": 32.1
+    },
+    "NT": {
+     "windows": 17,
+     "beatHShare": 23.5,
+     "medianVsHPct": 0,
+     "worstVsHPct": -4.1,
+     "bestVsHPct": 1.7
+    },
+    "V1": {
+     "windows": 17,
+     "beatHShare": 64.7,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 4.1
+    },
+    "V2": {
+     "windows": 17,
+     "beatHShare": 41.2,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 5.1
+    },
+    "F": {
+     "windows": 17,
+     "beatHShare": 88.2,
+     "medianVsHPct": 2,
+     "worstVsHPct": -3.2,
+     "bestVsHPct": 22.6
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2012-12-18",
+     "first": 7.3,
+     "second": -43
+    },
+    "NT": {
+     "split": "2012-12-18",
+     "first": 0,
+     "second": 0
+    },
+    "V1": {
+     "split": "2012-12-18",
+     "first": 0,
+     "second": 0
+    },
+    "V2": {
+     "split": "2012-12-18",
+     "first": 0,
+     "second": 0
+    },
+    "F": {
+     "split": "2012-12-18",
+     "first": 24.2,
+     "second": 1.2
+    }
+   }
+  },
+  "JPM": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -72.5,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -18.8,
+     "vsHPerYrPct": -0.5,
+     "mdd": -63.5,
+     "trades": 507,
+     "sells": 4,
+     "medGainAtSell": 87.9
+    },
+    "NT": {
+     "vsHPct": -19.1,
+     "vsHPerYrPct": -0.51,
+     "mdd": -72.1,
+     "trades": 509,
+     "sells": 4,
+     "medGainAtSell": 80.2
+    },
+    "V1": {
+     "vsHPct": 0.1,
+     "vsHPerYrPct": 0,
+     "mdd": -72.2,
+     "trades": 507,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -72.3,
+     "trades": 506,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1.3,
+     "vsHPerYrPct": 0.03,
+     "mdd": -73.3,
+     "trades": 542,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 6.3,
+     "medianVsHPct": -0.6,
+     "worstVsHPct": -11.4,
+     "bestVsHPct": 3.9
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 31.3,
+     "medianVsHPct": 0,
+     "worstVsHPct": -7.5,
+     "bestVsHPct": 3.1
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 71.9,
+     "medianVsHPct": 0.9,
+     "worstVsHPct": 0,
+     "bestVsHPct": 6.1
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 46.9,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 4.4
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 93.8,
+     "medianVsHPct": 1.8,
+     "worstVsHPct": -1.8,
+     "bestVsHPct": 5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": 6,
+     "second": -15.4
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -5.3,
+     "second": -13.8
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0.6,
+     "second": 0.2
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0.4,
+     "second": 0
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 1.2,
+     "second": 2.7
+    }
+   }
+  },
+  "JNJ": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -35.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -33.5,
+     "vsHPerYrPct": -0.97,
+     "mdd": -35.5,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 88.5
+    },
+    "NT": {
+     "vsHPct": -33.5,
+     "vsHPerYrPct": -0.97,
+     "mdd": -35.5,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 92.4
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -35.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -35.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.7,
+     "vsHPerYrPct": 0.02,
+     "mdd": -35.6,
+     "trades": 575,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": -1.2,
+     "worstVsHPct": -9.5,
+     "bestVsHPct": 0
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 3.1,
+     "medianVsHPct": -3.1,
+     "worstVsHPct": -9.1,
+     "bestVsHPct": 3.5
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 56.3,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 1
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 31.3,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 0.6
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 100,
+     "medianVsHPct": 3.1,
+     "worstVsHPct": 0.2,
+     "bestVsHPct": 7.7
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -20.3,
+     "second": -8.5
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -17.7,
+     "second": -10.6
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0.2
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0.1
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 1.5,
+     "second": 1.9
+    }
+   }
+  },
+  "XOM": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -61.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -27.6,
+     "vsHPerYrPct": -0.77,
+     "mdd": -56.1,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 87.1
+    },
+    "NT": {
+     "vsHPct": -23.3,
+     "vsHPerYrPct": -0.63,
+     "mdd": -55.7,
+     "trades": 504,
+     "sells": 2,
+     "medGainAtSell": 86.9
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -61.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -61.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1.2,
+     "vsHPerYrPct": 0.03,
+     "mdd": -61.7,
+     "trades": 557,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": 0,
+     "worstVsHPct": -6.4,
+     "bestVsHPct": 0
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 21.9,
+     "medianVsHPct": -1.3,
+     "worstVsHPct": -6.4,
+     "bestVsHPct": 6.5
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 40.6,
+     "medianVsHPct": 0,
+     "worstVsHPct": -1,
+     "bestVsHPct": 3.2
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 37.5,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 5
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 96.9,
+     "medianVsHPct": 2.5,
+     "worstVsHPct": -2.8,
+     "bestVsHPct": 5.9
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -16.1,
+     "second": -8
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -16,
+     "second": 0.7
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 1.1
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 1.1
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 0.7,
+     "second": 3.9
+    }
+   }
+  },
+  "PG": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -53.8,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -28.4,
+     "vsHPerYrPct": -0.79,
+     "mdd": -47.6,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 88.5
+    },
+    "NT": {
+     "vsHPct": -28.1,
+     "vsHPerYrPct": -0.78,
+     "mdd": -52.3,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 89.2
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -53.8,
+     "trades": 504,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -53.8,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1.7,
+     "vsHPerYrPct": 0.04,
+     "mdd": -53.4,
+     "trades": 554,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": 0,
+     "worstVsHPct": -9.8,
+     "bestVsHPct": 0
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": -2.4,
+     "worstVsHPct": -9.9,
+     "bestVsHPct": 0
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 56.3,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 3.2
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 2
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 100,
+     "medianVsHPct": 2.9,
+     "worstVsHPct": 0.3,
+     "bestVsHPct": 6.5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -17.3,
+     "second": -6.9
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -16.6,
+     "second": -6.9
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0.2
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 1.9,
+     "second": 3.3
+    }
+   }
+  },
+  "KO": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -53.9,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -30.9,
+     "vsHPerYrPct": -0.88,
+     "mdd": -49.1,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 88.9
+    },
+    "NT": {
+     "vsHPct": -29.9,
+     "vsHPerYrPct": -0.85,
+     "mdd": -51,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 89.5
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -53.9,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -53.9,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.3,
+     "vsHPerYrPct": 0.01,
+     "mdd": -54.2,
+     "trades": 549,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 9.4,
+     "medianVsHPct": 0,
+     "worstVsHPct": -13.2,
+     "bestVsHPct": 5.1
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 9.4,
+     "medianVsHPct": -2.6,
+     "worstVsHPct": -11.5,
+     "bestVsHPct": 2.1
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 53.1,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 6
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 2.8
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 75,
+     "medianVsHPct": 1.8,
+     "worstVsHPct": -3.9,
+     "bestVsHPct": 5.2
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -15.8,
+     "second": -8.1
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -9.9,
+     "second": -9.1
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": -0.1,
+     "second": 2.6
+    }
+   }
+  },
+  "INTC": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -82.1,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -4.8,
+     "vsHPerYrPct": -0.12,
+     "mdd": -74.4,
+     "trades": 509,
+     "sells": 5,
+     "medGainAtSell": 93.3
+    },
+    "NT": {
+     "vsHPct": -8.4,
+     "vsHPerYrPct": -0.21,
+     "mdd": -82.1,
+     "trades": 506,
+     "sells": 2,
+     "medGainAtSell": 95
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -82,
+     "trades": 507,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -82.1,
+     "trades": 504,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1,
+     "vsHPerYrPct": 0.02,
+     "mdd": -82.1,
+     "trades": 528,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": -22.1,
+     "bestVsHPct": 13.4
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 28.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": -4.8,
+     "bestVsHPct": 6.6
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 56.3,
+     "medianVsHPct": 0.2,
+     "worstVsHPct": -1.3,
+     "bestVsHPct": 17.5
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 46.9,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 11.2
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 90.6,
+     "medianVsHPct": 2.5,
+     "worstVsHPct": -4.4,
+     "bestVsHPct": 11.2
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -14.6,
+     "second": -4
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -5.9,
+     "second": -6.8
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0.1,
+     "second": 2.2
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0.9
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 0.3,
+     "second": 24
+    }
+   }
+  },
+  "CSCO": {
+   "from": "1990-02-16",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -89.2,
+     "trades": 441,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -40.5,
+     "vsHPerYrPct": -1.4,
+     "mdd": -83.7,
+     "trades": 447,
+     "sells": 5,
+     "medGainAtSell": 96.3
+    },
+    "NT": {
+     "vsHPct": -17,
+     "vsHPerYrPct": -0.5,
+     "mdd": -89.2,
+     "trades": 442,
+     "sells": 1,
+     "medGainAtSell": 98.8
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -89.2,
+     "trades": 441,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -89.2,
+     "trades": 441,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -89.2,
+     "trades": 480,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 26,
+     "beatHShare": 26.9,
+     "medianVsHPct": 0,
+     "worstVsHPct": -34.8,
+     "bestVsHPct": 23.3
+    },
+    "NT": {
+     "windows": 26,
+     "beatHShare": 26.9,
+     "medianVsHPct": 0,
+     "worstVsHPct": -6.1,
+     "bestVsHPct": 4.7
+    },
+    "V1": {
+     "windows": 26,
+     "beatHShare": 73.1,
+     "medianVsHPct": 0.6,
+     "worstVsHPct": 0,
+     "bestVsHPct": 12.4
+    },
+    "V2": {
+     "windows": 26,
+     "beatHShare": 46.2,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 8.7
+    },
+    "F": {
+     "windows": 26,
+     "beatHShare": 50,
+     "medianVsHPct": 0,
+     "worstVsHPct": -7.7,
+     "bestVsHPct": 7.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2008-06-26",
+     "first": -29.3,
+     "second": -8.1
+    },
+    "NT": {
+     "split": "2008-06-26",
+     "first": -8.1,
+     "second": -7.4
+    },
+    "V1": {
+     "split": "2008-06-26",
+     "first": 0,
+     "second": 0.8
+    },
+    "V2": {
+     "split": "2008-06-26",
+     "first": 0,
+     "second": 0.7
+    },
+    "F": {
+     "split": "2008-06-26",
+     "first": 0,
+     "second": 5.7
+    }
+   }
+  },
+  "GE": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -84.5,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -14.1,
+     "vsHPerYrPct": -0.36,
+     "mdd": -77.3,
+     "trades": 506,
+     "sells": 3,
+     "medGainAtSell": 88.5
+    },
+    "NT": {
+     "vsHPct": -5.1,
+     "vsHPerYrPct": -0.13,
+     "mdd": -79,
+     "trades": 507,
+     "sells": 2,
+     "medGainAtSell": 90.4
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -84.5,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -84.5,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.6,
+     "vsHPerYrPct": 0.01,
+     "mdd": -85,
+     "trades": 529,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 34.4,
+     "medianVsHPct": 0,
+     "worstVsHPct": -11.1,
+     "bestVsHPct": 20
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 53.1,
+     "medianVsHPct": 1.3,
+     "worstVsHPct": -9.6,
+     "bestVsHPct": 14
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 46.9,
+     "medianVsHPct": 0,
+     "worstVsHPct": -4.7,
+     "bestVsHPct": 8
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 46.9,
+     "medianVsHPct": 0,
+     "worstVsHPct": -2.5,
+     "bestVsHPct": 7.2
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 62.5,
+     "medianVsHPct": 0.6,
+     "worstVsHPct": -8.8,
+     "bestVsHPct": 6.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -17.5,
+     "second": 4.5
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -15.2,
+     "second": 1.9
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 1
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 1.5
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 0.4,
+     "second": 2.5
+    }
+   }
+  },
+  "F": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -94.1,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": 37.3,
+     "vsHPerYrPct": 0.76,
+     "mdd": -88.8,
+     "trades": 509,
+     "sells": 4,
+     "medGainAtSell": 87.3
+    },
+    "NT": {
+     "vsHPct": 10.6,
+     "vsHPerYrPct": 0.24,
+     "mdd": -93.5,
+     "trades": 510,
+     "sells": 2,
+     "medGainAtSell": 84.1
+    },
+    "V1": {
+     "vsHPct": 1.1,
+     "vsHPerYrPct": 0.03,
+     "mdd": -94.1,
+     "trades": 506,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -94.1,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.2,
+     "vsHPerYrPct": 0,
+     "mdd": -95.1,
+     "trades": 519,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 43.8,
+     "medianVsHPct": 0,
+     "worstVsHPct": -8.6,
+     "bestVsHPct": 19.6
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 68.8,
+     "medianVsHPct": 3.8,
+     "worstVsHPct": -2.9,
+     "bestVsHPct": 21
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 62.5,
+     "medianVsHPct": 1.4,
+     "worstVsHPct": -26.5,
+     "bestVsHPct": 9.1
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 62.5,
+     "medianVsHPct": 1,
+     "worstVsHPct": -22.8,
+     "bestVsHPct": 7.9
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 68.8,
+     "medianVsHPct": 1.6,
+     "worstVsHPct": -24.8,
+     "bestVsHPct": 14.5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": 10.4,
+     "second": 14.2
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 16.3
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 6.4
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0.9
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": -1.2,
+     "second": 10.5
+    }
+   }
+  },
+  "PFE": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -67.9,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -19.6,
+     "vsHPerYrPct": -0.52,
+     "mdd": -61.5,
+     "trades": 505,
+     "sells": 3,
+     "medGainAtSell": 88.6
+    },
+    "NT": {
+     "vsHPct": -20.5,
+     "vsHPerYrPct": -0.55,
+     "mdd": -65.4,
+     "trades": 504,
+     "sells": 2,
+     "medGainAtSell": 90.8
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -67.9,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -67.9,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.4,
+     "vsHPerYrPct": 0.01,
+     "mdd": -68.2,
+     "trades": 541,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 3.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": -18.3,
+     "bestVsHPct": 6.4
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 21.9,
+     "medianVsHPct": -0.3,
+     "worstVsHPct": -11.9,
+     "bestVsHPct": 3.9
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 50,
+     "medianVsHPct": 0,
+     "worstVsHPct": -4.9,
+     "bestVsHPct": 2.1
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 43.8,
+     "medianVsHPct": 0,
+     "worstVsHPct": -4.2,
+     "bestVsHPct": 2
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 75,
+     "medianVsHPct": 1,
+     "worstVsHPct": -5.6,
+     "bestVsHPct": 6.1
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -15.2,
+     "second": -2.2
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -11.7,
+     "second": -2.9
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 1.3
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0.8
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 0.2,
+     "second": 2.9
+    }
+   }
+  },
+  "WMT": {
+   "from": "1985-01-02",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -47.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -37.5,
+     "vsHPerYrPct": -1.12,
+     "mdd": -41,
+     "trades": 506,
+     "sells": 4,
+     "medGainAtSell": 95.5
+    },
+    "NT": {
+     "vsHPct": -31.6,
+     "vsHPerYrPct": -0.9,
+     "mdd": -47.6,
+     "trades": 506,
+     "sells": 3,
+     "medGainAtSell": 92.7
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -47.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -47.6,
+     "trades": 502,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 0.4,
+     "vsHPerYrPct": 0.01,
+     "mdd": -47.6,
+     "trades": 560,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 32,
+     "beatHShare": 0,
+     "medianVsHPct": -0.4,
+     "worstVsHPct": -11.2,
+     "bestVsHPct": 0
+    },
+    "NT": {
+     "windows": 32,
+     "beatHShare": 21.9,
+     "medianVsHPct": -1.3,
+     "worstVsHPct": -7.5,
+     "bestVsHPct": 3.8
+    },
+    "V1": {
+     "windows": 32,
+     "beatHShare": 53.1,
+     "medianVsHPct": 0.1,
+     "worstVsHPct": 0,
+     "bestVsHPct": 3.2
+    },
+    "V2": {
+     "windows": 32,
+     "beatHShare": 34.4,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 2.4
+    },
+    "F": {
+     "windows": 32,
+     "beatHShare": 96.9,
+     "medianVsHPct": 1.8,
+     "worstVsHPct": -0.4,
+     "bestVsHPct": 4.7
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2005-11-28",
+     "first": -20.2,
+     "second": -12.9
+    },
+    "NT": {
+     "split": "2005-11-28",
+     "first": -12.3,
+     "second": -8.7
+    },
+    "V1": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0.1
+    },
+    "V2": {
+     "split": "2005-11-28",
+     "first": 0,
+     "second": 0
+    },
+    "F": {
+     "split": "2005-11-28",
+     "first": 0.6,
+     "second": 2.8
+    }
+   }
+  },
+  "005930.KS": {
+   "from": "2000-01-04",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -53.3,
+     "trades": 322,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -21.3,
+     "vsHPerYrPct": -0.89,
+     "mdd": -53.3,
+     "trades": 325,
+     "sells": 3,
+     "medGainAtSell": 86.4
+    },
+    "NT": {
+     "vsHPct": -12,
+     "vsHPerYrPct": -0.48,
+     "mdd": -53.3,
+     "trades": 325,
+     "sells": 2,
+     "medGainAtSell": 90
+    },
+    "V1": {
+     "vsHPct": 0.1,
+     "vsHPerYrPct": 0,
+     "mdd": -54.6,
+     "trades": 325,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0.1,
+     "vsHPerYrPct": 0,
+     "mdd": -53.8,
+     "trades": 324,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 11.8,
+     "medianVsHPct": -3.9,
+     "worstVsHPct": -6.6,
+     "bestVsHPct": 3.4
+    },
+    "NT": {
+     "windows": 17,
+     "beatHShare": 11.8,
+     "medianVsHPct": 0,
+     "worstVsHPct": -3.4,
+     "bestVsHPct": 1.1
+    },
+    "V1": {
+     "windows": 17,
+     "beatHShare": 47.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 1.6
+    },
+    "V2": {
+     "windows": 17,
+     "beatHShare": 23.5,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 1.4
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2013-03-07",
+     "first": -7.6,
+     "second": -7.8
+    },
+    "NT": {
+     "split": "2013-03-07",
+     "first": 1,
+     "second": -3.2
+    },
+    "V1": {
+     "split": "2013-03-07",
+     "first": 0.8,
+     "second": 0.4
+    },
+    "V2": {
+     "split": "2013-03-07",
+     "first": 0.4,
+     "second": 0.2
+    }
+   }
+  },
+  "000660.KS": {
+   "from": "2000-01-04",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -77.4,
+     "trades": 322,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -23.8,
+     "vsHPerYrPct": -1.01,
+     "mdd": -94,
+     "trades": 334,
+     "sells": 6,
+     "medGainAtSell": 81.3
+    },
+    "NT": {
+     "vsHPct": -7.5,
+     "vsHPerYrPct": -0.29,
+     "mdd": -93.2,
+     "trades": 343,
+     "sells": 8,
+     "medGainAtSell": 0
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -87.6,
+     "trades": 329,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -85,
+     "trades": 328,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 52.9,
+     "medianVsHPct": 0.4,
+     "worstVsHPct": -18.6,
+     "bestVsHPct": 16.1
+    },
+    "NT": {
+     "windows": 17,
+     "beatHShare": 35.3,
+     "medianVsHPct": 0,
+     "worstVsHPct": -8.1,
+     "bestVsHPct": 9.6
+    },
+    "V1": {
+     "windows": 17,
+     "beatHShare": 70.6,
+     "medianVsHPct": 0.6,
+     "worstVsHPct": -2.3,
+     "bestVsHPct": 6.3
+    },
+    "V2": {
+     "windows": 17,
+     "beatHShare": 47.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": -0.1,
+     "bestVsHPct": 8.7
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2013-03-07",
+     "first": 1.1,
+     "second": -21.4
+    },
+    "NT": {
+     "split": "2013-03-07",
+     "first": -7.3,
+     "second": 0
+    },
+    "V1": {
+     "split": "2013-03-07",
+     "first": -1.8,
+     "second": 0
+    },
+    "V2": {
+     "split": "2013-03-07",
+     "first": -0.1,
+     "second": 0
+    }
+   }
+  },
+  "005380.KS": {
+   "from": "2000-01-04",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -68.1,
+     "trades": 322,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -1.9,
+     "vsHPerYrPct": -0.07,
+     "mdd": -59.7,
+     "trades": 326,
+     "sells": 3,
+     "medGainAtSell": 88.5
+    },
+    "NT": {
+     "vsHPct": 2.1,
+     "vsHPerYrPct": 0.08,
+     "mdd": -68.1,
+     "trades": 324,
+     "sells": 1,
+     "medGainAtSell": 0
+    },
+    "V1": {
+     "vsHPct": 0.2,
+     "vsHPerYrPct": 0.01,
+     "mdd": -67.9,
+     "trades": 325,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0.1,
+     "vsHPerYrPct": 0.01,
+     "mdd": -68,
+     "trades": 324,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 17,
+     "beatHShare": 23.5,
+     "medianVsHPct": 0,
+     "worstVsHPct": -12.5,
+     "bestVsHPct": 6
+    },
+    "NT": {
+     "windows": 17,
+     "beatHShare": 64.7,
+     "medianVsHPct": 0.6,
+     "worstVsHPct": -3.8,
+     "bestVsHPct": 4.1
+    },
+    "V1": {
+     "windows": 17,
+     "beatHShare": 76.5,
+     "medianVsHPct": 0.8,
+     "worstVsHPct": 0,
+     "bestVsHPct": 6.7
+    },
+    "V2": {
+     "windows": 17,
+     "beatHShare": 58.8,
+     "medianVsHPct": 0.4,
+     "worstVsHPct": 0,
+     "bestVsHPct": 4.5
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2013-03-07",
+     "first": -12.3,
+     "second": -0.3
+    },
+    "NT": {
+     "split": "2013-03-07",
+     "first": 2.3,
+     "second": 1.9
+    },
+    "V1": {
+     "split": "2013-03-07",
+     "first": 0.3,
+     "second": 1.1
+    },
+    "V2": {
+     "split": "2013-03-07",
+     "first": 0.2,
+     "second": 0.6
+    }
+   }
+  },
+  "035420.KS": {
+   "from": "2002-10-29",
+   "to": "2026-11-18",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -67.5,
+     "trades": 289,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -24.1,
+     "vsHPerYrPct": -1.14,
+     "mdd": -61.3,
+     "trades": 292,
+     "sells": 3,
+     "medGainAtSell": 92.3
+    },
+    "NT": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -67.5,
+     "trades": 289,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -67.5,
+     "trades": 289,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -67.5,
+     "trades": 289,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 14,
+     "beatHShare": 35.7,
+     "medianVsHPct": -2.3,
+     "worstVsHPct": -17.7,
+     "bestVsHPct": 14.3
+    },
+    "NT": {
+     "windows": 14,
+     "beatHShare": 7.1,
+     "medianVsHPct": 0,
+     "worstVsHPct": -1.1,
+     "bestVsHPct": 1.6
+    },
+    "V1": {
+     "windows": 14,
+     "beatHShare": 42.9,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 2.9
+    },
+    "V2": {
+     "windows": 14,
+     "beatHShare": 21.4,
+     "medianVsHPct": 0,
+     "worstVsHPct": 0,
+     "bestVsHPct": 1.7
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2014-09-02",
+     "first": -25.7,
+     "second": 14.8
+    },
+    "NT": {
+     "split": "2014-09-02",
+     "first": 0,
+     "second": 1
+    },
+    "V1": {
+     "split": "2014-09-02",
+     "first": 0,
+     "second": 3.8
+    },
+    "V2": {
+     "split": "2014-09-02",
+     "first": 0,
+     "second": 1.9
+    }
+   }
+  }
+ },
+ "short": {
+  "PLTR": {
+   "from": "2020-09-30",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -76.9,
+     "trades": 74,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": -15.5,
+     "vsHPerYrPct": -2.7,
+     "mdd": -76.9,
+     "trades": 76,
+     "sells": 2,
+     "medGainAtSell": 92
+    },
+    "NT": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -76.9,
+     "trades": 74,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V1": {
+     "vsHPct": 0.1,
+     "vsHPerYrPct": 0.02,
+     "mdd": -77.2,
+     "trades": 76,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0.2,
+     "vsHPerYrPct": 0.04,
+     "mdd": -77,
+     "trades": 76,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 1.6,
+     "vsHPerYrPct": 0.27,
+     "mdd": -81.9,
+     "trades": 85,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "NT": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "V1": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "V2": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "F": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2023-10-23",
+     "first": 0,
+     "second": -9.1
+    },
+    "NT": {
+     "split": "2023-10-23",
+     "first": 0,
+     "second": 0
+    },
+    "V1": {
+     "split": "2023-10-23",
+     "first": 1.3,
+     "second": 0
+    },
+    "V2": {
+     "split": "2023-10-23",
+     "first": 2,
+     "second": 0
+    },
+    "F": {
+     "split": "2023-10-23",
+     "first": -6,
+     "second": 4.3
+    }
+   }
+  },
+  "TEM": {
+   "from": "2024-06-14",
+   "to": "2026-11-17",
+   "whole": {
+    "H": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.9,
+     "trades": 29,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "RB": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.9,
+     "trades": 29,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "NT": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.9,
+     "trades": 29,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V1": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.9,
+     "trades": 29,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "V2": {
+     "vsHPct": 0,
+     "vsHPerYrPct": 0,
+     "mdd": -52.9,
+     "trades": 29,
+     "sells": 0,
+     "medGainAtSell": null
+    },
+    "F": {
+     "vsHPct": 17.9,
+     "vsHPerYrPct": 7.01,
+     "mdd": -52.7,
+     "trades": 36,
+     "sells": 0,
+     "medGainAtSell": null
+    }
+   },
+   "rolling": {
+    "RB": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "NT": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "V1": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "V2": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    },
+    "F": {
+     "windows": 0,
+     "beatHShare": null,
+     "medianVsHPct": null,
+     "worstVsHPct": null,
+     "bestVsHPct": null
+    }
+   },
+   "halves": {
+    "RB": {
+     "split": "2025-09-03",
+     "first": 0,
+     "second": 0
+    },
+    "NT": {
+     "split": "2025-09-03",
+     "first": 0,
+     "second": 2.1
+    },
+    "V1": {
+     "split": "2025-09-03",
+     "first": 0,
+     "second": 2.5
+    },
+    "V2": {
+     "split": "2025-09-03",
+     "first": 0,
+     "second": 3.3
+    },
+    "F": {
+     "split": "2025-09-03",
+     "first": 10.1,
+     "second": 2.2
+    }
+   }
+  }
+ },
+ "verdict": {
+  "RB": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 7.4%",
+    "^NDX 22.2%",
+    "^KS11 10%"
+   ],
+   "stockShareBeat70": 0,
+   "stockPass": false,
+   "stockMedianVsHPerYr": -0.89,
+   "stockMedianHalves": [
+    -14.6,
+    -8.1
+   ],
+   "stockWin": "1/20",
+   "medianMdd": -61.3,
+   "medianSells": 4
+  },
+  "NT": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 14.8%",
+    "^NDX 14.8%",
+    "^KS11 40%"
+   ],
+   "stockShareBeat70": 0,
+   "stockPass": false,
+   "stockMedianVsHPerYr": -0.51,
+   "stockMedianHalves": [
+    -5.9,
+    -3.2
+   ],
+   "stockWin": "2/20",
+   "medianMdd": -67.5,
+   "medianSells": 2
+  },
+  "V1": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 59.3%",
+    "^NDX 55.6%"
+   ],
+   "stockShareBeat70": 20,
+   "stockPass": false,
+   "stockMedianVsHPerYr": 0,
+   "stockMedianHalves": [
+    0,
+    0.2
+   ],
+   "stockWin": "4/20",
+   "medianMdd": -67.9,
+   "medianSells": 0
+  },
+  "V2": {
+   "indexPass": false,
+   "indexFails": [
+    "^SP500TR 44.4%",
+    "^NDX 40.7%",
+    "^KS11 60%"
+   ],
+   "stockShareBeat70": 0,
+   "stockPass": false,
+   "stockMedianVsHPerYr": 0,
+   "stockMedianHalves": [
+    0,
+    0.1
+   ],
+   "stockWin": "2/20",
+   "medianMdd": -68,
+   "medianSells": 0
+  },
+  "F": {
+   "indexPass": false,
+   "indexFails": [
+    "^NDX 66.7%"
+   ],
+   "stockShareBeat70": 81.3,
+   "stockPass": true,
+   "stockMedianVsHPerYr": 0.02,
+   "stockMedianHalves": [
+    0.6,
+    3.3
+   ],
+   "stockWin": "15/16",
+   "medianMdd": -69.3,
+   "medianSells": 0
+  }
+ }
+}
