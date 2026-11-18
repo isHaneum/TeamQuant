@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T05:27:13.851Z",
+ "updatedAt": "2026-11-18T05:47:39.689Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 5050.75,
-   "change": 1.66,
+   "last": 5051.31982421875,
+   "change": 1.67,
    "z": 0.6,
    "sd": 2.851995372154036,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,12 +23,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 660.62,
-   "change": 1.62,
+   "last": 660.739990234375,
+   "change": 1.64,
    "z": 0.6,
    "sd": 2.735048984647316,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -64,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1331.8399658203125,
-   "change": -0.29,
-   "z": -0.5,
+   "last": 1332.1500244140625,
+   "change": -0.26,
+   "z": -0.4,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -76,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 85.01000213623047,
-   "change": -1.16,
-   "z": -0.4,
+   "last": 84.8499984741211,
+   "change": -1.35,
+   "z": -0.5,
    "sd": 2.889304327196342,
    "source": "Yahoo"
   },
@@ -88,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 3790.199951171875,
-   "change": -1.92,
-   "z": -1.5,
+   "last": 3791.199951171875,
+   "change": -1.89,
+   "z": -1.4,
    "sd": 1.3147264686671092,
    "source": "Yahoo"
   },
@@ -121,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": 0.7,
+  "war": 1.4,
   "politics": -1,
-  "rates": -0.2,
-  "trade": 0.1,
+  "rates": 0,
+  "trade": 0.4,
   "fx": -0.2,
   "energy": 0.8,
-  "market": -0.3,
+  "market": -0.4,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 2,
+   "rate": 2.6,
    "saturated": 0,
    "queries": 3
   },
@@ -144,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.7,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -164,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.4,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
@@ -185,6 +183,89 @@
   }
  },
  "issues": [
+  {
+   "id": "1p01rzc",
+   "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+   "firstSeen": "2026-11-18T01:26:00.000Z",
+   "lastSeen": "2026-11-18T01:26:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "fx",
+    "energy"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38541",
+     "host": "junggi.co.kr",
+     "at": "2026-11-18T01:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.89,
+     "unit": "%",
+     "z": -1.4
+    },
+    "why": [
+     "핵심 단어",
+     "금 -1.89%"
+    ]
+   }
+  },
+  {
+   "id": "1yg5c4w",
+   "title": "미군, 이란 남부 게슘섬 공습… 기간시설 마비 노린 ‘정전 폭탄’ 투하...",
+   "firstSeen": "2026-11-18T05:43:00.000Z",
+   "lastSeen": "2026-11-18T05:43:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "미군, 이란 남부 게슘섬 공습… 기간시설 마비 노린 ‘정전 폭탄’ 투하...",
+     "link": "https://biz.chosun.com/international/international_general/2026/11/18/UIL6U4DAORDFFNWN24RUCHGJYU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-18T05:43:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.89,
+     "unit": "%",
+     "z": -1.4
+    },
+    "why": [
+     "핵심 단어",
+     "금 -1.89%"
+    ]
+   }
+  },
   {
    "id": "7x4vqg",
    "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
@@ -215,61 +296,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 45,
+    "score": 43,
     "spike": 0.8,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
      "핵심 단어",
-     "금 -1.92%"
-    ]
-   }
-  },
-  {
-   "id": "1p01rzc",
-   "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
-   "firstSeen": "2026-11-18T01:26:00.000Z",
-   "lastSeen": "2026-11-18T01:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "fx",
-    "energy"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38541",
-     "host": "junggi.co.kr",
-     "at": "2026-11-18T01:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 42,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.92,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "금 -1.92%"
+     "금 -1.89%"
     ]
    }
   },
@@ -297,19 +336,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
+    "score": 40,
     "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
      "핵심 단어",
-     "금 -1.92%"
+     "금 -1.89%"
     ]
    }
   },
@@ -317,9 +356,9 @@
    "id": "bgi1yb",
    "title": "뉴욕 연은 총재 “급격한 금리 인상 불필요”…美 연준 ‘빅스텝’에 제...",
    "firstSeen": "2026-11-17T14:02:00.000Z",
-   "lastSeen": "2026-11-18T01:31:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "lastSeen": "2026-11-18T05:36:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "rates"
    ],
@@ -327,6 +366,12 @@
     "rates"
    ],
    "links": [
+    {
+     "title": "AI 호황이 부른 물가 압력…뉴욕 연은 총재 \"내년 미국 기준금리 추가 ...",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=304062",
+     "host": "widedaily.com",
+     "at": "2026-11-18T05:36:00.000Z"
+    },
     {
      "title": "윌리엄스 뉴욕 연방은행 총재, 12월 금리 큰 폭 인상 불필요",
      "link": "https://www.fnnews.com/news/202611180853328234",
@@ -343,7 +388,7 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 33,
+    "score": 36,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -360,12 +405,12 @@
    }
   },
   {
-   "id": "1cgpjoo",
-   "title": "KDI, 내년 3.9% 경제성장 전망…변수는 반도체",
-   "firstSeen": "2026-11-18T01:02:00.000Z",
+   "id": "15ef9o3",
+   "title": "KDI, 올해 韓 경제성장률 반도체 호황에 3.8% 전망…내년도 3.9%",
+   "firstSeen": "2026-11-17T05:02:00.000Z",
    "lastSeen": "2026-11-18T05:01:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "count": 9,
+   "sources": 9,
    "topics": [
     "energy",
     "market"
@@ -406,12 +451,12 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
-     "금 -1.92%"
+     "금 -1.89%"
     ]
    }
   },
@@ -456,61 +501,6 @@
    }
   },
   {
-   "id": "y8b3be",
-   "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저(종합)",
-   "firstSeen": "2026-11-17T21:25:00.000Z",
-   "lastSeen": "2026-11-17T23:40:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시, 하락세 계속…국제유가, 소폭 상승",
-     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=884443",
-     "host": "hansbiz.co.kr",
-     "at": "2026-11-17T23:40:00.000Z"
-    },
-    {
-     "title": "AI 불확실성에 전산 장애까지... S&P500 7월 이후 최저 [뉴욕증시]",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2019878",
-     "host": "m-i.kr",
-     "at": "2026-11-17T23:30:00.000Z"
-    },
-    {
-     "title": "[오늘의 글로벌마켓] 뉴욕증시, 엔비디아 실적 앞둔 경계감 속 하락세",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147195",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-17T22:44:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261118011351072?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T22:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 26,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.92,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "금 -1.92%"
-    ]
-   }
-  },
-  {
    "id": "774ndg",
    "title": "[N2 모닝 경제 브리핑-11월 18일] 美 증시, 엔비디아 실적 앞두고 AI 불안...",
    "firstSeen": "2026-11-17T21:26:00.000Z",
@@ -546,18 +536,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
-    "spike": 0.8,
+    "score": 26,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
-     "금 -1.92%"
+     "금 -1.89%"
     ]
    }
   },
@@ -597,18 +587,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
-    "spike": 0.8,
+    "score": 26,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
-     "금 -1.92%"
+     "금 -1.89%"
     ]
    }
   },
@@ -648,68 +638,161 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
-    "spike": 0.8,
+    "score": 26,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
-     "금 -1.92%"
+     "금 -1.89%"
     ]
    }
   },
   {
-   "id": "1id4fc1",
-   "title": "국제 금값 14개월 만에 최저...美 연준 추가 금리 인상 압박",
-   "firstSeen": "2026-11-18T00:06:00.000Z",
-   "lastSeen": "2026-11-18T04:03:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "y8b3be",
+   "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저(종합)",
+   "firstSeen": "2026-11-17T21:25:00.000Z",
+   "lastSeen": "2026-11-17T23:40:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "rates",
     "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "한은, 11월 금리 올리고 추가 인상 시사할까…채권시장 ‘긴장’",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579906&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-18T04:03:00.000Z"
+     "title": "뉴욕증시, 하락세 계속…국제유가, 소폭 상승",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=884443",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-17T23:40:00.000Z"
     },
     {
-     "title": "추가 금리 인상 기대 속 가계빚 2030조원…이자 부담 '비상'",
-     "link": "https://www.asiatime.co.kr/article/20261118500188",
-     "host": "asiatime.co.kr",
-     "at": "2026-11-18T03:54:00.000Z"
+     "title": "AI 불확실성에 전산 장애까지... S&P500 7월 이후 최저 [뉴욕증시]",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2019878",
+     "host": "m-i.kr",
+     "at": "2026-11-17T23:30:00.000Z"
     },
     {
-     "title": "국제 금값 14개월 만에 최저...美 연준 추가 금리 인상 압박",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1732066",
-     "host": "ebn.co.kr",
-     "at": "2026-11-18T00:06:00.000Z"
+     "title": "[오늘의 글로벌마켓] 뉴욕증시, 엔비디아 실적 앞둔 경계감 속 하락세",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147195",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-17T22:44:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261118011351072?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-17T22:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 24,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.89,
+     "unit": "%",
+     "z": -1.4
+    },
+    "why": [
+     "금 -1.89%"
+    ]
+   }
+  },
+  {
+   "id": "1mzcufb",
+   "title": "코인 시장 한파에 멈춰 선 거래소…업비트·빗썸, 예치금 2.5조 빠져나가...",
+   "firstSeen": "2026-11-17T21:20:00.000Z",
+   "lastSeen": "2026-11-18T00:50:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "가상자산 침체 직격탄, 업비트-빗썸 예치금 9개월 새 2조5000억 줄며 30% ...",
+     "link": "https://hbnpress.com/news/view/1065573893176748",
+     "host": "hbnpress.com",
+     "at": "2026-11-18T00:50:00.000Z"
+    },
+    {
+     "title": "코인 시장 한파에 멈춰 선 거래소…업비트·빗썸, 예치금 2.5조 빠져나가...",
+     "link": "https://www.chosun.com/economy/stock-finance/2026/11/18/LIIRBPPMSNCUDHJN7YKGRLY33I/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-17T23:44:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 23,
-    "spike": 0.8,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
-     "금 -1.92%"
+     "금 -1.89%"
+    ]
+   }
+  },
+  {
+   "id": "tfkgi9",
+   "title": "[이슈+] 트럼프는 복귀 지지, 이사회는 거부···엔비디아 권력전쟁의...",
+   "firstSeen": "2026-11-17T21:14:00.000Z",
+   "lastSeen": "2026-11-18T05:36:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "격랑의 엔비디아…젠슨 황 복귀 선언에 이사회는 ‘거부’",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1320912&inflow=N",
+     "host": "newstomato.com",
+     "at": "2026-11-18T05:36:00.000Z"
+    },
+    {
+     "title": "[이슈+] 트럼프는 복귀 지지, 이사회는 거부···엔비디아 권력전쟁의...",
+     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643214",
+     "host": "seoulfn.com",
+     "at": "2026-11-18T05:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.89,
+     "unit": "%",
+     "z": -1.4
+    },
+    "why": [
+     "금 -1.89%"
     ]
    }
   },
@@ -769,135 +852,52 @@
    }
   },
   {
-   "id": "104mk8z",
-   "title": "금시세·금값 18일",
-   "firstSeen": "2026-11-17T22:54:00.000Z",
-   "lastSeen": "2026-11-18T01:14:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "금시세(금값) 급락",
-     "link": "http://www.kjdaily.com/article.php?aid=1794964331692729227",
-     "host": "kjdaily.com",
-     "at": "2026-11-18T01:14:00.000Z"
-    },
-    {
-     "title": "금시세·금값 18일",
-     "link": "https://www.bntnews.co.kr/article/view/bnt202611180057",
-     "host": "bntnews.co.kr",
-     "at": "2026-11-18T00:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.92,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "금 -1.92%"
-    ]
-   }
-  },
-  {
-   "id": "54pgid",
-   "title": "엔비디아 실적에 한숨 돌린 코스피...AI공포 언제 끝날까",
-   "firstSeen": "2026-11-18T01:30:00.000Z",
-   "lastSeen": "2026-11-18T01:48:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "1id4fc1",
+   "title": "국제 금값 14개월 만에 최저...美 연준 추가 금리 인상 압박",
+   "firstSeen": "2026-11-18T00:06:00.000Z",
+   "lastSeen": "2026-11-18T04:03:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
     "rates",
-    "energy",
-    "market"
+    "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[오늘증시] 엔비디아 호실적에 한숨 돌렸다…코스피 5000선 재탈환",
-     "link": "https://www.startuptoday.co.kr/news/articleView.html?idxno=819280",
-     "host": "startuptoday.co.kr",
-     "at": "2026-11-18T01:48:00.000Z"
+     "title": "한은, 11월 금리 올리고 추가 인상 시사할까…채권시장 ‘긴장’",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=579906&class=18&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-18T04:03:00.000Z"
     },
     {
-     "title": "엔비디아 실적에 한숨 돌린 코스피...AI공포 언제 끝날까",
-     "link": "https://view.asiae.co.kr/article/2026111810245662698",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-18T01:30:00.000Z"
+     "title": "추가 금리 인상 기대 속 가계빚 2030조원…이자 부담 '비상'",
+     "link": "https://www.asiatime.co.kr/article/20261118500188",
+     "host": "asiatime.co.kr",
+     "at": "2026-11-18T03:54:00.000Z"
+    },
+    {
+     "title": "국제 금값 14개월 만에 최저...美 연준 추가 금리 인상 압박",
+     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1732066",
+     "host": "ebn.co.kr",
+     "at": "2026-11-18T00:06:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 20,
+    "score": 21,
     "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.92,
+     "change": -1.89,
      "unit": "%",
-     "z": -1.5
+     "z": -1.4
     },
     "why": [
-     "금 -1.92%"
-    ]
-   }
-  },
-  {
-   "id": "15ef9o3",
-   "title": "KDI, 올해 성장 전망 0.6%p 높인 3.8%…내년엔 3.9%로 대폭 상향",
-   "firstSeen": "2026-11-17T05:02:00.000Z",
-   "lastSeen": "2026-11-18T03:14:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "KDI “올해 성장률 3.8%…내년엔 3.9% 전망”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8716038&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-18T03:14:00.000Z"
-    },
-    {
-     "title": "KDI, 올해 성장 전망 0.6%p 높인 3.8%…내년엔 3.9%로 대폭 상향",
-     "link": "https://biz.heraldcorp.com/article/10940913?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-18T03:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.92,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "금 -1.92%"
+     "금 -1.89%"
     ]
    }
   }
