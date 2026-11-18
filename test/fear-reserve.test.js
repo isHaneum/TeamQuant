@@ -73,6 +73,13 @@ test('결정 47: 핵심 지수 ETF 는 한 종목 상한(25%)의 예외 — 계�
   assert.equal(pv.evaluation.checks.find(c => c.id === 'maxSingle').ok, true);
 });
 
+test('결정 47-C: 공포 단계만 올라간 변경은 지수 매수만(오른 종목을 깎지 않음) · 첫 운용·계획 변경은 평소 재조정', async () => {
+  const { pl, state } = setup(); state.t = Date.parse('2026-11-16T02:00:00Z'); // 월 11:00 KST · VIX 20 → 첫 운용(재조정)
+  const r1 = await pl.autoRun(); assert.equal(r1.ran, true); assert.equal(r1.rebalance, true); assert.equal(r1.keepWinners, false); assert.match(r1.reason, /계획 변경\(T1\)|첫 운용/);
+  state.t = Date.parse('2026-11-17T02:00:00Z'); state.vix = d => (d >= '2026-11-12' ? 33 : 20); // 화 11:00 KST · 11-16 세션까지 끝남 · 1단계
+  const r2 = await pl.autoRun(); assert.equal(r2.ran, true); assert.equal(r2.market, 'KR'); assert.match(r2.reason, /공포 1단계\(지수 매수만\)/); assert.equal(r2.rebalance, true); assert.equal(r2.keepWinners, true);
+});
+
 test('S&P500 ETF 새 최고점 → 단계 해제 · 비중 되돌림 · 되채움 기록 · 공개 파일에 fear', async () => {
   const { pl, state } = setup();
   state.spy = d => (d >= '2026-10-01' ? 550 : 600); state.vix = d => (d >= '2026-11-12' ? 33 : 20); let st = await pl.status(); assert.equal(st.fear.step, 1); assert.equal(st.fear.high.close, 600);
