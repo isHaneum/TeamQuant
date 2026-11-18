@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T02:47:55.823Z",
+ "updatedAt": "2026-11-18T03:16:23.909Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 4957.96,
-   "change": -0.21,
-   "z": -0.1,
+   "last": 5003.02,
+   "change": 0.7,
+   "z": 0.2,
    "sd": 2.851995372154036,
    "source": "네이버 현재가",
    "live": true,
@@ -24,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 647.74,
-   "change": -0.36,
-   "z": -0.1,
+   "last": 653.51,
+   "change": 0.53,
+   "z": 0.2,
    "sd": 2.735048984647316,
    "source": "네이버 현재가",
    "live": true,
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1329.260009765625,
-   "change": -0.48,
-   "z": -0.8,
+   "last": 1330.0699462890625,
+   "change": -0.42,
+   "z": -0.7,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.1500015258789,
-   "change": -1,
+   "last": 85.25,
+   "change": -0.88,
    "z": -0.3,
    "sd": 2.889304327196342,
    "source": "Yahoo"
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3803.60009765625,
-   "change": -1.57,
+   "last": 3802.60009765625,
+   "change": -1.59,
    "z": -1.2,
    "sd": 1.3147264686671092,
    "source": "Yahoo"
@@ -122,30 +122,30 @@
  ],
  "spikes": {
   "war": 1.6,
-  "politics": -0.2,
-  "rates": 1.1,
+  "politics": -0.8,
+  "rates": 0.8,
   "trade": 0.1,
   "fx": -0.2,
-  "energy": -0.2,
-  "market": 1,
+  "energy": 0.4,
+  "market": 0.9,
   "credit": 0.3,
   "disaster": 0,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 2.9,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.1,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.6,
-   "saturated": 1,
+   "rate": 3.2,
+   "saturated": 0,
    "queries": 3
   },
   "trade": {
@@ -159,13 +159,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.4,
-   "saturated": 2,
+   "rate": 4.2,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -185,6 +185,48 @@
   }
  },
  "issues": [
+  {
+   "id": "1p01rzc",
+   "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+   "firstSeen": "2026-11-18T01:26:00.000Z",
+   "lastSeen": "2026-11-18T01:26:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "fx",
+    "energy"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38541",
+     "host": "junggi.co.kr",
+     "at": "2026-11-18T01:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "핵심 단어",
+     "금 -1.59%"
+    ]
+   }
+  },
   {
    "id": "vc3zd1",
    "title": "연준 내 금리 인상 논쟁 가열...뉴욕 연은 총재 \"빅스텝 반대\" vs 월러 \"...",
@@ -221,8 +263,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 44,
-    "spike": 1.1,
+    "score": 42,
+    "spike": 0.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -234,48 +276,6 @@
     "why": [
      "핵심 단어",
      "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "1p01rzc",
-   "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
-   "firstSeen": "2026-11-18T01:26:00.000Z",
-   "lastSeen": "2026-11-18T01:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "fx",
-    "energy"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38541",
-     "host": "junggi.co.kr",
-     "at": "2026-11-18T01:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 44,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.57,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "금 -1.57%"
     ]
    }
   },
@@ -310,8 +310,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 41,
-    "spike": 1.1,
+    "score": 39,
+    "spike": 0.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -327,12 +327,104 @@
    }
   },
   {
+   "id": "7x4vqg",
+   "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+   "firstSeen": "2026-11-17T22:13:00.000Z",
+   "lastSeen": "2026-11-17T23:28:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
+     "link": "https://www.etoday.co.kr/news/view/2649533",
+     "host": "etoday.co.kr",
+     "at": "2026-11-17T23:28:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=67950",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-17T22:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 37,
+    "spike": 0.4,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "핵심 단어",
+     "금 -1.59%"
+    ]
+   }
+  },
+  {
+   "id": "1s0yoqn",
+   "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
+   "firstSeen": "2026-11-17T22:48:00.000Z",
+   "lastSeen": "2026-11-17T23:30:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "[국제유가] 유조선 피격에 상승…공급 과잉 우려 여전",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-17T23:30:00.000Z"
+    },
+    {
+     "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
+     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447328",
+     "host": "econonews.co.kr",
+     "at": "2026-11-17T22:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 37,
+    "spike": 0.4,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.59,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "핵심 단어",
+     "금 -1.59%"
+    ]
+   }
+  },
+  {
    "id": "22mx65",
-   "title": "中선전 APEC 정상회의 오늘 개막…사상 첫 미중러 3자회담 결과 주목",
+   "title": "APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담",
    "firstSeen": "2026-11-17T21:10:00.000Z",
    "lastSeen": "2026-11-18T01:55:00.000Z",
-   "count": 8,
-   "sources": 7,
+   "count": 7,
+   "sources": 6,
    "topics": [
     "war",
     "politics",
@@ -368,110 +460,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
+    "score": 33,
     "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.57,
+     "change": -1.59,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.57%"
-    ]
-   }
-  },
-  {
-   "id": "7x4vqg",
-   "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
-   "firstSeen": "2026-11-17T22:13:00.000Z",
-   "lastSeen": "2026-11-17T23:28:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
-     "link": "https://www.etoday.co.kr/news/view/2649533",
-     "host": "etoday.co.kr",
-     "at": "2026-11-17T23:28:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
-     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=67950",
-     "host": "newsroad.co.kr",
-     "at": "2026-11-17T22:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 34,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.57,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "금 -1.57%"
-    ]
-   }
-  },
-  {
-   "id": "1s0yoqn",
-   "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
-   "firstSeen": "2026-11-17T22:48:00.000Z",
-   "lastSeen": "2026-11-17T23:30:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "[국제유가] 유조선 피격에 상승…공급 과잉 우려 여전",
-     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
-     "host": "shinailbo.co.kr",
-     "at": "2026-11-17T23:30:00.000Z"
-    },
-    {
-     "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
-     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447328",
-     "host": "econonews.co.kr",
-     "at": "2026-11-17T22:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 34,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.57,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "금 -1.57%"
+     "금 -1.59%"
     ]
    }
   },
@@ -520,9 +520,10 @@
    "title": "코스피, 엔비디아 호실적 훈풍에 3%대 급등 출발 … '오천피' 재탈환",
    "firstSeen": "2026-11-17T23:09:00.000Z",
    "lastSeen": "2026-11-18T02:40:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "count": 11,
+   "sources": 11,
    "topics": [
+    "rates",
     "market"
    ],
    "critical": [],
@@ -534,10 +535,10 @@
      "at": "2026-11-18T02:40:00.000Z"
     },
     {
-     "title": "日 닛케이, 엔비디아 호실적에 1% 가까이 올라 59,000선 회복",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445339",
+     "title": "국채선물 하락 출발…엔비디아 실적 호조에 코스피 5천선 탈환",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445337",
      "host": "news.einfomax.co.kr",
-     "at": "2026-11-18T02:26:00.000Z"
+     "at": "2026-11-18T02:18:00.000Z"
     },
     {
      "title": "코스피, 엔비디아 호실적에 3%대 급등…5100선 회복",
@@ -555,65 +556,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "fsyrwc",
-   "title": "[뉴욕증시] 전산 장애·실적 경계 '하락', 반도체 '반등'···엔비디아 ...",
-   "firstSeen": "2026-11-17T14:42:00.000Z",
-   "lastSeen": "2026-11-18T02:18:00.000Z",
-   "count": 10,
-   "sources": 9,
-   "topics": [
-    "rates",
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국채선물 하락 출발…엔비디아 실적 호조에 코스피 5천선 탈환",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445337",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-18T02:18:00.000Z"
-    },
-    {
-     "title": "엔비디아 '깜짝 실적'에 AI 거품론 진정…美 증시 반등 동력 되나?",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=579895&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-18T02:09:00.000Z"
-    },
-    {
-     "title": "코스피, 엔비디아 '깜짝 실적'에 2%대 급등…삼전·하닉 4~6%↑",
-     "link": "http://www.beyondpost.co.kr/view.php?ud=202611180935048317be44c0aacd_30",
-     "host": "beyondpost.co.kr",
-     "at": "2026-11-18T00:38:00.000Z"
-    },
-    {
-     "title": "[크립토 브리핑] 비트코인 8800만원대 반등…엔비디아 '깜짝 실적'에 한...",
-     "link": "https://www.techm.kr/news/articleView.html?idxno=157463",
-     "host": "techm.kr",
-     "at": "2026-11-18T00:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 1.1,
+    "score": 29,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -667,8 +611,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 1.1,
+    "score": 25,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -687,8 +631,8 @@
    "title": "[특징주] 삼성전자 4%대·SK하이닉스 6%대↑…엔비디아 호실적에 급반등",
    "firstSeen": "2026-11-17T23:09:00.000Z",
    "lastSeen": "2026-11-18T02:26:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "count": 6,
+   "sources": 6,
    "topics": [
     "market"
    ],
@@ -722,8 +666,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 1,
+    "score": 25,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -779,12 +723,12 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.57,
+     "change": -1.59,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.57%"
+     "금 -1.59%"
     ]
    }
   },
@@ -830,12 +774,12 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.57,
+     "change": -1.59,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.57%"
+     "금 -1.59%"
     ]
    }
   },
@@ -881,12 +825,12 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.57,
+     "change": -1.59,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.57%"
+     "금 -1.59%"
     ]
    }
   },
@@ -932,12 +876,69 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.57,
+     "change": -1.59,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.57%"
+     "금 -1.59%"
+    ]
+   }
+  },
+  {
+   "id": "puxxj6",
+   "title": "엔비디아, 예상 훌쩍 뛰어넘은 분기 실적 발표...젠슨 황 복귀 의사",
+   "firstSeen": "2026-11-17T21:08:00.000Z",
+   "lastSeen": "2026-11-18T02:52:00.000Z",
+   "count": 5,
+   "sources": 4,
+   "topics": [
+    "politics",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 이사회, 젠슨 황 CEO 복귀 거부...후임자 물색 본격화",
+     "link": "https://www.aitimes.com/news/articleView.html?idxno=217517",
+     "host": "aitimes.com",
+     "at": "2026-11-18T02:52:00.000Z"
+    },
+    {
+     "title": "젠슨 황 \"복귀 원해\" vs 이사회 \"고려 안해\"…엔비디아 실적은 서프라이...",
+     "link": "https://www.hankyung.com/article/202611184351i",
+     "host": "hankyung.com",
+     "at": "2026-11-18T02:39:00.000Z"
+    },
+    {
+     "title": "엔비디아, 젠슨 황 없이도 '호실적'…\"젠슨 황 복귀 없다\"",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347259?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-18T02:38:00.000Z"
+    },
+    {
+     "title": "[마켓 브리핑] 젠슨 황 없는 엔비디아 첫 실적 발표 앞두고 관망세",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347173?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-17T22:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "S&P 500 -1.03%"
     ]
    }
   }
