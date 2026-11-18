@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T22:47:34.770Z",
+ "updatedAt": "2026-11-18T23:12:09.219Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -9,10 +9,10 @@
    "label": "코스피",
    "unit": "%",
    "available": true,
-   "date": "2026-11-18",
+   "date": "2026-11-19",
    "last": 5067.44,
-   "change": 1.99,
-   "z": 0.7,
+   "change": 0,
+   "z": 0,
    "sd": 2.9231269293312696,
    "source": "네이버 현재가",
    "live": false,
@@ -23,10 +23,10 @@
    "label": "코스닥",
    "unit": "%",
    "available": true,
-   "date": "2026-11-18",
+   "date": "2026-11-19",
    "last": 662.81,
-   "change": 1.96,
-   "z": 0.7,
+   "change": 0,
+   "z": 0,
    "sd": 2.724793547207968,
    "source": "네이버 현재가",
    "live": false,
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1332.8199462890625,
-   "change": -0.21,
-   "z": -0.3,
+   "last": 1332.6600341796875,
+   "change": -0.23,
+   "z": -0.4,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 81.88999938964844,
-   "change": -4.79,
-   "z": -1.7,
+   "last": 82.01000213623047,
+   "change": -4.65,
+   "z": -1.6,
    "sd": 2.889304327196342,
    "source": "Yahoo"
   },
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 3727.800048828125,
-   "change": -3.53,
-   "z": -2.7,
+   "last": 3730.60009765625,
+   "change": -3.46,
+   "z": -2.6,
    "sd": 1.3147264686671092,
    "source": "Yahoo"
   },
@@ -124,13 +124,13 @@
   "war": 1,
   "politics": -0.1,
   "rates": 1.5,
-  "trade": 1.2,
+  "trade": 1.3,
   "fx": -0.1,
-  "energy": 0.2,
-  "market": 0.6,
+  "energy": 0.4,
+  "market": 0.7,
   "credit": 0.3,
   "disaster": 0,
-  "policy": 0.2
+  "policy": -0.2
  },
  "rates": {
   "war": {
@@ -149,7 +149,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 4.2,
+   "rate": 4.3,
    "saturated": 1,
    "queries": 2
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.6,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 3
   },
@@ -179,12 +179,71 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
+  {
+   "id": "1apc2kn",
+   "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
+   "firstSeen": "2026-11-17T23:28:00.000Z",
+   "lastSeen": "2026-11-18T22:46:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "뉴욕증시 희비 엇갈려…나스닥 0.42% 상승, 다우 561포인트 하락",
+     "link": "https://www.jemin.com/news/articleView.html?idxno=847651",
+     "host": "jemin.com",
+     "at": "2026-11-18T22:46:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 혼조세 다우 1.11%↓·나스닥 0.4%↑...국제유가 WTI 3%대 급락",
+     "link": "https://www.public25.com/news/articleView.html?idxno=58630",
+     "host": "public25.com",
+     "at": "2026-11-18T22:38:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 혼조 마감… 다우 1.1% 하락·나스닥은 0.4% 상승",
+     "link": "https://biz.chosun.com/international/international_economy/2026/11/19/DFQNGCV7MJH3DG3C4WPV4VN75Y/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-18T21:37:00.000Z"
+    },
+    {
+     "title": "[해외시황] 뉴욕증시, 엔비디아 실적 경계·전산 장애에 '하락'…나스닥...",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=755395",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-17T23:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 70,
+    "spike": 0.7,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -3.46,
+     "unit": "%",
+     "z": -2.6
+    },
+    "why": [
+     "핵심 단어",
+     "금 -3.46%(평소의 2.6배)"
+    ]
+   }
+  },
   {
    "id": "1p01rzc",
    "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
@@ -211,19 +270,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 62,
+    "score": 60,
     "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.53,
+     "change": -3.46,
      "unit": "%",
-     "z": -2.7
+     "z": -2.6
     },
     "why": [
      "핵심 단어",
-     "금 -3.53%(평소의 2.7배)"
+     "금 -3.46%(평소의 2.6배)"
     ]
    }
   },
@@ -231,40 +290,39 @@
    "id": "ik1f4u",
    "title": "[증시 포인트] 엔비디아 호실적 속 반도체주 반등 기대",
    "firstSeen": "2026-11-17T22:36:00.000Z",
-   "lastSeen": "2026-11-18T22:46:00.000Z",
-   "count": 30,
-   "sources": 28,
+   "lastSeen": "2026-11-18T23:08:00.000Z",
+   "count": 26,
+   "sources": 25,
    "topics": [
-    "rates",
-    "market"
+    "rates"
    ],
    "critical": [
     "rates"
    ],
    "links": [
     {
-     "title": "뉴욕증시 희비 엇갈려…나스닥 0.42% 상승, 다우 561포인트 하락",
-     "link": "https://www.jemin.com/news/articleView.html?idxno=847651",
-     "host": "jemin.com",
-     "at": "2026-11-18T22:46:00.000Z"
+     "title": "엔비디아 호실적에도 뉴욕증시 혼조…다우 1.11%↓·나스닥 0.42%↑",
+     "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81750",
+     "host": "issuenbiz.com",
+     "at": "2026-11-18T23:08:00.000Z"
     },
     {
-     "title": "뉴욕증시 혼조 마감...엔비디아 호실적에도 다우 1.11%↓·나스닥 0.42%↑",
-     "link": "https://www.m-economynews.com/news/article.html?no=73261",
-     "host": "m-economynews.com",
-     "at": "2026-11-18T22:44:00.000Z"
+     "title": "[뉴욕증시] 엔비디아 호실적에도 금리 인상 우려 '찬물'…다우 1.11%↓·...",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5085111",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-18T23:04:00.000Z"
     },
     {
-     "title": "엔비디아 호실적에도 S&P500 5일연속 하락",
-     "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6866808_37012.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-18T22:42:00.000Z"
+     "title": "뉴욕증시, 엔비디아 반락·매파 FOMC 의사록에 혼조 마감",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41737",
+     "host": "globale.co.kr",
+     "at": "2026-11-18T23:02:00.000Z"
     },
     {
-     "title": "엔비디아 호실적도 무색…코스피 반등 다시 시험대",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=93803",
-     "host": "the-today.com",
-     "at": "2026-11-18T22:36:00.000Z"
+     "title": "[데일리 머니마켓] 엔비디아 2.89% 하락",
+     "link": "https://www.bigtanews.co.kr/article/view/big202611190001",
+     "host": "bigtanews.co.kr",
+     "at": "2026-11-18T22:54:00.000Z"
     }
    ],
    "assess": {
@@ -274,113 +332,15 @@
     "spike": 1.5,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.99,
-     "unit": "%",
-     "z": 0.7
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
     },
     "why": [
      "핵심 단어",
-     "코스피 +1.99%"
-    ]
-   }
-  },
-  {
-   "id": "63khmz",
-   "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
-   "firstSeen": "2026-11-18T19:16:00.000Z",
-   "lastSeen": "2026-11-18T22:46:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "\"물가 데이터 나빠지면 '빅스텝'도\"…10월 FOMC, 추가 인상 공감대 확인",
-     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68023",
-     "host": "newsroad.co.kr",
-     "at": "2026-11-18T22:46:00.000Z"
-    },
-    {
-     "title": "10월 FOMC 회의록 열어보니...추가 금리인상 공감대…'빅스텝' 거론도",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=276108",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-18T22:42:00.000Z"
-    },
-    {
-     "title": "Fed, 추가 금리 인상에 공감대…12월 '빅스텝' 가능성도 논의해",
-     "link": "https://view.asiae.co.kr/article/2026111907415098854",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-18T22:41:00.000Z"
-    },
-    {
-     "title": "美 연준, 10월 금리 동결에도 추가 인상 공감대…일부 위원 '빅스텝' 거...",
-     "link": "https://www.ajunews.com/view/20261119073229767",
-     "host": "ajunews.com",
-     "at": "2026-11-18T22:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 55,
-    "spike": 1.5,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.99,
-     "unit": "%",
-     "z": 0.7
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 +1.99%"
-    ]
-   }
-  },
-  {
-   "id": "1apc2kn",
-   "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
-   "firstSeen": "2026-11-17T23:28:00.000Z",
-   "lastSeen": "2026-11-17T23:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
-     "link": "https://www.etoday.co.kr/news/view/2649533",
-     "host": "etoday.co.kr",
-     "at": "2026-11-17T23:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.53,
-     "unit": "%",
-     "z": -2.7
-    },
-    "why": [
-     "핵심 단어",
-     "금 -3.53%(평소의 2.7배)"
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
@@ -409,18 +369,18 @@
     "level": "watch",
     "label": "관찰",
     "score": 55,
-    "spike": 0.2,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.53,
+     "change": -3.46,
      "unit": "%",
-     "z": -2.7
+     "z": -2.6
     },
     "why": [
      "핵심 단어",
-     "금 -3.53%(평소의 2.7배)"
+     "금 -3.46%(평소의 2.6배)"
     ]
    }
   },
@@ -466,123 +426,127 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
+    "score": 49,
     "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.53,
+     "change": -3.46,
      "unit": "%",
-     "z": -2.7
+     "z": -2.6
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "금 -3.46%(평소의 2.6배)"
     ]
    }
   },
   {
-   "id": "vo389f",
-   "title": "오늘 첫 3자 정상회담…시진핑, 트럼프 공항 영접",
-   "firstSeen": "2026-11-18T09:19:00.000Z",
-   "lastSeen": "2026-11-18T22:41:00.000Z",
-   "count": 6,
-   "sources": 5,
+   "id": "63khmz",
+   "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
+   "firstSeen": "2026-11-18T19:16:00.000Z",
+   "lastSeen": "2026-11-18T23:08:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "war",
-    "politics"
+    "rates"
    ],
-   "critical": [],
+   "critical": [
+    "rates"
+   ],
    "links": [
     {
-     "title": "미중러 사상 첫 3자 정상회담…핵군축·우크라전 등 중대 분수령",
-     "link": "https://www.mt.co.kr/world/2026/11/19/2026111907403836305",
-     "host": "mt.co.kr",
-     "at": "2026-11-18T22:41:00.000Z"
+     "title": "美연준 10월 FOMC서 추가 금리인상 공감대…일부는 '빅스텝' 거론",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887682",
+     "host": "getnews.co.kr",
+     "at": "2026-11-18T23:08:00.000Z"
     },
     {
-     "title": "트럼프·시진핑·푸틴 오늘 첫 3자 회담…핵군축·세계질서 재편 논의",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000084290",
-     "host": "jnilbo.com",
-     "at": "2026-11-18T22:25:00.000Z"
+     "title": "10월 FOMC서 일부 위원들 '빅스텝' 거론",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147240",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-18T23:04:00.000Z"
     },
     {
-     "title": "트럼프·시진핑·푸틴, 오늘 사상 첫 3자 정상회담",
-     "link": "https://www.ikbc.co.kr/article/view/kbc202611190003",
-     "host": "ikbc.co.kr",
-     "at": "2026-11-18T22:11:00.000Z"
+     "title": "[오늘의 이슈] 연준 '추가 인상' 신호…수능일 증시 10시 개장",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=108120",
+     "host": "newskr.kr",
+     "at": "2026-11-18T22:18:00.000Z"
     },
     {
-     "title": "미·중·러 사상 첫 3자 정상회담…핵군축·국제안보 등 논의",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=782948",
-     "host": "slist.kr",
-     "at": "2026-11-18T22:04:00.000Z"
+     "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
+     "link": "https://www.newspim.com/news/view/20261119000023",
+     "host": "newspim.com",
+     "at": "2026-11-18T19:16:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 50,
-    "spike": 1,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 49,
+    "spike": 1.5,
+    "news": true,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.53,
-     "unit": "%",
-     "z": -2.7
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "핵심 단어",
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
   {
-   "id": "17y8hfn",
-   "title": "\"사우디, 후티와 장기전 대비…최대 6개월 더 이어질 것\"",
-   "firstSeen": "2026-11-18T13:59:00.000Z",
-   "lastSeen": "2026-11-18T14:55:00.000Z",
+   "id": "19m4obf",
+   "title": "금시세·금값 18일",
+   "firstSeen": "2026-11-18T00:10:00.000Z",
+   "lastSeen": "2026-11-18T23:10:00.000Z",
    "count": 3,
-   "sources": 3,
+   "sources": 2,
    "topics": [
-    "war"
+    "rates",
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"사우디, 후티와의 장기전 대비...최장 6개월 이어질 것\"",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611182355355957",
-     "host": "ytn.co.kr",
-     "at": "2026-11-18T14:55:00.000Z"
+     "title": "국제 금값, 연준 매파 기조에 3.2% 급락⋯14개월 만에 최저",
+     "link": "https://www.etoday.co.kr/news/view/2650081",
+     "host": "etoday.co.kr",
+     "at": "2026-11-18T23:10:00.000Z"
     },
     {
-     "title": "사우디, 후티 반군과 6개월 장기전 준비…중동 전쟁 확전 우려",
-     "link": "https://www.segye.com/newsView/20261118521274?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-18T14:30:00.000Z"
+     "title": "급락한 국제 금값…국내 금시세는?",
+     "link": "https://www.etoday.co.kr/news/view/2650070",
+     "host": "etoday.co.kr",
+     "at": "2026-11-18T22:52:00.000Z"
     },
     {
-     "title": "\"사우디, 후티와 장기전 대비…최대 6개월 더 이어질 것\"",
-     "link": "https://www.yna.co.kr/view/AKR20261118188800079?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-18T13:59:00.000Z"
+     "title": "금시세·금값 18일",
+     "link": "https://www.bntnews.co.kr/article/view/bnt202611180057",
+     "host": "bntnews.co.kr",
+     "at": "2026-11-18T00:10:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 43,
-    "spike": 1,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.53,
+     "change": -3.46,
      "unit": "%",
-     "z": -2.7
+     "z": -2.6
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "금 -3.46%(평소의 2.6배)"
     ]
    }
   },
@@ -620,15 +584,15 @@
     "spike": 1.5,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.99,
-     "unit": "%",
-     "z": 0.7
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
     },
     "why": [
      "핵심 단어",
-     "코스피 +1.99%"
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
@@ -666,211 +630,287 @@
     "spike": 1.5,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.99,
-     "unit": "%",
-     "z": 0.7
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
     },
     "why": [
      "핵심 단어",
-     "코스피 +1.99%"
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
   {
-   "id": "1b5lbm7",
-   "title": "[기획] 대기업 연체율 2.8배 증가...중앙그룹 영향 커",
-   "firstSeen": "2026-11-18T06:10:00.000Z",
-   "lastSeen": "2026-11-18T06:10:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "17y8hfn",
+   "title": "\"사우디, 후티와 장기전 대비…최대 6개월 더 이어질 것\"",
+   "firstSeen": "2026-11-18T13:59:00.000Z",
+   "lastSeen": "2026-11-18T14:55:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "war",
-    "rates"
+    "war"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[기획] 대기업 연체율 2.8배 증가...중앙그룹 영향 커",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2020225",
-     "host": "m-i.kr",
-     "at": "2026-11-18T06:10:00.000Z"
+     "title": "\"사우디, 후티와의 장기전 대비...최장 6개월 이어질 것\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611182355355957",
+     "host": "ytn.co.kr",
+     "at": "2026-11-18T14:55:00.000Z"
+    },
+    {
+     "title": "사우디, 후티 반군과 6개월 장기전 준비…중동 전쟁 확전 우려",
+     "link": "https://www.segye.com/newsView/20261118521274?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-18T14:30:00.000Z"
+    },
+    {
+     "title": "\"사우디, 후티와 장기전 대비…최대 6개월 더 이어질 것\"",
+     "link": "https://www.yna.co.kr/view/AKR20261118188800079?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-18T13:59:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 41,
-    "spike": 1.5,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.53,
+     "change": -3.46,
      "unit": "%",
-     "z": -2.7
+     "z": -2.6
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "금 -3.46%(평소의 2.6배)"
     ]
    }
   },
   {
-   "id": "1nh32qg",
-   "title": "[사설] 한계기업, 경제화약고 되면 안 돼",
-   "firstSeen": "2026-11-18T15:04:00.000Z",
-   "lastSeen": "2026-11-18T15:04:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "15dvack",
+   "title": "미중러 정상 오늘 사상 첫 3자회담…핵군축·AI 군사활용 합의 나올까",
+   "firstSeen": "2026-11-18T20:00:00.000Z",
+   "lastSeen": "2026-11-18T22:50:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
     "war",
-    "rates"
+    "politics",
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[사설] 한계기업, 경제화약고 되면 안 돼",
-     "link": "https://m.skyedaily.com/news_view.html?ID=314818",
-     "host": "m.skyedaily.com",
-     "at": "2026-11-18T15:04:00.000Z"
+     "title": "[선전 APEC]미중러 정상, 오늘 첫 3자회담…‘한국 패싱’ 북미회담 촉각",
+     "link": "https://www.newsis.com/view/NISX20261119_0003874122",
+     "host": "newsis.com",
+     "at": "2026-11-18T22:50:00.000Z"
+    },
+    {
+     "title": "미중러 정상 오늘 사상 첫 3자회담…핵군축·AI 군사활용 합의 나올까",
+     "link": "https://biz.heraldcorp.com/article/10941946?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-18T20:43:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 1.5,
+    "score": 40,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.53,
+     "change": -3.46,
      "unit": "%",
-     "z": -2.7
+     "z": -2.6
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "금 -3.46%(평소의 2.6배)"
     ]
    }
   },
   {
-   "id": "19mljd1",
-   "title": "업비트·빗썸, 3분기 나란히 적자… 예치금 2.5조 빠져나가 거래 급감",
-   "firstSeen": "2026-11-18T15:32:00.000Z",
-   "lastSeen": "2026-11-18T15:32:00.000Z",
+   "id": "a2kw6m",
+   "title": "美 뉴욕 연은 총재 \"12월 빅스텝 불필요\"…금리 인상 속도 조절 시사",
+   "firstSeen": "2026-11-18T07:48:00.000Z",
+   "lastSeen": "2026-11-18T07:56:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "war",
     "rates"
    ],
-   "critical": [],
+   "critical": [
+    "rates"
+   ],
    "links": [
     {
-     "title": "업비트·빗썸, 3분기 나란히 적자… 예치금 2.5조 빠져나가 거래 급감",
-     "link": "https://www.chosun.com/economy/stock-finance/2026/11/19/MSNTLURW6FH3HPEZYIFGSYZ3JM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-18T15:32:00.000Z"
+     "title": "美 뉴욕 연은 총재 \"12월 빅스텝 불필요\"…금리 인상 속도 조절 시사",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=327330",
+     "host": "thepublic.kr",
+     "at": "2026-11-18T07:56:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
+    "score": 40,
     "spike": 1.5,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.53,
-     "unit": "%",
-     "z": -2.7
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "핵심 단어",
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
   {
-   "id": "1en7z78",
-   "title": "[2027 증시 앵글 ④] 최현재 유안타증권 센터장 “코스피 1만선 재도전 ...",
-   "firstSeen": "2026-11-18T19:28:00.000Z",
-   "lastSeen": "2026-11-18T19:28:00.000Z",
+   "id": "1tzex74",
+   "title": "美 국채, 안전 선호 우위…월러 '빅스텝론'엔 무덤덤",
+   "firstSeen": "2026-11-18T16:54:00.000Z",
+   "lastSeen": "2026-11-18T16:54:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "war",
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "美 국채, 안전 선호 우위…월러 '빅스텝론'엔 무덤덤",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445426",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-18T16:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 -3.7bp"
+    ]
+   }
+  },
+  {
+   "id": "ljk9il",
+   "title": "[굿모닝 오늘의 증시] 앤트로픽 IPO vs 빅스텝 공포, 주도권 가져갈 쪽은...",
+   "firstSeen": "2026-11-18T22:22:00.000Z",
+   "lastSeen": "2026-11-18T22:22:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
     "rates",
-    "energy"
+    "market"
    ],
-   "critical": [],
+   "critical": [
+    "rates"
+   ],
    "links": [
     {
-     "title": "[2027 증시 앵글 ④] 최현재 유안타증권 센터장 “코스피 1만선 재도전 ...",
-     "link": "https://www.news2day.co.kr/article/20261119500009",
-     "host": "news2day.co.kr",
-     "at": "2026-11-18T19:28:00.000Z"
+     "title": "[굿모닝 오늘의 증시] 앤트로픽 IPO vs 빅스텝 공포, 주도권 가져갈 쪽은...",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963768",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-18T22:22:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
+    "score": 40,
     "spike": 1.5,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.53,
-     "unit": "%",
-     "z": -2.7
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "핵심 단어",
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
   {
-   "id": "1ouc8rc",
-   "title": "[기자수첩] '두나무·빗썸 적자'를 위한 변명",
-   "firstSeen": "2026-11-18T22:30:00.000Z",
-   "lastSeen": "2026-11-18T22:30:00.000Z",
+   "id": "skn269",
+   "title": "美연준 월러, 또 '빅스텝' 필요성 언급…\"충격줘야 할 수도\"",
+   "firstSeen": "2026-11-18T16:27:00.000Z",
+   "lastSeen": "2026-11-18T23:02:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "war",
     "rates"
    ],
-   "critical": [],
+   "critical": [
+    "rates"
+   ],
    "links": [
     {
-     "title": "[기자수첩] '두나무·빗썸 적자'를 위한 변명",
-     "link": "http://www.newsdream.kr/news/articleView.html?idxno=122487",
-     "host": "newsdream.kr",
-     "at": "2026-11-18T22:30:00.000Z"
+     "title": "美연준 월러, 또 '빅스텝' 필요성 언급…\"충격줘야 할 수도\"",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=209012",
+     "host": "tfmedia.co.kr",
+     "at": "2026-11-18T23:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
+    "score": 40,
     "spike": 1.5,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.53,
-     "unit": "%",
-     "z": -2.7
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
     },
     "why": [
-     "금 -3.53%(평소의 2.7배)"
+     "핵심 단어",
+     "미 10년 금리 -3.7bp"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-18T23:12:09.219Z",
+   "id": "1apc2kn",
+   "level": "caution",
+   "title": "뉴욕증시, 잇따른 인프라 장애에 하락⋯유가, 호르무즈 선박 피격에 상...",
+   "why": [
+    "핵심 단어",
+    "금 -3.46%(평소의 2.6배)"
+   ],
+   "link": "https://www.jemin.com/news/articleView.html?idxno=847651",
+   "delivered": false
+  },
   {
    "at": "2026-11-18T22:47:34.770Z",
    "id": "ik1f4u",
@@ -1097,18 +1137,6 @@
     "금 -2.39%"
    ],
    "link": "http://www.00news.co.kr/news/articleView.html?idxno=108202",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-18T10:27:19.939Z",
-   "id": "9hxasb",
-   "level": "caution",
-   "title": "'루피아화 가치 사상 최저' 인니, 기준금리 0.25%p 깜짝 인상",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.03%"
-   ],
-   "link": "https://biz.sbs.co.kr/article_hub/20000347398?division=NAVER",
    "delivered": false
   }
  ],
