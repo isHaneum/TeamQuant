@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T08:47:44.159Z",
+ "updatedAt": "2026-11-18T09:14:22.478Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1330.1500244140625,
-   "change": -0.41,
-   "z": -0.7,
+   "last": 1330.5899658203125,
+   "change": -0.38,
+   "z": -0.6,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 82.98999786376953,
-   "change": -3.51,
-   "z": -1.2,
+   "last": 82.80999755859375,
+   "change": -3.72,
+   "z": -1.3,
    "sd": 2.889304327196342,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 3767.800048828125,
-   "change": -2.49,
-   "z": -1.9,
+   "last": 3774.199951171875,
+   "change": -2.33,
+   "z": -1.8,
    "sd": 1.3147264686671092,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 24.030000686645508,
-   "change": -5.62,
+   "last": 23.90999984741211,
+   "change": -6.09,
    "z": -0.5,
    "sd": 12.0264913975254,
    "source": "Yahoo",
@@ -120,15 +120,15 @@
  ],
  "spikes": {
   "war": 0.6,
-  "politics": 1.4,
-  "rates": 1.3,
+  "politics": 1.5,
+  "rates": 1.6,
   "trade": -0.1,
   "fx": -0.1,
   "energy": 0.2,
-  "market": 0.5,
+  "market": 0.3,
   "credit": 0.9,
   "disaster": 0,
-  "policy": 0.2
+  "policy": 0.8
  },
  "rates": {
   "war": {
@@ -137,12 +137,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 2.2,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.8,
+   "rate": 4.1,
    "saturated": 1,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.6,
+   "rate": 3.3,
    "saturated": 1,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   }
@@ -187,9 +187,9 @@
    "id": "1p01rzc",
    "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
    "firstSeen": "2026-11-18T01:26:00.000Z",
-   "lastSeen": "2026-11-18T08:46:00.000Z",
-   "count": 31,
-   "sources": 30,
+   "lastSeen": "2026-11-18T08:55:00.000Z",
+   "count": 27,
+   "sources": 26,
    "topics": [
     "war",
     "fx",
@@ -199,6 +199,12 @@
     "war"
    ],
    "links": [
+    {
+     "title": "엔비디아 호실적에 코스피 5000선 회복… 반등 지속은 '반신반의'",
+     "link": "https://www.hankookilbo.com/news/article/A2026111817370003598?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-18T08:55:00.000Z"
+    },
     {
      "title": "코스피, 엔비디아 호실적에 5000선 탈환…기관 매수에 1.99% 상승",
      "link": "https://www.goodkyung.com/news/articleView.html?idxno=293602",
@@ -216,30 +222,24 @@
      "link": "https://www.kbmaeil.com/article/20261118500726",
      "host": "kbmaeil.com",
      "at": "2026-11-18T08:24:00.000Z"
-    },
-    {
-     "title": "코스피, 하루 만에 '5000'선 탈환...코스닥도 반등",
-     "link": "https://www.newsinside.kr/news/articleView.html?idxno=5051083",
-     "host": "newsinside.kr",
-     "at": "2026-11-18T08:20:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 63,
+    "score": 62,
     "spike": 0.6,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   },
@@ -279,8 +279,54 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 46,
-    "spike": 1.3,
+    "score": 48,
+    "spike": 1.6,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "9hxasb",
+   "title": "'루피아화 가치 사상 최저' 인니, 기준금리 0.25%p 깜짝 인상",
+   "firstSeen": "2026-11-18T08:59:00.000Z",
+   "lastSeen": "2026-11-18T09:13:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "'루피아화 가치 사상 최저' 인니, 기준금리 0.25%p 깜짝 인상",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347398?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-18T09:13:00.000Z"
+    },
+    {
+     "title": "'루피아화 가치 사상 최저' 인니, 기준금리 0.25%p 깜짝 인상",
+     "link": "https://www.yna.co.kr/view/AKR20261118169600104?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-18T08:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 45,
+    "spike": 1.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -320,19 +366,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
+    "score": 45,
     "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   },
@@ -360,19 +406,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
+    "score": 42,
     "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   },
@@ -400,19 +446,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
+    "score": 42,
     "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   },
@@ -440,8 +486,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
-    "spike": 1.3,
+    "score": 42,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -457,58 +503,42 @@
    }
   },
   {
-   "id": "1rqxdkv",
-   "title": "KDI, 올해 韓 경제성장률 반도체 호황에 3.8% 전망…내년도 3.9%",
-   "firstSeen": "2026-11-18T03:01:00.000Z",
-   "lastSeen": "2026-11-18T06:36:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "id": "38ft6c",
+   "title": "‘빅스텝’vs.‘연속 인상’… 연준 긴축속도 논쟁 가열",
+   "firstSeen": "2026-11-18T09:00:00.000Z",
+   "lastSeen": "2026-11-18T09:00:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "energy",
-    "market"
+    "rates"
    ],
-   "critical": [],
+   "critical": [
+    "rates"
+   ],
    "links": [
     {
-     "title": "KDI \"한국 경제 내년 3.9% 성장\"…반도체 호황에도 긴축 유지 권고",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=153826",
-     "host": "ziksir.com",
-     "at": "2026-11-18T06:36:00.000Z"
-    },
-    {
-     "title": "올해보다 내년이 더 높아진 고성장...반도체 가중치가 밀어올린 '우상향...",
-     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319642",
-     "host": "updownnews.co.kr",
-     "at": "2026-11-18T06:36:00.000Z"
-    },
-    {
-     "title": "국책기관 KDI, 내년 성장률 3.9%로 전망...석달 전보다 무려 1.7%p 올려",
-     "link": "http://www.beyondpost.co.kr/view.php?ud=2026111814261348412aaae0046f_30",
-     "host": "beyondpost.co.kr",
-     "at": "2026-11-18T05:48:00.000Z"
-    },
-    {
-     "title": "KDI, 성장률 올해 3.8% 내년 3.9% 전망... \"3분의 2가 반도체\"",
-     "link": "https://www.hankookilbo.com/news/article/A2026111811160004541?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-18T05:01:00.000Z"
+     "title": "‘빅스텝’vs.‘연속 인상’… 연준 긴축속도 논쟁 가열",
+     "link": "https://www.koreatimes.com/article/11631928?utm_source=naver",
+     "host": "koreatimes.com",
+     "at": "2026-11-18T09:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 0.5,
+    "score": 42,
+    "spike": 1.6,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.49,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
      "unit": "%",
-     "z": -1.9
+     "z": -1.1
     },
     "why": [
-     "금 -2.49%"
+     "핵심 단어",
+     "S&P 500 -1.03%"
     ]
    }
   },
@@ -549,6 +579,62 @@
     "why": [
      "핵심 단어",
      "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "1rqxdkv",
+   "title": "KDI, 올해 韓 경제성장률 반도체 호황에 3.8% 전망…내년도 3.9%",
+   "firstSeen": "2026-11-18T03:01:00.000Z",
+   "lastSeen": "2026-11-18T08:59:00.000Z",
+   "count": 12,
+   "sources": 12,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "3.9%까지 뛴 내년 성장 전망…'반도체 쏠림' 취약성도 더 커진다",
+     "link": "https://www.newsis.com/view/NISX20261118_0003873173",
+     "host": "newsis.com",
+     "at": "2026-11-18T08:59:00.000Z"
+    },
+    {
+     "title": "KDI \"한국 경제 내년 3.9% 성장\"…반도체 호황에도 긴축 유지 권고",
+     "link": "https://www.ziksir.com/news/articleView.html?idxno=153826",
+     "host": "ziksir.com",
+     "at": "2026-11-18T06:36:00.000Z"
+    },
+    {
+     "title": "올해보다 내년이 더 높아진 고성장...반도체 가중치가 밀어올린 '우상향...",
+     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319642",
+     "host": "updownnews.co.kr",
+     "at": "2026-11-18T06:36:00.000Z"
+    },
+    {
+     "title": "국책기관 KDI, 내년 성장률 3.9%로 전망...석달 전보다 무려 1.7%p 올려",
+     "link": "http://www.beyondpost.co.kr/view.php?ud=2026111814261348412aaae0046f_30",
+     "host": "beyondpost.co.kr",
+     "at": "2026-11-18T05:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 34,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.33,
+     "unit": "%",
+     "z": -1.8
+    },
+    "why": [
+     "금 -2.33%"
     ]
    }
   },
@@ -594,18 +680,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 35,
+    "score": 34,
     "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   },
@@ -641,17 +727,17 @@
     "level": "watch",
     "label": "관찰",
     "score": 31,
-    "spike": 1.4,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   },
@@ -685,18 +771,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 30,
-    "spike": 1.3,
+    "score": 31,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   },
@@ -741,8 +827,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 1.4,
+    "score": 30,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -757,123 +843,59 @@
    }
   },
   {
-   "id": "1mmuhvi",
-   "title": "'젠슨 황' 퇴장으로 달라진 미·중 반도체 구도",
-   "firstSeen": "2026-11-18T04:30:00.000Z",
-   "lastSeen": "2026-11-18T05:33:00.000Z",
+   "id": "1ywt3j1",
+   "title": "'꿈의 9000' 축포 5개월 만에 반토막…'반도체 착시'가 부른 코스피 비극",
+   "firstSeen": "2026-11-18T05:02:00.000Z",
+   "lastSeen": "2026-11-18T05:02:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
     "war",
-    "politics",
-    "trade",
-    "policy"
+    "rates",
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "'젠슨 황' 퇴장으로 달라진 미·중 반도체 구도",
-     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003286123&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
-     "host": "ohmynews.com",
-     "at": "2026-11-18T05:33:00.000Z"
+     "title": "'꿈의 9000' 축포 5개월 만에 반토막…'반도체 착시'가 부른 코스피 비극",
+     "link": "https://www.etoday.co.kr/news/view/2649686",
+     "host": "etoday.co.kr",
+     "at": "2026-11-18T05:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 28,
-    "spike": 1.4,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.49,
+     "change": -2.33,
      "unit": "%",
-     "z": -1.9
+     "z": -1.8
     },
     "why": [
-     "금 -2.49%"
-    ]
-   }
-  },
-  {
-   "id": "hui13s",
-   "title": "“제발 놀라게 하지 말라”…미·중·러 회담 앞둔 유럽이 떠올린 앵커...",
-   "firstSeen": "2026-11-18T06:28:00.000Z",
-   "lastSeen": "2026-11-18T06:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“제발 놀라게 하지 말라”…미·중·러 회담 앞둔 유럽이 떠올린 앵커...",
-     "link": "https://www.joongang.co.kr/article/25479804",
-     "host": "joongang.co.kr",
-     "at": "2026-11-18T06:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.49,
-     "unit": "%",
-     "z": -1.9
-    },
-    "why": [
-     "금 -2.49%"
-    ]
-   }
-  },
-  {
-   "id": "1wyy5rr",
-   "title": "‘예측 불가’ 사상 첫 미·중·러 정상회담에···유럽은 ‘긴장 상태...",
-   "firstSeen": "2026-11-18T06:34:00.000Z",
-   "lastSeen": "2026-11-18T06:34:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "‘예측 불가’ 사상 첫 미·중·러 정상회담에···유럽은 ‘긴장 상태...",
-     "link": "https://www.khan.co.kr/article/202611181534001",
-     "host": "khan.co.kr",
-     "at": "2026-11-18T06:34:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.49,
-     "unit": "%",
-     "z": -1.9
-    },
-    "why": [
-     "금 -2.49%"
+     "금 -2.33%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-18T09:14:22.478Z",
+   "id": "9hxasb",
+   "level": "caution",
+   "title": "'루피아화 가치 사상 최저' 인니, 기준금리 0.25%p 깜짝 인상",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000347398?division=NAVER",
+   "delivered": false
+  },
   {
    "at": "2026-11-18T08:30:31.843Z",
    "id": "1ol9lsh",
@@ -1100,18 +1122,6 @@
     "S&P 500 -1.03%"
    ],
    "link": "https://www.aitimes.com/news/articleView.html?idxno=217490",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-18T01:47:23.815Z",
-   "id": "7x4vqg",
-   "level": "caution",
-   "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
-   "why": [
-    "핵심 단어",
-    "금 -0.78%"
-   ],
-   "link": "https://www.etoday.co.kr/news/view/2649533",
    "delivered": false
   }
  ],
