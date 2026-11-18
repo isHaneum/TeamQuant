@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T01:14:46.649Z",
+ "updatedAt": "2026-11-18T01:27:09.775Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 5065.24,
-   "change": 1.95,
-   "z": 0.7,
+   "last": 5038.87,
+   "change": 1.42,
+   "z": 0.5,
    "sd": 2.9231269293312696,
    "source": "네이버 현재가",
    "live": true,
@@ -24,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 665.76,
-   "change": 2.42,
-   "z": 0.9,
+   "last": 660.58,
+   "change": 1.62,
+   "z": 0.6,
    "sd": 2.724793547207968,
    "source": "네이버 현재가",
    "live": true,
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1330.1800537109375,
-   "change": -0.41,
-   "z": -0.7,
+   "last": 1330.3699951171875,
+   "change": -0.4,
+   "z": -0.6,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.52999877929688,
-   "change": -0.22,
+   "last": 85.58999633789062,
+   "change": -0.15,
    "z": -0.1,
    "sd": 2.9057921059628393,
    "source": "Yahoo"
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3825.800048828125,
-   "change": -0.71,
-   "z": -0.5,
+   "last": 3821.800048828125,
+   "change": -0.81,
+   "z": -0.6,
    "sd": 1.3153647543330618,
    "source": "Yahoo"
   },
@@ -121,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 2.1,
-  "politics": 0,
+  "war": 2.4,
+  "politics": -0.1,
   "rates": 1.4,
-  "trade": 0.1,
-  "fx": 0.3,
-  "energy": 0.6,
+  "trade": 0.4,
+  "fx": -0.2,
+  "energy": 0.3,
   "market": 1,
   "credit": -0.1,
   "disaster": 0,
@@ -134,32 +134,32 @@
  },
  "rates": {
   "war": {
-   "rate": 3.4,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.3,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 4.2,
+   "rate": 4.1,
    "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 3.5,
-   "saturated": 0,
+   "rate": 3.7,
+   "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 3.7,
+   "rate": 3,
    "saturated": 0,
    "queries": 1
   },
@@ -228,9 +228,51 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 54,
-    "spike": 2.1,
+    "score": 56,
+    "spike": 2.4,
     "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 11.13,
+     "unit": "%",
+     "z": 0.9
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +11.13%"
+    ]
+   }
+  },
+  {
+   "id": "1p01rzc",
+   "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+   "firstSeen": "2026-11-18T01:26:00.000Z",
+   "lastSeen": "2026-11-18T01:26:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "fx",
+    "energy"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38541",
+     "host": "junggi.co.kr",
+     "at": "2026-11-18T01:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 2.4,
+    "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
@@ -292,10 +334,10 @@
    }
   },
   {
-   "id": "8ho8ti",
-   "title": "美 뉴욕 연은 총재, 12월 '빅스텝'에 선 그어…\"극적인 조치 불필요\"",
-   "firstSeen": "2026-11-17T22:08:00.000Z",
-   "lastSeen": "2026-11-18T00:09:00.000Z",
+   "id": "vc3zd1",
+   "title": "연준 내 금리 인상 논쟁 가열...뉴욕 연은 총재 \"빅스텝 반대\" vs 월러 \"...",
+   "firstSeen": "2026-11-17T22:10:00.000Z",
+   "lastSeen": "2026-11-18T01:17:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
@@ -306,16 +348,16 @@
    ],
    "links": [
     {
+     "title": "뉴욕 연은 총재 “급격한 금리 인상 불필요”…美 연준 ‘빅스텝’에 제...",
+     "link": "https://www.mk.co.kr/article/12212154",
+     "host": "mk.co.kr",
+     "at": "2026-11-18T01:17:00.000Z"
+    },
+    {
      "title": "연준 내 금리 인상 논쟁 가열...뉴욕 연은 총재 \"빅스텝 반대\" vs 월러 \"...",
      "link": "https://www.ytn.co.kr/_ln/0104_202611180909375865",
      "host": "ytn.co.kr",
      "at": "2026-11-18T00:09:00.000Z"
-    },
-    {
-     "title": "美 뉴욕 연은 총재, 12월 '빅스텝'에 선 그어…\"극적인 조치 불필요\"",
-     "link": "https://www.ajunews.com/view/20261118080934814",
-     "host": "ajunews.com",
-     "at": "2026-11-17T23:22:00.000Z"
     }
    ],
    "assess": {
@@ -333,6 +375,63 @@
     },
     "why": [
      "핵심 단어",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "22mx65",
+   "title": "中선전 APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담 주목",
+   "firstSeen": "2026-11-17T21:10:00.000Z",
+   "lastSeen": "2026-11-18T01:20:00.000Z",
+   "count": 9,
+   "sources": 8,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "中선전 APEC 정상회의 개막…사상 첫 미중러 3자회담 주목",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887571",
+     "host": "getnews.co.kr",
+     "at": "2026-11-18T01:20:00.000Z"
+    },
+    {
+     "title": "중국 선전 APEC 정상회의 오늘 돌입...북 김정은 등판할까 [뉴스UP]",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611180903599194",
+     "host": "ytn.co.kr",
+     "at": "2026-11-18T00:03:00.000Z"
+    },
+    {
+     "title": "APEC 정상회의 오늘 중국 선전서 개막...사상 첫 미중러 3자회담 주목",
+     "link": "https://www.m-economynews.com/news/article.html?no=73196",
+     "host": "m-economynews.com",
+     "at": "2026-11-17T23:00:00.000Z"
+    },
+    {
+     "title": "中선전 APEC 오늘 개막…미중러 사상 첫 3자회담에 세계 이목",
+     "link": "https://biz.heraldcorp.com/article/10940531?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-17T22:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 2.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
      "S&P 500 -1.03%"
     ]
    }
@@ -373,122 +472,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 39,
-    "spike": 0.6,
+    "score": 36,
+    "spike": 0.3,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -0.71,
+     "change": -0.81,
      "unit": "%",
-     "z": -0.5
+     "z": -0.6
     },
     "why": [
      "핵심 단어",
-     "금 -0.71%"
-    ]
-   }
-  },
-  {
-   "id": "22mx65",
-   "title": "中선전 APEC 정상회의 오늘 돌입…사상 첫 미중러 3자회담 주목",
-   "firstSeen": "2026-11-17T21:10:00.000Z",
-   "lastSeen": "2026-11-18T00:03:00.000Z",
-   "count": 8,
-   "sources": 7,
-   "topics": [
-    "war",
-    "politics",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "중국 선전 APEC 정상회의 오늘 돌입...북 김정은 등판할까 [뉴스UP]",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611180903599194",
-     "host": "ytn.co.kr",
-     "at": "2026-11-18T00:03:00.000Z"
-    },
-    {
-     "title": "APEC 정상회의 오늘 중국 선전서 개막...사상 첫 미중러 3자회담 주목",
-     "link": "https://www.m-economynews.com/news/article.html?no=73196",
-     "host": "m-economynews.com",
-     "at": "2026-11-17T23:00:00.000Z"
-    },
-    {
-     "title": "中선전 APEC 오늘 개막…미중러 사상 첫 3자회담에 세계 이목",
-     "link": "https://biz.heraldcorp.com/article/10940531?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-17T22:36:00.000Z"
-    },
-    {
-     "title": "'APEC' 오늘 선전서 개막…미중러 첫 3자회담·북미 접촉 주목",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=782607",
-     "host": "slist.kr",
-     "at": "2026-11-17T22:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "1s0yoqn",
-   "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
-   "firstSeen": "2026-11-17T22:48:00.000Z",
-   "lastSeen": "2026-11-17T23:30:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "[국제유가] 유조선 피격에 상승…공급 과잉 우려 여전",
-     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
-     "host": "shinailbo.co.kr",
-     "at": "2026-11-17T23:30:00.000Z"
-    },
-    {
-     "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
-     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447328",
-     "host": "econonews.co.kr",
-     "at": "2026-11-17T22:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 36,
-    "spike": 0.6,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -0.71,
-     "unit": "%",
-     "z": -0.5
-    },
-    "why": [
-     "핵심 단어",
-     "금 -0.71%"
+     "금 -0.81%"
     ]
    }
   },
@@ -534,8 +530,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 32,
-    "spike": 2.1,
+    "score": 34,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -550,40 +546,86 @@
    }
   },
   {
+   "id": "1s0yoqn",
+   "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
+   "firstSeen": "2026-11-17T22:48:00.000Z",
+   "lastSeen": "2026-11-17T23:30:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "[국제유가] 유조선 피격에 상승…공급 과잉 우려 여전",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-17T23:30:00.000Z"
+    },
+    {
+     "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
+     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447328",
+     "host": "econonews.co.kr",
+     "at": "2026-11-17T22:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 33,
+    "spike": 0.3,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -0.81,
+     "unit": "%",
+     "z": -0.6
+    },
+    "why": [
+     "핵심 단어",
+     "금 -0.81%"
+    ]
+   }
+  },
+  {
    "id": "k0dzfm",
    "title": "코스피, 2%대 반등 출발…5100선 회복 시도",
    "firstSeen": "2026-11-18T00:06:00.000Z",
-   "lastSeen": "2026-11-18T01:14:00.000Z",
-   "count": 24,
-   "sources": 24,
+   "lastSeen": "2026-11-18T01:22:00.000Z",
+   "count": 27,
+   "sources": 27,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피,美 엔비디아 호실적에 5,100선 회복...삼전닉스 4~6%대 급등",
-     "link": "http://www.seouleconews.com/news/articleView.html?idxno=95082",
-     "host": "seouleconews.com",
-     "at": "2026-11-18T01:14:00.000Z"
+     "title": "[포토] 코스피, 장중 '5천피' 회복",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3449660",
+     "host": "newscj.com",
+     "at": "2026-11-18T01:22:00.000Z"
     },
     {
-     "title": "[개장시황] 코스피, 엔비디아 실적 호조에 5100선 회복…외국인 매수세...",
-     "link": "https://www.meconomynews.com/news/articleView.html?idxno=203826",
-     "host": "meconomynews.com",
-     "at": "2026-11-18T01:12:00.000Z"
+     "title": "엔비디아 훈풍에…코스피 5,000선 탈환",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261118102206Qaf",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-18T01:22:00.000Z"
     },
     {
-     "title": "엔비디아 호실적 훈풍에 3% 급등...코스피 '5100선 탈환' [TF사진관]",
-     "link": "https://news.tf.co.kr/read/photomovie/2390181.htm",
-     "host": "news.tf.co.kr",
-     "at": "2026-11-18T01:11:00.000Z"
+     "title": "코스피 엔비디아 호실적에 장중 3%대 상승 5120선, 코스닥도 3%대 올라",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452254",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-18T01:16:00.000Z"
     },
     {
-     "title": "코스피, 엔비디아 호실적에 2%대↑···5100선 회복",
-     "link": "http://www.finomy.com/news/articleView.html?idxno=267056",
-     "host": "finomy.com",
-     "at": "2026-11-18T01:10:00.000Z"
+     "title": "코스피 5100선 돌파...엔비디아 호실적에 삼전 5%·하닉 6%↑",
+     "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=320668",
+     "host": "wolyo.co.kr",
+     "at": "2026-11-18T01:16:00.000Z"
     }
    ],
    "assess": {
@@ -605,29 +647,43 @@
    }
   },
   {
-   "id": "1yq8ho8",
-   "title": "EU, ’26.11.21일부터 비OECD 국가로 플라스틱 폐기물 수출 금지",
-   "firstSeen": "2026-11-18T00:46:00.000Z",
-   "lastSeen": "2026-11-18T00:46:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [],
-   "critical": [
-    "trade"
+   "id": "1mzcufb",
+   "title": "업비트·빗썸 예치금 7.8조→5.3조…침체장에 9개월 새 32% '뚝'",
+   "firstSeen": "2026-11-17T21:20:00.000Z",
+   "lastSeen": "2026-11-18T00:50:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "energy",
+    "market"
    ],
+   "critical": [],
    "links": [
     {
-     "title": "EU, ’26.11.21일부터 비OECD 국가로 플라스틱 폐기물 수출 금지",
-     "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=90&CONTENTS_NO=1&bbsGbn=244&bbsSn=244&pNttSn=245116",
-     "host": "dream.kotra.or.kr",
-     "at": "2026-11-18T00:46:00.000Z"
+     "title": "가상자산 침체 직격탄, 업비트-빘썸 예치금 9개월 새 2조5000억 줄며 30% ...",
+     "link": "https://hbnpress.com/news/view/1065573893176748",
+     "host": "hbnpress.com",
+     "at": "2026-11-18T00:50:00.000Z"
+    },
+    {
+     "title": "코인 시장 한파에 멈춰 선 거래소…업비트·빗썸, 예치금 2.5조 빠져나가...",
+     "link": "https://www.chosun.com/economy/stock-finance/2026/11/18/LIIRBPPMSNCUDHJN7YKGRLY33I/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-17T23:44:00.000Z"
+    },
+    {
+     "title": "업비트·빗썸 예치금 7.8조→5.3조…침체장에 9개월 새 32% '뚝'",
+     "link": "https://www.news1.kr/finance/blockchain-fintech/6356851",
+     "host": "news1.kr",
+     "at": "2026-11-17T21:20:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 30,
-    "spike": 0,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -637,7 +693,6 @@
      "z": -1.1
     },
     "why": [
-     "핵심 단어",
      "S&P 500 -1.03%"
     ]
    }
@@ -684,117 +739,6 @@
     "label": "관찰",
     "score": 29,
     "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "mew0va",
-   "title": "러 \"우크라 나토 가입 수용 안 할 것\" 미 제안 사실상 거부",
-   "firstSeen": "2026-11-17T10:16:00.000Z",
-   "lastSeen": "2026-11-18T01:10:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "러 \"우크라 나토 가입 수용 불가\"…美 중재안 사실상 거부",
-     "link": "https://www.newsis.com/view/NISX20261118_0003872539",
-     "host": "newsis.com",
-     "at": "2026-11-18T01:10:00.000Z"
-    },
-    {
-     "title": "러시아, 우크라이나 나토 가입 거부 재확인…\"수용하지 않을 것\"",
-     "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=625888",
-     "host": "mdtoday.co.kr",
-     "at": "2026-11-17T22:54:00.000Z"
-    },
-    {
-     "title": "러시아 \"우크라 나토 가입 불가\"…美 중재안에 반대 입장",
-     "link": "https://www.ajunews.com/view/20261118061008702",
-     "host": "ajunews.com",
-     "at": "2026-11-17T21:14:00.000Z"
-    },
-    {
-     "title": "러 \"우크라 나토 가입 수용 안 할 것\" 미 제안 사실상 거부",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261118004901cSV",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-17T15:49:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 11.13,
-     "unit": "%",
-     "z": 0.9
-    },
-    "why": [
-     "VIX 변동성 +11.13%"
-    ]
-   }
-  },
-  {
-   "id": "113k1ci",
-   "title": "[모닝 뉴스브리핑] 비트코인 6만3000달러대…뉴욕증시 3대 지수 일제히...",
-   "firstSeen": "2026-11-17T07:58:00.000Z",
-   "lastSeen": "2026-11-18T00:58:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저",
-     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1544141",
-     "host": "obsnews.co.kr",
-     "at": "2026-11-18T00:58:00.000Z"
-    },
-    {
-     "title": "[오늘의 글로벌마켓] 뉴욕증시, 엔비디아 실적 앞둔 경계감 속 하락세",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147195",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-17T22:44:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 3대 지수 동반 하락…다우 1.64%↓",
-     "link": "http://www.kjdaily.com/article.php?aid=1794954808692724276",
-     "host": "kjdaily.com",
-     "at": "2026-11-17T22:36:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261118011351072?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-17T22:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -865,59 +809,51 @@
    }
   },
   {
-   "id": "1x0tnst",
-   "title": "[굿모닝 오늘의 증시] 엔비디아 눈치 본 뉴욕...이사회, 젠슨 황 재선임...",
-   "firstSeen": "2026-11-17T16:21:00.000Z",
-   "lastSeen": "2026-11-18T01:08:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "mew0va",
+   "title": "러시아 \"우크라 나토 가입 불가\"…美 중재안에 반대 입장",
+   "firstSeen": "2026-11-17T10:16:00.000Z",
+   "lastSeen": "2026-11-18T01:10:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "rates",
-    "fx",
-    "market"
+    "war"
    ],
    "critical": [],
    "links": [
     {
-     "title": "엔비디아 이사회, 젠슨 황 복귀 일축… \"CEO 재선임 의사 없다\"",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=301610",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-18T01:08:00.000Z"
+     "title": "러 \"우크라 나토 가입 수용 불가\"…美 중재안 사실상 거부",
+     "link": "https://www.newsis.com/view/NISX20261118_0003872539",
+     "host": "newsis.com",
+     "at": "2026-11-18T01:10:00.000Z"
     },
     {
-     "title": "엔비디아 의장 \"젠슨 황 복귀 불가\"…내년 매출 75% 성장",
-     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54854",
-     "host": "koreareport.co.kr",
-     "at": "2026-11-18T00:52:00.000Z"
+     "title": "러시아, 우크라이나 나토 가입 거부 재확인…\"수용하지 않을 것\"",
+     "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=625888",
+     "host": "mdtoday.co.kr",
+     "at": "2026-11-17T22:54:00.000Z"
     },
     {
-     "title": "젠슨 황 \"CEO 복귀 의향 있다\"…엔비디아 이사회 \"재선임 없다\"",
-     "link": "https://www.hidomin.com/news/articleView.html?idxno=729878",
-     "host": "hidomin.com",
-     "at": "2026-11-18T00:52:00.000Z"
-    },
-    {
-     "title": "매출 두 배 넘게 뛴 엔비디아, 이사회는 젠슨 황 복귀 거부",
-     "link": "http://www.newskr.kr/news/articleView.html?idxno=108096",
-     "host": "newskr.kr",
-     "at": "2026-11-18T00:46:00.000Z"
+     "title": "러시아 \"우크라 나토 가입 불가\"…美 중재안에 반대 입장",
+     "link": "https://www.ajunews.com/view/20261118061008702",
+     "host": "ajunews.com",
+     "at": "2026-11-17T21:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 28,
-    "spike": 1.4,
+    "spike": 2.4,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 11.13,
      "unit": "%",
-     "z": -1.1
+     "z": 0.9
     },
     "why": [
-     "S&P 500 -1.03%"
+     "VIX 변동성 +11.13%"
     ]
    }
   },
@@ -976,9 +912,76 @@
      "S&P 500 -1.03%"
     ]
    }
+  },
+  {
+   "id": "1huw6e4",
+   "title": "[속보] 엔비디아 '어닝 서프라이즈' … 뉴욕증시 시간외 반등, 삼전닉스...",
+   "firstSeen": "2026-11-17T13:55:00.000Z",
+   "lastSeen": "2026-11-18T00:44:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아, 시간외 '급등' 속...삼성전자 & SK하이닉스 '장중 껑충'",
+     "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=173286",
+     "host": "choicenews.co.kr",
+     "at": "2026-11-18T00:44:00.000Z"
+    },
+    {
+     "title": "[특징주] 삼성전자·SK하이닉스 동반 급등…엔비디아 호실적에 투자심리...",
+     "link": "https://www.viva100.com/article/20261118500303",
+     "host": "viva100.com",
+     "at": "2026-11-18T00:28:00.000Z"
+    },
+    {
+     "title": "코스피, 장초반 3%대 급등해 5100선 회복...삼성전자·SK하이닉스 동반 ...",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=505292",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-18T00:20:00.000Z"
+    },
+    {
+     "title": "[특징주] 삼성전자 4%대·SK하이닉스 6%대↑…엔비디아 호실적에 급반등",
+     "link": "https://www.etoday.co.kr/news/view/2649593",
+     "host": "etoday.co.kr",
+     "at": "2026-11-18T00:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 27,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "S&P 500 -1.03%"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-18T01:27:09.775Z",
+   "id": "vc3zd1",
+   "level": "caution",
+   "title": "연준 내 금리 인상 논쟁 가열...뉴욕 연은 총재 \"빅스텝 반대\" vs 월러 \"...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -1.03%"
+   ],
+   "link": "https://www.mk.co.kr/article/12212154",
+   "delivered": false
+  },
   {
    "at": "2026-11-18T00:54:47.781Z",
    "id": "cjvefu",
@@ -1206,18 +1209,6 @@
     "VIX 변동성 +11.13%"
    ],
    "link": "https://www.sedaily.com/article/20115686?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T22:12:46.502Z",
-   "id": "w1bb7g",
-   "level": "caution",
-   "title": "연준 이사 “AI가 뱅크런 부를 수도”",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -1.03%"
-   ],
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=217490",
    "delivered": false
   }
  ],
