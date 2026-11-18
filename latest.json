@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-18T02:29:53.498Z",
+ "updatedAt": "2026-11-18T02:47:55.823Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 5009.39990234375,
-   "change": -1.79,
-   "z": -0.6,
-   "sd": 2.9231269293312696,
-   "source": "Yahoo",
+   "last": 4957.96,
+   "change": -0.21,
+   "z": -0.1,
+   "sd": 2.851995372154036,
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,10 +24,10 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 653.21,
-   "change": 0.48,
-   "z": 0.2,
-   "sd": 2.724793547207968,
+   "last": 647.74,
+   "change": -0.36,
+   "z": -0.1,
+   "sd": 2.735048984647316,
    "source": "네이버 현재가",
    "live": true,
    "checked": true
@@ -63,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-18",
-   "last": 1328.47998046875,
-   "change": -0.54,
-   "z": -0.9,
+   "last": 1329.260009765625,
+   "change": -0.48,
+   "z": -0.8,
    "sd": 0.6309061215566049,
    "source": "Yahoo"
   },
@@ -75,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 85.13999938964844,
-   "change": -1.01,
-   "z": -0.4,
+   "last": 85.1500015258789,
+   "change": -1,
+   "z": -0.3,
    "sd": 2.889304327196342,
    "source": "Yahoo"
   },
@@ -87,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-17",
-   "last": 3802,
-   "change": -1.61,
+   "last": 3803.60009765625,
+   "change": -1.57,
    "z": -1.2,
    "sd": 1.3147264686671092,
    "source": "Yahoo"
@@ -120,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 2.4,
+  "war": 1.6,
   "politics": -0.2,
-  "rates": 1.2,
-  "trade": 0.4,
+  "rates": 1.1,
+  "trade": 0.1,
   "fx": -0.2,
-  "energy": 0,
+  "energy": -0.2,
   "market": 1,
   "credit": 0.3,
   "disaster": 0,
@@ -133,7 +134,7 @@
  },
  "rates": {
   "war": {
-   "rate": 3.6,
+   "rate": 2.9,
    "saturated": 0,
    "queries": 3
   },
@@ -143,12 +144,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.8,
+   "rate": 3.6,
    "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 3.7,
+   "rate": 3.5,
    "saturated": 1,
    "queries": 2
   },
@@ -158,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   },
@@ -184,48 +185,6 @@
   }
  },
  "issues": [
-  {
-   "id": "1p01rzc",
-   "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
-   "firstSeen": "2026-11-18T01:26:00.000Z",
-   "lastSeen": "2026-11-18T01:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "fx",
-    "energy"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38541",
-     "host": "junggi.co.kr",
-     "at": "2026-11-18T01:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 50,
-    "spike": 2.4,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.61,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "핵심 단어",
-     "금 -1.61%"
-    ]
-   }
-  },
   {
    "id": "vc3zd1",
    "title": "연준 내 금리 인상 논쟁 가열...뉴욕 연은 총재 \"빅스텝 반대\" vs 월러 \"...",
@@ -262,8 +221,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 45,
-    "spike": 1.2,
+    "score": 44,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -275,6 +234,48 @@
     "why": [
      "핵심 단어",
      "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "1p01rzc",
+   "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+   "firstSeen": "2026-11-18T01:26:00.000Z",
+   "lastSeen": "2026-11-18T01:26:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "fx",
+    "energy"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "환율 1338.2원 마감…케슘섬 공습에 유가 3거래일 만에 반등",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38541",
+     "host": "junggi.co.kr",
+     "at": "2026-11-18T01:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -1.57,
+     "unit": "%",
+     "z": -1.2
+    },
+    "why": [
+     "핵심 단어",
+     "금 -1.57%"
     ]
    }
   },
@@ -309,8 +310,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 42,
-    "spike": 1.2,
+    "score": 41,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -367,18 +368,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
-    "spike": 2.4,
+    "score": 34,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.61,
+     "change": -1.57,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.61%"
+     "금 -1.57%"
     ]
    }
   },
@@ -418,13 +419,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.61,
+     "change": -1.57,
      "unit": "%",
      "z": -1.2
     },
     "why": [
      "핵심 단어",
-     "금 -1.61%"
+     "금 -1.57%"
     ]
    }
   },
@@ -464,13 +465,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.61,
+     "change": -1.57,
      "unit": "%",
      "z": -1.2
     },
     "why": [
      "핵심 단어",
-     "금 -1.61%"
+     "금 -1.57%"
     ]
    }
   },
@@ -510,6 +511,61 @@
     },
     "why": [
      "핵심 단어",
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "ggqepj",
+   "title": "코스피, 엔비디아 호실적 훈풍에 3%대 급등 출발 … '오천피' 재탈환",
+   "firstSeen": "2026-11-17T23:09:00.000Z",
+   "lastSeen": "2026-11-18T02:40:00.000Z",
+   "count": 12,
+   "sources": 12,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"엔비디아 호실적에도 안 돌아온 투심\" 코스피 5000 반납",
+     "link": "https://www.mt.co.kr/stock/2026/11/18/2026111811310074695",
+     "host": "mt.co.kr",
+     "at": "2026-11-18T02:40:00.000Z"
+    },
+    {
+     "title": "日 닛케이, 엔비디아 호실적에 1% 가까이 올라 59,000선 회복",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445339",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-18T02:26:00.000Z"
+    },
+    {
+     "title": "코스피, 엔비디아 호실적에 3%대 급등…5100선 회복",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=354898",
+     "host": "greened.kr",
+     "at": "2026-11-18T01:51:00.000Z"
+    },
+    {
+     "title": "[오늘증시] 엔비디아 호실적에 한숨 돌렸다…코스피 5000선 재탈환",
+     "link": "https://www.startuptoday.co.kr/news/articleView.html?idxno=819280",
+     "host": "startuptoday.co.kr",
+     "at": "2026-11-18T01:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
      "S&P 500 -1.03%"
     ]
    }
@@ -556,8 +612,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 1.2,
+    "score": 30,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -572,53 +628,112 @@
    }
   },
   {
-   "id": "uljszx",
-   "title": "우크라, 크름대교 맹폭‥미·중·러 회담 앞 긴장",
-   "firstSeen": "2026-11-17T21:17:00.000Z",
-   "lastSeen": "2026-11-18T02:08:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1nq9t4c",
+   "title": "[오늘의 이슈]엔비디아 실적 기대 웃돌아…반도체주 반등 주목",
+   "firstSeen": "2026-11-17T09:54:00.000Z",
+   "lastSeen": "2026-11-18T02:44:00.000Z",
+   "count": 7,
+   "sources": 6,
    "topics": [
-    "war",
-    "politics",
-    "trade"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[中선전 APEC] 李 대통령, 중-러 정상과 연쇄 회담…미·중·러 3자 회담...",
-     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=748634",
-     "host": "polinews.co.kr",
-     "at": "2026-11-18T02:08:00.000Z"
+     "title": "두산 주가 장중 6%대 올라, 엔비디아 실적 호조에 AI기판사업 확대 기대...",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452282",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-18T02:44:00.000Z"
     },
     {
-     "title": "[선전 APEC] 트럼프·시진핑·푸틴 3자 회담에 쏠리는 눈…무역·우크라...",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101452",
-     "host": "newsian.co.kr",
-     "at": "2026-11-17T21:38:00.000Z"
+     "title": "SK하이닉스 주가 장중 4%대 올라, 엔비디아 호실적에 반도체주 강세",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452274",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-18T02:20:00.000Z"
     },
     {
-     "title": "우크라, 크름대교 맹폭‥미·중·러 회담 앞 긴장",
-     "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6866469_37012.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-17T21:17:00.000Z"
+     "title": "엔비디아 ‘어닝서프’에 반도체주 상승 주목",
+     "link": "https://biz.heraldcorp.com/article/10941076?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-18T02:18:00.000Z"
+    },
+    {
+     "title": "엔비디아 호실적에 코스피 2%대 반등",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1320870&inflow=N",
+     "host": "newstomato.com",
+     "at": "2026-11-18T00:58:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 2.4,
+    "score": 27,
+    "spike": 1.1,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.61,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
      "unit": "%",
-     "z": -1.2
+     "z": -1.1
     },
     "why": [
-     "금 -1.61%"
+     "S&P 500 -1.03%"
+    ]
+   }
+  },
+  {
+   "id": "ggqepj",
+   "title": "[특징주] 삼성전자 4%대·SK하이닉스 6%대↑…엔비디아 호실적에 급반등",
+   "firstSeen": "2026-11-17T23:09:00.000Z",
+   "lastSeen": "2026-11-18T02:26:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'삼전닉스' 삼성전자·SK하이닉스 주가 엇갈려…엔비디아 실적 호조에도...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=628133",
+     "host": "cbci.co.kr",
+     "at": "2026-11-18T02:26:00.000Z"
+    },
+    {
+     "title": "엔비디아 훈풍에 코스피 5,100선 회복 시도...삼성전자·SK하이닉스 급등",
+     "link": "https://www.m-economynews.com/news/article.html?no=73212",
+     "host": "m-economynews.com",
+     "at": "2026-11-18T02:06:00.000Z"
+    },
+    {
+     "title": "코스피, 엔비디아 호실적에 ‘5천피’ 탈환… 삼성전자·SK하이닉스, 4~5...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261784",
+     "host": "mediawatch.kr",
+     "at": "2026-11-18T01:54:00.000Z"
+    },
+    {
+     "title": "엔비디아 호재에 반도체 주가 급등, 삼성전자·SK하이닉스 상승세 계속...",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886226",
+     "host": "gokorea.kr",
+     "at": "2026-11-18T01:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 27,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -1.03,
+     "unit": "%",
+     "z": -1.1
+    },
+    "why": [
+     "S&P 500 -1.03%"
     ]
    }
   },
@@ -658,18 +773,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 2.4,
+    "score": 25,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.61,
+     "change": -1.57,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.61%"
+     "금 -1.57%"
     ]
    }
   },
@@ -709,18 +824,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 2.4,
+    "score": 25,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.61,
+     "change": -1.57,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.61%"
+     "금 -1.57%"
     ]
    }
   },
@@ -760,18 +875,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 2.4,
+    "score": 25,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.61,
+     "change": -1.57,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.61%"
+     "금 -1.57%"
     ]
    }
   },
@@ -811,121 +926,47 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 31,
-    "spike": 2.4,
+    "score": 25,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -1.61,
+     "change": -1.57,
      "unit": "%",
      "z": -1.2
     },
     "why": [
-     "금 -1.61%"
-    ]
-   }
-  },
-  {
-   "id": "ggqepj",
-   "title": "코스피, 엔비디아 호실적 훈풍에 3%대 급등 출발 … '오천피' 재탈환",
-   "firstSeen": "2026-11-17T23:09:00.000Z",
-   "lastSeen": "2026-11-18T02:26:00.000Z",
-   "count": 11,
-   "sources": 11,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "日 닛케이, 엔비디아 호실적에 1% 가까이 올라 59,000선 회복",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445339",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-18T02:26:00.000Z"
-    },
-    {
-     "title": "코스피, 엔비디아 호실적에 3%대 급등…5100선 회복",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=354898",
-     "host": "greened.kr",
-     "at": "2026-11-18T01:51:00.000Z"
-    },
-    {
-     "title": "[오늘증시] 엔비디아 호실적에 한숨 돌렸다…코스피 5000선 재탈환",
-     "link": "https://www.startuptoday.co.kr/news/articleView.html?idxno=819280",
-     "host": "startuptoday.co.kr",
-     "at": "2026-11-18T01:48:00.000Z"
-    },
-    {
-     "title": "엔비디아 훈풍에…코스피 5,000선 탈환",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261118102206Qaf",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-18T01:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 30,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -1.03,
-     "unit": "%",
-     "z": -1.1
-    },
-    "why": [
-     "S&P 500 -1.03%"
-    ]
-   }
-  },
-  {
-   "id": "mew0va",
-   "title": "러시아, 우크라이나 나토 가입 거부 재확인…\"수용하지 않을 것\"",
-   "firstSeen": "2026-11-17T10:16:00.000Z",
-   "lastSeen": "2026-11-18T01:10:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "러 \"우크라 나토 가입 수용 불가\"…美 중재안 사실상 거부",
-     "link": "https://www.newsis.com/view/NISX20261118_0003872539",
-     "host": "newsis.com",
-     "at": "2026-11-18T01:10:00.000Z"
-    },
-    {
-     "title": "러시아, 우크라이나 나토 가입 거부 재확인…\"수용하지 않을 것\"",
-     "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=625888",
-     "host": "mdtoday.co.kr",
-     "at": "2026-11-17T22:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 28,
-    "spike": 2.4,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -1.61,
-     "unit": "%",
-     "z": -1.2
-    },
-    "why": [
-     "금 -1.61%"
+     "금 -1.57%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-18T02:47:55.823Z",
+   "id": "7x4vqg",
+   "level": "caution",
+   "title": "뉴욕증시, 인프라 장애·AI 불확실성 겹쳐 4거래일째 하락",
+   "why": [
+    "핵심 단어",
+    "금 -1.57%"
+   ],
+   "link": "https://www.etoday.co.kr/news/view/2649533",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-18T02:47:55.823Z",
+   "id": "1s0yoqn",
+   "level": "caution",
+   "title": "국제유가, 호르무즈해협 유조선 피격 등 영향 3거래일만 반등⋯WTI 배럴...",
+   "why": [
+    "핵심 단어",
+    "금 -1.57%"
+   ],
+   "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5084610",
+   "delivered": false
+  },
   {
    "at": "2026-11-18T02:29:53.498Z",
    "id": "vc3zd1",
@@ -1140,31 +1181,6 @@
     "S&P 500 -1.03%"
    ],
    "link": "https://www.edaily.co.kr/News/Read?newsId=01705606645647032&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T23:27:52.265Z",
-   "id": "jn9kpk",
-   "level": "caution",
-   "title": "트럼프·시진핑·푸틴 한자리에…미중러 정상회담 관전포인트",
-   "why": [
-    "기사 급증(평소 대비 3.1σ)",
-    "S&P 500 -1.03%"
-   ],
-   "link": "https://www.ajunews.com/view/20261118081153816",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-17T23:27:52.265Z",
-   "id": "3vxrfz",
-   "level": "caution",
-   "title": "국제유가, 중동 긴장 고조에 소폭 상승…브렌트유 93달러",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 3.1σ)",
-    "S&P 500 -1.03%"
-   ],
-   "link": "https://www.viva100.com/article/20261118500087",
    "delivered": false
   }
  ],
