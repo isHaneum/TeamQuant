@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-19T21:12:17.101Z",
+ "updatedAt": "2026-11-19T21:27:08.331Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 1334.1400146484375,
-   "change": 0.08,
-   "z": 0.1,
+   "last": 1334.3699951171875,
+   "change": 0.1,
+   "z": 0.2,
    "sd": 0.6310258216128829,
    "source": "Yahoo"
   },
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 83.13999938964844,
-   "change": -0.14,
+   "last": 83.16000366210938,
+   "change": -0.12,
    "z": 0,
    "sd": 2.8908142919922333,
    "source": "Yahoo"
@@ -88,7 +88,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 3659.699951171875,
+   "last": 3659.39990234375,
    "change": -2.2,
    "z": -1.6,
    "sd": 1.364657957476789,
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 28.239999771118164,
-   "change": 14.98,
-   "z": 1.2,
+   "last": 28.6299991607666,
+   "change": 16.57,
+   "z": 1.4,
    "sd": 12.037547060909564,
    "source": "Yahoo",
    "checked": true
@@ -121,36 +121,36 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
-  "politics": -1.1,
-  "rates": -0.8,
-  "trade": -0.1,
+  "war": -0.2,
+  "politics": -1,
+  "rates": -0.5,
+  "trade": 0,
   "fx": -0.2,
   "energy": 0,
-  "market": -0.9,
+  "market": -0.5,
   "credit": 0.1,
-  "disaster": 0,
+  "disaster": 0.4,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 1,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.2,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.2,
-   "saturated": 0,
+   "rate": 3.3,
+   "saturated": 1,
    "queries": 2
   },
   "fx": {
@@ -164,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.2,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
@@ -174,7 +174,7 @@
    "queries": 2
   },
   "disaster": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   },
@@ -493,11 +493,106 @@
    }
   },
   {
+   "id": "ne1g4y",
+   "title": "[금/유가] 호르무즈 운송 차질 vs 공급 과잉에 유가 보합…금값 14개월래...",
+   "firstSeen": "2026-11-19T21:12:00.000Z",
+   "lastSeen": "2026-11-19T21:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "[금/유가] 호르무즈 운송 차질 vs 공급 과잉에 유가 보합…금값 14개월래...",
+     "link": "https://www.newspim.com/news/view/20261120000048",
+     "host": "newspim.com",
+     "at": "2026-11-19T21:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 37,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.2,
+     "unit": "%",
+     "z": -1.6
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.2%"
+    ]
+   }
+  },
+  {
+   "id": "13rofye",
+   "title": "코스피, 장중 5,000선 붕괴 후 급반등...5,137선 상승 마감",
+   "firstSeen": "2026-11-19T07:38:00.000Z",
+   "lastSeen": "2026-11-19T14:04:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피, 앤트로픽 상장 기대감에 상승 마감",
+     "link": "https://www.betanews.net/article/view/beta202611190164",
+     "host": "betanews.net",
+     "at": "2026-11-19T14:04:00.000Z"
+    },
+    {
+     "title": "코스피, 수능날 5000선 붕괴 딛고 반등…1.39% 상승 마감",
+     "link": "https://futurechosun.com/?p=167191",
+     "host": "futurechosun.com",
+     "at": "2026-11-19T08:56:00.000Z"
+    },
+    {
+     "title": "코스피 5137선 회복, 코스닥 3%대 급등",
+     "link": "https://www.thereport.co.kr/news/articleView.html?idxno=93538",
+     "host": "thereport.co.kr",
+     "at": "2026-11-19T08:32:00.000Z"
+    },
+    {
+     "title": "코스피, 반도체주 반등에 5130선 마감···코스닥 3%대 급등",
+     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643378",
+     "host": "seoulfn.com",
+     "at": "2026-11-19T08:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -2.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
    "id": "orlua8",
    "title": "뉴욕증시 프리뷰, 나스닥 선물 2%대 급등…앤스로픽 역대 최대 IPO에 AI주...",
    "firstSeen": "2026-11-19T06:01:00.000Z",
-   "lastSeen": "2026-11-19T16:57:00.000Z",
-   "count": 7,
+   "lastSeen": "2026-11-19T21:18:00.000Z",
+   "count": 8,
    "sources": 5,
    "topics": [
     "rates",
@@ -507,10 +602,16 @@
    "critical": [],
    "links": [
     {
-     "title": "앤스로픽, 상장 첫날 34% 급등…시초가 111.50달러(상보)",
-     "link": "https://view.asiae.co.kr/article/2026112001575268280",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-19T16:57:00.000Z"
+     "title": "앤트로픽 역대 최대 IPO에도 이더리움 급락! 1,800달러 붕괴에 추가 하락...",
+     "link": "http://coinreaders.com/271821",
+     "host": "coinreaders.com",
+     "at": "2026-11-19T21:18:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시 개장], 앤트로픽 상장 기대에 나스닥 1.6% 상승",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94873",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-19T15:28:00.000Z"
     },
     {
      "title": "뉴욕증시 일제히 상승…나스닥 482포인트 급등, 앤트로픽 상장 촉각",
@@ -523,12 +624,62 @@
      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16281023",
      "host": "topstarnews.net",
      "at": "2026-11-19T14:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -2.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "ync58m",
+   "title": "앤스로픽, 상장 첫날 34% 급등…시초가 111.50달러(상보)",
+   "firstSeen": "2026-11-19T16:57:00.000Z",
+   "lastSeen": "2026-11-19T21:24:00.000Z",
+   "count": 7,
+   "sources": 6,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시, 앤스로픽 상장에도 급락 마감…다우 5만 선 하회",
+     "link": "https://www.newspim.com/news/view/20261120000052",
+     "host": "newspim.com",
+     "at": "2026-11-19T21:24:00.000Z"
     },
     {
-     "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...앤스로픽 역대 최대 IPO에 반도체주...",
-     "link": "https://www.newspim.com/news/view/20261119001476",
-     "host": "newspim.com",
-     "at": "2026-11-19T14:20:00.000Z"
+     "title": "[속보] 뉴욕증시, 앤트로픽 상장 첫날 97.17달러로 마감 '17.07%↑'",
+     "link": "https://www.dailian.co.kr/news/view/1717500/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-19T21:23:00.000Z"
+    },
+    {
+     "title": "앤트로픽 상장에도 뉴욕증시 2%대 급락…다우 50,000선 아래로",
+     "link": "https://www.yna.co.kr/view/AKR20261120010700072?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-19T21:18:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시-1보] 앤트로픽 상장은 매도 신호였나…2%대 급락 마감",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445638",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-19T21:16:00.000Z"
     }
    ],
    "assess": {
@@ -636,7 +787,7 @@
      "at": "2026-11-19T21:00:00.000Z"
     },
     {
-     "title": "10월 생산자물가 석 달 만에 '주춤'⋯신선식품 중심 0.1% 하락",
+     "title": "10월 생산자물가 석 달 만에 '주춤'⋯'작황 개선' 농수산품 중심 하락",
      "link": "https://www.etoday.co.kr/news/view/2650600",
      "host": "etoday.co.kr",
      "at": "2026-11-19T21:00:00.000Z"
@@ -646,63 +797,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 32,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "2s2dd9",
-   "title": "[개장시황] 수능일 코스피 상승 출발…외국인 매도에 5000선 '위태'",
-   "firstSeen": "2026-11-19T01:20:00.000Z",
-   "lastSeen": "2026-11-19T08:44:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 외국인 매도에도 1.4% 올라 5138 마감",
-     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54937",
-     "host": "koreareport.co.kr",
-     "at": "2026-11-19T08:44:00.000Z"
-    },
-    {
-     "title": "[마감 시황] 외국인 4천억 매도 뚫고 코스피 5,137선 탈환…코스닥 3%대...",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281733",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-19T08:30:00.000Z"
-    },
-    {
-     "title": "[오늘증시] 코스피, 외국인 매도 딛고 5100선 회복…반도체주 강세에 이...",
-     "link": "http://www.queen.co.kr/news/articleView.html?idxno=466633",
-     "host": "queen.co.kr",
-     "at": "2026-11-19T08:26:00.000Z"
-    },
-    {
-     "title": "[개장시황] 수능일 코스피 상승 출발…외국인 매도에 5000선 '위태'",
-     "link": "https://www.newspim.com/news/view/20261119000340",
-     "host": "newspim.com",
-     "at": "2026-11-19T01:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -774,128 +868,23 @@
    }
   },
   {
-   "id": "q50ey0",
-   "title": "“수능날 5000선 무너졌다가 반전”…코스피 1.4% 상승, 코스닥 3.3% 급등",
-   "firstSeen": "2026-11-19T07:48:00.000Z",
-   "lastSeen": "2026-11-19T08:32:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피 5137선 회복, 코스닥 3%대 급등",
-     "link": "https://www.thereport.co.kr/news/articleView.html?idxno=93538",
-     "host": "thereport.co.kr",
-     "at": "2026-11-19T08:32:00.000Z"
-    },
-    {
-     "title": "코스피, 반도체주 반등에 5130선 마감···코스닥 3%대 급등",
-     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643378",
-     "host": "seoulfn.com",
-     "at": "2026-11-19T08:20:00.000Z"
-    },
-    {
-     "title": "코스피, 장중 4960선까지 밀렸다가 5130선 상승 마감...코스닥 3.32% 급등",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=506019",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-19T08:18:00.000Z"
-    },
-    {
-     "title": "“수능날 5000선 무너졌다가 반전”…코스피 1.4% 상승, 코스닥 3.3% 급등",
-     "link": "https://www.ddaily.co.kr/page/view/2026111916430983855",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-19T07:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "11ml95v",
-   "title": "코스피, 앤트로픽 상장 앞두고 등락끝에 1.4% 상승 마감",
-   "firstSeen": "2026-11-19T07:17:00.000Z",
-   "lastSeen": "2026-11-19T15:28:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴욕증시 개장], 앤트로픽 상장 기대에 나스닥 1.6% 상승",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94873",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-19T15:28:00.000Z"
-    },
-    {
-     "title": "코스피, 앤트로픽 상장 기대감에 상승 마감",
-     "link": "https://www.betanews.net/article/view/beta202611190164",
-     "host": "betanews.net",
-     "at": "2026-11-19T14:04:00.000Z"
-    },
-    {
-     "title": "삼전닉스, 등락 끝 상승 마감…앤트로픽 상장에 기대감 솔솔",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5231816",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-19T08:41:00.000Z"
-    },
-    {
-     "title": "코스피, 앤트로픽 상장 앞두고 등락끝에 1.4% 상승 마감",
-     "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82603",
-     "host": "newsfc.co.kr",
-     "at": "2026-11-19T08:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "16vreec",
    "title": "FT \"삼성전자·TSMC, 中 고객사에 반도체 출하 중단 통보\"",
    "firstSeen": "2026-11-19T19:47:00.000Z",
-   "lastSeen": "2026-11-19T20:44:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-19T21:24:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "trade"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "미국, 중국 반도체 수출 허가 강화…삼성·TSMC 일부 출하 중단",
+     "link": "https://www.aitimes.com/news/articleView.html?idxno=217595",
+     "host": "aitimes.com",
+     "at": "2026-11-19T21:24:00.000Z"
+    },
     {
      "title": "[투데이온] 삼성·TSMC, 중국 고객 일부 칩 출하 보류…바이두 쿤룬·바...",
      "link": "https://www.the-today.com/news/articleView.html?idxno=93844",
@@ -918,7 +907,7 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 26,
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
