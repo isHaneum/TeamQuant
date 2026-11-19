@@ -12,7 +12,7 @@ const read = p => { try { return JSON.parse(readFileSync(join(root, p), 'utf8'))
 const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
 const plan = read('data/paper-plan.json'), cards = read('data/structure-cards.json'), dip = read('data/dip-cards.json') || { cards: {} }, state = read('data/analyst-state.json') || { lastRefresh: '2026-11-16', refreshEveryDays: 91 };
 let status = read('data/paper-live-public.json');
-try { const r = await fetch(`http://127.0.0.1:${port}/api/bridge/paper-live-status`, { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: `http://127.0.0.1:${port}`, 'X-TeamQuant-Action': 'bridge-local' }, body: '{}', signal: AbortSignal.timeout(8000) }); if (r.ok) { const s = await r.json(); status = { ...status, issues: s.issues, balance: s.balance, sleeve: s.sleeve, benchmark: s.benchmark, live: true }; } } catch { }
+try { const r = await fetch(`http://127.0.0.1:${port}/api/bridge/paper-live-status`, { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: `http://127.0.0.1:${port}`, 'X-TeamQuant-Action': 'bridge-local' }, body: '{}', signal: AbortSignal.timeout(30000) }); if (r.ok) { const s = await r.json(); status = { ...status, issues: s.issues, balance: s.balance, sleeve: s.sleeve, benchmark: s.benchmark, live: true }; } } catch { }
 const sats = Object.entries(plan?.weights || {}).filter(([, w]) => w.role === 'satellite').map(([k, w]) => ({ symbol: k, name: w.name, market: /^\d{6}$/.test(k) ? 'KR' : 'US' }));
 const items = [], add = (s, kind, why, priority = 2) => items.push({ symbol: s.symbol, name: s.name, kind, why, priority });
 const daysBetween = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 864e5);
