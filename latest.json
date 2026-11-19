@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-19T07:47:38.312Z",
+ "updatedAt": "2026-11-19T08:18:29.779Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 5137.89,
+   "last": 5137.89013671875,
    "change": 1.39,
    "z": 0.5,
    "sd": 2.7486737561111525,
-   "source": "네이버 현재가",
-   "live": false,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,9 +23,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 683.27001953125,
-   "change": 3.09,
-   "z": 1.1,
+   "last": 684.8099975585938,
+   "change": 3.32,
+   "z": 1.2,
    "sd": 2.7345935900565075,
    "source": "Yahoo",
    "checked": true
@@ -63,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 1331.02001953125,
-   "change": -0.15,
-   "z": -0.2,
+   "last": 1330.280029296875,
+   "change": -0.2,
+   "z": -0.3,
    "sd": 0.6310258216128829,
    "source": "Yahoo"
   },
@@ -75,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 82.41000366210938,
-   "change": -1.02,
+   "last": 82.29000091552734,
+   "change": -1.17,
    "z": -0.4,
    "sd": 2.8908142919922333,
    "source": "Yahoo"
@@ -87,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 3735.60009765625,
-   "change": -0.17,
+   "last": 3736.199951171875,
+   "change": -0.15,
    "z": -0.1,
    "sd": 1.364657957476789,
    "source": "Yahoo"
@@ -120,25 +119,25 @@
   }
  ],
  "spikes": {
-  "war": 1.1,
-  "politics": -0.1,
+  "war": 1.4,
+  "politics": 0.2,
   "rates": 0.9,
-  "trade": 0.5,
+  "trade": 0.6,
   "fx": 0.9,
-  "energy": 2,
-  "market": -0.2,
+  "energy": 1.6,
+  "market": 0.3,
   "credit": -0.2,
   "disaster": 0,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 2.3,
+   "rate": 2.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -148,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 3.7,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 2
   },
@@ -158,13 +157,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6,
+   "rate": 5.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.4,
-   "saturated": 0,
+   "rate": 3.1,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -188,8 +187,8 @@
    "id": "1r9a2rg",
    "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
    "firstSeen": "2026-11-18T19:16:00.000Z",
-   "lastSeen": "2026-11-19T07:40:00.000Z",
-   "count": 13,
+   "lastSeen": "2026-11-19T07:56:00.000Z",
+   "count": 12,
    "sources": 11,
    "topics": [
     "rates",
@@ -199,6 +198,12 @@
     "rates"
    ],
    "links": [
+    {
+     "title": "원·달러 환율, 연준 추가 인상 경계에도 1330.3원 마감 0.3원↓",
+     "link": "https://www.ziksir.com/news/articleView.html?idxno=154049",
+     "host": "ziksir.com",
+     "at": "2026-11-19T07:56:00.000Z"
+    },
     {
      "title": "연준 10월 의사록 공개…\"금리 추가 인상 필요\"",
      "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963775",
@@ -216,70 +221,6 @@
      "link": "https://www.tokenpost.kr/news/economy/440657",
      "host": "tokenpost.kr",
      "at": "2026-11-19T07:32:00.000Z"
-    },
-    {
-     "title": "금리 동결한 美 연준, 속내는 달랐다…12월 인상 가능성 커져",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=327569",
-     "host": "thepublic.kr",
-     "at": "2026-11-19T06:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 52,
-    "spike": 0.9,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -3.7,
-     "unit": "bp",
-     "z": -0.7
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 -3.7bp"
-    ]
-   }
-  },
-  {
-   "id": "rrdjy",
-   "title": "코스피, 앤트로픽 상장 앞두고 1%대↓…상승출발후 하락전환(종합)",
-   "firstSeen": "2026-11-18T22:46:00.000Z",
-   "lastSeen": "2026-11-19T07:39:00.000Z",
-   "count": 10,
-   "sources": 10,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "[속보] 코스피, 앤트로픽 상장 앞두고 등락끝에 1.4% 상승 마감",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000084721",
-     "host": "jnilbo.com",
-     "at": "2026-11-19T07:39:00.000Z"
-    },
-    {
-     "title": "외국인 떠난 코스피, 앤트로픽 상장…AI 투심 불씨 될까",
-     "link": "https://www.mt.co.kr/stock/2026/11/19/2026111915521893271",
-     "host": "mt.co.kr",
-     "at": "2026-11-19T07:17:00.000Z"
-    },
-    {
-     "title": "앤트로픽 상장 앞두고 日 AI·반도체주 강세…닛케이 이틀째 상승",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=903689",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-19T07:12:00.000Z"
-    },
-    {
-     "title": "앤트로픽 상장, 비트코인 반등의 촉매 될까…AI 투자 열풍에 쏠린 시장...",
-     "link": "http://coinreaders.com/271636",
-     "host": "coinreaders.com",
-     "at": "2026-11-19T06:02:00.000Z"
     }
    ],
    "assess": {
@@ -305,10 +246,11 @@
    "id": "dqze63",
    "title": "트럼프 “시진핑과 호르무즈 원유 수송 정상화에 강한 공감대”[1일1트...",
    "firstSeen": "2026-11-19T06:24:00.000Z",
-   "lastSeen": "2026-11-19T06:24:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "lastSeen": "2026-11-19T07:44:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
+    "war",
     "politics",
     "energy"
    ],
@@ -317,6 +259,12 @@
    ],
    "links": [
     {
+     "title": "트럼프 \"호르무즈 에너지 수송·이란 핵불허 공감\"…시진핑 \"중미관계 ...",
+     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/19/2026111990221.html",
+     "host": "news.tvchosun.com",
+     "at": "2026-11-19T07:44:00.000Z"
+    },
+    {
      "title": "트럼프 “시진핑과 호르무즈 원유 수송 정상화에 강한 공감대”[1일1트...",
      "link": "https://biz.heraldcorp.com/article/10942912?ref=naver",
      "host": "biz.heraldcorp.com",
@@ -324,11 +272,11 @@
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
+    "level": "caution",
+    "label": "주의",
     "score": 44,
-    "spike": 2,
-    "news": false,
+    "spike": 1.6,
+    "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -373,8 +321,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 40,
-    "spike": 1.1,
+    "score": 42,
+    "spike": 1.4,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -386,6 +334,59 @@
     "why": [
      "핵심 단어",
      "코스피 +1.39%"
+    ]
+   }
+  },
+  {
+   "id": "1r5jth0",
+   "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
+   "firstSeen": "2026-11-19T01:28:00.000Z",
+   "lastSeen": "2026-11-19T08:14:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "(마감시황) 코스피, 상승 전환에 5,100선 안착…코스닥도 3%대 급등",
+     "link": "https://www.news2day.co.kr/article/20261119500332",
+     "host": "news2day.co.kr",
+     "at": "2026-11-19T08:14:00.000Z"
+    },
+    {
+     "title": "코스피, 앤트로픽 상장·연준 빅스텝 우려에 1%대 하락 전환",
+     "link": "https://www.sentv.co.kr/article/view/sentv202611190091",
+     "host": "sentv.co.kr",
+     "at": "2026-11-19T02:00:00.000Z"
+    },
+    {
+     "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=505783",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-19T01:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 41,
+    "spike": 0.9,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
@@ -431,10 +432,67 @@
    }
   },
   {
+   "id": "rrdjy",
+   "title": "코스피, 앤트로픽 상장 앞두고 1%대↓…상승출발후 하락전환(종합)",
+   "firstSeen": "2026-11-18T22:46:00.000Z",
+   "lastSeen": "2026-11-19T08:14:00.000Z",
+   "count": 16,
+   "sources": 14,
+   "topics": [
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "삼전·닉스, 앤트로픽 상장 앞두고 등락 끝 1∼3%대 상승 마감",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854325&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-19T08:14:00.000Z"
+    },
+    {
+     "title": "앤트로픽 상장 '촉각', 코스피 '활짝'...LS · 대한항공 '껑충'",
+     "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=173342",
+     "host": "choicenews.co.kr",
+     "at": "2026-11-19T08:14:00.000Z"
+    },
+    {
+     "title": "앤트로픽 상장 앞두고 코스피 1.39% 상승 … 한한령 해제 기대에 엔터주...",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/19/2026111950305.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-19T08:12:00.000Z"
+    },
+    {
+     "title": "코스피 등락 끝에 5100선 회복, 다음 변수는 앤트로픽 IPO",
+     "link": "https://news.bizwatch.co.kr/article/market/2026/11/19/0028",
+     "host": "news.bizwatch.co.kr",
+     "at": "2026-11-19T08:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 33,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.39,
+     "unit": "%",
+     "z": 0.5
+    },
+    "why": [
+     "코스피 +1.39%"
+    ]
+   }
+  },
+  {
    "id": "10s2y27",
-   "title": "박주선 석유협회장 \"최고가격제 부작용 상당, 출구전략 마련해야\"",
+   "title": "박주선 석유협회장 “최고가격제 ‘손실 보전’” 촉구… “헌법상 ‘정...",
    "firstSeen": "2026-11-19T02:05:00.000Z",
-   "lastSeen": "2026-11-19T07:12:00.000Z",
+   "lastSeen": "2026-11-19T08:02:00.000Z",
    "count": 8,
    "sources": 8,
    "topics": [
@@ -444,6 +502,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "박주선 대한석유협회장 “최고가격제 출구전략 마련해야”",
+     "link": "https://www.g-enews.com/view.php?ud=20261119161448775524debea800_1",
+     "host": "g-enews.com",
+     "at": "2026-11-19T08:02:00.000Z"
+    },
     {
      "title": "대한석유협회 \"최고가격제 손실 5조∼6조원 … 출구전략 시급\"",
      "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/19/2026111950268.html",
@@ -461,19 +525,13 @@
      "link": "https://www.ziksir.com/news/articleView.html?idxno=154013",
      "host": "ziksir.com",
      "at": "2026-11-19T06:52:00.000Z"
-    },
-    {
-     "title": "[현장] 박주선 석유협회장 \"최고가격제 출구전략 마련해야…정당한 손실...",
-     "link": "http://www.popcornnews.net/news/articleView.html?idxno=140758",
-     "host": "popcornnews.net",
-     "at": "2026-11-19T06:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
-    "spike": 2,
+    "score": 31,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -484,372 +542,6 @@
     },
     "why": [
      "코스피 +1.39%"
-    ]
-   }
-  },
-  {
-   "id": "17obn5m",
-   "title": "코스피, 장중 2%대 하락 딛고 1.39% 상승 마감...코스닥 680선 회복",
-   "firstSeen": "2026-11-19T02:08:00.000Z",
-   "lastSeen": "2026-11-19T07:46:00.000Z",
-   "count": 11,
-   "sources": 9,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피 5100선 안착… 코스닥 3%대 상승 [MTN 마감시황]",
-     "link": "https://news.mtn.co.kr/article/2026111916452697472",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-19T07:46:00.000Z"
-    },
-    {
-     "title": "코스피 장중 하락 딛고 5130선 돌파…코스닥도 3.32% 급등 마감",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000084725",
-     "host": "jnilbo.com",
-     "at": "2026-11-19T07:45:00.000Z"
-    },
-    {
-     "title": "코스피 1.4% 상승 마감",
-     "link": "https://www.yna.co.kr/view/PYH20261119206400013?input=1196m",
-     "host": "yna.co.kr",
-     "at": "2026-11-19T07:45:00.000Z"
-    },
-    {
-     "title": "코스피 1.4% 상승 마감",
-     "link": "https://www.yna.co.kr/view/PYH20261119206900013?input=1196m",
-     "host": "yna.co.kr",
-     "at": "2026-11-19T07:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 27,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.39,
-     "unit": "%",
-     "z": 0.5
-    },
-    "why": [
-     "코스피 +1.39%"
-    ]
-   }
-  },
-  {
-   "id": "2s2dd9",
-   "title": "[개장시황] 수능일 코스피 상승 출발…외국인 매도에 5000선 '위태'",
-   "firstSeen": "2026-11-19T01:20:00.000Z",
-   "lastSeen": "2026-11-19T02:38:00.000Z",
-   "count": 8,
-   "sources": 8,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피 외국인 기관 매도에 5천선 버티기…앤트로픽 최대 IPO 성공",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347527?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-19T02:38:00.000Z"
-    },
-    {
-     "title": "코스피 장중 5000 또 하회, 외국인·기관 동반매도",
-     "link": "https://www.sidae.com/article/2026111910533356533",
-     "host": "sidae.com",
-     "at": "2026-11-19T02:18:00.000Z"
-    },
-    {
-     "title": "코스피, 상승 출발 후 하락 전환…5,000선 부근 등락",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611191113527IF",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-19T02:14:00.000Z"
-    },
-    {
-     "title": "[위클리오늘] 코스피 5090선 출발···환율 1330원대",
-     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=802556",
-     "host": "weeklytoday.com",
-     "at": "2026-11-19T02:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 25,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.15,
-     "unit": "%",
-     "z": -0.2
-    },
-    "why": [
-     "원/달러 -0.15%"
-    ]
-   }
-  },
-  {
-   "id": "mxs8j8",
-   "title": "韓 순대외금융자산 3448억 달러…3분기 증가폭 역대 최대",
-   "firstSeen": "2026-11-19T03:00:00.000Z",
-   "lastSeen": "2026-11-19T06:40:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피 19% 급락의 역설…순대외금융자산 역대 최대 증가, 왜?",
-     "link": "https://www.hankookilbo.com/news/article/A2026111914030001169?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-19T06:40:00.000Z"
-    },
-    {
-     "title": "역대 최대폭 반등은 했지만...주가 급등락에 출렁이는 순대외금융자산",
-     "link": "https://www.updownnews.co.kr/news/articleView.html?idxno=319653",
-     "host": "updownnews.co.kr",
-     "at": "2026-11-19T06:36:00.000Z"
-    },
-    {
-     "title": "주가 하락에 3분기 순대외금융자산 2807억달러↑…역대 최대 증가폭",
-     "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82595",
-     "host": "newsfc.co.kr",
-     "at": "2026-11-19T06:34:00.000Z"
-    },
-    {
-     "title": "순대외금융자산 2807억달러 '급증'…역대 최대 증가",
-     "link": "http://www.newsprime.co.kr/news/article.html?no=755681",
-     "host": "newsprime.co.kr",
-     "at": "2026-11-19T05:30:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 23,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.39,
-     "unit": "%",
-     "z": 0.5
-    },
-    "why": [
-     "코스피 +1.39%"
-    ]
-   }
-  },
-  {
-   "id": "akpp7d",
-   "title": "[속보] 한국 수출 사상 첫 1조 달러 돌파… 세계 4번째로 달성",
-   "firstSeen": "2026-11-19T05:32:00.000Z",
-   "lastSeen": "2026-11-19T07:40:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "trade",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "한국 수출 사상 첫 1조 달러 돌파, 미·중·독 이어 4번째…62년 만에 1억...",
-     "link": "http://www.queen.co.kr/news/articleView.html?idxno=466623",
-     "host": "queen.co.kr",
-     "at": "2026-11-19T07:40:00.000Z"
-    },
-    {
-     "title": "'무역 영토 1조 달러' 시대 열었다… 대한민국, 세계 4번째 위업 달성",
-     "link": "https://theopiniontimes.news/%eb%ac%b4%ec%97%ad-%ec%98%81%ed%86%a0-1%ec%a1%b0-%eb%8b%ac%eb%9f%ac-%ec%8b%9c%eb%8c%80-%ec%97%b4%ec%97%88%eb%8b%a4-%eb%8c%80%ed%95%9c%eb%af%bc%ea%b5%ad-%ec%84%b8%ea%b3%84-4%eb%b2%88/",
-     "host": "theopiniontimes.news",
-     "at": "2026-11-19T07:29:00.000Z"
-    },
-    {
-     "title": "수출 1조 달러 돌파… 반도체 제조장비 10위, 일반기계 中·印서 증가",
-     "link": "https://www.mtnews.net/news/articleView.html?idxno=26603",
-     "host": "mtnews.net",
-     "at": "2026-11-19T07:28:00.000Z"
-    },
-    {
-     "title": "한국 수출 1조 달러 첫 돌파... 세계 4번째 수출강국 도약",
-     "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921858",
-     "host": "chungnamilbo.co.kr",
-     "at": "2026-11-19T07:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 23,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.39,
-     "unit": "%",
-     "z": 0.5
-    },
-    "why": [
-     "코스피 +1.39%"
-    ]
-   }
-  },
-  {
-   "id": "1pmpsb",
-   "title": "뉴욕증시, 혼조 마감… 다우 1.1% 하락·나스닥은 0.4% 상승",
-   "firstSeen": "2026-11-18T21:19:00.000Z",
-   "lastSeen": "2026-11-19T04:22:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "반도체주, 장중 혼조… 엔비디아 호실적에도 AI 우려 지속",
-     "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001397",
-     "host": "it.chosun.com",
-     "at": "2026-11-19T04:22:00.000Z"
-    },
-    {
-     "title": "[뉴욕마켓워치] 엔비디아 호실적도 못 살린 투심…주식·채권 혼조·달러...",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445463",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-19T00:04:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 엔비디아 호실적에도 혼조...다우 1.11%↓·나스닥 0.42%↑",
-     "link": "https://www.newstopkorea.com/news/articleView.html?idxno=49154",
-     "host": "newstopkorea.com",
-     "at": "2026-11-18T23:44:00.000Z"
-    },
-    {
-     "title": "엔비디아 호실적에도 美증시 혼조…다우 1% 넘게 하락-[글로벌 마감 시...",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611190009&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-18T21:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 22,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "KRW=X",
-     "label": "원/달러",
-     "change": -0.15,
-     "unit": "%",
-     "z": -0.2
-    },
-    "why": [
-     "원/달러 -0.15%"
-    ]
-   }
-  },
-  {
-   "id": "wol2ky",
-   "title": "금(금값, 금시세) 11월 19일, 순금 18K 등 가격은?",
-   "firstSeen": "2026-11-19T01:02:00.000Z",
-   "lastSeen": "2026-11-19T07:39:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[오늘의 증시] 11월 19일 코스피 코스닥",
-     "link": "https://www.news1.kr/photos/8223570",
-     "host": "news1.kr",
-     "at": "2026-11-19T07:39:00.000Z"
-    },
-    {
-     "title": "금(금값, 금시세) 11월 19일, 순금 18K 등 가격은?",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=628586",
-     "host": "cbci.co.kr",
-     "at": "2026-11-19T01:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 22,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "CL=F",
-     "label": "WTI 유가",
-     "change": -1.02,
-     "unit": "%",
-     "z": -0.4
-    },
-    "why": [
-     "WTI 유가 -1.02%"
-    ]
-   }
-  },
-  {
-   "id": "1r5jth0",
-   "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
-   "firstSeen": "2026-11-19T01:28:00.000Z",
-   "lastSeen": "2026-11-19T07:43:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "5100선 회복한 코스피",
-     "link": "https://www.news1.kr/photos/8223590",
-     "host": "news1.kr",
-     "at": "2026-11-19T07:43:00.000Z"
-    },
-    {
-     "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=505783",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-19T01:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 22,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -3.7,
-     "unit": "bp",
-     "z": -0.7
-    },
-    "why": [
-     "미 10년 금리 -3.7bp"
     ]
    }
   },
@@ -893,18 +585,126 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 21,
-    "spike": 1.1,
+    "score": 23,
+    "spike": 1.4,
     "news": false,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -1.02,
+     "change": -1.17,
      "unit": "%",
      "z": -0.4
     },
     "why": [
-     "WTI 유가 -1.02%"
+     "WTI 유가 -1.17%"
+    ]
+   }
+  },
+  {
+   "id": "8s2y50",
+   "title": "[투자 노하우] 한중 FTA 서비스·투자 후속 협상 실질 타결",
+   "firstSeen": "2026-11-19T01:36:00.000Z",
+   "lastSeen": "2026-11-19T08:10:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피 5100선 회복…한중 FTA 기대로 엔터·여행주 강세",
+     "link": "https://www.sidae.com/article/2026111915545424861",
+     "host": "sidae.com",
+     "at": "2026-11-19T08:10:00.000Z"
+    },
+    {
+     "title": "한·중 FTA 후속협상 타결에 엔터·면세 ‘불기둥’",
+     "link": "https://magazine.hankyung.com/business/article/202611198028b",
+     "host": "magazine.hankyung.com",
+     "at": "2026-11-19T08:10:00.000Z"
+    },
+    {
+     "title": "한중 FTA 타결에 영화·방송·K팝 기대감...한한령 해제 가능성 주목",
+     "link": "https://www.ppss.kr/news/articleView.html?idxno=321822",
+     "host": "ppss.kr",
+     "at": "2026-11-19T08:03:00.000Z"
+    },
+    {
+     "title": "[투자 노하우] 한중 FTA 서비스·투자 후속 협상 실질 타결",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347614?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-19T07:33:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 23,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.39,
+     "unit": "%",
+     "z": 0.5
+    },
+    "why": [
+     "코스피 +1.39%"
+    ]
+   }
+  },
+  {
+   "id": "2s2dd9",
+   "title": "[개장시황] 수능일 코스피 상승 출발…외국인 매도에 5000선 '위태'",
+   "firstSeen": "2026-11-19T01:20:00.000Z",
+   "lastSeen": "2026-11-19T01:46:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피, 상승 출발 후 1%대 하락 전환...외국인 5거래일 연속 순매도",
+     "link": "https://www.m-economynews.com/news/article.html?no=73281",
+     "host": "m-economynews.com",
+     "at": "2026-11-19T01:46:00.000Z"
+    },
+    {
+     "title": "코스피, 상승 출발 뒤 5,000선 붕괴…외국인·기관 매도에 1%대 하락",
+     "link": "https://www.ppss.kr/news/articleView.html?idxno=321867",
+     "host": "ppss.kr",
+     "at": "2026-11-19T01:46:00.000Z"
+    },
+    {
+     "title": "[개장시황] 수능일 코스피 상승 출발…외국인 매도에 5000선 '위태'",
+     "link": "https://www.newspim.com/news/view/20261119000340",
+     "host": "newspim.com",
+     "at": "2026-11-19T01:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 22,
+    "spike": 1.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
+    },
+    "why": [
+     "미 10년 금리 -3.7bp"
     ]
    }
   },
@@ -954,17 +754,286 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.15,
+     "change": -0.2,
      "unit": "%",
-     "z": -0.2
+     "z": -0.3
     },
     "why": [
-     "원/달러 -0.15%"
+     "원/달러 -0.2%"
+    ]
+   }
+  },
+  {
+   "id": "lf117q",
+   "title": "외상 구매·주담대 늘어…가계빚 2030조 사상 최대",
+   "firstSeen": "2026-11-18T20:00:00.000Z",
+   "lastSeen": "2026-11-19T04:10:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "가계 빚 2030조원 역대 최대 … 주담대 금리 14년 만에 최고, 취약차주 ...",
+     "link": "http://www.queen.co.kr/news/articleView.html?idxno=466573",
+     "host": "queen.co.kr",
+     "at": "2026-11-19T04:10:00.000Z"
+    },
+    {
+     "title": "[오늘의 신문] 55만 수험생 수능, 가계빚 2030조원 사상 최대...미·중·러...",
+     "link": "http://kor.theasian.asia/archives/422156",
+     "host": "kor.theasian.asia",
+     "at": "2026-11-18T23:48:00.000Z"
+    },
+    {
+     "title": "가계빚 2030조, 주담대 금리 14년래 최고…취약차주 내년 상반기 고비",
+     "link": "https://www.news1.kr/economy/trend/6358691",
+     "host": "news1.kr",
+     "at": "2026-11-18T21:20:00.000Z"
+    },
+    {
+     "title": "외상 구매·주담대 늘어…가계빚 2030조 사상 최대",
+     "link": "https://www.sidae.com/article/2026111812244231274",
+     "host": "sidae.com",
+     "at": "2026-11-18T20:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 19,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
+    },
+    "why": [
+     "미 10년 금리 -3.7bp"
+    ]
+   }
+  },
+  {
+   "id": "1a8uukv",
+   "title": "뉴욕증시, 혼조 마감… 다우 1.1% 하락·나스닥은 0.4% 상승",
+   "firstSeen": "2026-11-18T21:37:00.000Z",
+   "lastSeen": "2026-11-19T00:04:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[뉴욕마켓워치] 엔비디아 호실적도 못 살린 투심…주식·채권 혼조·달러...",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445463",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-19T00:04:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 호실적에도 혼조...다우 1.11%↓·나스닥 0.42%↑",
+     "link": "https://www.newstopkorea.com/news/articleView.html?idxno=49154",
+     "host": "newstopkorea.com",
+     "at": "2026-11-18T23:44:00.000Z"
+    },
+    {
+     "title": "엔비디아 호실적에도 美증시 혼조…다우 1% 넘게 하락-[글로벌 마감 시...",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611190009&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-18T21:58:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 혼조 마감… 다우 1.1% 하락·나스닥은 0.4% 상승",
+     "link": "https://biz.chosun.com/international/international_economy/2026/11/19/DFQNGCV7MJH3DG3C4WPV4VN75Y/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-18T21:37:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 19,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.2,
+     "unit": "%",
+     "z": -0.3
+    },
+    "why": [
+     "원/달러 -0.2%"
+    ]
+   }
+  },
+  {
+   "id": "1awsete",
+   "title": "[속보] 한국 수출 ‘꿈의 1조달러’ 세계 4번째 달성…일본 제쳤다",
+   "firstSeen": "2026-11-19T05:32:00.000Z",
+   "lastSeen": "2026-11-19T08:08:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "trade",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "대한민국 수출 1조 달러 돌파…세계 4번째 기록 세워",
+     "link": "https://wemakenews.co.kr/news/view.php?no=26897",
+     "host": "wemakenews.co.kr",
+     "at": "2026-11-19T08:08:00.000Z"
+    },
+    {
+     "title": "'무역 영토 1조 달러' 시대 열었다… 대한민국, 세계 4번째 위업 달성",
+     "link": "https://theopiniontimes.news/%eb%ac%b4%ec%97%ad-%ec%98%81%ed%86%a0-1%ec%a1%b0-%eb%8b%ac%eb%9f%ac-%ec%8b%9c%eb%8c%80-%ec%97%b4%ec%97%88%eb%8b%a4-%eb%8c%80%ed%95%9c%eb%af%bc%ea%b5%ad-%ec%84%b8%ea%b3%84-4%eb%b2%88/",
+     "host": "theopiniontimes.news",
+     "at": "2026-11-19T07:29:00.000Z"
+    },
+    {
+     "title": "[속보] 한국 수출 사상 첫 1조 달러 돌파… 세계 4번째로 달성",
+     "link": "https://www.seoul.co.kr/news/economy/2026/11/19/20261119500160?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-19T05:32:00.000Z"
+    },
+    {
+     "title": "[속보] 한국 수출 ‘꿈의 1조달러’ 세계 4번째 달성…일본 제쳤다",
+     "link": "https://www.mk.co.kr/article/12213558",
+     "host": "mk.co.kr",
+     "at": "2026-11-19T05:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 19,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.39,
+     "unit": "%",
+     "z": 0.5
+    },
+    "why": [
+     "코스피 +1.39%"
+    ]
+   }
+  },
+  {
+   "id": "1sw6x7a",
+   "title": "한한령 해제 기대에 중국 소비주 들썩... 코스피 5100선 회복 [마감시황...",
+   "firstSeen": "2026-11-19T01:14:00.000Z",
+   "lastSeen": "2026-11-19T08:14:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[마감] 코스피, 수출 1조弗·한한령 해제 기대 5100선 회복",
+     "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001449",
+     "host": "it.chosun.com",
+     "at": "2026-11-19T08:14:00.000Z"
+    },
+    {
+     "title": "[ETF 시황] 中 한한령 해제 기대감 휩쓴 ETF 시장…엔터·미디어 '들썩'",
+     "link": "https://www.newspim.com/news/view/20261119001306",
+     "host": "newspim.com",
+     "at": "2026-11-19T08:13:00.000Z"
+    },
+    {
+     "title": "코스피, 韓·中 경제협력 기대감에 '5100선 회복'…코스닥 3.32%↑",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=755731",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-19T08:12:00.000Z"
+    },
+    {
+     "title": "코스피 1.39% 상승... 中 ‘한한령’ 완화 기대감에 엔터·콘텐츠주 폭등",
+     "link": "https://www.chosun.com/economy/money/2026/11/19/CRPR5G5XRFDFJJLTLOCIMEI25Y/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-19T08:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 18,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.39,
+     "unit": "%",
+     "z": 0.5
+    },
+    "why": [
+     "코스피 +1.39%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-19T08:18:29.779Z",
+   "id": "1r9a2rg",
+   "level": "caution",
+   "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 -3.7bp"
+   ],
+   "link": "https://www.ziksir.com/news/articleView.html?idxno=154049",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-19T08:18:29.779Z",
+   "id": "1r5jth0",
+   "level": "caution",
+   "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
+   "why": [
+    "핵심 단어",
+    "미 10년 금리 -3.7bp"
+   ],
+   "link": "https://www.news2day.co.kr/article/20261119500332",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-19T08:18:29.779Z",
+   "id": "dqze63",
+   "level": "caution",
+   "title": "트럼프 “시진핑과 호르무즈 원유 수송 정상화에 강한 공감대”[1일1트...",
+   "why": [
+    "핵심 단어",
+    "코스피 +1.39%"
+   ],
+   "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/19/2026111990221.html",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-19T08:18:29.779Z",
+   "id": "ujhyni",
+   "level": "caution",
+   "title": "트럼프, 이란 추가 대규모 공습 검토…이스라엘 압박에도 결정 보류",
+   "why": [
+    "핵심 단어",
+    "코스피 +1.39%"
+   ],
+   "link": "https://imnews.imbc.com/news/2026/world/article/6866973_36925.html",
+   "delivered": false
+  },
   {
    "at": "2026-11-19T07:28:10.723Z",
    "id": "rrdjy",
@@ -1155,54 +1224,6 @@
     "미 10년 금리 -3.7bp"
    ],
    "link": "https://www.wikitree.co.kr/articles/1175899",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-19T03:16:08.297Z",
-   "id": "63khmz",
-   "level": "caution",
-   "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 -3.7bp"
-   ],
-   "link": "https://www.sedaily.com/article/20116350?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-19T02:47:20.008Z",
-   "id": "17obn5m",
-   "level": "caution",
-   "title": "연준 긴축 경계에 코스피 1%대 하락",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 -3.7bp"
-   ],
-   "link": "https://news.tf.co.kr/read/photomovie/2390806.htm",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-19T02:18:11.997Z",
-   "id": "17ud71b",
-   "level": "caution",
-   "title": "월러 \"12월 0.5%P 인상\"…연준 '빅스텝' 경고…한은도 금리인상 압박",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 -3.7bp"
-   ],
-   "link": "https://www.segye.com/newsView/20261119506550?OutUrl=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-19T02:18:11.997Z",
-   "id": "umqzhj",
-   "level": "caution",
-   "title": "코스피, 앤트로픽 상장 앞두고 1%대↓…상승출발후 하락전환(종합)",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 -3.7bp"
-   ],
-   "link": "https://www.sentv.co.kr/article/view/sentv202611190091",
    "delivered": false
   }
  ],
