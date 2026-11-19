@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-19T10:13:54.521Z",
+ "updatedAt": "2026-11-19T10:27:29.576Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 1329.1700439453125,
-   "change": -0.29,
+   "last": 1328.449951171875,
+   "change": -0.34,
    "z": -0.5,
    "sd": 0.6310258216128829,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 82.80000305175781,
-   "change": -0.55,
+   "last": 82.72000122070312,
+   "change": -0.65,
    "z": -0.2,
    "sd": 2.8908142919922333,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 3728.5,
-   "change": -0.36,
-   "z": -0.3,
+   "last": 3732.800048828125,
+   "change": -0.24,
+   "z": -0.2,
    "sd": 1.364657957476789,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 22.219999313354492,
-   "change": -9.53,
+   "last": 22.229999542236328,
+   "change": -9.49,
    "z": -0.8,
    "sd": 12.037547060909564,
    "source": "Yahoo",
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": 0.6,
-  "politics": 0.2,
-  "rates": 1,
+  "war": 0.5,
+  "politics": 0,
+  "rates": 0.9,
   "trade": 0.5,
   "fx": 0.3,
-  "energy": 0.9,
-  "market": 0.2,
+  "energy": 0.8,
+  "market": 0.3,
   "credit": -0.1,
   "disaster": 0,
   "policy": 0.2
  },
  "rates": {
   "war": {
-   "rate": 1.9,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.2,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.3,
+   "rate": 3.2,
    "saturated": 1,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3,
+   "rate": 3.1,
    "saturated": 1,
    "queries": 3
   },
@@ -183,6 +183,64 @@
   }
  },
  "issues": [
+  {
+   "id": "1r5jth0",
+   "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
+   "firstSeen": "2026-11-19T01:28:00.000Z",
+   "lastSeen": "2026-11-19T08:56:00.000Z",
+   "count": 13,
+   "sources": 13,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "코스피, 앤트로픽 상장 앞두고 1.4% 상승 마감",
+     "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=326717",
+     "host": "pointdaily.co.kr",
+     "at": "2026-11-19T08:56:00.000Z"
+    },
+    {
+     "title": "삼전닉스, 등락 끝 상승 마감…앤트로픽 상장에 기대감 솔솔",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5231816",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-19T08:41:00.000Z"
+    },
+    {
+     "title": "앤트로픽 상장 앞두고 숨죽인 증시…흥행 성공 땐 'AI 랠리' 재개",
+     "link": "https://www.news1.kr/finance/general-stock/6359990",
+     "host": "news1.kr",
+     "at": "2026-11-19T08:41:00.000Z"
+    },
+    {
+     "title": "[증시 인사이트] 코스피 5천선 사수…오늘 밤 앤트로픽 상장이 관건?",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347616?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-19T08:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 52,
+    "spike": 0.9,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -3.7,
+     "unit": "bp",
+     "z": -0.7
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 -3.7bp"
+    ]
+   }
+  },
   {
    "id": "7pyun4",
    "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
@@ -226,8 +284,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 45,
-    "spike": 1,
+    "score": 44,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^TNX",
@@ -281,65 +339,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 41,
-    "spike": 0.9,
+    "score": 40,
+    "spike": 0.8,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -9.53,
+     "change": -9.49,
      "unit": "%",
      "z": -0.8
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 -9.53%"
-    ]
-   }
-  },
-  {
-   "id": "1r5jth0",
-   "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
-   "firstSeen": "2026-11-19T01:28:00.000Z",
-   "lastSeen": "2026-11-19T02:00:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "코스피, 앤트로픽 상장·연준 빅스텝 우려에 1%대 하락 전환",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611190091",
-     "host": "sentv.co.kr",
-     "at": "2026-11-19T02:00:00.000Z"
-    },
-    {
-     "title": "코스피, 5100선 돌파 후 하락 전환...화장품·엔터주 강세",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=505783",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-19T01:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 39,
-    "spike": 1,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -3.7,
-     "unit": "bp",
-     "z": -0.7
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 -3.7bp"
+     "VIX 변동성 -9.49%"
     ]
    }
   },
@@ -374,19 +386,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 36,
-    "spike": 0.6,
+    "score": 35,
+    "spike": 0.5,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -9.53,
+     "change": -9.49,
      "unit": "%",
      "z": -0.8
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 -9.53%"
+     "VIX 변동성 -9.49%"
     ]
    }
   },
@@ -415,19 +427,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 36,
-    "spike": 1,
+    "score": 35,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -9.53,
+     "change": -9.49,
      "unit": "%",
      "z": -0.8
     },
     "why": [
      "핵심 단어",
-     "VIX 변동성 -9.53%"
+     "VIX 변동성 -9.49%"
     ]
    }
   },
@@ -455,8 +467,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 36,
-    "spike": 1,
+    "score": 35,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -472,59 +484,57 @@
    }
   },
   {
-   "id": "11ml95v",
-   "title": "코스피, 앤트로픽 상장 앞두고 1%대↓…상승출발후 하락전환(종합)",
-   "firstSeen": "2026-11-19T01:37:00.000Z",
-   "lastSeen": "2026-11-19T08:56:00.000Z",
-   "count": 15,
-   "sources": 14,
+   "id": "wjsk13",
+   "title": "“수능날 5000선 무너졌다가 반전”…코스피 1.4% 상승, 코스닥 3.3% 급등",
+   "firstSeen": "2026-11-19T01:34:00.000Z",
+   "lastSeen": "2026-11-19T09:14:00.000Z",
+   "count": 13,
+   "sources": 13,
    "topics": [
-    "fx",
-    "energy",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피, 앤트로픽 상장 앞두고 1.4% 상승 마감",
-     "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=326717",
-     "host": "pointdaily.co.kr",
+     "title": "롤러코스터 끝 5100선 회복…코스피 이틀 연속 상승",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347657?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-19T09:14:00.000Z"
+    },
+    {
+     "title": "코스피, 수능날 5000선 붕괴 딛고 반등…1.39% 상승 마감",
+     "link": "https://futurechosun.com/?p=167191",
+     "host": "futurechosun.com",
      "at": "2026-11-19T08:56:00.000Z"
     },
     {
-     "title": "코스피, 앤트로픽 상장 앞두고 등락 끝에 1.4% ↑",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=887802",
-     "host": "getnews.co.kr",
-     "at": "2026-11-19T08:44:00.000Z"
+     "title": "코스피, 5000선 밑돌다 5137.89 마감",
+     "link": "https://www.kbmaeil.com/article/20261119500758",
+     "host": "kbmaeil.com",
+     "at": "2026-11-19T08:40:00.000Z"
     },
     {
-     "title": "삼전닉스, 등락 끝 상승 마감…앤트로픽 상장에 기대감 솔솔",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5231816",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-19T08:41:00.000Z"
-    },
-    {
-     "title": "앤트로픽 상장 앞두고 숨죽인 증시…흥행 성공 땐 'AI 랠리' 재개",
-     "link": "https://www.news1.kr/finance/general-stock/6359990",
-     "host": "news1.kr",
-     "at": "2026-11-19T08:41:00.000Z"
+     "title": "코스피, 장중 급락 딛고 5100선 회복하며 상승 마감…코스닥 3%대 급등",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=355105",
+     "host": "greened.kr",
+     "at": "2026-11-19T08:35:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 27,
-    "spike": 0.9,
+    "score": 22,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -9.53,
+     "change": -9.49,
      "unit": "%",
      "z": -0.8
     },
     "why": [
-     "VIX 변동성 -9.53%"
+     "VIX 변동성 -9.49%"
     ]
    }
   },
@@ -570,129 +580,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 23,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.53,
-     "unit": "%",
-     "z": -0.8
-    },
-    "why": [
-     "VIX 변동성 -9.53%"
-    ]
-   }
-  },
-  {
-   "id": "wjsk13",
-   "title": "“수능날 5000선 무너졌다가 반전”…코스피 1.4% 상승, 코스닥 3.3% 급등",
-   "firstSeen": "2026-11-19T01:34:00.000Z",
-   "lastSeen": "2026-11-19T08:56:00.000Z",
-   "count": 12,
-   "sources": 12,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "코스피, 수능날 5000선 붕괴 딛고 반등…1.39% 상승 마감",
-     "link": "https://futurechosun.com/?p=167191",
-     "host": "futurechosun.com",
-     "at": "2026-11-19T08:56:00.000Z"
-    },
-    {
-     "title": "코스피, 5000선 밑돌다 5137.89 마감",
-     "link": "https://www.kbmaeil.com/article/20261119500758",
-     "host": "kbmaeil.com",
-     "at": "2026-11-19T08:40:00.000Z"
-    },
-    {
-     "title": "코스피, 장중 급락 딛고 5100선 회복하며 상승 마감…코스닥 3%대 급등",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=355105",
-     "host": "greened.kr",
-     "at": "2026-11-19T08:35:00.000Z"
-    },
-    {
-     "title": "코스피 5137선 회복, 코스닥 3%대 급등",
-     "link": "https://www.thereport.co.kr/news/articleView.html?idxno=93538",
-     "host": "thereport.co.kr",
-     "at": "2026-11-19T08:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
     "score": 22,
-    "spike": 0.2,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
      "label": "VIX 변동성",
-     "change": -9.53,
+     "change": -9.49,
      "unit": "%",
      "z": -0.8
     },
     "why": [
-     "VIX 변동성 -9.53%"
-    ]
-   }
-  },
-  {
-   "id": "1sw6x7a",
-   "title": "한한령 해제 기대에 중국 소비주 들썩... 코스피 5100선 회복 [마감시황...",
-   "firstSeen": "2026-11-19T01:14:00.000Z",
-   "lastSeen": "2026-11-19T10:12:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"한한령 풀리나?\"…여행·항공주 들썩, 한·중 관광시장 회복 기대감 확...",
-     "link": "https://www.tournews21.com/news/articleView.html?idxno=148964",
-     "host": "tournews21.com",
-     "at": "2026-11-19T10:12:00.000Z"
-    },
-    {
-     "title": "롤러코스터 끝 5100선 회복…코스피 이틀 연속 상승",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347657?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-19T09:14:00.000Z"
-    },
-    {
-     "title": "삼전닉스 상승에 한한령 완화 기대까지…코스피, 5130선 회복",
-     "link": "https://www.dt.co.kr/article/12096217?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-19T08:06:00.000Z"
-    },
-    {
-     "title": "한한령 해제 기대에 중국 소비주 들썩... 코스피 5100선 회복 [마감시황...",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2021025",
-     "host": "m-i.kr",
-     "at": "2026-11-19T07:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 20,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -3.7,
-     "unit": "bp",
-     "z": -0.7
-    },
-    "why": [
-     "미 10년 금리 -3.7bp"
+     "VIX 변동성 -9.49%"
     ]
    }
   },
@@ -742,12 +641,12 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.29,
+     "change": -0.34,
      "unit": "%",
      "z": -0.5
     },
     "why": [
-     "원/달러 -0.29%"
+     "원/달러 -0.34%"
     ]
    }
   },
@@ -797,12 +696,12 @@
     "reaction": {
      "symbol": "KRW=X",
      "label": "원/달러",
-     "change": -0.29,
+     "change": -0.34,
      "unit": "%",
      "z": -0.5
     },
     "why": [
-     "원/달러 -0.29%"
+     "원/달러 -0.34%"
     ]
    }
   },
@@ -848,8 +747,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 18,
-    "spike": 1,
+    "score": 17,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -860,57 +759,6 @@
     },
     "why": [
      "미 10년 금리 -3.7bp"
-    ]
-   }
-  },
-  {
-   "id": "7pyun4",
-   "title": "美 추가 인상 경고에도 10년물 금리는 하락…국고채 시장 엇갈린 신호",
-   "firstSeen": "2026-11-18T19:16:00.000Z",
-   "lastSeen": "2026-11-19T08:58:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[마감] 유가 급락에 정유주 직격탄…SK이노베이션 5.48% 하락",
-     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=885376",
-     "host": "hansbiz.co.kr",
-     "at": "2026-11-19T08:58:00.000Z"
-    },
-    {
-     "title": "국고채 금리, 일제히 하락…유가 급락·외국인 매수(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261119158751008?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-19T08:47:00.000Z"
-    },
-    {
-     "title": "美 추가 인상 경고에도 10년물 금리는 하락…국고채 시장 엇갈린 신호",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1732256",
-     "host": "ebn.co.kr",
-     "at": "2026-11-19T01:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 17,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": -9.53,
-     "unit": "%",
-     "z": -0.8
-    },
-    "why": [
-     "VIX 변동성 -9.53%"
     ]
    }
   },
@@ -948,8 +796,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 17,
-    "spike": 1,
+    "score": 16,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -960,6 +808,168 @@
     },
     "why": [
      "미 10년 금리 -3.7bp"
+    ]
+   }
+  },
+  {
+   "id": "r3e8tc",
+   "title": "석유협회장 쓴소리 \"석유제품 원가 손실보전, 정당한 보상 맞나\"(종합)",
+   "firstSeen": "2026-11-19T06:16:00.000Z",
+   "lastSeen": "2026-11-19T08:02:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "박주선 대한석유협회장 “최고가격제 출구전략 마련해야”",
+     "link": "https://www.g-enews.com/view.php?ud=20261119161448775524debea800_1",
+     "host": "g-enews.com",
+     "at": "2026-11-19T08:02:00.000Z"
+    },
+    {
+     "title": "[현장] 박주선 석유협회장 \"최고가격제 출구전략 마련해야…정당한 손실...",
+     "link": "http://www.popcornnews.net/news/articleView.html?idxno=140758",
+     "host": "popcornnews.net",
+     "at": "2026-11-19T06:18:00.000Z"
+    },
+    {
+     "title": "석유협회장 쓴소리 \"석유제품 원가 손실보전, 정당한 보상 맞나\"(종합)",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03368566645647360&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-19T06:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 15,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -9.49,
+     "unit": "%",
+     "z": -0.8
+    },
+    "why": [
+     "VIX 변동성 -9.49%"
+    ]
+   }
+  },
+  {
+   "id": "1pvke3e",
+   "title": "[뉴욕증시 개장전] 엔비디아 실적에 나스닥 선물 0.6%↑…월러 \"0.5%p 인...",
+   "firstSeen": "2026-11-18T13:42:00.000Z",
+   "lastSeen": "2026-11-19T06:26:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피 5,000선 털렸다…나스닥 선물만 283p 반등",
+     "link": "http://coinreaders.com/271649",
+     "host": "coinreaders.com",
+     "at": "2026-11-19T06:26:00.000Z"
+    },
+    {
+     "title": "[잠든 사이 월가] 엔비디아, 실적 좋은데 주가는 5일째 하락",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38553",
+     "host": "junggi.co.kr",
+     "at": "2026-11-19T00:34:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시] 엔비디아 호실적 '역부족', 나스닥만 반등···앤트로픽 공...",
+     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643266",
+     "host": "seoulfn.com",
+     "at": "2026-11-18T21:59:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시 개장전] 엔비디아 실적에 나스닥 선물 0.6%↑…월러 \"0.5%p 인...",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94721",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-18T13:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 14,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "KRW=X",
+     "label": "원/달러",
+     "change": -0.34,
+     "unit": "%",
+     "z": -0.5
+    },
+    "why": [
+     "원/달러 -0.34%"
+    ]
+   }
+  },
+  {
+   "id": "y5u305",
+   "title": "사상 첫 '미·중·러 3자 정상회담' 개막…코스피 향방 가를 분수령",
+   "firstSeen": "2026-11-19T01:10:00.000Z",
+   "lastSeen": "2026-11-19T09:35:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "war",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "미중러 첫 3자 회담…핵군축·무역·북핵 해법 주목",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261119183410dOZ",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-19T09:35:00.000Z"
+    },
+    {
+     "title": "미중러 사상 첫 3자 정상회담...핵 군축·우크라·이란전 해법 주목",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611191607458604",
+     "host": "ytn.co.kr",
+     "at": "2026-11-19T07:07:00.000Z"
+    },
+    {
+     "title": "미·중·러 사상 첫 정상회담…미중 정상회담 임박",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611191337540Qv",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-19T04:39:00.000Z"
+    },
+    {
+     "title": "사상 첫 '미·중·러 3자 정상회담' 개막…코스피 향방 가를 분수령",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=304100",
+     "host": "widedaily.com",
+     "at": "2026-11-19T01:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 14,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -9.49,
+     "unit": "%",
+     "z": -0.8
+    },
+    "why": [
+     "VIX 변동성 -9.49%"
     ]
    }
   }
