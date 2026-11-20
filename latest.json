@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-20T13:27:56.829Z",
+ "updatedAt": "2026-11-20T13:47:41.946Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 1338.8800048828125,
-   "change": 0.64,
-   "z": 1,
+   "last": 1339.3499755859375,
+   "change": 0.67,
+   "z": 1.1,
    "sd": 0.630706609734769,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 82.44000244140625,
-   "change": -0.93,
+   "last": 82.41999816894531,
+   "change": -0.95,
    "z": -0.3,
    "sd": 2.8907172015042217,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 3571.800048828125,
-   "change": -3.09,
-   "z": -2.3,
+   "last": 3560.10009765625,
+   "change": -3.4,
+   "z": -2.5,
    "sd": 1.3710484011907773,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 30.969999313354492,
-   "change": 8.9,
-   "z": 0.7,
+   "last": 31.059999465942383,
+   "change": 9.21,
+   "z": 0.8,
    "sd": 12.152694856458675,
    "source": "Yahoo",
    "checked": true
@@ -110,11 +110,11 @@
    "label": "미 10년 금리",
    "unit": "bp",
    "available": true,
-   "date": "2026-11-19",
-   "last": 5.052000045776367,
-   "change": -1.4,
-   "z": -0.3,
-   "sd": 5.380096348618843,
+   "date": "2026-11-20",
+   "last": 4.97599983215332,
+   "change": -7.6,
+   "z": -1.4,
+   "sd": 5.3816830061883225,
    "source": "Yahoo"
   }
  ],
@@ -125,7 +125,7 @@
   "trade": -1.2,
   "fx": -0.1,
   "energy": -0.9,
-  "market": 0.6,
+  "market": 0.5,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.3
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.4,
+   "rate": 3.3,
    "saturated": 1,
    "queries": 3
   },
@@ -228,7 +228,7 @@
     "level": "urgent",
     "label": "긴급",
     "score": 62,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -286,19 +286,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 57,
+    "score": 60,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.09,
+     "change": -3.4,
      "unit": "%",
-     "z": -2.3
+     "z": -2.5
     },
     "why": [
      "핵심 단어",
-     "금 -3.09%(평소의 2.3배)"
+     "금 -3.4%(평소의 2.5배)"
     ]
    }
   },
@@ -326,19 +326,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
+    "score": 51,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.09,
+     "change": -3.4,
      "unit": "%",
-     "z": -2.3
+     "z": -2.5
     },
     "why": [
      "핵심 단어",
-     "금 -3.09%(평소의 2.3배)"
+     "금 -3.4%(평소의 2.5배)"
     ]
    }
   },
@@ -368,19 +368,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
+    "score": 51,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.09,
+     "change": -3.4,
      "unit": "%",
-     "z": -2.3
+     "z": -2.5
     },
     "why": [
      "핵심 단어",
-     "금 -3.09%(평소의 2.3배)"
+     "금 -3.4%(평소의 2.5배)"
     ]
    }
   },
@@ -505,7 +505,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 41,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -560,7 +560,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 38,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -616,7 +616,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 38,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -627,6 +627,62 @@
     },
     "why": [
      "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "vz907z",
+   "title": "[이시각헤드라인] 11월 20일 라이브투데이",
+   "firstSeen": "2026-11-19T22:22:00.000Z",
+   "lastSeen": "2026-11-20T12:49:00.000Z",
+   "count": 5,
+   "sources": 3,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[이시각헤드라인] 11월 20일 뉴스투나잇",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261120214900KUp",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-20T12:49:00.000Z"
+    },
+    {
+     "title": "[이시각헤드라인] 11월 20일 뉴스리뷰",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261120203400q3V",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-20T11:34:00.000Z"
+    },
+    {
+     "title": "금시세(금값) 급락",
+     "link": "http://www.kjdaily.com/article.php?aid=1795136886692968227",
+     "host": "kjdaily.com",
+     "at": "2026-11-20T01:10:00.000Z"
+    },
+    {
+     "title": "금시세·금값 20일",
+     "link": "https://www.bntnews.co.kr/article/view/bnt202611200127",
+     "host": "bntnews.co.kr",
+     "at": "2026-11-20T00:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 38,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -3.4,
+     "unit": "%",
+     "z": -2.5
+    },
+    "why": [
+     "금 -3.4%(평소의 2.5배)"
     ]
    }
   },
@@ -672,7 +728,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 37,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -728,7 +784,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 36,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -739,62 +795,6 @@
     },
     "why": [
      "S&P 500 -2.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "vz907z",
-   "title": "[이시각헤드라인] 11월 20일 라이브투데이",
-   "firstSeen": "2026-11-19T22:22:00.000Z",
-   "lastSeen": "2026-11-20T12:49:00.000Z",
-   "count": 5,
-   "sources": 3,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[이시각헤드라인] 11월 20일 뉴스투나잇",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261120214900KUp",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-20T12:49:00.000Z"
-    },
-    {
-     "title": "[이시각헤드라인] 11월 20일 뉴스리뷰",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261120203400q3V",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-20T11:34:00.000Z"
-    },
-    {
-     "title": "금시세(금값) 급락",
-     "link": "http://www.kjdaily.com/article.php?aid=1795136886692968227",
-     "host": "kjdaily.com",
-     "at": "2026-11-20T01:10:00.000Z"
-    },
-    {
-     "title": "금시세·금값 20일",
-     "link": "https://www.bntnews.co.kr/article/view/bnt202611200127",
-     "host": "bntnews.co.kr",
-     "at": "2026-11-20T00:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 0.6,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -3.09,
-     "unit": "%",
-     "z": -2.3
-    },
-    "why": [
-     "금 -3.09%(평소의 2.3배)"
     ]
    }
   },
@@ -895,7 +895,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 33,
-    "spike": 0.6,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -910,62 +910,73 @@
    }
   },
   {
-   "id": "gd692s",
-   "title": "[금통위 프리뷰] SC \"11월 25bp 인상 전망…내년 최종금리는 3.5%\"",
-   "firstSeen": "2026-11-20T01:32:00.000Z",
-   "lastSeen": "2026-11-20T07:22:00.000Z",
-   "count": 6,
+   "id": "m5f8n5",
+   "title": "코스피 5000 붕괴에 '증안펀드' 다시 고개…과거 성적표는 '물음표'",
+   "firstSeen": "2026-11-20T08:52:00.000Z",
+   "lastSeen": "2026-11-20T12:18:00.000Z",
+   "count": 4,
    "sources": 3,
    "topics": [
-    "rates"
+    "war"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[금통위 프리뷰] HSBC \"11월 만장일치 25bp 인상…내년 2월 3.5% 도달\"",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445790",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-20T07:22:00.000Z"
+     "title": "다시 5천선 내준 코스피…앤트로픽도 못 막은 AI 불안",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8718765&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-20T12:18:00.000Z"
     },
     {
-     "title": "[금통위 프리뷰] 도이체 \"한은, 11월 25bp 인상 전망…최종금리 3.75%\"",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445784",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-20T06:38:00.000Z"
+     "title": "다시 5천선 내준 코스피…앤트로픽도 못 막은 AI 불안",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8718637&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-20T10:09:00.000Z"
     },
     {
-     "title": "11월 한은 금통위 이목…기준금리 인상에 '무게추'",
-     "link": "http://www.newsdream.kr/news/articleView.html?idxno=122677",
-     "host": "newsdream.kr",
-     "at": "2026-11-20T05:18:00.000Z"
+     "title": "앤트로픽에 돈 몰렸나… 코스피 5000선 다시 붕괴",
+     "link": "https://www.kmib.co.kr/article/20261120500586",
+     "host": "kmib.co.kr",
+     "at": "2026-11-20T09:38:00.000Z"
     },
     {
-     "title": "\"11월 금통위 0.25%p 인상 전망…최종금리 3.50% 무게\"<신한투자證>",
-     "link": "https://www.news2day.co.kr/article/20261120500179",
-     "host": "news2day.co.kr",
-     "at": "2026-11-20T04:58:00.000Z"
+     "title": "코스피 5000 붕괴에 '증안펀드' 다시 고개…과거 성적표는 '물음표'",
+     "link": "https://www.wikileaks-kr.org/news/articleView.html?idxno=194995",
+     "host": "wikileaks-kr.org",
+     "at": "2026-11-20T08:52:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
+    "level": "caution",
+    "label": "주의",
+    "score": 33,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -3.4,
      "unit": "%",
-     "z": -2.1
+     "z": -2.5
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "금 -3.4%(평소의 2.5배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-20T13:47:41.946Z",
+   "id": "m5f8n5",
+   "level": "caution",
+   "title": "코스피 5000 붕괴에 '증안펀드' 다시 고개…과거 성적표는 '물음표'",
+   "why": [
+    "금 -3.4%(평소의 2.5배)"
+   ],
+   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8718765&ref=A",
+   "delivered": false
+  },
   {
    "at": "2026-11-20T13:27:56.829Z",
    "id": "m6re4b",
@@ -1197,17 +1208,6 @@
     "S&P 500 -2.02%(평소의 2.1배)"
    ],
    "link": "https://www.ddaily.co.kr/page/view/2026112012215835546",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T07:29:01.354Z",
-   "id": "sdgvjw",
-   "level": "caution",
-   "title": "푸틴, 우크라 보복 경고에도…트럼프 \"푸틴 평화 원해\"",
-   "why": [
-    "금 -3.44%(평소의 2.5배)"
-   ],
-   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8718385&ref=A",
    "delivered": false
   }
  ],
