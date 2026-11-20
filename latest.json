@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-20T10:27:43.914Z",
+ "updatedAt": "2026-11-20T10:47:16.615Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 1338.02001953125,
-   "change": 0.57,
-   "z": 0.9,
+   "last": 1338.47998046875,
+   "change": 0.61,
+   "z": 1,
    "sd": 0.630706609734769,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 81.05000305175781,
-   "change": -2.6,
-   "z": -0.9,
+   "last": 81.33000183105469,
+   "change": -2.26,
+   "z": -0.8,
    "sd": 2.8907172015042217,
    "source": "Yahoo"
   },
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 3578.300048828125,
-   "change": -2.91,
-   "z": -2.1,
+   "last": 3593.5,
+   "change": -2.5,
+   "z": -1.8,
    "sd": 1.3710484011907773,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 29.530000686645508,
-   "change": 3.83,
-   "z": 0.3,
+   "last": 29.190000534057617,
+   "change": 2.64,
+   "z": 0.2,
    "sd": 12.152694856458675,
    "source": "Yahoo",
    "checked": true
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": 0.6,
-  "politics": 1,
-  "rates": 0.4,
+  "war": 0.4,
+  "politics": 0.5,
+  "rates": 0.1,
   "trade": 0,
   "fx": -0.1,
-  "energy": -0.3,
+  "energy": -0.7,
   "market": 1.4,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 1.2
+  "policy": 0.8
  },
  "rates": {
   "war": {
-   "rate": 1.8,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.6,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   }
@@ -188,8 +188,8 @@
    "title": "한국거래소, 코스피 급락에 매도 사이드카 발동",
    "firstSeen": "2026-11-20T03:50:00.000Z",
    "lastSeen": "2026-11-20T09:20:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "count": 7,
+   "sources": 7,
    "topics": [
     "trade",
     "market",
@@ -206,28 +206,28 @@
      "at": "2026-11-20T09:20:00.000Z"
     },
     {
+     "title": "[증시 오늘] 코스피·코스닥 5%대 급락",
+     "link": "https://www.bigtanews.co.kr/article/view/big202611200024",
+     "host": "bigtanews.co.kr",
+     "at": "2026-11-20T08:44:00.000Z"
+    },
+    {
+     "title": "[마감 시황] 코스피, 5.21% 폭락에 4,860선 추락...코스닥도 5.71% 급락",
+     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281841",
+     "host": "businesskorea.co.kr",
+     "at": "2026-11-20T08:08:00.000Z"
+    },
+    {
      "title": "코스피, 美 반도체 수출규제 우려에 4860선 마감···양대 시장 매도 사...",
      "link": "https://www.smartbizn.com/news/articleView.html?idxno=160149",
      "host": "smartbizn.com",
      "at": "2026-11-20T07:22:00.000Z"
-    },
-    {
-     "title": "코스피 5.21% 폭락 마감…외국인·기관 2조원 매도 '검은 금요일'",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1732513",
-     "host": "ebn.co.kr",
-     "at": "2026-11-20T06:36:00.000Z"
-    },
-    {
-     "title": "“또 매도 사이드카”…코스피 5.05% 폭락, 4800선 추락",
-     "link": "https://www.ddaily.co.kr/page/view/2026112012215835546",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-20T04:18:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 68,
+    "score": 70,
     "spike": 1.4,
     "news": true,
     "reaction": {
@@ -286,59 +286,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 58,
-    "spike": 0.6,
+    "score": 52,
+    "spike": 0.4,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.91,
+     "change": -2.5,
      "unit": "%",
-     "z": -2.1
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "금 -2.91%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "ssx7ah",
-   "title": "\"미·중·러 3자 회담에도 종전 저멀리\"…러, 우크라 연쇄 공습",
-   "firstSeen": "2026-11-20T07:57:00.000Z",
-   "lastSeen": "2026-11-20T07:57:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "\"미·중·러 3자 회담에도 종전 저멀리\"…러, 우크라 연쇄 공습",
-     "link": "https://www.news1.kr/world/europe/6361251",
-     "host": "news1.kr",
-     "at": "2026-11-20T07:57:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 49,
-    "spike": 0.6,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -2.91,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "금 -2.91%(평소의 2.1배)"
+     "금 -2.5%"
     ]
    }
   },
@@ -347,8 +307,8 @@
    "title": "[증시 프리즘] 앤트로픽 IPO도 못 막은 AI 투매…코스피 4%대 급락, 4900선...",
    "firstSeen": "2026-11-20T03:52:00.000Z",
    "lastSeen": "2026-11-20T09:55:00.000Z",
-   "count": 17,
-   "sources": 16,
+   "count": 19,
+   "sources": 18,
    "topics": [
     "politics",
     "market"
@@ -394,46 +354,6 @@
      "z": -2.1
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1rr90hq",
-   "title": "AI 투자 열풍에 美경제 과열?...연준, '빅스텝' 가능성도 열어",
-   "firstSeen": "2026-11-20T05:38:00.000Z",
-   "lastSeen": "2026-11-20T09:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "AI 투자 열풍에 美경제 과열?...연준, '빅스텝' 가능성도 열어",
-     "link": "https://www.ppss.kr/news/articleView.html?idxno=322052",
-     "host": "ppss.kr",
-     "at": "2026-11-20T09:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
@@ -646,48 +566,31 @@
    }
   },
   {
-   "id": "b1s6xn",
-   "title": "[마감 시황] 코스피, 5.21% 폭락에 4,860선 추락...코스닥도 5.71% 급락",
-   "firstSeen": "2026-11-20T07:00:00.000Z",
-   "lastSeen": "2026-11-20T10:18:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "id": "1rr90hq",
+   "title": "AI 투자 열풍에 美경제 과열?...연준, '빅스텝' 가능성도 열어",
+   "firstSeen": "2026-11-20T05:38:00.000Z",
+   "lastSeen": "2026-11-20T09:26:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "fx",
-    "market"
+    "rates"
    ],
-   "critical": [],
+   "critical": [
+    "rates"
+   ],
    "links": [
     {
-     "title": "코스피·코스닥 5%대 동반 급락속 환율 1340원 턱밑…외인 1.3조 순매도",
-     "link": "https://www.betanews.net/article/view/beta202611200165",
-     "host": "betanews.net",
-     "at": "2026-11-20T10:18:00.000Z"
-    },
-    {
-     "title": "'검은 금요일' 코스피·코스닥 5%대 동반 급락",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611201823525Te",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-20T09:24:00.000Z"
-    },
-    {
-     "title": "코스피·코스닥 5%대 동반 급락…코스피 시총 '4000조원' 아래로",
-     "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=89961",
-     "host": "industrynews.co.kr",
-     "at": "2026-11-20T09:04:00.000Z"
-    },
-    {
-     "title": "코스피·코스닥 5%대 동반 급락…코스피 4천800선 후퇴",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085057",
-     "host": "jnilbo.com",
-     "at": "2026-11-20T08:50:00.000Z"
+     "title": "AI 투자 열풍에 美경제 과열?...연준, '빅스텝' 가능성도 열어",
+     "link": "https://www.ppss.kr/news/articleView.html?idxno=322052",
+     "host": "ppss.kr",
+     "at": "2026-11-20T09:26:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 44,
-    "spike": 1.4,
+    "score": 45,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -697,7 +600,48 @@
      "z": -2.1
     },
     "why": [
+     "핵심 단어",
      "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "ssx7ah",
+   "title": "\"미·중·러 3자 회담에도 종전 저멀리\"…러, 우크라 연쇄 공습",
+   "firstSeen": "2026-11-20T07:57:00.000Z",
+   "lastSeen": "2026-11-20T07:57:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "\"미·중·러 3자 회담에도 종전 저멀리\"…러, 우크라 연쇄 공습",
+     "link": "https://www.news1.kr/world/europe/6361251",
+     "host": "news1.kr",
+     "at": "2026-11-20T07:57:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -2.5,
+     "unit": "%",
+     "z": -1.8
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.5%"
     ]
    }
   },
@@ -792,6 +736,62 @@
      "link": "https://www.yna.co.kr/view/AKR20261120085151008?input=1195m",
      "host": "yna.co.kr",
      "at": "2026-11-20T07:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -2.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1cxsad4",
+   "title": "코스피·코스닥 5%대 동반 급락…코스피 4천800선 후퇴",
+   "firstSeen": "2026-11-20T06:11:00.000Z",
+   "lastSeen": "2026-11-20T10:18:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피·코스닥 5%대 동반 급락속 환율 1340원 턱밑…외인 1.3조 순매도",
+     "link": "https://www.betanews.net/article/view/beta202611200165",
+     "host": "betanews.net",
+     "at": "2026-11-20T10:18:00.000Z"
+    },
+    {
+     "title": "'검은 금요일' 코스피·코스닥 5%대 동반 급락",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611201823525Te",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-20T09:24:00.000Z"
+    },
+    {
+     "title": "코스피·코스닥 5%대 동반 급락…코스피 시총 '4000조원' 아래로",
+     "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=89961",
+     "host": "industrynews.co.kr",
+     "at": "2026-11-20T09:04:00.000Z"
+    },
+    {
+     "title": "코스피·코스닥 5%대 동반 급락…코스피 4천800선 후퇴",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085057",
+     "host": "jnilbo.com",
+     "at": "2026-11-20T08:50:00.000Z"
     }
    ],
    "assess": {
@@ -913,13 +913,16 @@
    }
   },
   {
-   "id": "14i8cn",
-   "title": "AI 투자 불안에 반도체주 급락…코스피, 10개월 만에 4800선까지 밀렸다",
-   "firstSeen": "2026-11-20T07:00:00.000Z",
+   "id": "1k3wvy6",
+   "title": "금값 5거래일 연속 하락…연준 긴축 우려에 14개월 만에 최저",
+   "firstSeen": "2026-11-20T07:16:00.000Z",
    "lastSeen": "2026-11-20T09:02:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
+    "rates",
+    "fx",
+    "energy",
     "market"
    ],
    "critical": [],
@@ -931,16 +934,16 @@
      "at": "2026-11-20T09:02:00.000Z"
     },
     {
-     "title": "앤트로픽 흥행에도 '검은 금요일'… 코스피, 10개월 만에 4800선 추락",
-     "link": "https://www.hankookilbo.com/news/article/A2026112017070002946?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-20T08:51:00.000Z"
+     "title": "금값 3600달러 붕괴…1년 2개월 만에 최저",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03955686645647688&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-20T08:16:00.000Z"
     },
     {
-     "title": "AI 투자 불안에 반도체주 급락…코스피, 10개월 만에 4800선까지 밀렸다",
-     "link": "http://www.paxetv.com/news/articleView.html?idxno=287509",
-     "host": "paxetv.com",
-     "at": "2026-11-20T08:30:00.000Z"
+     "title": "금값 5거래일 연속 하락…연준 긴축 우려에 14개월 만에 최저",
+     "link": "https://www.cstimes.com/news/articleView.html?idxno=728816",
+     "host": "cstimes.com",
+     "at": "2026-11-20T07:16:00.000Z"
     }
    ],
    "assess": {
@@ -963,6 +966,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-20T10:47:16.615Z",
+   "id": "1ubk25k",
+   "level": "caution",
+   "title": "\"이란, 유가 하락하자 호르무즈 유조선 공격 강화…하루 1건꼴\"",
+   "why": [
+    "핵심 단어",
+    "금 -2.5%"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000347689?division=NAVER",
+   "delivered": false
+  },
   {
    "at": "2026-11-20T09:47:38.906Z",
    "id": "m6re4b",
@@ -1194,17 +1209,6 @@
     "S&P 500 -2.02%(평소의 2.1배)"
    ],
    "link": "https://www.econovill.com/news/articleView.html?idxno=757941",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T07:15:01.919Z",
-   "id": "h3ws4h",
-   "level": "caution",
-   "title": "[핫이슈] 금값 1월 고점서 36% 급락…주간 8.9% 하락, 국내 금값 한 돈 5...",
-   "why": [
-    "금 -3.56%(평소의 2.6배)"
-   ],
-   "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001538",
    "delivered": false
   }
  ],
