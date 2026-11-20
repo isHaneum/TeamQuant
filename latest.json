@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-20T05:27:40.032Z",
+ "updatedAt": "2026-11-20T05:47:49.192Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 4862.0400390625,
-   "change": -5.37,
-   "z": -1.9,
+   "last": 4850.6201171875,
+   "change": -5.59,
+   "z": -2,
    "sd": 2.753679967697834,
    "source": "Yahoo",
    "checked": true
@@ -23,11 +23,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 648.4500122070312,
-   "change": -2.17,
-   "z": -0.8,
+   "last": 643.11,
+   "change": -6.09,
+   "z": -2.2,
    "sd": 2.7345935900565075,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -62,8 +63,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 1336.8399658203125,
-   "change": 0.48,
+   "last": 1336.8699951171875,
+   "change": 0.49,
    "z": 0.8,
    "sd": 0.630706609734769,
    "source": "Yahoo"
@@ -74,9 +75,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 82.83000183105469,
-   "change": -0.46,
-   "z": -0.2,
+   "last": 82.87000274658203,
+   "change": -0.41,
+   "z": -0.1,
    "sd": 2.8907172015042217,
    "source": "Yahoo"
   },
@@ -86,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 3517.60009765625,
-   "change": -4.56,
-   "z": -3.3,
+   "last": 3523.89990234375,
+   "change": -4.38,
+   "z": -3.2,
    "sd": 1.3710484011907773,
    "source": "Yahoo"
   },
@@ -119,8 +120,8 @@
   }
  ],
  "spikes": {
-  "war": 0.8,
-  "politics": 0,
+  "war": 0.7,
+  "politics": 0.3,
   "rates": 0.7,
   "trade": 0,
   "fx": -0.1,
@@ -128,21 +129,21 @@
   "market": 1.4,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 8.8
+  "policy": 9.3
  },
  "rates": {
   "war": {
-   "rate": 2,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3,
+   "rate": 2.9,
    "saturated": 1,
    "queries": 3
   },
@@ -177,19 +178,79 @@
    "queries": 1
   },
   "policy": {
-   "rate": 6.3,
-   "saturated": 0,
+   "rate": 6.7,
+   "saturated": 1,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "y4sve7",
-   "title": "코스피 4%대 급락에 매도 사이드카 발동",
-   "firstSeen": "2026-11-20T00:52:00.000Z",
-   "lastSeen": "2026-11-20T05:22:00.000Z",
-   "count": 24,
-   "sources": 24,
+   "id": "1raezyg",
+   "title": "검은 금요일 맞은 亞증시…韓·日·대만, 일제히 4∼6%대 급락",
+   "firstSeen": "2026-11-20T03:08:00.000Z",
+   "lastSeen": "2026-11-20T05:40:00.000Z",
+   "count": 9,
+   "sources": 8,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "韓·日·대만 증시 5~7% 동반 급락⋯아시아 덮친 ‘검은 금요일’",
+     "link": "https://www.etoday.co.kr/news/view/2650961",
+     "host": "etoday.co.kr",
+     "at": "2026-11-20T05:40:00.000Z"
+    },
+    {
+     "title": "증시 '검은 금요일'에도 한미약품은 상승…국산 비만약 '에페' 기대감[종...",
+     "link": "https://www.fnnews.com/news/202611201421012687",
+     "host": "fnnews.com",
+     "at": "2026-11-20T05:29:00.000Z"
+    },
+    {
+     "title": "亞 증시 '검은 금요일'...한국·일본증시 & 韓日 반도체주 '장중 추락'",
+     "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=173371",
+     "host": "choicenews.co.kr",
+     "at": "2026-11-20T05:20:00.000Z"
+    },
+    {
+     "title": "\"앤트로픽 흥행도 못 막네\"…亞 증시, AI 거품 공포에 '검은 금요일'",
+     "link": "https://www.newsis.com/view/NISX20261120_0003876677",
+     "host": "newsis.com",
+     "at": "2026-11-20T04:55:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 86,
+    "spike": 9.3,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -2.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "핵심 단어",
+     "기사 급증(평소 대비 9.3σ)",
+     "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "p9g7jc",
+   "title": "삼성전자·SK하이닉스 6.6% 안팎 곤두박질…코스피, 매도 사이드카 발동",
+   "firstSeen": "2026-11-20T01:32:00.000Z",
+   "lastSeen": "2026-11-20T05:46:00.000Z",
+   "count": 21,
+   "sources": 21,
    "topics": [
     "market"
    ],
@@ -198,33 +259,33 @@
    ],
    "links": [
     {
-     "title": "코스피 이어 코스닥 매도 사이드카 발동",
-     "link": "http://www.newstomato.com/ReadNews.aspx?no=1321250&inflow=N",
-     "host": "newstomato.com",
-     "at": "2026-11-20T05:22:00.000Z"
+     "title": "국내 증시 5%대 급락···코스피 이어 코스닥도 매도 사이드카 발동",
+     "link": "https://www.smartbizn.com/news/articleView.html?idxno=160109",
+     "host": "smartbizn.com",
+     "at": "2026-11-20T05:46:00.000Z"
     },
     {
-     "title": "코스피 장중 5%대 급락…코스피·코스닥 매도 사이드카 발동",
-     "link": "https://www.nocutnews.co.kr/news/6610160?utm_source=naver&utm_medium=article&utm_campaign=20261120142014",
-     "host": "nocutnews.co.kr",
-     "at": "2026-11-20T05:21:00.000Z"
+     "title": "코스피 이어 코스닥 매도 사이드카…장중 4900선 붕괴",
+     "link": "https://www.dailian.co.kr/news/view/1717792/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-20T05:34:00.000Z"
     },
     {
-     "title": "코스피·코스닥 동반 매도 사이드카...삼전닉스 6%대 급락",
-     "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=717052",
-     "host": "digitaltoday.co.kr",
-     "at": "2026-11-20T05:18:00.000Z"
+     "title": "코스피·코스닥 매도 사이드카…낙폭 5%대로 확대",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445774",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-20T05:30:00.000Z"
     },
     {
-     "title": "코스피, 장중 4%대 낙폭 확대…매도 사이드카 발동",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=154155",
-     "host": "ziksir.com",
-     "at": "2026-11-20T05:18:00.000Z"
+     "title": "코스피 이어 코스닥까지 매도 사이드카…투매 확산",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=885615",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-20T05:30:00.000Z"
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
+    "level": "caution",
+    "label": "주의",
     "score": 73,
     "spike": 1.4,
     "news": true,
@@ -237,7 +298,8 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "S&P 500 -2.02%(평소의 2.1배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -285,18 +347,18 @@
     "level": "caution",
     "label": "주의",
     "score": 73,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.56,
+     "change": -4.38,
      "unit": "%",
-     "z": -3.3
+     "z": -3.2
     },
     "why": [
      "핵심 단어",
-     "금 -4.56%(평소의 3.3배)"
+     "금 -4.38%(평소의 3.2배)"
     ]
    }
   },
@@ -326,7 +388,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 70,
-    "spike": 8.8,
+    "spike": 9.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -337,7 +399,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 8.8σ)",
+     "기사 급증(평소 대비 9.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
@@ -374,18 +436,18 @@
     "level": "caution",
     "label": "주의",
     "score": 67,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.56,
+     "change": -4.38,
      "unit": "%",
-     "z": -3.3
+     "z": -3.2
     },
     "why": [
      "핵심 단어",
-     "금 -4.56%(평소의 3.3배)"
+     "금 -4.38%(평소의 3.2배)"
     ]
    }
   },
@@ -393,7 +455,7 @@
    "id": "1sxe5i2",
    "title": "[오늘의 이슈] 앤트로픽 역대 최대 상장에도 뉴욕증시 2% 급락",
    "firstSeen": "2026-11-19T22:38:00.000Z",
-   "lastSeen": "2026-11-20T04:54:00.000Z",
+   "lastSeen": "2026-11-20T04:34:00.000Z",
    "count": 10,
    "sources": 10,
    "topics": [
@@ -403,10 +465,10 @@
    "critical": [],
    "links": [
     {
-     "title": "트윌리오 8.75%·AMD 7.72% 하락…19일 뉴욕증시 2%대 약세",
-     "link": "https://www.tokenpost.kr/news/market/441359",
-     "host": "tokenpost.kr",
-     "at": "2026-11-20T04:54:00.000Z"
+     "title": "코스피, 앤트로픽 IPO 흥행 속 4900선 붕괴... 삼성전자·SK하이닉스 –...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261823",
+     "host": "mediawatch.kr",
+     "at": "2026-11-20T04:34:00.000Z"
     },
     {
      "title": "[경제읽기] 앤트로픽 상장 흥행에도 투심 불안…코스피 하락",
@@ -431,7 +493,7 @@
     "level": "caution",
     "label": "주의",
     "score": 62,
-    "spike": 8.8,
+    "spike": 9.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -441,118 +503,7 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 8.8σ)",
-     "S&P 500 -2.02%(평소의 2.1배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "p9g7jc",
-   "title": "[속보] 삼성전자·SK하이닉스 6.6% 안팎 곤두박질…코스피, 매도 사이드...",
-   "firstSeen": "2026-11-20T01:32:00.000Z",
-   "lastSeen": "2026-11-20T04:34:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "코스피, 앤트로픽 IPO 흥행 속 4900선 붕괴... 삼성전자·SK하이닉스 –...",
-     "link": "https://www.mediawatch.kr/news/article.html?no=261823",
-     "host": "mediawatch.kr",
-     "at": "2026-11-20T04:34:00.000Z"
-    },
-    {
-     "title": "코스피 급락에 매도사이드카 발동...삼성전자·SK하이닉스 6%↓",
-     "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=320816",
-     "host": "wolyo.co.kr",
-     "at": "2026-11-20T04:28:00.000Z"
-    },
-    {
-     "title": "[속보] 삼성전자·SK하이닉스 6.6% 안팎 곤두박질…코스피, 매도 사이드...",
-     "link": "https://www.kwnews.co.kr/article/20261120500180",
-     "host": "kwnews.co.kr",
-     "at": "2026-11-20T03:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 62,
-    "spike": 1.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -2.02%(평소의 2.1배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "1raezyg",
-   "title": "검은 금요일 맞은 亞증시…韓·日·대만, 일제히 4∼6%대 급락",
-   "firstSeen": "2026-11-20T03:08:00.000Z",
-   "lastSeen": "2026-11-20T05:20:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "亞 증시 '검은 금요일'...한국·일본증시 & 韓日 반도체주 '장중 추락'",
-     "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=173371",
-     "host": "choicenews.co.kr",
-     "at": "2026-11-20T05:20:00.000Z"
-    },
-    {
-     "title": "\"앤트로픽 흥행도 못 막네\"…亞 증시, AI 거품 공포에 '검은 금요일'",
-     "link": "https://www.newsis.com/view/NISX20261120_0003876677",
-     "host": "newsis.com",
-     "at": "2026-11-20T04:55:00.000Z"
-    },
-    {
-     "title": "美 반도체 규제 우려에 아시아 증시 '검은 금요일'…코스피 4%·대만 6% ...",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=783447",
-     "host": "slist.kr",
-     "at": "2026-11-20T04:30:00.000Z"
-    },
-    {
-     "title": "AMD발 악재에 아시아 증시 '검은 금요일'…동반 하락세",
-     "link": "https://www.newspim.com/news/view/20261120000662",
-     "host": "newspim.com",
-     "at": "2026-11-20T04:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 59,
-    "spike": 8.8,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "기사 급증(평소 대비 8.8σ)",
+     "기사 급증(평소 대비 9.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -601,7 +552,7 @@
     "level": "caution",
     "label": "주의",
     "score": 57,
-    "spike": 8.8,
+    "spike": 9.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -611,7 +562,7 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 8.8σ)",
+     "기사 급증(평소 대비 9.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
@@ -738,17 +689,17 @@
     "level": "caution",
     "label": "주의",
     "score": 52,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.56,
+     "change": -4.38,
      "unit": "%",
-     "z": -3.3
+     "z": -3.2
     },
     "why": [
-     "금 -4.56%(평소의 3.3배)"
+     "금 -4.38%(평소의 3.2배)"
     ]
    }
   },
@@ -793,20 +744,70 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.56,
+     "change": -4.38,
      "unit": "%",
-     "z": -3.3
+     "z": -3.2
     },
     "why": [
-     "금 -4.56%(평소의 3.3배)"
+     "금 -4.38%(평소의 3.2배)"
     ]
    }
   },
   {
-   "id": "dljl33",
-   "title": "김현정 의원, HFT 과다호가에 수수료 의무 부과 자본시장법 개정안 대표...",
-   "firstSeen": "2026-11-19T05:30:00.000Z",
-   "lastSeen": "2026-11-20T00:40:00.000Z",
+   "id": "16vreec",
+   "title": "삼전·TSMC, 中고객에 일부 칩 출하 중단\"…TSCM \"새 규정 준수\"(종합)",
+   "firstSeen": "2026-11-19T19:47:00.000Z",
+   "lastSeen": "2026-11-20T05:34:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "미국 규제에 '삼성전자' 중국행 일부 칩 출하 중단",
+     "link": "https://www.safetimes.co.kr/news/articleView.html?idxno=247717",
+     "host": "safetimes.co.kr",
+     "at": "2026-11-20T05:34:00.000Z"
+    },
+    {
+     "title": "삼성전자-TSMC, 미국 신규 통제로 중국 고객사 일부 칩 출하 중단",
+     "link": "https://hbnpress.com/news/view/1065590102413019",
+     "host": "hbnpress.com",
+     "at": "2026-11-20T05:30:00.000Z"
+    },
+    {
+     "title": "삼전·TSMC, 中고객에 일부 칩 출하 중단\"…TSCM \"새 규정 준수\"(종합)",
+     "link": "https://www.news1.kr/world/northeast-asia/6360929",
+     "host": "news1.kr",
+     "at": "2026-11-20T05:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 49,
+    "spike": 9.3,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.59,
+     "unit": "%",
+     "z": -2
+    },
+    "why": [
+     "기사 급증(평소 대비 9.3σ)",
+     "코스피 -5.59%(평소의 2배)"
+    ]
+   }
+  },
+  {
+   "id": "iimxri",
+   "title": "주가 급락에…대만 당국, 오늘부터 공매도 제한 강화",
+   "firstSeen": "2026-11-20T01:50:00.000Z",
+   "lastSeen": "2026-11-20T05:33:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
@@ -816,23 +817,23 @@
    "critical": [],
    "links": [
     {
-     "title": "김현정 의원 HFT 과다호가 수수료 의무화 추진 '자본시장법' 개정안 대표...",
-     "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3083481",
-     "host": "newsclaim.co.kr",
-     "at": "2026-11-20T00:40:00.000Z"
+     "title": "오늘부터 공매도 제한 강화…대만, 주가급락 대응",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347857?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-20T05:33:00.000Z"
     },
     {
-     "title": "김현정 의원, HFT 과다호가에 수수료 의무 부과 자본시장법 개정안 대표...",
-     "link": "https://www.intn.co.kr/news/articleView.html?idxno=3000369",
-     "host": "intn.co.kr",
-     "at": "2026-11-19T05:30:00.000Z"
+     "title": "주가 급락에…대만 당국, 오늘부터 공매도 제한 강화",
+     "link": "https://www.yna.co.kr/view/AKR20261120091000009?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-20T05:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 48,
-    "spike": 8.8,
+    "spike": 9.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -842,8 +843,52 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 8.8σ)",
+     "기사 급증(평소 대비 9.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "h3ws4h",
+   "title": "[핫이슈] 금값 1월 고점서 36% 급락…주간 8.9% 하락, 국내 금값 한 돈 5...",
+   "firstSeen": "2026-11-20T04:52:00.000Z",
+   "lastSeen": "2026-11-20T05:37:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "“금값, 너마저”…닷새째 추락, 1월 최고점서 37% ‘뚝’",
+     "link": "https://www.dt.co.kr/article/12096326?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-20T05:37:00.000Z"
+    },
+    {
+     "title": "[핫이슈] 금값 1월 고점서 36% 급락…주간 8.9% 하락, 국내 금값 한 돈 5...",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=93869",
+     "host": "the-today.com",
+     "at": "2026-11-20T04:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.38,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.38%(평소의 3.2배)"
     ]
    }
   },
@@ -901,59 +946,82 @@
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
-  },
-  {
-   "id": "19uyjb2",
-   "title": "고점 대비 37% '폭삭'…믿었던 금마저 '와르르'",
-   "firstSeen": "2026-11-20T04:02:00.000Z",
-   "lastSeen": "2026-11-20T05:22:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "고점 대비 3분의 1 토막 난 국제 금값…연 4~5% 美 MMF에 밀렸다",
-     "link": "https://www.widedaily.com/news/articleView.html?idxno=304305",
-     "host": "widedaily.com",
-     "at": "2026-11-20T05:22:00.000Z"
-    },
-    {
-     "title": "국제 금값, 고점 대비 무려 37% '폭삭'...美연준, 금리인상 지속 여파 약...",
-     "link": "http://www.beyondpost.co.kr/view.php?ud=2026112014105363442aaae0046f_30",
-     "host": "beyondpost.co.kr",
-     "at": "2026-11-20T05:18:00.000Z"
-    },
-    {
-     "title": "고점 대비 37% '폭삭'…믿었던 금마저 '와르르'",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611200060&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-20T04:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 45,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.56,
-     "unit": "%",
-     "z": -3.3
-    },
-    "why": [
-     "금 -4.56%(평소의 3.3배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-20T05:47:49.192Z",
+   "id": "ujhyni",
+   "level": "caution",
+   "title": "트럼프, 이란 추가 대규모 공습 검토…이스라엘 압박에도 결정 보류",
+   "why": [
+    "핵심 단어",
+    "금 -4.38%(평소의 3.2배)"
+   ],
+   "link": "https://imnews.imbc.com/news/2026/world/article/6866973_36925.html",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-20T05:47:49.192Z",
+   "id": "1ubk25k",
+   "level": "caution",
+   "title": "\"이란, 유가 하락하자 호르무즈 유조선 공격 강화…하루 1건꼴\"",
+   "why": [
+    "핵심 단어",
+    "금 -4.38%(평소의 3.2배)"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000347689?division=NAVER",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-20T05:47:49.192Z",
+   "id": "ebcud4",
+   "level": "caution",
+   "title": "트럼프 “푸틴, 전쟁 끝내길 원해” 유럽 정상들 설득했지만…“믿을 근...",
+   "why": [
+    "금 -4.38%(평소의 3.2배)"
+   ],
+   "link": "https://www.hani.co.kr/arti/international/international_general/1288332.html",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-20T05:47:49.192Z",
+   "id": "1raezyg",
+   "level": "urgent",
+   "title": "검은 금요일 맞은 亞증시…韓·日·대만, 일제히 4∼6%대 급락",
+   "why": [
+    "핵심 단어",
+    "기사 급증(평소 대비 9.3σ)",
+    "S&P 500 -2.02%(평소의 2.1배)"
+   ],
+   "link": "https://www.etoday.co.kr/news/view/2650961",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-20T05:47:49.192Z",
+   "id": "p9g7jc",
+   "level": "caution",
+   "title": "삼성전자·SK하이닉스 6.6% 안팎 곤두박질…코스피, 매도 사이드카 발동",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -2.02%(평소의 2.1배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.smartbizn.com/news/articleView.html?idxno=160109",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-20T05:47:49.192Z",
+   "id": "16vreec",
+   "level": "urgent",
+   "title": "삼전·TSMC, 中고객에 일부 칩 출하 중단\"…TSCM \"새 규정 준수\"(종합)",
+   "why": [
+    "기사 급증(평소 대비 9.3σ)",
+    "코스피 -5.59%(평소의 2배)"
+   ],
+   "link": "https://www.safetimes.co.kr/news/articleView.html?idxno=247717",
+   "delivered": false
+  },
   {
    "at": "2026-11-20T05:27:40.032Z",
    "id": "g105zh",
@@ -1122,77 +1190,6 @@
     "금 -3.8%(평소의 2.8배)"
    ],
    "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/20/2026112050026.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T04:16:09.056Z",
-   "id": "y4sve7",
-   "level": "urgent",
-   "title": "코스피, 4% 급락...매도 사이드카 발동",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -2.02%(평소의 2.1배)"
-   ],
-   "link": "https://www.newsway.co.kr/news/view?ud=2026112012295296500",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T03:47:52.927Z",
-   "id": "nrax3a",
-   "level": "caution",
-   "title": "'앤트로픽 쇼크'… 코스피 3%대 급락 '오천피' 붕괴, '검은 금요일'",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -2.02%(평소의 2.1배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.viewsnnews.com/article?q=239832",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T03:30:05.518Z",
-   "id": "ujhyni",
-   "level": "caution",
-   "title": "트럼프, 이란 추가 대규모 공습 검토…이스라엘 압박에도 결정 보류",
-   "why": [
-    "핵심 단어",
-    "금 -4.04%(평소의 2.9배)"
-   ],
-   "link": "https://imnews.imbc.com/news/2026/world/article/6866973_36925.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T03:30:05.518Z",
-   "id": "vz907z",
-   "level": "caution",
-   "title": "[이시각헤드라인] 11월 20일 라이브투데이",
-   "why": [
-    "금 -4.04%(평소의 2.9배)"
-   ],
-   "link": "https://www.topstarnews.net/news/articleView.html?idxno=16281395",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T03:30:05.518Z",
-   "id": "sdgvjw",
-   "level": "caution",
-   "title": "푸틴, 우크라 보복 경고에도…트럼프 \"푸틴 평화 원해\"",
-   "why": [
-    "금 -4.04%(평소의 2.9배)"
-   ],
-   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8718385&ref=A",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T03:16:03.561Z",
-   "id": "1sxe5i2",
-   "level": "urgent",
-   "title": "[오늘의 이슈] 앤트로픽 역대 최대 상장에도 뉴욕증시 2% 급락",
-   "why": [
-    "기사 급증(평소 대비 5.1σ)",
-    "금 -4.07%(평소의 3배)"
-   ],
-   "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855241&plink=ORI&cooper=NAVER",
    "delivered": false
   }
  ],
