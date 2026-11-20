@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-20T01:27:30.968Z",
+ "updatedAt": "2026-11-20T01:47:34.579Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 4954.83984375,
-   "change": -2.22,
-   "z": -0.8,
+   "last": 4913.77,
+   "change": -4.36,
+   "z": -1.6,
    "sd": 2.7486737561111525,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,8 +24,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 658.3499755859375,
-   "change": -0.67,
+   "last": 659.8200073242188,
+   "change": -0.45,
    "z": -0.2,
    "sd": 2.7345935900565075,
    "source": "Yahoo",
@@ -62,8 +63,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 1336.68994140625,
-   "change": 0.47,
+   "last": 1336.280029296875,
+   "change": 0.44,
    "z": 0.7,
    "sd": 0.630706609734769,
    "source": "Yahoo"
@@ -74,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 82.66000366210938,
-   "change": -0.72,
+   "last": 82.8499984741211,
+   "change": -0.49,
    "z": -0.2,
    "sd": 2.8908142919922333,
    "source": "Yahoo"
@@ -86,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-19",
-   "last": 3591.10009765625,
-   "change": -4.03,
-   "z": -3,
+   "last": 3579.199951171875,
+   "change": -4.35,
+   "z": -3.2,
    "sd": 1.364657957476789,
    "source": "Yahoo"
   },
@@ -119,10 +120,10 @@
   }
  ],
  "spikes": {
-  "war": 1.7,
+  "war": 1.2,
   "politics": 1.3,
-  "rates": 2.5,
-  "trade": 1.2,
+  "rates": 2.6,
+  "trade": 0.6,
   "fx": -0.1,
   "energy": 2.3,
   "market": 1.4,
@@ -132,7 +133,7 @@
  },
  "rates": {
   "war": {
-   "rate": 2.9,
+   "rate": 2.4,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +143,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 5.2,
+   "rate": 5.4,
    "saturated": 2,
    "queries": 3
   },
   "trade": {
-   "rate": 4.2,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 2
   },
@@ -232,13 +233,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.03,
+     "change": -4.35,
      "unit": "%",
-     "z": -3
+     "z": -3.2
     },
     "why": [
      "핵심 단어",
-     "금 -4.03%(평소의 3배)"
+     "금 -4.35%(평소의 3.2배)"
     ]
    }
   },
@@ -273,76 +274,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 75,
-    "spike": 1.7,
+    "score": 71,
+    "spike": 1.3,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.03,
+     "change": -4.35,
      "unit": "%",
-     "z": -3
+     "z": -3.2
     },
     "why": [
      "핵심 단어",
-     "금 -4.03%(평소의 3배)"
-    ]
-   }
-  },
-  {
-   "id": "1pyu40d",
-   "title": "[마켓 프리뷰] 코스피 등락 끝 상승…앤트로픽 상장 이후 수급 촉각",
-   "firstSeen": "2026-11-19T13:52:00.000Z",
-   "lastSeen": "2026-11-20T01:24:00.000Z",
-   "count": 13,
-   "sources": 11,
-   "topics": [
-    "energy",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[특징주] 삼전닉스, 앤트로픽 상장에 '급락'",
-     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=885512",
-     "host": "hansbiz.co.kr",
-     "at": "2026-11-20T01:24:00.000Z"
-    },
-    {
-     "title": "앤트로픽 상장에 AI주 자금 이탈…코스피 5000선 붕괴",
-     "link": "https://www.hidomin.com/news/articleView.html?idxno=730273",
-     "host": "hidomin.com",
-     "at": "2026-11-20T01:24:00.000Z"
-    },
-    {
-     "title": "앤스로픽 상장도 못 막은 AI 의구심…코스피 4900도 붕괴",
-     "link": "https://view.asiae.co.kr/article/2026112010165311082",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-20T01:23:00.000Z"
-    },
-    {
-     "title": "코스피 '5000선 붕괴'…앤트로픽 상장 후 기술주 이탈에 3%대 급락",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611200049",
-     "host": "sentv.co.kr",
-     "at": "2026-11-20T01:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 68,
-    "spike": 2.3,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.03,
-     "unit": "%",
-     "z": -3
-    },
-    "why": [
-     "금 -4.03%(평소의 3배)"
+     "금 -4.35%(평소의 3.2배)"
     ]
    }
   },
@@ -377,7 +321,7 @@
     "level": "caution",
     "label": "주의",
     "score": 68,
-    "spike": 2.5,
+    "spike": 2.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -417,7 +361,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 65,
-    "spike": 2.5,
+    "spike": 2.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -436,14 +380,21 @@
    "id": "vz907z",
    "title": "[이시각헤드라인] 11월 20일 라이브투데이",
    "firstSeen": "2026-11-19T22:22:00.000Z",
-   "lastSeen": "2026-11-20T01:26:00.000Z",
+   "lastSeen": "2026-11-20T01:34:00.000Z",
    "count": 5,
    "sources": 5,
    "topics": [
-    "energy"
+    "energy",
+    "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "셀트리온 주가, 11월 20일 장중 25.67% 외국인소진율 기록",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16281298",
+     "host": "topstarnews.net",
+     "at": "2026-11-20T01:34:00.000Z"
+    },
     {
      "title": "[오늘의 증시] 11월 20일 코스피 4,960선·코스닥 660선 하락…외국인·기...",
      "link": "https://www.job-post.co.kr/news/articleView.html?idxno=239748",
@@ -451,16 +402,10 @@
      "at": "2026-11-20T01:26:00.000Z"
     },
     {
-     "title": "삼성전기 주가, 11월 20일 장중 803,000원 9.27% 하락",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=565362",
-     "host": "joongangenews.com",
-     "at": "2026-11-20T01:02:00.000Z"
-    },
-    {
-     "title": "금(금값, 금시세) 11월 20일…뉴욕증시 '털썩' 금 가격 향방 '이목'",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=628961",
-     "host": "cbci.co.kr",
-     "at": "2026-11-20T01:00:00.000Z"
+     "title": "금시세(금값) 급락",
+     "link": "http://www.kjdaily.com/article.php?aid=1795136886692968227",
+     "host": "kjdaily.com",
+     "at": "2026-11-20T01:10:00.000Z"
     },
     {
      "title": "금시세·금값 20일",
@@ -478,67 +423,242 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.03,
+     "change": -4.35,
      "unit": "%",
-     "z": -3
+     "z": -3.2
     },
     "why": [
-     "금 -4.03%(평소의 3배)"
+     "금 -4.35%(평소의 3.2배)"
     ]
    }
   },
   {
-   "id": "ud2wxc",
-   "title": "금시세(금값) 약세",
-   "firstSeen": "2026-11-19T01:32:00.000Z",
-   "lastSeen": "2026-11-20T01:26:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "1pyu40d",
+   "title": "[마켓 프리뷰] 코스피 등락 끝 상승…앤트로픽 상장 이후 수급 촉각",
+   "firstSeen": "2026-11-19T13:52:00.000Z",
+   "lastSeen": "2026-11-19T23:12:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "energy"
+    "energy",
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[N2 증시 풍향계] 삼전·닉스 동반 약세 속 화장품株 강세…새내기주 하...",
-     "link": "https://www.news2day.co.kr/article/20261120500101",
-     "host": "news2day.co.kr",
-     "at": "2026-11-20T01:26:00.000Z"
+     "title": "앤트로픽 상장에도 뉴욕증시 2%대 급락…국제유가, 보합세",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=885441",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-19T23:12:00.000Z"
     },
     {
-     "title": "[특징주] 앤트로픽으로 몰린 자금...삼전닉스, 동반 약세",
-     "link": "http://www.metroseoul.co.kr/article/20261120500037",
-     "host": "metroseoul.co.kr",
-     "at": "2026-11-20T00:52:00.000Z"
+     "title": "뉴욕증시, 앤트로픽 상장 수급 쏠림·AMD 공매도 충격에 급락",
+     "link": "https://www.globale.co.kr/news/articleView.html?idxno=41754",
+     "host": "globale.co.kr",
+     "at": "2026-11-19T22:58:00.000Z"
     },
     {
-     "title": "[굿모닝! 글로벌 뉴욕증시] 앤트로픽 상장 후 매도세가 나오며 약세 마...",
-     "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=305453",
-     "host": "newsquest.co.kr",
-     "at": "2026-11-19T23:16:00.000Z"
-    },
-    {
-     "title": "금시세(금값) 약세",
-     "link": "http://www.kjdaily.com/article.php?aid=1795051804692869227",
-     "host": "kjdaily.com",
-     "at": "2026-11-19T01:32:00.000Z"
+     "title": "[마켓 프리뷰] 코스피 등락 끝 상승…앤트로픽 상장 이후 수급 촉각",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347723?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-19T22:42:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 60,
+    "level": "caution",
+    "label": "주의",
+    "score": 57,
     "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.03,
+     "change": -4.35,
      "unit": "%",
-     "z": -3
+     "z": -3.2
     },
     "why": [
-     "금 -4.03%(평소의 3배)"
+     "금 -4.35%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "ggorp1",
+   "title": "[오늘의 글로벌마켓] 뉴욕증시, 앤트로픽 성공적 데뷔에도 3대지수 2%대...",
+   "firstSeen": "2026-11-19T22:46:00.000Z",
+   "lastSeen": "2026-11-19T23:08:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 3대지수 2%대 동반 하락...앤트로픽 흥행에도 투심 못살려",
+     "link": "https://www.tjb.co.kr/news05/bodo/view/id/106315",
+     "host": "tjb.co.kr",
+     "at": "2026-11-19T23:08:00.000Z"
+    },
+    {
+     "title": "[오늘의 글로벌마켓] 뉴욕증시, 앤트로픽 성공적 데뷔에도 3대지수 2%대...",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147286",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-19T22:46:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 54,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.35,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.35%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1g5k8rh",
+   "title": "MMF 잔액 291조 역대최대… 증시 불확실성에 눈치 보기",
+   "firstSeen": "2026-11-19T15:32:00.000Z",
+   "lastSeen": "2026-11-19T15:32:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics",
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "MMF 잔액 291조 역대최대… 증시 불확실성에 눈치 보기",
+     "link": "https://www.donga.com/news/Economy/article/all/20261119/135056112/2",
+     "host": "donga.com",
+     "at": "2026-11-19T15:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 54,
+    "spike": 2.6,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.35,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.35%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1chhivf",
+   "title": "모건스탠리 \"S&P500, 내년 18% 상승 전망…현재 좋은 매수 기회\"",
+   "firstSeen": "2026-11-20T01:12:00.000Z",
+   "lastSeen": "2026-11-20T01:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "모건스탠리 \"S&P500, 내년 18% 상승 전망…현재 좋은 매수 기회\"",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445707",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-20T01:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 54,
+    "spike": 2.6,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.35,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.35%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1t210va",
+   "title": "IEA \"중동 위기, 역대 최대 에너지 위협…1970년대 오일쇼크 능가\"",
+   "firstSeen": "2026-11-19T06:18:00.000Z",
+   "lastSeen": "2026-11-20T01:28:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "war",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "앤트로픽, 역대 최대 IPO로 나스닥 입성… 직원 수천 명 ‘백만장자’ ...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261818",
+     "host": "mediawatch.kr",
+     "at": "2026-11-20T01:28:00.000Z"
+    },
+    {
+     "title": "[특파원 시선] '역대 최대' 포로 교환이 가린 것들",
+     "link": "https://www.yna.co.kr/view/AKR20261120007200109?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-20T01:20:00.000Z"
+    },
+    {
+     "title": "[오늘의 이슈] 앤트로픽 역대 최대 상장에도 뉴욕증시 2% 급락",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=108154",
+     "host": "newskr.kr",
+     "at": "2026-11-19T22:38:00.000Z"
+    },
+    {
+     "title": "IEA \"중동 위기, 역대 최대 에너지 위협…1970년대 오일쇼크 능가\"",
+     "link": "https://www.news1.kr/world/middleeast-africa/6359644",
+     "host": "news1.kr",
+     "at": "2026-11-19T06:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 53,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.35,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.35%(평소의 3.2배)"
     ]
    }
   },
@@ -583,292 +703,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 56,
-    "spike": 1.7,
+    "score": 52,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.03,
+     "change": -4.35,
      "unit": "%",
-     "z": -3
+     "z": -3.2
     },
     "why": [
-     "금 -4.03%(평소의 3배)"
-    ]
-   }
-  },
-  {
-   "id": "ggorp1",
-   "title": "[오늘의 글로벌마켓] 뉴욕증시, 앤트로픽 성공적 데뷔에도 3대지수 2%대...",
-   "firstSeen": "2026-11-19T22:46:00.000Z",
-   "lastSeen": "2026-11-19T23:08:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 3대지수 2%대 동반 하락...앤트로픽 흥행에도 투심 못살려",
-     "link": "https://www.tjb.co.kr/news05/bodo/view/id/106315",
-     "host": "tjb.co.kr",
-     "at": "2026-11-19T23:08:00.000Z"
-    },
-    {
-     "title": "[오늘의 글로벌마켓] 뉴욕증시, 앤트로픽 성공적 데뷔에도 3대지수 2%대...",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147286",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-19T22:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 2.3,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.03,
-     "unit": "%",
-     "z": -3
-    },
-    "why": [
-     "금 -4.03%(평소의 3배)"
-    ]
-   }
-  },
-  {
-   "id": "mq0cjt",
-   "title": "[증시 포인트] 하락 출발 전망...장중 저가 매수세 가능성",
-   "firstSeen": "2026-11-19T16:56:00.000Z",
-   "lastSeen": "2026-11-20T01:13:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“오천피 또 깨졌다” 앤트로픽 흥행에도 코스피 4% 하락 출발 [투자360...",
-     "link": "https://biz.heraldcorp.com/article/10943703?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-20T01:13:00.000Z"
-    },
-    {
-     "title": "[증시 포인트] 하락 출발 전망...장중 저가 매수세 가능성",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147290",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-19T23:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 2.3,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.03,
-     "unit": "%",
-     "z": -3
-    },
-    "why": [
-     "금 -4.03%(평소의 3배)"
-    ]
-   }
-  },
-  {
-   "id": "1joeu77",
-   "title": "\"숨돌리기 이후엔 인상?\"… 한은, 다음 주 금통위서 금리 올리나",
-   "firstSeen": "2026-11-19T06:10:00.000Z",
-   "lastSeen": "2026-11-20T00:04:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"한은 기준금리, 내년 2월 3.5% 도달할 듯\"<키움證>",
-     "link": "https://www.news2day.co.kr/article/20261120500029",
-     "host": "news2day.co.kr",
-     "at": "2026-11-20T00:04:00.000Z"
-    },
-    {
-     "title": "[모닝 리포트] \"한은 11월 금리 인상 전망…향후 긴축 기조에 시장 주목...",
-     "link": "https://www.newspim.com/news/view/20261120000111",
-     "host": "newspim.com",
-     "at": "2026-11-19T23:49:00.000Z"
-    },
-    {
-     "title": "[심층분석] 한은 금통위 앞둔 외환·채권시장…금리 결정 시나리오별 환...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94846",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-19T15:00:00.000Z"
-    },
-    {
-     "title": "물가·성장 동반 상승…한은, 26일 기준금리 추가 인상하나",
-     "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=326654",
-     "host": "pointdaily.co.kr",
-     "at": "2026-11-19T09:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 53,
-    "spike": 2.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
-   "id": "1t210va",
-   "title": "IEA \"중동 위기, 역대 최대 에너지 위협…1970년대 오일쇼크 능가\"",
-   "firstSeen": "2026-11-19T06:18:00.000Z",
-   "lastSeen": "2026-11-20T01:20:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "war",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[특파원 시선] '역대 최대' 포로 교환이 가린 것들",
-     "link": "https://www.yna.co.kr/view/AKR20261120007200109?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-20T01:20:00.000Z"
-    },
-    {
-     "title": "[오늘의 이슈] 앤트로픽 역대 최대 상장에도 뉴욕증시 2% 급락",
-     "link": "http://www.newskr.kr/news/articleView.html?idxno=108154",
-     "host": "newskr.kr",
-     "at": "2026-11-19T22:38:00.000Z"
-    },
-    {
-     "title": "IEA \"중동 위기, 역대 최대 에너지 위협…1970년대 오일쇼크 능가\"",
-     "link": "https://www.news1.kr/world/middleeast-africa/6359644",
-     "host": "news1.kr",
-     "at": "2026-11-19T06:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 53,
-    "spike": 1.7,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.03,
-     "unit": "%",
-     "z": -3
-    },
-    "why": [
-     "금 -4.03%(평소의 3배)"
-    ]
-   }
-  },
-  {
-   "id": "1g5k8rh",
-   "title": "MMF 잔액 291조 역대최대… 증시 불확실성에 눈치 보기",
-   "firstSeen": "2026-11-19T15:32:00.000Z",
-   "lastSeen": "2026-11-19T15:32:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics",
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "MMF 잔액 291조 역대최대… 증시 불확실성에 눈치 보기",
-     "link": "https://www.donga.com/news/Economy/article/all/20261119/135056112/2",
-     "host": "donga.com",
-     "at": "2026-11-19T15:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 53,
-    "spike": 2.5,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.03,
-     "unit": "%",
-     "z": -3
-    },
-    "why": [
-     "금 -4.03%(평소의 3배)"
-    ]
-   }
-  },
-  {
-   "id": "1chhivf",
-   "title": "모건스탠리 \"S&P500, 내년 18% 상승 전망…현재 좋은 매수 기회\"",
-   "firstSeen": "2026-11-20T01:12:00.000Z",
-   "lastSeen": "2026-11-20T01:12:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "모건스탠리 \"S&P500, 내년 18% 상승 전망…현재 좋은 매수 기회\"",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445707",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-20T01:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 53,
-    "spike": 2.5,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.03,
-     "unit": "%",
-     "z": -3
-    },
-    "why": [
-     "금 -4.03%(평소의 3배)"
+     "금 -4.35%(평소의 3.2배)"
     ]
    }
   },
@@ -901,17 +747,144 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -4.03,
+     "change": -4.35,
      "unit": "%",
-     "z": -3
+     "z": -3.2
     },
     "why": [
-     "금 -4.03%(평소의 3배)"
+     "금 -4.35%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1wab99q",
+   "title": "\"한한령 풀린대\" 들썩...진짜 수혜 1순위 따로 있다? [B급기자의 B급리포...",
+   "firstSeen": "2026-11-19T07:40:00.000Z",
+   "lastSeen": "2026-11-19T07:40:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"한한령 풀린대\" 들썩...진짜 수혜 1순위 따로 있다? [B급기자의 B급리포...",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611190121&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-19T07:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 51,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.35,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.35%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "t1h9vp",
+   "title": "美·中·러 정상, 공동성명에서 유엔 개혁·에너지 공급 확대 협력하기...",
+   "firstSeen": "2026-11-19T21:01:00.000Z",
+   "lastSeen": "2026-11-19T21:01:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美·中·러 정상, 공동성명에서 유엔 개혁·에너지 공급 확대 협력하기...",
+     "link": "https://www.fnnews.com/news/202611200551541651",
+     "host": "fnnews.com",
+     "at": "2026-11-19T21:01:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 51,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.35,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.35%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1jvsf49",
+   "title": "국제유가, 군사 위협 vs 공급 증가 전망 저울질 [글로벌 머니플로우]",
+   "firstSeen": "2026-11-19T22:07:00.000Z",
+   "lastSeen": "2026-11-19T22:07:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국제유가, 군사 위협 vs 공급 증가 전망 저울질 [글로벌 머니플로우]",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611200006&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-19T22:07:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 51,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -4.35,
+     "unit": "%",
+     "z": -3.2
+    },
+    "why": [
+     "금 -4.35%(평소의 3.2배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-20T01:47:34.579Z",
+   "id": "1ubk25k",
+   "level": "urgent",
+   "title": "\"이란, 유가 하락하자 호르무즈 유조선 공격 강화…하루 1건꼴\"",
+   "why": [
+    "핵심 단어",
+    "금 -4.35%(평소의 3.2배)"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000347689?division=NAVER",
+   "delivered": false
+  },
   {
    "at": "2026-11-20T01:27:30.968Z",
    "id": "1idtvtx",
@@ -1135,18 +1108,6 @@
     "VIX 변동성 -9.81%"
    ],
    "link": "https://imnews.imbc.com/news/2026/world/article/6866973_36925.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-19T12:19:00.295Z",
-   "id": "7pyun4",
-   "level": "caution",
-   "title": "미 연준 위원들 \"추가 금리 인상 필요\"…일부는 빅스텝도 거론",
-   "why": [
-    "핵심 단어",
-    "미 10년 금리 -3.7bp"
-   ],
-   "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1544399",
    "delivered": false
   }
  ],
