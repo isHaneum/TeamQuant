@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-20T13:47:41.946Z",
+ "updatedAt": "2026-11-20T14:14:10.611Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -35,12 +35,13 @@
    "label": "S&P 500",
    "unit": "%",
    "available": true,
-   "date": "2026-11-19",
-   "last": 7175.830078125,
-   "change": -2.02,
-   "z": -2.1,
+   "date": "2026-11-20",
+   "last": 7175.83,
+   "change": 0,
+   "z": 0,
    "sd": 0.9675852545494313,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -48,12 +49,13 @@
    "label": "나스닥",
    "unit": "%",
    "available": true,
-   "date": "2026-11-19",
-   "last": 23879.19921875,
-   "change": -2.25,
-   "z": -1.7,
+   "date": "2026-11-20",
+   "last": 23879.2,
+   "change": 0,
+   "z": 0,
    "sd": 1.349805129445849,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -62,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 1339.3499755859375,
-   "change": 0.67,
-   "z": 1.1,
+   "last": 1338.780029296875,
+   "change": 0.63,
+   "z": 1,
    "sd": 0.630706609734769,
    "source": "Yahoo"
   },
@@ -74,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 82.41999816894531,
-   "change": -0.95,
-   "z": -0.3,
+   "last": 82.23999786376953,
+   "change": -1.17,
+   "z": -0.4,
    "sd": 2.8907172015042217,
    "source": "Yahoo"
   },
@@ -86,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 3560.10009765625,
-   "change": -3.4,
-   "z": -2.5,
+   "last": 3568,
+   "change": -3.19,
+   "z": -2.3,
    "sd": 1.3710484011907773,
    "source": "Yahoo"
   },
@@ -98,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 31.059999465942383,
-   "change": 9.21,
-   "z": 0.8,
+   "last": 30.360000610351562,
+   "change": 6.75,
+   "z": 0.6,
    "sd": 12.152694856458675,
    "source": "Yahoo",
    "checked": true
@@ -111,43 +113,43 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-20",
-   "last": 4.97599983215332,
-   "change": -7.6,
-   "z": -1.4,
+   "last": 4.980000019073486,
+   "change": -7.2,
+   "z": -1.3,
    "sd": 5.3816830061883225,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -0.9,
-  "politics": -0.4,
-  "rates": -1.2,
-  "trade": -1.2,
+  "war": -1,
+  "politics": -0.3,
+  "rates": -1.5,
+  "trade": -1,
   "fx": -0.1,
   "energy": -0.9,
-  "market": 0.5,
+  "market": 0.4,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.3
  },
  "rates": {
   "war": {
-   "rate": 0.4,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.4,
+   "rate": 0.1,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 2.3,
+   "rate": 2.5,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.3,
+   "rate": 3.2,
    "saturated": 1,
    "queries": 3
   },
@@ -225,21 +227,21 @@
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 62,
-    "spike": 0.5,
+    "level": "caution",
+    "label": "주의",
+    "score": 58,
+    "spike": 0.4,
     "news": true,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -286,19 +288,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 60,
+    "score": 57,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.4,
+     "change": -3.19,
      "unit": "%",
-     "z": -2.5
+     "z": -2.3
     },
     "why": [
      "핵심 단어",
-     "금 -3.4%(평소의 2.5배)"
+     "금 -3.19%(평소의 2.3배)"
     ]
    }
   },
@@ -326,19 +328,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
+    "score": 48,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.4,
+     "change": -3.19,
      "unit": "%",
-     "z": -2.5
+     "z": -2.3
     },
     "why": [
      "핵심 단어",
-     "금 -3.4%(평소의 2.5배)"
+     "금 -3.19%(평소의 2.3배)"
     ]
    }
   },
@@ -368,19 +370,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
+    "score": 48,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.4,
+     "change": -3.19,
      "unit": "%",
-     "z": -2.5
+     "z": -2.3
     },
     "why": [
      "핵심 단어",
-     "금 -3.4%(평소의 2.5배)"
+     "금 -3.19%(평소의 2.3배)"
     ]
    }
   },
@@ -408,19 +410,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
+    "score": 42,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -448,19 +450,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
+    "score": 42,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -504,18 +506,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.5,
+    "score": 37,
+    "spike": 0.4,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -559,18 +561,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 0.5,
+    "score": 34,
+    "spike": 0.4,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -615,18 +617,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 0.5,
+    "score": 34,
+    "spike": 0.4,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -671,18 +673,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 38,
-    "spike": 0.5,
+    "score": 34,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.4,
+     "change": -3.19,
      "unit": "%",
-     "z": -2.5
+     "z": -2.3
     },
     "why": [
-     "금 -3.4%(평소의 2.5배)"
+     "금 -3.19%(평소의 2.3배)"
     ]
    }
   },
@@ -727,18 +729,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 0.5,
+    "score": 33,
+    "spike": 0.4,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -783,18 +785,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 36,
-    "spike": 0.5,
+    "score": 32,
+    "spike": 0.4,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -838,18 +840,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 34,
+    "score": 31,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -894,18 +896,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0.5,
+    "score": 29,
+    "spike": 0.4,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.21,
      "unit": "%",
-     "z": -2.1
+     "z": -1.9
     },
     "why": [
-     "S&P 500 -2.02%(평소의 2.1배)"
+     "코스피 -5.21%"
     ]
    }
   },
@@ -947,25 +949,37 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 33,
+    "level": "watch",
+    "label": "관찰",
+    "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -3.4,
+     "change": -3.19,
      "unit": "%",
-     "z": -2.5
+     "z": -2.3
     },
     "why": [
-     "금 -3.4%(평소의 2.5배)"
+     "금 -3.19%(평소의 2.3배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-20T14:14:10.611Z",
+   "id": "1ubk25k",
+   "level": "caution",
+   "title": "\"이란, 유가 하락하자 호르무즈 유조선 공격 강화…하루 1건꼴\"",
+   "why": [
+    "핵심 단어",
+    "금 -3.19%(평소의 2.3배)"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000347689?division=NAVER",
+   "delivered": false
+  },
   {
    "at": "2026-11-20T13:47:41.946Z",
    "id": "m5f8n5",
@@ -1196,18 +1210,6 @@
     "코스피 -5.21%"
    ],
    "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8718552&ref=A",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T07:29:01.354Z",
-   "id": "15uhhl9",
-   "level": "caution",
-   "title": "미중러 정상회담에도 반도체·관세 합의 없었다…삼성전자·SK하이닉스...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -2.02%(평소의 2.1배)"
-   ],
-   "link": "https://www.ddaily.co.kr/page/view/2026112012215835546",
    "delivered": false
   }
  ],
