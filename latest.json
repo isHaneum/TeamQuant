@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-20T08:18:06.549Z",
+ "updatedAt": "2026-11-20T08:30:18.495Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 1335.4300537109375,
-   "change": 0.38,
-   "z": 0.6,
+   "last": 1334.25,
+   "change": 0.29,
+   "z": 0.5,
    "sd": 0.630706609734769,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 82.5999984741211,
-   "change": -0.73,
+   "last": 82.38999938964844,
+   "change": -0.99,
    "z": -0.3,
    "sd": 2.8907172015042217,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 3578.39990234375,
-   "change": -2.91,
-   "z": -2.1,
+   "last": 3575.300048828125,
+   "change": -2.99,
+   "z": -2.2,
    "sd": 1.3710484011907773,
    "source": "Yahoo"
   },
@@ -97,11 +97,11 @@
    "label": "VIX 변동성",
    "unit": "%",
    "available": true,
-   "date": "2026-11-19",
-   "last": 28.440000534057617,
-   "change": 15.8,
-   "z": 1.3,
-   "sd": 12.037547060909564,
+   "date": "2026-11-20",
+   "last": 28.649999618530273,
+   "change": 0.74,
+   "z": 0.1,
+   "sd": 12.152694856458675,
    "source": "Yahoo",
    "checked": true
   },
@@ -120,15 +120,15 @@
  ],
  "spikes": {
   "war": 0.9,
-  "politics": 1.2,
-  "rates": 0.8,
+  "politics": 1.3,
+  "rates": 0.7,
   "trade": 0,
   "fx": 0.3,
-  "energy": 0.4,
+  "energy": 0.2,
   "market": 1.4,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 4.2
+  "policy": 3.3
  },
  "rates": {
   "war": {
@@ -137,13 +137,13 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.8,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.1,
-   "saturated": 1,
+   "rate": 3,
+   "saturated": 0,
    "queries": 3
   },
   "trade": {
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 1
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 3.7,
+   "rate": 3,
    "saturated": 0,
    "queries": 1
   }
@@ -188,8 +188,8 @@
    "title": "한국거래소, 코스피 급락에 매도 사이드카 발동",
    "firstSeen": "2026-11-20T00:52:00.000Z",
    "lastSeen": "2026-11-20T08:05:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "count": 7,
+   "sources": 7,
    "topics": [
     "trade",
     "market",
@@ -206,12 +206,6 @@
      "at": "2026-11-20T08:05:00.000Z"
     },
     {
-     "title": "코스피 5%대 급락에 4,800선 마감...장중 매도 사이드카",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611201649308641",
-     "host": "ytn.co.kr",
-     "at": "2026-11-20T07:49:00.000Z"
-    },
-    {
      "title": "코스피 5.21% 급락해 4869.96…외국인·기관 2조원 넘게 순매도",
      "link": "https://www.goodkyung.com/news/articleView.html?idxno=293706",
      "host": "goodkyung.com",
@@ -222,13 +216,19 @@
      "link": "https://www.smartbizn.com/news/articleView.html?idxno=160149",
      "host": "smartbizn.com",
      "at": "2026-11-20T07:22:00.000Z"
+    },
+    {
+     "title": "코스피, 외국인·기관 2조원대 매도에 4900선 붕괴… 반도체주 급락",
+     "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=731787",
+     "host": "the-biz.co.kr",
+     "at": "2026-11-20T07:12:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 85,
-    "spike": 4.2,
+    "score": 84,
+    "spike": 3.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -239,24 +239,36 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
   },
   {
    "id": "1raezyg",
-   "title": "아시아 증시 '검은 금요일'…한국·일본·대만 4~6%대 동반 급락",
+   "title": "美 반도체 규제 우려에 아시아 증시 '검은 금요일'…코스피 4%·대만 6% ...",
    "firstSeen": "2026-11-20T03:08:00.000Z",
-   "lastSeen": "2026-11-20T08:15:00.000Z",
-   "count": 19,
-   "sources": 19,
+   "lastSeen": "2026-11-20T08:20:00.000Z",
+   "count": 16,
+   "sources": 15,
    "topics": [
     "market",
     "policy"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "'검은 금요일' 코스피 4800대로 급락...10개월만 최저",
+     "link": "https://www.slist.kr/news/articleView.html?idxno=783514",
+     "host": "slist.kr",
+     "at": "2026-11-20T08:20:00.000Z"
+    },
+    {
+     "title": "'검은 금요일' 덮친 증시…코스피·코스닥 5%대 폭락",
+     "link": "https://www.newsinside.kr/news/articleView.html?idxno=5052650",
+     "host": "newsinside.kr",
+     "at": "2026-11-20T08:18:00.000Z"
+    },
     {
      "title": "亞증시 ‘검은 금요일’…코스피, 수익률 116%→15% 급락",
      "link": "https://www.joongang.co.kr/article/25480540",
@@ -268,25 +280,13 @@
      "link": "https://news.bizwatch.co.kr/article/market/2026/11/20/0033",
      "host": "news.bizwatch.co.kr",
      "at": "2026-11-20T08:14:00.000Z"
-    },
-    {
-     "title": "‘검은 금요일’ 코스피 4,900선 붕괴...AI 투자 불안에 글로벌 증시 동...",
-     "link": "https://www.m-economynews.com/news/article.html?no=73395",
-     "host": "m-economynews.com",
-     "at": "2026-11-20T08:14:00.000Z"
-    },
-    {
-     "title": "[마감 시황] 코스피, 5.21% 폭락에 4,860선 추락...코스닥도 5.71% 급락",
-     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281841",
-     "host": "businesskorea.co.kr",
-     "at": "2026-11-20T08:08:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 62,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -296,7 +296,7 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -345,19 +345,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 61,
+    "score": 62,
     "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.91,
+     "change": -2.99,
      "unit": "%",
-     "z": -2.1
+     "z": -2.2
     },
     "why": [
      "핵심 단어",
-     "금 -2.91%(평소의 2.1배)"
+     "금 -2.99%(평소의 2.2배)"
     ]
    }
   },
@@ -403,7 +403,7 @@
     "level": "caution",
     "label": "주의",
     "score": 59,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -413,7 +413,7 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -461,7 +461,7 @@
     "level": "caution",
     "label": "주의",
     "score": 57,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -471,7 +471,7 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -501,19 +501,71 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
+    "score": 53,
     "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": -2.91,
+     "change": -2.99,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "금 -2.99%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "g105zh",
+   "title": "AMD 주가 7% 급락…공매도 업체, 中 수출통제 위반 의혹 제기",
+   "firstSeen": "2026-11-19T16:20:00.000Z",
+   "lastSeen": "2026-11-20T08:11:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "trade",
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아와 AMD, 중국에 90만 개 칩 판매 승인받아",
+     "link": "http://www.newstown.co.kr/news/articleView.html?idxno=722800",
+     "host": "newstown.co.kr",
+     "at": "2026-11-20T08:11:00.000Z"
+    },
+    {
+     "title": "코스피 4900선마저 붕괴...AMD 중국 제재 의혹에 반도체주 투매",
+     "link": "https://www.wikileaks-kr.org/news/articleView.html?idxno=194991",
+     "host": "wikileaks-kr.org",
+     "at": "2026-11-20T07:44:00.000Z"
+    },
+    {
+     "title": "AMD 주가 7% 급락…공매도 업체, 中 수출통제 위반 의혹 제기",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445628",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-19T16:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 51,
+    "spike": 3.3,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -2.02,
      "unit": "%",
      "z": -2.1
     },
     "why": [
-     "핵심 단어",
-     "금 -2.91%(평소의 2.1배)"
+     "기사 급증(평소 대비 3.3σ)",
+     "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
   },
@@ -553,7 +605,7 @@
     "level": "caution",
     "label": "주의",
     "score": 51,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -563,59 +615,9 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)",
      "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "v7jseg",
-   "title": "중국 알리바바, '젠슨 황 스캔들' 관련성 은폐 의혹으로 미국서 피소",
-   "firstSeen": "2026-11-20T04:26:00.000Z",
-   "lastSeen": "2026-11-20T08:08:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“알리바바, 메가스피드 관련 위험 숨겼다”…미국서 주주 소송 제기",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8718552&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-20T08:08:00.000Z"
-    },
-    {
-     "title": "알리바바로 번진 '젠슨 황 의혹'…美 주주 \"반도체 규제 위험 숨겼다\"",
-     "link": "http://www.kdfnews.com/news/articleView.html?idxno=191211",
-     "host": "kdfnews.com",
-     "at": "2026-11-20T08:02:00.000Z"
-    },
-    {
-     "title": "중국 알리바바, '젠슨 황 스캔들' 관련성 은폐 의혹으로 미국서 피소",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856215&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-20T08:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 48,
-    "spike": 4.2,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -5.21,
-     "unit": "%",
-     "z": -1.9
-    },
-    "why": [
-     "기사 급증(평소 대비 4.2σ)",
-     "코스피 -5.21%"
     ]
    }
   },
@@ -675,46 +677,6 @@
    }
   },
   {
-   "id": "g105zh",
-   "title": "AMD 주가 7% 급락…공매도 업체, 中 수출통제 위반 의혹 제기",
-   "firstSeen": "2026-11-19T16:20:00.000Z",
-   "lastSeen": "2026-11-19T16:20:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade",
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AMD 주가 7% 급락…공매도 업체, 中 수출통제 위반 의혹 제기",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445628",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-19T16:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 4.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -2.02,
-     "unit": "%",
-     "z": -2.1
-    },
-    "why": [
-     "기사 급증(평소 대비 4.2σ)",
-     "S&P 500 -2.02%(평소의 2.1배)"
-    ]
-   }
-  },
-  {
    "id": "zw67a5",
    "title": "내 퇴직연금 10년 굴려도 연 2.6%…18.8% 국민연금에 맡기면 달라질까",
    "firstSeen": "2026-11-19T20:02:00.000Z",
@@ -739,7 +701,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 45,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -749,7 +711,7 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
@@ -819,7 +781,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 45,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -829,7 +791,7 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
@@ -858,7 +820,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 45,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -868,36 +830,36 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
   },
   {
-   "id": "1timq9u",
-   "title": "\"대체 바닥이 어디야\"…코스피 4900선 붕괴, 반등 열쇠는?",
-   "firstSeen": "2026-11-20T04:57:00.000Z",
-   "lastSeen": "2026-11-20T08:02:00.000Z",
+   "id": "mfujt6",
+   "title": "[셀럽의 한 수] 말 많고 탈 많은 '데이터센터' 결국 우주로 갈까?",
+   "firstSeen": "2026-11-20T08:06:00.000Z",
+   "lastSeen": "2026-11-20T08:06:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "market",
+    "trade",
     "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"대체 바닥이 어디야\"…코스피 4900선 붕괴, 반등 열쇠는?",
-     "link": "https://www.mt.co.kr/stock/2026/11/20/2026112015522358657",
-     "host": "mt.co.kr",
-     "at": "2026-11-20T08:02:00.000Z"
+     "title": "[셀럽의 한 수] 말 많고 탈 많은 '데이터센터' 결국 우주로 갈까?",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347834?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-20T08:06:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 45,
-    "spike": 4.2,
+    "spike": 3.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -907,13 +869,77 @@
      "z": -2.1
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.3σ)",
+     "S&P 500 -2.02%(평소의 2.1배)"
+    ]
+   }
+  },
+  {
+   "id": "1z7wix",
+   "title": "“젠슨황 스캔들 숨겨 투자자 기만”…中알리바바 미국서 피소",
+   "firstSeen": "2026-11-20T08:08:00.000Z",
+   "lastSeen": "2026-11-20T08:08:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "trade",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "“젠슨황 스캔들 숨겨 투자자 기만”…中알리바바 미국서 피소",
+     "link": "https://www.mk.co.kr/article/12214782",
+     "host": "mk.co.kr",
+     "at": "2026-11-20T08:08:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 3.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -2.02,
+     "unit": "%",
+     "z": -2.1
+    },
+    "why": [
+     "기사 급증(평소 대비 3.3σ)",
      "S&P 500 -2.02%(평소의 2.1배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-20T08:30:18.495Z",
+   "id": "g105zh",
+   "level": "caution",
+   "title": "AMD 주가 7% 급락…공매도 업체, 中 수출통제 위반 의혹 제기",
+   "why": [
+    "기사 급증(평소 대비 3.3σ)",
+    "S&P 500 -2.02%(평소의 2.1배)"
+   ],
+   "link": "http://www.newstown.co.kr/news/articleView.html?idxno=722800",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-20T08:30:18.495Z",
+   "id": "iimxri",
+   "level": "caution",
+   "title": "주가 급락에…대만 당국, 오늘부터 공매도 제한 강화",
+   "why": [
+    "기사 급증(평소 대비 3.3σ)",
+    "S&P 500 -2.02%(평소의 2.1배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.viewsnnews.com/article?q=239836",
+   "delivered": false
+  },
   {
    "at": "2026-11-20T08:18:06.549Z",
    "id": "1ubk25k",
@@ -1132,32 +1158,6 @@
     "S&P 500 -2.02%(평소의 2.1배)"
    ],
    "link": "https://www.news1.kr/photos/8225421",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T06:36:44.131Z",
-   "id": "1sxe5i2",
-   "level": "caution",
-   "title": "[증시전략] 앤트로픽, 상장 첫날 롤러코스터…시초가 대비 10%↓",
-   "why": [
-    "기사 급증(평소 대비 5.9σ)",
-    "S&P 500 -2.02%(평소의 2.1배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3083578",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-20T06:22:38.057Z",
-   "id": "15uhhl9",
-   "level": "caution",
-   "title": "미중러 정상회담에도 반도체·관세 합의 없었다…삼성전자·SK하이닉스...",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 5.4σ)",
-    "S&P 500 -2.02%(평소의 2.1배)"
-   ],
-   "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/20/2026112050217.html",
    "delivered": false
   }
  ],
