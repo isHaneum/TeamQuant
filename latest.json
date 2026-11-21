@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T08:28:17.084Z",
+ "updatedAt": "2026-11-21T08:47:43.318Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,9 +120,9 @@
  ],
  "spikes": {
   "war": -0.6,
-  "politics": 0.7,
+  "politics": 0.1,
   "rates": -1.3,
-  "trade": -2.6,
+  "trade": -2.2,
   "fx": -0.1,
   "energy": -1,
   "market": 0.2,
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.6,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 0.8,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3,
+   "rate": 3.1,
    "saturated": 0,
    "queries": 3
   },
@@ -183,48 +183,6 @@
   }
  },
  "issues": [
-  {
-   "id": "csp03j",
-   "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
-   "firstSeen": "2026-11-20T11:05:00.000Z",
-   "lastSeen": "2026-11-20T11:05:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics",
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560980",
-     "host": "ichannela.com",
-     "at": "2026-11-20T11:05:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 64,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
   {
    "id": "1ealcui",
    "title": "나스닥 5.28% 폭락…앤트로픽도 하루 만에 공모가 수준 하락",
@@ -297,6 +255,48 @@
     "label": "관찰",
     "score": 60,
     "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "csp03j",
+   "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
+   "firstSeen": "2026-11-20T11:05:00.000Z",
+   "lastSeen": "2026-11-20T11:05:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics",
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
+     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560980",
+     "host": "ichannela.com",
+     "at": "2026-11-20T11:05:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 59,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -471,62 +471,6 @@
    }
   },
   {
-   "id": "17uq9rx",
-   "title": "코스피 5% 폭락…나경원 “결혼자금 반토막, 은퇴자금 녹아내려”",
-   "firstSeen": "2026-11-20T23:38:00.000Z",
-   "lastSeen": "2026-11-21T08:20:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "나경원 \"코스피 급락에 국민 자산 손실\"…정부 책임 촉구",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886715",
-     "host": "gokorea.kr",
-     "at": "2026-11-21T08:20:00.000Z"
-    },
-    {
-     "title": "나경원 “코스피 폭락, 정부 믿고 국장 들어온 국민 크게 다쳐”",
-     "link": "https://www.joongang.co.kr/article/25480699",
-     "host": "joongang.co.kr",
-     "at": "2026-11-21T06:42:00.000Z"
-    },
-    {
-     "title": "나경원 \"주가 반토막, 결혼·은퇴자금 사라져…李 정부 책임져야\"",
-     "link": "https://view.asiae.co.kr/article/2026112115060930556",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-21T06:14:00.000Z"
-    },
-    {
-     "title": "나경원 \"코스피 5% 폭락, 시총 3천460조 증발…李정권, 국민 돈 물어내라...",
-     "link": "https://www.imaeil.com/page/view/2026112113124209923",
-     "host": "imaeil.com",
-     "at": "2026-11-21T04:13:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 53,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "1mh68gj",
    "title": "[속보] 엔비디아 14% 폭락… 뉴욕증시 기술주 매도에 나스닥 5.3% 떨어져",
    "firstSeen": "2026-11-20T20:40:00.000Z",
@@ -638,6 +582,62 @@
    }
   },
   {
+   "id": "17uq9rx",
+   "title": "코스피 5% 폭락…나경원 “결혼자금 반토막, 은퇴자금 녹아내려”",
+   "firstSeen": "2026-11-20T23:38:00.000Z",
+   "lastSeen": "2026-11-21T08:20:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나경원 \"코스피 급락에 국민 자산 손실\"…정부 책임 촉구",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886715",
+     "host": "gokorea.kr",
+     "at": "2026-11-21T08:20:00.000Z"
+    },
+    {
+     "title": "나경원 “코스피 폭락, 정부 믿고 국장 들어온 국민 크게 다쳐”",
+     "link": "https://www.joongang.co.kr/article/25480699",
+     "host": "joongang.co.kr",
+     "at": "2026-11-21T06:42:00.000Z"
+    },
+    {
+     "title": "나경원 \"주가 반토막, 결혼·은퇴자금 사라져…李 정부 책임져야\"",
+     "link": "https://view.asiae.co.kr/article/2026112115060930556",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-21T06:14:00.000Z"
+    },
+    {
+     "title": "나경원 \"코스피 5% 폭락, 시총 3천460조 증발…李정권, 국민 돈 물어내라...",
+     "link": "https://www.imaeil.com/page/view/2026112113124209923",
+     "host": "imaeil.com",
+     "at": "2026-11-21T04:13:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
    "id": "tw390",
    "title": "'AI 패닉'에 나스닥 5.28% 폭락·연간 상승분 전액 반납…엔비디아 14% 추...",
    "firstSeen": "2026-11-20T21:10:00.000Z",
@@ -679,118 +679,6 @@
     "label": "관찰",
     "score": 48,
     "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "12nqd8p",
-   "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
-   "firstSeen": "2026-11-21T00:23:00.000Z",
-   "lastSeen": "2026-11-21T05:33:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "나경원 “국민 돈 날려놓고 대장동 변호만”…국힘, 증시 폭락에 李정부...",
-     "link": "https://www.munhwa.com/article/11633005?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-21T05:33:00.000Z"
-    },
-    {
-     "title": "나경원 \"주가 폭락인데 李대통령, '대장동 사건' 변호…무책임에 바닥이...",
-     "link": "https://www.newsis.com/view/NISX20261121_0003877688",
-     "host": "newsis.com",
-     "at": "2026-11-21T05:01:00.000Z"
-    },
-    {
-     "title": "나경원 \"국민 자산 무너진 날 李대통령은 대장동 변호…무책임 바닥 없...",
-     "link": "https://www.dailian.co.kr/news/view/1717983/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-21T01:54:00.000Z"
-    },
-    {
-     "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3450819",
-     "host": "newscj.com",
-     "at": "2026-11-21T01:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "w302nh",
-   "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
-   "firstSeen": "2026-11-21T01:52:00.000Z",
-   "lastSeen": "2026-11-21T07:36:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"주가 오를 땐 정권 치적, 폭락하니 국민 책임?\"... 국민의힘, 이재명 정...",
-     "link": "https://www.insight.co.kr/news/583026",
-     "host": "insight.co.kr",
-     "at": "2026-11-21T07:36:00.000Z"
-    },
-    {
-     "title": "국힘 “이재명 정권, 주가 폭락하자 시장 내팽겨쳐”",
-     "link": "https://biz.heraldcorp.com/article/10944678?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-21T05:42:00.000Z"
-    },
-    {
-     "title": "국민의힘 \"李, 주가 폭락하자 시장 내팽개쳐…희대의 먹튀 정치\"",
-     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/21/2026112190044.html",
-     "host": "news.tvchosun.com",
-     "at": "2026-11-21T04:06:00.000Z"
-    },
-    {
-     "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
-     "link": "https://www.news1.kr/politics/assembly/6361553",
-     "host": "news1.kr",
-     "at": "2026-11-21T01:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -860,47 +748,158 @@
    }
   },
   {
-   "id": "14xky58",
-   "title": "비트코인 6만달러 붕괴…금도 3600달러 밑으로",
-   "firstSeen": "2026-11-20T20:40:00.000Z",
-   "lastSeen": "2026-11-21T06:54:00.000Z",
+   "id": "1er2rch",
+   "title": "나스닥 올해 상승분 날아갔다…반도체지수 ‘-10.73%’",
+   "firstSeen": "2026-11-20T19:23:00.000Z",
+   "lastSeen": "2026-11-21T02:50:00.000Z",
    "count": 5,
    "sources": 5,
    "topics": [
-    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"비트코인 8000만원선 붕괴\"... 美 AI주 급락에 가상자산 시장 '극단적 ...",
-     "link": "https://www.insight.co.kr/news/583023",
-     "host": "insight.co.kr",
-     "at": "2026-11-21T06:54:00.000Z"
+     "title": "美 나스닥 5.28% 하락 '검은 금요일'‥올해 상승분 모두 반납",
+     "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6867460_36967.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-21T02:50:00.000Z"
     },
     {
-     "title": "비트코인, 4개월 만에 6만달러선 붕괴…한때 5만5000달러대",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026112114255400153",
-     "host": "newsway.co.kr",
-     "at": "2026-11-21T05:28:00.000Z"
+     "title": "나스닥, 기술주 매도에 5.3% 폭락…연간 상승분 모두 반납",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963836",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-21T01:56:00.000Z"
     },
     {
-     "title": "'6만달러' 붕괴된 비트코인, 5만5000달러대까지 하락",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=02004086645648016&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-21T04:58:00.000Z"
+     "title": "AI주 투매에 나스닥 5.28% 폭락…올해 상승분 모두 반납",
+     "link": "https://www.hidomin.com/news/articleView.html?idxno=730315",
+     "host": "hidomin.com",
+     "at": "2026-11-21T01:02:00.000Z"
     },
     {
-     "title": "증시 폭락에 비트코인도 8000만 원 붕괴…시장 덮친 ‘극단적 공포’",
-     "link": "https://www.sedaily.com/article/20117226?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-21T04:44:00.000Z"
+     "title": "나스닥, 기술주 투매에 5.3% 폭락…올해 상승분 반납",
+     "link": "https://www.g-enews.com/view.php?ud=202611210858568218112616b072_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T00:02:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 47,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "12nqd8p",
+   "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
+   "firstSeen": "2026-11-21T00:23:00.000Z",
+   "lastSeen": "2026-11-21T05:33:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나경원 “국민 돈 날려놓고 대장동 변호만”…국힘, 증시 폭락에 李정부...",
+     "link": "https://www.munhwa.com/article/11633005?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-21T05:33:00.000Z"
+    },
+    {
+     "title": "나경원 \"주가 폭락인데 李대통령, '대장동 사건' 변호…무책임에 바닥이...",
+     "link": "https://www.newsis.com/view/NISX20261121_0003877688",
+     "host": "newsis.com",
+     "at": "2026-11-21T05:01:00.000Z"
+    },
+    {
+     "title": "나경원 \"국민 자산 무너진 날 李대통령은 대장동 변호…무책임 바닥 없...",
+     "link": "https://www.dailian.co.kr/news/view/1717983/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-21T01:54:00.000Z"
+    },
+    {
+     "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3450819",
+     "host": "newscj.com",
+     "at": "2026-11-21T01:20:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "w302nh",
+   "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
+   "firstSeen": "2026-11-21T01:52:00.000Z",
+   "lastSeen": "2026-11-21T07:36:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"주가 오를 땐 정권 치적, 폭락하니 국민 책임?\"... 국민의힘, 이재명 정...",
+     "link": "https://www.insight.co.kr/news/583026",
+     "host": "insight.co.kr",
+     "at": "2026-11-21T07:36:00.000Z"
+    },
+    {
+     "title": "국힘 “이재명 정권, 주가 폭락하자 시장 내팽겨쳐”",
+     "link": "https://biz.heraldcorp.com/article/10944678?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-21T05:42:00.000Z"
+    },
+    {
+     "title": "국민의힘 \"李, 주가 폭락하자 시장 내팽개쳐…희대의 먹튀 정치\"",
+     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/21/2026112190044.html",
+     "host": "news.tvchosun.com",
+     "at": "2026-11-21T04:06:00.000Z"
+    },
+    {
+     "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
+     "link": "https://www.news1.kr/politics/assembly/6361553",
+     "host": "news1.kr",
+     "at": "2026-11-21T01:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
     "spike": 0.2,
     "news": false,
     "reaction": {
