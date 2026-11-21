@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T15:11:40.374Z",
+ "updatedAt": "2026-11-21T15:27:36.278Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -125,7 +125,7 @@
   "trade": -1.5,
   "fx": -0.1,
   "energy": -1,
-  "market": -0.8,
+  "market": -0.5,
   "credit": -0.1,
   "disaster": 0,
   "policy": 1.6
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.6,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
@@ -187,9 +187,9 @@
    "id": "3x5twp",
    "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
    "firstSeen": "2026-11-21T08:52:00.000Z",
-   "lastSeen": "2026-11-21T15:02:00.000Z",
-   "count": 9,
-   "sources": 8,
+   "lastSeen": "2026-11-21T15:22:00.000Z",
+   "count": 10,
+   "sources": 9,
    "topics": [
     "market",
     "policy"
@@ -198,6 +198,12 @@
     "policy"
    ],
    "links": [
+    {
+     "title": "대만, 증시 급락에 공매도 규제 강화…23일부터 시행",
+     "link": "http://www.kjdaily.com/article.php?aid=1795274447693035276",
+     "host": "kjdaily.com",
+     "at": "2026-11-21T15:22:00.000Z"
+    },
     {
      "title": "대만 증시 급락에 당국 초강수…23일부터 전일 종가 밑 공매도 금지",
      "link": "http://www.joseilbo.com/news/news_read.php?uid=580155&class=53&grp=",
@@ -215,65 +221,13 @@
      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16282575",
      "host": "topstarnews.net",
      "at": "2026-11-21T13:42:00.000Z"
-    },
-    {
-     "title": "대만, 23일부터 전일 종가 이하 공매도 전면 금지",
-     "link": "https://www.newsis.com/view/NISX20261121_0003877818",
-     "host": "newsis.com",
-     "at": "2026-11-21T12:23:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 87,
+    "score": 88,
     "spike": 1.6,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "zyjgat",
-   "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
-   "firstSeen": "2026-11-21T00:14:00.000Z",
-   "lastSeen": "2026-11-21T06:27:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "'AI 거품론'에 美증시 대폭락…앤트로픽은 공모가 위협",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-21T06:27:00.000Z"
-    },
-    {
-     "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886663",
-     "host": "gokorea.kr",
-     "at": "2026-11-21T00:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 61,
-    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -373,6 +327,46 @@
     "why": [
      "핵심 단어",
      "금 -4.62%(평소의 3.4배)"
+    ]
+   }
+  },
+  {
+   "id": "zyjgat",
+   "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
+   "firstSeen": "2026-11-21T00:14:00.000Z",
+   "lastSeen": "2026-11-21T00:14:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886663",
+     "host": "gokorea.kr",
+     "at": "2026-11-21T00:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
