@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T14:47:50.817Z",
+ "updatedAt": "2026-11-21T15:11:40.374Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,25 +119,25 @@
   }
  ],
  "spikes": {
-  "war": -1,
-  "politics": -1.3,
+  "war": -0.9,
+  "politics": -1.2,
   "rates": -1.1,
-  "trade": -1.9,
+  "trade": -1.5,
   "fx": -0.1,
   "energy": -1,
-  "market": -1,
+  "market": -0.8,
   "credit": -0.1,
   "disaster": 0,
-  "policy": 1.1
+  "policy": 1.6
  },
  "rates": {
   "war": {
-   "rate": 0.3,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.1,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 1.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.3,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   }
@@ -187,9 +187,9 @@
    "id": "3x5twp",
    "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
    "firstSeen": "2026-11-21T08:52:00.000Z",
-   "lastSeen": "2026-11-21T13:42:00.000Z",
-   "count": 7,
-   "sources": 6,
+   "lastSeen": "2026-11-21T15:02:00.000Z",
+   "count": 9,
+   "sources": 8,
    "topics": [
     "market",
     "policy"
@@ -198,6 +198,18 @@
     "policy"
    ],
    "links": [
+    {
+     "title": "대만 증시 급락에 당국 초강수…23일부터 전일 종가 밑 공매도 금지",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=580155&class=53&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-21T15:02:00.000Z"
+    },
+    {
+     "title": "대만, 증시 급락에 공매도 제한 확대…23일부터",
+     "link": "http://www.metroseoul.co.kr/article/20261121500081",
+     "host": "metroseoul.co.kr",
+     "at": "2026-11-21T15:00:00.000Z"
+    },
     {
      "title": "대만 증시 일주일 새 17.5% 폭락…공매도 규제 세 번째 강화",
      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16282575",
@@ -209,25 +221,13 @@
      "link": "https://www.newsis.com/view/NISX20261121_0003877818",
      "host": "newsis.com",
      "at": "2026-11-21T12:23:00.000Z"
-    },
-    {
-     "title": "대만, 주가 급락에 공매도 규제 강화…23일부터 5개 안정 대책 시행",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886725",
-     "host": "gokorea.kr",
-     "at": "2026-11-21T11:54:00.000Z"
-    },
-    {
-     "title": "대만은 공매도 규제 강화하는데…한국도 증시 안정 대책 서둘러야",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886723",
-     "host": "gokorea.kr",
-     "at": "2026-11-21T11:30:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 81,
-    "spike": 1.1,
+    "score": 87,
+    "spike": 1.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -457,6 +457,46 @@
    }
   },
   {
+   "id": "ek449f",
+   "title": "[김대호 인물] 크리스토퍼 윌러 연준 2인자 \"빅스텝 금리인상\"",
+   "firstSeen": "2026-11-21T14:56:00.000Z",
+   "lastSeen": "2026-11-21T14:56:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "[김대호 인물] 크리스토퍼 윌러 연준 2인자 \"빅스텝 금리인상\"",
+     "link": "https://www.g-enews.com/view.php?ud=202611190800443015906806b77b_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T14:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
    "id": "tw390",
    "title": "'AI 패닉'에 나스닥 5.28% 폭락·연간 상승분 전액 반납…엔비디아 14% 추...",
    "firstSeen": "2026-11-20T21:10:00.000Z",
@@ -554,6 +594,50 @@
     "label": "관찰",
     "score": 49,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1uw7ttj",
+   "title": "대만은 공매도 빗장 걸었는데…개미들 \"우리 당국은 뭐하나\"",
+   "firstSeen": "2026-11-21T10:59:00.000Z",
+   "lastSeen": "2026-11-21T13:25:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "증시 폭락에 공매도 빗장 건 대만…韓 개미들 \"우리도 막아달라\" 청원 ...",
+     "link": "https://www.imaeil.com/page/view/2026112121571195603",
+     "host": "imaeil.com",
+     "at": "2026-11-21T13:25:00.000Z"
+    },
+    {
+     "title": "대만은 공매도 빗장 걸었는데…개미들 \"우리 당국은 뭐하나\"",
+     "link": "https://www.hankyung.com/article/2026112115757",
+     "host": "hankyung.com",
+     "at": "2026-11-21T10:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -678,92 +762,31 @@
    }
   },
   {
-   "id": "12nqd8p",
-   "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
-   "firstSeen": "2026-11-21T00:23:00.000Z",
-   "lastSeen": "2026-11-21T10:17:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "124czzi",
+   "title": "[동북아 정세 브리핑] 미·중·러 정상외교에도 동북아 긴장 여전…중일...",
+   "firstSeen": "2026-11-20T22:24:00.000Z",
+   "lastSeen": "2026-11-20T22:24:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "나경원 \"주가 폭락인데...李 정권은 '대장동 사건' 변호\"",
-     "link": "https://www.cjb.co.kr/home/sub.php?menukey=61&mod=view&P_NO=261121506&PRO_CODE=99",
-     "host": "cjb.co.kr",
-     "at": "2026-11-21T10:17:00.000Z"
-    },
-    {
-     "title": "나경원 “국민 돈 날려놓고 대장동 변호만”…국힘, 증시 폭락에 李정부...",
-     "link": "https://www.munhwa.com/article/11633005?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-21T05:33:00.000Z"
-    },
-    {
-     "title": "나경원 \"주가 폭락인데 李대통령, '대장동 사건' 변호…무책임에 바닥이...",
-     "link": "https://www.newsis.com/view/NISX20261121_0003877688",
-     "host": "newsis.com",
-     "at": "2026-11-21T05:01:00.000Z"
-    },
-    {
-     "title": "나경원 \"국민 자산 무너진 날 李대통령은 대장동 변호…무책임 바닥 없...",
-     "link": "https://www.dailian.co.kr/news/view/1717983/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-21T01:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "13slucu",
-   "title": "나스닥 5.28% 폭락·엔비디아 14% 급락… 삼성전자·SK하이닉스도 비상",
-   "firstSeen": "2026-11-20T22:44:00.000Z",
-   "lastSeen": "2026-11-21T08:14:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market",
+    "war",
+    "trade",
     "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "삼성전자 공매도 거래대금 1.9%↑·SK하이닉스 20.1%↓",
-     "link": "http://www.kjdaily.com/article.php?aid=1795248731693027276",
-     "host": "kjdaily.com",
-     "at": "2026-11-21T08:14:00.000Z"
-    },
-    {
-     "title": "나스닥 5.28% 폭락·엔비디아 14% 급락… 삼성전자·SK하이닉스도 비상",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=506528",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-20T22:44:00.000Z"
+     "title": "[동북아 정세 브리핑] 미·중·러 정상외교에도 동북아 긴장 여전…중일...",
+     "link": "http://kor.theasian.asia/archives/422316",
+     "host": "kor.theasian.asia",
+     "at": "2026-11-20T22:24:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
-    "spike": 1.1,
+    "score": 46,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -778,36 +801,30 @@
    }
   },
   {
-   "id": "1uw7ttj",
-   "title": "대만은 공매도 빗장 걸었는데…개미들 \"우리 당국은 뭐하나\"",
-   "firstSeen": "2026-11-21T10:59:00.000Z",
-   "lastSeen": "2026-11-21T13:25:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "830hs4",
+   "title": "기준금리 결정부터 코인 규제까지…다음주 금융시장 분수령",
+   "firstSeen": "2026-11-21T00:27:00.000Z",
+   "lastSeen": "2026-11-21T00:27:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "market",
+    "rates",
     "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "증시 폭락에 공매도 빗장 건 대만…韓 개미들 \"우리도 막아달라\" 청원 ...",
-     "link": "https://www.imaeil.com/page/view/2026112121571195603",
-     "host": "imaeil.com",
-     "at": "2026-11-21T13:25:00.000Z"
-    },
-    {
-     "title": "대만은 공매도 빗장 걸었는데…개미들 \"우리 당국은 뭐하나\"",
-     "link": "https://www.hankyung.com/article/2026112115757",
-     "host": "hankyung.com",
-     "at": "2026-11-21T10:59:00.000Z"
+     "title": "기준금리 결정부터 코인 규제까지…다음주 금융시장 분수령",
+     "link": "https://biz.sbs.co.kr/article_hub/20000347960?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-21T00:27:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
-    "spike": 1.1,
+    "score": 46,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -822,103 +839,31 @@
    }
   },
   {
-   "id": "1g6ptir",
-   "title": "필라델피아 10%↓·엔비디아 14%↓…뉴욕증시도 '검은 금요일'",
-   "firstSeen": "2026-11-20T21:24:00.000Z",
-   "lastSeen": "2026-11-21T11:32:00.000Z",
-   "count": 5,
-   "sources": 4,
+   "id": "1u8ndwd",
+   "title": "'영세중립국' 스위스, 무기 수출 빗장 푸나…29일 국민투표로 결정",
+   "firstSeen": "2026-11-21T11:52:00.000Z",
+   "lastSeen": "2026-11-21T11:52:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "market"
+    "war",
+    "trade",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "뉴욕증시 AI 거품 우려에 폭락…국내 증시도 '검은 월요일' 우려",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886724",
-     "host": "gokorea.kr",
-     "at": "2026-11-21T11:32:00.000Z"
-    },
-    {
-     "title": "미국도 '검은 금요일'…'AI 거품' 우려에 나스닥 5.3% 폭락",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857097&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-21T11:09:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 '검은 금요일'…나스닥 5.28% 폭락",
-     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265",
-     "host": "jeonmae.co.kr",
-     "at": "2026-11-21T03:12:00.000Z"
-    },
-    {
-     "title": "\"금요일에 2조 샀는데\" … '검은 금요일' 버틴 개미, 美반도체 폭락에 '...",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/21/2026112150025.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-21T02:28:00.000Z"
+     "title": "'영세중립국' 스위스, 무기 수출 빗장 푸나…29일 국민투표로 결정",
+     "link": "https://www.ajunews.com/view/20261121204517192",
+     "host": "ajunews.com",
+     "at": "2026-11-21T11:52:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "14xky58",
-   "title": "비트코인 6만달러 붕괴…금도 3600달러 밑으로",
-   "firstSeen": "2026-11-20T20:40:00.000Z",
-   "lastSeen": "2026-11-21T06:54:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"비트코인 8000만원선 붕괴\"... 美 AI주 급락에 가상자산 시장 '극단적 ...",
-     "link": "https://www.insight.co.kr/news/583023",
-     "host": "insight.co.kr",
-     "at": "2026-11-21T06:54:00.000Z"
-    },
-    {
-     "title": "'6만달러' 붕괴된 비트코인, 5만5000달러대까지 하락",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=02004086645648016&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-21T04:58:00.000Z"
-    },
-    {
-     "title": "증시 폭락에 비트코인도 8000만 원 붕괴…시장 덮친 ‘극단적 공포’",
-     "link": "https://www.sedaily.com/article/20117226?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-21T04:44:00.000Z"
-    },
-    {
-     "title": "비트코인 6만달러 붕괴…금도 3600달러 밑으로",
-     "link": "https://www.kbmaeil.com/article/20261121500008",
-     "host": "kbmaeil.com",
-     "at": "2026-11-20T20:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 42,
-    "spike": 0,
+    "score": 46,
+    "spike": 1.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -934,6 +879,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T15:11:40.374Z",
+   "id": "3x5twp",
+   "level": "urgent",
+   "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://www.joseilbo.com/news/news_read.php?uid=580155&class=53&grp=",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T14:12:03.562Z",
    "id": "zyjgat",
@@ -1155,17 +1112,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T06:48:05.876Z",
-   "id": "12nqd8p",
-   "level": "caution",
-   "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.munhwa.com/article/11633005?ref=naver",
    "delivered": false
   }
  ],
