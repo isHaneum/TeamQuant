@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T22:11:49.616Z",
+ "updatedAt": "2026-11-21T22:27:34.204Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,25 +119,25 @@
   }
  ],
  "spikes": {
-  "war": -0.4,
-  "politics": -0.5,
+  "war": -0.3,
+  "politics": -0.4,
   "rates": 0.2,
   "trade": -1.1,
   "fx": -0.1,
   "energy": -0.8,
-  "market": 0.3,
+  "market": 0.7,
   "credit": -0.1,
   "disaster": 0,
   "policy": 0
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.2,
+   "rate": 3.8,
    "saturated": 0,
    "queries": 3
   },
@@ -226,9 +226,89 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 77,
-    "spike": 0.3,
+    "score": 81,
+    "spike": 0.7,
     "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "zyjgat",
+   "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
+   "firstSeen": "2026-11-21T00:14:00.000Z",
+   "lastSeen": "2026-11-21T00:14:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886663",
+     "host": "gokorea.kr",
+     "at": "2026-11-21T00:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 64,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "mzrrll",
+   "title": "韓 '블랙 먼데이' 확실시 … 예탁금 80조·코스피 신용 20조 방어선 '붕...",
+   "firstSeen": "2026-11-21T06:08:00.000Z",
+   "lastSeen": "2026-11-21T06:08:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "韓 '블랙 먼데이' 확실시 … 예탁금 80조·코스피 신용 20조 방어선 '붕...",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/21/2026112150053.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-21T06:08:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 64,
+    "spike": 0.7,
+    "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -291,46 +371,6 @@
    }
   },
   {
-   "id": "zyjgat",
-   "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
-   "firstSeen": "2026-11-21T00:14:00.000Z",
-   "lastSeen": "2026-11-21T00:14:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886663",
-     "host": "gokorea.kr",
-     "at": "2026-11-21T00:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 60,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "67okq",
    "title": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
    "firstSeen": "2026-11-21T05:14:00.000Z",
@@ -356,46 +396,6 @@
     "label": "관찰",
     "score": 60,
     "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "mzrrll",
-   "title": "韓 '블랙 먼데이' 확실시 … 예탁금 80조·코스피 신용 20조 방어선 '붕...",
-   "firstSeen": "2026-11-21T06:08:00.000Z",
-   "lastSeen": "2026-11-21T06:08:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "韓 '블랙 먼데이' 확실시 … 예탁금 80조·코스피 신용 20조 방어선 '붕...",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/21/2026112150053.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-21T06:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 60,
-    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -454,15 +454,21 @@
    "id": "8qjruq",
    "title": "'AI 패닉'에 나스닥 5.28% 폭락·연간 상승분 전액 반납…엔비디아 14% 추...",
    "firstSeen": "2026-11-20T22:46:00.000Z",
-   "lastSeen": "2026-11-21T19:05:00.000Z",
-   "count": 16,
-   "sources": 16,
+   "lastSeen": "2026-11-21T22:23:00.000Z",
+   "count": 17,
+   "sources": 17,
    "topics": [
     "rates",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "美 뉴욕증시, AI ‘버블’ 공포에 곤두박질…나스닥 5.28% 폭락",
+     "link": "https://www.dailian.co.kr/news/view/1718049/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-21T22:23:00.000Z"
+    },
     {
      "title": "나스닥 올해 상승분 반납…미 연준 \"금리 더 올려야\"",
      "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312389",
@@ -480,19 +486,13 @@
      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629331",
      "host": "cbci.co.kr",
      "at": "2026-11-21T11:16:00.000Z"
-    },
-    {
-     "title": "[잠든 사이 월가] 나스닥 5.3%·엔비디아 13% 급락…빠져나간 돈은 국채...",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38587",
-     "host": "junggi.co.kr",
-     "at": "2026-11-21T06:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 0.3,
+    "score": 56,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -547,8 +547,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 0.3,
+    "score": 53,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -603,63 +603,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "hq5ld8",
-   "title": "나스닥, 기술주 매도에 5.3% 폭락…다우·S&P500도 조정 진입(종합)",
-   "firstSeen": "2026-11-20T22:22:00.000Z",
-   "lastSeen": "2026-11-21T05:10:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "나스닥 5.3% 폭락… ‘AI 거품’ 공포에 다우·S&P500도 조정 진입",
-     "link": "https://www.segye.com/newsView/20261121504595?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-21T05:10:00.000Z"
-    },
-    {
-     "title": "AI주 투매에 뉴욕증시 급락…S&P500 조정장 진입·나스닥 연중 하락 전환",
-     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68179",
-     "host": "newsroad.co.kr",
-     "at": "2026-11-21T00:44:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시]나스닥 5.3% 폭락…다우·S&P500도 조정 장세 진입",
-     "link": "https://view.asiae.co.kr/article/2026112109260172331",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-21T00:26:00.000Z"
-    },
-    {
-     "title": "나스닥 5.28% 폭락...다우·S&P500도 조정",
-     "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4119950",
-     "host": "news.bbsi.co.kr",
-     "at": "2026-11-20T23:30:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 47,
-    "spike": 0.3,
+    "score": 52,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -675,9 +620,9 @@
   },
   {
    "id": "1bmxbgy",
-   "title": "골드만삭스 패닉지수 최고치 근접…다음주도 매도세 지속 경고",
+   "title": "\"골드만삭스 패닉지수 10점 만점에 9점\"...매도 압력 경고",
    "firstSeen": "2026-11-21T16:43:00.000Z",
-   "lastSeen": "2026-11-21T22:01:00.000Z",
+   "lastSeen": "2026-11-21T22:20:00.000Z",
    "count": 5,
    "sources": 5,
    "topics": [
@@ -685,6 +630,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "골드만삭스 패닉지수 최고치 근접…다음주도 매도세 지속 경고",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=209099",
+     "host": "tfmedia.co.kr",
+     "at": "2026-11-21T22:20:00.000Z"
+    },
     {
      "title": "골드만삭스, 다음주도 뉴욕증시 매도세 지속 전망···\"패닉지수 9점\"",
      "link": "https://www.seoulfn.com/news/articleView.html?idxno=643544",
@@ -702,19 +653,13 @@
      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719291&ref=A",
      "host": "news.kbs.co.kr",
      "at": "2026-11-21T19:30:00.000Z"
-    },
-    {
-     "title": "\"골드만삭스 패닉지수 10점 만점에 9점\"...매도 압력 경고",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611220326310959",
-     "host": "ytn.co.kr",
-     "at": "2026-11-21T18:26:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 47,
-    "spike": 0.3,
+    "score": 51,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -768,8 +713,118 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 45,
-    "spike": 0.3,
+    "score": 49,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "hq5ld8",
+   "title": "나스닥 5.28% 폭락...다우·S&P500도 조정",
+   "firstSeen": "2026-11-20T22:22:00.000Z",
+   "lastSeen": "2026-11-21T05:10:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나스닥 5.3% 폭락… ‘AI 거품’ 공포에 다우·S&P500도 조정 진입",
+     "link": "https://www.segye.com/newsView/20261121504595?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-21T05:10:00.000Z"
+    },
+    {
+     "title": "AI주 투매에 뉴욕증시 급락…S&P500 조정장 진입·나스닥 연중 하락 전환",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68179",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-21T00:44:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시]나스닥 5.3% 폭락…다우·S&P500도 조정 장세 진입",
+     "link": "https://view.asiae.co.kr/article/2026112109260172331",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-21T00:26:00.000Z"
+    },
+    {
+     "title": "나스닥 5.28% 폭락...다우·S&P500도 조정",
+     "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4119950",
+     "host": "news.bbsi.co.kr",
+     "at": "2026-11-20T23:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1qbkz39",
+   "title": "앤트로픽 상장 효과 제한적…AI 투자 회의론 지속",
+   "firstSeen": "2026-11-21T06:00:00.000Z",
+   "lastSeen": "2026-11-21T16:40:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "앤트로픽, 상장 다음 날 9% 하락…나스닥 5.28% 급락 속 공모가 간신히 ...",
+     "link": "https://www.wikitree.co.kr/articles/1176616",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-21T16:40:00.000Z"
+    },
+    {
+     "title": "앤트로픽, 상장 이틀 만에 폭락…AI 거품 터지나",
+     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1544574",
+     "host": "obsnews.co.kr",
+     "at": "2026-11-21T11:04:00.000Z"
+    },
+    {
+     "title": "역대급 IPO의 역설… 앤트로픽 상장 후 'AI 고점론' 왜 커졌나",
+     "link": "https://www.thescoop.co.kr/news/articleView.html?idxno=312371",
+     "host": "thescoop.co.kr",
+     "at": "2026-11-21T07:44:00.000Z"
+    },
+    {
+     "title": "앤트로픽 상장 효과 제한적…AI 투자 회의론 지속",
+     "link": "https://www.bloter.net/news/articleView.html?idxno=679295",
+     "host": "bloter.net",
+     "at": "2026-11-21T06:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -839,63 +894,6 @@
    }
   },
   {
-   "id": "1xljct1",
-   "title": "트럼프·베선트, 美 연준 추가 긴축에 잇단 견제",
-   "firstSeen": "2026-11-21T18:02:00.000Z",
-   "lastSeen": "2026-11-21T21:00:00.000Z",
-   "count": 4,
-   "sources": 3,
-   "topics": [
-    "politics",
-    "rates",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "연준 추가 긴축 우려에 금값 14개월 최저가…\"분할 매수 고려할 만\"",
-     "link": "https://www.news1.kr/finance/general-stock/6361347",
-     "host": "news1.kr",
-     "at": "2026-11-21T21:00:00.000Z"
-    },
-    {
-     "title": "한은, 석 달 만에 금리 인상 재개 전망…\"내년까지 긴축\"",
-     "link": "https://www.yna.co.kr/view/AKR20261121021600002?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-21T20:45:00.000Z"
-    },
-    {
-     "title": "美 연준 추가 긴축 공감 속 금리 인상 속도 시각차",
-     "link": "https://www.g-enews.com/view.php?ud=202611212021368419a1f309431_1",
-     "host": "g-enews.com",
-     "at": "2026-11-21T18:02:00.000Z"
-    },
-    {
-     "title": "트럼프·베선트, 美 연준 추가 긴축에 잇단 견제",
-     "link": "https://www.g-enews.com/view.php?ud=2026112120390811119a1f309431_1",
-     "host": "g-enews.com",
-     "at": "2026-11-21T18:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 42,
-    "spike": 0.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "w302nh",
    "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
    "firstSeen": "2026-11-21T01:52:00.000Z",
@@ -930,8 +928,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 41,
-    "spike": 0.3,
+    "score": 45,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -947,6 +945,17 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T22:27:34.204Z",
+   "id": "bu0ni",
+   "level": "caution",
+   "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
+   "why": [
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.ytn.co.kr/_ln/0104_202611220655435685",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T22:11:49.616Z",
    "id": "3x5twp",
@@ -1170,18 +1179,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T09:13:42.999Z",
-   "id": "3x5twp",
-   "level": "caution",
-   "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.g-enews.com/view.php?ud=2026112117545590bb91c46fcd_1",
    "delivered": false
   }
  ],
