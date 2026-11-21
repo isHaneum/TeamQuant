@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T20:47:47.765Z",
+ "updatedAt": "2026-11-21T21:11:32.579Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": -0.9,
-  "politics": -0.5,
-  "rates": -0.7,
-  "trade": -3,
+  "war": -0.3,
+  "politics": -0.6,
+  "rates": -0.3,
+  "trade": -1.8,
   "fx": -0.1,
   "energy": -0.8,
-  "market": -1.4,
+  "market": -0.4,
   "credit": -0.1,
   "disaster": 0,
-  "policy": -0.4
+  "policy": 0
  },
  "rates": {
   "war": {
-   "rate": 0.4,
-   "saturated": 0,
-   "queries": 3
-  },
-  "politics": {
-   "rate": 0.7,
-   "saturated": 0,
-   "queries": 3
-  },
-  "rates": {
    "rate": 1,
    "saturated": 0,
    "queries": 3
   },
+  "politics": {
+   "rate": 0.6,
+   "saturated": 0,
+   "queries": 3
+  },
+  "rates": {
+   "rate": 1.6,
+   "saturated": 0,
+   "queries": 3
+  },
   "trade": {
-   "rate": 0,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 0.7,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -187,9 +187,9 @@
    "id": "3x5twp",
    "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
    "firstSeen": "2026-11-21T08:52:00.000Z",
-   "lastSeen": "2026-11-21T15:22:00.000Z",
-   "count": 10,
-   "sources": 9,
+   "lastSeen": "2026-11-21T21:01:00.000Z",
+   "count": 11,
+   "sources": 10,
    "topics": [
     "market",
     "policy"
@@ -198,6 +198,12 @@
     "policy"
    ],
    "links": [
+    {
+     "title": "코스피 급락 속 '코스닥 활성화'?…대만은 규제 강화, '검은 월요일' 또...",
+     "link": "https://www.fnnews.com/news/202611212359102685",
+     "host": "fnnews.com",
+     "at": "2026-11-21T21:01:00.000Z"
+    },
     {
      "title": "대만, 증시 급락에 공매도 규제 강화…23일부터 시행",
      "link": "http://www.kjdaily.com/article.php?aid=1795274447693035276",
@@ -215,17 +221,11 @@
      "link": "http://www.metroseoul.co.kr/article/20261121500081",
      "host": "metroseoul.co.kr",
      "at": "2026-11-21T15:00:00.000Z"
-    },
-    {
-     "title": "대만 증시 일주일 새 17.5% 폭락…공매도 규제 세 번째 강화",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16282575",
-     "host": "topstarnews.net",
-     "at": "2026-11-21T13:42:00.000Z"
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
+    "level": "caution",
+    "label": "주의",
     "score": 75,
     "spike": 0,
     "news": true,
@@ -287,46 +287,6 @@
     "why": [
      "핵심 단어",
      "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1ksfgjm",
-   "title": "푸틴 보복 경고 하루 만에 공습…우크라 8명 사망, 키이우 교량도 타격",
-   "firstSeen": "2026-11-20T21:08:00.000Z",
-   "lastSeen": "2026-11-20T21:08:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "푸틴 보복 경고 하루 만에 공습…우크라 8명 사망, 키이우 교량도 타격",
-     "link": "https://www.voakorea.com/a/us-russia-ukraine-112026/8226180.html",
-     "host": "voakorea.com",
-     "at": "2026-11-20T21:08:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.62,
-     "unit": "%",
-     "z": -3.4
-    },
-    "why": [
-     "핵심 단어",
-     "금 -4.62%(평소의 3.4배)"
     ]
    }
   },
@@ -603,12 +563,12 @@
    }
   },
   {
-   "id": "1mh68gj",
-   "title": "[속보] 엔비디아 14% 폭락… 뉴욕증시 기술주 매도에 나스닥 5.3% 떨어져",
-   "firstSeen": "2026-11-20T20:40:00.000Z",
+   "id": "hq5ld8",
+   "title": "나스닥, 기술주 매도에 5.3% 폭락…다우·S&P500도 조정 진입(종합)",
+   "firstSeen": "2026-11-20T22:22:00.000Z",
    "lastSeen": "2026-11-21T05:10:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "market"
    ],
@@ -621,12 +581,6 @@
      "at": "2026-11-21T05:10:00.000Z"
     },
     {
-     "title": "'AI 거품' 우려에 나스닥 5.3% 폭락…다우·S&P500도 조정 진입",
-     "link": "https://www.hankookilbo.com/news/article/A2026112109440001616?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-21T00:48:00.000Z"
-    },
-    {
      "title": "AI주 투매에 뉴욕증시 급락…S&P500 조정장 진입·나스닥 연중 하락 전환",
      "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68179",
      "host": "newsroad.co.kr",
@@ -637,12 +591,18 @@
      "link": "https://view.asiae.co.kr/article/2026112109260172331",
      "host": "view.asiae.co.kr",
      "at": "2026-11-21T00:26:00.000Z"
+    },
+    {
+     "title": "나스닥 5.28% 폭락...다우·S&P500도 조정",
+     "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4119950",
+     "host": "news.bbsi.co.kr",
+     "at": "2026-11-20T23:30:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 47,
+    "score": 45,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -769,10 +729,120 @@
    }
   },
   {
-   "id": "1pkchev",
-   "title": "[국제금값최저] 연준 추가 인상 전망에 금값 5거래일 연속 하락…14개월...",
-   "firstSeen": "2026-11-20T21:00:00.000Z",
-   "lastSeen": "2026-11-21T18:02:00.000Z",
+   "id": "xc4ttt",
+   "title": "4,900선 무너진 코스피...다음주 미국 물가·한은 금통위 '주목'",
+   "firstSeen": "2026-11-20T21:02:00.000Z",
+   "lastSeen": "2026-11-21T21:00:00.000Z",
+   "count": 5,
+   "sources": 4,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[주간증시전망] AI 쇼크 이후 관건은 금리… 美 물가 지표 주목",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/22/MCGENA4AZBHF7LVQDTF5BAX3QA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-21T21:00:00.000Z"
+    },
+    {
+     "title": "(주간증시전망)코스피, 낙폭 과대에 반등 시도…미 PCE·금통위 변수",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1321290&inflow=N",
+     "host": "newstomato.com",
+     "at": "2026-11-21T21:00:00.000Z"
+    },
+    {
+     "title": "1월로 돌아간 코스피, 반등 안갯속…美 물가·금통위 주목",
+     "link": "https://www.news1.kr/finance/general-stock/6361255",
+     "host": "news1.kr",
+     "at": "2026-11-21T21:00:00.000Z"
+    },
+    {
+     "title": "코스피 4,900선 붕괴...미국 물가·한은 금통위 '주목'",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611211303456578",
+     "host": "ytn.co.kr",
+     "at": "2026-11-21T04:03:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1bmxbgy",
+   "title": "골드만삭스 패닉지수 최고치 근접…다음주도 매도세 지속 경고",
+   "firstSeen": "2026-11-21T16:43:00.000Z",
+   "lastSeen": "2026-11-21T21:02:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "골드만 패닉지수 9점…뉴욕증시 추가 매도 경고",
+     "link": "https://www.kbmaeil.com/article/20261122500017",
+     "host": "kbmaeil.com",
+     "at": "2026-11-21T21:02:00.000Z"
+    },
+    {
+     "title": "골드만삭스 ‘패닉지수’ 10점 만점에 9점…다음주도 매도 압력 지속 경...",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719291&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-21T19:30:00.000Z"
+    },
+    {
+     "title": "\"골드만삭스 패닉지수 10점 만점에 9점\"...매도 압력 경고",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611220326310959",
+     "host": "ytn.co.kr",
+     "at": "2026-11-21T18:26:00.000Z"
+    },
+    {
+     "title": "골드만삭스 패닉지수 최고치 근접…다음주도 매도세 지속 경고",
+     "link": "https://www.yna.co.kr/view/AKR20261122000800072?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-21T16:43:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 42,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1xljct1",
+   "title": "트럼프·베선트, 美 연준 추가 긴축에 잇단 견제",
+   "firstSeen": "2026-11-21T18:02:00.000Z",
+   "lastSeen": "2026-11-21T21:00:00.000Z",
    "count": 4,
    "sources": 3,
    "topics": [
@@ -783,10 +853,16 @@
    "critical": [],
    "links": [
     {
-     "title": "트럼프·베선트, 美 연준 추가 긴축에 잇단 견제",
-     "link": "https://www.g-enews.com/view.php?ud=2026112120390811119a1f309431_1",
-     "host": "g-enews.com",
-     "at": "2026-11-21T18:02:00.000Z"
+     "title": "연준 추가 긴축 우려에 금값 14개월 최저가…\"분할 매수 고려할 만\"",
+     "link": "https://www.news1.kr/finance/general-stock/6361347",
+     "host": "news1.kr",
+     "at": "2026-11-21T21:00:00.000Z"
+    },
+    {
+     "title": "한은, 석 달 만에 금리 인상 재개 전망…\"내년까지 긴축\"",
+     "link": "https://www.yna.co.kr/view/AKR20261121021600002?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-21T20:45:00.000Z"
     },
     {
      "title": "美 연준 추가 긴축 공감 속 금리 인상 속도 시각차",
@@ -795,21 +871,15 @@
      "at": "2026-11-21T18:02:00.000Z"
     },
     {
-     "title": "[금리·물가 예측] 연준 1월 인상 확률 50%…하루 새 12%p 하락",
-     "link": "http://coinreaders.com/272215",
-     "host": "coinreaders.com",
-     "at": "2026-11-21T04:28:00.000Z"
-    },
-    {
-     "title": "[국제금값최저] 연준 추가 인상 전망에 금값 5거래일 연속 하락…14개월...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629367",
-     "host": "cbci.co.kr",
-     "at": "2026-11-21T01:36:00.000Z"
+     "title": "트럼프·베선트, 美 연준 추가 긴축에 잇단 견제",
+     "link": "https://www.g-enews.com/view.php?ud=2026112120390811119a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T18:02:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
+    "level": "caution",
+    "label": "주의",
     "score": 40,
     "spike": 0,
     "news": false,
@@ -854,56 +924,6 @@
      "link": "https://www.mt.co.kr/world/2026/11/21/2026112106500467323",
      "host": "mt.co.kr",
      "at": "2026-11-20T21:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 39,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "w302nh",
-   "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
-   "firstSeen": "2026-11-21T01:52:00.000Z",
-   "lastSeen": "2026-11-21T07:36:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"주가 오를 땐 정권 치적, 폭락하니 국민 책임?\"... 국민의힘, 이재명 정...",
-     "link": "https://www.insight.co.kr/news/583026",
-     "host": "insight.co.kr",
-     "at": "2026-11-21T07:36:00.000Z"
-    },
-    {
-     "title": "국힘 “이재명 정권, 주가 폭락하자 시장 내팽겨쳐”",
-     "link": "https://biz.heraldcorp.com/article/10944678?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-21T05:42:00.000Z"
-    },
-    {
-     "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
-     "link": "https://www.news1.kr/politics/assembly/6361553",
-     "host": "news1.kr",
-     "at": "2026-11-21T01:52:00.000Z"
     }
    ],
    "assess": {
