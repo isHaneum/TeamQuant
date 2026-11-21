@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T07:13:40.860Z",
+ "updatedAt": "2026-11-21T07:27:37.007Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,10 +119,10 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
+  "war": -0.4,
   "politics": 1.4,
-  "rates": -0.8,
-  "trade": -0.7,
+  "rates": -1,
+  "trade": -0.9,
   "fx": -0.1,
   "energy": -0.8,
   "market": 0.6,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 1,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.9,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 2.7,
+   "rate": 2.5,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.6,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 3
   },
@@ -567,8 +567,8 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
+    "level": "watch",
+    "label": "관찰",
     "score": 57,
     "spike": 1.4,
     "news": false,
@@ -623,8 +623,8 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
+    "level": "watch",
+    "label": "관찰",
     "score": 56,
     "spike": 1.4,
     "news": false,
@@ -752,62 +752,6 @@
    }
   },
   {
-   "id": "hul7ji",
-   "title": "트럼프, 젠슨 황 복귀 공개 지지…엔비디아 이사회와 온도차",
-   "firstSeen": "2026-11-19T22:07:00.000Z",
-   "lastSeen": "2026-11-21T06:00:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'불륜 스캔들' 젠슨 황 복귀 의사 공식화…엔비디아 이사회는 '불가'",
-     "link": "https://www.sisajournal.com/news/articleView.html?idxno=394521",
-     "host": "sisajournal.com",
-     "at": "2026-11-21T06:00:00.000Z"
-    },
-    {
-     "title": "트럼프 \"젠슨 황, 두 번째 기회얻어  복귀해야\"…엔비디아 이사회는 후...",
-     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447502",
-     "host": "econonews.co.kr",
-     "at": "2026-11-21T04:34:00.000Z"
-    },
-    {
-     "title": "트럼프, 젠슨 황 복귀 촉구…\"두 번째 기회 줘야\"",
-     "link": "https://news.mtn.co.kr/article/2026112112074681716",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-21T03:08:00.000Z"
-    },
-    {
-     "title": "트럼프, 젠슨 황 복귀 공개 지지…엔비디아 이사회와 온도차",
-     "link": "http://www.newstomato.com/ReadNews.aspx?no=1321312&inflow=N",
-     "host": "newstomato.com",
-     "at": "2026-11-21T02:48:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 53,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "시장 반응만 있는 사건이 이미 2건"
-    ]
-   }
-  },
-  {
    "id": "14xky58",
    "title": "금값 3600달러 붕괴…1년 2개월 만에 최저",
    "firstSeen": "2026-11-20T08:16:00.000Z",
@@ -918,9 +862,86 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
+  },
+  {
+   "id": "1er2rch",
+   "title": "나스닥 올해 상승분 날아갔다…반도체지수 ‘-10.73%’",
+   "firstSeen": "2026-11-20T19:23:00.000Z",
+   "lastSeen": "2026-11-21T02:50:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 나스닥 5.28% 하락 '검은 금요일'‥올해 상승분 모두 반납",
+     "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6867460_36967.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-21T02:50:00.000Z"
+    },
+    {
+     "title": "나스닥, 기술주 매도에 5.3% 폭락…연간 상승분 모두 반납",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963836",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-21T01:56:00.000Z"
+    },
+    {
+     "title": "AI주 투매에 나스닥 5.28% 폭락…올해 상승분 모두 반납",
+     "link": "https://www.hidomin.com/news/articleView.html?idxno=730315",
+     "host": "hidomin.com",
+     "at": "2026-11-21T01:02:00.000Z"
+    },
+    {
+     "title": "나스닥, 기술주 투매에 5.3% 폭락…올해 상승분 반납",
+     "link": "https://www.g-enews.com/view.php?ud=202611210858568218112616b072_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T00:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 0.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T07:27:37.007Z",
+   "id": "w302nh",
+   "level": "caution",
+   "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
+   "why": [
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://biz.heraldcorp.com/article/10944678?ref=naver",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-21T07:27:37.007Z",
+   "id": "kutfum",
+   "level": "caution",
+   "title": "트럼프, 젠슨 황 복귀 촉구…\"두 번째 기회 줘야\"",
+   "why": [
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.sisajournal.com/news/articleView.html?idxno=394521",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T07:04:28.019Z",
    "id": "zyjgat",
@@ -1125,29 +1146,6 @@
     "금 -3.98%(평소의 2.9배)"
    ],
    "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95030",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T03:47:45.072Z",
-   "id": "vk295x",
-   "level": "caution",
-   "title": "나경원 \"청년 결혼자금 반 토막, 은퇴자금 녹아\" … 정부가 책임져야\"",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.sisajournal.com/news/articleView.html?idxno=394864",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T03:29:14.205Z",
-   "id": "68lcbv",
-   "level": "urgent",
-   "title": "마이크론·하닉ADR 13%폭락 … 韓 '검은 금요일' 이어 '블랙 먼데이' 위...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265",
    "delivered": false
   }
  ],
