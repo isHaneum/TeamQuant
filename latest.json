@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T15:47:38.186Z",
+ "updatedAt": "2026-11-21T16:13:34.765Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.9,
+  "war": -0.7,
   "politics": -1.2,
   "rates": -1.1,
-  "trade": -1.5,
+  "trade": -1.7,
   "fx": -0.1,
   "energy": -1,
-  "market": -0.1,
+  "market": 0,
   "credit": -0.1,
   "disaster": 0,
-  "policy": 1.6
+  "policy": 1.5
  },
  "rates": {
   "war": {
-   "rate": 0.4,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 1.7,
+   "rate": 1.5,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 2.7,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 3
   },
@@ -226,8 +226,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 88,
-    "spike": 1.6,
+    "score": 87,
+    "spike": 1.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -658,11 +658,11 @@
   },
   {
    "id": "1ihxc2q",
-   "title": "美무역대표 \"'상호관세 대체' 301조 조사 연말까지 마무리\"",
+   "title": "USTR 대표 \"과잉생산 301조 조사 연말 마무리\"…韓, 추가 관세 받나",
    "firstSeen": "2026-11-20T19:42:00.000Z",
    "lastSeen": "2026-11-21T02:05:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "trade"
    ],
@@ -696,7 +696,63 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
+    "score": 45,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "12nqd8p",
+   "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
+   "firstSeen": "2026-11-21T00:23:00.000Z",
+   "lastSeen": "2026-11-21T10:17:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나경원 \"주가 폭락인데...李 정권은 '대장동 사건' 변호\"",
+     "link": "https://www.cjb.co.kr/home/sub.php?menukey=61&mod=view&P_NO=261121506&PRO_CODE=99",
+     "host": "cjb.co.kr",
+     "at": "2026-11-21T10:17:00.000Z"
+    },
+    {
+     "title": "나경원 “국민 돈 날려놓고 대장동 변호만”…국힘, 증시 폭락에 李정부...",
+     "link": "https://www.munhwa.com/article/11633005?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-21T05:33:00.000Z"
+    },
+    {
+     "title": "나경원 \"주가 폭락인데 李대통령, '대장동 사건' 변호…무책임에 바닥이...",
+     "link": "https://www.newsis.com/view/NISX20261121_0003877688",
+     "host": "newsis.com",
+     "at": "2026-11-21T05:01:00.000Z"
+    },
+    {
+     "title": "나경원 \"국민 자산 무너진 날 李대통령은 대장동 변호…무책임 바닥 없...",
+     "link": "https://www.dailian.co.kr/news/view/1717983/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-21T01:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -735,8 +791,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 1.6,
+    "score": 45,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -773,8 +829,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 1.6,
+    "score": 45,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -812,46 +868,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "r2bxdp",
-   "title": "젠슨황發 美반도체 수출 규제에 삼성·TSCM도 부담",
-   "firstSeen": "2026-11-21T13:02:00.000Z",
-   "lastSeen": "2026-11-21T13:02:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨황發 美반도체 수출 규제에 삼성·TSCM도 부담",
-     "link": "https://www.segye.com/newsView/20261120506261?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-21T13:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 1.6,
+    "score": 45,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -867,6 +885,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T16:13:34.765Z",
+   "id": "3x5twp",
+   "level": "urgent",
+   "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://www.kjdaily.com/article.php?aid=1795274447693035276",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T15:11:40.374Z",
    "id": "3x5twp",
@@ -1088,18 +1118,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T06:48:05.876Z",
-   "id": "1ealcui",
-   "level": "caution",
-   "title": "나스닥 5.28% 폭락…앤트로픽도 하루 만에 공모가 수준 하락",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
    "delivered": false
   }
  ],
