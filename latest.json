@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T11:11:28.135Z",
+ "updatedAt": "2026-11-21T11:27:26.497Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": -1.1,
-  "politics": -0.3,
+  "war": -1,
+  "politics": -0.5,
   "rates": -1,
-  "trade": -1.3,
+  "trade": -1.1,
   "fx": -0.1,
-  "energy": -1,
-  "market": -0.6,
+  "energy": -0.8,
+  "market": -0.7,
   "credit": 0.1,
   "disaster": 0,
   "policy": 0.8
  },
  "rates": {
   "war": {
-   "rate": 0.3,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.8,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.6,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 2,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.9,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -504,15 +504,21 @@
    "id": "13slucu",
    "title": "나스닥 5.28% 폭락·엔비디아 14% 급락… 삼성전자·SK하이닉스도 비상",
    "firstSeen": "2026-11-20T22:44:00.000Z",
-   "lastSeen": "2026-11-21T06:00:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "lastSeen": "2026-11-21T11:16:00.000Z",
+   "count": 10,
+   "sources": 10,
    "topics": [
     "rates",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[뉴욕증시마감] 엔비디아 14% 폭락하며 시총 4위 추락… 나스닥 5.3% 급락...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629331",
+     "host": "cbci.co.kr",
+     "at": "2026-11-21T11:16:00.000Z"
+    },
     {
      "title": "[잠든 사이 월가] 나스닥 5.3%·엔비디아 13% 급락…빠져나간 돈은 국채...",
      "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38587",
@@ -530,18 +536,12 @@
      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16282062",
      "host": "topstarnews.net",
      "at": "2026-11-21T02:40:00.000Z"
-    },
-    {
-     "title": "[해외시황] 뉴욕증시, AI 투자 우려·반도체株 급락에 '하락'…나스닥 5...",
-     "link": "http://www.newsprime.co.kr/news/article.html?no=755930",
-     "host": "newsprime.co.kr",
-     "at": "2026-11-21T01:56:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
+    "score": 50,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -946,6 +946,18 @@
  ],
  "alerts": [
   {
+   "at": "2026-11-21T11:27:26.497Z",
+   "id": "3x5twp",
+   "level": "urgent",
+   "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://view.asiae.co.kr/article/2026112118562029613",
+   "delivered": false
+  },
+  {
    "at": "2026-11-21T10:27:39.584Z",
    "id": "zyjgat",
    "level": "caution",
@@ -1164,17 +1176,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://magazine.hankyung.com/business/article/202611197044b",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T05:27:32.437Z",
-   "id": "1f3sir1",
-   "level": "caution",
-   "title": "금시세·금값 21일",
-   "why": [
-    "금 -4.62%(평소의 3.4배)"
-   ],
-   "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95030",
    "delivered": false
   }
  ],
