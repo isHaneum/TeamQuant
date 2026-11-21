@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T03:29:14.205Z",
+ "updatedAt": "2026-11-21T03:47:45.072Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,11 +120,11 @@
  ],
  "spikes": {
   "war": -0.3,
-  "politics": 2.9,
-  "rates": 0,
-  "trade": 2.3,
+  "politics": 2.7,
+  "rates": -0.1,
+  "trade": 2.1,
   "fx": -0.1,
-  "energy": -0.2,
+  "energy": -0.4,
   "market": 1.1,
   "credit": 0.1,
   "disaster": 0,
@@ -137,17 +137,17 @@
    "queries": 3
   },
   "politics": {
-   "rate": 3.1,
+   "rate": 3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 5.5,
+   "rate": 5.3,
    "saturated": 1,
    "queries": 2
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
@@ -183,48 +183,6 @@
   }
  },
  "issues": [
-  {
-   "id": "csp03j",
-   "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
-   "firstSeen": "2026-11-20T11:05:00.000Z",
-   "lastSeen": "2026-11-20T11:05:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "politics",
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
-     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560980",
-     "host": "ichannela.com",
-     "at": "2026-11-20T11:05:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 81,
-    "spike": 2.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
   {
    "id": "68lcbv",
    "title": "마이크론·하닉ADR 13%폭락 … 韓 '검은 금요일' 이어 '블랙 먼데이' 위...",
@@ -270,6 +228,48 @@
     "score": 80,
     "spike": 1.1,
     "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "csp03j",
+   "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
+   "firstSeen": "2026-11-20T11:05:00.000Z",
+   "lastSeen": "2026-11-20T11:05:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "politics",
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
+     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560980",
+     "host": "ichannela.com",
+     "at": "2026-11-20T11:05:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 80,
+    "spike": 2.7,
+    "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -409,8 +409,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 66,
-    "spike": 2.3,
+    "score": 65,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -464,8 +464,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 65,
-    "spike": 2.9,
+    "score": 64,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -520,8 +520,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 65,
-    "spike": 2.9,
+    "score": 64,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -570,8 +570,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 62,
-    "spike": 2.9,
+    "score": 61,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -621,8 +621,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 62,
-    "spike": 2.9,
+    "score": 61,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -672,8 +672,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 62,
-    "spike": 2.9,
+    "score": 61,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -692,14 +692,20 @@
    "id": "1er2rch",
    "title": "뉴욕증시 다우·S&P500 조정장 진입…나스닥, AI주 투매에 올해 상승분 ...",
    "firstSeen": "2026-11-20T19:23:00.000Z",
-   "lastSeen": "2026-11-21T02:50:00.000Z",
-   "count": 14,
-   "sources": 13,
+   "lastSeen": "2026-11-21T03:36:00.000Z",
+   "count": 18,
+   "sources": 18,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "AI·반도체 투매에 뉴욕증시 급락 나스닥 5.3%",
+     "link": "https://vop.co.kr/A00001697698.html",
+     "host": "vop.co.kr",
+     "at": "2026-11-21T03:36:00.000Z"
+    },
     {
      "title": "뉴욕증시, 나스닥 5.3% 폭락‥올해 상승분 반납",
      "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6867460_36967.html",
@@ -707,22 +713,16 @@
      "at": "2026-11-21T02:50:00.000Z"
     },
     {
+     "title": "[해외시황] 뉴욕증시, AI 투자 우려·반도체株 급락에 '하락'…나스닥 5...",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=755930",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-21T01:56:00.000Z"
+    },
+    {
      "title": "나스닥, 기술주 매도에 5.3% 폭락…연간 상승분 모두 반납",
      "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963836",
      "host": "mbnmoney.mbn.co.kr",
      "at": "2026-11-21T01:56:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 나스닥 5.28% 폭락…S&P500 연속 하락",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629356",
-     "host": "cbci.co.kr",
-     "at": "2026-11-21T01:20:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시 주간결산] 나스닥 한 주 10%↓…AI주 투매에 S&P500·다우 조정...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95018",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-21T01:10:00.000Z"
     }
    ],
    "assess": {
@@ -748,14 +748,20 @@
    "id": "1mh68gj",
    "title": "[속보] 엔비디아 14% 폭락… 뉴욕증시 기술주 매도에 나스닥 5.3% 떨어져",
    "firstSeen": "2026-11-20T20:40:00.000Z",
-   "lastSeen": "2026-11-21T02:03:00.000Z",
-   "count": 11,
-   "sources": 11,
+   "lastSeen": "2026-11-21T03:05:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "나스닥, 기술주 매도에 5.3% 폭락…비트코인·금도 와르르",
+     "link": "https://news.jtbc.co.kr/article/NB12329171?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-21T03:05:00.000Z"
+    },
     {
      "title": "엔비디아 14% 폭락에 기술주 휘청…나스닥 5.28%↓",
      "link": "https://news.tf.co.kr/read/world/2391770.htm",
@@ -763,72 +769,23 @@
      "at": "2026-11-21T02:03:00.000Z"
     },
     {
-     "title": "[해외시황] 뉴욕증시, AI 투자 우려·반도체株 급락에 '하락'…나스닥 5...",
-     "link": "http://www.newsprime.co.kr/news/article.html?no=755930",
-     "host": "newsprime.co.kr",
-     "at": "2026-11-21T01:56:00.000Z"
+     "title": "[뉴욕증시 주간결산] 나스닥 한 주 10%↓…AI주 투매에 S&P500·다우 조정...",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95018",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-21T01:10:00.000Z"
     },
     {
-     "title": "AI 잔치에 찬물 끼얹은 뉴욕증시…앤트로픽·엔비디아 동반 급락",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347963?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-21T01:21:00.000Z"
-    },
-    {
-     "title": "AI·반도체주 급락에 나스닥 5.3%↓",
-     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=54985",
-     "host": "koreareport.co.kr",
-     "at": "2026-11-21T00:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 59,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "i29kbr",
-   "title": "트럼프 \"역사적인 미중러 회담\" 자평했지만... 핵 감축, 종전 성과 못 밝...",
-   "firstSeen": "2026-11-20T20:01:00.000Z",
-   "lastSeen": "2026-11-21T01:38:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "트럼프 \"미중러 회담서 한반도 위험 대응 논의\"",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121103659DGu",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-21T01:38:00.000Z"
-    },
-    {
-     "title": "트럼프 \"역사적인 미중러 회담\" 자평했지만... 핵 감축, 종전 성과 못 밝...",
-     "link": "https://www.hankookilbo.com/news/article/A2026112104210005391?did=NA",
+     "title": "'AI 거품' 우려에 나스닥 5.3% 폭락…다우·S&P500도 조정 진입",
+     "link": "https://www.hankookilbo.com/news/article/A2026112109440001616?did=NA",
      "host": "hankookilbo.com",
-     "at": "2026-11-20T20:01:00.000Z"
+     "at": "2026-11-21T00:48:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 59,
-    "spike": 2.9,
+    "score": 58,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -870,8 +827,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 59,
-    "spike": 2.9,
+    "score": 58,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -913,8 +870,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 59,
-    "spike": 2.9,
+    "score": 58,
+    "spike": 2.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -927,9 +884,60 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
+  },
+  {
+   "id": "102go3h",
+   "title": "푸틴 보복 경고 하루 만에 공습…우크라 8명 사망, 키이우 교량도 타격",
+   "firstSeen": "2026-11-20T09:22:00.000Z",
+   "lastSeen": "2026-11-20T21:08:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "푸틴 보복 경고 하루 만에 공습…우크라 8명 사망, 키이우 교량도 타격",
+     "link": "https://www.voakorea.com/a/us-russia-ukraine-112026/8226180.html",
+     "host": "voakorea.com",
+     "at": "2026-11-20T21:08:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 57,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": -3.98,
+     "unit": "%",
+     "z": -2.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 -3.98%(평소의 2.9배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T03:47:45.072Z",
+   "id": "vk295x",
+   "level": "caution",
+   "title": "나경원 \"청년 결혼자금 반 토막, 은퇴자금 녹아\" … 정부가 책임져야\"",
+   "why": [
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.sisajournal.com/news/articleView.html?idxno=394864",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T03:29:14.205Z",
    "id": "68lcbv",
@@ -1161,17 +1169,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.newdaily.co.kr/site/data/html/2026/11/21/2026112150010.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T00:53:15.388Z",
-   "id": "11n47rk",
-   "level": "caution",
-   "title": "베선트 \"미중 정상, AI 군사 결정에 인간 개입 합의\"",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.tfmedia.co.kr/news/article.html?no=209087",
    "delivered": false
   }
  ],
