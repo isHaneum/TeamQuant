@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T02:29:29.343Z",
+ "updatedAt": "2026-11-21T02:47:42.528Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 4869.96,
+   "last": 4869.9599609375,
    "change": -5.21,
    "z": -1.9,
-   "sd": 2.7486737561111525,
-   "source": "네이버 현재가",
-   "live": false,
+   "sd": 2.753679967697834,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,12 +23,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-20",
-   "last": 645.68,
+   "last": 645.6799926757812,
    "change": -5.71,
    "z": -2.1,
-   "sd": 2.7345935900565075,
-   "source": "네이버 현재가",
-   "live": false,
+   "sd": 2.716600235510131,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -122,11 +120,11 @@
  ],
  "spikes": {
   "war": 0,
-  "politics": 4.4,
-  "rates": 1,
-  "trade": 3.8,
+  "politics": 4.1,
+  "rates": 0.6,
+  "trade": 3.2,
   "fx": -0.1,
-  "energy": 0.8,
+  "energy": 0.4,
   "market": 1.1,
   "credit": 0.1,
   "disaster": 0,
@@ -139,18 +137,18 @@
    "queries": 3
   },
   "politics": {
-   "rate": 4.1,
+   "rate": 3.9,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 3.3,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 6.7,
-   "saturated": 2,
+   "rate": 6.2,
+   "saturated": 1,
    "queries": 2
   },
   "fx": {
@@ -159,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 1
   },
@@ -212,7 +210,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 83,
-    "spike": 4.4,
+    "spike": 4.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -223,7 +221,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 4.4σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -327,7 +325,7 @@
     "level": "caution",
     "label": "주의",
     "score": 73,
-    "spike": 3.8,
+    "spike": 3.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -337,7 +335,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.8σ)",
+     "기사 급증(평소 대비 3.2σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -390,64 +388,6 @@
    }
   },
   {
-   "id": "18bpr4g",
-   "title": "나경원 \"주가 바닥 치는데 李 정권 무책임은 바닥 없어\"",
-   "firstSeen": "2026-11-20T23:51:00.000Z",
-   "lastSeen": "2026-11-21T00:58:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[속보] 나경원 “코스피 5% 폭락, 국민 자산 무너지는데…이재명 정권 ...",
-     "link": "https://www.kwnews.co.kr/article/20261121500035",
-     "host": "kwnews.co.kr",
-     "at": "2026-11-21T00:58:00.000Z"
-    },
-    {
-     "title": "\"쿠폰 등으로 지수 올린다\" 비판한 나경원, 코스피 하락에 \"이 정권 무책...",
-     "link": "https://www.pressian.com/pages/articles/2026112109275270534?utm_source=naver&utm_medium=search",
-     "host": "pressian.com",
-     "at": "2026-11-21T00:28:00.000Z"
-    },
-    {
-     "title": "나경원 \"코스피 5% 폭락…이재명 정권 무책임엔 바닥 없어\"",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01751526645648016&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-21T00:19:00.000Z"
-    },
-    {
-     "title": "나경원 \"주가 바닥 치는데 李 정권 무책임은 바닥 없어\"",
-     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67793?feed=na",
-     "host": "jibs.co.kr",
-     "at": "2026-11-20T23:51:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 67,
-    "spike": 4.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "기사 급증(평소 대비 4.4σ)",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
    "id": "vk295x",
    "title": "나경원 \"청년 결혼자금 반 토막, 은퇴자금 녹아\" … 정부가 책임져야\"",
    "firstSeen": "2026-11-21T00:34:00.000Z",
@@ -489,7 +429,7 @@
     "level": "caution",
     "label": "주의",
     "score": 67,
-    "spike": 4.4,
+    "spike": 4.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -499,7 +439,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.4σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -546,6 +486,58 @@
    }
   },
   {
+   "id": "18bpr4g",
+   "title": "나경원 \"주가 바닥 치는데 李 정권 무책임은 바닥 없어\"",
+   "firstSeen": "2026-11-20T23:51:00.000Z",
+   "lastSeen": "2026-11-21T00:58:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[속보] 나경원 “코스피 5% 폭락, 국민 자산 무너지는데…이재명 정권 ...",
+     "link": "https://www.kwnews.co.kr/article/20261121500035",
+     "host": "kwnews.co.kr",
+     "at": "2026-11-21T00:58:00.000Z"
+    },
+    {
+     "title": "나경원 \"코스피 5% 폭락…이재명 정권 무책임엔 바닥 없어\"",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01751526645648016&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-21T00:19:00.000Z"
+    },
+    {
+     "title": "나경원 \"주가 바닥 치는데 李 정권 무책임은 바닥 없어\"",
+     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/67793?feed=na",
+     "host": "jibs.co.kr",
+     "at": "2026-11-20T23:51:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 64,
+    "spike": 4.1,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "기사 급증(평소 대비 4.1σ)",
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
    "id": "12nqd8p",
    "title": "\"증시 치적 내세우더니 국민 자산 폭락\"…나경원, 李 정부 직격",
    "firstSeen": "2026-11-21T00:23:00.000Z",
@@ -581,7 +573,7 @@
     "level": "caution",
     "label": "주의",
     "score": 64,
-    "spike": 4.4,
+    "spike": 4.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -591,7 +583,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.4σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -632,7 +624,7 @@
     "level": "caution",
     "label": "주의",
     "score": 64,
-    "spike": 4.4,
+    "spike": 4.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -642,7 +634,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.4σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -677,7 +669,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 61,
-    "spike": 4.4,
+    "spike": 4.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -687,7 +679,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.4σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -721,7 +713,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 61,
-    "spike": 4.4,
+    "spike": 4.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -731,7 +723,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.4σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -765,7 +757,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 61,
-    "spike": 4.4,
+    "spike": 4.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -775,7 +767,62 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.4σ)",
+     "기사 급증(평소 대비 4.1σ)",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1er2rch",
+   "title": "뉴욕증시 다우·S&P500 조정장 진입…나스닥, AI주 투매에 올해 상승분 ...",
+   "firstSeen": "2026-11-20T19:23:00.000Z",
+   "lastSeen": "2026-11-21T01:56:00.000Z",
+   "count": 13,
+   "sources": 12,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나스닥, 기술주 매도에 5.3% 폭락…연간 상승분 모두 반납",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963836",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-21T01:56:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 나스닥 5.28% 폭락…S&P500 연속 하락",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629356",
+     "host": "cbci.co.kr",
+     "at": "2026-11-21T01:20:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시 주간결산] 나스닥 한 주 10%↓…AI주 투매에 S&P500·다우 조정...",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95018",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-21T01:10:00.000Z"
+    },
+    {
+     "title": "AI주 투매에 나스닥 5.28% 폭락…올해 상승분 모두 반납",
+     "link": "https://www.hidomin.com/news/articleView.html?idxno=730315",
+     "host": "hidomin.com",
+     "at": "2026-11-21T01:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 59,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -836,39 +883,21 @@
    }
   },
   {
-   "id": "1owhmku",
-   "title": "3분기 차주당 주담대 신규 대출 2.1억원…30대 비중 역대 최대",
-   "firstSeen": "2026-11-20T04:10:00.000Z",
-   "lastSeen": "2026-11-20T08:02:00.000Z",
-   "count": 11,
-   "sources": 11,
+   "id": "1cdmvbz",
+   "title": "관제사 사라진 버뱅크공항…조종사끼리 교신하며 착륙",
+   "firstSeen": "2026-11-20T06:04:00.000Z",
+   "lastSeen": "2026-11-20T06:04:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "rates"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "주담대 절반은 30대 몫… 가계대출 둔화에도 주담대 622만 원↑",
-     "link": "https://www.hankookilbo.com/news/article/A2026112015030002391?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-20T08:02:00.000Z"
-    },
-    {
-     "title": "신규 주담대 1인당 2.1억원…30대 연령층 비중 역대급",
-     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=315847",
-     "host": "straightnews.co.kr",
-     "at": "2026-11-20T07:16:00.000Z"
-    },
-    {
-     "title": "3분기 신규 주담대 30대 비중 46.4% 역대 최대…20대·50대 주담대 취급...",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=355150",
-     "host": "greened.kr",
-     "at": "2026-11-20T06:57:00.000Z"
-    },
-    {
-     "title": "3분기 차주당 주담대 2억 빌렸다…30대 비중 역대 최대 [머니뭐니]",
-     "link": "https://biz.heraldcorp.com/article/10944185?ref=naver",
-     "host": "biz.heraldcorp.com",
+     "title": "관제사 사라진 버뱅크공항…조종사끼리 교신하며 착륙",
+     "link": "https://www.koreadaily.com/article/20261119220345994",
+     "host": "koreadaily.com",
      "at": "2026-11-20T06:04:00.000Z"
     }
    ],
@@ -876,7 +905,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 58,
-    "spike": 1,
+    "spike": 4.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -886,61 +915,7 @@
      "z": -3.7
     },
     "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1er2rch",
-   "title": "뉴욕증시 다우·S&P500 조정장 진입…나스닥, AI주 투매에 올해 상승분 ...",
-   "firstSeen": "2026-11-20T19:23:00.000Z",
-   "lastSeen": "2026-11-21T01:20:00.000Z",
-   "count": 9,
-   "sources": 8,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "뉴욕증시 나스닥 5.28% 폭락…S&P500 연속 하락",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629356",
-     "host": "cbci.co.kr",
-     "at": "2026-11-21T01:20:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시 주간결산] 나스닥 한 주 10%↓…AI주 투매에 S&P500·다우 조정...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95018",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-21T01:10:00.000Z"
-    },
-    {
-     "title": "'AI 거품' 우려에 나스닥 5.3% 폭락…다우·S&P500도 조정 진입",
-     "link": "https://www.hankookilbo.com/news/article/A2026112109440001616?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-21T00:48:00.000Z"
-    },
-    {
-     "title": "AI주 투매에 뉴욕증시 급락…S&P500 조정장 진입·나스닥 연중 하락 전환",
-     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68179",
-     "host": "newsroad.co.kr",
-     "at": "2026-11-21T00:44:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 58,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
