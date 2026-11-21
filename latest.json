@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T06:20:26.918Z",
+ "updatedAt": "2026-11-21T06:34:11.488Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": -0.5,
-  "politics": 1.6,
+  "war": -0.4,
+  "politics": 1.7,
   "rates": -0.7,
   "trade": 0,
   "fx": -0.1,
   "energy": -0.6,
-  "market": 0.8,
+  "market": 0.7,
   "credit": -0.1,
   "disaster": 0,
   "policy": -0.3
  },
  "rates": {
   "war": {
-   "rate": 0.8,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.2,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.9,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 3
   },
@@ -226,7 +226,7 @@
     "level": "urgent",
     "label": "긴급",
     "score": 77,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -267,9 +267,55 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 71,
-    "spike": 1.6,
+    "score": 72,
+    "spike": 1.7,
     "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "yah7y0",
+   "title": "나스닥 5.28% 폭락…앤트로픽도 하루 만에 공모가 수준 하락",
+   "firstSeen": "2026-11-20T11:34:00.000Z",
+   "lastSeen": "2026-11-21T06:27:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'AI 거품론'에 美증시 대폭락…앤트로픽은 공모가 위협",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-21T06:27:00.000Z"
+    },
+    {
+     "title": "나스닥 5.28% 폭락…앤트로픽도 하루 만에 공모가 수준 하락",
+     "link": "https://www.hani.co.kr/arti/international/international_general/1288420.html",
+     "host": "hani.co.kr",
+     "at": "2026-11-20T23:32:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 67,
+    "spike": 0.7,
+    "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -308,7 +354,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 64,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -410,8 +456,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 59,
-    "spike": 1.6,
+    "score": 60,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -466,8 +512,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 58,
-    "spike": 1.6,
+    "score": 59,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -641,63 +687,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 56,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "13slucu",
-   "title": "나스닥 5.28% 폭락·엔비디아 14% 급락… 삼성전자·SK하이닉스도 비상",
-   "firstSeen": "2026-11-20T22:44:00.000Z",
-   "lastSeen": "2026-11-21T06:00:00.000Z",
-   "count": 9,
-   "sources": 9,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[잠든 사이 월가] 나스닥 5.3%·엔비디아 13% 급락…빠져나간 돈은 국채...",
-     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38587",
-     "host": "junggi.co.kr",
-     "at": "2026-11-21T06:00:00.000Z"
-    },
-    {
-     "title": "AI·반도체 투매에 뉴욕증시 급락 나스닥 5.3%",
-     "link": "https://vop.co.kr/A00001697698.html",
-     "host": "vop.co.kr",
-     "at": "2026-11-21T03:36:00.000Z"
-    },
-    {
-     "title": "미국 주식 폭락에 \"계좌에 핵 한 방\"…나스닥 5.28% 급락, 월요일 삼성전...",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16282062",
-     "host": "topstarnews.net",
-     "at": "2026-11-21T02:40:00.000Z"
-    },
-    {
-     "title": "[해외시황] 뉴욕증시, AI 투자 우려·반도체株 급락에 '하락'…나스닥 5...",
-     "link": "http://www.newsprime.co.kr/news/article.html?no=755930",
-     "host": "newsprime.co.kr",
-     "at": "2026-11-21T01:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -751,8 +741,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 55,
-    "spike": 1.6,
+    "score": 56,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -764,6 +754,62 @@
     "why": [
      "S&P 500 -3.7%(평소의 3.7배)",
      "시장 반응만 있는 사건이 이미 2건"
+    ]
+   }
+  },
+  {
+   "id": "13slucu",
+   "title": "나스닥 5.28% 폭락·엔비디아 14% 급락… 삼성전자·SK하이닉스도 비상",
+   "firstSeen": "2026-11-20T22:44:00.000Z",
+   "lastSeen": "2026-11-21T06:00:00.000Z",
+   "count": 9,
+   "sources": 9,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[잠든 사이 월가] 나스닥 5.3%·엔비디아 13% 급락…빠져나간 돈은 국채...",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38587",
+     "host": "junggi.co.kr",
+     "at": "2026-11-21T06:00:00.000Z"
+    },
+    {
+     "title": "AI·반도체 투매에 뉴욕증시 급락 나스닥 5.3%",
+     "link": "https://vop.co.kr/A00001697698.html",
+     "host": "vop.co.kr",
+     "at": "2026-11-21T03:36:00.000Z"
+    },
+    {
+     "title": "미국 주식 폭락에 \"계좌에 핵 한 방\"…나스닥 5.28% 급락, 월요일 삼성전...",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16282062",
+     "host": "topstarnews.net",
+     "at": "2026-11-21T02:40:00.000Z"
+    },
+    {
+     "title": "[해외시황] 뉴욕증시, AI 투자 우려·반도체株 급락에 '하락'…나스닥 5...",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=755930",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-21T01:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 55,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
@@ -802,8 +848,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 1.6,
+    "score": 53,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -859,62 +905,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 51,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1er2rch",
-   "title": "나스닥 올해 상승분 날아갔다…반도체지수 ‘-10.73%’",
-   "firstSeen": "2026-11-20T19:23:00.000Z",
-   "lastSeen": "2026-11-21T02:50:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 나스닥 5.28% 하락 '검은 금요일'‥올해 상승분 모두 반납",
-     "link": "https://imnews.imbc.com/replay/2026/nw1200/article/6867460_36967.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-21T02:50:00.000Z"
-    },
-    {
-     "title": "나스닥, 기술주 매도에 5.3% 폭락…연간 상승분 모두 반납",
-     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963836",
-     "host": "mbnmoney.mbn.co.kr",
-     "at": "2026-11-21T01:56:00.000Z"
-    },
-    {
-     "title": "AI주 투매에 나스닥 5.28% 폭락…올해 상승분 모두 반납",
-     "link": "https://www.hidomin.com/news/articleView.html?idxno=730315",
-     "host": "hidomin.com",
-     "at": "2026-11-21T01:02:00.000Z"
-    },
-    {
-     "title": "나스닥, 기술주 투매에 5.3% 폭락…올해 상승분 반납",
-     "link": "https://www.g-enews.com/view.php?ud=202611210858568218112616b072_1",
-     "host": "g-enews.com",
-     "at": "2026-11-21T00:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 51,
-    "spike": 0.8,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -930,6 +921,30 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T06:34:11.488Z",
+   "id": "1izs29t",
+   "level": "caution",
+   "title": "\"11월 한국 증시는 끝났다…12월 FOMC 이후에 증시 돌아설 것\"",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://magazine.hankyung.com/business/article/202611197044b",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-21T06:34:11.488Z",
+   "id": "yah7y0",
+   "level": "caution",
+   "title": "나스닥 5.28% 폭락…앤트로픽도 하루 만에 공모가 수준 하락",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T06:20:26.918Z",
    "id": "17uq9rx",
@@ -1135,32 +1150,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://www.kwnews.co.kr/article/20261121500035",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T02:29:29.343Z",
-   "id": "12nqd8p",
-   "level": "caution",
-   "title": "\"증시 치적 내세우더니 국민 자산 폭락\"…나경원, 李 정부 직격",
-   "why": [
-    "기사 급증(평소 대비 4.4σ)",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.dailian.co.kr/news/view/1717983/?sc=Naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T02:29:29.343Z",
-   "id": "vk295x",
-   "level": "caution",
-   "title": "나경원 \"청년 결혼자금 반 토막, 은퇴자금 녹아\" … 정부가 책임져야\"",
-   "why": [
-    "기사 급증(평소 대비 4.4σ)",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.sisajournal.com/news/articleView.html?idxno=394864",
    "delivered": false
   }
  ],
