@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T20:27:27.526Z",
+ "updatedAt": "2026-11-21T20:47:47.765Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": -1.1,
+  "war": -0.9,
   "politics": -0.5,
-  "rates": -0.9,
-  "trade": -2.9,
+  "rates": -0.7,
+  "trade": -3,
   "fx": -0.1,
-  "energy": -0.9,
+  "energy": -0.8,
   "market": -1.4,
   "credit": -0.1,
   "disaster": 0,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 0.3,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.8,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 0.2,
+   "rate": 0,
    "saturated": 0,
    "queries": 2
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   },
@@ -769,6 +769,63 @@
    }
   },
   {
+   "id": "1pkchev",
+   "title": "[국제금값최저] 연준 추가 인상 전망에 금값 5거래일 연속 하락…14개월...",
+   "firstSeen": "2026-11-20T21:00:00.000Z",
+   "lastSeen": "2026-11-21T18:02:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "politics",
+    "rates",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "트럼프·베선트, 美 연준 추가 긴축에 잇단 견제",
+     "link": "https://www.g-enews.com/view.php?ud=2026112120390811119a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T18:02:00.000Z"
+    },
+    {
+     "title": "美 연준 추가 긴축 공감 속 금리 인상 속도 시각차",
+     "link": "https://www.g-enews.com/view.php?ud=202611212021368419a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T18:02:00.000Z"
+    },
+    {
+     "title": "[금리·물가 예측] 연준 1월 인상 확률 50%…하루 새 12%p 하락",
+     "link": "http://coinreaders.com/272215",
+     "host": "coinreaders.com",
+     "at": "2026-11-21T04:28:00.000Z"
+    },
+    {
+     "title": "[국제금값최저] 연준 추가 인상 전망에 금값 5거래일 연속 하락…14개월...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629367",
+     "host": "cbci.co.kr",
+     "at": "2026-11-21T01:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 40,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
    "id": "1ihxc2q",
    "title": "美 연말까지 301조 조사 완료…'관세 12.5%' 韓 추가폭탄 촉각",
    "firstSeen": "2026-11-20T19:42:00.000Z",
@@ -866,58 +923,21 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
-  },
-  {
-   "id": "1qbkz39",
-   "title": "앤트로픽 상장 효과 제한적…AI 투자 회의론 지속",
-   "firstSeen": "2026-11-21T06:00:00.000Z",
-   "lastSeen": "2026-11-21T16:40:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "앤트로픽, 상장 다음 날 9% 하락…나스닥 5.28% 급락 속 공모가 간신히 ...",
-     "link": "https://www.wikitree.co.kr/articles/1176616",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-21T16:40:00.000Z"
-    },
-    {
-     "title": "앤트로픽, 상장 이틀 만에 폭락…AI 거품 터지나",
-     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1544574",
-     "host": "obsnews.co.kr",
-     "at": "2026-11-21T11:04:00.000Z"
-    },
-    {
-     "title": "앤트로픽 상장 효과 제한적…AI 투자 회의론 지속",
-     "link": "https://www.bloter.net/news/articleView.html?idxno=679295",
-     "host": "bloter.net",
-     "at": "2026-11-21T06:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 39,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T20:47:47.765Z",
+   "id": "3x5twp",
+   "level": "urgent",
+   "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://www.kjdaily.com/article.php?aid=1795274447693035276",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T19:47:39.150Z",
    "id": "3x5twp",
@@ -1141,17 +1161,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "http://www.kjdaily.com/article.php?aid=1795248731693027276",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T07:27:37.007Z",
-   "id": "w302nh",
-   "level": "caution",
-   "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://biz.heraldcorp.com/article/10944678?ref=naver",
    "delivered": false
   }
  ],
