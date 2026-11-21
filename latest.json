@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T11:47:32.085Z",
+ "updatedAt": "2026-11-21T12:17:47.543Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,8 +119,8 @@
   }
  ],
  "spikes": {
-  "war": -1.1,
-  "politics": -0.5,
+  "war": -1.2,
+  "politics": -0.9,
   "rates": -1,
   "trade": -1.5,
   "fx": -0.1,
@@ -128,16 +128,16 @@
   "market": -0.6,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 1.2
+  "policy": 0.8
  },
  "rates": {
   "war": {
-   "rate": 0.3,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.8,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   }
@@ -187,8 +187,8 @@
    "id": "3x5twp",
    "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
    "firstSeen": "2026-11-21T08:52:00.000Z",
-   "lastSeen": "2026-11-21T11:30:00.000Z",
-   "count": 4,
+   "lastSeen": "2026-11-21T11:54:00.000Z",
+   "count": 5,
    "sources": 4,
    "topics": [
     "market",
@@ -198,6 +198,12 @@
     "policy"
    ],
    "links": [
+    {
+     "title": "대만, 주가 급락에 공매도 규제 강화…23일부터 5개 안정 대책 시행",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886725",
+     "host": "gokorea.kr",
+     "at": "2026-11-21T11:54:00.000Z"
+    },
     {
      "title": "대만은 공매도 규제 강화하는데…한국도 증시 안정 대책 서둘러야",
      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886723",
@@ -215,19 +221,13 @@
      "link": "https://www.g-enews.com/view.php?ud=2026112117545590bb91c46fcd_1",
      "host": "g-enews.com",
      "at": "2026-11-21T08:58:00.000Z"
-    },
-    {
-     "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=02122166645648016&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-21T08:52:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 77,
-    "spike": 1.2,
+    "score": 74,
+    "spike": 0.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -267,8 +267,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 68,
-    "spike": 1.2,
+    "score": 64,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -621,7 +621,7 @@
   {
    "id": "1ihxc2q",
    "title": "美무역대표 \"'상호관세 대체' 301조 조사 연말까지 마무리\"",
-   "firstSeen": "2026-11-20T15:20:00.000Z",
+   "firstSeen": "2026-11-20T19:42:00.000Z",
    "lastSeen": "2026-11-21T02:05:00.000Z",
    "count": 6,
    "sources": 6,
@@ -840,31 +840,48 @@
    }
   },
   {
-   "id": "124czzi",
-   "title": "[동북아 정세 브리핑] 미·중·러 정상외교에도 동북아 긴장 여전…중일...",
-   "firstSeen": "2026-11-20T22:24:00.000Z",
-   "lastSeen": "2026-11-20T22:24:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "14xky58",
+   "title": "비트코인 6만달러 붕괴…금도 3600달러 밑으로",
+   "firstSeen": "2026-11-20T20:40:00.000Z",
+   "lastSeen": "2026-11-21T06:54:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "war",
-    "trade",
-    "policy"
+    "fx",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[동북아 정세 브리핑] 미·중·러 정상외교에도 동북아 긴장 여전…중일...",
-     "link": "http://kor.theasian.asia/archives/422316",
-     "host": "kor.theasian.asia",
-     "at": "2026-11-20T22:24:00.000Z"
+     "title": "\"비트코인 8000만원선 붕괴\"... 美 AI주 급락에 가상자산 시장 '극단적 ...",
+     "link": "https://www.insight.co.kr/news/583023",
+     "host": "insight.co.kr",
+     "at": "2026-11-21T06:54:00.000Z"
+    },
+    {
+     "title": "'6만달러' 붕괴된 비트코인, 5만5000달러대까지 하락",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=02004086645648016&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-21T04:58:00.000Z"
+    },
+    {
+     "title": "증시 폭락에 비트코인도 8000만 원 붕괴…시장 덮친 ‘극단적 공포’",
+     "link": "https://www.sedaily.com/article/20117226?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-21T04:44:00.000Z"
+    },
+    {
+     "title": "비트코인 6만달러 붕괴…금도 3600달러 밑으로",
+     "link": "https://www.kbmaeil.com/article/20261121500008",
+     "host": "kbmaeil.com",
+     "at": "2026-11-20T20:40:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 1.2,
+    "score": 42,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -879,30 +896,47 @@
    }
   },
   {
-   "id": "830hs4",
-   "title": "기준금리 결정부터 코인 규제까지…다음주 금융시장 분수령",
-   "firstSeen": "2026-11-21T00:27:00.000Z",
-   "lastSeen": "2026-11-21T00:27:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "1er2rch",
+   "title": "나스닥 올해 상승분 날아갔다…반도체지수 ‘-10.73%’",
+   "firstSeen": "2026-11-20T19:23:00.000Z",
+   "lastSeen": "2026-11-21T01:56:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "rates",
-    "policy"
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "기준금리 결정부터 코인 규제까지…다음주 금융시장 분수령",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347960?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-21T00:27:00.000Z"
+     "title": "나스닥, 기술주 매도에 5.3% 폭락…연간 상승분 모두 반납",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963836",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-21T01:56:00.000Z"
+    },
+    {
+     "title": "AI주 투매에 나스닥 5.28% 폭락…올해 상승분 모두 반납",
+     "link": "https://www.hidomin.com/news/articleView.html?idxno=730315",
+     "host": "hidomin.com",
+     "at": "2026-11-21T01:02:00.000Z"
+    },
+    {
+     "title": "나스닥, 기술주 투매에 5.3% 폭락…올해 상승분 반납",
+     "link": "https://www.g-enews.com/view.php?ud=202611210858568218112616b072_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T00:02:00.000Z"
+    },
+    {
+     "title": "나스닥 올해 상승분 날아갔다…반도체지수 ‘-10.73%’",
+     "link": "http://coinreaders.com/272174",
+     "host": "coinreaders.com",
+     "at": "2026-11-20T23:58:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 1.2,
+    "score": 42,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
