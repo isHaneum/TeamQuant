@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T23:11:45.757Z",
+ "updatedAt": "2026-11-21T23:27:47.712Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,9 +119,9 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
-  "politics": -0.1,
-  "rates": 0.1,
+  "war": -0.2,
+  "politics": 0.1,
+  "rates": 0.2,
   "trade": -0.4,
   "fx": -0.1,
   "energy": -0.8,
@@ -132,17 +132,17 @@
  },
  "rates": {
   "war": {
-   "rate": 1,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 2.1,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
@@ -354,8 +354,88 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
+    "score": 61,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "67okq",
+   "title": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
+   "firstSeen": "2026-11-21T05:14:00.000Z",
+   "lastSeen": "2026-11-21T05:14:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
+     "link": "https://magazine.hankyung.com/business/article/202611197044b",
+     "host": "magazine.hankyung.com",
+     "at": "2026-11-21T05:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
     "score": 60,
-    "spike": 0.1,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "ek449f",
+   "title": "[김대호 인물] 크리스토퍼 윌러 연준 2인자 \"빅스텝 금리인상\"",
+   "firstSeen": "2026-11-21T14:56:00.000Z",
+   "lastSeen": "2026-11-21T14:56:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "[김대호 인물] 크리스토퍼 윌러 연준 2인자 \"빅스텝 금리인상\"",
+     "link": "https://www.g-enews.com/view.php?ud=202611190800443015906806b77b_1",
+     "host": "g-enews.com",
+     "at": "2026-11-21T14:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 60,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -422,86 +502,6 @@
      "z": -3.7
     },
     "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "67okq",
-   "title": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
-   "firstSeen": "2026-11-21T05:14:00.000Z",
-   "lastSeen": "2026-11-21T05:14:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
-     "link": "https://magazine.hankyung.com/business/article/202611197044b",
-     "host": "magazine.hankyung.com",
-     "at": "2026-11-21T05:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 59,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "ek449f",
-   "title": "[김대호 인물] 크리스토퍼 윌러 연준 2인자 \"빅스텝 금리인상\"",
-   "firstSeen": "2026-11-21T14:56:00.000Z",
-   "lastSeen": "2026-11-21T14:56:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "[김대호 인물] 크리스토퍼 윌러 연준 2인자 \"빅스텝 금리인상\"",
-     "link": "https://www.g-enews.com/view.php?ud=202611190800443015906806b77b_1",
-     "host": "g-enews.com",
-     "at": "2026-11-21T14:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 59,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -604,61 +604,6 @@
     "level": "watch",
     "label": "관찰",
     "score": 55,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1g6ptir",
-   "title": "필라델피아 10%↓·엔비디아 14%↓…뉴욕증시도 '검은 금요일'",
-   "firstSeen": "2026-11-20T21:24:00.000Z",
-   "lastSeen": "2026-11-21T22:28:00.000Z",
-   "count": 5,
-   "sources": 4,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"또 '검은 월요일' 오나\"…美 증시 폭락에 코스피 '초긴장'",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611220004&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-21T22:28:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 AI 거품 우려에 폭락…국내 증시도 '검은 월요일' 우려",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886724",
-     "host": "gokorea.kr",
-     "at": "2026-11-21T11:32:00.000Z"
-    },
-    {
-     "title": "미국도 '검은 금요일'…'AI 거품' 우려에 나스닥 5.3% 폭락",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857097&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-21T11:09:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 '검은 금요일'…나스닥 5.28% 폭락",
-     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265",
-     "host": "jeonmae.co.kr",
-     "at": "2026-11-21T03:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 52,
     "spike": 1.1,
     "news": false,
     "reaction": {
@@ -784,6 +729,165 @@
    }
   },
   {
+   "id": "1g6ptir",
+   "title": "필라델피아 10%↓·엔비디아 14%↓…뉴욕증시도 '검은 금요일'",
+   "firstSeen": "2026-11-20T21:24:00.000Z",
+   "lastSeen": "2026-11-21T22:28:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"또 '검은 월요일' 오나\"…美 증시 폭락에 코스피 '초긴장'",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611220004&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-21T22:28:00.000Z"
+    },
+    {
+     "title": "미국도 '검은 금요일'…'AI 거품' 우려에 나스닥 5.3% 폭락",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857097&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-21T11:09:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 '검은 금요일'…나스닥 5.28% 폭락",
+     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265",
+     "host": "jeonmae.co.kr",
+     "at": "2026-11-21T03:12:00.000Z"
+    },
+    {
+     "title": "필라델피아 10%↓·엔비디아 14%↓…뉴욕증시도 '검은 금요일'",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856835&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-21T02:09:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "wkgs0m",
+   "title": "한은, 금리 인상으로 기울었나...'5천선 붕괴' 증시 향배 등 내주 경제 ...",
+   "firstSeen": "2026-11-21T04:16:00.000Z",
+   "lastSeen": "2026-11-21T23:18:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "전문가 10곳 모두 금리 인상 전망... 한국은행, 기준금리 3.25%로 올릴까",
+     "link": "https://www.insight.co.kr/news/583047",
+     "host": "insight.co.kr",
+     "at": "2026-11-21T23:18:00.000Z"
+    },
+    {
+     "title": "한은, 다음주 금리 3.25%로 올리나…내년 성장률 전망치도 주목",
+     "link": "https://biz.heraldcorp.com/article/10944619?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-21T23:01:00.000Z"
+    },
+    {
+     "title": "\"한은, 26일 기준금리 인상\" 한목소리…10곳 중 9곳 \"내년 3.50%\" [금통위...",
+     "link": "https://www.news1.kr/economy/trend/6361408",
+     "host": "news1.kr",
+     "at": "2026-11-21T21:29:00.000Z"
+    },
+    {
+     "title": "뛰는 성장률, 잡히지 않는 물가…한은, 금주 금리 인상 전망",
+     "link": "https://www.newsis.com/view/NISX20261120_0003877274",
+     "host": "newsis.com",
+     "at": "2026-11-21T21:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 0.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "8qjruq",
+   "title": "엔비디아 14% 추락에 나스닥 5.3% 폭락…미국 증시 덮친 'AI 쇼크'",
+   "firstSeen": "2026-11-20T22:46:00.000Z",
+   "lastSeen": "2026-11-21T22:52:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 주가 일주일 새 23% 추락…18년 만에 최대 낙폭",
+     "link": "https://www.jemin.com/news/articleView.html?idxno=848003",
+     "host": "jemin.com",
+     "at": "2026-11-21T22:52:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시마감] 엔비디아 14% 폭락하며 시총 4위 추락… 나스닥 5.3% 급락...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629331",
+     "host": "cbci.co.kr",
+     "at": "2026-11-21T11:16:00.000Z"
+    },
+    {
+     "title": "엔비디아 14% 추락에 나스닥 5.3% 폭락…미국 증시 덮친 'AI 쇼크'",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085110",
+     "host": "jnilbo.com",
+     "at": "2026-11-20T23:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
    "id": "w302nh",
    "title": "국힘 \"李대통령, 주가 오를 땐 치적 자랑…폭락하자 시장 내팽개쳐",
    "firstSeen": "2026-11-21T01:52:00.000Z",
@@ -832,109 +936,32 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
-  },
-  {
-   "id": "1ealcui",
-   "title": "앤트로픽, 상장 다음 날 9% 하락…나스닥 5.28% 급락 속 공모가 간신히 ...",
-   "firstSeen": "2026-11-20T23:32:00.000Z",
-   "lastSeen": "2026-11-21T23:00:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "공모 배분 방식 탓? 직원 즉시 매도 허용 때문?…앤트로픽 급락 원인 두...",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719317&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-21T23:00:00.000Z"
-    },
-    {
-     "title": "공모 배분 탓? 직원 매도허용 때문?…앤트로픽 급락에 월가 공방",
-     "link": "https://www.yna.co.kr/view/AKR20261122006300072?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-21T22:52:00.000Z"
-    },
-    {
-     "title": "앤트로픽, 상장 다음 날 9% 하락…나스닥 5.28% 급락 속 공모가 간신히 ...",
-     "link": "https://www.wikitree.co.kr/articles/1176616",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-21T16:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 48,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "bu0ni",
-   "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
-   "firstSeen": "2026-11-21T19:35:00.000Z",
-   "lastSeen": "2026-11-21T21:55:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics",
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'친 트럼프' 아르헨티나 미국 중간선거 이후 국가위험도 4개월 새 급등....",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611220655435685",
-     "host": "ytn.co.kr",
-     "at": "2026-11-21T21:55:00.000Z"
-    },
-    {
-     "title": "아르헨 국가위험도 4개월 새 급등…국채금리 미국 국채보다 10%p↑",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719293&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-21T19:38:00.000Z"
-    },
-    {
-     "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
-     "link": "https://www.yna.co.kr/view/AKR20261122001600009?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-21T19:35:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 48,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-21T23:27:47.712Z",
+   "id": "3x5twp",
+   "level": "caution",
+   "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.fnnews.com/news/202611212359102685",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-21T23:27:47.712Z",
+   "id": "bu0ni",
+   "level": "caution",
+   "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
+   "why": [
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.ytn.co.kr/_ln/0104_202611220655435685",
+   "delivered": false
+  },
   {
    "at": "2026-11-21T23:11:45.757Z",
    "id": "1rhncuw",
@@ -1136,30 +1163,6 @@
   },
   {
    "at": "2026-11-21T11:27:26.497Z",
-   "id": "3x5twp",
-   "level": "urgent",
-   "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://view.asiae.co.kr/article/2026112118562029613",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T10:27:39.584Z",
-   "id": "zyjgat",
-   "level": "caution",
-   "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-21T10:11:54.162Z",
    "id": "3x5twp",
    "level": "urgent",
    "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
