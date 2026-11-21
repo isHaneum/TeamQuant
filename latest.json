@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T10:27:39.584Z",
+ "updatedAt": "2026-11-21T10:47:48.719Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": -1,
-  "politics": -0.5,
+  "war": -1.1,
+  "politics": -0.6,
   "rates": -1,
-  "trade": -2,
+  "trade": -1.8,
   "fx": -0.1,
   "energy": -1,
-  "market": -0.6,
+  "market": -0.8,
   "credit": -0.1,
   "disaster": 0,
   "policy": 0.8
  },
  "rates": {
   "war": {
-   "rate": 0.4,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
-   "saturated": 0,
-   "queries": 3
-  },
-  "rates": {
    "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
+  "rates": {
+   "rate": 0.7,
+   "saturated": 0,
+   "queries": 3
+  },
   "trade": {
-   "rate": 1.3,
+   "rate": 1.5,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.8,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
@@ -581,12 +581,12 @@
    }
   },
   {
-   "id": "1mh68gj",
-   "title": "나스닥 5.3% 폭락…AMD·마이크론 13% 급락",
-   "firstSeen": "2026-11-20T20:40:00.000Z",
+   "id": "13slucu",
+   "title": "나스닥 5.28% 폭락·엔비디아 14% 급락… 삼성전자·SK하이닉스도 비상",
+   "firstSeen": "2026-11-20T22:44:00.000Z",
    "lastSeen": "2026-11-21T06:00:00.000Z",
-   "count": 10,
-   "sources": 10,
+   "count": 9,
+   "sources": 9,
    "topics": [
     "rates",
     "market"
@@ -621,7 +621,7 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
+    "score": 49,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -640,15 +640,21 @@
    "id": "17uq9rx",
    "title": "코스피 5% 폭락…나경원 “결혼자금 반토막, 은퇴자금 녹아내려”",
    "firstSeen": "2026-11-20T23:38:00.000Z",
-   "lastSeen": "2026-11-21T09:31:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "lastSeen": "2026-11-21T10:28:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "politics",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "나경원 \"주가 반토막, 李 정부 책임져야⋯결혼·은퇴자금 사라져\"",
+     "link": "http://www.inews24.com/view/2028907",
+     "host": "inews24.com",
+     "at": "2026-11-21T10:28:00.000Z"
+    },
     {
      "title": "4900선 무너진 코스피…“李정권, 국민 돈 물어내라”",
      "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000561040",
@@ -666,18 +672,12 @@
      "link": "https://www.joongang.co.kr/article/25480699",
      "host": "joongang.co.kr",
      "at": "2026-11-21T06:42:00.000Z"
-    },
-    {
-     "title": "나경원 \"주가 반토막, 결혼·은퇴자금 사라져…李 정부 책임져야\"",
-     "link": "https://view.asiae.co.kr/article/2026112115060930556",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-21T06:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 48,
+    "score": 49,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -727,61 +727,6 @@
      "link": "https://www.kbmaeil.com/article/20261121500012",
      "host": "kbmaeil.com",
      "at": "2026-11-20T20:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "tw390",
-   "title": "'AI 패닉'에 나스닥 5.28% 폭락·연간 상승분 전액 반납…엔비디아 14% 추...",
-   "firstSeen": "2026-11-20T21:10:00.000Z",
-   "lastSeen": "2026-11-21T04:28:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[AI 예측] ‘AI 거품 붕괴’ 63%, 하루 새 54%p↑…엔비디아 14% 폭락",
-     "link": "http://coinreaders.com/272216",
-     "host": "coinreaders.com",
-     "at": "2026-11-21T04:28:00.000Z"
-    },
-    {
-     "title": "나스닥 5.3% 폭락…AI 투자 불안에 美증시 ‘검은 금요일’",
-     "link": "https://www.viva100.com/article/20261121500035",
-     "host": "viva100.com",
-     "at": "2026-11-21T01:48:00.000Z"
-    },
-    {
-     "title": "[마켓펄스] \"AI 거품론에 월가 패닉\"...엔비디아 52주 신저가에 나스닥 ...",
-     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=131041",
-     "host": "ntoday.co.kr",
-     "at": "2026-11-21T01:14:00.000Z"
-    },
-    {
-     "title": "[뉴욕증시] 앤트로픽의 역설? '패닉', 나스닥 5%↓·필리 11%↓···AI 테...",
-     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643535",
-     "host": "seoulfn.com",
-     "at": "2026-11-20T23:34:00.000Z"
     }
    ],
    "assess": {
@@ -899,6 +844,61 @@
     "level": "watch",
     "label": "관찰",
     "score": 45,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "tw390",
+   "title": "'AI 패닉'에 나스닥 5.28% 폭락·연간 상승분 전액 반납…엔비디아 14% 추...",
+   "firstSeen": "2026-11-20T21:10:00.000Z",
+   "lastSeen": "2026-11-21T10:28:00.000Z",
+   "count": 5,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[AI 예측] 엔비디아 14% 폭락…‘AI 거품 붕괴’ 확률 58%로 급등",
+     "link": "http://coinreaders.com/272268",
+     "host": "coinreaders.com",
+     "at": "2026-11-21T10:28:00.000Z"
+    },
+    {
+     "title": "[AI 예측] ‘AI 거품 붕괴’ 63%, 하루 새 54%p↑…엔비디아 14% 폭락",
+     "link": "http://coinreaders.com/272216",
+     "host": "coinreaders.com",
+     "at": "2026-11-21T04:28:00.000Z"
+    },
+    {
+     "title": "[마켓펄스] \"AI 거품론에 월가 패닉\"...엔비디아 52주 신저가에 나스닥 ...",
+     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=131041",
+     "host": "ntoday.co.kr",
+     "at": "2026-11-21T01:14:00.000Z"
+    },
+    {
+     "title": "엔비디아 14% 추락에 나스닥 5.3% 폭락…미국 증시 덮친 'AI 쇼크'",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085110",
+     "host": "jnilbo.com",
+     "at": "2026-11-20T23:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
     "spike": 0,
     "news": false,
     "reaction": {
