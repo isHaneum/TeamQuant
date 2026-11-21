@@ -1,7 +1,7 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-21T12:47:20.164Z",
- "mode": "watch",
+ "updatedAt": "2026-11-21T13:05:42.105Z",
+ "mode": "briefing",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
   {
@@ -128,7 +128,7 @@
   "market": -0.7,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 1.1
+  "policy": 0.8
  },
  "rates": {
   "war": {
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   }
@@ -226,8 +226,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 80,
-    "spike": 1.1,
+    "score": 77,
+    "spike": 0.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -267,8 +267,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 67,
-    "spike": 1.1,
+    "score": 64,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -953,6 +953,18 @@
  ],
  "alerts": [
   {
+   "at": "2026-11-21T13:05:42.105Z",
+   "id": "zyjgat",
+   "level": "caution",
+   "title": "미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
+   "delivered": false
+  },
+  {
    "at": "2026-11-21T12:47:20.164Z",
    "id": "3x5twp",
    "level": "urgent",
@@ -1173,50 +1185,39 @@
    ],
    "link": "http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi",
    "delivered": false
-  },
-  {
-   "at": "2026-11-21T06:20:26.918Z",
-   "id": "17uq9rx",
-   "level": "caution",
-   "title": "코스피 5% 폭락…나경원 “결혼자금 반토막, 은퇴자금 녹아내려”",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://view.asiae.co.kr/article/2026112115060930556",
-   "delivered": false
   }
  ],
  "briefing": {
-  "id": "2026-11-21-close",
+  "id": "2026-11-21-us",
   "version": "I1-2026-11-06",
-  "slot": "close",
-  "title": "국내 장 마감 브리핑",
-  "at": "2026-11-21T07:04:28.019Z",
-  "headline": "코스피 -5.21%, 코스닥 -5.71%, 원/달러 +0.33% · 주요 이슈: 증시 급변, 전쟁·지정학, 선거·정치",
+  "slot": "us",
+  "title": "미국 장 브리핑",
+  "at": "2026-11-21T13:05:42.105Z",
+  "headline": "S&P 500 -3.7%, 나스닥 -5.28%, 원/달러 +0.33% · 주요 이슈: 증시 급변, 규제·정책, 관세·무역",
   "markets": [
    {
-    "symbol": "^KS11",
-    "label": "코스피",
+    "symbol": "^GSPC",
+    "label": "S&P 500",
     "unit": "%",
     "available": true,
     "date": "2026-11-20",
-    "last": 4869.9599609375,
-    "change": -5.21,
-    "z": -1.9,
-    "sd": 2.753679967697834,
+    "last": 6910.39013671875,
+    "change": -3.7,
+    "z": -3.7,
+    "sd": 0.9995559033983658,
     "source": "Yahoo",
     "checked": true
    },
    {
-    "symbol": "^KQ11",
-    "label": "코스닥",
+    "symbol": "^IXIC",
+    "label": "나스닥",
     "unit": "%",
     "available": true,
     "date": "2026-11-20",
-    "last": 645.6799926757812,
-    "change": -5.71,
-    "z": -2.1,
-    "sd": 2.716600235510131,
+    "last": 22617.73046875,
+    "change": -5.28,
+    "z": -3.8,
+    "sd": 1.3780278016640188,
     "source": "Yahoo",
     "checked": true
    },
@@ -1231,19 +1232,6 @@
     "z": 0.5,
     "sd": 0.630706609734769,
     "source": "Yahoo"
-   },
-   {
-    "symbol": "^GSPC",
-    "label": "S&P 500",
-    "unit": "%",
-    "available": true,
-    "date": "2026-11-20",
-    "last": 6910.39013671875,
-    "change": -3.7,
-    "z": -3.7,
-    "sd": 0.9995559033983658,
-    "source": "Yahoo",
-    "checked": true
    },
    {
     "symbol": "CL=F",
@@ -1269,6 +1257,18 @@
     "sd": 12.152694856458675,
     "source": "Yahoo",
     "checked": true
+   },
+   {
+    "symbol": "^TNX",
+    "label": "미 10년 금리",
+    "unit": "bp",
+    "available": true,
+    "date": "2026-11-20",
+    "last": 4.9120001792907715,
+    "change": -14,
+    "z": -2.6,
+    "sd": 5.3816830061883225,
+    "source": "Yahoo"
    }
   ],
   "unusual": [
@@ -1281,49 +1281,50 @@
   ],
   "issues": [
    {
-    "id": "68lcbv",
-    "title": "마이크론·하닉ADR 13%폭락 … 韓 '검은 금요일' 이어 '블랙 먼데이' 위...",
-    "firstSeen": "2026-11-20T22:22:00.000Z",
-    "lastSeen": "2026-11-21T03:12:00.000Z",
+    "id": "3x5twp",
+    "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
+    "firstSeen": "2026-11-21T08:52:00.000Z",
+    "lastSeen": "2026-11-21T12:23:00.000Z",
     "count": 6,
     "sources": 5,
     "topics": [
-     "market"
+     "market",
+     "policy"
     ],
     "critical": [
-     "market"
+     "policy"
     ],
     "links": [
      {
-      "title": "뉴욕증시 '검은 금요일'…나스닥 5.28% 폭락",
-      "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265",
-      "host": "jeonmae.co.kr",
-      "at": "2026-11-21T03:12:00.000Z"
+      "title": "대만, 23일부터 전일 종가 이하 공매도 전면 금지",
+      "link": "https://www.newsis.com/view/NISX20261121_0003877818",
+      "host": "newsis.com",
+      "at": "2026-11-21T12:23:00.000Z"
      },
      {
-      "title": "\"금요일에 2조 샀는데\" … '검은 금요일' 버틴 개미, 美반도체 폭락에 '...",
-      "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/21/2026112150025.html",
-      "host": "biz.newdaily.co.kr",
-      "at": "2026-11-21T02:28:00.000Z"
+      "title": "대만, 주가 급락에 공매도 규제 강화…23일부터 5개 안정 대책 시행",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886725",
+      "host": "gokorea.kr",
+      "at": "2026-11-21T11:54:00.000Z"
      },
      {
-      "title": "필라델피아 10%↓·엔비디아 14%↓…뉴욕증시도 '검은 금요일'",
-      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856835&plink=ORI&cooper=NAVER",
-      "host": "news.sbs.co.kr",
-      "at": "2026-11-21T02:09:00.000Z"
+      "title": "대만은 공매도 규제 강화하는데…한국도 증시 안정 대책 서둘러야",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886723",
+      "host": "gokorea.kr",
+      "at": "2026-11-21T11:30:00.000Z"
      },
      {
-      "title": "나스닥 5.3% 폭락…AI 투자 불안에 美증시 ‘검은 금요일’",
-      "link": "https://www.viva100.com/article/20261121500035",
-      "host": "viva100.com",
-      "at": "2026-11-21T01:48:00.000Z"
+      "title": "대만, 증시 급락에 공매도 규제 강화…23일부터 가격 제한",
+      "link": "https://view.asiae.co.kr/article/2026112118562029613",
+      "host": "view.asiae.co.kr",
+      "at": "2026-11-21T09:56:00.000Z"
      }
     ],
     "assess": {
      "level": "urgent",
      "label": "긴급",
-     "score": 76,
-     "spike": 0.6,
+     "score": 77,
+     "spike": 0.8,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
@@ -1339,33 +1340,32 @@
     }
    },
    {
-    "id": "csp03j",
-    "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
-    "firstSeen": "2026-11-20T11:05:00.000Z",
-    "lastSeen": "2026-11-20T11:05:00.000Z",
+    "id": "mzrrll",
+    "title": "韓 '블랙 먼데이' 확실시 … 예탁금 80조·코스피 신용 20조 방어선 '붕...",
+    "firstSeen": "2026-11-21T06:08:00.000Z",
+    "lastSeen": "2026-11-21T06:08:00.000Z",
     "count": 1,
     "sources": 1,
     "topics": [
-     "war",
-     "politics",
-     "energy"
+     "trade",
+     "policy"
     ],
     "critical": [
-     "energy"
+     "market"
     ],
     "links": [
      {
-      "title": "호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’",
-      "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560980",
-      "host": "ichannela.com",
-      "at": "2026-11-20T11:05:00.000Z"
+      "title": "韓 '블랙 먼데이' 확실시 … 예탁금 80조·코스피 신용 20조 방어선 '붕...",
+      "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/21/2026112150053.html",
+      "host": "biz.newdaily.co.kr",
+      "at": "2026-11-21T06:08:00.000Z"
      }
     ],
     "assess": {
      "level": "watch",
      "label": "관찰",
-     "score": 72,
-     "spike": 1.7,
+     "score": 64,
+     "spike": 0.8,
      "news": false,
      "reaction": {
       "symbol": "^GSPC",
@@ -1410,8 +1410,8 @@
     "assess": {
      "level": "caution",
      "label": "주의",
-     "score": 66,
-     "spike": 0.6,
+     "score": 61,
+     "spike": 0,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
@@ -1426,118 +1426,6 @@
      ]
     },
     "delivered": false
-   },
-   {
-    "id": "17uq9rx",
-    "title": "코스피 5% 폭락…나경원 “결혼자금 반토막, 은퇴자금 녹아내려”",
-    "firstSeen": "2026-11-20T23:38:00.000Z",
-    "lastSeen": "2026-11-21T06:42:00.000Z",
-    "count": 6,
-    "sources": 6,
-    "topics": [
-     "politics",
-     "market"
-    ],
-    "critical": [],
-    "links": [
-     {
-      "title": "나경원 “코스피 폭락, 정부 믿고 국장 들어온 국민 크게 다쳐”",
-      "link": "https://www.joongang.co.kr/article/25480699",
-      "host": "joongang.co.kr",
-      "at": "2026-11-21T06:42:00.000Z"
-     },
-     {
-      "title": "나경원 \"주가 반토막, 결혼·은퇴자금 사라져…李 정부 책임져야\"",
-      "link": "https://view.asiae.co.kr/article/2026112115060930556",
-      "host": "view.asiae.co.kr",
-      "at": "2026-11-21T06:14:00.000Z"
-     },
-     {
-      "title": "나경원 \"코스피 5% 폭락, 시총 3천460조 증발…李정권, 국민 돈 물어내라...",
-      "link": "https://www.imaeil.com/page/view/2026112113124209923",
-      "host": "imaeil.com",
-      "at": "2026-11-21T04:13:00.000Z"
-     },
-     {
-      "title": "코스피 4900선 붕괴에…나경원 \"李정권, 국민 돈 물어내라\"",
-      "link": "https://www.sisajournal.com/news/articleView.html?idxno=394864",
-      "host": "sisajournal.com",
-      "at": "2026-11-21T01:49:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 60,
-     "spike": 1.7,
-     "news": false,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": -3.7,
-      "unit": "%",
-      "z": -3.7
-     },
-     "why": [
-      "S&P 500 -3.7%(평소의 3.7배)"
-     ]
-    }
-   },
-   {
-    "id": "12nqd8p",
-    "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
-    "firstSeen": "2026-11-21T00:23:00.000Z",
-    "lastSeen": "2026-11-21T05:33:00.000Z",
-    "count": 5,
-    "sources": 5,
-    "topics": [
-     "politics",
-     "market"
-    ],
-    "critical": [],
-    "links": [
-     {
-      "title": "나경원 “국민 돈 날려놓고 대장동 변호만”…국힘, 증시 폭락에 李정부...",
-      "link": "https://www.munhwa.com/article/11633005?ref=naver",
-      "host": "munhwa.com",
-      "at": "2026-11-21T05:33:00.000Z"
-     },
-     {
-      "title": "나경원 \"주가 폭락인데 李대통령, '대장동 사건' 변호…무책임에 바닥이...",
-      "link": "https://www.newsis.com/view/NISX20261121_0003877688",
-      "host": "newsis.com",
-      "at": "2026-11-21T05:01:00.000Z"
-     },
-     {
-      "title": "나경원 \"주가 바닥치는데, 李는 '대장동 변호'…무책임엔 바닥이 없다\"",
-      "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/21/2026112190041.html",
-      "host": "news.tvchosun.com",
-      "at": "2026-11-21T04:06:00.000Z"
-     },
-     {
-      "title": "나경원 \"국민 자산 무너진 날 李대통령은 대장동 변호…무책임 바닥 없...",
-      "link": "https://www.dailian.co.kr/news/view/1717983/?sc=Naver",
-      "host": "dailian.co.kr",
-      "at": "2026-11-21T01:54:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 59,
-     "spike": 1.7,
-     "news": false,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": -3.7,
-      "unit": "%",
-      "z": -3.7
-     },
-     "why": [
-      "S&P 500 -3.7%(평소의 3.7배)"
-     ]
-    }
    },
    {
     "id": "1ksfgjm",
@@ -1578,53 +1466,136 @@
       "금 -4.62%(평소의 3.4배)"
      ]
     }
+   },
+   {
+    "id": "67okq",
+    "title": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
+    "firstSeen": "2026-11-21T05:14:00.000Z",
+    "lastSeen": "2026-11-21T05:14:00.000Z",
+    "count": 1,
+    "sources": 1,
+    "topics": [
+     "rates"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기...",
+      "link": "https://magazine.hankyung.com/business/article/202611197044b",
+      "host": "magazine.hankyung.com",
+      "at": "2026-11-21T05:14:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 58,
+     "spike": 0,
+     "news": false,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -3.7,
+      "unit": "%",
+      "z": -3.7
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 -3.7%(평소의 3.7배)"
+     ]
+    }
+   },
+   {
+    "id": "1iaxqfw",
+    "title": "미국 4년 만에 '빅스텝'?...세계 금융시장 촉각",
+    "firstSeen": "2026-11-21T10:19:00.000Z",
+    "lastSeen": "2026-11-21T10:19:00.000Z",
+    "count": 1,
+    "sources": 1,
+    "topics": [
+     "war",
+     "rates",
+     "energy"
+    ],
+    "critical": [
+     "rates"
+    ],
+    "links": [
+     {
+      "title": "미국 4년 만에 '빅스텝'?...세계 금융시장 촉각",
+      "link": "https://www.ytn.co.kr/_ln/0104_202611211919365911",
+      "host": "ytn.co.kr",
+      "at": "2026-11-21T10:19:00.000Z"
+     }
+    ],
+    "assess": {
+     "level": "watch",
+     "label": "관찰",
+     "score": 58,
+     "spike": 0,
+     "news": false,
+     "reaction": {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "change": -3.7,
+      "unit": "%",
+      "z": -3.7
+     },
+     "why": [
+      "핵심 단어",
+      "S&P 500 -3.7%(평소의 3.7배)"
+     ]
+    }
    }
   ],
   "alerts": [
    {
-    "id": "68lcbv",
-    "title": "마이크론·하닉ADR 13%폭락 … 韓 '검은 금요일' 이어 '블랙 먼데이' 위...",
-    "firstSeen": "2026-11-20T22:22:00.000Z",
-    "lastSeen": "2026-11-21T03:12:00.000Z",
+    "id": "3x5twp",
+    "title": "대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로",
+    "firstSeen": "2026-11-21T08:52:00.000Z",
+    "lastSeen": "2026-11-21T12:23:00.000Z",
     "count": 6,
     "sources": 5,
     "topics": [
-     "market"
+     "market",
+     "policy"
     ],
     "critical": [
-     "market"
+     "policy"
     ],
     "links": [
      {
-      "title": "뉴욕증시 '검은 금요일'…나스닥 5.28% 폭락",
-      "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265",
-      "host": "jeonmae.co.kr",
-      "at": "2026-11-21T03:12:00.000Z"
+      "title": "대만, 23일부터 전일 종가 이하 공매도 전면 금지",
+      "link": "https://www.newsis.com/view/NISX20261121_0003877818",
+      "host": "newsis.com",
+      "at": "2026-11-21T12:23:00.000Z"
      },
      {
-      "title": "\"금요일에 2조 샀는데\" … '검은 금요일' 버틴 개미, 美반도체 폭락에 '...",
-      "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/21/2026112150025.html",
-      "host": "biz.newdaily.co.kr",
-      "at": "2026-11-21T02:28:00.000Z"
+      "title": "대만, 주가 급락에 공매도 규제 강화…23일부터 5개 안정 대책 시행",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886725",
+      "host": "gokorea.kr",
+      "at": "2026-11-21T11:54:00.000Z"
      },
      {
-      "title": "필라델피아 10%↓·엔비디아 14%↓…뉴욕증시도 '검은 금요일'",
-      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856835&plink=ORI&cooper=NAVER",
-      "host": "news.sbs.co.kr",
-      "at": "2026-11-21T02:09:00.000Z"
+      "title": "대만은 공매도 규제 강화하는데…한국도 증시 안정 대책 서둘러야",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=886723",
+      "host": "gokorea.kr",
+      "at": "2026-11-21T11:30:00.000Z"
      },
      {
-      "title": "나스닥 5.3% 폭락…AI 투자 불안에 美증시 ‘검은 금요일’",
-      "link": "https://www.viva100.com/article/20261121500035",
-      "host": "viva100.com",
-      "at": "2026-11-21T01:48:00.000Z"
+      "title": "대만, 증시 급락에 공매도 규제 강화…23일부터 가격 제한",
+      "link": "https://view.asiae.co.kr/article/2026112118562029613",
+      "host": "view.asiae.co.kr",
+      "at": "2026-11-21T09:56:00.000Z"
      }
     ],
     "assess": {
      "level": "urgent",
      "label": "긴급",
-     "score": 76,
-     "spike": 0.6,
+     "score": 77,
+     "spike": 0.8,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
@@ -1669,8 +1640,8 @@
     "assess": {
      "level": "caution",
      "label": "주의",
-     "score": 66,
-     "spike": 0.6,
+     "score": 61,
+     "spike": 0,
      "news": true,
      "reaction": {
       "symbol": "^GSPC",
@@ -1685,121 +1656,9 @@
      ]
     },
     "delivered": false
-   },
-   {
-    "id": "17uq9rx",
-    "title": "코스피 5% 폭락…나경원 “결혼자금 반토막, 은퇴자금 녹아내려”",
-    "firstSeen": "2026-11-20T23:38:00.000Z",
-    "lastSeen": "2026-11-21T06:42:00.000Z",
-    "count": 6,
-    "sources": 6,
-    "topics": [
-     "politics",
-     "market"
-    ],
-    "critical": [],
-    "links": [
-     {
-      "title": "나경원 “코스피 폭락, 정부 믿고 국장 들어온 국민 크게 다쳐”",
-      "link": "https://www.joongang.co.kr/article/25480699",
-      "host": "joongang.co.kr",
-      "at": "2026-11-21T06:42:00.000Z"
-     },
-     {
-      "title": "나경원 \"주가 반토막, 결혼·은퇴자금 사라져…李 정부 책임져야\"",
-      "link": "https://view.asiae.co.kr/article/2026112115060930556",
-      "host": "view.asiae.co.kr",
-      "at": "2026-11-21T06:14:00.000Z"
-     },
-     {
-      "title": "나경원 \"코스피 5% 폭락, 시총 3천460조 증발…李정권, 국민 돈 물어내라...",
-      "link": "https://www.imaeil.com/page/view/2026112113124209923",
-      "host": "imaeil.com",
-      "at": "2026-11-21T04:13:00.000Z"
-     },
-     {
-      "title": "코스피 4900선 붕괴에…나경원 \"李정권, 국민 돈 물어내라\"",
-      "link": "https://www.sisajournal.com/news/articleView.html?idxno=394864",
-      "host": "sisajournal.com",
-      "at": "2026-11-21T01:49:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 60,
-     "spike": 1.7,
-     "news": false,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": -3.7,
-      "unit": "%",
-      "z": -3.7
-     },
-     "why": [
-      "S&P 500 -3.7%(평소의 3.7배)"
-     ]
-    }
-   },
-   {
-    "id": "12nqd8p",
-    "title": "나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없...",
-    "firstSeen": "2026-11-21T00:23:00.000Z",
-    "lastSeen": "2026-11-21T05:33:00.000Z",
-    "count": 5,
-    "sources": 5,
-    "topics": [
-     "politics",
-     "market"
-    ],
-    "critical": [],
-    "links": [
-     {
-      "title": "나경원 “국민 돈 날려놓고 대장동 변호만”…국힘, 증시 폭락에 李정부...",
-      "link": "https://www.munhwa.com/article/11633005?ref=naver",
-      "host": "munhwa.com",
-      "at": "2026-11-21T05:33:00.000Z"
-     },
-     {
-      "title": "나경원 \"주가 폭락인데 李대통령, '대장동 사건' 변호…무책임에 바닥이...",
-      "link": "https://www.newsis.com/view/NISX20261121_0003877688",
-      "host": "newsis.com",
-      "at": "2026-11-21T05:01:00.000Z"
-     },
-     {
-      "title": "나경원 \"주가 바닥치는데, 李는 '대장동 변호'…무책임엔 바닥이 없다\"",
-      "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/21/2026112190041.html",
-      "host": "news.tvchosun.com",
-      "at": "2026-11-21T04:06:00.000Z"
-     },
-     {
-      "title": "나경원 \"국민 자산 무너진 날 李대통령은 대장동 변호…무책임 바닥 없...",
-      "link": "https://www.dailian.co.kr/news/view/1717983/?sc=Naver",
-      "host": "dailian.co.kr",
-      "at": "2026-11-21T01:54:00.000Z"
-     }
-    ],
-    "assess": {
-     "level": "caution",
-     "label": "주의",
-     "score": 59,
-     "spike": 1.7,
-     "news": false,
-     "reaction": {
-      "symbol": "^GSPC",
-      "label": "S&P 500",
-      "change": -3.7,
-      "unit": "%",
-      "z": -3.7
-     },
-     "why": [
-      "S&P 500 -3.7%(평소의 3.7배)"
-     ]
-    }
    }
   ],
-  "text": "[국내 장 마감 브리핑] 2026-11-21 16시\n코스피 -5.21%, 코스닥 -5.71%, 원/달러 +0.33% · 주요 이슈: 증시 급변, 전쟁·지정학, 선거·정치\n· 코스닥 -5.71% — 평소 하루 움직임의 2.1배\n· S&P 500 -3.7% — 평소 하루 움직임의 3.7배\n· 나스닥 -5.28% — 평소 하루 움직임의 3.8배\n· 금 -4.62% — 평소 하루 움직임의 3.4배\n· VIX 변동성 +26.2% — 평소 하루 움직임의 2.2배\n· 미 10년 금리 -14bp — 평소 하루 움직임의 2.6배\n1. [긴급] 마이크론·하닉ADR 13%폭락 … 韓 '검은 금요일' 이어 '블랙 먼데이' 위... (5곳 보도)\n   https://www.jeonmae.co.kr/news/articleView.html?idxno=1314265\n2. 호르무즈 바다에 시뻘건 불기둥…유조선 2척 ‘활활’ (1곳 보도)\n   https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000560980\n3. [주의] 미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비... (2곳 보도)\n   http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi\n4. [주의] 코스피 5% 폭락…나경원 “결혼자금 반토막, 은퇴자금 녹아내려” (6곳 보도)\n   https://www.joongang.co.kr/article/25480699\n5. [주의] 나경원 \"증시 치적 내세우더니 국민 자산 폭락… 정부 무책임에 바닥없... (5곳 보도)\n   https://www.munhwa.com/article/11633005?ref=naver\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+  "text": "[미국 장 브리핑] 2026-11-21 22시\nS&P 500 -3.7%, 나스닥 -5.28%, 원/달러 +0.33% · 주요 이슈: 증시 급변, 규제·정책, 관세·무역\n· 코스닥 -5.71% — 평소 하루 움직임의 2.1배\n· S&P 500 -3.7% — 평소 하루 움직임의 3.7배\n· 나스닥 -5.28% — 평소 하루 움직임의 3.8배\n· 금 -4.62% — 평소 하루 움직임의 3.4배\n· VIX 변동성 +26.2% — 평소 하루 움직임의 2.2배\n· 미 10년 금리 -14bp — 평소 하루 움직임의 2.6배\n1. [긴급] 대만, 23일부터 직전 종가 미만 공매도 금지…증거금 150%로 (5곳 보도)\n   https://www.newsis.com/view/NISX20261121_0003877818\n2. 韓 '블랙 먼데이' 확실시 … 예탁금 80조·코스피 신용 20조 방어선 '붕... (1곳 보도)\n   https://biz.newdaily.co.kr/site/data/html/2026/11/21/2026112150053.html\n3. [주의] 미국 증시 대폭락: 엔비디아·앤트로픽도 막지 못한 기술주 매도세의 비... (2곳 보도)\n   http://www.yonhapnewstv.co.kr/news/MYH20261121152635lYi\n4. 푸틴 보복 경고 하루 만에 공습…우크라 8명 사망, 키이우 교량도 타격 (1곳 보도)\n   https://www.voakorea.com/a/us-russia-ukraine-112026/8226180.html\n5. 빅스텝 인상까지 거론되는 12월 FOMC 회의[한상춘의 국제경제 심층읽기... (1곳 보도)\n   https://magazine.hankyung.com/business/article/202611197044b\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
   "delivered": false
  },
  "problems": []
