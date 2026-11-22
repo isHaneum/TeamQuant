@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T19:27:45.944Z",
+ "updatedAt": "2026-11-22T19:47:24.537Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,25 +119,25 @@
   }
  ],
  "spikes": {
-  "war": -1.4,
-  "politics": -0.6,
+  "war": -1.3,
+  "politics": -0.4,
   "rates": -0.9,
-  "trade": -0.6,
+  "trade": 0.2,
   "fx": -0.1,
   "energy": -0.9,
-  "market": -1.5,
+  "market": -1.2,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 0.1
+  "policy": 0.3
  },
  "rates": {
   "war": {
-   "rate": 0,
+   "rate": 0.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.6,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -147,8 +147,8 @@
    "queries": 3
   },
   "trade": {
-   "rate": 2.7,
-   "saturated": 0,
+   "rate": 3.5,
+   "saturated": 1,
    "queries": 2
   },
   "fx": {
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 0.9,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.7,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   }
@@ -187,7 +187,7 @@
    "id": "49s3cv",
    "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
    "firstSeen": "2026-11-22T09:20:00.000Z",
-   "lastSeen": "2026-11-22T16:00:00.000Z",
+   "lastSeen": "2026-11-22T19:33:00.000Z",
    "count": 19,
    "sources": 18,
    "topics": [
@@ -199,6 +199,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "‘검은 월요일’ 막아라… 정부, 18년만에 증안펀드 가동 준비",
+     "link": "https://www.donga.com/news/Economy/article/all/20261123/135070401/2",
+     "host": "donga.com",
+     "at": "2026-11-22T19:33:00.000Z"
+    },
     {
      "title": "'검은 월요일' 공포에 긴급 대응…18년 만에 증시안정펀드 가동 준비",
      "link": "http://weekly.chosun.com/news/articleView.html?idxno=57365",
@@ -216,19 +222,13 @@
      "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=626900",
      "host": "mdtoday.co.kr",
      "at": "2026-11-22T15:18:00.000Z"
-    },
-    {
-     "title": "미 AI 투매에 '검은 월요일' 오나?...\"증안펀드 가동 준비\"",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611230017237075",
-     "host": "ytn.co.kr",
-     "at": "2026-11-22T15:17:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 76,
-    "spike": 0.1,
+    "score": 77,
+    "spike": 0.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -288,8 +288,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 75,
-    "spike": 0.1,
+    "score": 76,
+    "spike": 0.3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -528,8 +528,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 59,
-    "spike": 0.1,
+    "score": 60,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -801,63 +801,6 @@
    }
   },
   {
-   "id": "bu0ni",
-   "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
-   "firstSeen": "2026-11-21T19:35:00.000Z",
-   "lastSeen": "2026-11-22T08:33:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "politics",
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "아르헨 국가위험도 4개월 새 2.7배 급등",
-     "link": "https://www.mk.co.kr/article/12215664",
-     "host": "mk.co.kr",
-     "at": "2026-11-22T08:33:00.000Z"
-    },
-    {
-     "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347985?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-21T23:44:00.000Z"
-    },
-    {
-     "title": "'친 트럼프' 아르헨티나 미국 중간선거 이후 국가위험도 4개월 새 급등....",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611220655435685",
-     "host": "ytn.co.kr",
-     "at": "2026-11-21T21:55:00.000Z"
-    },
-    {
-     "title": "아르헨 국가위험도 4개월 새 급등…국채금리 미국 국채보다 10%p↑",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719293&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-21T19:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "1ev7bcb",
    "title": "美재무장관 \"엔비디아의 규정준수 여부는 젠슨황 개인사와 별개\"",
    "firstSeen": "2026-11-22T16:58:00.000Z",
@@ -911,9 +854,77 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
+  },
+  {
+   "id": "1svic1a",
+   "title": "美 반도체주 10% 폭락에 '검은 월요일' 우려…코스피 4700까지 밀리나",
+   "firstSeen": "2026-11-21T22:01:00.000Z",
+   "lastSeen": "2026-11-22T18:00:00.000Z",
+   "count": 5,
+   "sources": 4,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나스닥 5.3% ↓… '검은 월요일' 공포, 고개 드는 'AI 회의론'",
+     "link": "https://www.mt.co.kr/world/2026/11/23/2026112219572889784",
+     "host": "mt.co.kr",
+     "at": "2026-11-22T18:00:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 급락에 코스피 '검은 월요일' 우려…정부, 증시 안정 대책 가...",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3759676",
+     "host": "gukjenews.com",
+     "at": "2026-11-22T13:02:00.000Z"
+    },
+    {
+     "title": "나스닥·코스피 5%대 폭락 뒤 비트코인 6,000달러 반등",
+     "link": "http://coinreaders.com/272453",
+     "host": "coinreaders.com",
+     "at": "2026-11-22T11:58:00.000Z"
+    },
+    {
+     "title": "\"검은 월요일\" \"저점서 반등\" 코스피에 쏠린 눈",
+     "link": "https://www.fnnews.com/news/202611221826131484",
+     "host": "fnnews.com",
+     "at": "2026-11-22T09:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-22T19:47:24.537Z",
+   "id": "49s3cv",
+   "level": "urgent",
+   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.donga.com/news/Economy/article/all/20261123/135070401/2",
+   "delivered": false
+  },
   {
    "at": "2026-11-22T18:28:26.696Z",
    "id": "49s3cv",
@@ -1142,20 +1153,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://www.kado.net/news/articleView.html?idxno=2086532",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T13:47:03.532Z",
-   "id": "ulvb87",
-   "level": "caution",
-   "title": "'블랙 먼데이' 공포…韓 금리·美 물가가 증시 향방 가른다",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 3.2σ)",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.peoplewatch.co.kr/article/view/ppw202611220002",
    "delivered": false
   }
  ],
