@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T18:14:58.128Z",
+ "updatedAt": "2026-11-22T18:28:26.696Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,15 +120,15 @@
  ],
  "spikes": {
   "war": -1,
-  "politics": -0.6,
+  "politics": -1,
   "rates": -1.2,
-  "trade": -0.7,
+  "trade": -1,
   "fx": -0.1,
-  "energy": -0.7,
-  "market": -0.7,
+  "energy": -0.9,
+  "market": -1.3,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 0.3
+  "policy": 0.1
  },
  "rates": {
   "war": {
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.6,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 2.5,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.3,
+   "rate": 0,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   }
@@ -227,8 +227,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 77,
-    "spike": 0.3,
+    "score": 76,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -288,8 +288,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 76,
-    "spike": 0.3,
+    "score": 75,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -528,8 +528,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 60,
-    "spike": 0.3,
+    "score": 59,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -900,6 +900,18 @@
  ],
  "alerts": [
   {
+   "at": "2026-11-22T18:28:26.696Z",
+   "id": "49s3cv",
+   "level": "urgent",
+   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://weekly.chosun.com/news/articleView.html?idxno=57365",
+   "delivered": false
+  },
+  {
    "at": "2026-11-22T17:27:06.800Z",
    "id": "49s3cv",
    "level": "urgent",
@@ -1129,19 +1141,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://www.peoplewatch.co.kr/article/view/ppw202611220002",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T13:47:03.532Z",
-   "id": "49s3cv",
-   "level": "urgent",
-   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 3.2σ)",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.ytn.co.kr/_ln/0102_202611222202561005",
    "delivered": false
   }
  ],
