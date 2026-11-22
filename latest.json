@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T09:47:43.143Z",
+ "updatedAt": "2026-11-22T10:11:56.321Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,7 +120,7 @@
  ],
  "spikes": {
   "war": -0.4,
-  "politics": 0.8,
+  "politics": 0.9,
   "rates": 0.7,
   "trade": 0.1,
   "fx": 0.4,
@@ -128,7 +128,7 @@
   "market": 1.2,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 2
+  "policy": 3
  },
  "rates": {
   "war": {
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.8,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -177,57 +177,58 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2.3,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "49s3cv",
-   "title": "[속보] 정부, 국내외 증시 급락에 ‘증시안정펀드’ 가동 준비",
-   "firstSeen": "2026-11-22T09:20:00.000Z",
-   "lastSeen": "2026-11-22T09:44:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "id": "1yuza9l",
+   "title": "[속보] ‘블랙먼데이’ 우려에…정부, 증안펀드 가동 준비 착수",
+   "firstSeen": "2026-11-22T09:22:00.000Z",
+   "lastSeen": "2026-11-22T10:10:00.000Z",
+   "count": 29,
+   "sources": 28,
    "topics": [
     "market",
     "policy"
    ],
    "critical": [
+    "rates",
     "market"
    ],
    "links": [
     {
-     "title": "시장안정펀드 투입 준비·자사주 매입 규제 완화 보도",
-     "link": "https://www.tokenpost.kr/news/breaking/442471",
-     "host": "tokenpost.kr",
-     "at": "2026-11-22T09:44:00.000Z"
+     "title": "정부, 증시 방어 '총력전'…증안펀드·자사주·공매도 대책 가동",
+     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101767",
+     "host": "newsian.co.kr",
+     "at": "2026-11-22T10:10:00.000Z"
     },
     {
-     "title": "‘블랙 먼데이’ 우려에 정부 증안펀드 가동 준비…자사주 매입 제한 완...",
-     "link": "https://www.joongang.co.kr/article/25480840",
-     "host": "joongang.co.kr",
-     "at": "2026-11-22T09:41:00.000Z"
+     "title": "정부·금융당국, 증안펀드 가동 준비 착수…불법 공매도 특별 감시",
+     "link": "https://www.newsway.co.kr/news/view?ud=2026112219042834436",
+     "host": "newsway.co.kr",
+     "at": "2026-11-22T10:08:00.000Z"
     },
     {
-     "title": "정부, 증안펀드 즉시 가동 준비…증시 급락에 긴급 안정책 가동",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886750",
-     "host": "gokorea.kr",
-     "at": "2026-11-22T09:40:00.000Z"
+     "title": "F4 \"시장 상황 따라 증안펀드 바로 가동할 수 있게 준비 착수\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261122190534tOB",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-22T10:06:00.000Z"
     },
     {
-     "title": "정부, 증시 급락에 증안펀드 가동 준비 착수…자사주 매입 규제 완화",
-     "link": "https://www.ajunews.com/view/20261122183043351",
-     "host": "ajunews.com",
-     "at": "2026-11-22T09:38:00.000Z"
+     "title": "'블랙먼데이' 우려에⋯정부 \"증안펀드 가동 준비 착수\"",
+     "link": "http://www.inews24.com/view/2029007",
+     "host": "inews24.com",
+     "at": "2026-11-22T10:05:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 90,
-    "spike": 2,
+    "score": 99,
+    "spike": 3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -238,76 +239,18 @@
     },
     "why": [
      "핵심 단어",
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
   {
-   "id": "1yuza9l",
-   "title": "[속보] 블랙먼데이 공포감에 금융당국 비상…F4 “증안펀드 가동 준비·...",
-   "firstSeen": "2026-11-22T09:24:00.000Z",
-   "lastSeen": "2026-11-22T09:46:00.000Z",
-   "count": 9,
-   "sources": 8,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "정부, 미국발 증시 불안에 시장안정책 가동…증안펀드 준비 착수",
-     "link": "https://www.dailian.co.kr/news/view/1718156/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-22T09:46:00.000Z"
-    },
-    {
-     "title": "F4 \"시장 상황 따라 증안펀드 바로 가동하도록 준비 착수\"",
-     "link": "https://www.etoday.co.kr/news/view/2651358",
-     "host": "etoday.co.kr",
-     "at": "2026-11-22T09:46:00.000Z"
-    },
-    {
-     "title": "정부·금융당국, 증안펀드 가동 준비 착수…불법 공매도 집중감시",
-     "link": "https://www.newsis.com/view/NISX20261122_0003878308",
-     "host": "newsis.com",
-     "at": "2026-11-22T09:44:00.000Z"
-    },
-    {
-     "title": "블랙먼데이 공포에 당국 비상…\"증안펀드 가동 준비 착수\"(종합)",
-     "link": "https://view.asiae.co.kr/article/2026112218443070368",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-22T09:44:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 90,
-    "spike": 2,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "12kxlmw",
-   "title": "코스피 급락 속 '코스닥 활성화'?…대만은 규제 강화, '검은 월요일' 또...",
-   "firstSeen": "2026-11-21T21:01:00.000Z",
-   "lastSeen": "2026-11-22T09:08:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "id": "1cvy67y",
+   "title": "대만, 증시 폭락에 ‘공매도 규제’ 잇단 고삐⋯11년 만의 초강수 [종합...",
+   "firstSeen": "2026-11-21T11:30:00.000Z",
+   "lastSeen": "2026-11-22T10:06:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "market",
     "policy"
@@ -316,6 +259,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "\"대만처럼 공매도 막아달라\" 정부 대책에 개미들 불만…금지 청원 5만명...",
+     "link": "https://www.imaeil.com/page/view/2026112219050866741",
+     "host": "imaeil.com",
+     "at": "2026-11-22T10:06:00.000Z"
+    },
     {
      "title": "대만, 한주 새 증시 17.5% 폭락에 전 종목 공매도 가격 제한 시행",
      "link": "https://www.hani.co.kr/arti/international/china/1288527.html",
@@ -333,19 +282,13 @@
      "link": "https://www.joongang.co.kr/article/25480812",
      "host": "joongang.co.kr",
      "at": "2026-11-22T06:55:00.000Z"
-    },
-    {
-     "title": "대만, 증시 폭락에 ‘공매도 규제’ 잇단 고삐⋯11년 만의 초강수 [종합...",
-     "link": "https://www.etoday.co.kr/news/view/2651326",
-     "host": "etoday.co.kr",
-     "at": "2026-11-22T05:54:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 87,
-    "spike": 2,
+    "score": 94,
+    "spike": 3,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -356,17 +299,19 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
+     "기사 급증(평소 대비 3σ)",
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
   {
    "id": "ntlrqk",
-   "title": "이형일, 오늘 '긴급 F4회의' 소집…AI 투매發 증시 급락 점검",
+   "title": "경제부총리 오늘 ‘긴급 F4회의’ 소집…국내 증시 안정 대책 논의",
    "firstSeen": "2026-11-22T01:48:00.000Z",
    "lastSeen": "2026-11-22T09:20:00.000Z",
-   "count": 13,
-   "sources": 13,
+   "count": 12,
+   "sources": 12,
    "topics": [
     "market"
    ],
@@ -423,46 +368,46 @@
    "id": "12cpt9v",
    "title": "[속보] 정점식 \"내일 블랙 먼데이 우려…정부, 증시 폭락 대비책 마련해...",
    "firstSeen": "2026-11-22T02:07:00.000Z",
-   "lastSeen": "2026-11-22T09:37:00.000Z",
-   "count": 10,
-   "sources": 10,
+   "lastSeen": "2026-11-22T05:28:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
-    "rates",
     "market"
    ],
    "critical": [
-    "market"
+    "market",
+    "policy"
    ],
    "links": [
     {
-     "title": "‘블랙 먼데이’ 공포…증시안정펀드, 18년 만 가동 검토",
-     "link": "https://www.dt.co.kr/article/12096570?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-22T09:37:00.000Z"
+     "title": "국힘 정점식 “정부, 블랙먼데이 가능성에 대응조치 준비해야”",
+     "link": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160285224379998",
+     "host": "siminilbo.co.kr",
+     "at": "2026-11-22T05:28:00.000Z"
     },
     {
-     "title": "‘내일 장 어떡하나’…AI 악재에 치솟는 ‘블랙 먼데이’ 공포",
-     "link": "https://biz.chosun.com/stock/stock_general/2026/11/22/Z4BIPOLB5VD2XMGUDL57ZAJY64/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-22T09:11:00.000Z"
+     "title": "정점식 \"정부, 블랙먼데이 가능성 대비 긴급조치 준비해야\"",
+     "link": "https://imnews.imbc.com/news/2026/politics/article/6867599_36911.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-22T04:59:00.000Z"
     },
     {
-     "title": "'블랙 먼데이' 공포…韓 금리·美 물가가 증시 향방 가른다",
-     "link": "https://www.mt.co.kr/stock/2026/11/22/2026112217351612948",
-     "host": "mt.co.kr",
-     "at": "2026-11-22T08:41:00.000Z"
+     "title": "국힘 정점식 \"블랙먼데이 우려..정부, 23일 개장 전 증시 안정책 마련해...",
+     "link": "https://kpenews.com/View.aspx?No=4323685",
+     "host": "kpenews.com",
+     "at": "2026-11-22T04:30:00.000Z"
     },
     {
-     "title": "美 증시 폭락에 '블랙 먼데이' 공포…국내 증시도 비상",
-     "link": "http://www.srtimes.kr/news/articleView.html?idxno=218295",
-     "host": "srtimes.kr",
-     "at": "2026-11-22T07:58:00.000Z"
+     "title": "정점식, 23일 '블랙 먼데이' 경고…정부에 긴급 대응 촉구",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3759418",
+     "host": "gukjenews.com",
+     "at": "2026-11-22T03:36:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 85,
+    "score": 83,
     "spike": 1.2,
     "news": true,
     "reaction": {
@@ -483,47 +428,39 @@
    "id": "1wh79lc",
    "title": "정점식 “‘이재명 버블’ 증시 심상찮다”…정부에 블랙먼데이 대응책...",
    "firstSeen": "2026-11-22T00:22:00.000Z",
-   "lastSeen": "2026-11-22T09:32:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-22T03:30:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "politics",
     "market"
    ],
    "critical": [
-    "market",
-    "policy"
+    "market"
    ],
    "links": [
     {
-     "title": "정점식 \"내일 더 심한 '블랙먼데이' 우려. 역대급 버블 붕괴\"",
-     "link": "https://www.viewsnnews.com/article?q=239857",
-     "host": "viewsnnews.com",
-     "at": "2026-11-22T09:32:00.000Z"
+     "title": "월요일 코스피 폭락하나... 국민의힘 경고 “‘이재명 버블’ 붕괴... 더...",
+     "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284770",
+     "host": "womennews.co.kr",
+     "at": "2026-11-22T03:30:00.000Z"
     },
     {
-     "title": "국힘 정점식 “정부, 블랙먼데이 가능성에 대응조치 준비해야”",
-     "link": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160285224379998",
-     "host": "siminilbo.co.kr",
-     "at": "2026-11-22T05:28:00.000Z"
+     "title": "국힘 \"'이재명 버블' 붕괴...정부, 블랙 먼데이 대비해야\"",
+     "link": "https://www.jasm.co.kr/news/view/326063/?sc=Naver",
+     "host": "jasm.co.kr",
+     "at": "2026-11-22T02:50:00.000Z"
     },
     {
-     "title": "정점식 \"정부, 블랙먼데이 가능성 대비 긴급조치 준비해야\"",
-     "link": "https://imnews.imbc.com/news/2026/politics/article/6867599_36911.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-22T04:59:00.000Z"
-    },
-    {
-     "title": "정점식 \"내일 '블랙먼데이' 우려…정부, 긴급 대응책 준비해야\"",
-     "link": "https://view.asiae.co.kr/article/2026112211425100847",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-22T03:12:00.000Z"
+     "title": "정점식 “‘이재명 버블’ 증시 심상찮다”…정부에 블랙먼데이 대응책...",
+     "link": "https://www.mk.co.kr/article/12215451",
+     "host": "mk.co.kr",
+     "at": "2026-11-22T02:24:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 80,
+    "score": 74,
     "spike": 1.2,
     "news": true,
     "reaction": {
@@ -537,6 +474,111 @@
      "핵심 단어",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
+   "id": "ulvb87",
+   "title": "'블랙 먼데이' 공포…韓 금리·美 물가가 증시 향방 가른다",
+   "firstSeen": "2026-11-22T00:26:00.000Z",
+   "lastSeen": "2026-11-22T10:02:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "rates"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "증안펀드 18년 만 가동, 다만 아직은 '준비' … ‘블랙 먼데이’ 공포에...",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/22/2026112250095.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-22T10:02:00.000Z"
+    },
+    {
+     "title": "“내일 블랙 먼데이 막아라”…18년만에 증안펀드 가동 준비",
+     "link": "https://www.joongang.co.kr/article/25480840",
+     "host": "joongang.co.kr",
+     "at": "2026-11-22T09:41:00.000Z"
+    },
+    {
+     "title": "‘내일 장 어떡하나’…AI 악재에 치솟는 ‘블랙 먼데이’ 공포",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/22/Z4BIPOLB5VD2XMGUDL57ZAJY64/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-22T09:11:00.000Z"
+    },
+    {
+     "title": "'블랙 먼데이' 공포…韓 금리·美 물가가 증시 향방 가른다",
+     "link": "https://www.mt.co.kr/stock/2026/11/22/2026112217351612948",
+     "host": "mt.co.kr",
+     "at": "2026-11-22T08:41:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 73,
+    "spike": 0.7,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
+   "id": "93zcqp",
+   "title": "“증시 누가 살리나”…AI株 폭락에 월가 패닉, 코스피 ‘비상’ [머니...",
+   "firstSeen": "2026-11-22T02:38:00.000Z",
+   "lastSeen": "2026-11-22T07:58:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "美 증시 폭락에 '블랙 먼데이' 공포…국내 증시도 비상",
+     "link": "http://www.srtimes.kr/news/articleView.html?idxno=218295",
+     "host": "srtimes.kr",
+     "at": "2026-11-22T07:58:00.000Z"
+    },
+    {
+     "title": "“증시 누가 살리나”…AI株 폭락에 월가 패닉, 코스피 ‘비상’ [머니...",
+     "link": "https://www.ekn.kr/web/view.php?key=20261122026192953",
+     "host": "ekn.kr",
+     "at": "2026-11-22T02:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 71,
+    "spike": 1.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
@@ -648,46 +690,6 @@
      "link": "https://www.pennmike.com/news/articleView.html?idxno=132465",
      "host": "pennmike.com",
      "at": "2026-11-22T08:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 68,
-    "spike": 1.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "wo7t1x",
-   "title": "미국 증시 폭락에 ‘블랙먼데이’ 우려…정부 긴급 대응 나서",
-   "firstSeen": "2026-11-22T01:00:00.000Z",
-   "lastSeen": "2026-11-22T08:40:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "미국 증시 폭락에 ‘블랙먼데이’ 우려…정부 긴급 대응 나서",
-     "link": "https://ilyo.co.kr/?ac=article_view&entry_id=513753",
-     "host": "ilyo.co.kr",
-     "at": "2026-11-22T08:40:00.000Z"
     }
    ],
    "assess": {
@@ -838,6 +840,46 @@
    }
   },
   {
+   "id": "1gsb3hm",
+   "title": "커지는 블랙먼데이 공포...\"정부, 대책 마련해야\"",
+   "firstSeen": "2026-11-22T02:12:00.000Z",
+   "lastSeen": "2026-11-22T02:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "커지는 블랙먼데이 공포...\"정부, 대책 마련해야\"",
+     "link": "https://magazine.hankyung.com/business/article/202611222062b",
+     "host": "magazine.hankyung.com",
+     "at": "2026-11-22T02:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 65,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
    "id": "ulvb87",
    "title": "극에 달한 '블랙먼데이' 공포…개미들 불안에 정부도 긴급 대응(종합)",
    "firstSeen": "2026-11-22T00:26:00.000Z",
@@ -889,49 +931,47 @@
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
-  },
-  {
-   "id": "1gsb3hm",
-   "title": "커지는 블랙먼데이 공포...\"정부, 대책 마련해야\"",
-   "firstSeen": "2026-11-22T02:12:00.000Z",
-   "lastSeen": "2026-11-22T02:12:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "커지는 블랙먼데이 공포...\"정부, 대책 마련해야\"",
-     "link": "https://magazine.hankyung.com/business/article/202611222062b",
-     "host": "magazine.hankyung.com",
-     "at": "2026-11-22T02:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 64,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-22T10:11:56.321Z",
+   "id": "103b4q0",
+   "level": "caution",
+   "title": "반도체 실적 기대에도 외국인 매도 지속…다음 주 코스피 반등 시험대",
+   "why": [
+    "기사 급증(평소 대비 3σ)",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.mk.co.kr/article/12215572",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T10:11:56.321Z",
+   "id": "93zcqp",
+   "level": "caution",
+   "title": "“증시 누가 살리나”…AI株 폭락에 월가 패닉, 코스피 ‘비상’ [머니...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://www.srtimes.kr/news/articleView.html?idxno=218295",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T10:11:56.321Z",
+   "id": "1yuza9l",
+   "level": "urgent",
+   "title": "[속보] ‘블랙먼데이’ 우려에…정부, 증안펀드 가동 준비 착수",
+   "why": [
+    "핵심 단어",
+    "기사 급증(평소 대비 3σ)",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.newsian.co.kr/news/articleView.html?idxno=101767",
+   "delivered": false
+  },
   {
    "at": "2026-11-22T09:47:43.143Z",
    "id": "12kxlmw",
@@ -1141,43 +1181,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://news.tf.co.kr/read/ptoday/2391910.htm",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T07:48:00.420Z",
-   "id": "cvpw3y",
-   "level": "caution",
-   "title": "다시 확산되는 'AI 투자 불안'",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.peoplewatch.co.kr/article/view/ppw202611220001",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T07:48:00.420Z",
-   "id": "ntlrqk",
-   "level": "urgent",
-   "title": "이형일, 오늘 '긴급 F4회의' 소집…AI 투매發 증시 급락 점검",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://biz.heraldcorp.com/article/10945153?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T07:48:00.420Z",
-   "id": "12cpt9v",
-   "level": "caution",
-   "title": "[속보] 정점식 \"내일 블랙 먼데이 우려…정부, 증시 폭락 대비책 마련해...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://kpenews.com/View.aspx?No=4323685",
    "delivered": false
   }
  ],
