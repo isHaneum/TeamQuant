@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T15:11:35.183Z",
+ "updatedAt": "2026-11-22T15:27:02.215Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,15 +120,15 @@
  ],
  "spikes": {
   "war": -1.1,
-  "politics": -0.9,
+  "politics": -0.4,
   "rates": -1.2,
   "trade": 0,
   "fx": -0.1,
-  "energy": -0.7,
+  "energy": -0.5,
   "market": 0.9,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 1.2
+  "policy": 0.9
  },
  "rates": {
   "war": {
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.4,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   }
@@ -187,8 +187,8 @@
    "id": "49s3cv",
    "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
    "firstSeen": "2026-11-22T09:20:00.000Z",
-   "lastSeen": "2026-11-22T15:00:00.000Z",
-   "count": 26,
+   "lastSeen": "2026-11-22T15:18:00.000Z",
+   "count": 27,
    "sources": 24,
    "topics": [
     "market",
@@ -200,6 +200,18 @@
    ],
    "links": [
     {
+     "title": "정부, 증안펀드 가동 준비 착수…시장상황 따라 즉시 투입",
+     "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=626900",
+     "host": "mdtoday.co.kr",
+     "at": "2026-11-22T15:18:00.000Z"
+    },
+    {
+     "title": "미 AI 투매에 '검은 월요일' 오나?...\"증안펀드 가동 준비\"",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611230017237075",
+     "host": "ytn.co.kr",
+     "at": "2026-11-22T15:17:00.000Z"
+    },
+    {
      "title": "[사설] 증시 급락에 증안펀드 준비…단계별 위기 대응 빈틈 없어야",
      "link": "https://www.sedaily.com/article/20117478?ref=naver",
      "host": "sedaily.com",
@@ -210,25 +222,13 @@
      "link": "https://www.newscj.com/news/articleView.html?idxno=3451144",
      "host": "newscj.com",
      "at": "2026-11-22T14:56:00.000Z"
-    },
-    {
-     "title": "블랙먼데이 우려 높아지자, 정부 증안펀드 가동 준비 착수",
-     "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611222213458150078",
-     "host": "dnews.co.kr",
-     "at": "2026-11-22T13:20:00.000Z"
-    },
-    {
-     "title": "F4, '블랙먼데이' 우려에 '증안펀드' 준비 착수...18년만 가동되나",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=783823",
-     "host": "slist.kr",
-     "at": "2026-11-22T13:08:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 85,
-    "spike": 1.2,
+    "score": 82,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -288,8 +288,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 84,
-    "spike": 1.2,
+    "score": 81,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -360,61 +360,7 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
-   "id": "101x542",
-   "title": "AI주 투매에 F4 긴급 소집…증시 안정책 논의",
-   "firstSeen": "2026-11-22T05:44:00.000Z",
-   "lastSeen": "2026-11-22T09:20:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "코스피·코스닥 5% 동반 급락… 정부, 월요일 개장 앞두고 긴급 F4 소집",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302370",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-22T09:20:00.000Z"
-    },
-    {
-     "title": "“월요일 주식앱 도저히 못열어” 블랙먼데이 공포에 긴급 F4 소집…국...",
-     "link": "https://biz.heraldcorp.com/article/10945153?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-22T06:36:00.000Z"
-    },
-    {
-     "title": "AI주 투매에 F4 긴급 소집…증시 안정책 논의",
-     "link": "https://www.dt.co.kr/article/12096528?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-22T05:49:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 71,
-    "spike": 0.9,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
@@ -443,6 +389,52 @@
      "link": "https://www.jasm.co.kr/news/view/326063/?sc=Naver",
      "host": "jasm.co.kr",
      "at": "2026-11-22T02:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 68,
+    "spike": 0.9,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "4zm6qs",
+   "title": "“월요일 주식앱 도저히 못열어” 블랙먼데이 공포에 긴급 F4 소집…국...",
+   "firstSeen": "2026-11-22T06:36:00.000Z",
+   "lastSeen": "2026-11-22T09:20:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피·코스닥 5% 동반 급락… 정부, 월요일 개장 앞두고 긴급 F4 소집",
+     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302370",
+     "host": "financialpost.co.kr",
+     "at": "2026-11-22T09:20:00.000Z"
+    },
+    {
+     "title": "“월요일 주식앱 도저히 못열어” 블랙먼데이 공포에 긴급 F4 소집…국...",
+     "link": "https://biz.heraldcorp.com/article/10945153?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-22T06:36:00.000Z"
     }
    ],
    "assess": {
@@ -850,43 +842,47 @@
    }
   },
   {
-   "id": "103b4q0",
-   "title": "반도체 실적 기대에도 외국인 매도 지속…다음 주 코스피 반등 시험대",
-   "firstSeen": "2026-11-21T23:00:00.000Z",
-   "lastSeen": "2026-11-22T07:31:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1g2oqbl",
+   "title": "미국 연말 항공대란 오나…예산협상 교착에 셧다운 우려",
+   "firstSeen": "2026-11-22T06:55:00.000Z",
+   "lastSeen": "2026-11-22T10:20:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
-    "war",
-    "trade",
-    "policy"
+    "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[동여의도 위클리] AI 서버 수요 지속 시험대 … 휴렛팩커드·델 실적 주...",
-     "link": "https://www.mk.co.kr/article/12215572",
-     "host": "mk.co.kr",
-     "at": "2026-11-22T07:31:00.000Z"
+     "title": "미국 연말 항공대란 오나…예산협상 교착에 셧다운 우려",
+     "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=news_board&wr_id=57595",
+     "host": "ifs.or.kr",
+     "at": "2026-11-22T10:20:00.000Z"
     },
     {
-     "title": "외국인 매도 85.6%, 삼전·하이닉스 직격…코스피 시험대",
-     "link": "http://coinreaders.com/272405",
-     "host": "coinreaders.com",
-     "at": "2026-11-22T05:28:00.000Z"
+     "title": "미국 연말 항공대란 어쩌나…예산 협상 교착에 셧다운 가능성",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5232272",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-22T08:17:00.000Z"
     },
     {
-     "title": "반도체 실적 기대에도 외국인 매도 지속…다음 주 코스피 반등 시험대",
-     "link": "https://www.mediapen.com/news/view/1139049",
-     "host": "mediapen.com",
-     "at": "2026-11-22T00:38:00.000Z"
+     "title": "美예산안 교착에 또 셧다운 그림자…연말 성수기 '항공대란' 우려",
+     "link": "https://www.news1.kr/world/usa-canada/6362072",
+     "host": "news1.kr",
+     "at": "2026-11-22T08:12:00.000Z"
+    },
+    {
+     "title": "크리스마스·연말 휴가 코앞인데…美 항공대란 오나 “재앙 될 수도”",
+     "link": "https://biz.heraldcorp.com/article/10945180?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-22T07:34:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 1.2,
+    "score": 47,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
