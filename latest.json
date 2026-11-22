@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T21:27:06.529Z",
+ "updatedAt": "2026-11-22T21:47:52.542Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.4,
+  "war": 0,
   "politics": 1.9,
-  "rates": 0.3,
+  "rates": 0.5,
   "trade": 1,
   "fx": -0.1,
   "energy": -0.3,
-  "market": 0.9,
+  "market": 1.1,
   "credit": 0.1,
   "disaster": 0,
   "policy": 1.2
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
@@ -142,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 2.4,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
@@ -162,8 +162,8 @@
    "queries": 1
   },
   "market": {
-   "rate": 4.4,
-   "saturated": 1,
+   "rate": 4.7,
+   "saturated": 2,
    "queries": 3
   },
   "credit": {
@@ -225,8 +225,8 @@
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
+    "level": "caution",
+    "label": "주의",
     "score": 85,
     "spike": 1.2,
     "news": true,
@@ -307,8 +307,8 @@
    "title": "美 증시 폭락에 '블랙 먼데이' 공포…국내 증시도 비상",
    "firstSeen": "2026-11-22T02:07:00.000Z",
    "lastSeen": "2026-11-22T20:30:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "market",
     "policy"
@@ -336,16 +336,16 @@
      "at": "2026-11-22T11:48:00.000Z"
     },
     {
-     "title": "美 증시 폭락에 '블랙 먼데이' 공포…국내 증시도 비상",
-     "link": "http://www.srtimes.kr/news/articleView.html?idxno=218295",
-     "host": "srtimes.kr",
-     "at": "2026-11-22T07:58:00.000Z"
+     "title": "‘오늘 장 어떡하나’…AI 악재에 치솟는 ‘블랙 먼데이’ 공포",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/22/Z4BIPOLB5VD2XMGUDL57ZAJY64/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-22T09:11:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 77,
+    "score": 80,
     "spike": 1.2,
     "news": true,
     "reaction": {
@@ -365,9 +365,9 @@
    "id": "pdr7es",
    "title": "'블랙먼데이' 우려 긴급 F4회의, 18년 만에 증시안정펀드 가동되나",
    "firstSeen": "2026-11-22T20:14:00.000Z",
-   "lastSeen": "2026-11-22T21:24:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "lastSeen": "2026-11-22T21:30:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "market"
    ],
@@ -375,6 +375,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "韓증시 '최후 방파제' 증안펀드 준비…18년 만에 재가동되나[간추린 주...",
+     "link": "https://www.newsis.com/view/NISX20261122_0003878358",
+     "host": "newsis.com",
+     "at": "2026-11-22T21:30:00.000Z"
+    },
     {
      "title": "커진 '검은 월요일' 공포에 18년 만에 증안펀드 꺼낼까?",
      "link": "https://biz.sbs.co.kr/article_hub/20000348058?division=NAVER",
@@ -392,19 +398,13 @@
      "link": "https://www.segye.com/newsView/20261122510331?OutUrl=naver",
      "host": "segye.com",
      "at": "2026-11-22T21:03:00.000Z"
-    },
-    {
-     "title": "'블랙먼데이' 우려 긴급 F4회의, 18년 만에 증시안정펀드 가동되나",
-     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643572",
-     "host": "seoulfn.com",
-     "at": "2026-11-22T20:14:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 74,
-    "spike": 0.9,
+    "level": "urgent",
+    "label": "긴급",
+    "score": 79,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -415,8 +415,7 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
@@ -451,8 +450,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 68,
-    "spike": 0.9,
+    "score": 70,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -497,8 +496,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 68,
-    "spike": 0.9,
+    "score": 70,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -577,8 +576,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 65,
-    "spike": 0.9,
+    "score": 67,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -617,8 +616,49 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 65,
-    "spike": 0.9,
+    "score": 67,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1elqt3e",
+   "title": "[뉴욕 주간전망] PCE 물가지표 관건...12월 빅스텝 경계심 유의",
+   "firstSeen": "2026-11-22T21:40:00.000Z",
+   "lastSeen": "2026-11-22T21:40:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "[뉴욕 주간전망] PCE 물가지표 관건...12월 빅스텝 경계심 유의",
+     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147341",
+     "host": "opinionnews.co.kr",
+     "at": "2026-11-22T21:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 67,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -689,61 +729,6 @@
    }
   },
   {
-   "id": "1jtrpkx",
-   "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
-   "firstSeen": "2026-11-22T16:16:00.000Z",
-   "lastSeen": "2026-11-22T21:26:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "‘월가 강세론자’ 야데니도 전망 하향⋯S&P500 연말 목표 7900→7500",
-     "link": "https://www.etoday.co.kr/news/view/2651382",
-     "host": "etoday.co.kr",
-     "at": "2026-11-22T21:26:00.000Z"
-    },
-    {
-     "title": "월가 강세론자 야데니, S&P500 연말 목표 7900→7500 하향",
-     "link": "https://www.news1.kr/world/usa-canada/6362182",
-     "host": "news1.kr",
-     "at": "2026-11-22T20:41:00.000Z"
-    },
-    {
-     "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611230508302098",
-     "host": "ytn.co.kr",
-     "at": "2026-11-22T20:08:00.000Z"
-    },
-    {
-     "title": "야데니, 연말 S&P500 전망치 7,500으로 하향",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261123045902ira",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-22T19:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 60,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "1lm3awt",
    "title": "[韓 블랙 먼데이 전운] 美 증시 덮친 긴축 공포…금리·환율도 코스피에...",
    "firstSeen": "2026-11-22T09:02:00.000Z",
@@ -768,8 +753,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 60,
-    "spike": 0.3,
+    "score": 62,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -808,8 +793,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 60,
-    "spike": 0.3,
+    "score": 62,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -820,6 +805,61 @@
     },
     "why": [
      "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1jtrpkx",
+   "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
+   "firstSeen": "2026-11-22T16:16:00.000Z",
+   "lastSeen": "2026-11-22T21:36:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"더 큰 매수 기회\"…반도체 쇼크에 S&P500 눈높이 낮춘 월가 거물",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01239846645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-22T21:36:00.000Z"
+    },
+    {
+     "title": "에드 야데니의 S&P500 전망 하향, 그러나 매수 기회는 커진다",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886773",
+     "host": "gokorea.kr",
+     "at": "2026-11-22T21:32:00.000Z"
+    },
+    {
+     "title": "'강세론자' 야데니, 연말 S&P500 전망 7900→7500 하향",
+     "link": "https://www.mt.co.kr/world/2026/11/23/2026112305474854483",
+     "host": "mt.co.kr",
+     "at": "2026-11-22T21:31:00.000Z"
+    },
+    {
+     "title": "‘월가 강세론자’ 야데니도 전망 하향⋯S&P500 연말 목표 7900→7500",
+     "link": "https://www.etoday.co.kr/news/view/2651382",
+     "host": "etoday.co.kr",
+     "at": "2026-11-22T21:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 61,
+    "spike": 1.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -863,47 +903,21 @@
      "금 -4.62%(평소의 3.4배)"
     ]
    }
-  },
-  {
-   "id": "otka8j",
-   "title": "블랙먼데이 우려에 '증안펀드' 시선...전문가들 '10.7조 효용성' 촉각",
-   "firstSeen": "2026-11-22T17:16:00.000Z",
-   "lastSeen": "2026-11-22T17:16:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "블랙먼데이 우려에 '증안펀드' 시선...전문가들 '10.7조 효용성' 촉각",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302377",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-22T17:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-22T21:47:52.542Z",
+   "id": "pdr7es",
+   "level": "urgent",
+   "title": "'블랙먼데이' 우려 긴급 F4회의, 18년 만에 증시안정펀드 가동되나",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.newsis.com/view/NISX20261122_0003878358",
+   "delivered": false
+  },
   {
    "at": "2026-11-22T20:47:46.042Z",
    "id": "49s3cv",
@@ -1131,18 +1145,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.mk.co.kr/article/12215572",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T13:47:03.532Z",
-   "id": "1wh79lc",
-   "level": "caution",
-   "title": "국힘 \"'이재명 버블' 붕괴...정부, 블랙 먼데이 대비해야\"",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284770",
    "delivered": false
   }
  ],
