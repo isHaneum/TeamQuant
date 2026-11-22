@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T08:16:41.328Z",
+ "updatedAt": "2026-11-22T08:28:21.031Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,8 +119,8 @@
   }
  ],
  "spikes": {
-  "war": -0.4,
-  "politics": 0.6,
+  "war": -0.3,
+  "politics": 0.3,
   "rates": 0.1,
   "trade": 0.4,
   "fx": 0.4,
@@ -128,16 +128,16 @@
   "market": 1.1,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 2
+  "policy": 1.7
  },
  "rates": {
   "war": {
-   "rate": 0.9,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.6,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   }
@@ -227,8 +227,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 91,
-    "spike": 2,
+    "score": 89,
+    "spike": 1.7,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -247,7 +247,7 @@
    "id": "ntlrqk",
    "title": "이형일, 오늘 '긴급 F4회의' 소집…AI 투매發 증시 급락 점검",
    "firstSeen": "2026-11-22T01:48:00.000Z",
-   "lastSeen": "2026-11-22T06:36:00.000Z",
+   "lastSeen": "2026-11-22T08:28:00.000Z",
    "count": 10,
    "sources": 10,
    "topics": [
@@ -257,6 +257,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "美 증시 폭락에 긴급 F4회의…증시 안정책 나오나",
+     "link": "https://www.ajunews.com/view/20261122172305194",
+     "host": "ajunews.com",
+     "at": "2026-11-22T08:28:00.000Z"
+    },
     {
      "title": "“월요일 주식앱 도저히 못열어” 블랙먼데이 공포에 긴급 F4 소집…국...",
      "link": "https://biz.heraldcorp.com/article/10945153?ref=naver",
@@ -274,12 +280,6 @@
      "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/22/2026112250076.html",
      "host": "biz.newdaily.co.kr",
      "at": "2026-11-22T05:44:00.000Z"
-    },
-    {
-     "title": "이형일 부총리, 긴급 F4 회의 소집…美 반도체 폭락에 시장 점검",
-     "link": "https://www.news1.kr/economy/trend/6361977",
-     "host": "news1.kr",
-     "at": "2026-11-22T05:30:00.000Z"
     }
    ],
    "assess": {
@@ -727,8 +727,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 63,
-    "spike": 0.6,
+    "score": 60,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -785,8 +785,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 2,
+    "score": 56,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -857,51 +857,6 @@
    }
   },
   {
-   "id": "eolycu",
-   "title": "이억원 위원장, ECB와 은행감독협력 MOU 최종 합의…연내 체결",
-   "firstSeen": "2026-11-22T03:02:00.000Z",
-   "lastSeen": "2026-11-22T03:50:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics",
-    "credit",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "이억원, ECB와 은행감독 협력 MOU 최종 합의…연내 서명 추진",
-     "link": "https://www.dailian.co.kr/news/view/1718112/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-22T03:50:00.000Z"
-    },
-    {
-     "title": "이억원 위원장, ECB와 은행감독협력 MOU 최종 합의…연내 체결",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445885",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-22T03:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 52,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "bu0ni",
    "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
    "firstSeen": "2026-11-21T19:35:00.000Z",
@@ -945,6 +900,51 @@
     "label": "관찰",
     "score": 51,
     "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "eolycu",
+   "title": "이억원 위원장, ECB와 은행감독협력 MOU 최종 합의…연내 체결",
+   "firstSeen": "2026-11-22T03:02:00.000Z",
+   "lastSeen": "2026-11-22T03:50:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "credit",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "이억원, ECB와 은행감독 협력 MOU 최종 합의…연내 서명 추진",
+     "link": "https://www.dailian.co.kr/news/view/1718112/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-22T03:50:00.000Z"
+    },
+    {
+     "title": "이억원 위원장, ECB와 은행감독협력 MOU 최종 합의…연내 체결",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4445885",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-22T03:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
