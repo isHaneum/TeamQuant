@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T13:27:01.824Z",
+ "updatedAt": "2026-11-22T13:47:03.532Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": -1.1,
-  "politics": -0.4,
-  "rates": -0.9,
+  "war": -1.3,
+  "politics": -0.5,
+  "rates": -1,
   "trade": 0.1,
   "fx": -0.1,
   "energy": -0.9,
   "market": 0.9,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 3.9
+  "policy": 3.2
  },
  "rates": {
   "war": {
-   "rate": 0.2,
+   "rate": 0.1,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.8,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.8,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 5,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 1
   }
@@ -188,8 +188,8 @@
    "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
    "firstSeen": "2026-11-22T09:20:00.000Z",
    "lastSeen": "2026-11-22T13:02:00.000Z",
-   "count": 26,
-   "sources": 24,
+   "count": 25,
+   "sources": 23,
    "topics": [
     "market",
     "policy"
@@ -205,12 +205,6 @@
      "at": "2026-11-22T13:02:00.000Z"
     },
     {
-     "title": "\"검은 월요일 막아라\" 정부 긴급 대응…'증안펀드' 준비",
-     "link": "http://www.babytimes.co.kr/news/articleView.html?idxno=74741",
-     "host": "babytimes.co.kr",
-     "at": "2026-11-22T12:32:00.000Z"
-    },
-    {
      "title": "美 증시 급락에 '증안펀드' 가동 준비…불법 공매도 특별감시",
      "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=903965",
      "host": "newsworks.co.kr",
@@ -221,13 +215,19 @@
      "link": "https://www.kukinews.com/article/view/kuk202611220029",
      "host": "kukinews.com",
      "at": "2026-11-22T12:18:00.000Z"
+    },
+    {
+     "title": "정부 증안펀드 가동 준비…미국 증시 급락에 F4 긴급회의, 24일부터 자사...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629597",
+     "host": "cbci.co.kr",
+     "at": "2026-11-22T12:08:00.000Z"
     }
    ],
    "assess": {
     "level": "urgent",
     "label": "긴급",
     "score": 100,
-    "spike": 3.9,
+    "spike": 3.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -238,7 +238,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.9σ)",
+     "기사 급증(평소 대비 3.2σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -287,7 +287,7 @@
     "level": "caution",
     "label": "주의",
     "score": 98,
-    "spike": 3.9,
+    "spike": 3.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -298,7 +298,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.9σ)",
+     "기사 급증(평소 대비 3.2σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -619,48 +619,6 @@
    }
   },
   {
-   "id": "1iaxqfw",
-   "title": "미국 4년 만에 '빅스텝'?...세계 금융시장 촉각",
-   "firstSeen": "2026-11-21T13:36:00.000Z",
-   "lastSeen": "2026-11-21T13:36:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "rates",
-    "fx",
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "미국 4년 만에 '빅스텝'?...세계 금융시장 촉각",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611212236123628",
-     "host": "ytn.co.kr",
-     "at": "2026-11-21T13:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 65,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "r7megj",
    "title": "\"코로나 팬데믹보다 더 빠졌다\"…'코스피 급락 쇼크' 저점은 '4300p'",
    "firstSeen": "2026-11-22T04:38:00.000Z",
@@ -818,7 +776,7 @@
     "level": "caution",
     "label": "주의",
     "score": 64,
-    "spike": 3.9,
+    "spike": 3.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -828,7 +786,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.9σ)",
+     "기사 급증(평소 대비 3.2σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -911,7 +869,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 61,
-    "spike": 3.9,
+    "spike": 3.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -921,13 +879,128 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.9σ)",
+     "기사 급증(평소 대비 3.2σ)",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "12kxlmw",
+   "title": "코스피 급락 속 '코스닥 활성화'?…대만은 규제 강화, '검은 월요일' 또...",
+   "firstSeen": "2026-11-21T21:01:00.000Z",
+   "lastSeen": "2026-11-21T21:01:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "코스피 급락 속 '코스닥 활성화'?…대만은 규제 강화, '검은 월요일' 또...",
+     "link": "https://www.fnnews.com/news/202611212359102685",
+     "host": "fnnews.com",
+     "at": "2026-11-21T21:01:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 3.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "기사 급증(평소 대비 3.2σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-22T13:47:03.532Z",
+   "id": "1srgkgg",
+   "level": "caution",
+   "title": "수출 1조달러에도 연말 환율 1380원 전망…美 긴축·외국인 역송금 변수",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.ajunews.com/view/20261122143157860",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T13:47:03.532Z",
+   "id": "103b4q0",
+   "level": "caution",
+   "title": "반도체 실적 기대에도 외국인 매도 지속…다음 주 코스피 반등 시험대",
+   "why": [
+    "기사 급증(평소 대비 3.2σ)",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.mk.co.kr/article/12215572",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T13:47:03.532Z",
+   "id": "1wh79lc",
+   "level": "caution",
+   "title": "국힘 \"'이재명 버블' 붕괴...정부, 블랙 먼데이 대비해야\"",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284770",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T13:47:03.532Z",
+   "id": "ntlrqk",
+   "level": "caution",
+   "title": "두번째 증시안정대책 나오나...정부, 긴급 F4회의 소집",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.kado.net/news/articleView.html?idxno=2086532",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T13:47:03.532Z",
+   "id": "ulvb87",
+   "level": "caution",
+   "title": "'블랙 먼데이' 공포…韓 금리·美 물가가 증시 향방 가른다",
+   "why": [
+    "핵심 단어",
+    "기사 급증(평소 대비 3.2σ)",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.peoplewatch.co.kr/article/view/ppw202611220002",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T13:47:03.532Z",
+   "id": "49s3cv",
+   "level": "urgent",
+   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
+   "why": [
+    "핵심 단어",
+    "기사 급증(평소 대비 3.2σ)",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.ytn.co.kr/_ln/0102_202611222202561005",
+   "delivered": false
+  },
   {
    "at": "2026-11-22T13:27:01.824Z",
    "id": "wo7t1x",
@@ -1098,80 +1171,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://www.sedaily.com/article/20117458?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T12:17:53.001Z",
-   "id": "1svic1a",
-   "level": "caution",
-   "title": "美 반도체주 10% 폭락에 '검은 월요일' 우려…코스피 4700까지 밀리나",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "http://coinreaders.com/272453",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T12:17:53.001Z",
-   "id": "1mdreda",
-   "level": "caution",
-   "title": "[기획] 공포의 월요일… 18년만 증안펀드 검토",
-   "why": [
-    "기사 급증(평소 대비 5.1σ)",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.bloter.net/news/articleView.html?idxno=679342",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T12:17:53.001Z",
-   "id": "otlm7f",
-   "level": "caution",
-   "title": "18년만에 증시안정펀드 가동 준비…자사주 매입 규제 완화",
-   "why": [
-    "기사 급증(평소 대비 5.1σ)",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "http://www.metroseoul.co.kr/article/20261122500308",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T11:47:40.213Z",
-   "id": "93zcqp",
-   "level": "caution",
-   "title": "“증시 누가 살리나”…AI株 폭락에 월가 패닉, 코스피 ‘비상’ [머니...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "http://www.srtimes.kr/news/articleView.html?idxno=218295",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T11:47:40.213Z",
-   "id": "1uw7ttj",
-   "level": "caution",
-   "title": "‘블랙먼데이’ 우려 커진 코스피…대만은 공매도 빗장 초강수, 한국은",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 4.2σ)",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.mk.co.kr/article/12215684",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T11:27:13.541Z",
-   "id": "1srgkgg",
-   "level": "caution",
-   "title": "수출 1조달러에도 연말 환율 1380원 전망…美 긴축·외국인 역송금 변수",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.ajunews.com/view/20261122143157860",
    "delivered": false
   }
  ],
