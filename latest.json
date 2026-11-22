@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T21:11:38.226Z",
+ "updatedAt": "2026-11-22T21:27:06.529Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -0.5,
+  "war": -0.4,
   "politics": 1.9,
   "rates": 0.3,
-  "trade": 0.9,
+  "trade": 1,
   "fx": -0.1,
   "energy": -0.3,
-  "market": 0.7,
+  "market": 0.9,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 0.6
+  "policy": 1.2
  },
  "rates": {
   "war": {
-   "rate": 0.8,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 4.2,
+   "rate": 4.3,
    "saturated": 1,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 4.2,
+   "rate": 4.4,
    "saturated": 1,
    "queries": 3
   },
@@ -177,12 +177,72 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
+  {
+   "id": "49s3cv",
+   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
+   "firstSeen": "2026-11-22T09:20:00.000Z",
+   "lastSeen": "2026-11-22T21:08:00.000Z",
+   "count": 16,
+   "sources": 16,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [
+    "rates",
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'검은 월요일' 공포에…'증시안정펀드' 가동 준비",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008858029&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-22T21:08:00.000Z"
+    },
+    {
+     "title": "증시 급락에 증안펀드 가동 준비…‘수능 혼란’ 교육부 장관 사퇴 [오...",
+     "link": "https://www.segye.com/newsView/20261122510443?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-22T21:05:00.000Z"
+    },
+    {
+     "title": "'검은 월요일' 될까‥증시안정펀드 가동 준비",
+     "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6867678_37012.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-22T21:04:00.000Z"
+    },
+    {
+     "title": "미국발 블랙먼데이 공포… F4 “증안펀드 가동 준비 착수”",
+     "link": "https://www.kmib.co.kr/article/20261123500018",
+     "host": "kmib.co.kr",
+     "at": "2026-11-22T20:37:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 85,
+    "spike": 1.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
   {
    "id": "ulvb87",
    "title": "정점식, 23일 '블랙 먼데이' 경고…정부에 긴급 대응 촉구",
@@ -243,66 +303,6 @@
    }
   },
   {
-   "id": "49s3cv",
-   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
-   "firstSeen": "2026-11-22T09:20:00.000Z",
-   "lastSeen": "2026-11-22T21:08:00.000Z",
-   "count": 18,
-   "sources": 18,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [
-    "rates",
-    "market"
-   ],
-   "links": [
-    {
-     "title": "'검은 월요일' 공포에…'증시안정펀드' 가동 준비",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008858029&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-22T21:08:00.000Z"
-    },
-    {
-     "title": "증시 급락에 증안펀드 가동 준비…‘수능 혼란’ 교육부 장관 사퇴 [오...",
-     "link": "https://www.segye.com/newsView/20261122510443?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-22T21:05:00.000Z"
-    },
-    {
-     "title": "'검은 월요일' 될까‥증시안정펀드 가동 준비",
-     "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6867678_37012.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-22T21:04:00.000Z"
-    },
-    {
-     "title": "미국발 블랙먼데이 공포… F4 “증안펀드 가동 준비 착수”",
-     "link": "https://www.kmib.co.kr/article/20261123500018",
-     "host": "kmib.co.kr",
-     "at": "2026-11-22T20:37:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 81,
-    "spike": 0.7,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "12cpt9v",
    "title": "美 증시 폭락에 '블랙 먼데이' 공포…국내 증시도 비상",
    "firstSeen": "2026-11-22T02:07:00.000Z",
@@ -345,8 +345,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 73,
-    "spike": 0.7,
+    "score": 77,
+    "spike": 1.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -365,9 +365,9 @@
    "id": "pdr7es",
    "title": "'블랙먼데이' 우려 긴급 F4회의, 18년 만에 증시안정펀드 가동되나",
    "firstSeen": "2026-11-22T20:14:00.000Z",
-   "lastSeen": "2026-11-22T21:08:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-22T21:24:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "market"
    ],
@@ -375,6 +375,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "커진 '검은 월요일' 공포에 18년 만에 증안펀드 꺼낼까?",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348058?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-22T21:24:00.000Z"
+    },
     {
      "title": "'블랙먼데이' 공포에 정부 긴급 대응…18년 만에 증시안정펀드 가동 준...",
      "link": "https://www.ikbc.co.kr/article/view/kbc202611230001",
@@ -397,8 +403,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 70,
-    "spike": 0.7,
+    "score": 74,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -445,8 +451,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 67,
-    "spike": 0.7,
+    "score": 68,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -491,49 +497,9 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 67,
-    "spike": 0.7,
+    "score": 68,
+    "spike": 0.9,
     "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1f7vean",
-   "title": "월요일 개장 5분 뒤 '사이드카' 켜지나…야간선물 7% 넘게 급락",
-   "firstSeen": "2026-11-22T08:06:00.000Z",
-   "lastSeen": "2026-11-22T08:06:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "월요일 개장 5분 뒤 '사이드카' 켜지나…야간선물 7% 넘게 급락",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=132465",
-     "host": "pennmike.com",
-     "at": "2026-11-22T08:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 64,
-    "spike": 0.7,
-    "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -571,8 +537,88 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 63,
-    "spike": 0.6,
+    "score": 68,
+    "spike": 1.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1f7vean",
+   "title": "월요일 개장 5분 뒤 '사이드카' 켜지나…야간선물 7% 넘게 급락",
+   "firstSeen": "2026-11-22T08:06:00.000Z",
+   "lastSeen": "2026-11-22T08:06:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "월요일 개장 5분 뒤 '사이드카' 켜지나…야간선물 7% 넘게 급락",
+     "link": "https://www.pennmike.com/news/articleView.html?idxno=132465",
+     "host": "pennmike.com",
+     "at": "2026-11-22T08:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 65,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "kqeox6",
+   "title": "증시 급락세에 정부 긴급회의 소집…증안펀드 투입 ‘만지작’",
+   "firstSeen": "2026-11-22T12:03:00.000Z",
+   "lastSeen": "2026-11-22T21:09:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "증시 급락세에 정부 긴급회의 소집…증안펀드 투입 ‘만지작’",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719529&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-22T21:09:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 65,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -628,6 +674,61 @@
     "level": "watch",
     "label": "관찰",
     "score": 62,
+    "spike": 1.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1jtrpkx",
+   "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
+   "firstSeen": "2026-11-22T16:16:00.000Z",
+   "lastSeen": "2026-11-22T21:26:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "‘월가 강세론자’ 야데니도 전망 하향⋯S&P500 연말 목표 7900→7500",
+     "link": "https://www.etoday.co.kr/news/view/2651382",
+     "host": "etoday.co.kr",
+     "at": "2026-11-22T21:26:00.000Z"
+    },
+    {
+     "title": "월가 강세론자 야데니, S&P500 연말 목표 7900→7500 하향",
+     "link": "https://www.news1.kr/world/usa-canada/6362182",
+     "host": "news1.kr",
+     "at": "2026-11-22T20:41:00.000Z"
+    },
+    {
+     "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611230508302098",
+     "host": "ytn.co.kr",
+     "at": "2026-11-22T20:08:00.000Z"
+    },
+    {
+     "title": "야데니, 연말 S&P500 전망치 7,500으로 하향",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261123045902ira",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-22T19:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 60,
     "spike": 1.9,
     "news": false,
     "reaction": {
@@ -797,112 +898,6 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1jtrpkx",
-   "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
-   "firstSeen": "2026-11-22T16:16:00.000Z",
-   "lastSeen": "2026-11-22T20:41:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "월가 강세론자 야데니, S&P500 연말 목표 7900→7500 하향",
-     "link": "https://www.news1.kr/world/usa-canada/6362182",
-     "host": "news1.kr",
-     "at": "2026-11-22T20:41:00.000Z"
-    },
-    {
-     "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611230508302098",
-     "host": "ytn.co.kr",
-     "at": "2026-11-22T20:08:00.000Z"
-    },
-    {
-     "title": "야데니, 연말 S&P500 전망치 7,500으로 하향",
-     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261123045902ira",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-22T19:59:00.000Z"
-    },
-    {
-     "title": "'월가 거물' 야데니, 연말 S&P500 전망 7,900→7,500 하향",
-     "link": "https://www.yna.co.kr/view/AKR20261123003100072?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-22T19:37:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 57,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "bu0ni",
-   "title": "'친 트럼프' 아르헨티나 미국 중간선거 이후 국가위험도 4개월 새 급등....",
-   "firstSeen": "2026-11-21T19:35:00.000Z",
-   "lastSeen": "2026-11-22T08:33:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics",
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "아르헨 국가위험도 4개월 새 2.7배 급등",
-     "link": "https://www.mk.co.kr/article/12215664",
-     "host": "mk.co.kr",
-     "at": "2026-11-22T08:33:00.000Z"
-    },
-    {
-     "title": "아르헨 국가위험도 4개월 새 급등…국채금리 美 국채보다 10%p↑",
-     "link": "https://biz.sbs.co.kr/article_hub/20000347985?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-21T23:44:00.000Z"
-    },
-    {
-     "title": "'친 트럼프' 아르헨티나 미국 중간선거 이후 국가위험도 4개월 새 급등....",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611220655435685",
-     "host": "ytn.co.kr",
-     "at": "2026-11-21T21:55:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
