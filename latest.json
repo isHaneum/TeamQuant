@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T22:48:00.824Z",
+ "updatedAt": "2026-11-22T23:11:59.506Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -9,12 +9,13 @@
    "label": "코스피",
    "unit": "%",
    "available": true,
-   "date": "2026-11-20",
-   "last": 4869.9599609375,
-   "change": -5.21,
-   "z": -1.9,
+   "date": "2026-11-23",
+   "last": 4869.96,
+   "change": 0,
+   "z": 0,
    "sd": 2.753679967697834,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -22,12 +23,13 @@
    "label": "코스닥",
    "unit": "%",
    "available": true,
-   "date": "2026-11-20",
-   "last": 645.6799926757812,
-   "change": -5.71,
-   "z": -2.1,
+   "date": "2026-11-23",
+   "last": 645.68,
+   "change": 0,
+   "z": 0,
    "sd": 2.716600235510131,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -62,7 +64,7 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-22",
-   "last": 1345.550048828125,
+   "last": 1345.6099853515625,
    "change": 0.81,
    "z": 1.3,
    "sd": 0.6323851576090757,
@@ -73,11 +75,11 @@
    "label": "WTI 유가",
    "unit": "%",
    "available": true,
-   "date": "2026-11-20",
+   "date": "2026-11-22",
    "last": 83.41000366210938,
-   "change": 0.24,
-   "z": 0.1,
-   "sd": 2.8907172015042217,
+   "change": -0.68,
+   "z": -0.2,
+   "sd": 2.886111087407602,
    "source": "Yahoo"
   },
   {
@@ -85,11 +87,11 @@
    "label": "금",
    "unit": "%",
    "available": true,
-   "date": "2026-11-20",
+   "date": "2026-11-22",
    "last": 3515.39990234375,
-   "change": -4.62,
-   "z": -3.4,
-   "sd": 1.3710484011907773,
+   "change": 0,
+   "z": 0,
+   "sd": 1.473469183079339,
    "source": "Yahoo"
   },
   {
@@ -119,45 +121,45 @@
   }
  ],
  "spikes": {
-  "war": 1.6,
-  "politics": 2.4,
-  "rates": 1.5,
-  "trade": 1.6,
-  "fx": 0.4,
-  "energy": -0.3,
+  "war": 2.1,
+  "politics": 2.6,
+  "rates": 1.6,
+  "trade": 2.1,
+  "fx": 0.9,
+  "energy": 0.1,
   "market": 1.1,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 2.2
+  "policy": 3
  },
  "rates": {
   "war": {
-   "rate": 2.7,
+   "rate": 3.2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 3.2,
+   "rate": 3.4,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 4.1,
-   "saturated": 0,
+   "rate": 4.2,
+   "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 5,
+   "rate": 5.5,
    "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   },
@@ -177,124 +179,17 @@
    "queries": 1
   },
   "policy": {
-   "rate": 3.3,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "lpep31",
-   "title": "불법 공매도 집중 감시·반대매매 점검…‘블랙 먼데이’ 막을까",
-   "firstSeen": "2026-11-22T12:38:00.000Z",
-   "lastSeen": "2026-11-22T22:38:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "rates",
-    "market"
-   ],
-   "links": [
-    {
-     "title": "블랙 먼데이 막자, 10조 펀드 풀어 외국인 매물받이 될 수도 있다: 슬로...",
-     "link": "https://slownews.kr/169968",
-     "host": "slownews.kr",
-     "at": "2026-11-22T22:38:00.000Z"
-    },
-    {
-     "title": "오늘 ‘블랙 먼데이’ 공포…18년만 증안펀드, 투매 잠재울까",
-     "link": "https://www.dt.co.kr/article/12096581?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-22T20:30:00.000Z"
-    },
-    {
-     "title": "[증시] ‘블랙 먼데이’ 공포에 정부 긴급회의…증안펀드 가동 준비·자...",
-     "link": "https://news-s.kr/view.html?id=L26112223212576da",
-     "host": "news-s.kr",
-     "at": "2026-11-22T14:30:00.000Z"
-    },
-    {
-     "title": "불법 공매도 집중 감시·반대매매 점검…‘블랙 먼데이’ 막을까",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01981126645648344&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-22T12:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 85,
-    "spike": 2.2,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "wo7t1x",
-   "title": "정점식 \"정부, 블랙먼데이 가능성 대비 긴급조치 준비해야\"",
-   "firstSeen": "2026-11-22T01:00:00.000Z",
-   "lastSeen": "2026-11-22T05:28:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics",
-    "market"
-   ],
-   "critical": [
-    "market",
-    "policy"
-   ],
-   "links": [
-    {
-     "title": "국힘 정점식 “정부, 블랙먼데이 가능성에 대응조치 준비해야”",
-     "link": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160285224379998",
-     "host": "siminilbo.co.kr",
-     "at": "2026-11-22T05:28:00.000Z"
-    },
-    {
-     "title": "정점식 \"정부, 블랙먼데이 가능성 대비 긴급조치 준비해야\"",
-     "link": "https://imnews.imbc.com/news/2026/politics/article/6867599_36911.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-22T04:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 80,
-    "spike": 2.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "2mhln8",
    "title": "이란 전쟁 다시 확전되나…트럼프 새해 공격 경고 속 호르무즈 유조선 ...",
    "firstSeen": "2026-11-22T21:57:00.000Z",
-   "lastSeen": "2026-11-22T22:43:00.000Z",
+   "lastSeen": "2026-11-22T22:54:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
@@ -306,10 +201,10 @@
    ],
    "links": [
     {
-     "title": "트럼프 \"이란, 항상 말만 해\"…새해 공격 경고",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261123074201OIG",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-22T22:43:00.000Z"
+     "title": "10월 호르무즈 선박 공격, 전쟁 이후 최다...\"11월도 최소 22건\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611230754013904",
+     "host": "ytn.co.kr",
+     "at": "2026-11-22T22:54:00.000Z"
     },
     {
      "title": "이란 전쟁 다시 확전되나…트럼프 새해 공격 경고 속 호르무즈 유조선 ...",
@@ -321,8 +216,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 80,
-    "spike": 2.4,
+    "score": 82,
+    "spike": 2.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -334,65 +229,6 @@
     "why": [
      "핵심 단어",
      "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "49s3cv",
-   "title": "증시 급락에 증안펀드 가동 준비…‘수능 혼란’ 교육부 장관 사퇴 [오...",
-   "firstSeen": "2026-11-22T09:20:00.000Z",
-   "lastSeen": "2026-11-22T22:02:00.000Z",
-   "count": 5,
-   "sources": 4,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "정부 “증안펀드 가동 준비”…고가주택 소유자 급증 [한강로 경제브리...",
-     "link": "https://www.segye.com/newsView/20261122510580?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-22T22:02:00.000Z"
-    },
-    {
-     "title": "증안펀드 준비에도 ‘블랙먼데이’ 경계…이번 주 코스피, 정책 효과 시...",
-     "link": "https://www.sedaily.com/article/20117476?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-22T22:00:00.000Z"
-    },
-    {
-     "title": "코스피 '블랙먼데이' 전운…증안펀드 가동 준비",
-     "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1732609",
-     "host": "ebn.co.kr",
-     "at": "2026-11-22T21:58:00.000Z"
-    },
-    {
-     "title": "코스피 5000 붕괴에…당국, 증안펀드 가동 준비",
-     "link": "https://www.kbmaeil.com/article/20261123500020",
-     "host": "kbmaeil.com",
-     "at": "2026-11-22T21:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 77,
-    "spike": 1.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -420,8 +256,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 76,
-    "spike": 2.2,
+    "score": 82,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -432,14 +268,15 @@
     },
     "why": [
      "핵심 단어",
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
   {
-   "id": "1i69kqh",
+   "id": "11cu0r",
    "title": "美 나스닥 5%·반도체지수 10% 급락에 코스피 하락 우려…공매도 금지 요...",
-   "firstSeen": "2026-11-21T00:44:00.000Z",
+   "firstSeen": "2026-11-22T22:40:00.000Z",
    "lastSeen": "2026-11-22T22:40:00.000Z",
    "count": 1,
    "sources": 1,
@@ -461,8 +298,150 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 76,
-    "spike": 2.2,
+    "score": 82,
+    "spike": 3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "기사 급증(평소 대비 3σ)",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "pdr7es",
+   "title": "'블랙먼데이' 우려 증폭에 증권시장안정펀드 18년 만에 가동되나",
+   "firstSeen": "2026-11-22T20:14:00.000Z",
+   "lastSeen": "2026-11-22T22:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "trade",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'블랙먼데이' 우려 증폭에 증권시장안정펀드 18년 만에 가동되나",
+     "link": "https://www.delighti.co.kr/news/articleView.html?idxno=125366",
+     "host": "delighti.co.kr",
+     "at": "2026-11-22T22:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 82,
+    "spike": 3,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "기사 급증(평소 대비 3σ)",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "ulvb87",
+   "title": "[증시] ‘블랙 먼데이’ 공포에 정부 긴급회의…증안펀드 가동 준비·자...",
+   "firstSeen": "2026-11-22T00:26:00.000Z",
+   "lastSeen": "2026-11-22T23:01:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "rates",
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'블랙먼데이' 우려 커지자…정부, 증안펀드 즉시 가동 준비",
+     "link": "https://news.jtbc.co.kr/article/NB12329296?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-22T23:01:00.000Z"
+    },
+    {
+     "title": "증안펀드 준비에도 ‘블랙먼데이’ 경계…이번 주 코스피, 정책 효과 시...",
+     "link": "https://www.sedaily.com/article/20117476?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-22T22:00:00.000Z"
+    },
+    {
+     "title": "증시 급락에 증안펀드 가동 준비…‘수능 혼란’ 교육부 장관 사퇴 [오...",
+     "link": "https://www.segye.com/newsView/20261122510443?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-22T21:05:00.000Z"
+    },
+    {
+     "title": "‘검은 월요일’ 막아라… 정부, 18년만에 증안펀드 가동 준비",
+     "link": "https://www.donga.com/news/Economy/article/all/20261123/135070401/2",
+     "host": "donga.com",
+     "at": "2026-11-22T19:33:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 79,
+    "spike": 1.1,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "wo7t1x",
+   "title": "국힘 정점식 “정부, 블랙먼데이 가능성에 대응조치 준비해야”",
+   "firstSeen": "2026-11-22T01:00:00.000Z",
+   "lastSeen": "2026-11-22T05:28:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "국힘 정점식 “정부, 블랙먼데이 가능성에 대응조치 준비해야”",
+     "link": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160285224379998",
+     "host": "siminilbo.co.kr",
+     "at": "2026-11-22T05:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 79,
+    "spike": 2.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -478,53 +457,14 @@
    }
   },
   {
-   "id": "17c469b",
-   "title": "[미리보는 이데일리 신문]한한령 해제의 역설, 알테쉬 2차공습 온다",
-   "firstSeen": "2026-11-22T12:04:00.000Z",
-   "lastSeen": "2026-11-22T12:04:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "[미리보는 이데일리 신문]한한령 해제의 역설, 알테쉬 2차공습 온다",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01968006645648344&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-22T12:04:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 71,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": -4.62,
-     "unit": "%",
-     "z": -3.4
-    },
-    "why": [
-     "핵심 단어",
-     "금 -4.62%(평소의 3.4배)"
-    ]
-   }
-  },
-  {
    "id": "r7megj",
    "title": "\"코로나 팬데믹보다 더 빠졌다\"…'코스피 급락 쇼크' 저점은 '4300p'",
    "firstSeen": "2026-11-22T04:38:00.000Z",
-   "lastSeen": "2026-11-22T22:28:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "lastSeen": "2026-11-22T23:02:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
+    "rates",
     "market",
     "disaster"
    ],
@@ -532,6 +472,12 @@
     "disaster"
    ],
    "links": [
+    {
+     "title": "\"코스피 저점 4300선 될 수도…금리 하락 때 낙폭과대株 주목\"",
+     "link": "https://www.jasm.co.kr/news/view/326077/?sc=Naver",
+     "host": "jasm.co.kr",
+     "at": "2026-11-22T23:02:00.000Z"
+    },
     {
      "title": "코스피 급락에 공포지표도 극단…\"저점은 4300선\"",
      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1732610",
@@ -548,8 +494,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 70,
-    "spike": 1.1,
+    "score": 77,
+    "spike": 1.6,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -561,6 +507,65 @@
     "why": [
      "핵심 단어",
      "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "akulsn",
+   "title": "\"'엔비디아 사태', 휴전 두달 남은 美中 무역전쟁 재점화할수도\"",
+   "firstSeen": "2026-11-22T15:36:00.000Z",
+   "lastSeen": "2026-11-22T23:10:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "war",
+    "trade",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "\"'엔비디아 사태', 휴전 두달 남은 美中 무역전쟁 재점화할수도\"",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=209113",
+     "host": "tfmedia.co.kr",
+     "at": "2026-11-22T23:10:00.000Z"
+    },
+    {
+     "title": "中 '여성 간첩' 의혹에 美 반도체 봉쇄…무역전쟁 다시 불붙나",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085439",
+     "host": "jnilbo.com",
+     "at": "2026-11-22T22:21:00.000Z"
+    },
+    {
+     "title": "미중 무역전쟁 재점화? 엔비디아 반도체 불법 유출 의혹에 긴장 고조",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886777",
+     "host": "gokorea.kr",
+     "at": "2026-11-22T21:34:00.000Z"
+    },
+    {
+     "title": "“엔비디아 사태에 美中 무역전쟁 다시 불붙나”…반도체 규제에 中 희...",
+     "link": "https://biz.heraldcorp.com/article/10945329?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-22T21:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 70,
+    "spike": 3,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "기사 급증(평소 대비 3σ)",
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -658,33 +663,84 @@
    }
   },
   {
-   "id": "1elqt3e",
-   "title": "[뉴욕 주간전망] PCE 물가지표 관건...12월 빅스텝 경계심 유의",
-   "firstSeen": "2026-11-22T21:40:00.000Z",
-   "lastSeen": "2026-11-22T21:40:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "cj71w5",
+   "title": "[이슈]10조 증안펀드…외국인 매도세 막을까",
+   "firstSeen": "2026-11-22T10:25:00.000Z",
+   "lastSeen": "2026-11-22T22:38:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "rates",
     "market"
    ],
    "critical": [
-    "rates"
+    "market"
    ],
    "links": [
     {
-     "title": "[뉴욕 주간전망] PCE 물가지표 관건...12월 빅스텝 경계심 유의",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147341",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-22T21:40:00.000Z"
+     "title": "블랙 먼데이 막자, 10조 펀드 풀어 외국인 매물받이 될 수도 있다: 슬로...",
+     "link": "https://slownews.kr/169968",
+     "host": "slownews.kr",
+     "at": "2026-11-22T22:38:00.000Z"
+    },
+    {
+     "title": "[이슈]10조 증안펀드…외국인 매도세 막을까",
+     "link": "https://www.munhwa.com/article/11633173?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-22T22:12:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
+    "level": "caution",
+    "label": "주의",
     "score": 70,
-    "spike": 1.5,
-    "news": false,
+    "spike": 1.1,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "13uen4z",
+   "title": "[아주증시포커스] 美 AI주 폭락 후폭풍…'최악의 투매' 4000선 위협하나",
+   "firstSeen": "2026-11-22T09:02:00.000Z",
+   "lastSeen": "2026-11-22T23:00:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "美 AI주 투매 쇼크…글로벌 시장 덮친 '블랙먼데이' 공포[뉴스새벽배송...",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01318566645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-22T23:00:00.000Z"
+    },
+    {
+     "title": "[아주증시포커스] 美 AI주 폭락 후폭풍…'최악의 투매' 4000선 위협하나",
+     "link": "https://www.ajunews.com/view/20261123074700570",
+     "host": "ajunews.com",
+     "at": "2026-11-22T22:50:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 70,
+    "spike": 1.1,
+    "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -738,120 +794,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 66,
-    "spike": 2.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "akulsn",
-   "title": "\"'엔비디아 사태', 휴전 두달 남은 美中 무역전쟁 재점화할수도\"",
-   "firstSeen": "2026-11-22T15:36:00.000Z",
-   "lastSeen": "2026-11-22T22:21:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "war",
-    "trade",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "中 '여성 간첩' 의혹에 美 반도체 봉쇄…무역전쟁 다시 불붙나",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085439",
-     "host": "jnilbo.com",
-     "at": "2026-11-22T22:21:00.000Z"
-    },
-    {
-     "title": "미중 무역전쟁 재점화? 엔비디아 반도체 불법 유출 의혹에 긴장 고조",
-     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886777",
-     "host": "gokorea.kr",
-     "at": "2026-11-22T21:34:00.000Z"
-    },
-    {
-     "title": "“엔비디아 사태에 美中 무역전쟁 다시 불붙나”…반도체 규제에 中 희...",
-     "link": "https://biz.heraldcorp.com/article/10945329?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-22T21:31:00.000Z"
-    },
-    {
-     "title": "“엔비디아 사태로 美中 무역전쟁 재점화 우려”… 반도체·희토류 갈등...",
-     "link": "https://biz.chosun.com/international/international_general/2026/11/23/KZGZ7U3WTFFWNKRFYI4X4HOW4A/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-22T15:55:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 63,
-    "spike": 2.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "x531xw",
-   "title": "\"검은 월요일\" \"저점서 반등\" 코스피에 쏠린 눈",
-   "firstSeen": "2026-11-22T09:26:00.000Z",
-   "lastSeen": "2026-11-22T22:40:00.000Z",
-   "count": 11,
-   "sources": 10,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'검은 월요일' 우려에 정부 증안펀드 준비…18년 만에 실제 가동하나",
-     "link": "https://www.ngonews.kr/news/articleView.html?idxno=243871",
-     "host": "ngonews.kr",
-     "at": "2026-11-22T22:40:00.000Z"
-    },
-    {
-     "title": "[오늘의 증시]美반도체지수 11% 폭락…'검은 월요일' 증안펀드가 막을까",
-     "link": "https://www.newsis.com/view/NISX20261123_0003878452",
-     "host": "newsis.com",
-     "at": "2026-11-22T22:39:00.000Z"
-    },
-    {
-     "title": "벌써부터 '검은 월요일' 공포…18년만에 깨운 증안펀드[오늘아침]",
-     "link": "https://www.nocutnews.co.kr/news/6610723?utm_source=naver&utm_medium=article&utm_campaign=20261123073947",
-     "host": "nocutnews.co.kr",
-     "at": "2026-11-22T22:24:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 '검은 월요일' 우려…AI주 반등 여부 이번주 시험대",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261123010008530",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-22T22:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 59,
-    "spike": 1.1,
+    "score": 68,
+    "spike": 2.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -869,40 +813,46 @@
    "id": "fdvrwd",
    "title": "트럼프, 증시 급락에 또 민주당 탓…“반성장 정책 때문”",
    "firstSeen": "2026-11-22T22:33:00.000Z",
-   "lastSeen": "2026-11-22T22:46:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-22T23:10:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
     "politics",
-    "rates",
+    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "트럼프, 증시 약세에 연일 민주당 책임론…시장은 AI·금리 우려",
-     "link": "https://www.hankyung.com/article/2026112328777",
-     "host": "hankyung.com",
-     "at": "2026-11-22T22:46:00.000Z"
+     "title": "트럼프, 미 증시 하락 민주당 탓…시총 6조달러 감소 주장",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=399641",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-22T23:10:00.000Z"
     },
     {
-     "title": "나스닥 급락에…트럼프 \"100% 민주당 정책 기인\"",
-     "link": "https://biz.sbs.co.kr/article_hub/20000348080?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-22T22:38:00.000Z"
+     "title": "트럼프, 美 증시 하락에 “민주당의 反성장 정책 탓”",
+     "link": "https://biz.chosun.com/international/international_general/2026/11/23/PF3TO75OYJBSHHNTFNAV7OHJPA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-22T23:09:00.000Z"
     },
     {
-     "title": "트럼프, 증시 급락에 또 민주당 탓…“반성장 정책 때문”",
-     "link": "https://www.dt.co.kr/article/12096600?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-22T22:33:00.000Z"
+     "title": "트럼프 “주가 하락은 ‘멍청한 민주당’ 때문”…연일 야당탓",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719648&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-22T22:57:00.000Z"
+    },
+    {
+     "title": "트럼프, 주가 하락 연일 야당 탓...\"반성장·보복 정책에 기인\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611230755478282",
+     "host": "ytn.co.kr",
+     "at": "2026-11-22T22:55:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 58,
-    "spike": 2.4,
+    "score": 68,
+    "spike": 2.6,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -915,9 +865,122 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
+  },
+  {
+   "id": "up3a1p",
+   "title": "블랙 먼데이 현실화?…삼전·하닉, 프리마켓 5~6%대 급락",
+   "firstSeen": "2026-11-22T23:07:00.000Z",
+   "lastSeen": "2026-11-22T23:07:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "블랙 먼데이 현실화?…삼전·하닉, 프리마켓 5~6%대 급락",
+     "link": "https://www.dt.co.kr/article/12096604?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-22T23:07:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 67,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-22T23:11:59.506Z",
+   "id": "4zm6qs",
+   "level": "caution",
+   "title": "“월요일 주식앱 도저히 못열어” 블랙먼데이 공포에 긴급 F4 소집…국...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302370",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T23:11:59.506Z",
+   "id": "1f7vean",
+   "level": "caution",
+   "title": "월요일 개장 5분 뒤 '사이드카' 켜지나…야간선물 7% 넘게 급락",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.segye.com/newsView/20261123500706?OutUrl=naver",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T23:11:59.506Z",
+   "id": "ulvb87",
+   "level": "urgent",
+   "title": "[증시] ‘블랙 먼데이’ 공포에 정부 긴급회의…증안펀드 가동 준비·자...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://news.jtbc.co.kr/article/NB12329296?influxDiv=NAVER",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T23:11:59.506Z",
+   "id": "akulsn",
+   "level": "caution",
+   "title": "\"'엔비디아 사태', 휴전 두달 남은 美中 무역전쟁 재점화할수도\"",
+   "why": [
+    "기사 급증(평소 대비 3σ)",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.tfmedia.co.kr/news/article.html?no=209113",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T23:11:59.506Z",
+   "id": "cj71w5",
+   "level": "caution",
+   "title": "[이슈]10조 증안펀드…외국인 매도세 막을까",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://slownews.kr/169968",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-22T23:11:59.506Z",
+   "id": "13uen4z",
+   "level": "caution",
+   "title": "[아주증시포커스] 美 AI주 폭락 후폭풍…'최악의 투매' 4000선 위협하나",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.edaily.co.kr/News/Read?newsId=01318566645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "delivered": false
+  },
   {
    "at": "2026-11-22T22:48:00.824Z",
    "id": "wo7t1x",
@@ -1080,78 +1143,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.newsis.com/view/NISX20261122_0003878358",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T20:47:46.042Z",
-   "id": "49s3cv",
-   "level": "urgent",
-   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.kmib.co.kr/article/20261123500018",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T19:47:24.537Z",
-   "id": "49s3cv",
-   "level": "urgent",
-   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.donga.com/news/Economy/article/all/20261123/135070401/2",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T18:28:26.696Z",
-   "id": "49s3cv",
-   "level": "urgent",
-   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "http://weekly.chosun.com/news/articleView.html?idxno=57365",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T17:27:06.800Z",
-   "id": "49s3cv",
-   "level": "urgent",
-   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "http://weekly.chosun.com/news/articleView.html?idxno=57365",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T16:13:33.119Z",
-   "id": "49s3cv",
-   "level": "urgent",
-   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "http://weekly.chosun.com/news/articleView.html?idxno=57365",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T14:47:38.813Z",
-   "id": "1srgkgg",
-   "level": "caution",
-   "title": "수출 1조달러에도 연말 환율 1380원 전망…美 긴축·외국인 역송금 변수",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.ajunews.com/view/20261122143157860",
    "delivered": false
   }
  ],
