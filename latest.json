@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T19:11:08.916Z",
+ "updatedAt": "2026-11-22T19:27:45.944Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -121,14 +121,14 @@
  "spikes": {
   "war": -1.4,
   "politics": -0.6,
-  "rates": -1.2,
-  "trade": -0.9,
+  "rates": -0.9,
+  "trade": -0.6,
   "fx": -0.1,
   "energy": -0.9,
-  "market": -1.6,
+  "market": -1.5,
   "credit": -0.2,
   "disaster": 0,
-  "policy": -0.2
+  "policy": 0.1
  },
  "rates": {
   "war": {
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.4,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 2.3,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 2
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 0.7,
+   "rate": 0.9,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   }
@@ -188,8 +188,8 @@
    "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
    "firstSeen": "2026-11-22T09:20:00.000Z",
    "lastSeen": "2026-11-22T16:00:00.000Z",
-   "count": 20,
-   "sources": 19,
+   "count": 19,
+   "sources": 18,
    "topics": [
     "market",
     "policy"
@@ -227,8 +227,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 75,
-    "spike": 0,
+    "score": 76,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -288,8 +288,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 74,
-    "spike": 0,
+    "score": 75,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -490,6 +490,47 @@
     "score": 61,
     "spike": 0,
     "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "otka8j",
+   "title": "블랙먼데이 우려에 '증안펀드' 시선...전문가들 '10.7조 효용성' 촉각",
+   "firstSeen": "2026-11-22T17:16:00.000Z",
+   "lastSeen": "2026-11-22T17:16:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "trade",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "블랙먼데이 우려에 '증안펀드' 시선...전문가들 '10.7조 효용성' 촉각",
+     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302377",
+     "host": "financialpost.co.kr",
+     "at": "2026-11-22T17:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 59,
+    "spike": 0.1,
+    "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -705,47 +746,6 @@
    }
   },
   {
-   "id": "otka8j",
-   "title": "블랙먼데이 우려에 '증안펀드' 시선...전문가들 '10.7조 효용성' 촉각",
-   "firstSeen": "2026-11-22T17:16:00.000Z",
-   "lastSeen": "2026-11-22T17:16:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade",
-    "policy"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "블랙먼데이 우려에 '증안펀드' 시선...전문가들 '10.7조 효용성' 촉각",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302377",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-22T17:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "1g2oqbl",
    "title": "미국 연말 항공대란 오나…예산협상 교착에 셧다운 우려",
    "firstSeen": "2026-11-22T06:55:00.000Z",
@@ -858,47 +858,46 @@
    }
   },
   {
-   "id": "1svic1a",
-   "title": "美 반도체주 10% 폭락에 '검은 월요일' 우려…코스피 4700까지 밀리나",
-   "firstSeen": "2026-11-21T22:01:00.000Z",
-   "lastSeen": "2026-11-22T18:00:00.000Z",
+   "id": "1ev7bcb",
+   "title": "美재무장관 \"엔비디아의 규정준수 여부는 젠슨황 개인사와 별개\"",
+   "firstSeen": "2026-11-22T16:58:00.000Z",
+   "lastSeen": "2026-11-22T19:16:00.000Z",
    "count": 5,
-   "sources": 4,
+   "sources": 5,
    "topics": [
-    "fx",
-    "market"
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "나스닥 5.3% ↓… '검은 월요일' 공포, 고개 드는 'AI 회의론'",
-     "link": "https://www.mt.co.kr/world/2026/11/23/2026112219572889784",
-     "host": "mt.co.kr",
-     "at": "2026-11-22T18:00:00.000Z"
+     "title": "미 재무장관 “엔비디아 AI 칩 중국 밀반입 의혹, 내부 규정준수 여부 ...",
+     "link": "https://www.voakorea.com/a/8226650.html",
+     "host": "voakorea.com",
+     "at": "2026-11-22T19:16:00.000Z"
     },
     {
-     "title": "뉴욕증시 급락에 코스피 '검은 월요일' 우려…정부, 증시 안정 대책 가...",
-     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3759676",
-     "host": "gukjenews.com",
-     "at": "2026-11-22T13:02:00.000Z"
+     "title": "美재무장관 \"엔비디아 규정준수 여부, 젠슨황 개인사와 별개\"",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348045?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-22T19:09:00.000Z"
     },
     {
-     "title": "나스닥·코스피 5%대 폭락 뒤 비트코인 6,000달러 반등",
-     "link": "http://coinreaders.com/272453",
-     "host": "coinreaders.com",
-     "at": "2026-11-22T11:58:00.000Z"
+     "title": "미 재무장관 \"젠슨 황 개인사, 엔비디아 규정 준수 여부와 별개\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261123030816V82",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-22T18:09:00.000Z"
     },
     {
-     "title": "\"검은 월요일\" \"저점서 반등\" 코스피에 쏠린 눈",
-     "link": "https://www.fnnews.com/news/202611221826131484",
-     "host": "fnnews.com",
-     "at": "2026-11-22T09:26:00.000Z"
+     "title": "미 재무장관 \"엔비디아의 규정준수 여부는 젠슨황 개인사와 별개\"",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611230237345862",
+     "host": "ytn.co.kr",
+     "at": "2026-11-22T17:37:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
+    "level": "caution",
+    "label": "주의",
+    "score": 45,
     "spike": 0,
     "news": false,
     "reaction": {
