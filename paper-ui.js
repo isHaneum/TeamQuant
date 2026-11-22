@@ -279,6 +279,9 @@ const K = { status: null, preview: null, armed: false };
 function savedPlan() { try { const v = JSON.parse(localStorage.getItem(`teamQuantRules:${session()}`) || 'null'); return v?.plan && Object.keys(v.plan).length ? v.plan : null; } catch { return null; } }
 const KR_EXAMPLE_PLAN = { '005930': { pct: 20, name: '삼성전자' }, '000660': { pct: 20, name: 'SK하이닉스' }, '069500': { pct: 20, name: 'KODEX 200' }, '035420': { pct: 20, name: 'NAVER' } };
 let PLAN_DOC = null; // data/paper-plan.json (근거·검증 포함)
+let IPO_EVENTS = null; async function loadIpoEvents() { if (IPO_EVENTS !== null) return IPO_EVENTS; try { const r = await fetch('/data/ipo-events.json'); IPO_EVENTS = r.ok ? await r.json() : false; } catch { IPO_EVENTS = false; } return IPO_EVENTS; }
+// 시장 사건(결정 52): 공모액 $2.5B 이상 IPO 를 기록(note)으로만 보인다 — 사전 등록 사건연구(PREREG-H)에서 상장 전후·락업 만료의 동종 대형주 수익률이 음수로 유의하지 않아 매매에 연결하지 않는다.
+function eventsHtml() { const d = IPO_EVENTS; if (!d || !Array.isArray(d.events) || !d.events.length) return ''; const t = tip(`공모액 ${(d.minUsdM || 2500) / 1000}B 달러 이상 IPO 의 상장일·락업 만료일입니다. 2012~2026 미국 최대 IPO 23건에서 같은 섹터 대형주의 시장 대비 수익률은 상장 전·직후·락업 만료 어느 창에서도 음수로 유의하지 않았습니다(사전 등록 사건연구). 그래서 기록만 하고 매매를 막거나 일으키지 않습니다. 출처 Nasdaq IPO 캘린더(비공식) · 락업은 424B4 확인 전까지 상장일+180일 추정.`); const rows = d.events.slice(0, 4).map(e => `${esc(String(e.date || '예정').slice(5))} ${esc(e.issuer)}${e.ticker ? ` (${esc(e.ticker)})` : ''} $${(e.sizeUsdM / 1000).toFixed(1)}B${e.lockupDate ? ` · 락업 ${esc(e.lockupDate.slice(5))}` : ''}`).join('<br>'); return `<p class="pp-kis-note">시장 사건(기록만) ${t}<br><small class="cr-muted">${rows}</small></p>`; }
 async function loadPlanDoc() { if (PLAN_DOC !== null) return PLAN_DOC; try { const r = await fetch('/data/paper-plan.json'); PLAN_DOC = r.ok ? await r.json() : false; } catch { PLAN_DOC = false; } return PLAN_DOC; }
 function planForKis() { const p = savedPlan(); if (p) return { plan: p, label: '규칙 화면의 내 계획', source: 'saved' }; if (PLAN_DOC) return { plan: null, label: `검증된 기본 계획 ${PLAN_DOC.version} (${Object.keys(PLAN_DOC.weights).length}종목 · 현금 ${PLAN_DOC.cashPct}%)`, source: 'default' }; return { plan: KR_EXAMPLE_PLAN, label: '예시 계획(국내 4종목 각 20%)', source: 'example' }; }
 // 근거 카드 계획(PP3~): 지금 기준을 표로 보이고(노션 HMW A: 원칙을 확인 가능한 규칙으로), 그 기준을 과거에 적용한 결과를 구간별로 보인다(HMW B: 미사용 구간). 기준을 바꾸는 것은 아직 PC 의 생성 스크립트로만 된다.
@@ -393,7 +396,7 @@ async function kisRefresh() {
   const card = $('#pp-kis'), body = $('#pp-kis-body'); if (!card) return;
   // PC(실시간)가 안 되면 저장소의 공개 파일을 읽기 전용으로 보여 준다. 모의계좌는 가상 돈이라 누가 봐도 괜찮다.
   let s; try { s = await loadMockAccount({ fresh: true, maxAge: 0 }); } catch (e) { card.hidden = false; $('#pp-kis-actions').hidden = true; body.innerHTML = `<p class="cr-muted">${esc(e.message)}</p>`; const t = $('#pp-kis-title-state'); if (t) { t.textContent = '자료 없음'; t.className = 'stop'; } renderHyp(null); return; }
-  applyMockOptions(s); if (s.planDoc) PLAN_DOC = s.planDoc; else await loadPlanDoc(); K.status = s; card.hidden = false; $('#pp-kis-actions').hidden = !s.live;
+  applyMockOptions(s); if (s.planDoc) PLAN_DOC = s.planDoc; else await loadPlanDoc(); await loadIpoEvents(); K.status = s; card.hidden = false; $('#pp-kis-actions').hidden = !s.live;
   const pl = planForKis(), prog = progressHtml(s);
   const stale = s.markStale ? '<p class="cr-err">환율을 읽지 못해 총자산 평가를 보류했습니다(마지막 정상 평가 표시). 미국 자산이 있는 동안 모든 주문이 보류됩니다.</p>' : '';
   const ro = stale + (s.live ? '' : `<p class="pp-ro">읽기 전용 · 저장소에 올린 공개 파일 (${esc(String(s.asOf || '').slice(0, 16).replace('T', ' '))}) · 주문·가설 등록은 모의투자 키가 있는 PC 에 연결했을 때만 됩니다.</p>`);
@@ -401,7 +404,7 @@ async function kisRefresh() {
   const ords = s.live ? s.ordersToday : s.recentOrders, oTitle = s.live ? '오늘 주문' : '최근 주문';
   body.innerHTML = ro + heroHtml(s) + adherenceHtml(s) + (s.error ? `<p class="cr-err">${esc(s.error)}</p>` : '') + statusStrip(s) + issuesHtml(s) + holdTable(s) + holdingsTable(s, { missOnly: true })
     + (ords?.length ? `<details class="pp-kis-plan" id="pp-kis-orders"><summary>${oTitle} ${ords.length}건</summary>${kisOrdersTable(ords, '')}</details>` : `<p class="pp-kis-note">${oTitle} 없음</p>`)
-    + `<details class="pp-kis-plan" id="pp-kis-more"><summary>운용 기록·점검 ${tip('계좌 설정(한도·킬 스위치·기록 봉인), 계획 이름, 지수 대비 계산 내역, 최근 30일 매매 횟수, 위성 종목 묶음 성과, 시스템 점검 결과입니다.')}</summary>` + kisSummary(s) + `<p class="pp-kis-note">계획: ${esc(pl.label)}${s.markets?.US ? ` · 미국 장 ${s.markets.US.open ? '열림' : '닫힘'}` : ''}</p>` + prog + activityHtml(s) + sleeveHtml(s) + fearHtml(s) + integrityHtml(s) + '</details>'
+    + `<details class="pp-kis-plan" id="pp-kis-more"><summary>운용 기록·점검 ${tip('계좌 설정(한도·킬 스위치·기록 봉인), 계획 이름, 지수 대비 계산 내역, 최근 30일 매매 횟수, 위성 종목 묶음 성과, 시스템 점검 결과입니다.')}</summary>` + kisSummary(s) + `<p class="pp-kis-note">계획: ${esc(pl.label)}${s.markets?.US ? ` · 미국 장 ${s.markets.US.open ? '열림' : '닫힘'}` : ''}</p>` + prog + activityHtml(s) + sleeveHtml(s) + fearHtml(s) + eventsHtml() + integrityHtml(s) + '</details>'
     + baselineHtml(s) + historyHtml(s) + planDocHtml(pl.source === 'default' ? PLAN_DOC : null);
   wireBaseline(s);
   $('#pp-kis-kill').textContent = s.killSwitch ? '정지 해제' : '전체 정지'; renderHyp(s.hypotheses || [], !s.live);
