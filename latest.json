@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T13:11:47.115Z",
+ "updatedAt": "2026-11-22T13:27:01.824Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,8 +119,8 @@
   }
  ],
  "spikes": {
-  "war": -1.2,
-  "politics": 0.1,
+  "war": -1.1,
+  "politics": -0.4,
   "rates": -0.9,
   "trade": 0.1,
   "fx": -0.1,
@@ -128,7 +128,7 @@
   "market": 0.9,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 4.2
+  "policy": 3.9
  },
  "rates": {
   "war": {
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.2,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 5.3,
+   "rate": 5,
    "saturated": 0,
    "queries": 1
   }
@@ -188,8 +188,8 @@
    "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
    "firstSeen": "2026-11-22T09:20:00.000Z",
    "lastSeen": "2026-11-22T13:02:00.000Z",
-   "count": 28,
-   "sources": 26,
+   "count": 26,
+   "sources": 24,
    "topics": [
     "market",
     "policy"
@@ -227,7 +227,7 @@
     "level": "urgent",
     "label": "긴급",
     "score": 100,
-    "spike": 4.2,
+    "spike": 3.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -238,7 +238,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.9σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -287,7 +287,7 @@
     "level": "caution",
     "label": "주의",
     "score": 98,
-    "spike": 4.2,
+    "spike": 3.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -298,7 +298,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.9σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -427,14 +427,20 @@
    "id": "1yuza9l",
    "title": "‘블랙먼데이’ 우려에…정부 “증안펀드 가동 준비작업 착수”",
    "firstSeen": "2026-11-22T09:24:00.000Z",
-   "lastSeen": "2026-11-22T13:08:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-22T13:20:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [],
    "critical": [
     "market"
    ],
    "links": [
+    {
+     "title": "블랙먼데이 우려 높아지자, 정부 증안펀드 가동 준비 착수",
+     "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611222213458150078",
+     "host": "dnews.co.kr",
+     "at": "2026-11-22T13:20:00.000Z"
+    },
     {
      "title": "F4, '블랙먼데이' 우려에 '증안펀드' 준비 착수...18년만 가동되나",
      "link": "https://www.slist.kr/news/articleView.html?idxno=783823",
@@ -452,18 +458,12 @@
      "link": "https://m.skyedaily.com/news_view.html?ID=315006",
      "host": "m.skyedaily.com",
      "at": "2026-11-22T11:58:00.000Z"
-    },
-    {
-     "title": "블랙먼데이 공포에…증안펀드 가동 착수",
-     "link": "https://www.sedaily.com/article/20117482?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-22T10:24:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 70,
+    "score": 71,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -818,7 +818,7 @@
     "level": "caution",
     "label": "주의",
     "score": 64,
-    "spike": 4.2,
+    "spike": 3.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -828,7 +828,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.9σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -911,7 +911,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 61,
-    "spike": 4.2,
+    "spike": 3.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -921,13 +921,26 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 3.9σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-22T13:27:01.824Z",
+   "id": "wo7t1x",
+   "level": "caution",
+   "title": "정점식 \"내일 '블랙먼데이' 우려…정부, 긴급 대응책 준비해야\"",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160285224379998",
+   "delivered": false
+  },
   {
    "at": "2026-11-22T13:06:01.210Z",
    "id": "1yuza9l",
@@ -1159,19 +1172,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.ajunews.com/view/20261122143157860",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T11:27:13.541Z",
-   "id": "103b4q0",
-   "level": "caution",
-   "title": "반도체 실적 기대에도 외국인 매도 지속…다음 주 코스피 반등 시험대",
-   "why": [
-    "기사 급증(평소 대비 4.2σ)",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.mk.co.kr/article/12215572",
    "delivered": false
   }
  ],
