@@ -1,0 +1,79 @@
+PREREG-J run 2026-11-22T14:52:02.467Z
+SRC GC=F: 2000-08-30..2026-11-20 n=6583
+SRC IEF: 2002-07-30..2026-11-20 n=6119
+SRC ^VIX: 1990-01-02..2026-11-20 n=9293
+SRC HYG: 2007-04-11..2026-11-20 n=4937
+SRC ^KS11: 1996-12-11..2026-11-20 n=7370
+SRC ^NDX: 1985-10-01..2026-11-20 n=10366
+SRC DX-Y.NYB: 1971-01-04..2026-11-20 n=14191
+SRC ^GSPC: 1970-01-02..2026-11-20 n=14345
+SRC DCOILWTICO: 1986-01-02..2026-11-17 n=9547
+SRC NFCI: 1971-01-08..2026-11-13 n=2915
+SRC DGS3MO: 1981-09-01..2026-11-19 n=11304
+SRC USEPUINDXD: 1985-01-01..2026-11-19 n=15298
+SRC T10Y2Y: 1976-06-01..2026-11-20 n=12615
+SRC NFCICREDIT: 1971-01-08..2026-11-13 n=2915
+SRC VIXCLS: 1990-01-02..2026-11-19 n=9321
+SRC GPRD_MA30: 1985-01-01..2026-11-16 n=15295
+VIX cross-check Yahoo vs FRED: mean abs diff 0.0006 over 9289 days
+Features available from 1990-01-03 (logVIX,NFCI,NFCICREDIT_4w,T10Y2Y,DXY_21d,WTI_21d,logGPR_MA30,logEPU_30d)
+
+[H1 RV S&P 63d] OOS n=259 2005-01-31..2026-07-31
+  RMSE naive=0.4805 B+=0.4364 ridge=0.3872 ols=0.3877
+  improve ridge vs B+ = 11.3%  boot90%=[6.2, 17.6]  ols vs B+ = 11.2%  -> ADOPT
+  last ridge beta (intercept, base, logVIX,NFCI,NFCICREDIT_4w,T10Y2Y,DXY_21d,WTI_21d,logGPR_MA30,logEPU_30d): -1.949 0.021 0.241 0.080 0.031 -0.018 0.001 -0.005 -0.004 -0.042
+  2005-2012: n=96 B+=0.4551 ridge=0.4069
+  2013-2019: n=84 B+=0.3976 ridge=0.3755
+  2020-2026: n=79 B+=0.4524 ridge=0.3748
+
+Corr obs: 298 from 2001-10-31; common dates n=6238 (2000-08-31..2026-11-20)
+
+[H1 Corr S&P-gold-KOSPI 63d] OOS n=259 2005-01-31..2026-07-31
+  RMSE naive=0.1354 B+=0.1312 ridge=0.1554 ols=0.1567
+  improve ridge vs B+ = -18.4%  boot90%=[-31.4, -7.3]  ols vs B+ = -19.4%  -> REJECT
+  last ridge beta (intercept, base, logVIX,NFCI,NFCICREDIT_4w,T10Y2Y,DXY_21d,WTI_21d,logGPR_MA30,logEPU_30d): 0.082 0.039 0.017 -0.000 -0.009 -0.019 0.005 -0.005 -0.010 -0.008
+  2005-2012: n=96 B+=0.1317 ridge=0.1696
+  2013-2019: n=84 B+=0.1235 ridge=0.1435
+  2020-2026: n=79 B+=0.1385 ridge=0.1495
+
+[H2 logistic, last refit] n=8959 baseRate(dd<=-10% in 63d)=0.134 beta(std; intercept,logVIX,NFCI,NFCICREDIT_4w,T10Y2Y,DXY_21d,WTI_21d,logGPR_MA30,logEPU_30d)=-2.05 0.40 0.45 0.12 0.04 0.04 -0.11 0.07 -0.32 thresholds=0.249/0.419/0.731 vixFreq30/40/50=7.94%/2.31%/0.84%
+
+[H2 SPX variant i] from 1990-02-01 deployments=30 (12m-measurable 29) mean12mExcess=12.0% median=16.3% hit=72%
+   dates: 1990-08-07:r1 1997-10-28:r1 1997-12-26:r1 1998-08-05:r1 1998-09-01:r2 1998-12-15:r1 1999-01-14:r1 1999-02-09:r1 2000-04-17:r1 2001-09-18:r2 2007-08-16:r1 2007-11-13:r1 2008-09-30:r2 2008-10-07:r3 2015-08-25:r1 2018-02-06:r1 2018-12-24:r1 2020-02-28:r1 2020-03-02:r2 2020-03-10:r3 2020-09-04:r1 2020-10-29:r2 2021-01-28:r1 2021-12-02:r1 2022-01-26:r1 2024-08-06:r1 2025-04-04:r1 2025-04-07:r2 2025-04-09:r3 2026-03-30:r1
+
+[H2 SPX variant ii] from 1990-02-01 deployments=16 (12m-measurable 16) mean12mExcess=9.5% median=20.2% hit=63%
+   dates: 1991-01-14:r1 1997-11-17:r1 1997-12-26:r1 1998-09-08:r1 1998-09-11:r2 2000-12-21:r1 2001-09-24:r2 2007-08-16:r1 2007-11-13:r1 2008-09-30:r2 2008-10-07:r3 2018-12-24:r1 2020-02-28:r1 2020-03-02:r2 2020-03-10:r3 2022-03-07:r1
+
+[H2 SPX variant iii] from 2000-01-03 deployments=18 (12m-measurable 18) mean12mExcess=-6.5% median=-10.2% hit=39%
+   dates: 2000-02-01:r1 2000-02-04:r2 2000-03-22:r1 2000-03-23:r1 2000-03-24:r1 2000-03-27:r1 2000-03-28:r2 2007-08-17:r1 2007-11-05:r1 2007-11-26:r2 2009-02-03:r3 2014-10-17:r1 2014-12-18:r1 2015-08-25:r1 2015-08-26:r2 2020-03-03:r1 2020-03-11:r2 2022-09-23:r1
+
+[H2 SPX win2000] windows=203 2000-01-03..2016-11-01 meanTerminalCash=1.139
+   i: beats cash 99% meanTerminal=1.567 meanTriggers=8.78
+   ii: beats cash 100% meanTerminal=1.464 meanTriggers=5.52 beats(i) 10% ties 19%
+   iii: beats cash 95% meanTerminal=1.496 meanTriggers=10.40 beats(i) 41% ties 0%
+
+[H2 SPX win1990] windows=322 1990-02-01..2016-11-01 meanTerminalCash=1.270
+   i: beats cash 91% meanTerminal=1.591 meanTriggers=8.82
+   ii: beats cash 93% meanTerminal=1.532 meanTriggers=5.70 beats(i) 39% ties 12%
+
+[H2 NDX variant i] from 1990-02-01 deployments=29 (12m-measurable 28) mean12mExcess=38.8% median=39.7% hit=89%
+   dates: 1990-08-07:r1 1997-10-28:r1 1998-08-05:r1 1998-09-01:r2 1998-12-15:r1 1999-01-14:r1 1999-01-22:r1 1999-02-09:r1 2000-04-17:r1 2001-09-18:r2 2008-10-07:r3 2018-02-06:r1 2018-12-24:r1 2020-02-28:r1 2020-03-02:r2 2020-03-10:r3 2020-06-12:r1 2020-06-23:r1 2020-06-24:r1 2020-07-14:r1 2020-09-04:r1 2020-10-29:r2 2021-01-28:r1 2021-12-02:r1 2024-08-06:r1 2025-04-04:r1 2025-04-07:r2 2025-04-09:r3 2026-03-30:r1
+
+[H2 NDX variant ii] from 1990-02-01 deployments=12 (12m-measurable 12) mean12mExcess=36.9% median=46.2% hit=75%
+   dates: 1991-01-14:r1 1997-11-17:r1 1998-09-08:r1 1998-09-11:r2 2000-12-21:r1 2001-09-24:r2 2008-10-07:r3 2018-12-24:r1 2020-02-28:r1 2020-03-02:r2 2020-03-10:r3 2022-03-07:r1
+
+[H2 NDX variant iii] from 2000-01-03 deployments=31 (12m-measurable 31) mean12mExcess=-44.6% median=-57.8% hit=13%
+   dates: 2000-02-01:r1 2000-02-04:r1 2000-02-07:r1 2000-02-08:r1 2000-02-09:r1 2000-02-10:r2 2000-02-11:r1 2000-02-15:r2 2000-02-18:r1 2000-02-22:r2 2000-02-24:r1 2000-02-25:r1 2000-02-28:r2 2000-03-01:r1 2000-03-02:r1 2000-03-03:r2 2000-03-06:r1 2000-03-07:r1 2000-03-08:r2 2000-03-10:r1 2000-03-13:r1 2000-03-14:r2 2000-03-23:r1 2000-03-24:r1 2000-03-27:r1 2000-03-28:r1 2000-03-29:r2 2009-02-03:r3 2020-03-03:r1 2020-03-11:r2 2022-09-23:r1
+
+[H2 NDX win2000] windows=203 2000-01-03..2016-11-01 meanTerminalCash=1.139
+   i: beats cash 98% meanTerminal=1.787 meanTriggers=11.08
+   ii: beats cash 100% meanTerminal=1.657 meanTriggers=6.49 beats(i) 10% ties 18%
+   iii: beats cash 97% meanTerminal=1.645 meanTriggers=13.12 beats(i) 14% ties 0%
+
+[H2 NDX win1990] windows=322 1990-02-01..2016-11-01 meanTerminalCash=1.270
+   i: beats cash 85% meanTerminal=1.688 meanTriggers=10.11
+   ii: beats cash 89% meanTerminal=1.616 meanTriggers=5.83 beats(i) 39% ties 11%
+
+[H2 verdict ii] REJECT share beat(i): SPX 10% NDX 10% triggers {"SPX":{"variant":16,"plain_same_period":30},"NDX":{"variant":12,"plain_same_period":29}}
+
+[H2 verdict iii] REJECT share beat(i): SPX 41% NDX 14% triggers {"SPX":{"variant":18,"plain_same_period":22},"NDX":{"variant":31,"plain_same_period":21}}
