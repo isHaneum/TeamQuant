@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T15:27:02.215Z",
+ "updatedAt": "2026-11-22T15:47:38.504Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -1.1,
+  "war": -1,
   "politics": -0.4,
-  "rates": -1.2,
+  "rates": -1.1,
   "trade": 0,
   "fx": -0.1,
   "energy": -0.5,
   "market": 0.9,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 0.9
+  "policy": 0.6
  },
  "rates": {
   "war": {
-   "rate": 0.2,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
@@ -142,7 +142,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 0.4,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   }
@@ -188,8 +188,8 @@
    "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
    "firstSeen": "2026-11-22T09:20:00.000Z",
    "lastSeen": "2026-11-22T15:18:00.000Z",
-   "count": 27,
-   "sources": 24,
+   "count": 26,
+   "sources": 23,
    "topics": [
     "market",
     "policy"
@@ -618,46 +618,6 @@
    }
   },
   {
-   "id": "vrrtq4",
-   "title": "‘블랙먼데이’ 공포 커지는데…증권가 반전 전망 이유는",
-   "firstSeen": "2026-11-22T13:50:00.000Z",
-   "lastSeen": "2026-11-22T13:50:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "‘블랙먼데이’ 공포 커지는데…증권가 반전 전망 이유는",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=02007366645648344&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-22T13:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 65,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
    "id": "1srgkgg",
    "title": "수출 1조달러에도 연말 환율 1380원 전망…美 긴축·외국인 역송금 변수",
    "firstSeen": "2026-11-21T22:30:00.000Z",
@@ -883,6 +843,62 @@
     "label": "관찰",
     "score": 47,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1svic1a",
+   "title": "美 반도체주 10% 폭락에 '검은 월요일' 우려…코스피 4700까지 밀리나",
+   "firstSeen": "2026-11-21T22:01:00.000Z",
+   "lastSeen": "2026-11-22T13:02:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시 급락에 코스피 '검은 월요일' 우려…정부, 증시 안정 대책 가...",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3759676",
+     "host": "gukjenews.com",
+     "at": "2026-11-22T13:02:00.000Z"
+    },
+    {
+     "title": "나스닥·코스피 5%대 폭락 뒤 비트코인 6,000달러 반등",
+     "link": "http://coinreaders.com/272453",
+     "host": "coinreaders.com",
+     "at": "2026-11-22T11:58:00.000Z"
+    },
+    {
+     "title": "\"검은 월요일\" \"저점서 반등\" 코스피에 쏠린 눈",
+     "link": "https://www.fnnews.com/news/202611221826131484",
+     "host": "fnnews.com",
+     "at": "2026-11-22T09:26:00.000Z"
+    },
+    {
+     "title": "美 반도체주 10% 폭락에 '검은 월요일' 우려…코스피 4700까지 밀리나",
+     "link": "https://www.fnnews.com/news/202611221335539613",
+     "host": "fnnews.com",
+     "at": "2026-11-22T06:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
