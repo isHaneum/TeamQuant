@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-22T17:10:57.571Z",
+ "updatedAt": "2026-11-22T17:27:06.800Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-22",
-   "last": 1346.1300048828125,
-   "change": 0.85,
+   "last": 1346.0400390625,
+   "change": 0.84,
    "z": 1.3,
    "sd": 0.6323851576090757,
    "source": "Yahoo"
@@ -120,7 +120,7 @@
  ],
  "spikes": {
   "war": -1,
-  "politics": -0.3,
+  "politics": -0.4,
   "rates": -1.2,
   "trade": 0,
   "fx": -0.1,
@@ -128,7 +128,7 @@
   "market": 0.5,
   "credit": -0.2,
   "disaster": 0,
-  "policy": 0.6
+  "policy": 0.9
  },
  "rates": {
   "war": {
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.9,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.9,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   }
@@ -227,8 +227,8 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 80,
-    "spike": 0.6,
+    "score": 82,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -288,8 +288,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 79,
-    "spike": 0.6,
+    "score": 81,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -350,6 +350,53 @@
     "label": "주의",
     "score": 75,
     "spike": 0.5,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1yuza9l",
+   "title": "'블랙먼데이' 우려에 F4 긴급대응… 증안펀드 18년만에 가동되나",
+   "firstSeen": "2026-11-22T09:24:00.000Z",
+   "lastSeen": "2026-11-22T17:16:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "trade",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "블랙먼데이 우려, '증안펀드' 18년만에 시동…F4 \"준비 착수\"",
+     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302377",
+     "host": "financialpost.co.kr",
+     "at": "2026-11-22T17:16:00.000Z"
+    },
+    {
+     "title": "'블랙먼데이' 우려에 F4 긴급대응… 증안펀드 18년만에 가동되나",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3451144",
+     "host": "newscj.com",
+     "at": "2026-11-22T14:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 68,
+    "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -443,47 +490,6 @@
     "score": 65,
     "spike": 0.5,
     "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1yuza9l",
-   "title": "'블랙먼데이' 우려에 F4 긴급대응… 증안펀드 18년만에 가동되나",
-   "firstSeen": "2026-11-22T09:24:00.000Z",
-   "lastSeen": "2026-11-22T14:56:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade",
-    "policy"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "'블랙먼데이' 우려에 F4 긴급대응… 증안펀드 18년만에 가동되나",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3451144",
-     "host": "newscj.com",
-     "at": "2026-11-22T14:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 63,
-    "spike": 0.6,
-    "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -597,46 +603,6 @@
      "link": "https://weekly.khan.co.kr/article/202611221922001",
      "host": "weekly.khan.co.kr",
      "at": "2026-11-22T10:22:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 62,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "kqeox6",
-   "title": "증시 급락세에 정부 긴급회의 소집…증안펀드 투입 ‘만지작’",
-   "firstSeen": "2026-11-22T12:03:00.000Z",
-   "lastSeen": "2026-11-22T12:03:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "증시 급락세에 정부 긴급회의 소집…증안펀드 투입 ‘만지작’",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719425&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-22T12:03:00.000Z"
     }
    ],
    "assess": {
@@ -896,9 +862,72 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
+  },
+  {
+   "id": "103b4q0",
+   "title": "반도체 실적 기대에도 외국인 매도 지속…다음 주 코스피 반등 시험대",
+   "firstSeen": "2026-11-21T23:00:00.000Z",
+   "lastSeen": "2026-11-22T07:31:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "war",
+    "trade",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[동여의도 위클리] AI 서버 수요 지속 시험대 … 휴렛팩커드·델 실적 주...",
+     "link": "https://www.mk.co.kr/article/12215572",
+     "host": "mk.co.kr",
+     "at": "2026-11-22T07:31:00.000Z"
+    },
+    {
+     "title": "외국인 매도 85.6%, 삼전·하이닉스 직격…코스피 시험대",
+     "link": "http://coinreaders.com/272405",
+     "host": "coinreaders.com",
+     "at": "2026-11-22T05:28:00.000Z"
+    },
+    {
+     "title": "반도체 실적 기대에도 외국인 매도 지속…다음 주 코스피 반등 시험대",
+     "link": "https://www.mediapen.com/news/view/1139049",
+     "host": "mediapen.com",
+     "at": "2026-11-22T00:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-22T17:27:06.800Z",
+   "id": "49s3cv",
+   "level": "urgent",
+   "title": "[속보] 정부, 증시 급락에 증안펀드 가동 준비",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://weekly.chosun.com/news/articleView.html?idxno=57365",
+   "delivered": false
+  },
   {
    "at": "2026-11-22T16:13:33.119Z",
    "id": "49s3cv",
@@ -1130,19 +1159,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.ytn.co.kr/_ln/0102_202611222202561005",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-22T13:27:01.824Z",
-   "id": "wo7t1x",
-   "level": "caution",
-   "title": "정점식 \"내일 '블랙먼데이' 우려…정부, 긴급 대응책 준비해야\"",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160285224379998",
    "delivered": false
   }
  ],
