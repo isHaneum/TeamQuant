@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-23T22:27:34.495Z",
+ "updatedAt": "2026-11-23T22:47:49.812Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 1340.8699951171875,
-   "change": 0.46,
-   "z": 0.7,
+   "last": 1342.0999755859375,
+   "change": 0.55,
+   "z": 0.9,
    "sd": 0.6323851576090757,
    "source": "Yahoo"
   },
@@ -121,20 +121,20 @@
   }
  ],
  "spikes": {
-  "war": 0,
+  "war": 0.3,
   "politics": 1.3,
-  "rates": 0.7,
-  "trade": 1.8,
+  "rates": 1.3,
+  "trade": 2.4,
   "fx": -0.1,
-  "energy": 1.5,
-  "market": 0.9,
+  "energy": 2.8,
+  "market": 1,
   "credit": -0.2,
   "disaster": 0,
   "policy": 0.3
  },
  "rates": {
   "war": {
-   "rate": 1.4,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -144,12 +144,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.1,
+   "rate": 4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 5.5,
+   "rate": 6.2,
    "saturated": 1,
    "queries": 2
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4.3,
-   "saturated": 0,
+   "rate": 6.7,
+   "saturated": 1,
    "queries": 1
   },
   "market": {
-   "rate": 4.7,
+   "rate": 4.8,
    "saturated": 2,
    "queries": 3
   },
@@ -186,44 +186,51 @@
  },
  "issues": [
   {
-   "id": "15hvvns",
-   "title": "코스피 급락에 '매도 사이드카' 발동",
-   "firstSeen": "2026-11-23T02:42:00.000Z",
-   "lastSeen": "2026-11-23T09:28:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "zcz6su",
+   "title": "미국증시 급등, 젠슨 황 엔비디아 복귀에 나스닥 6.8%↑",
+   "firstSeen": "2026-11-23T14:44:00.000Z",
+   "lastSeen": "2026-11-23T22:46:00.000Z",
+   "count": 40,
+   "sources": 35,
    "topics": [
-    "market"
+    "fx",
+    "energy",
+    "market",
+    "disaster"
    ],
-   "critical": [
-    "market"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "코스피 3.31% 하락 마감…매도 사이드카 5분 발동",
-     "link": "https://www.vegannews.co.kr/news/article.html?no=409974",
-     "host": "vegannews.co.kr",
-     "at": "2026-11-23T09:28:00.000Z"
+     "title": "뉴욕증시, 젠슨 황의 귀환…엔비디아 31% 폭등, 나스닥 6.5% 급등",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=94012",
+     "host": "the-today.com",
+     "at": "2026-11-23T22:46:00.000Z"
     },
     {
-     "title": "한국거래소, 코스피 급락에 매도 사이드카 발동",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=506845",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-23T02:54:00.000Z"
+     "title": "엔비디아, 젠슨 황 CEO 복귀에 주가 33% 폭등…뉴욕증시 동반 급등",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=399877",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-23T22:46:00.000Z"
     },
     {
-     "title": "코스피 급락에 '매도 사이드카' 발동",
-     "link": "https://www.wikitree.co.kr/articles/1176920",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-23T02:42:00.000Z"
+     "title": "젠슨 황 복귀에 AI주 들썩⋯엔비디아 31%ㆍ아스테라랩스 23%↑[뉴욕증시...",
+     "link": "https://www.etoday.co.kr/news/view/2651932",
+     "host": "etoday.co.kr",
+     "at": "2026-11-23T22:44:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 젠슨 황 CEO복귀  등 영향 급등⋯엔비디아 31%대 수직상승-마...",
+     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447602",
+     "host": "econonews.co.kr",
+     "at": "2026-11-23T22:44:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 71,
-    "spike": 0.9,
-    "news": true,
+    "level": "watch",
+    "label": "관찰",
+    "score": 72,
+    "spike": 2.8,
+    "news": false,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -232,7 +239,6 @@
      "z": 4.3
     },
     "why": [
-     "핵심 단어",
      "S&P 500 +4.73%(평소의 4.3배)"
     ]
    }
@@ -273,8 +279,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 71,
-    "spike": 0.9,
+    "score": 72,
+    "spike": 1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -322,6 +328,52 @@
     "label": "주의",
     "score": 71,
     "spike": 1.3,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "15hvvns",
+   "title": "한국거래소, 코스피 급락에 매도 사이드카 발동",
+   "firstSeen": "2026-11-23T02:54:00.000Z",
+   "lastSeen": "2026-11-23T09:28:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피 3.31% 하락 마감…매도 사이드카 5분 발동",
+     "link": "https://www.vegannews.co.kr/news/article.html?no=409974",
+     "host": "vegannews.co.kr",
+     "at": "2026-11-23T09:28:00.000Z"
+    },
+    {
+     "title": "한국거래소, 코스피 급락에 매도 사이드카 발동",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=506845",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-23T02:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 69,
+    "spike": 1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -401,8 +453,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 65,
-    "spike": 0.9,
+    "score": 66,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -413,64 +465,6 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "zcz6su",
-   "title": "미국증시 급등, 젠슨 황 엔비디아 복귀에 나스닥 6.8%↑",
-   "firstSeen": "2026-11-23T14:44:00.000Z",
-   "lastSeen": "2026-11-23T22:27:00.000Z",
-   "count": 30,
-   "sources": 29,
-   "topics": [
-    "trade",
-    "fx",
-    "market",
-    "disaster"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'젠슨황 귀환' 엔비디아 31% 폭등…나스닥 6.5% 급등",
-     "link": "https://www.nocutnews.co.kr/news/6611443?utm_source=naver&utm_medium=article&utm_campaign=20261124072659",
-     "host": "nocutnews.co.kr",
-     "at": "2026-11-23T22:27:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 복귀'에 뉴욕증시 랠리…나스닥 6.51% 폭등",
-     "link": "https://www.ziksir.com/news/articleView.html?idxno=154378",
-     "host": "ziksir.com",
-     "at": "2026-11-23T22:26:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 복귀' 나스닥 6.51%↑…엔비디아 31.48% 급등에 반도체 패닉 진...",
-     "link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065564571344538",
-     "host": "megaeconomy.co.kr",
-     "at": "2026-11-23T22:24:00.000Z"
-    },
-    {
-     "title": "젠슨황 복귀에 나스닥 장중 7%대 급등…엔비디아 30%대↑",
-     "link": "https://www.tfmedia.co.kr/news/article.html?no=209160",
-     "host": "tfmedia.co.kr",
-     "at": "2026-11-23T22:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 64,
-    "spike": 1.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
      "S&P 500 +4.73%(평소의 4.3배)"
     ]
    }
@@ -500,8 +494,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 0,
+    "score": 60,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -517,214 +511,47 @@
    }
   },
   {
-   "id": "1xuptxe",
-   "title": "뉴욕증시, 젠슨 황 엔비디아 CEO 재임명에 상승 출발",
-   "firstSeen": "2026-11-23T14:42:00.000Z",
-   "lastSeen": "2026-11-23T22:22:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황 복귀에 뉴욕증시 급등…나스닥 6.51%·필라델피아 반도체지수 ...",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=758261",
-     "host": "econovill.com",
-     "at": "2026-11-23T22:22:00.000Z"
-    },
-    {
-     "title": "젠슨 황 복귀에 뉴욕증시 3대 지수 급등…나스닥 6% 넘게 상승",
-     "link": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=435879",
-     "host": "dailysportshankook.co.kr",
-     "at": "2026-11-23T22:16:00.000Z"
-    },
-    {
-     "title": "젠슨 황 돌아오자 엔비디아 32% 급등…나스닥 7% 뛰며 출발",
-     "link": "https://www.hankyung.com/article/202611245376i",
-     "host": "hankyung.com",
-     "at": "2026-11-23T15:10:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 젠슨 황 복귀에 폭등 출발…나스닥 6%대 급등",
-     "link": "https://www.newspim.com/news/view/20261123001206",
-     "host": "newspim.com",
-     "at": "2026-11-23T15:05:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1yeitnp",
-   "title": "오세훈 “대통령 이재명의 시간, 피고인 이재명에게 쓰지 말라”",
-   "firstSeen": "2026-11-23T06:58:00.000Z",
-   "lastSeen": "2026-11-23T10:45:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "374isv",
+   "title": "트럼프 “엔비디아 이사회 설득해 젠슨 황 복귀 성사”…밴스 부통령도...",
+   "firstSeen": "2026-11-23T18:56:00.000Z",
+   "lastSeen": "2026-11-23T22:46:00.000Z",
+   "count": 6,
+   "sources": 5,
    "topics": [
     "politics"
    ],
    "critical": [],
    "links": [
     {
-     "title": "오세훈 “대통령 이재명의 시간, 피고인 이재명에게 쓰지 말라”",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=580269&class=32&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-23T10:45:00.000Z"
+     "title": "트럼프, 젠슨 황 엔비디아 CEO 복귀 환영…\"위대한 애국자이자 국가적 ...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=399876",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-23T22:46:00.000Z"
     },
     {
-     "title": "오세훈 “대통령 이재명 삶, 피고인 이재명에게 쓰지 마시라”",
-     "link": "https://www.seoul.co.kr/news/publicnews/2026/11/23/20261123500322?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-23T08:42:00.000Z"
+     "title": "엔비디아, 젠슨 황 CEO 전격 복귀 결정…미국 정부 \"국가안보 위험 없다...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=399875",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-23T22:46:00.000Z"
     },
     {
-     "title": "오세훈 \"대통령 이재명 삶, 피고인 이재명에게 쓰지 마시라\"",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859489&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-23T08:00:00.000Z"
+     "title": "젠슨 황 내보냈다 다시 불러들인 엔비디아… 전문가들 “이사회가 CEO 견...",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/24/SIS4ROX3MZHOTDXSZ7HSKIUQ6E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-23T22:43:00.000Z"
     },
     {
-     "title": "오세훈 “대통령 이재명의 시간, 피고인 이재명에게 쓰지 말라”",
-     "link": "https://www.kyeonggi.com/article/20261123580256",
-     "host": "kyeonggi.com",
-     "at": "2026-11-23T07:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 52,
-    "spike": 1.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "m4d3tp",
-   "title": "[속보] 트럼프가 살려낸 젠슨 황 \"더 나은 CEO 되겠다\"...11일 만에 귀환...",
-   "firstSeen": "2026-11-23T21:50:00.000Z",
-   "lastSeen": "2026-11-23T22:26:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "politics",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "젠슨 황, 11일 만에 엔비디아 CEO 복귀…시총 9520억달러 사상 최대 증가",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261124010009052",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-23T22:26:00.000Z"
-    },
-    {
-     "title": "젠슨 황, 사임 11일 만에 엔비디아 CEO 복귀…트럼프 지원 결정적",
-     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000085868",
-     "host": "jnilbo.com",
-     "at": "2026-11-23T22:19:00.000Z"
-    },
-    {
-     "title": "젠슨 황, 사임 11일 만에 엔비디아 CEO 복귀",
-     "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=425261",
-     "host": "sisajournal-e.com",
-     "at": "2026-11-23T22:14:00.000Z"
-    },
-    {
-     "title": "[속보] 트럼프가 살려낸 젠슨 황 \"더 나은 CEO 되겠다\"...11일 만에 귀환...",
-     "link": "https://www.newsverse.kr/news/articleView.html?idxno=12025",
-     "host": "newsverse.kr",
-     "at": "2026-11-23T22:02:00.000Z"
+     "title": "젠슨 황, 엔비디아 CEO 복귀 첫날 직원들에 사과...트럼프 “내가 이사회...",
+     "link": "https://www.m-economynews.com/news/article.html?no=73493",
+     "host": "m-economynews.com",
+     "at": "2026-11-23T22:38:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 52,
+    "score": 56,
     "spike": 1.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1x3ur6b",
-   "title": "기술주 투매에 외인 이탈… 원/달러 환율, 1350원선 넘본다",
-   "firstSeen": "2026-11-22T23:14:00.000Z",
-   "lastSeen": "2026-11-23T15:20:00.000Z",
-   "count": 5,
-   "sources": 4,
-   "topics": [
-    "fx",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[환율마감] 증시 폭락·외인 이탈에 원화 약세 직격탄… 원/달러 환율 2...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629958",
-     "host": "cbci.co.kr",
-     "at": "2026-11-23T15:20:00.000Z"
-    },
-    {
-     "title": "해외IB들 \"원화 강세\"…반도체 달러 환전이 환율 향방 갈라",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03568646645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-23T10:11:00.000Z"
-    },
-    {
-     "title": "[외환+] AI 쇼크에 강달러···원·달러 환율, 2주 만에 1340원대 마감",
-     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643678",
-     "host": "seoulfn.com",
-     "at": "2026-11-23T07:26:00.000Z"
-    },
-    {
-     "title": "[외환+] 美 기술주 투매에 원화 '출렁'···환율 1340원대 출발",
-     "link": "https://www.seoulfn.com/news/articleView.html?idxno=643579",
-     "host": "seoulfn.com",
-     "at": "2026-11-22T23:50:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 50,
-    "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -768,8 +595,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
-    "spike": 1.8,
+    "score": 55,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -784,10 +611,10 @@
    }
   },
   {
-   "id": "qz2mxg",
-   "title": "美상무부, ‘中간첩 의혹’ 젠슨 황 불륜 상대 기업 블랙리스트 등재 [...",
-   "firstSeen": "2026-11-23T22:06:00.000Z",
-   "lastSeen": "2026-11-23T22:06:00.000Z",
+   "id": "1e9hzc",
+   "title": "황 CEO 복귀 동시에 메가스피드 제재…美, 中 유출 의혹 정조준",
+   "firstSeen": "2026-11-23T22:39:00.000Z",
+   "lastSeen": "2026-11-23T22:45:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
@@ -796,23 +623,23 @@
    "critical": [],
    "links": [
     {
-     "title": "美, '젠슨 황 불륜 상대' 설립한 메가스피드 제재…엔비디아 AI칩 수출 ...",
-     "link": "https://www.newsis.com/view/NISX20261124_0003880114",
-     "host": "newsis.com",
-     "at": "2026-11-23T22:06:00.000Z"
+     "title": "미, 젠슨 황 복귀 당일 '칩 우회 수출 의혹' 메가스피드 제재",
+     "link": "https://www.kado.net/news/articleView.html?idxno=2086813",
+     "host": "kado.net",
+     "at": "2026-11-23T22:45:00.000Z"
     },
     {
-     "title": "美상무부, ‘中간첩 의혹’ 젠슨 황 불륜 상대 기업 블랙리스트 등재 [...",
-     "link": "https://www.etoday.co.kr/news/view/2651923",
-     "host": "etoday.co.kr",
-     "at": "2026-11-23T22:06:00.000Z"
+     "title": "황 CEO 복귀 동시에 메가스피드 제재…美, 中 유출 의혹 정조준",
+     "link": "https://www.dt.co.kr/article/12096831?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-23T22:39:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
-    "spike": 1.8,
+    "score": 55,
+    "spike": 2.4,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -827,36 +654,32 @@
    }
   },
   {
-   "id": "1erb7go",
-   "title": "트럼프 정부, 젠슨황 복귀 당일 中첩자 의혹 내연녀 회사 제재(종합)",
-   "firstSeen": "2026-11-23T20:25:00.000Z",
-   "lastSeen": "2026-11-23T22:24:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "hwr6y2",
+   "title": "[국제금융 브리핑] 미 10월 근원 PCE 상승률 3.2% 전망...S&P500 주간 8.61...",
+   "firstSeen": "2026-11-22T23:32:00.000Z",
+   "lastSeen": "2026-11-22T23:32:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
+    "war",
     "politics",
-    "trade"
+    "rates",
+    "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "미 상무부, 젠슨 황 복귀 당일 '내연녀' 기업 수출통제 명단 등재",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=784200",
-     "host": "slist.kr",
-     "at": "2026-11-23T22:24:00.000Z"
-    },
-    {
-     "title": "트럼프 정부, 젠슨황 복귀 당일 中첩자 의혹 내연녀 회사 제재(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261124006551071?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-23T22:14:00.000Z"
+     "title": "[국제금융 브리핑] 미 10월 근원 PCE 상승률 3.2% 전망...S&P500 주간 8.61...",
+     "link": "https://www.tokenpost.kr/news/economy/442609",
+     "host": "tokenpost.kr",
+     "at": "2026-11-22T23:32:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
-    "spike": 1.8,
+    "score": 55,
+    "spike": 2.8,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -871,47 +694,147 @@
    }
   },
   {
-   "id": "18gb6vt",
-   "title": "韓中은 증시 안정책에도 하락, 대만은 3% 반등…엇갈린 아시아 증시 방...",
-   "firstSeen": "2026-11-23T05:30:00.000Z",
-   "lastSeen": "2026-11-23T08:41:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "id": "e3vw15",
+   "title": "미·중·러의 사상 첫 ‘민원해결 회담’ [뉴스룸에서]",
+   "firstSeen": "2026-11-23T09:42:00.000Z",
+   "lastSeen": "2026-11-23T09:42:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
+    "war",
+    "politics",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "미·중·러의 사상 첫 ‘민원해결 회담’ [뉴스룸에서]",
+     "link": "https://www.hani.co.kr/arti/opinion/column/1288728.html",
+     "host": "hani.co.kr",
+     "at": "2026-11-23T09:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 55,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "rp4edw",
+   "title": "'100만원→58만원'…가격 추락하자 다시 북적인다는데",
+   "firstSeen": "2026-11-23T12:00:00.000Z",
+   "lastSeen": "2026-11-23T12:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'100만원→58만원'…가격 추락하자 다시 북적인다는데",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611230169&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-23T12:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 55,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "elhgie",
+   "title": "中, 전기차 앞세워 39개국서 日 추월… 獨·이탈리아·브라질 등 14개국...",
+   "firstSeen": "2026-11-23T20:36:00.000Z",
+   "lastSeen": "2026-11-23T20:36:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "energy",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "시장안정조치에 대만 증시 2%대 반등…상하이 증시도 강보합",
-     "link": "https://www.fnnews.com/news/202611231728589259",
-     "host": "fnnews.com",
-     "at": "2026-11-23T08:41:00.000Z"
-    },
-    {
-     "title": "타이완 증시 2%대 반등…상하이 증시도 강보합",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859550&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-23T08:39:00.000Z"
-    },
-    {
-     "title": "시장안정조치에 대만 증시 2%대 반등…상하이증시도 강보합(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261123070351089?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-23T08:18:00.000Z"
-    },
-    {
-     "title": "韓中은 증시 안정책에도 하락, 대만은 3% 반등…엇갈린 아시아 증시 방...",
-     "link": "https://www.joongang.co.kr/article/25481063",
-     "host": "joongang.co.kr",
-     "at": "2026-11-23T05:30:00.000Z"
+     "title": "中, 전기차 앞세워 39개국서 日 추월… 獨·이탈리아·브라질 등 14개국...",
+     "link": "https://www.g-enews.com/view.php?ud=2026112317274979020c8c1c064d_1",
+     "host": "g-enews.com",
+     "at": "2026-11-23T20:36:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 0.9,
+    "score": 55,
+    "spike": 2.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "oxrwxj",
+   "title": "그물을 끌어올리는 시간…Sh수협은행장 인선에 비친 '뱃사람 DNA'",
+   "firstSeen": "2026-11-23T22:00:00.000Z",
+   "lastSeen": "2026-11-23T22:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "그물을 끌어올리는 시간…Sh수협은행장 인선에 비친 '뱃사람 DNA'",
+     "link": "https://www.e-science.co.kr/news/articleView.html?idxno=140483",
+     "host": "e-science.co.kr",
+     "at": "2026-11-23T22:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 55,
+    "spike": 2.8,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -927,6 +850,17 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-23T22:47:49.812Z",
+   "id": "1f7p34n",
+   "level": "caution",
+   "title": "머니투데이 오프라인 헤드라인-24일",
+   "why": [
+    "S&P 500 +4.73%(평소의 4.3배)"
+   ],
+   "link": "https://www.upkoreanews.kr/news/articleView.html?idxno=101342",
+   "delivered": false
+  },
   {
    "at": "2026-11-23T22:27:34.495Z",
    "id": "1y1cnzf",
@@ -1148,19 +1082,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.news1.kr/world/usa-canada/6362626",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T13:47:57.223Z",
-   "id": "1nkcj73",
-   "level": "caution",
-   "title": "\"싸졌다고 더 샀는데\"…바닥이 어디? 개미들 잇단 급락에 비명",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611230184&t=NN",
    "delivered": false
   }
  ],
