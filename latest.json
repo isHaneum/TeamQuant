@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-23T08:20:29.528Z",
+ "updatedAt": "2026-11-23T08:32:48.321Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 1344.8800048828125,
-   "change": 0.76,
-   "z": 1.2,
+   "last": 1344.4200439453125,
+   "change": 0.72,
+   "z": 1.1,
    "sd": 0.6323851576090757,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 83.16000366210938,
-   "change": -0.98,
-   "z": -0.3,
+   "last": 82.93000030517578,
+   "change": -1.25,
+   "z": -0.4,
    "sd": 2.886111087407602,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 3604.89990234375,
-   "change": 2.55,
+   "last": 3605.300048828125,
+   "change": 2.56,
    "z": 1.7,
    "sd": 1.473469183079339,
    "source": "Yahoo"
@@ -97,11 +97,11 @@
    "label": "VIX 변동성",
    "unit": "%",
    "available": true,
-   "date": "2026-11-20",
-   "last": 35.88999938964844,
-   "change": 26.2,
-   "z": 2.1,
-   "sd": 12.199893562336475,
+   "date": "2026-11-23",
+   "last": 31.34000015258789,
+   "change": -12.68,
+   "z": -1,
+   "sd": 12.57386450218817,
    "source": "Yahoo",
    "checked": true
   },
@@ -119,16 +119,16 @@
   }
  ],
  "spikes": {
-  "war": 2.1,
+  "war": 2,
   "politics": 3.1,
-  "rates": 2,
-  "trade": 1.2,
-  "fx": 1.3,
-  "energy": 0.8,
+  "rates": 1.9,
+  "trade": 1.3,
+  "fx": 1.7,
+  "energy": 0.9,
   "market": 1.4,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 3.3
+  "policy": 3.2
  },
  "rates": {
   "war": {
@@ -142,22 +142,22 @@
    "queries": 3
   },
   "rates": {
-   "rate": 4.9,
+   "rate": 4.8,
    "saturated": 2,
    "queries": 3
   },
   "trade": {
-   "rate": 4.7,
+   "rate": 4.8,
    "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 1,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 3,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
@@ -244,12 +244,60 @@
    }
   },
   {
+   "id": "1kb2ie",
+   "title": "'블랙먼데이' 1년 전으로 돌아간 코스피",
+   "firstSeen": "2026-11-23T07:12:00.000Z",
+   "lastSeen": "2026-11-23T08:00:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "‘블랙먼데이 공포’… 코스피 ‘3% 낙폭’으로 버텼다",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03270166645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-23T08:00:00.000Z"
+    },
+    {
+     "title": "'블랙먼데이' 1년 전으로 돌아간 코스피",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2022232",
+     "host": "m-i.kr",
+     "at": "2026-11-23T07:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 86,
+    "spike": 3.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "기사 급증(평소 대비 3.2σ)",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
    "id": "zhq6sk",
    "title": "[어제장 오늘장] 외국인 매도·美 금리·AI 우려…코스피 반등할까",
    "firstSeen": "2026-11-22T23:29:00.000Z",
-   "lastSeen": "2026-11-23T08:14:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "lastSeen": "2026-11-23T08:08:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
     "rates",
     "market"
@@ -259,35 +307,35 @@
    ],
    "links": [
     {
-     "title": "코스피 4700선 턱걸이…이틀 연속 매도 사이드카",
-     "link": "https://www.kukinews.com/article/view/kuk202611230180",
-     "host": "kukinews.com",
-     "at": "2026-11-23T08:14:00.000Z"
-    },
-    {
      "title": "코스피 4,700선 턱걸이…AI 투심 냉각에 이틀째 매도 사이드카",
      "link": "https://www.globalepic.co.kr/view.php?ud=2026112317025323467cc35ccc5c_29",
      "host": "globalepic.co.kr",
      "at": "2026-11-23T08:08:00.000Z"
     },
     {
-     "title": "코스피, 3% 넘게 급락 4,700선 후퇴…2거래일 연속 매도 사이드카",
-     "link": "https://www.goodnews1.com/news/articleView.html?idxno=466542",
-     "host": "goodnews1.com",
-     "at": "2026-11-23T08:02:00.000Z"
-    },
-    {
      "title": "한국거래소, 코스피 급락에 매도 사이드카 발동",
      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=506845",
      "host": "pinpointnews.co.kr",
      "at": "2026-11-23T02:54:00.000Z"
+    },
+    {
+     "title": "코스피 급락에 '매도 사이드카' 발동",
+     "link": "https://www.wikitree.co.kr/articles/1176920",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-23T02:42:00.000Z"
+    },
+    {
+     "title": "AI 매도 충격, 금리 내려도 추락한 금",
+     "link": "https://zdnet.co.kr/view/?no=20261123082408",
+     "host": "zdnet.co.kr",
+     "at": "2026-11-22T23:43:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 88,
-    "spike": 2,
+    "score": 85,
+    "spike": 1.9,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -304,33 +352,50 @@
    }
   },
   {
-   "id": "1kb2ie",
-   "title": "'블랙먼데이' 1년 전으로 돌아간 코스피",
-   "firstSeen": "2026-11-23T07:12:00.000Z",
-   "lastSeen": "2026-11-23T07:12:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "l140bo",
+   "title": "코스피 연속 급락에 반대매매 우려 확산···삼전닉스 신용잔고만 '6.9...",
+   "firstSeen": "2026-11-23T08:00:00.000Z",
+   "lastSeen": "2026-11-23T08:26:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
-    "politics",
-    "policy"
+    "market"
    ],
    "critical": [
     "market"
    ],
    "links": [
     {
-     "title": "'블랙먼데이' 1년 전으로 돌아간 코스피",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2022232",
-     "host": "m-i.kr",
-     "at": "2026-11-23T07:12:00.000Z"
+     "title": "코스피 3.31% 급락 4,708선 마감...AI 투자 불안에 이틀 연속 매도 사이드...",
+     "link": "https://www.m-economynews.com/news/article.html?no=73485",
+     "host": "m-economynews.com",
+     "at": "2026-11-23T08:26:00.000Z"
+    },
+    {
+     "title": "코스피, 3.31% 급락 4,700선 턱걸이…삼전·닉스 2∼3%대 하락",
+     "link": "https://www.delighti.co.kr/news/articleView.html?idxno=125441",
+     "host": "delighti.co.kr",
+     "at": "2026-11-23T08:22:00.000Z"
+    },
+    {
+     "title": "美 반도체주 급락 여파…코스피, 4700선 턱걸이 마감",
+     "link": "http://www.paxetv.com/news/articleView.html?idxno=287639",
+     "host": "paxetv.com",
+     "at": "2026-11-23T08:18:00.000Z"
+    },
+    {
+     "title": "코스피 4700선 턱걸이…이틀 연속 매도 사이드카",
+     "link": "https://www.kukinews.com/article/view/kuk202611230180",
+     "host": "kukinews.com",
+     "at": "2026-11-23T08:14:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 83,
-    "spike": 3.3,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 84,
+    "spike": 1.4,
+    "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -340,21 +405,19 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.3σ)",
-     "S&P 500 -3.7%(평소의 3.7배)"
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
   {
-   "id": "1lmjj2a",
-   "title": "美 AI주 투매 쇼크…글로벌 시장 덮친 '블랙먼데이' 공포[뉴스새벽배송...",
-   "firstSeen": "2026-11-22T23:00:00.000Z",
-   "lastSeen": "2026-11-23T08:00:00.000Z",
-   "count": 2,
-   "sources": 1,
+   "id": "1gth2k1",
+   "title": "'AI 회의론' 코스피, 4700선 겨우 지켜…코스닥은 연중 최저",
+   "firstSeen": "2026-11-23T06:49:00.000Z",
+   "lastSeen": "2026-11-23T08:26:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "rates",
-    "fx",
     "market"
    ],
    "critical": [
@@ -362,24 +425,36 @@
    ],
    "links": [
     {
-     "title": "‘블랙먼데이 공포’… 코스피 ‘3% 낙폭’으로 버텼다",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03270166645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-23T08:00:00.000Z"
+     "title": "코스피 3%대 급락 4708선 추락·코스닥 2년 만에 최저, 사이드카 2거래일...",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=886954",
+     "host": "gokorea.kr",
+     "at": "2026-11-23T08:26:00.000Z"
     },
     {
-     "title": "美 AI주 투매 쇼크…글로벌 시장 덮친 '블랙먼데이' 공포[뉴스새벽배송...",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01318566645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-22T23:00:00.000Z"
+     "title": "코스피·코스닥 동반 하락에 \"주식창 못 열어요\"",
+     "link": "https://www.inews365.com/news/article.html?no=944886",
+     "host": "inews365.com",
+     "at": "2026-11-23T08:04:00.000Z"
+    },
+    {
+     "title": "코스피 4700선으로 1월 수준 회귀…코스닥 2년 만에 최저",
+     "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82680",
+     "host": "newsfc.co.kr",
+     "at": "2026-11-23T08:02:00.000Z"
+    },
+    {
+     "title": "코스피 3%넘게 하락 마감…코스닥 2년 만에 최저",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8720121&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-23T08:01:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 75,
-    "spike": 2,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 81,
+    "spike": 1.4,
+    "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -389,7 +464,8 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -418,8 +494,50 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 75,
-    "spike": 2.1,
+    "score": 74,
+    "spike": 2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1lmjj2a",
+   "title": "美 AI주 투매 쇼크…글로벌 시장 덮친 '블랙먼데이' 공포[뉴스새벽배송...",
+   "firstSeen": "2026-11-22T23:00:00.000Z",
+   "lastSeen": "2026-11-22T23:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "美 AI주 투매 쇼크…글로벌 시장 덮친 '블랙먼데이' 공포[뉴스새벽배송...",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01318566645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-22T23:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 73,
+    "spike": 1.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -458,8 +576,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 74,
-    "spike": 2,
+    "score": 73,
+    "spike": 1.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -528,6 +646,52 @@
      "기사 급증(평소 대비 3.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
+   "id": "11wg42e",
+   "title": "AI 쇼크에 또 ‘블랙 먼데이’⋯코스피 4700선 턱걸이[韓경제 덮친 AI 거...",
+   "firstSeen": "2026-11-23T06:49:00.000Z",
+   "lastSeen": "2026-11-23T08:22:00.000Z",
+   "count": 2,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "증안펀드 '대기'⋯정부, 투입 시점·규모 고심[韓경제 덮친 AI 거품 공포...",
+     "link": "https://www.etoday.co.kr/news/view/2651733",
+     "host": "etoday.co.kr",
+     "at": "2026-11-23T08:22:00.000Z"
+    },
+    {
+     "title": "AI 쇼크에 또 ‘블랙 먼데이’⋯코스피 4700선 턱걸이[韓경제 덮친 AI 거...",
+     "link": "https://www.etoday.co.kr/news/view/2651826",
+     "host": "etoday.co.kr",
+     "at": "2026-11-23T08:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 70,
+    "spike": 1.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
@@ -612,84 +776,42 @@
    }
   },
   {
-   "id": "b3ef4b",
-   "title": "고점대비 반토막 또 ‘블랙 먼데이’…증안펀드가 겨우 지킨 4700선 [韓경...",
-   "firstSeen": "2026-11-23T06:10:00.000Z",
-   "lastSeen": "2026-11-23T08:10:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "고점대비 반토막 또 ‘블랙 먼데이’…증안펀드가 겨우 지킨 4700선 [韓경...",
-     "link": "https://www.etoday.co.kr/news/view/2651826",
-     "host": "etoday.co.kr",
-     "at": "2026-11-23T08:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 69,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "44aolb",
-   "title": "“증시 하락은 100% 민주당 탓”…책임론 이어가는 트럼프",
-   "firstSeen": "2026-11-23T02:32:00.000Z",
-   "lastSeen": "2026-11-23T07:36:00.000Z",
+   "id": "1rh9bvl",
+   "title": "폭락장 방어 나선 금융위…상장사 자사주 하루 매입한도 푼다",
+   "firstSeen": "2026-11-23T06:09:00.000Z",
+   "lastSeen": "2026-11-23T08:25:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "politics",
-    "fx",
-    "market"
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"증시 6조달러 증발, 100% 민주당 때문\"…트럼프의 '뒤끝'",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03155366645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "title": "금융위, 내일부터 상장사 자사주 1일 취득한도 3개월간 완화",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03355446645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
      "host": "edaily.co.kr",
-     "at": "2026-11-23T07:36:00.000Z"
+     "at": "2026-11-23T08:25:00.000Z"
     },
     {
-     "title": "트럼프 “6조 弗 증시 급락, 민주당 승리 탓” 맹비난",
-     "link": "https://www.sedaily.com/article/20117838?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-23T07:06:00.000Z"
+     "title": "금융위, 상장사 자사주 취득한도 풀어… 신고한 만큼 매수 가능",
+     "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001653",
+     "host": "it.chosun.com",
+     "at": "2026-11-23T08:14:00.000Z"
     },
     {
-     "title": "“증시 하락은 100% 민주당 탓”…책임론 이어가는 트럼프",
-     "link": "https://www.nongmin.com/article/20261123500319",
-     "host": "nongmin.com",
-     "at": "2026-11-23T06:42:00.000Z"
+     "title": "폭락장 방어 나선 금융위…상장사 자사주 하루 매입한도 푼다",
+     "link": "https://www.mydaily.co.kr/page/view/2026112316303405535",
+     "host": "mydaily.co.kr",
+     "at": "2026-11-23T07:40:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 64,
-    "spike": 3.1,
+    "spike": 3.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -699,16 +821,16 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.1σ)",
+     "기사 급증(평소 대비 3.2σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
   {
-   "id": "akulsn",
+   "id": "hz0d83",
    "title": "엔비디아 사태로 미중 무역전쟁 재점화?",
-   "firstSeen": "2026-11-22T23:10:00.000Z",
+   "firstSeen": "2026-11-23T02:18:00.000Z",
    "lastSeen": "2026-11-23T08:04:00.000Z",
    "count": 6,
    "sources": 6,
@@ -746,63 +868,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 63,
-    "spike": 2.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1ganbhn",
-   "title": "코스피, 3% 급락해 4,700선 '턱걸이'…코스닥 2년만 에 최저",
-   "firstSeen": "2026-11-23T03:01:00.000Z",
-   "lastSeen": "2026-11-23T08:18:00.000Z",
-   "count": 11,
-   "sources": 11,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 반도체주 급락 여파…코스피, 4700선 턱걸이 마감",
-     "link": "http://www.paxetv.com/news/articleView.html?idxno=287639",
-     "host": "paxetv.com",
-     "at": "2026-11-23T08:18:00.000Z"
-    },
-    {
-     "title": "美 반도체주 급락에 코스피 4700선 턱걸이 [마감시황]",
-     "link": "https://www.m-i.kr/news/articleView.html?idxno=2022253",
-     "host": "m-i.kr",
-     "at": "2026-11-23T08:12:00.000Z"
-    },
-    {
-     "title": "[포토] 코스피 4700선 턱걸이...10개월만에 최저",
-     "link": "https://www.ilyosisa.co.kr/news/article.html?no=259151",
-     "host": "ilyosisa.co.kr",
-     "at": "2026-11-23T08:10:00.000Z"
-    },
-    {
-     "title": "코스피 4,700선 턱걸이…코스닥 2년 만에 최저",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859262&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-23T08:07:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 61,
-    "spike": 1.4,
+    "score": 62,
+    "spike": 2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -820,14 +887,20 @@
    "id": "j7bgdg",
    "title": "올해 마지막 금통위 26일 열린다…증권가, 추가 금리 인상 무게",
    "firstSeen": "2026-11-23T02:34:00.000Z",
-   "lastSeen": "2026-11-23T08:04:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-23T08:30:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "금리 상승 언제까지 가나...한·미 추가 인상 예고에 자산시장 '휘청'",
+     "link": "https://www.banronbodo.com/news/articleView.html?idxno=33417",
+     "host": "banronbodo.com",
+     "at": "2026-11-23T08:30:00.000Z"
+    },
     {
      "title": "주식 떠나 예금으로…26일 금리 인상 땐 ‘머니무브’ 빨라질듯",
      "link": "https://www.donga.com/news/Economy/article/all/20261123/135074815/1",
@@ -845,19 +918,13 @@
      "link": "https://www.delighti.co.kr/news/articleView.html?idxno=125435",
      "host": "delighti.co.kr",
      "at": "2026-11-23T06:46:00.000Z"
-    },
-    {
-     "title": "한은, 26일 올해 마지막 금통위…기준금리 0.25%p 인상 전망 우세",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=328024",
-     "host": "thepublic.kr",
-     "at": "2026-11-23T06:10:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 61,
-    "spike": 2,
+    "spike": 1.9,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -870,65 +937,59 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
-  },
-  {
-   "id": "7ljmbb",
-   "title": "블룸버그 \"반도체 값 10% 떨어지면 韓 전체 수출액 4.3% 감소\"",
-   "firstSeen": "2026-11-23T06:46:00.000Z",
-   "lastSeen": "2026-11-23T08:00:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "블룸버그 \"반도체값 10% 하락 시 韓 전체 수출액 4.3% 감소\"",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888174",
-     "host": "getnews.co.kr",
-     "at": "2026-11-23T08:00:00.000Z"
-    },
-    {
-     "title": "“반도체값 10% 떨어지면 韓전체 수출액 4.3% 감소” 블룸버그 ‘무서운...",
-     "link": "https://biz.heraldcorp.com/article/10946433?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-23T07:30:00.000Z"
-    },
-    {
-     "title": "“반도체값 10% 떨어지면 한국 수출액 4.3% 감소할 것”",
-     "link": "https://www.kmib.co.kr/article/20261123501109",
-     "host": "kmib.co.kr",
-     "at": "2026-11-23T07:12:00.000Z"
-    },
-    {
-     "title": "\"반도체 값 10% 떨어지면 韓 전체 수출액 4.3% 감소\" 블룸버그",
-     "link": "https://biz.sbs.co.kr/article_hub/20000348261?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-23T06:55:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 61,
-    "spike": 2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "시장 반응만 있는 사건이 이미 2건"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-23T08:32:48.321Z",
+   "id": "7ljmbb",
+   "level": "caution",
+   "title": "블룸버그 \"반도체 값 10% 떨어지면 韓 전체 수출액 4.3% 감소\"",
+   "why": [
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.etoday.co.kr/news/view/2651863",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T08:32:48.321Z",
+   "id": "1gth2k1",
+   "level": "caution",
+   "title": "'AI 회의론' 코스피, 4700선 겨우 지켜…코스닥은 연중 최저",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.gokorea.kr/news/articleView.html?idxno=886954",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T08:32:48.321Z",
+   "id": "1kb2ie",
+   "level": "caution",
+   "title": "'블랙먼데이' 1년 전으로 돌아간 코스피",
+   "why": [
+    "핵심 단어",
+    "기사 급증(평소 대비 3.2σ)",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.edaily.co.kr/News/Read?newsId=03270166645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T08:32:48.321Z",
+   "id": "l140bo",
+   "level": "caution",
+   "title": "코스피 연속 급락에 반대매매 우려 확산···삼전닉스 신용잔고만 '6.9...",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.m-economynews.com/news/article.html?no=73485",
+   "delivered": false
+  },
   {
    "at": "2026-11-23T08:20:29.528Z",
    "id": "zhq6sk",
@@ -1124,57 +1185,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://www.kado.net/news/articleView.html?idxno=2086623",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T07:17:29.158Z",
-   "id": "b3ef4b",
-   "level": "caution",
-   "title": "증시 '블랙 먼데이' 공포에 정부 긴급회의…증안펀드 투입은 준비만, 공...",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 3.4σ)",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.ekn.kr/web/view.php?key=20261123025203462",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T07:17:29.158Z",
-   "id": "ys585u",
-   "level": "caution",
-   "title": "[환율마감] 위험회피⋯원ㆍ달러 장중 1350원 돌파 ‘2주일만 최고’",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/23/2026112350294.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T07:05:39.250Z",
-   "id": "1f7vean",
-   "level": "caution",
-   "title": "월요일 개장 5분 뒤 '사이드카' 켜지나…야간선물 7% 넘게 급락",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.news1.kr/photos/8228678",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T07:05:39.250Z",
-   "id": "f6h306",
-   "level": "caution",
-   "title": "트럼프發 AI 규제에 흔들리는 반도체 호황…국내 메모리 업체 영향은",
-   "why": [
-    "기사 급증(평소 대비 3.5σ)",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.news1.kr/photos/8228705",
    "delivered": false
   }
  ],
