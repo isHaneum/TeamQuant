@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-23T14:15:00.859Z",
+ "updatedAt": "2026-11-23T14:28:46.222Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 1341.1400146484375,
-   "change": 0.48,
-   "z": 0.8,
+   "last": 1339.469970703125,
+   "change": 0.35,
+   "z": 0.6,
    "sd": 0.6323851576090757,
    "source": "Yahoo"
   },
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 82.0999984741211,
-   "change": -2.24,
+   "last": 82.0199966430664,
+   "change": -2.33,
    "z": -0.8,
    "sd": 2.886111087407602,
    "source": "Yahoo"
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 3662.800048828125,
-   "change": 4.19,
-   "z": 2.8,
+   "last": 3665.5,
+   "change": 4.27,
+   "z": 2.9,
    "sd": 1.473469183079339,
    "source": "Yahoo"
   },
@@ -100,11 +100,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 35.08000183105469,
-   "change": -2.26,
-   "z": -0.2,
+   "last": 27.44,
+   "change": -23.54,
+   "z": -1.9,
    "sd": 12.551244247782337,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -113,9 +114,9 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-23",
-   "last": 4.958000183105469,
-   "change": 4.6,
-   "z": 0.8,
+   "last": 4.97599983215332,
+   "change": 6.4,
+   "z": 1.1,
    "sd": 5.704055199943639,
    "source": "Yahoo"
   }
@@ -123,11 +124,11 @@
  "spikes": {
   "war": -1.1,
   "politics": -0.6,
-  "rates": -0.8,
+  "rates": -1,
   "trade": 0.1,
   "fx": -0.1,
   "energy": -0.4,
-  "market": -0.1,
+  "market": 0.4,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.2
@@ -139,12 +140,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.7,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
@@ -164,7 +165,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.1,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 3
   },
@@ -228,140 +229,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 64,
+    "score": 66,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.19,
+     "change": 4.27,
      "unit": "%",
-     "z": 2.8
+     "z": 2.9
     },
     "why": [
      "핵심 단어",
-     "금 +4.19%(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "om309k",
-   "title": "이란, 美 보란 듯 신형 미사일 발사대 공개... 혁명수비대 “적에 굴욕...",
-   "firstSeen": "2026-11-23T05:00:00.000Z",
-   "lastSeen": "2026-11-23T05:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "war"
-   ],
-   "links": [
-    {
-     "title": "이란, 美 보란 듯 신형 미사일 발사대 공개... 혁명수비대 “적에 굴욕...",
-     "link": "https://www.chosun.com/international/international_general/2026/11/23/F4JO3LRTDBGNPOL3BLJQ3ETBCY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-23T05:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.19,
-     "unit": "%",
-     "z": 2.8
-    },
-    "why": [
-     "핵심 단어",
-     "금 +4.19%(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "1stozul",
-   "title": "호르무즈 선박 공격 ‘역대 최고치’…전쟁은 교착인데 왜 더 불타나 [이...",
-   "firstSeen": "2026-11-22T22:20:00.000Z",
-   "lastSeen": "2026-11-23T05:02:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "호르무즈 선박 공격 ‘역대 최고치’…전쟁은 교착인데 왜 더 불타나 [이...",
-     "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261123601008&wlog_tag3=naver",
-     "host": "nownews.seoul.co.kr",
-     "at": "2026-11-23T05:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.19,
-     "unit": "%",
-     "z": 2.8
-    },
-    "why": [
-     "핵심 단어",
-     "금 +4.19%(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "17ysxbc",
-   "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
-   "firstSeen": "2026-11-23T07:59:00.000Z",
-   "lastSeen": "2026-11-23T07:59:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "disaster"
-   ],
-   "links": [
-    {
-     "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
-     "link": "https://www.hankookilbo.com/news/article/A2026112309410004191?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-23T07:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.19,
-     "unit": "%",
-     "z": 2.8
-    },
-    "why": [
-     "핵심 단어",
-     "금 +4.19%(평소의 2.8배)"
+     "금 +4.27%(평소의 2.9배)"
     ]
    }
   },
@@ -408,76 +288,140 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 44,
-    "spike": 0,
+    "score": 58,
+    "spike": 0.4,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -23.54,
      "unit": "%",
-     "z": -1.2
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "코스피 -3.31%"
+     "VIX 변동성 -23.54%"
     ]
    }
   },
   {
-   "id": "13t233k",
-   "title": "이형일 부총리 \"내년에도 석유 가격 상한제 유지\" 결정, 국민 생활비 부...",
-   "firstSeen": "2026-11-23T05:18:00.000Z",
-   "lastSeen": "2026-11-23T10:48:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "id": "om309k",
+   "title": "이란, 美 보란 듯 신형 미사일 발사대 공개... 혁명수비대 “적에 굴욕...",
+   "firstSeen": "2026-11-23T05:00:00.000Z",
+   "lastSeen": "2026-11-23T05:00:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "war",
-    "energy",
-    "market"
+    "war"
    ],
-   "critical": [],
+   "critical": [
+    "war"
+   ],
    "links": [
     {
-     "title": "석유 최고가격제 해 넘길 듯…정부, 연내 운영 방안 발표",
-     "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091839",
-     "host": "kyongbuk.co.kr",
-     "at": "2026-11-23T10:48:00.000Z"
-    },
-    {
-     "title": "이형일 \"석유 최고가격제 내년에도 일정기간 유지\"",
-     "link": "https://www.mk.co.kr/article/12216384",
-     "host": "mk.co.kr",
-     "at": "2026-11-23T08:46:00.000Z"
-    },
-    {
-     "title": "“석유 최고가격제 내년에도 일정 기간 필요”",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8720140&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-23T08:21:00.000Z"
-    },
-    {
-     "title": "이형일 \"양극화 핵심은 청년 일자리…석유 최고가격제는 내년에도 유지...",
-     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/23/2026112390221.html",
-     "host": "news.tvchosun.com",
-     "at": "2026-11-23T07:56:00.000Z"
+     "title": "이란, 美 보란 듯 신형 미사일 발사대 공개... 혁명수비대 “적에 굴욕...",
+     "link": "https://www.chosun.com/international/international_general/2026/11/23/F4JO3LRTDBGNPOL3BLJQ3ETBCY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-23T05:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
+    "score": 57,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.19,
+     "change": 4.27,
      "unit": "%",
-     "z": 2.8
+     "z": 2.9
     },
     "why": [
-     "금 +4.19%(평소의 2.8배)"
+     "핵심 단어",
+     "금 +4.27%(평소의 2.9배)"
+    ]
+   }
+  },
+  {
+   "id": "1stozul",
+   "title": "호르무즈 선박 공격 ‘역대 최고치’…전쟁은 교착인데 왜 더 불타나 [이...",
+   "firstSeen": "2026-11-22T22:20:00.000Z",
+   "lastSeen": "2026-11-23T05:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "호르무즈 선박 공격 ‘역대 최고치’…전쟁은 교착인데 왜 더 불타나 [이...",
+     "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261123601008&wlog_tag3=naver",
+     "host": "nownews.seoul.co.kr",
+     "at": "2026-11-23T05:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 57,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.27,
+     "unit": "%",
+     "z": 2.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 +4.27%(평소의 2.9배)"
+    ]
+   }
+  },
+  {
+   "id": "17ysxbc",
+   "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
+   "firstSeen": "2026-11-23T07:59:00.000Z",
+   "lastSeen": "2026-11-23T07:59:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
+     "link": "https://www.hankookilbo.com/news/article/A2026112309410004191?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-23T07:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 57,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.27,
+     "unit": "%",
+     "z": 2.9
+    },
+    "why": [
+     "핵심 단어",
+     "금 +4.27%(평소의 2.9배)"
     ]
    }
   },
@@ -523,19 +467,76 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 41,
-    "spike": 0,
+    "score": 55,
+    "spike": 0.4,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -23.54,
      "unit": "%",
-     "z": -1.2
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "코스피 -3.31%"
+     "VIX 변동성 -23.54%"
+    ]
+   }
+  },
+  {
+   "id": "13t233k",
+   "title": "이형일 부총리 \"내년에도 석유 가격 상한제 유지\" 결정, 국민 생활비 부...",
+   "firstSeen": "2026-11-23T05:18:00.000Z",
+   "lastSeen": "2026-11-23T10:48:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "war",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "석유 최고가격제 해 넘길 듯…정부, 연내 운영 방안 발표",
+     "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091839",
+     "host": "kyongbuk.co.kr",
+     "at": "2026-11-23T10:48:00.000Z"
+    },
+    {
+     "title": "이형일 \"석유 최고가격제 내년에도 일정기간 유지\"",
+     "link": "https://www.mk.co.kr/article/12216384",
+     "host": "mk.co.kr",
+     "at": "2026-11-23T08:46:00.000Z"
+    },
+    {
+     "title": "“석유 최고가격제 내년에도 일정 기간 필요”",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8720140&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-23T08:21:00.000Z"
+    },
+    {
+     "title": "이형일 \"양극화 핵심은 청년 일자리…석유 최고가격제는 내년에도 유지...",
+     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/23/2026112390221.html",
+     "host": "news.tvchosun.com",
+     "at": "2026-11-23T07:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 48,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.27,
+     "unit": "%",
+     "z": 2.9
+    },
+    "why": [
+     "금 +4.27%(평소의 2.9배)"
     ]
    }
   },
@@ -575,63 +576,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 37,
+    "score": 48,
     "spike": 0,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -23.54,
      "unit": "%",
-     "z": -1.2
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "코스피 -3.31%"
-    ]
-   }
-  },
-  {
-   "id": "hz0d83",
-   "title": "엔비디아發 ‘미중 무역전쟁’ 2R",
-   "firstSeen": "2026-11-23T02:18:00.000Z",
-   "lastSeen": "2026-11-23T06:12:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[종합] 美, 엔비디아 조사 본격화…미중 무역전쟁 새 뇌관 되나",
-     "link": "https://www.ajunews.com/view/20261123141603192",
-     "host": "ajunews.com",
-     "at": "2026-11-23T06:12:00.000Z"
-    },
-    {
-     "title": "엔비디아發 ‘미중 무역전쟁’ 2R",
-     "link": "https://biz.heraldcorp.com/article/10946023?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-23T02:31:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 34,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.19,
-     "unit": "%",
-     "z": 2.8
-    },
-    "why": [
-     "금 +4.19%(평소의 2.8배)"
+     "VIX 변동성 -23.54%"
     ]
    }
   },
@@ -665,19 +622,149 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 34,
-    "spike": 0,
+    "score": 48,
+    "spike": 0.4,
     "news": true,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -3.31,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -23.54,
      "unit": "%",
-     "z": -1.2
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "코스피 -3.31%"
+     "VIX 변동성 -23.54%"
+    ]
+   }
+  },
+  {
+   "id": "fc6zsh",
+   "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
+   "firstSeen": "2026-11-23T06:58:00.000Z",
+   "lastSeen": "2026-11-23T06:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
+     "link": "https://www.newsgn.com/news/articleView.html?idxno=587424",
+     "host": "newsgn.com",
+     "at": "2026-11-23T06:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -23.54,
+     "unit": "%",
+     "z": -1.9
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 -23.54%"
+    ]
+   }
+  },
+  {
+   "id": "123gy87",
+   "title": "코스피 하반기 44% 폭락에 '블랙먼데이' 현실화...18년 만의 증안펀드, ...",
+   "firstSeen": "2026-11-23T07:31:00.000Z",
+   "lastSeen": "2026-11-23T12:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피 하반기 44% 폭락에 '블랙먼데이' 현실화...18년 만의 증안펀드, ...",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=507251",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-23T12:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": -23.54,
+     "unit": "%",
+     "z": -1.9
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 -23.54%"
+    ]
+   }
+  },
+  {
+   "id": "15c9ftg",
+   "title": "금값, 연준 금리 인상 신호에 무너졌는데...前 미국 조폐국장 \"내년 강세...",
+   "firstSeen": "2026-11-23T04:12:00.000Z",
+   "lastSeen": "2026-11-23T14:28:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "비트코인 반등의 열쇠는 수요일 PCE…연준 12월 25bp 인상 확률 88.6%",
+     "link": "https://www.wikitree.co.kr/articles/1177114",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-23T14:28:00.000Z"
+    },
+    {
+     "title": "[매크로 인사이트] 신윤정 연구원 “연준 12월 25bp 인상 후 내년 1회 추...",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611230178&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-23T10:46:00.000Z"
+    },
+    {
+     "title": "금값, 연준 금리 인상 신호에 무너졌는데...前 미국 조폐국장 \"내년 강세...",
+     "link": "http://coinreaders.com/272577",
+     "host": "coinreaders.com",
+     "at": "2026-11-23T04:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 38,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.27,
+     "unit": "%",
+     "z": 2.9
+    },
+    "why": [
+     "금 +4.27%(평소의 2.9배)"
     ]
    }
   },
@@ -712,105 +799,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0,
+    "score": 38,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.19,
+     "change": 4.27,
      "unit": "%",
-     "z": 2.8
+     "z": 2.9
     },
     "why": [
-     "금 +4.19%(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "15c9ftg",
-   "title": "금값, 연준 금리 인상 신호에 무너졌는데...前 미국 조폐국장 \"내년 강세...",
-   "firstSeen": "2026-11-23T04:12:00.000Z",
-   "lastSeen": "2026-11-23T10:46:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[매크로 인사이트] 신윤정 연구원 “연준 12월 25bp 인상 후 내년 1회 추...",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611230178&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-23T10:46:00.000Z"
-    },
-    {
-     "title": "금값, 연준 금리 인상 신호에 무너졌는데...前 미국 조폐국장 \"내년 강세...",
-     "link": "http://coinreaders.com/272577",
-     "host": "coinreaders.com",
-     "at": "2026-11-23T04:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.19,
-     "unit": "%",
-     "z": 2.8
-    },
-    "why": [
-     "금 +4.19%(평소의 2.8배)"
-    ]
-   }
-  },
-  {
-   "id": "wjhbce",
-   "title": "크렘린 \"미·우크라와 3자 종전협상 곧 재개…구체적 날짜는 미정\"",
-   "firstSeen": "2026-11-23T07:16:00.000Z",
-   "lastSeen": "2026-11-23T09:28:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "페스코프 \"우크라 관련 3자회담 곧 아부다비서 재개 가능성\"",
-     "link": "https://www.newsis.com/view/NISX20261123_0003879951",
-     "host": "newsis.com",
-     "at": "2026-11-23T09:28:00.000Z"
-    },
-    {
-     "title": "크렘린 \"미·우크라와 3자 종전협상 곧 재개…구체적 날짜는 미정\"",
-     "link": "https://www.news1.kr/world/europe/6363125",
-     "host": "news1.kr",
-     "at": "2026-11-23T07:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 33,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.19,
-     "unit": "%",
-     "z": 2.8
-    },
-    "why": [
-     "금 +4.19%(평소의 2.8배)"
+     "금 +4.27%(평소의 2.9배)"
     ]
    }
   },
@@ -844,18 +844,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0,
+    "score": 38,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.19,
+     "change": 4.27,
      "unit": "%",
-     "z": 2.8
+     "z": 2.9
     },
     "why": [
-     "금 +4.19%(평소의 2.8배)"
+     "금 +4.27%(평소의 2.9배)"
     ]
    }
   },
@@ -888,23 +888,59 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 33,
-    "spike": 0,
+    "score": 38,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.19,
+     "change": 4.27,
      "unit": "%",
-     "z": 2.8
+     "z": 2.9
     },
     "why": [
-     "금 +4.19%(평소의 2.8배)"
+     "금 +4.27%(평소의 2.9배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-23T14:28:46.222Z",
+   "id": "1db4zsb",
+   "level": "caution",
+   "title": "코스피 급락에 '매도 사이드카' 발동",
+   "why": [
+    "핵심 단어",
+    "VIX 변동성 -23.54%"
+   ],
+   "link": "https://www.ggilbo.com/news/articleView.html?idxno=1194997",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T14:28:46.222Z",
+   "id": "ttc4ll",
+   "level": "caution",
+   "title": "\"증안펀드 더해 비상계획까지 염두 공매도 금지 대신 3개월 특별 감시\"...",
+   "why": [
+    "핵심 단어",
+    "코스피 -3.31%"
+   ],
+   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8720602&ref=A",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T14:28:46.222Z",
+   "id": "yiooer",
+   "level": "caution",
+   "title": "'증안펀드' 카드 통했나? '블랙먼데이'는 피했지만…",
+   "why": [
+    "핵심 단어",
+    "VIX 변동성 -23.54%"
+   ],
+   "link": "http://www.yonhapnewstv.co.kr/news/MYH20261123222214vQG",
+   "delivered": false
+  },
   {
    "at": "2026-11-23T13:47:57.223Z",
    "id": "1stozul",
@@ -1104,41 +1140,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.news1.kr/world/usa-canada/6362626",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T11:27:04.910Z",
-   "id": "fc6zsh",
-   "level": "caution",
-   "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://imnews.imbc.com/replay/2026/nwdesk/article/6867923_37004.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T11:12:25.702Z",
-   "id": "w8tgms",
-   "level": "caution",
-   "title": "[셀럽의 한 수] '검은 월요일'에 한은 기준금리 인상 예상…'주식 대응...",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.newsis.com/view/NISX20261123_0003879924",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T11:12:25.702Z",
-   "id": "11wg42e",
-   "level": "caution",
-   "title": "코스피 3.31% 급락, 4700선 턱걸이…5개월 만에 반토막",
-   "why": [
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.kmib.co.kr/article/20261123501683",
    "delivered": false
   }
  ],
