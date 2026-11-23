@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-23T02:31:56.197Z",
+ "updatedAt": "2026-11-23T02:46:59.233Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 4629.63,
-   "change": -4.93,
-   "z": -1.8,
+   "last": 4600.88,
+   "change": -5.53,
+   "z": -2,
    "sd": 2.800835669349981,
    "source": "네이버 현재가",
    "live": true,
@@ -24,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 623.65,
-   "change": -3.41,
-   "z": -1.2,
+   "last": 620.43,
+   "change": -3.91,
+   "z": -1.4,
    "sd": 2.798217571789017,
    "source": "네이버 현재가",
    "live": true,
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 1346.5799560546875,
-   "change": 0.88,
-   "z": 1.4,
+   "last": 1346.1800537109375,
+   "change": 0.85,
+   "z": 1.3,
    "sd": 0.6323851576090757,
    "source": "Yahoo"
   },
@@ -76,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-22",
-   "last": 83.0999984741211,
-   "change": -1.05,
+   "last": 83.08000183105469,
+   "change": -1.07,
    "z": -0.4,
    "sd": 2.886111087407602,
    "source": "Yahoo"
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-22",
-   "last": 3584.39990234375,
-   "change": 1.96,
-   "z": 1.3,
+   "last": 3577.699951171875,
+   "change": 1.77,
+   "z": 1.2,
    "sd": 1.473469183079339,
    "source": "Yahoo"
   },
@@ -122,20 +122,20 @@
  ],
  "spikes": {
   "war": 2.2,
-  "politics": 3.9,
+  "politics": 3.8,
   "rates": 1.6,
   "trade": 1.7,
   "fx": 0.9,
-  "energy": -0.5,
+  "energy": 0.4,
   "market": 1.1,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 4.2
+  "policy": 4.1
  },
  "rates": {
   "war": {
    "rate": 3.4,
-   "saturated": 0,
+   "saturated": 1,
    "queries": 3
   },
   "politics": {
@@ -159,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.7,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 1
   },
@@ -229,7 +229,7 @@
     "level": "urgent",
     "label": "긴급",
     "score": 92,
-    "spike": 3.9,
+    "spike": 3.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -240,7 +240,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.9σ)",
+     "기사 급증(평소 대비 3.8σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -277,7 +277,7 @@
     "level": "caution",
     "label": "주의",
     "score": 86,
-    "spike": 4.2,
+    "spike": 4.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -288,20 +288,19 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
   {
-   "id": "1j0d50h",
-   "title": "코스피 반 토막, '블랙먼데이'까지 … 野 \"주가조작 특검해야\" 맹공 [정...",
-   "firstSeen": "2026-11-23T00:54:00.000Z",
-   "lastSeen": "2026-11-23T01:38:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "nwkasl",
+   "title": "\"대만은 블랙먼데이 피했다\"..무대책 한국 4% 폭락",
+   "firstSeen": "2026-11-23T00:26:00.000Z",
+   "lastSeen": "2026-11-23T02:46:00.000Z",
+   "count": 24,
+   "sources": 23,
    "topics": [
-    "politics",
     "market"
    ],
    "critical": [
@@ -309,18 +308,36 @@
    ],
    "links": [
     {
-     "title": "코스피 반 토막, '블랙먼데이'까지 … 野 \"주가조작 특검해야\" 맹공 [정...",
-     "link": "https://www.newdaily.co.kr/site/data/html/2026/11/23/2026112350074.html",
-     "host": "newdaily.co.kr",
-     "at": "2026-11-23T01:38:00.000Z"
+     "title": "[속보]코스피, 5%대 급락 4600선 붕괴…매도 사이드카 발동",
+     "link": "https://www.donga.com/news/Economy/article/all/20261123/135072534/1",
+     "host": "donga.com",
+     "at": "2026-11-23T02:46:00.000Z"
+    },
+    {
+     "title": "[속보] 코스피 5%대 급락…매도 사이드카 발동",
+     "link": "https://www.mk.co.kr/article/12215988",
+     "host": "mk.co.kr",
+     "at": "2026-11-23T02:45:00.000Z"
+    },
+    {
+     "title": "[속보] 코스피 급락에 매도 사이드카 발동",
+     "link": "https://www.todaykorea.co.kr/news/articleView.html?idxno=409002",
+     "host": "todaykorea.co.kr",
+     "at": "2026-11-23T02:44:00.000Z"
+    },
+    {
+     "title": "코스피 또 매도 사이드카 발동…반도체주 급락에 증시 '패닉'",
+     "link": "https://www.techm.kr/news/articleView.html?idxno=157701",
+     "host": "techm.kr",
+     "at": "2026-11-23T02:44:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 83,
-    "spike": 3.9,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 84,
+    "spike": 1.1,
+    "news": true,
     "reaction": {
      "symbol": "^GSPC",
      "label": "S&P 500",
@@ -330,8 +347,8 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.9σ)",
-     "S&P 500 -3.7%(평소의 3.7배)"
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -361,7 +378,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 83,
-    "spike": 4.2,
+    "spike": 4.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -372,7 +389,7 @@
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 4.2σ)",
+     "기사 급증(평소 대비 4.1σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -436,103 +453,6 @@
    }
   },
   {
-   "id": "gvyyac",
-   "title": "'블랙먼데이' 우려 속 코스피 3~4%대 하락 … 최악은 일단 모면 [위기의...",
-   "firstSeen": "2026-11-23T00:05:00.000Z",
-   "lastSeen": "2026-11-23T00:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "'블랙먼데이' 우려 속 코스피 3~4%대 하락 … 최악은 일단 모면 [위기의...",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/23/2026112350058.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-23T00:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 76,
-    "spike": 2.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "8hdlhw",
-   "title": "[천지일보 이슈종합] 계파 갈등·조희대 탄핵 추진·수능 개편론 확산·...",
-   "firstSeen": "2026-11-22T22:02:00.000Z",
-   "lastSeen": "2026-11-23T02:26:00.000Z",
-   "count": 10,
-   "sources": 8,
-   "topics": [
-    "politics"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "靑, 조희대 탄핵에 “국회 논의 사안”…이종석 교체설엔 “확인 불가”",
-     "link": "https://www.dt.co.kr/article/12096651?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-23T02:26:00.000Z"
-    },
-    {
-     "title": "국민의힘 “조희대 탄핵은 정권 자멸 축지법”…이진관 판사 고발도 추...",
-     "link": "https://www.dt.co.kr/article/12096649?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-23T02:25:00.000Z"
-    },
-    {
-     "title": "청와대 \"조희대 탄핵, 국회 사안…증시 불안은 미국 증시와 연동\"",
-     "link": "https://www.newspim.com/news/view/20261123000520",
-     "host": "newspim.com",
-     "at": "2026-11-23T02:12:00.000Z"
-    },
-    {
-     "title": "청와대 \"조희대 탄핵, 국회서 논의할 사안\"",
-     "link": "http://www.newstomato.com/ReadNews.aspx?no=1321416&inflow=N",
-     "host": "newstomato.com",
-     "at": "2026-11-23T02:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 75,
-    "spike": 3.9,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "기사 급증(평소 대비 3.9σ)",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
-    ]
-   }
-  },
-  {
    "id": "1g2oqbl",
    "title": "미국 연말 항공대란 오나…예산협상 교착에 셧다운 우려",
    "firstSeen": "2026-11-22T06:55:00.000Z",
@@ -573,7 +493,7 @@
     "level": "caution",
     "label": "주의",
     "score": 72,
-    "spike": 3.9,
+    "spike": 3.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -583,8 +503,66 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.9σ)",
+     "기사 급증(평소 대비 3.8σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1479k8f",
+   "title": "청와대 “조희대 탄핵, 국회서 논의할 사안…증시 불안정 미국과 연동”",
+   "firstSeen": "2026-11-23T02:05:00.000Z",
+   "lastSeen": "2026-11-23T02:44:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "politics",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "靑 \"조희대 탄핵, 국회 논의 사항\"…증시 급락엔 증안펀드 설명 예고",
+     "link": "https://www.hg-times.com/news/articleView.html?idxno=307252",
+     "host": "hg-times.com",
+     "at": "2026-11-23T02:44:00.000Z"
+    },
+    {
+     "title": "靑, 조희대 탄핵에 “국회 논의 사안”…이종석 교체설엔 “확인 불가”",
+     "link": "https://www.dt.co.kr/article/12096651?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-23T02:26:00.000Z"
+    },
+    {
+     "title": "청와대 \"조희대 탄핵, 국회 사안…증시 불안은 미국 증시와 연동\"",
+     "link": "https://www.newspim.com/news/view/20261123000520",
+     "host": "newspim.com",
+     "at": "2026-11-23T02:12:00.000Z"
+    },
+    {
+     "title": "청와대 \"조희대 탄핵, 국회서 논의할 사안\"",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1321416&inflow=N",
+     "host": "newstomato.com",
+     "at": "2026-11-23T02:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 71,
+    "spike": 3.8,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "기사 급증(평소 대비 3.8σ)",
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -671,37 +649,47 @@
    }
   },
   {
-   "id": "1xf0ll6",
-   "title": "삼성전자·SK하이닉스 동반 급락… 코스피 ‘블랙먼데이’ 현실화하나",
-   "firstSeen": "2026-11-22T18:00:00.000Z",
-   "lastSeen": "2026-11-23T01:50:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "8rsgud",
+   "title": "靑 “'가석방 없는 무기형' 검토…스토킹 피해자 보호 강화”",
+   "firstSeen": "2026-11-23T01:52:00.000Z",
+   "lastSeen": "2026-11-23T02:37:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "market"
+    "politics"
    ],
-   "critical": [
-    "market"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "[시황] 코스피 4700선 위태…삼성전자·SK하이닉스 동반 급락",
-     "link": "https://www.namdonews.com/news/articleView.html?idxno=930103",
-     "host": "namdonews.com",
-     "at": "2026-11-23T01:50:00.000Z"
+     "title": "청와대 \"스토킹 접근금지 기간 연장·가석방 없는 무기형 도입 검토\"",
+     "link": "https://news.jtbc.co.kr/article/NB12329344?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-23T02:37:00.000Z"
     },
     {
-     "title": "삼성전자·SK하이닉스 동반 급락… 코스피 ‘블랙먼데이’ 현실화하나",
-     "link": "https://www.mediawatch.kr/news/article.html?no=261831",
-     "host": "mediawatch.kr",
-     "at": "2026-11-23T00:40:00.000Z"
+     "title": "국민안전플러스 프로젝트 가동, 가석방 없는 무기형 도입 검토…스토킹...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629776",
+     "host": "cbci.co.kr",
+     "at": "2026-11-23T02:34:00.000Z"
+    },
+    {
+     "title": "청와대 \"스토킹 접근 금지 기간 연장 검토… 가석방 없는 무기형도\"",
+     "link": "https://www.hankookilbo.com/news/article/A2026112311070001754?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-23T02:23:00.000Z"
+    },
+    {
+     "title": "靑 \"가석방 없는 무기형 도입 검토…흉악범 영구 격리\"",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446006",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-23T02:06:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 70,
-    "spike": 1.1,
+    "spike": 3.8,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -711,8 +699,50 @@
      "z": -3.7
     },
     "why": [
+     "기사 급증(평소 대비 3.8σ)",
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
+   "id": "1uvl7nh",
+   "title": "이형일 “증안펀드 규모, 가동 상황 보며 검토”…공매도 금지보다 단속...",
+   "firstSeen": "2026-11-23T02:41:00.000Z",
+   "lastSeen": "2026-11-23T02:41:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "policy"
+   ],
+   "critical": [
+    "policy"
+   ],
+   "links": [
+    {
+     "title": "이형일 “증안펀드 규모, 가동 상황 보며 검토”…공매도 금지보다 단속...",
+     "link": "https://biz.heraldcorp.com/article/10945987?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-23T02:41:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 68,
+    "spike": 4.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.53,
+     "unit": "%",
+     "z": -2
+    },
+    "why": [
      "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
+     "기사 급증(평소 대비 4.1σ)",
+     "코스피 -5.53%(평소의 2배)"
     ]
    }
   },
@@ -797,81 +827,43 @@
    }
   },
   {
-   "id": "nwkasl",
-   "title": "\"대만은 블랙먼데이 피했다\"..무대책 한국 4% 폭락",
-   "firstSeen": "2026-11-23T00:26:00.000Z",
-   "lastSeen": "2026-11-23T00:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "\"대만은 블랙먼데이 피했다\"..무대책 한국 4% 폭락",
-     "link": "https://realty.chosun.com/site/data/html_dir/2026/11/23/2026112300733.html",
-     "host": "realty.chosun.com",
-     "at": "2026-11-23T00:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 67,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "8rsgud",
-   "title": "靑 “'가석방 없는 무기형' 검토…스토킹 피해자 보호 강화”",
-   "firstSeen": "2026-11-23T01:52:00.000Z",
-   "lastSeen": "2026-11-23T02:23:00.000Z",
+   "id": "f6h306",
+   "title": "AI 회의론·칩 규제·고금리 삼중 악재… 美 증시, 4년 반도체 강세장 ‘...",
+   "firstSeen": "2026-11-23T01:25:00.000Z",
+   "lastSeen": "2026-11-23T02:43:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "politics"
+    "rates",
+    "trade",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "청와대 \"스토킹 접근 금지 기간 연장 검토… 가석방 없는 무기형도\"",
-     "link": "https://www.hankookilbo.com/news/article/A2026112311070001754?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-23T02:23:00.000Z"
+     "title": "AI 회의론 vs. 긍정론…월가 전망은?",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348169?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-23T02:43:00.000Z"
     },
     {
-     "title": "靑 \"가석방 없는 무기형 도입 검토…흉악범 영구 격리\"",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446006",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-23T02:06:00.000Z"
+     "title": "월가 덮친 'AI 회의론'…\"데이터센터·中 수출규제 양대 악재\"(종합)",
+     "link": "https://view.asiae.co.kr/article/2026112310034154085",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-23T01:55:00.000Z"
     },
     {
-     "title": "靑 “'가석방 없는 무기형' 검토…스토킹 피해자 보호 강화”",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=01994246645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-23T01:52:00.000Z"
+     "title": "AI 회의론·칩 규제·고금리 삼중 악재… 美 증시, 4년 반도체 강세장 ‘...",
+     "link": "https://biz.chosun.com/international/international_economy/2026/11/23/7SZMAC3LGJDZXGUK5WN4W6DAPE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-23T01:25:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 64,
-    "spike": 3.9,
+    "spike": 4.1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -881,7 +873,58 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.9σ)",
+     "기사 급증(평소 대비 4.1σ)",
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
+    ]
+   }
+  },
+  {
+   "id": "1a49ql3",
+   "title": "장동혁 \"조희대 탄핵… 정권 자멸로 가는 축지법\"",
+   "firstSeen": "2026-11-23T01:38:00.000Z",
+   "lastSeen": "2026-11-23T02:25:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국민의힘 “조희대 탄핵은 정권 자멸 축지법”…이진관 판사 고발도 추...",
+     "link": "https://www.dt.co.kr/article/12096649?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-23T02:25:00.000Z"
+    },
+    {
+     "title": "장동혁 \"조희대 탄핵, 李정권 자폭…재판 재개 마중물 될 것\"",
+     "link": "https://www.pressian.com/pages/articles/2026112310432449873?utm_source=naver&utm_medium=search",
+     "host": "pressian.com",
+     "at": "2026-11-23T01:48:00.000Z"
+    },
+    {
+     "title": "장동혁 \"조희대 탄핵… 정권 자멸로 가는 축지법\"",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3451204",
+     "host": "newscj.com",
+     "at": "2026-11-23T01:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 64,
+    "spike": 3.8,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "기사 급증(평소 대비 3.8σ)",
      "S&P 500 -3.7%(평소의 3.7배)",
      "같은 시장 움직임의 다른 사건이 먼저"
     ]
@@ -889,6 +932,45 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-23T02:46:59.233Z",
+   "id": "f6h306",
+   "level": "caution",
+   "title": "AI 회의론·칩 규제·고금리 삼중 악재… 美 증시, 4년 반도체 강세장 ‘...",
+   "why": [
+    "기사 급증(평소 대비 4.1σ)",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000348169?division=NAVER",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T02:46:59.233Z",
+   "id": "1a49ql3",
+   "level": "caution",
+   "title": "장동혁 \"조희대 탄핵… 정권 자멸로 가는 축지법\"",
+   "why": [
+    "기사 급증(평소 대비 3.8σ)",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.dt.co.kr/article/12096649?ref=naver",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T02:46:59.233Z",
+   "id": "1479k8f",
+   "level": "caution",
+   "title": "청와대 “조희대 탄핵, 국회서 논의할 사안…증시 불안정 미국과 연동”",
+   "why": [
+    "기사 급증(평소 대비 3.8σ)",
+    "S&P 500 -3.7%(평소의 3.7배)",
+    "같은 시장 움직임의 다른 사건이 먼저"
+   ],
+   "link": "https://www.hg-times.com/news/articleView.html?idxno=307252",
+   "delivered": false
+  },
   {
    "at": "2026-11-23T02:31:56.197Z",
    "id": "1ymayvi",
@@ -1095,44 +1177,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.cbci.co.kr/news/articleView.html?idxno=629548",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T01:27:24.777Z",
-   "id": "w2olwr",
-   "level": "caution",
-   "title": "증안펀드 준비에도 ‘블랙먼데이’ 경계…이번 주 코스피, 정책 효과 시...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "http://www.yonhapnewstv.co.kr/news/AKR20261123101314Hxs",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T01:27:24.777Z",
-   "id": "11cu0r",
-   "level": "caution",
-   "title": "\"대만은 했는데 한국은\"…증시 급락에 '공매도 금지' 목소리",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 4.4σ)",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.cjb.co.kr/home/sub.php?menukey=61&mod=view&P_NO=261123502&PRO_CODE=99",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T01:15:49.220Z",
-   "id": "1f7vean",
-   "level": "caution",
-   "title": "월요일 개장 5분 뒤 '사이드카' 켜지나…야간선물 7% 넘게 급락",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=302370",
    "delivered": false
   }
  ],
