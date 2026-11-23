@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-23T13:15:49.696Z",
+ "updatedAt": "2026-11-23T13:28:45.742Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 1348.280029296875,
-   "change": 1.01,
-   "z": 1.6,
+   "last": 1347.449951171875,
+   "change": 0.95,
+   "z": 1.5,
    "sd": 0.6323851576090757,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 82.06999969482422,
-   "change": -2.27,
+   "last": 82.05000305175781,
+   "change": -2.3,
    "z": -0.8,
    "sd": 2.886111087407602,
    "source": "Yahoo"
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 3618.10009765625,
-   "change": 2.92,
+   "last": 3620.60009765625,
+   "change": 2.99,
    "z": 2,
    "sd": 1.473469183079339,
    "source": "Yahoo"
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 31.299999237060547,
-   "change": -12.79,
-   "z": -1,
+   "last": 30.950000762939453,
+   "change": -13.76,
+   "z": -1.1,
    "sd": 12.551244247782337,
    "source": "Yahoo",
    "checked": true
@@ -121,11 +121,11 @@
  "spikes": {
   "war": -1,
   "politics": -0.4,
-  "rates": -0.7,
-  "trade": 0.3,
+  "rates": -0.8,
+  "trade": 0.1,
   "fx": -0.1,
   "energy": -0.2,
-  "market": 0.3,
+  "market": 0.2,
   "credit": 0.1,
   "disaster": 0,
   "policy": -0.2
@@ -142,13 +142,13 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1.1,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.7,
-   "saturated": 1,
+   "rate": 3.5,
+   "saturated": 0,
    "queries": 2
   },
   "fx": {
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.7,
+   "rate": 3.6,
    "saturated": 1,
    "queries": 3
   },
@@ -227,7 +227,7 @@
     "level": "urgent",
     "label": "긴급",
     "score": 74,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -285,7 +285,7 @@
     "level": "caution",
     "label": "주의",
     "score": 70,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -420,6 +420,52 @@
    }
   },
   {
+   "id": "yiooer",
+   "title": "'증안펀드' 카드 통했나? '블랙먼데이'는 피했지만…",
+   "firstSeen": "2026-11-23T06:00:00.000Z",
+   "lastSeen": "2026-11-23T13:23:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "증시 급락에 증안펀드 카드…\"시기·규모 검토\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261123222214vQG",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-23T13:23:00.000Z"
+    },
+    {
+     "title": "'증안펀드' 카드 통했나? '블랙먼데이'는 피했지만…",
+     "link": "https://news.jtbc.co.kr/article/NB12329417?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-23T10:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 63,
+    "spike": 0.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
    "id": "fc6zsh",
    "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
    "firstSeen": "2026-11-23T06:58:00.000Z",
@@ -444,47 +490,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 60,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "yiooer",
-   "title": "'증안펀드' 카드 통했나? '블랙먼데이'는 피했지만…",
-   "firstSeen": "2026-11-23T06:00:00.000Z",
-   "lastSeen": "2026-11-23T10:52:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "'증안펀드' 카드 통했나? '블랙먼데이'는 피했지만…",
-     "link": "https://news.jtbc.co.kr/article/NB12329417?influxDiv=NAVER",
-     "host": "news.jtbc.co.kr",
-     "at": "2026-11-23T10:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 60,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -524,7 +530,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 60,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -622,7 +628,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 48,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -679,7 +685,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 48,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -790,7 +796,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 47,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -845,62 +851,7 @@
     "level": "watch",
     "label": "관찰",
     "score": 44,
-    "spike": 0.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "123gy87",
-   "title": "코스피 추락에 개미 비명…증안펀드 언제쯤",
-   "firstSeen": "2026-11-23T07:31:00.000Z",
-   "lastSeen": "2026-11-23T12:01:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"4만원대서 2000원대로 추락\"…레버리지 ETF 물린 개미 '피눈물' [종목+]",
-     "link": "https://www.hankyung.com/article/2026112348676",
-     "host": "hankyung.com",
-     "at": "2026-11-23T12:01:00.000Z"
-    },
-    {
-     "title": "[시사플랫폼] “일부에서 코스피 4,200선까지 추락 전망…미국 기술주 ...",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8720186&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-23T09:49:00.000Z"
-    },
-    {
-     "title": "추락하는 코스피 장중 5.8% 급락",
-     "link": "https://www.busan.com/view/busan/view.php?code=2026112318151075929",
-     "host": "busan.com",
-     "at": "2026-11-23T09:18:00.000Z"
-    },
-    {
-     "title": "코스피 추락에 개미 비명…증안펀드 언제쯤",
-     "link": "https://www.bigtanews.co.kr/article/view/big202611230021",
-     "host": "bigtanews.co.kr",
-     "at": "2026-11-23T08:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 44,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -955,7 +906,7 @@
     "level": "caution",
     "label": "주의",
     "score": 44,
-    "spike": 0.3,
+    "spike": 0.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -968,9 +919,72 @@
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
+  },
+  {
+   "id": "om309k",
+   "title": "이란, 美 보란 듯 신형 미사일 발사대 공개... 혁명수비대 “적에 굴욕...",
+   "firstSeen": "2026-11-23T05:00:00.000Z",
+   "lastSeen": "2026-11-23T05:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "war"
+   ],
+   "links": [
+    {
+     "title": "이란, 美 보란 듯 신형 미사일 발사대 공개... 혁명수비대 “적에 굴욕...",
+     "link": "https://www.chosun.com/international/international_general/2026/11/23/F4JO3LRTDBGNPOL3BLJQ3ETBCY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-23T05:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 43,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 2.99,
+     "unit": "%",
+     "z": 2
+    },
+    "why": [
+     "핵심 단어",
+     "금 +2.99%(평소의 2배)"
+    ]
+   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-23T13:28:45.742Z",
+   "id": "1vitf4m",
+   "level": "caution",
+   "title": "급락에 쪼그라든 코스피…고점 대비 반토막·올 수익률 11%로 뚝",
+   "why": [
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2315806",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T13:28:45.742Z",
+   "id": "yiooer",
+   "level": "caution",
+   "title": "'증안펀드' 카드 통했나? '블랙먼데이'는 피했지만…",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "http://www.yonhapnewstv.co.kr/news/MYH20261123222214vQG",
+   "delivered": false
+  },
   {
    "at": "2026-11-23T13:15:49.696Z",
    "id": "1db4zsb",
@@ -1182,30 +1196,6 @@
     "S&P 500 -3.7%(평소의 3.7배)"
    ],
    "link": "https://www.ggilbo.com/news/articleView.html?idxno=1194997",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T10:28:03.828Z",
-   "id": "1rh9bvl",
-   "level": "caution",
-   "title": "금융위, 상장사 자사주 취득한도 풀어… 신고한 만큼 매수 가능",
-   "why": [
-    "기사 급증(평소 대비 3σ)",
-    "코스피 -3.31%"
-   ],
-   "link": "http://www.segyebiz.com/newsView/20261123515943?OutUrl=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T10:14:36.841Z",
-   "id": "1stozul",
-   "level": "urgent",
-   "title": "이란 전쟁 다시 확전되나…트럼프 새해 공격 경고 속 호르무즈 유조선 ...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.news1.kr/world/usa-canada/6362626",
    "delivered": false
   }
  ],
