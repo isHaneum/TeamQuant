@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-23T10:14:36.841Z",
+ "updatedAt": "2026-11-23T10:28:03.828Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 1345.0699462890625,
-   "change": 0.77,
-   "z": 1.2,
+   "last": 1345.5,
+   "change": 0.8,
+   "z": 1.3,
    "sd": 0.6323851576090757,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 83.01000213623047,
-   "change": -1.16,
+   "last": 83.08000183105469,
+   "change": -1.07,
    "z": -0.4,
    "sd": 2.886111087407602,
    "source": "Yahoo"
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 3619.5,
-   "change": 2.96,
+   "last": 3619.89990234375,
+   "change": 2.97,
    "z": 2,
    "sd": 1.473469183079339,
    "source": "Yahoo"
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 30.3700008392334,
-   "change": -15.38,
-   "z": -1.2,
+   "last": 30.110000610351562,
+   "change": -16.1,
+   "z": -1.3,
    "sd": 12.551244247782337,
    "source": "Yahoo",
    "checked": true
@@ -119,40 +119,40 @@
   }
  ],
  "spikes": {
-  "war": 1.7,
-  "politics": 2.4,
-  "rates": 1.6,
-  "trade": 1.2,
-  "fx": 0.9,
+  "war": 1.5,
+  "politics": 2.2,
+  "rates": 1.5,
+  "trade": 1,
+  "fx": 0.3,
   "energy": 0.6,
-  "market": 1.4,
+  "market": 1.5,
   "credit": 0.3,
   "disaster": 0,
-  "policy": 3.1
+  "policy": 3
  },
  "rates": {
   "war": {
-   "rate": 3.1,
-   "saturated": 1,
+   "rate": 2.9,
+   "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 4.1,
+   "rate": 3.9,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 4.4,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 4.7,
+   "rate": 4.5,
    "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 0.7,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   },
@@ -162,7 +162,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 5.3,
+   "rate": 5.4,
    "saturated": 2,
    "queries": 3
   },
@@ -224,10 +224,10 @@
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 86,
-    "spike": 2.4,
+    "level": "caution",
+    "label": "주의",
+    "score": 85,
+    "spike": 2.2,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -283,10 +283,10 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 85,
-    "spike": 1.6,
+    "level": "urgent",
+    "label": "긴급",
+    "score": 84,
+    "spike": 1.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -297,8 +297,7 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 -3.7%(평소의 3.7배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   },
@@ -345,8 +344,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 84,
-    "spike": 1.6,
+    "score": 83,
+    "spike": 1.5,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -387,8 +386,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 72,
-    "spike": 1.7,
+    "score": 70,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -443,8 +442,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 66,
-    "spike": 2.4,
+    "score": 65,
+    "spike": 2.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -500,64 +499,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 61,
-    "spike": 1.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "hz0d83",
-   "title": "엔비디아 사태로 미중 무역전쟁 재점화?",
-   "firstSeen": "2026-11-23T02:18:00.000Z",
-   "lastSeen": "2026-11-23T08:51:00.000Z",
-   "count": 6,
-   "sources": 5,
-   "topics": [
-    "war",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美, 엔비디아 조사 본격화…미중 무역전쟁 재점화하나",
-     "link": "https://www.mk.co.kr/article/12216413",
-     "host": "mk.co.kr",
-     "at": "2026-11-23T08:51:00.000Z"
-    },
-    {
-     "title": "[종합] 美, 엔비디아 조사 본격화…미중 무역전쟁 새 뇌관 되나",
-     "link": "https://www.ajunews.com/view/20261123141603192",
-     "host": "ajunews.com",
-     "at": "2026-11-23T06:12:00.000Z"
-    },
-    {
-     "title": "미·중 반도체 갈등 무역전쟁 '재점화'",
-     "link": "https://www.safetimes.co.kr/news/articleView.html?idxno=247808",
-     "host": "safetimes.co.kr",
-     "at": "2026-11-23T05:58:00.000Z"
-    },
-    {
-     "title": "\"'엔비디아 사태', 휴전 두달 남은 美中 무역전쟁 재점화할수도\"",
-     "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=news_board&wr_id=57597",
-     "host": "ifs.or.kr",
-     "at": "2026-11-23T04:30:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 60,
-    "spike": 1.7,
+    "score": 59,
+    "spike": 1.5,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -611,8 +554,192 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
+    "score": 59,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)",
+     "시장 반응만 있는 사건이 이미 2건"
+    ]
+   }
+  },
+  {
+   "id": "hz0d83",
+   "title": "엔비디아 사태로 미중 무역전쟁 재점화?",
+   "firstSeen": "2026-11-23T02:18:00.000Z",
+   "lastSeen": "2026-11-23T08:51:00.000Z",
+   "count": 6,
+   "sources": 5,
+   "topics": [
+    "war",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美, 엔비디아 조사 본격화…미중 무역전쟁 재점화하나",
+     "link": "https://www.mk.co.kr/article/12216413",
+     "host": "mk.co.kr",
+     "at": "2026-11-23T08:51:00.000Z"
+    },
+    {
+     "title": "[종합] 美, 엔비디아 조사 본격화…미중 무역전쟁 새 뇌관 되나",
+     "link": "https://www.ajunews.com/view/20261123141603192",
+     "host": "ajunews.com",
+     "at": "2026-11-23T06:12:00.000Z"
+    },
+    {
+     "title": "미·중 반도체 갈등 무역전쟁 '재점화'",
+     "link": "https://www.safetimes.co.kr/news/articleView.html?idxno=247808",
+     "host": "safetimes.co.kr",
+     "at": "2026-11-23T05:58:00.000Z"
+    },
+    {
+     "title": "\"'엔비디아 사태', 휴전 두달 남은 美中 무역전쟁 재점화할수도\"",
+     "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=news_board&wr_id=57597",
+     "host": "ifs.or.kr",
+     "at": "2026-11-23T04:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
     "score": 58,
-    "spike": 1.4,
+    "spike": 1.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "1uf17m7",
+   "title": "[10개월전으로 돌아간 증시]AI 불신 팬데믹에 무너진 한국 증시…반도체...",
+   "firstSeen": "2026-11-23T09:06:00.000Z",
+   "lastSeen": "2026-11-23T09:06:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "[10개월전으로 돌아간 증시]AI 불신 팬데믹에 무너진 한국 증시…반도체...",
+     "link": "https://www.ajunews.com/view/20261123160144748",
+     "host": "ajunews.com",
+     "at": "2026-11-23T09:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "184lxsj",
+   "title": "[세모경] AI 거품론 재점화…미국발 '블랙 먼데이', 한국은 선방?",
+   "firstSeen": "2026-11-23T09:42:00.000Z",
+   "lastSeen": "2026-11-23T09:42:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[세모경] AI 거품론 재점화…미국발 '블랙 먼데이', 한국은 선방?",
+     "link": "https://news.jtbc.co.kr/article/NB12329406?influxDiv=NAVER",
+     "host": "news.jtbc.co.kr",
+     "at": "2026-11-23T09:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -3.7,
+     "unit": "%",
+     "z": -3.7
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 -3.7%(평소의 3.7배)"
+    ]
+   }
+  },
+  {
+   "id": "myfg0n",
+   "title": "[뉴스핌 뉴스레터 Today ANDA] 11월 23일",
+   "firstSeen": "2026-11-23T00:16:00.000Z",
+   "lastSeen": "2026-11-23T10:17:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "politics"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "11월 23일 '뉴스 9' 예고",
+     "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/23/2026112390238.html",
+     "host": "news.tvchosun.com",
+     "at": "2026-11-23T10:17:00.000Z"
+    },
+    {
+     "title": "11월 23일(월) 미리 보는 뉴스7",
+     "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5232480",
+     "host": "mbn.co.kr",
+     "at": "2026-11-23T08:33:00.000Z"
+    },
+    {
+     "title": "[뉴스핌 뉴스레터 Today ANDA] 11월 23일",
+     "link": "https://www.newspim.com/news/view/20261123000977",
+     "host": "newspim.com",
+     "at": "2026-11-23T07:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 57,
+    "spike": 2.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -652,8 +779,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 3.1,
+    "score": 57,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -663,7 +790,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.1σ)",
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -691,8 +818,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 3.1,
+    "score": 57,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -702,7 +829,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.1σ)",
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -731,8 +858,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 3.1,
+    "score": 57,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -742,7 +869,7 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.1σ)",
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
@@ -772,8 +899,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 3.1,
+    "score": 57,
+    "spike": 3,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -783,131 +910,37 @@
      "z": -3.7
     },
     "why": [
-     "기사 급증(평소 대비 3.1σ)",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "18bluxq",
-   "title": "[기자수첩] 장밋빛 청사진, 불안한 현실",
-   "firstSeen": "2026-11-23T07:18:00.000Z",
-   "lastSeen": "2026-11-23T07:18:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[기자수첩] 장밋빛 청사진, 불안한 현실",
-     "link": "https://monthly.chosun.com/news/articleView.html?idxno=72109",
-     "host": "monthly.chosun.com",
-     "at": "2026-11-23T07:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 3.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "기사 급증(평소 대비 3.1σ)",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "1vogl2w",
-   "title": "[칼럼] 실적과 주가 괴리 커진 코스피…2027년 반등 조건은",
-   "firstSeen": "2026-11-23T07:01:00.000Z",
-   "lastSeen": "2026-11-23T07:46:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics",
-    "trade",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[칼럼] 실적과 주가 괴리 커진 코스피…2027년 반등 조건은",
-     "link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065597856993046",
-     "host": "megaeconomy.co.kr",
-     "at": "2026-11-23T07:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 3.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "기사 급증(평소 대비 3.1σ)",
-     "S&P 500 -3.7%(평소의 3.7배)"
-    ]
-   }
-  },
-  {
-   "id": "123gy87",
-   "title": "[휘낭시에 카페] \"금융위기급 폭락에 엇갈린 선택\"...한국 '증안펀드' v...",
-   "firstSeen": "2026-11-23T07:31:00.000Z",
-   "lastSeen": "2026-11-23T08:06:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[휘낭시에 카페] \"금융위기급 폭락에 엇갈린 선택\"...한국 '증안펀드' v...",
-     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=131073",
-     "host": "ntoday.co.kr",
-     "at": "2026-11-23T08:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 58,
-    "spike": 3.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -3.7,
-     "unit": "%",
-     "z": -3.7
-    },
-    "why": [
-     "기사 급증(평소 대비 3.1σ)",
+     "기사 급증(평소 대비 3σ)",
      "S&P 500 -3.7%(평소의 3.7배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-23T10:28:03.828Z",
+   "id": "1db4zsb",
+   "level": "urgent",
+   "title": "코스피 급락에 '매도 사이드카' 발동",
+   "why": [
+    "핵심 단어",
+    "S&P 500 -3.7%(평소의 3.7배)"
+   ],
+   "link": "https://www.ggilbo.com/news/articleView.html?idxno=1194997",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-23T10:28:03.828Z",
+   "id": "1rh9bvl",
+   "level": "caution",
+   "title": "금융위, 상장사 자사주 취득한도 풀어… 신고한 만큼 매수 가능",
+   "why": [
+    "기사 급증(평소 대비 3σ)",
+    "코스피 -3.31%"
+   ],
+   "link": "http://www.segyebiz.com/newsView/20261123515943?OutUrl=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-23T10:14:36.841Z",
    "id": "1stozul",
@@ -1127,32 +1160,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://www.gokorea.kr/news/articleView.html?idxno=886954",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T08:32:48.321Z",
-   "id": "1kb2ie",
-   "level": "caution",
-   "title": "'블랙먼데이' 1년 전으로 돌아간 코스피",
-   "why": [
-    "핵심 단어",
-    "기사 급증(평소 대비 3.2σ)",
-    "S&P 500 -3.7%(평소의 3.7배)"
-   ],
-   "link": "https://www.edaily.co.kr/News/Read?newsId=03270166645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T08:32:48.321Z",
-   "id": "l140bo",
-   "level": "caution",
-   "title": "코스피 연속 급락에 반대매매 우려 확산···삼전닉스 신용잔고만 '6.9...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -3.7%(평소의 3.7배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.m-economynews.com/news/article.html?no=73485",
    "delivered": false
   }
  ],
