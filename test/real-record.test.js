@@ -99,3 +99,15 @@ test('공개 스냅샷 없음: real-record 는 paper-public 을 쓰지 않고, d
   for (const line of dev.split(/\r?\n/)) if (/realRecord/.test(line)) assert.doesNotMatch(line, /publishPublic|publicSnapshot|writeFileSync|paper-live-public/, '실계좌 기록은 공개 경로에 닿지 않는다');
   assert.doesNotMatch(dev, /createKisClient\([^)]*ro\b/, '실전 설정이 주문 클라이언트에 들어가지 않는다');
 });
+
+test('기준일 재설정(2026-11-23 · 분기 시작): 지난 기준선은 history 로 남고 다음 평가점이 새 기준선 · 수익률·비교선·운용 일수는 그날부터 · 평가점·체인은 그대로', async () => {
+  const { reader } = fakeReader(); let t = T0; const store = createLedgerStore(tmp(), { prefix: 'kis-prod' });
+  const rec = createRealRecord({ reader, store, readMarket, now: () => t });
+  let s = await rec.status(); assert.equal(s.baseline.from, '2026-11-12');
+  t += 864e5; s = await rec.status(); assert.equal(s.benchmark.days, 2); assert.equal(s.chain.length, 2);
+  const r = rec.resetBaseline({ note: '분기 시작' }); assert.equal(r.reset, true); assert.equal(r.previousFrom, '2026-11-12');
+  t += 864e5; s = await rec.status(); assert.equal(s.baseline.from, '2026-11-14', '다음 평가점이 새 기준선'); assert.equal(s.benchmark.days, 1); assert.equal(s.benchmark.diffPp, null, '기준일 하루면 비교 없음');
+  assert.equal(s.marks.length, 3, '평가점은 그대로'); assert.equal(s.chain.length, 3, '체인도 그대로'); assert.equal(s.chainCheck.ok, true);
+  const L = rec._ledger(); assert.equal(L.baselineHistory.length, 1); assert.equal(L.baselineHistory[0].from, '2026-11-12'); assert.equal(L.baselineHistory[0].note, '분기 시작');
+  t += 864e5; s = await rec.status(); assert.equal(s.benchmark.days, 2, '새 기준일부터 센다');
+});
