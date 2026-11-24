@@ -453,14 +453,22 @@ async function phFill(o) {
   if (!$('#ph-thesis').value.trim() && ev.length) $('#ph-thesis').value = `${o.name}: ${ev.slice(0, 3).join(', ')}. 이 흐름이 이어진다고 본다. (근거를 고쳐 쓰십시오)`;
 }
 attachStockSearch($('#ph-sym'), { onPick: o => { phPick = o; void phFill(o); } });
-function phStatusLabel(h) { return h.status === 'proposed' ? '승인 대기 · 계획 반영 전' : h.status === 'open' ? (h.expired ? '기한 지남 · 종료 필요' : '진행 중') : h.status === 'broken' ? '깨짐' : h.verdict === 'right' ? '종료 · 맞음' : h.verdict === 'wrong' ? '종료 · 틀림' : '종료'; }
+function phStatusLabel(h) { return h.status === 'proposed' ? '승인 대기 · 계획 반영 전' : h.status === 'open' ? (h.expired ? '기한 지남 · 종료 필요' : '진행 중') : h.status === 'broken' ? (h.autoBroken ? '깨짐(자동)' : '깨짐') : h.verdict === 'right' ? '종료 · 맞음' : h.verdict === 'wrong' ? '종료 · 틀림' : '종료'; }
+// 결정 60: 보유·매도 흐름 한 줄 — 규칙이 판 뒤에도 '진입 대비'만 보이던 것(보유 0주인데 52주처럼 보임)을 고친다. 수익은 현금흐름(판 돈 + 남은 보유 평가 ÷ 산 돈 − 1).
+const phPx = (v, cur) => (v === null || v === undefined ? '—' : cur === 'USD' ? '$' + Number(v).toFixed(2) : won(v));
+function phFlow(h) {
+  if (!h.boughtQty) return '';
+  const held = h.heldQty === null || h.heldQty === undefined ? '보유 확인 못 함' : `보유 ${h.heldQty}주`;
+  const sold = h.soldQty ? ` · ${h.soldQty}주 매도(평균 ${phPx(h.exitPrice, h.currency)} · 실현 ${h.realizedPct === null || h.realizedPct === undefined ? '—' : pct(h.realizedPct)}${h.lastSellWhy ? ` · 이유: ${esc(h.lastSellWhy)}` : ''})` : '';
+  return `<p class="cr-muted">${h.boughtQty}주 매수(평균 ${phPx(h.entryPrice, h.currency)}) · ${held}${sold}</p>`;
+}
 function renderHyp(list, readOnly = false) {
   const box = $('#pp-hyp-list'); if (!box) return; const sum = $('#pp-hyp-new summary'); if (sum) sum.textContent = readOnly ? '가설 추가 (모의투자 키가 있는 PC 연결 필요)' : '가설 추가'; if (!list) { box.innerHTML = '<p class="cr-muted">모의계좌 자료를 불러오면 가설 목록이 보입니다.</p>'; return; }
   if (!list.length) { box.innerHTML = '<p class="cr-muted">등록된 가설이 없습니다. 지금 모의계좌는 기본 계획(지수 + 근거 카드를 통과한 개별 종목)만 들고 있습니다.</p>'; return; }
   const total = K.status?.total || K.status?.balance?.total || null;
   box.innerHTML = [...list].sort((a, b) => (['open', 'proposed'].includes(a.status) ? 0 : 1) - (['open', 'proposed'].includes(b.status) ? 0 : 1) || b.openedAt.localeCompare(a.openedAt)).map(h => `<div class="ph-item"><header><b>${esc(h.name)} <small class="cr-muted">${esc(h.symbol)} · 한도 ${h.capPct}% · ${h.horizonMonths}개월${h.public === false ? ' · 비공개' : ''}</small></b><span class="st ${h.status}">${esc(phStatusLabel(h))}</span></header>
-    <div class="num">${h.status === 'proposed' ? `승인하면 계획에 ${h.capPct}% 반영 → 예상 매수 약 ${total ? won(total * h.capPct / 100) : '—'} (다음 장중 자동 재조정)` : h.returnPct !== null && h.returnPct !== undefined ? `진입 대비 <b class="${h.returnPct > 0 ? 'up' : h.returnPct < 0 ? 'down' : ''}">${pct(h.returnPct)}</b>` : '아직 체결 없음'}${h.indexPct !== null && h.indexPct !== undefined ? ` · 같은 기간 지수 ${pct(h.indexPct)}` : ''}${h.excessPct !== null && h.excessPct !== undefined ? ` · 지수 대비 <b>${pp(h.excessPct * 100)}</b>` : ''} · ${h.daysOpen}일째</div>
-    <p>${esc(h.thesis)}</p>${h.breakIf ? `<p class="cr-muted">깨지는 조건: ${esc(h.breakIf)}</p>` : ''}${h.evidence?.length ? `<p class="cr-muted">등록 때 근거: ${h.evidence.map(esc).join(' · ')}</p>` : ''}${h.closeNote ? `<p class="cr-muted">마감 메모: ${esc(h.closeNote)}</p>` : ''}
+    <div class="num">${h.status === 'proposed' ? `승인하면 계획에 ${h.capPct}% 반영 → 예상 매수 약 ${total ? won(total * h.capPct / 100) : '—'} (다음 장중 자동 재조정)` : h.returnPct !== null && h.returnPct !== undefined ? `${h.soldQty ? '가설 손익(판 것 포함)' : '진입 대비'} <b class="${h.returnPct > 0 ? 'up' : h.returnPct < 0 ? 'down' : ''}">${pct(h.returnPct)}</b>` : h.boughtQty ? '수익 계산 못 함(시세·잔고 확인 전)' : '아직 체결 없음'}${h.indexPct !== null && h.indexPct !== undefined ? ` · 같은 기간 지수 ${pct(h.indexPct)}` : ''}${h.excessPct !== null && h.excessPct !== undefined ? ` · 지수 대비 <b>${pp(h.excessPct * 100)}</b>` : ''} · ${h.daysOpen}일째</div>
+    ${phFlow(h)}<p>${esc(h.thesis)}</p>${h.stopLabels?.length ? `<p class="cr-muted">자동 깨짐 조건(끝난 세션 종가로 기계가 확인): ${h.stopLabels.map(esc).join(' · ')}</p>` : ''}${h.breakIf ? `<p class="cr-muted">깨지는 조건${h.stopLabels?.length ? '(글 · 사람이 확인)' : ''}: ${esc(h.breakIf)}</p>` : ''}${h.evidence?.length ? `<p class="cr-muted">등록 때 근거: ${h.evidence.map(esc).join(' · ')}</p>` : ''}${h.closeNote ? `<p class="cr-muted">마감 메모: ${esc(h.closeNote)}</p>` : ''}
     ${h.status === 'proposed' && !readOnly ? `<div class="acts"><button type="button" class="primary" data-ph="approve" data-id="${esc(h.id)}">계획 반영 승인</button><button type="button" data-ph="remove" data-id="${esc(h.id)}">지우기</button></div>` : ''}
     ${h.status === 'open' && !readOnly ? `<div class="acts"><button type="button" data-ph="break" data-id="${esc(h.id)}">깨짐으로 표시</button><button type="button" data-ph="right" data-id="${esc(h.id)}">종료 · 맞음</button><button type="button" data-ph="wrong" data-id="${esc(h.id)}">종료 · 틀림</button></div>` : ''}</div>`).join('');
   box.querySelectorAll('[data-ph]').forEach(b => b.onclick = async () => { const kind = b.dataset.ph; try {
