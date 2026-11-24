@@ -23,7 +23,9 @@ test('체결가: 호가 차이 절반 + 충격만큼 불리하게 · 호가 단�
 test('현재가 쓸 수 있나: 장중 표시 · 3분 안(지연 분 더함) · 정규장 안', () => {
   assert.equal(quoteUsable(q(100, KR_OPEN - 60e3), KR_OPEN, 'KR').ok, true);
   assert.match(quoteUsable(q(100, KR_OPEN - 600e3), KR_OPEN, 'KR').why, /10분 전/);
-  assert.equal(quoteUsable(q(100, KR_OPEN - 600e3, { delayMin: 15 }), KR_OPEN, 'KR').ok, true, '지연 시세는 지연 분만큼 봐 줌');
+  assert.match(quoteUsable(q(100, KR_OPEN - 60e3, { delayMin: 15 }), KR_OPEN, 'KR').why, /지연 시세/, '결정 64: 지연 시세로는 바로 체결하지 않음');
+  const op = T('2026-11-24T00:05:00Z'); assert.equal(quoteUsable(q(100, op - 30e3), op, 'KR').atOpen, true, '국내 개장 10분 안');
+  assert.ok(execPrice(100000, 'BUY', 'KR', 'stock', { atOpen: true }) > execPrice(100000, 'BUY', 'KR', 'stock'), '개장 직후는 호가 차이 넓게');
   assert.equal(quoteUsable(q(100, KR_CLOSED, { status: 'CLOSE' }), KR_CLOSED, 'KR').ok, false);
 });
 
