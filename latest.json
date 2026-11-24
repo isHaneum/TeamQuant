@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-24T22:12:07.576Z",
+ "updatedAt": "2026-11-24T22:27:07.014Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -121,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 0.4,
+  "war": 0.6,
   "politics": 0.5,
-  "rates": 0.5,
+  "rates": 0.8,
   "trade": 2.6,
   "fx": -0.2,
-  "energy": 1,
+  "energy": 2.4,
   "market": 0.8,
   "credit": 0.3,
   "disaster": 0,
@@ -134,7 +134,7 @@
  },
  "rates": {
   "war": {
-   "rate": 1.7,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -144,7 +144,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.1,
+   "rate": 3.6,
    "saturated": 0,
    "queries": 3
   },
@@ -159,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3.7,
+   "rate": 6.3,
    "saturated": 0,
    "queries": 1
   },
@@ -185,65 +185,6 @@
   }
  },
  "issues": [
-  {
-   "id": "c7xwuk",
-   "title": "올해만 사이드카 101번…2008년 금융위기 2배 넘는 ‘널뛰기 증시’",
-   "firstSeen": "2026-11-24T00:42:00.000Z",
-   "lastSeen": "2026-11-24T12:43:00.000Z",
-   "count": 6,
-   "sources": 5,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "금융위기 때의 2배…롤러코스터 장세에 올해만 사이드카 101번",
-     "link": "https://view.asiae.co.kr/article/2026112421362654127",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-24T12:43:00.000Z"
-    },
-    {
-     "title": "\"운 좋으면 따고 나쁘면 잃는 도박판\"…올해 사이드카 101회 [분석+]",
-     "link": "https://www.hankyung.com/article/2026112477987",
-     "host": "hankyung.com",
-     "at": "2026-11-24T09:08:00.000Z"
-    },
-    {
-     "title": "‘롤러코스터’ K증시…올해 이틀에 한 번 사이드카",
-     "link": "https://www.mk.co.kr/article/12217265",
-     "host": "mk.co.kr",
-     "at": "2026-11-24T07:53:00.000Z"
-    },
-    {
-     "title": "사이드카 올해 100회 돌파…코스피 발동 기준은 25년 넘게 ±5%",
-     "link": "https://www.raonnews.com/news/article.html?no=63037",
-     "host": "raonnews.com",
-     "at": "2026-11-24T06:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 67,
-    "spike": 0.8,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 6.32,
-     "unit": "%",
-     "z": 2.3
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 +6.32%(평소의 2.3배)"
-    ]
-   }
-  },
   {
    "id": "1au666y",
    "title": "[금/유가] 호르무즈 선박 피격에 유가 2% 상승…매파 연준 우려에 금값...",
@@ -281,9 +222,110 @@
    "assess": {
     "level": "urgent",
     "label": "긴급",
-    "score": 62,
-    "spike": 1,
+    "score": 73,
+    "spike": 2.4,
     "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 6.32,
+     "unit": "%",
+     "z": 2.3
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +6.32%(평소의 2.3배)"
+    ]
+   }
+  },
+  {
+   "id": "c7xwuk",
+   "title": "올해만 사이드카 101번…2008년 금융위기 2배 넘는 ‘널뛰기 증시’",
+   "firstSeen": "2026-11-24T00:42:00.000Z",
+   "lastSeen": "2026-11-24T12:43:00.000Z",
+   "count": 6,
+   "sources": 5,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "금융위기 때의 2배…롤러코스터 장세에 올해만 사이드카 101번",
+     "link": "https://view.asiae.co.kr/article/2026112421362654127",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-24T12:43:00.000Z"
+    },
+    {
+     "title": "증시 사이드카 올해 101회…매수 51회·매도 50회, 급등락 반복에 안전장...",
+     "link": "https://sateconomy.co.kr/news/view/1065593219015534",
+     "host": "sateconomy.co.kr",
+     "at": "2026-11-24T08:36:00.000Z"
+    },
+    {
+     "title": "‘롤러코스터’ K증시…올해 이틀에 한 번 사이드카",
+     "link": "https://www.mk.co.kr/article/12217265",
+     "host": "mk.co.kr",
+     "at": "2026-11-24T07:53:00.000Z"
+    },
+    {
+     "title": "사이드카 올해 100회 돌파…코스피 발동 기준은 25년 넘게 ±5%",
+     "link": "https://www.raonnews.com/news/article.html?no=63037",
+     "host": "raonnews.com",
+     "at": "2026-11-24T06:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 67,
+    "spike": 0.8,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 6.32,
+     "unit": "%",
+     "z": 2.3
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +6.32%(평소의 2.3배)"
+    ]
+   }
+  },
+  {
+   "id": "13wnay2",
+   "title": "‘젠슨 황 복귀’에 웃은 증시…빅스텝 공포·청문회 넘어야 진짜 랠리",
+   "firstSeen": "2026-11-24T15:00:00.000Z",
+   "lastSeen": "2026-11-24T15:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "rates",
+    "energy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "‘젠슨 황 복귀’에 웃은 증시…빅스텝 공포·청문회 넘어야 진짜 랠리",
+     "link": "https://www.newsis.com/view/NISX20261124_0003880966",
+     "host": "newsis.com",
+     "at": "2026-11-24T15:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 67,
+    "spike": 2.4,
+    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -350,33 +392,49 @@
    }
   },
   {
-   "id": "13wnay2",
-   "title": "‘젠슨 황 복귀’에 웃은 증시…빅스텝 공포·청문회 넘어야 진짜 랠리",
-   "firstSeen": "2026-11-24T15:00:00.000Z",
-   "lastSeen": "2026-11-24T15:00:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "uj3f9j",
+   "title": "뉴욕증시, 차익실현 매물 출회 등 영향 혼조세⋯엔비디아 5%대, 마이크론...",
+   "firstSeen": "2026-11-24T22:00:00.000Z",
+   "lastSeen": "2026-11-24T22:20:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
-    "war",
-    "rates",
-    "energy"
+    "politics",
+    "trade",
+    "market"
    ],
-   "critical": [
-    "rates"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "‘젠슨 황 복귀’에 웃은 증시…빅스텝 공포·청문회 넘어야 진짜 랠리",
-     "link": "https://www.newsis.com/view/NISX20261124_0003880966",
-     "host": "newsis.com",
-     "at": "2026-11-24T15:00:00.000Z"
+     "title": "뉴욕증시 혼조세, 엔비디아 주가 하락과 트럼프 관세 우려가 만든 변수...",
+     "link": "https://www.gokorea.kr/news/articleView.html?idxno=887164",
+     "host": "gokorea.kr",
+     "at": "2026-11-24T22:20:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 차익실현 매물 쏟아지며 혼조 마감… 엔비디아 6%↓",
+     "link": "https://biz.chosun.com/international/international_general/2026/11/25/3URLOKAUTZGBJFY37YTALTZKPI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-24T22:18:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시 마감] 엔비디아發 랠리 후 차익실현에 혼조…나스닥 1.48%↓",
+     "link": "https://www.ajunews.com/view/20261125070344839",
+     "host": "ajunews.com",
+     "at": "2026-11-24T22:10:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 급등 후 차익실현에 혼조…나스닥 1.5%↓",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888368",
+     "host": "getnews.co.kr",
+     "at": "2026-11-24T22:08:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 56,
-    "spike": 1,
+    "spike": 2.6,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -386,124 +444,27 @@
      "z": 2.3
     },
     "why": [
-     "핵심 단어",
      "코스피 +6.32%(평소의 2.3배)"
     ]
    }
   },
   {
-   "id": "hre0lh",
-   "title": "증시 사이드카 올해 101회…매수 51회·매도 50회, 급등락 반복에 안전장...",
-   "firstSeen": "2026-11-24T05:45:00.000Z",
-   "lastSeen": "2026-11-24T08:36:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "efofo",
+   "title": "뉴욕증시, 여전한 엔비디아 우려 등에 혼조...엔트로픽 공모가 붕괴",
+   "firstSeen": "2026-11-24T21:58:00.000Z",
+   "lastSeen": "2026-11-24T22:16:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "증시 사이드카 올해 101회…매수 51회·매도 50회, 급등락 반복에 안전장...",
-     "link": "https://sateconomy.co.kr/news/view/1065593219015534",
-     "host": "sateconomy.co.kr",
-     "at": "2026-11-24T08:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 54,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 6.32,
-     "unit": "%",
-     "z": 2.3
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 +6.32%(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "ukaqa0",
-   "title": "미국증시 전망, 젠슨 황 복귀 선반영…차익실현 경계",
-   "firstSeen": "2026-11-24T07:14:00.000Z",
-   "lastSeen": "2026-11-24T22:11:00.000Z",
-   "count": 18,
-   "sources": 14,
-   "topics": [
-    "market"
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "美증시, 젠슨 황 복귀 효과 하루 만에 끝났다…나스닥 1.5%↓",
-     "link": "https://www.dailian.co.kr/news/view/1719248/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-24T22:11:00.000Z"
-    },
-    {
-     "title": "‘젠슨 황 랠리’ 하루 만에 제동…나스닥 1.5%↓, 앤트로픽 공모가 붕...",
-     "link": "https://biz.heraldcorp.com/article/10948130?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-24T22:10:00.000Z"
-    },
-    {
-     "title": "하루 만에 식어버린 ‘젠슨 황 효과’…美반도체지수 8% 급락, 마이크론...",
-     "link": "https://biz.heraldcorp.com/article/10948124?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-24T22:07:00.000Z"
-    },
-    {
-     "title": "[구리 가격] 엔비디아·AI 관련주 반등 하루 만에 제동…구리 5.3% 급락",
-     "link": "https://kidd.co.kr/news/248257",
-     "host": "kidd.co.kr",
-     "at": "2026-11-24T22:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0.8,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 6.32,
-     "unit": "%",
-     "z": 2.3
-    },
-    "why": [
-     "코스피 +6.32%(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1b1hsl3",
-   "title": "뉴욕증시, 기술주 차익실현 속 하락 출발",
-   "firstSeen": "2026-11-24T14:52:00.000Z",
-   "lastSeen": "2026-11-24T22:06:00.000Z",
-   "count": 13,
-   "sources": 11,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[굿모닝 美 증시] 다우 5만선 넘었지만…엔비디아 하락에 나스닥 1.48%↓",
-     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261125010009594",
-     "host": "asiatoday.co.kr",
-     "at": "2026-11-24T22:06:00.000Z"
+     "title": "뉴욕증시, 기술주 매도ㆍ관세 우려 속 혼조 ⋯나스닥 1.5%↓[종합]",
+     "link": "https://www.etoday.co.kr/news/view/2652490",
+     "host": "etoday.co.kr",
+     "at": "2026-11-24T22:16:00.000Z"
     },
     {
      "title": "뉴욕증시, AI·기술주 반락 속 혼조…엔비디아 5.9%↓(종합)",
@@ -518,6 +479,152 @@
      "at": "2026-11-24T22:02:00.000Z"
     },
     {
+     "title": "뉴욕증시, 여전한 엔비디아 우려 등에 혼조...엔트로픽 공모가 붕괴",
+     "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284900",
+     "host": "womennews.co.kr",
+     "at": "2026-11-24T21:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 52,
+    "spike": 2.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 6.32,
+     "unit": "%",
+     "z": 2.3
+    },
+    "why": [
+     "코스피 +6.32%(평소의 2.3배)"
+    ]
+   }
+  },
+  {
+   "id": "d9x9qi",
+   "title": "'젠슨 황 랠리' 하루 만에 흔들…뉴욕증시 하락 출발·나스닥 1.39%↓",
+   "firstSeen": "2026-11-24T13:01:00.000Z",
+   "lastSeen": "2026-11-24T22:26:00.000Z",
+   "count": 19,
+   "sources": 17,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "AI 랠리 하루 만에 제동…엔비디아 급락에 나스닥 1.48% 후퇴",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68376",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-24T22:26:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 젠슨 황 복귀 효과 하루 만에 끝나…나스닥 1.5%↓",
+     "link": "https://www.sidae.com/article/2026112507221756814",
+     "host": "sidae.com",
+     "at": "2026-11-24T22:25:00.000Z"
+    },
+    {
+     "title": "[채권/외환] AI 랠리 하루 만에 주춤…국채 수익률 혼조·달러화 하락",
+     "link": "https://www.newspim.com/news/view/20261125000053",
+     "host": "newspim.com",
+     "at": "2026-11-24T22:23:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 랠리' 하루 만에 종료…뉴욕증시 혼조·엔비디아 5.9%↓",
+     "link": "https://news.tf.co.kr/read/economy/2392966.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-24T22:16:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 6.32,
+     "unit": "%",
+     "z": 2.3
+    },
+    "why": [
+     "코스피 +6.32%(평소의 2.3배)"
+    ]
+   }
+  },
+  {
+   "id": "uc54bh",
+   "title": "AI 관련주 하락에 나스닥 1.39%↓…관세 인상 우려 속 미 증시 혼조",
+   "firstSeen": "2026-11-24T15:36:00.000Z",
+   "lastSeen": "2026-11-24T22:26:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[속보]뉴욕증시 혼조 마감…나스닥 1.48% 하락, 젠슨 황 추가 논란·관세...",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=630411",
+     "host": "cbci.co.kr",
+     "at": "2026-11-24T22:26:00.000Z"
+    },
+    {
+     "title": "AI 관련주 하락에 나스닥 1.39%↓…관세 인상 우려 속 미 증시 혼조",
+     "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=627462",
+     "host": "mdtoday.co.kr",
+     "at": "2026-11-24T15:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 2.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 6.32,
+     "unit": "%",
+     "z": 2.3
+    },
+    "why": [
+     "코스피 +6.32%(평소의 2.3배)"
+    ]
+   }
+  },
+  {
+   "id": "ad8cnw",
+   "title": "젠슨 효과 다음날 차익실현…엔비디아·반도체주 일제히 하락",
+   "firstSeen": "2026-11-24T14:42:00.000Z",
+   "lastSeen": "2026-11-24T21:50:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "rates",
+    "trade",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "하루로 끝난 ‘젠슨 황 효과’...반도체지수, 차익실현에 8% ↓ [데일리...",
+     "link": "https://www.sedaily.com/article/20118553?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-24T21:50:00.000Z"
+    },
+    {
      "title": "젠슨 효과 다음날 차익실현…엔비디아·반도체주 일제히 하락",
      "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=55128",
      "host": "koreareport.co.kr",
@@ -528,7 +635,95 @@
     "level": "watch",
     "label": "관찰",
     "score": 46,
-    "spike": 0.8,
+    "spike": 2.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 6.32,
+     "unit": "%",
+     "z": 2.3
+    },
+    "why": [
+     "코스피 +6.32%(평소의 2.3배)"
+    ]
+   }
+  },
+  {
+   "id": "rjgdky",
+   "title": "[MUST KNOW5]테슬라-스페이스X 합병 '본격' 시작되나...특별위원회 구성",
+   "firstSeen": "2026-11-24T19:49:00.000Z",
+   "lastSeen": "2026-11-24T22:20:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[굿모닝 오늘의 증시] '황의 귀환' 후 美 차익실현…테슬라·스페이스X ...",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005969469",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-24T22:20:00.000Z"
+    },
+    {
+     "title": "[MUST KNOW5]테슬라-스페이스X 합병 '본격' 시작되나...특별위원회 구성",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01613766645649328&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-24T22:08:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 2.6,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 6.32,
+     "unit": "%",
+     "z": 2.3
+    },
+    "why": [
+     "코스피 +6.32%(평소의 2.3배)"
+    ]
+   }
+  },
+  {
+   "id": "1icw0k9",
+   "title": "민주 \"젠슨황 수출통제 위반\" 공세…공화 대중 강경파도 가세(종합)",
+   "firstSeen": "2026-11-24T17:03:00.000Z",
+   "lastSeen": "2026-11-24T22:20:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "젠슨 황 수출통제 위반 의혹…美 공화당도 트럼프 압박",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000086273",
+     "host": "jnilbo.com",
+     "at": "2026-11-24T22:20:00.000Z"
+    },
+    {
+     "title": "민주 \"젠슨황 수출통제 위반\" 공세…공화 대중 강경파도 가세(종합)",
+     "link": "https://www.yna.co.kr/view/AKR20261125002551071?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-24T22:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 46,
+    "spike": 2.6,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -620,43 +815,6 @@
    }
   },
   {
-   "id": "uc54bh",
-   "title": "AI 관련주 하락에 나스닥 1.39%↓…관세 인상 우려 속 미 증시 혼조",
-   "firstSeen": "2026-11-24T15:36:00.000Z",
-   "lastSeen": "2026-11-24T15:36:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AI 관련주 하락에 나스닥 1.39%↓…관세 인상 우려 속 미 증시 혼조",
-     "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=627462",
-     "host": "mdtoday.co.kr",
-     "at": "2026-11-24T15:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 2.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 6.32,
-     "unit": "%",
-     "z": 2.3
-    },
-    "why": [
-     "코스피 +6.32%(평소의 2.3배)"
-    ]
-   }
-  },
-  {
    "id": "1r3rf6d",
    "title": "젠슨 황 한 사람에 흔들리는 미국 경제···AI붐이 드러낸 위험한 의존",
    "firstSeen": "2026-11-24T21:00:00.000Z",
@@ -714,117 +872,6 @@
      "link": "https://www.etoday.co.kr/news/view/2652405",
      "host": "etoday.co.kr",
      "at": "2026-11-24T21:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 2.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 6.32,
-     "unit": "%",
-     "z": 2.3
-    },
-    "why": [
-     "코스피 +6.32%(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "b3zu1p",
-   "title": "AI 에이전트 ‘오픈소스 CPU’ 테이프아웃 성공… 반도체 설계 패러다임...",
-   "firstSeen": "2026-11-24T21:26:00.000Z",
-   "lastSeen": "2026-11-24T21:26:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "AI 에이전트 ‘오픈소스 CPU’ 테이프아웃 성공… 반도체 설계 패러다임...",
-     "link": "https://www.g-enews.com/view.php?ud=2026112422344481940c8c1c064d_1",
-     "host": "g-enews.com",
-     "at": "2026-11-24T21:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 2.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 6.32,
-     "unit": "%",
-     "z": 2.3
-    },
-    "why": [
-     "코스피 +6.32%(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "ik0gtz",
-   "title": "中, 대미 수출통제 미루고 항공기 구매…맞불대응 피한 속내는?",
-   "firstSeen": "2026-11-24T21:27:00.000Z",
-   "lastSeen": "2026-11-24T21:27:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "中, 대미 수출통제 미루고 항공기 구매…맞불대응 피한 속내는?",
-     "link": "https://biz.sbs.co.kr/article_hub/20000348653?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-24T21:27:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 2.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 6.32,
-     "unit": "%",
-     "z": 2.3
-    },
-    "why": [
-     "코스피 +6.32%(평소의 2.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1ruzq5t",
-   "title": "'젠슨 황 돌아왔는데 이게 뭐냐'…삼전닉스 개미들 부글부글 [종목+]",
-   "firstSeen": "2026-11-24T21:31:00.000Z",
-   "lastSeen": "2026-11-24T21:31:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "'젠슨 황 돌아왔는데 이게 뭐냐'…삼전닉스 개미들 부글부글 [종목+]",
-     "link": "https://www.hankyung.com/article/2026112474896",
-     "host": "hankyung.com",
-     "at": "2026-11-24T21:31:00.000Z"
     }
    ],
    "assess": {
