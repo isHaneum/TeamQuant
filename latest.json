@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-24T01:27:09.428Z",
+ "updatedAt": "2026-11-24T01:47:45.447Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 5053.97,
-   "change": 7.34,
-   "z": 2.6,
+   "last": 5033.89,
+   "change": 6.91,
+   "z": 2.5,
    "sd": 2.800835669349981,
    "source": "네이버 현재가",
    "live": true,
@@ -24,11 +24,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 668.8499755859375,
-   "change": 3.59,
-   "z": 1.3,
+   "last": 666.08,
+   "change": 4.82,
+   "z": 1.7,
    "sd": 2.798217571789017,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -75,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 80.11000061035156,
-   "change": -4.61,
+   "last": 80.0199966430664,
+   "change": -4.72,
    "z": -1.6,
    "sd": 2.886111087407602,
    "source": "Yahoo"
@@ -87,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-23",
-   "last": 3658.39990234375,
-   "change": 4.07,
-   "z": 2.8,
+   "last": 3674.39990234375,
+   "change": 4.52,
+   "z": 3.1,
    "sd": 1.473469183079339,
    "source": "Yahoo"
   },
@@ -120,25 +121,25 @@
   }
  ],
  "spikes": {
-  "war": 1.3,
-  "politics": 2.2,
+  "war": 1,
+  "politics": 2.1,
   "rates": 2.6,
-  "trade": 1.7,
+  "trade": 1.1,
   "fx": 0.3,
   "energy": 2.7,
-  "market": 1.1,
+  "market": 1,
   "credit": 0.3,
   "disaster": 0,
-  "policy": -0.1
+  "policy": 0.1
  },
  "rates": {
   "war": {
-   "rate": 2.7,
-   "saturated": 1,
+   "rate": 2.4,
+   "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 4,
+   "rate": 3.9,
    "saturated": 1,
    "queries": 3
   },
@@ -148,7 +149,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 5.5,
+   "rate": 4.8,
    "saturated": 1,
    "queries": 2
   },
@@ -163,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 5,
+   "rate": 4.9,
    "saturated": 2,
    "queries": 3
   },
@@ -178,7 +179,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   }
@@ -188,9 +189,9 @@
    "id": "1pdvmab",
    "title": "코스피 3.31% 하락 마감…매도 사이드카 5분 발동",
    "firstSeen": "2026-11-23T09:28:00.000Z",
-   "lastSeen": "2026-11-24T01:22:00.000Z",
-   "count": 11,
-   "sources": 11,
+   "lastSeen": "2026-11-24T01:29:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "market"
    ],
@@ -198,6 +199,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "코스닥 5% 급등에 '매수 사이드카' 발동",
+     "link": "https://www.newspim.com/news/view/20261124000312",
+     "host": "newspim.com",
+     "at": "2026-11-24T01:29:00.000Z"
+    },
     {
      "title": "코스피 6%대 급반등…코스피·코스닥 매수 사이드카",
      "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=269084",
@@ -215,66 +222,13 @@
      "link": "http://www.yonhapnewstv.co.kr/news/MYH20261124101946m2P",
      "host": "yonhapnewstv.co.kr",
      "at": "2026-11-24T01:20:00.000Z"
-    },
-    {
-     "title": "젠슨 황 전격 복귀에 코스피 급등… 올해 100번째 사이드카",
-     "link": "https://weekly.donga.com/3/all/11/6471412/1",
-     "host": "weekly.donga.com",
-     "at": "2026-11-24T01:19:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 84,
-    "spike": 1.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "ojdtav",
-   "title": "이란, 호르무즈 틀어쥐고 美 압박…트럼프 \"새해 추가 공격\" 경고",
-   "firstSeen": "2026-11-23T01:39:00.000Z",
-   "lastSeen": "2026-11-23T02:28:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "[오늘 트럼프는]\"이란, 항상 말만 해\"…합의 불발시 새해 공격 경고",
-     "link": "https://www.news1.kr/world/usa-canada/6362626",
-     "host": "news1.kr",
-     "at": "2026-11-23T02:28:00.000Z"
-    },
-    {
-     "title": "이란, 호르무즈 틀어쥐고 美 압박…트럼프 \"새해 추가 공격\" 경고",
-     "link": "https://www.newsis.com/view/NISX20261123_0003878640",
-     "host": "newsis.com",
-     "at": "2026-11-23T01:39:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 79,
-    "spike": 2.2,
+    "score": 82,
+    "spike": 1,
     "news": true,
     "reaction": {
      "symbol": "^GSPC",
@@ -314,8 +268,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 76,
-    "spike": 2.2,
+    "score": 75,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -332,9 +286,9 @@
   },
   {
    "id": "17tregv",
-   "title": "소비심리 두달째 위축…집값 상승 기대도 8개월만에 최대폭 하락",
+   "title": "소비심리 두 달째 위축…집값 전망 8개월 만에 최대폭 하락",
    "firstSeen": "2026-11-23T21:00:00.000Z",
-   "lastSeen": "2026-11-24T01:18:00.000Z",
+   "lastSeen": "2026-11-24T01:40:00.000Z",
    "count": 7,
    "sources": 7,
    "topics": [
@@ -343,6 +297,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "소비심리 두 달째 냉각...집값 상승 기대도 8개월 만에 최대 낙폭",
+     "link": "https://www.hinews.co.kr/view.php?ud=2026112410384318339284f60af5_48",
+     "host": "hinews.co.kr",
+     "at": "2026-11-24T01:40:00.000Z"
+    },
     {
      "title": "수출 1조달러에도 소비심리 두 달째 하락…집값 전망 꺾여도 여전히 높...",
      "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904163",
@@ -360,12 +320,6 @@
      "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=399896",
      "host": "fntoday.co.kr",
      "at": "2026-11-24T00:42:00.000Z"
-    },
-    {
-     "title": "증시 하락·금리 상승에 소비심리 위축…전망은 긍정 유지",
-     "link": "http://www.newscape.co.kr/news/articleView.html?idxno=126032",
-     "host": "newscape.co.kr",
-     "at": "2026-11-24T00:30:00.000Z"
     }
    ],
    "assess": {
@@ -387,107 +341,66 @@
    }
   },
   {
-   "id": "17ysxbc",
-   "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
-   "firstSeen": "2026-11-23T07:59:00.000Z",
-   "lastSeen": "2026-11-23T07:59:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "he3pql",
+   "title": "금시세·금값 24일",
+   "firstSeen": "2026-11-24T00:20:00.000Z",
+   "lastSeen": "2026-11-24T01:14:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "war",
-    "disaster"
-   ],
-   "critical": [
-    "disaster"
-   ],
-   "links": [
-    {
-     "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
-     "link": "https://www.hankookilbo.com/news/article/A2026112309410004191?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-23T07:59:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 68,
-    "spike": 1.3,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1q3kl5q",
-   "title": "젠슨 황 돌아오자 엔비디아 31% 폭등…‘반토막’ 코스피도 살아날까",
-   "firstSeen": "2026-11-23T15:02:00.000Z",
-   "lastSeen": "2026-11-24T01:26:00.000Z",
-   "count": 9,
-   "sources": 7,
-   "topics": [
-    "politics",
-    "market"
+    "fx",
+    "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "엔비디아 젠슨 황, 복귀 첫날 직원들 앞에서 고개 숙여…\"더 나은 CEO 되...",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=566147",
-     "host": "joongangenews.com",
-     "at": "2026-11-24T01:26:00.000Z"
+     "title": "[젠슨 황 복귀] 금값, 1년래 최저치서 반등",
+     "link": "https://www.ajunews.com/view/20261124100507320",
+     "host": "ajunews.com",
+     "at": "2026-11-24T01:14:00.000Z"
     },
     {
-     "title": "젠슨 황, 결국 CEO 복귀...엔비디아(NVDA) 주가 33% 껑충",
-     "link": "http://coinreaders.com/272851",
-     "host": "coinreaders.com",
-     "at": "2026-11-24T01:22:00.000Z"
+     "title": "국제 금값 14개월 만에 최저…달러는 19개월 만에 최고",
+     "link": "https://www.mediaus.co.kr/news/articleView.html?idxno=319113",
+     "host": "mediaus.co.kr",
+     "at": "2026-11-24T00:56:00.000Z"
     },
     {
-     "title": "젠슨 황 엔비디아 CEO 전격 복귀에 주가 32% 폭등⋯시총 하루 새 1조 달...",
-     "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=602367",
-     "host": "autodaily.co.kr",
-     "at": "2026-11-24T01:22:00.000Z"
+     "title": "[오늘 금시세] 금값 한 돈 58만7250원…국제 금 반등에도 KRX 0.3% 하락",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16284598",
+     "host": "topstarnews.net",
+     "at": "2026-11-24T00:34:00.000Z"
     },
     {
-     "title": "젠슨 황 복귀에 엔비디아 31.5% 폭등…트럼프 \"내가 설득\"",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904156",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-24T01:00:00.000Z"
+     "title": "[오늘 금시세]금값 5거래일 만에 '급반등'…국내 금 2.39% ↑",
+     "link": "https://www.namdonews.com/news/articleView.html?idxno=930233",
+     "host": "namdonews.com",
+     "at": "2026-11-24T00:22:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 67,
-    "spike": 2.2,
+    "spike": 2.7,
     "news": false,
     "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.52,
      "unit": "%",
-     "z": 4.3
+     "z": 3.1
     },
     "why": [
-     "S&P 500 +4.73%(평소의 4.3배)"
+     "금 +4.52%(평소의 3.1배)"
     ]
    }
   },
   {
    "id": "t1k3dy",
-   "title": "국민의힘 “지방선거용 증시부양 ‘이재명 버블’ 특검 추진”",
+   "title": "정점식 \"지선용 증시부양 '이재명 버블' 특검 추진할 것\"",
    "firstSeen": "2026-11-24T00:32:00.000Z",
-   "lastSeen": "2026-11-24T01:18:00.000Z",
+   "lastSeen": "2026-11-24T01:38:00.000Z",
    "count": 9,
    "sources": 9,
    "topics": [
@@ -497,35 +410,35 @@
    "critical": [],
    "links": [
     {
-     "title": "국힘 “코스피 5개월 만에 반토막…‘이재명 버블’ 진상규명 특검 추진...",
-     "link": "https://www.etoday.co.kr/news/view/2652117",
-     "host": "etoday.co.kr",
-     "at": "2026-11-24T01:18:00.000Z"
+     "title": "국힘, 증시 부양·주가조작 의혹 특검 추진",
+     "link": "http://www.sisafocus.co.kr/news/articleView.html?idxno=367966",
+     "host": "sisafocus.co.kr",
+     "at": "2026-11-24T01:38:00.000Z"
     },
     {
-     "title": "국힘, 증시 급락에 '이재명 버블' 진상규명 특검 추진",
-     "link": "https://www.ajunews.com/view/20261124093217151",
-     "host": "ajunews.com",
-     "at": "2026-11-24T01:02:00.000Z"
+     "title": "정점식 \"'이재명 버블 진상규명 특검' 도입 추진할 것\"",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2022487",
+     "host": "m-i.kr",
+     "at": "2026-11-24T01:38:00.000Z"
     },
     {
-     "title": "국힘 \"'이재명 버블' 진상규명 특검 추진…지방선거용 증시부양 진실 밝...",
-     "link": "https://www.newsis.com/view/NISX20261124_0003880518",
-     "host": "newsis.com",
-     "at": "2026-11-24T01:01:00.000Z"
+     "title": "정점식 \"지방선거용 증시 부양‥'이재명 버블 특검' 추진\"",
+     "link": "https://imnews.imbc.com/news/2026/politics/article/6868075_36911.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-24T01:34:00.000Z"
     },
     {
-     "title": "정점식 \"국민연금 주가 폭락 가담…'이재명 버블 특검' 추진\"",
-     "link": "https://www.yna.co.kr/view/AKR20261124051800001?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-24T01:00:00.000Z"
+     "title": "정점식 \"국민연금 증시 폭락 가담…'이재명 버블 특검' 추진\"",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008860474&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-24T01:31:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 67,
-    "spike": 2.2,
+    "level": "caution",
+    "label": "주의",
+    "score": 66,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -535,168 +448,6 @@
      "z": 4.3
     },
     "why": [
-     "S&P 500 +4.73%(평소의 4.3배)",
-     "시장 반응만 있는 사건이 이미 2건"
-    ]
-   }
-  },
-  {
-   "id": "fc6zsh",
-   "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
-   "firstSeen": "2026-11-23T06:58:00.000Z",
-   "lastSeen": "2026-11-23T06:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
-     "link": "https://www.newsgn.com/news/articleView.html?idxno=587424",
-     "host": "newsgn.com",
-     "at": "2026-11-23T06:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 67,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "168wwr5",
-   "title": "코스피 하반기 44% 폭락에 '블랙먼데이' 현실화...18년 만의 증안펀드, ...",
-   "firstSeen": "2026-11-23T12:02:00.000Z",
-   "lastSeen": "2026-11-23T12:02:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "코스피 하반기 44% 폭락에 '블랙먼데이' 현실화...18년 만의 증안펀드, ...",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=507251",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-23T12:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 67,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "c7xwuk",
-   "title": "올해만 사이드카 101번…2008년 금융위기 2배 넘는 ‘널뛰기 증시’",
-   "firstSeen": "2026-11-24T00:42:00.000Z",
-   "lastSeen": "2026-11-24T00:42:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "올해만 사이드카 101번…2008년 금융위기 2배 넘는 ‘널뛰기 증시’",
-     "link": "https://www.etoday.co.kr/news/view/2652065",
-     "host": "etoday.co.kr",
-     "at": "2026-11-24T00:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 67,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "guc9lo",
-   "title": "속옷 치켜든 젠슨황, 한국 증시에 ‘121번째 사이드카’ 선물했다",
-   "firstSeen": "2026-11-24T01:19:00.000Z",
-   "lastSeen": "2026-11-24T01:19:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "속옷 치켜든 젠슨황, 한국 증시에 ‘121번째 사이드카’ 선물했다",
-     "link": "https://www.mk.co.kr/article/12216891",
-     "host": "mk.co.kr",
-     "at": "2026-11-24T01:19:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 67,
-    "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
      "S&P 500 +4.73%(평소의 4.3배)"
     ]
    }
@@ -781,19 +532,221 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 65,
-    "spike": 1.3,
+    "score": 66,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.07,
+     "change": 4.52,
      "unit": "%",
-     "z": 2.8
+     "z": 3.1
     },
     "why": [
      "핵심 단어",
-     "금 +4.07%(평소의 2.8배)"
+     "금 +4.52%(평소의 3.1배)"
+    ]
+   }
+  },
+  {
+   "id": "fc6zsh",
+   "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
+   "firstSeen": "2026-11-23T06:58:00.000Z",
+   "lastSeen": "2026-11-23T06:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "연초 수준 밀린 코스피, 이틀째 사이드카…\"증안펀드·비상계획 준비\"",
+     "link": "https://www.newsgn.com/news/articleView.html?idxno=587424",
+     "host": "newsgn.com",
+     "at": "2026-11-23T06:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 66,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "17ysxbc",
+   "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
+   "firstSeen": "2026-11-23T07:59:00.000Z",
+   "lastSeen": "2026-11-23T07:59:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "disaster"
+   ],
+   "critical": [
+    "disaster"
+   ],
+   "links": [
+    {
+     "title": "이스라엘 새 정부 협상판에 오른 서안 폭력… 아이젠코트 \"유대인 테러...",
+     "link": "https://www.hankookilbo.com/news/article/A2026112309410004191?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-23T07:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 66,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "168wwr5",
+   "title": "코스피 하반기 44% 폭락에 '블랙먼데이' 현실화...18년 만의 증안펀드, ...",
+   "firstSeen": "2026-11-23T12:02:00.000Z",
+   "lastSeen": "2026-11-23T12:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피 하반기 44% 폭락에 '블랙먼데이' 현실화...18년 만의 증안펀드, ...",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=507251",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-23T12:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 66,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "c7xwuk",
+   "title": "올해만 사이드카 101번…2008년 금융위기 2배 넘는 ‘널뛰기 증시’",
+   "firstSeen": "2026-11-24T00:42:00.000Z",
+   "lastSeen": "2026-11-24T00:42:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "올해만 사이드카 101번…2008년 금융위기 2배 넘는 ‘널뛰기 증시’",
+     "link": "https://www.etoday.co.kr/news/view/2652065",
+     "host": "etoday.co.kr",
+     "at": "2026-11-24T00:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 66,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "guc9lo",
+   "title": "불륜·간첩도 이겨낸 젠슨황, 한국에 ‘121번째 사이드카’ 선물했다",
+   "firstSeen": "2026-11-24T01:19:00.000Z",
+   "lastSeen": "2026-11-24T01:19:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "불륜·간첩도 이겨낸 젠슨황, 한국에 ‘121번째 사이드카’ 선물했다",
+     "link": "https://www.mk.co.kr/article/12216891",
+     "host": "mk.co.kr",
+     "at": "2026-11-24T01:19:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 66,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
     ]
    }
   },
@@ -838,8 +791,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 63,
-    "spike": 2.2,
+    "score": 62,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -855,47 +808,104 @@
    }
   },
   {
-   "id": "zcz6su",
-   "title": "젠슨 황 복귀에 뉴욕증시 급등…나스닥 6.51%·필라델피아 반도체지수 ...",
-   "firstSeen": "2026-11-23T14:44:00.000Z",
-   "lastSeen": "2026-11-24T01:18:00.000Z",
-   "count": 13,
-   "sources": 12,
+   "id": "c4auai",
+   "title": "野 \"이용철, 이재명 탈옥 도우미\"…증시 폭락엔 \"이재명 버블\"(종합)",
+   "firstSeen": "2026-11-24T00:38:00.000Z",
+   "lastSeen": "2026-11-24T01:44:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
+    "politics",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "젠슨 황 다시 경영 일선에…엔비디아 주가 31.5% 급등",
-     "link": "https://www.the-pr.co.kr/news/articleView.html?idxno=63453",
-     "host": "the-pr.co.kr",
-     "at": "2026-11-24T01:18:00.000Z"
+     "title": "정점식 \"이용철, 李 탈옥 도우미\"…'이재명 버블 특검' 추진",
+     "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5086940",
+     "host": "shinailbo.co.kr",
+     "at": "2026-11-24T01:44:00.000Z"
     },
     {
-     "title": "젠슨 황 복귀에 日 증시도 급등…닛케이 장중 4% 상승",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=02378006645649000&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-24T01:12:00.000Z"
+     "title": "정점식 \"이용철은 '대통령 탈옥 도우미'…공소 취소 포석\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/AKR20261124104132lUk",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-24T01:42:00.000Z"
     },
     {
-     "title": "코스피, 젠슨 황 복귀에 6% 가까이 급등...5,000선 탈환 시도",
-     "link": "https://www.m-economynews.com/news/article.html?no=73503",
-     "host": "m-economynews.com",
-     "at": "2026-11-24T01:06:00.000Z"
+     "title": "정점식 “법무부 장관은 대통령의 탈옥 도우미…본인이 대장동 카르텔 ...",
+     "link": "https://www.mk.co.kr/article/12216890",
+     "host": "mk.co.kr",
+     "at": "2026-11-24T01:19:00.000Z"
     },
     {
-     "title": "코스피, 젠슨 황 복귀에 6% 가까이 급등…장중 5000선 탈환",
-     "link": "https://www.hidomin.com/news/articleView.html?idxno=730715",
-     "host": "hidomin.com",
-     "at": "2026-11-24T00:58:00.000Z"
+     "title": "野 \"이용철, 이재명 탈옥 도우미\"…증시 폭락엔 \"이재명 버블\"(종합)",
+     "link": "https://www.news1.kr/politics/assembly/6363842",
+     "host": "news1.kr",
+     "at": "2026-11-24T01:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 59,
-    "spike": 1.1,
+    "spike": 2.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "S&P 500 +4.73%(평소의 4.3배)",
+     "시장 반응만 있는 사건이 이미 2건"
+    ]
+   }
+  },
+  {
+   "id": "petlc5",
+   "title": "젠슨 황 복귀에 뉴욕증시 급등…나스닥 6.51%·필라델피아 반도체지수 ...",
+   "firstSeen": "2026-11-23T22:04:00.000Z",
+   "lastSeen": "2026-11-24T01:44:00.000Z",
+   "count": 13,
+   "sources": 13,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[개장 시황] 젠슨 황 복귀와 뉴욕증시 폭등의 전율…코스피, '매수 사이...",
+     "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=282011",
+     "host": "businesskorea.co.kr",
+     "at": "2026-11-24T01:44:00.000Z"
+    },
+    {
+     "title": "젠슨 황 복귀 소식에 나스닥 6.51%↑…엔비디아 31.5% 폭등",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=328151",
+     "host": "thepublic.kr",
+     "at": "2026-11-24T01:42:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 젠슨 황 복귀에 엔비디아 폭등…나스닥 6%대 급등",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348404?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-24T00:34:00.000Z"
+    },
+    {
+     "title": "젠슨 황 복귀에 월가 환호…엔비디아 31% 폭등·나스닥 6.51%↑",
+     "link": "https://www.newstopkorea.com/ko-kr/articles/49259",
+     "host": "newstopkorea.com",
+     "at": "2026-11-23T23:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -912,6 +922,63 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-24T01:47:45.447Z",
+   "id": "1pdvmab",
+   "level": "caution",
+   "title": "코스피 3.31% 하락 마감…매도 사이드카 5분 발동",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +4.73%(평소의 4.3배)"
+   ],
+   "link": "https://www.newspim.com/news/view/20261124000312",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-24T01:47:45.447Z",
+   "id": "t8l9yy",
+   "level": "caution",
+   "title": "\"증안펀드 더해 비상계획까지 염두 공매도 금지 대신 3개월 특별 감시\"...",
+   "why": [
+    "핵심 단어",
+    "코스피 +6.91%(평소의 2.5배)"
+   ],
+   "link": "http://www.dailypop.kr/news/articleView.html?idxno=104873",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-24T01:47:45.447Z",
+   "id": "17tregv",
+   "level": "caution",
+   "title": "소비심리 두 달째 위축…집값 전망 8개월 만에 최대폭 하락",
+   "why": [
+    "S&P 500 +4.73%(평소의 4.3배)"
+   ],
+   "link": "https://www.hinews.co.kr/view.php?ud=2026112410384318339284f60af5_48",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-24T01:47:45.447Z",
+   "id": "he3pql",
+   "level": "caution",
+   "title": "금시세·금값 24일",
+   "why": [
+    "금 +4.52%(평소의 3.1배)"
+   ],
+   "link": "https://www.ajunews.com/view/20261124100507320",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-24T01:47:45.447Z",
+   "id": "t1k3dy",
+   "level": "caution",
+   "title": "정점식 \"지선용 증시부양 '이재명 버블' 특검 추진할 것\"",
+   "why": [
+    "S&P 500 +4.73%(평소의 4.3배)"
+   ],
+   "link": "http://www.sisafocus.co.kr/news/articleView.html?idxno=367966",
+   "delivered": false
+  },
   {
    "at": "2026-11-24T01:27:09.428Z",
    "id": "1f7p34n",
@@ -1080,63 +1147,6 @@
     "S&P 500 +4.73%(평소의 4.3배)"
    ],
    "link": "https://www.sidae.com/article/2026112407495312704",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T23:12:58.860Z",
-   "id": "1acmw3y",
-   "level": "caution",
-   "title": "[속보]젠슨 황 귀환에 엔비디아 31%·SK하닉 20%↑…나스닥 6.5%↑",
-   "why": [
-    "S&P 500 +4.73%(평소의 4.3배)"
-   ],
-   "link": "https://kpenews.com/View.aspx?No=4326124",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T22:47:49.812Z",
-   "id": "1f7p34n",
-   "level": "caution",
-   "title": "머니투데이 오프라인 헤드라인-24일",
-   "why": [
-    "S&P 500 +4.73%(평소의 4.3배)"
-   ],
-   "link": "https://www.upkoreanews.kr/news/articleView.html?idxno=101342",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T22:27:34.495Z",
-   "id": "1y1cnzf",
-   "level": "caution",
-   "title": "코스피 4700선 턱걸이…정부 증안펀드 가동 준비에도 불안 여전",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +4.73%(평소의 4.3배)"
-   ],
-   "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=507251",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T22:27:34.495Z",
-   "id": "m4d3tp",
-   "level": "caution",
-   "title": "[속보] 트럼프가 살려낸 젠슨 황 \"더 나은 CEO 되겠다\"...11일 만에 귀환...",
-   "why": [
-    "S&P 500 +4.73%(평소의 4.3배)"
-   ],
-   "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261124010009052",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-23T22:11:57.987Z",
-   "id": "1stozul",
-   "level": "caution",
-   "title": "이란 전쟁 다시 확전되나…트럼프 새해 공격 경고 속 호르무즈 유조선 ...",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +4.73%(평소의 4.3배)"
-   ],
-   "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261123601008&wlog_tag3=naver",
    "delivered": false
   }
  ],
