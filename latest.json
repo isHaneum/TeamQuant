@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-24T08:18:29.636Z",
+ "updatedAt": "2026-11-24T08:30:55.000Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 1342.43994140625,
-   "change": -0.14,
-   "z": -0.2,
+   "last": 1342.1099853515625,
+   "change": -0.16,
+   "z": -0.3,
    "sd": 0.6395574875204276,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 79.83000183105469,
-   "change": -0.42,
+   "last": 79.81999969482422,
+   "change": -0.44,
    "z": -0.1,
    "sd": 2.946205978762134,
    "source": "Yahoo"
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 3618.39990234375,
-   "change": -0.9,
+   "last": 3618.300048828125,
+   "change": -0.91,
    "z": -0.6,
    "sd": 1.541696923788639,
    "source": "Yahoo"
@@ -97,11 +97,11 @@
    "label": "VIX 변동성",
    "unit": "%",
    "available": true,
-   "date": "2026-11-23",
-   "last": 26.6200008392334,
-   "change": -25.83,
-   "z": -2.1,
-   "sd": 12.551244247782337,
+   "date": "2026-11-24",
+   "last": 26.510000228881836,
+   "change": -0.41,
+   "z": 0,
+   "sd": 13.060234641603158,
    "source": "Yahoo",
    "checked": true
   },
@@ -119,45 +119,45 @@
   }
  ],
  "spikes": {
-  "war": 1,
-  "politics": 1.4,
+  "war": 0.6,
+  "politics": 1.7,
   "rates": 2.2,
-  "trade": 0.5,
-  "fx": 0.3,
-  "energy": 0.8,
+  "trade": 0.6,
+  "fx": 0.8,
+  "energy": 1,
   "market": 1.1,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 0.8
+  "policy": 0.4
  },
  "rates": {
   "war": {
-   "rate": 2.4,
-   "saturated": 1,
+   "rate": 2,
+   "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 3.3,
+   "rate": 3.6,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 5.8,
+   "rate": 5.7,
    "saturated": 2,
    "queries": 3
   },
   "trade": {
-   "rate": 4,
-   "saturated": 0,
+   "rate": 4.2,
+   "saturated": 1,
    "queries": 2
   },
   "fx": {
-   "rate": 0.3,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   },
   "energy": {
-   "rate": 3.3,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 1
   },
@@ -177,12 +177,70 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2.7,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
+  {
+   "id": "hysfsj",
+   "title": "코스피 5000 고지 탈환…젠슨 황 복귀에 매수 사이드카까지",
+   "firstSeen": "2026-11-23T15:28:00.000Z",
+   "lastSeen": "2026-11-24T08:26:00.000Z",
+   "count": 13,
+   "sources": 13,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[오늘증시] 젠슨 황 복귀에 코스피 6% 급등, 3거래일 만에 5000선 회복......",
+     "link": "http://www.queen.co.kr/news/articleView.html?idxno=466874",
+     "host": "queen.co.kr",
+     "at": "2026-11-24T08:26:00.000Z"
+    },
+    {
+     "title": "코스피 5000선 탈환…15조 자사주 매입, 반등 이어갈까",
+     "link": "https://economist.co.kr/article/view/ecn202611240163",
+     "host": "economist.co.kr",
+     "at": "2026-11-24T08:16:00.000Z"
+    },
+    {
+     "title": "'젠슨 황' 복귀에 코스피 5000선 탈환...'안도 랠리' 넘어설까",
+     "link": "https://www.insightkorea.co.kr/news/articleView.html?idxno=259657",
+     "host": "insightkorea.co.kr",
+     "at": "2026-11-24T08:12:00.000Z"
+    },
+    {
+     "title": "젠슨 황 '화려한 복귀'에 코스피 5000선 탈환",
+     "link": "https://www.dynews.co.kr/news/articleView.html?idxno=875495",
+     "host": "dynews.co.kr",
+     "at": "2026-11-24T08:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "urgent",
+    "label": "긴급",
+    "score": 84,
+    "spike": 1.1,
+    "news": true,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
   {
    "id": "c7xwuk",
    "title": "올해만 사이드카 101번…2008년 금융위기 2배 넘는 ‘널뛰기 증시’",
@@ -224,8 +282,8 @@
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
+    "level": "caution",
+    "label": "주의",
     "score": 84,
     "spike": 1.1,
     "news": true,
@@ -238,53 +296,8 @@
     },
     "why": [
      "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "hysfsj",
-   "title": "코스피 5000 고지 탈환…젠슨 황 복귀에 매수 사이드카까지",
-   "firstSeen": "2026-11-23T15:28:00.000Z",
-   "lastSeen": "2026-11-24T08:00:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "'젠슨 황 복귀'에 날아오른 韓증시… 2주 만에 동반 매수 사이드카(종합...",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3451706",
-     "host": "newscj.com",
-     "at": "2026-11-24T08:00:00.000Z"
-    },
-    {
-     "title": "코스피 5000 고지 탈환…젠슨 황 복귀에 매수 사이드카까지",
-     "link": "https://www.jemin.com/news/articleView.html?idxno=848268",
-     "host": "jemin.com",
-     "at": "2026-11-24T00:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 70,
-    "spike": 1.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
+     "S&P 500 +4.73%(평소의 4.3배)",
+     "같은 시장 움직임의 다른 사건이 먼저"
     ]
    }
   },
@@ -313,52 +326,6 @@
      "link": "https://www.kado.net/news/articleView.html?idxno=2086878",
      "host": "kado.net",
      "at": "2026-11-24T05:45:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 70,
-    "spike": 1.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "핵심 단어",
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "1pdvmab",
-   "title": "코스피 7%대 폭등…매도 사이드카 하루 만에 뒤집혔다",
-   "firstSeen": "2026-11-23T09:28:00.000Z",
-   "lastSeen": "2026-11-24T08:14:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[마감시황] 코스피 하루 만에 300p 급반등...동반 매수세 끌어올려",
-     "link": "https://www.meconomynews.com/news/articleView.html?idxno=204084",
-     "host": "meconomynews.com",
-     "at": "2026-11-24T08:14:00.000Z"
-    },
-    {
-     "title": "코스피 7%대 폭등…매도 사이드카 하루 만에 뒤집혔다",
-     "link": "http://coinreaders.com/272937",
-     "host": "coinreaders.com",
-     "at": "2026-11-24T06:28:00.000Z"
     }
    ],
    "assess": {
@@ -422,47 +389,183 @@
    }
   },
   {
-   "id": "2cqeru",
-   "title": "코스피, 젠슨 황 복귀에 7%대 폭등하며 5000선 회복… \"단기 반등 속 현...",
-   "firstSeen": "2026-11-24T04:33:00.000Z",
-   "lastSeen": "2026-11-24T08:16:00.000Z",
-   "count": 18,
-   "sources": 18,
+   "id": "1pdvmab",
+   "title": "코스피 7%대 폭등…매도 사이드카 하루 만에 뒤집혔다",
+   "firstSeen": "2026-11-23T09:28:00.000Z",
+   "lastSeen": "2026-11-24T06:28:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
     "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피 7%대 폭등…매도 사이드카 하루 만에 뒤집혔다",
+     "link": "http://coinreaders.com/272937",
+     "host": "coinreaders.com",
+     "at": "2026-11-24T06:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 67,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "12k64hh",
+   "title": "'젠슨 황 복귀'에 날아오른 韓증시… 2주 만에 동반 매수 사이드카(종합...",
+   "firstSeen": "2026-11-24T08:00:00.000Z",
+   "lastSeen": "2026-11-24T08:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'젠슨 황 복귀'에 날아오른 韓증시… 2주 만에 동반 매수 사이드카(종합...",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3451706",
+     "host": "newscj.com",
+     "at": "2026-11-24T08:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 67,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "핵심 단어",
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "hysfsj",
+   "title": "[셀럽의 한 수] 젠슨 황 복귀에 급반등…\"코스피 0000까지 간다\"",
+   "firstSeen": "2026-11-23T15:28:00.000Z",
+   "lastSeen": "2026-11-24T08:14:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "코스피 5000선 탈환…15조 자사주 매입, 반등 이어갈까",
-     "link": "https://economist.co.kr/article/view/ecn202611240163",
-     "host": "economist.co.kr",
-     "at": "2026-11-24T08:16:00.000Z"
+     "title": "[마감시황] 코스피 하루 만에 300p 급반등...동반 매수세 끌어올려",
+     "link": "https://www.meconomynews.com/news/articleView.html?idxno=204084",
+     "host": "meconomynews.com",
+     "at": "2026-11-24T08:14:00.000Z"
     },
     {
-     "title": "'젠슨 황' 복귀에 코스피 5000선 탈환...'안도 랠리' 넘어설까",
-     "link": "https://www.insightkorea.co.kr/news/articleView.html?idxno=259657",
-     "host": "insightkorea.co.kr",
+     "title": "코스피 6%대 급반등…3거래일 만에 '5000피' 회복",
+     "link": "https://www.ccdailynews.com/news/articleView.html?idxno=2453111",
+     "host": "ccdailynews.com",
      "at": "2026-11-24T08:12:00.000Z"
     },
     {
-     "title": "젠슨 황 '화려한 복귀'에 코스피 5000선 탈환",
-     "link": "https://www.dynews.co.kr/news/articleView.html?idxno=875495",
-     "host": "dynews.co.kr",
-     "at": "2026-11-24T08:10:00.000Z"
+     "title": "젠슨 황 돌아오자 '5000피'도 돌아왔다…코스피 6.32% 급반등",
+     "link": "https://news.tf.co.kr/read/economy/2392860.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-24T08:01:00.000Z"
     },
     {
-     "title": "정책보다 젠슨 황···코스피 6.32% 급등",
-     "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2496522",
-     "host": "enewstoday.co.kr",
-     "at": "2026-11-24T08:06:00.000Z"
+     "title": "젠슨 황의 귀환, 아시아증시 급반등⋯日 닛케이 4%↑",
+     "link": "https://www.etoday.co.kr/news/view/2652427",
+     "host": "etoday.co.kr",
+     "at": "2026-11-24T07:58:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 59,
-    "spike": 1.1,
+    "score": 65,
+    "spike": 2.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": 4.73,
+     "unit": "%",
+     "z": 4.3
+    },
+    "why": [
+     "S&P 500 +4.73%(평소의 4.3배)"
+    ]
+   }
+  },
+  {
+   "id": "fr8lux",
+   "title": "골드만삭스 “내년 한은 기준금리 3.5%가 상단…달러당 원화값은 1280원...",
+   "firstSeen": "2026-11-24T05:04:00.000Z",
+   "lastSeen": "2026-11-24T08:14:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "골드만삭스 \"내년 韓 성장률 3.2%로 상향...원·달러 환율 1280원 전망\"",
+     "link": "https://www.betanews.net/article/view/beta202611240161",
+     "host": "betanews.net",
+     "at": "2026-11-24T08:14:00.000Z"
+    },
+    {
+     "title": "골드만삭스 \"내년에 한국, 기준금리 연 3.5% 이상 올리기 힘들어\"",
+     "link": "https://www.delighti.co.kr/news/articleView.html?idxno=125525",
+     "host": "delighti.co.kr",
+     "at": "2026-11-24T07:22:00.000Z"
+    },
+    {
+     "title": "골드만삭스, 원-달러 환율 내년 1280원까지 하락 전망...\"원화 환전 수요...",
+     "link": "http://www.beyondpost.co.kr/view.php?ud=2026112415125561252aaae0046f_30",
+     "host": "beyondpost.co.kr",
+     "at": "2026-11-24T06:18:00.000Z"
+    },
+    {
+     "title": "\"한국, 내년 3.2% 성장 전망…연말 환율 1,280원 예상\"",
+     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611240134&t=NN",
+     "host": "wowtv.co.kr",
+     "at": "2026-11-24T06:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 64,
+    "spike": 2.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -517,8 +620,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 59,
-    "spike": 1.4,
+    "score": 62,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -533,97 +636,47 @@
    }
   },
   {
-   "id": "15fhwbs",
-   "title": "[오늘의 이슈]젠슨 황 복귀에 나스닥 6%대 급등…코스피는 반등할까",
-   "firstSeen": "2026-11-23T22:30:00.000Z",
-   "lastSeen": "2026-11-24T08:03:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "id": "wyuxwm",
+   "title": "[속보]젠슨 황 귀환에 엔비디아 31%·SK하닉 20%↑…나스닥 6.5%↑",
+   "firstSeen": "2026-11-23T21:10:00.000Z",
+   "lastSeen": "2026-11-24T07:31:00.000Z",
+   "count": 11,
+   "sources": 11,
    "topics": [
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[포토] 젠슨 황 복귀에 6%대 급반등한 코스피",
-     "link": "https://www.dt.co.kr/article/12096994?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-24T08:03:00.000Z"
+     "title": "\"젠슨 황 부활\"...주가 폭등에 투자자 '환호', '축하 밈'까지 [정치ON]",
+     "link": "https://www.ytn.co.kr/_ln/0101_202611241631365007",
+     "host": "ytn.co.kr",
+     "at": "2026-11-24T07:31:00.000Z"
     },
     {
-     "title": "“젠슨 황 복귀” 엔비디아 31% 폭등…코스피 6.32% 급등해 5000선 탈환",
-     "link": "https://www.ddaily.co.kr/page/view/2026112416301704270",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-24T07:58:00.000Z"
-    },
-    {
-     "title": "[올댓차이나] 대만 증시, 젠슨 황 엔비디아 복귀에 8.99% 폭등",
-     "link": "https://www.newsis.com/view/NISX20261124_0003881382",
-     "host": "newsis.com",
-     "at": "2026-11-24T07:08:00.000Z"
+     "title": "\"젠슨황 귀환에 엔비디아 31% 폭등\"…코스피 5000선 회복",
+     "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7195497",
+     "host": "weekly.hankooki.com",
+     "at": "2026-11-24T06:56:00.000Z"
     },
     {
      "title": "젠슨 황 복귀에 亞증시 환호 랠리…코스피 6%·대만 9%·日 4% 급등",
      "link": "https://www.news1.kr/world/international-economy/6364462",
      "host": "news1.kr",
      "at": "2026-11-24T06:49:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 귀환'에 亞 증시 '불기둥'…韓·대만·日 반도체주 폭등",
+     "link": "https://www.newsis.com/view/NISX20261124_0003880899",
+     "host": "newsis.com",
+     "at": "2026-11-24T04:17:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
+    "score": 59,
     "spike": 1.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "fr8lux",
-   "title": "골드만삭스 “내년 한은 기준금리 3.5%가 상단…달러당 원화값은 1280원...",
-   "firstSeen": "2026-11-24T05:04:00.000Z",
-   "lastSeen": "2026-11-24T07:22:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "골드만삭스 \"내년에 한국, 기준금리 연 3.5% 이상 올리기 힘들어\"",
-     "link": "https://www.delighti.co.kr/news/articleView.html?idxno=125525",
-     "host": "delighti.co.kr",
-     "at": "2026-11-24T07:22:00.000Z"
-    },
-    {
-     "title": "골드만삭스 \"한국, 기준금리 연 3.5% 넘기기 어려워\"",
-     "link": "https://www.hankyung.com/article/202611247004i",
-     "host": "hankyung.com",
-     "at": "2026-11-24T06:14:00.000Z"
-    },
-    {
-     "title": "골드만삭스 “내년 한은 기준금리 3.5%가 상단…달러당 원화값은 1280원...",
-     "link": "https://www.mk.co.kr/article/12217095",
-     "host": "mk.co.kr",
-     "at": "2026-11-24T05:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 57,
-    "spike": 2.2,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -688,104 +741,46 @@
    }
   },
   {
-   "id": "wyuxwm",
-   "title": "[속보]젠슨 황 귀환에 엔비디아 31%·SK하닉 20%↑…나스닥 6.5%↑",
-   "firstSeen": "2026-11-23T21:10:00.000Z",
-   "lastSeen": "2026-11-24T06:56:00.000Z",
+   "id": "1muuwig",
+   "title": "정점식 \"지선용 증시부양 '이재명 버블' 특검 추진할 것\"",
+   "firstSeen": "2026-11-24T00:50:00.000Z",
+   "lastSeen": "2026-11-24T08:22:00.000Z",
    "count": 5,
    "sources": 5,
    "topics": [
-    "politics",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "\"젠슨황 귀환에 엔비디아 31% 폭등\"…코스피 5000선 회복",
-     "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7195497",
-     "host": "weekly.hankooki.com",
-     "at": "2026-11-24T06:56:00.000Z"
+     "title": "여, 국가시험 TF 구성…야, '이재명 버블 특검' 도입",
+     "link": "https://www.natv.go.kr/natv/news/newsView.do?newsId=514649",
+     "host": "natv.go.kr",
+     "at": "2026-11-24T08:22:00.000Z"
     },
     {
-     "title": "“이래도 나 무시해?”…엔비디아·월가 움직인 트럼프의 힘 [이슈+]",
-     "link": "https://www.ekn.kr/web/view.php?key=20261124025253840",
-     "host": "ekn.kr",
-     "at": "2026-11-24T03:12:00.000Z"
+     "title": "증시 폭락에 국힘 '이재명 버블 특검' 추진…국민연금 운용·증시 부양...",
+     "link": "https://www.polinews.co.kr/news/articleView.html?idxno=749066",
+     "host": "polinews.co.kr",
+     "at": "2026-11-24T02:07:00.000Z"
     },
     {
-     "title": "[총수家] 젠슨 황 엔비디아 CEO ⑪ㅣ 귀환에 월가 환호…엔비디아 31.5% ...",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=630153",
-     "host": "cbci.co.kr",
-     "at": "2026-11-24T01:56:00.000Z"
+     "title": "국힘 \"6·3 지선용 증시부양...'이재명 버블' 진상규명 특검\"",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=580312&class=32&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-24T02:06:00.000Z"
     },
     {
-     "title": "[뉴욕증시 마감시황] 젠슨 황 귀환에 월가 환호…엔비디아 31%·SK하이닉...",
-     "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8751",
-     "host": "moneystorm.kr",
-     "at": "2026-11-23T21:40:00.000Z"
+     "title": "정점식 \"'이재명 버블 진상규명 특검' 도입 추진할 것\"",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2022487",
+     "host": "m-i.kr",
+     "at": "2026-11-24T01:38:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 56,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": 4.73,
-     "unit": "%",
-     "z": 4.3
-    },
-    "why": [
-     "S&P 500 +4.73%(평소의 4.3배)"
-    ]
-   }
-  },
-  {
-   "id": "s1s0ps",
-   "title": "9개월째 석유 최고가격제…국책연구기관도 \"단계적 출구전략 마련해야...",
-   "firstSeen": "2026-11-24T02:06:00.000Z",
-   "lastSeen": "2026-11-24T07:24:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "war",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "기름값 잡았지만 비용은 5.6조…석유 최고가격제 '출구' 고심",
-     "link": "http://www.inews24.com/view/2029856",
-     "host": "inews24.com",
-     "at": "2026-11-24T07:24:00.000Z"
-    },
-    {
-     "title": "에너지 국책연구기관 “석유 최고가격제, 출구전략 찾아야” 주장에…...",
-     "link": "https://biz.chosun.com/industry/company/2026/11/24/3KS6XUGPPBGM7BIYNDBPJ7ZC5U/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-24T05:35:00.000Z"
-    },
-    {
-     "title": "최고가격제 출구전략 놓고 국책연구기관·정부 '입장차'",
-     "link": "https://www.sidae.com/article/2026112412170850131",
-     "host": "sidae.com",
-     "at": "2026-11-24T04:06:00.000Z"
-    },
-    {
-     "title": "기름값 잡았지만 시장 왜곡…국책기관 \"최고가격제 출구전략 필요\"",
-     "link": "https://www.news1.kr/industry/general-industry/6364115",
-     "host": "news1.kr",
-     "at": "2026-11-24T03:49:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 55,
+    "score": 54,
     "spike": 1.1,
     "news": false,
     "reaction": {
@@ -801,35 +796,48 @@
    }
   },
   {
-   "id": "13z9cam",
-   "title": "\"美연준, 보먼 부의장 '블랙아웃' 위반 조사…월가 비공개만찬 참석\"",
-   "firstSeen": "2026-11-24T05:32:00.000Z",
-   "lastSeen": "2026-11-24T06:15:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "1vfcf49",
+   "title": "원·달러 환율, 뉴욕증시 급등에 1340원대 하락 출발",
+   "firstSeen": "2026-11-23T07:26:00.000Z",
+   "lastSeen": "2026-11-24T08:23:00.000Z",
+   "count": 5,
+   "sources": 5,
    "topics": [
-    "rates"
+    "fx",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "보먼 연준 부의장, 금리 동결 직후 월가 만찬…감찰 조사",
-     "link": "https://www.edaily.co.kr/News/Read?newsId=03417766645649000&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-     "host": "edaily.co.kr",
-     "at": "2026-11-24T06:15:00.000Z"
+     "title": "코스피 6% 폭등에도 환율 3.5원 하락 그쳐…1340원대 박스권 [김혜란의 ...",
+     "link": "https://www.sedaily.com/article/20118403?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-24T08:23:00.000Z"
     },
     {
-     "title": "\"美연준, 보먼 부의장 '블랙아웃' 위반 조사…월가 비공개만찬 참석\"",
-     "link": "https://www.news1.kr/world/usa-canada/6364266",
-     "host": "news1.kr",
-     "at": "2026-11-24T05:32:00.000Z"
+     "title": "뉴욕증시 급등 원·달러 환율 1344원대",
+     "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3083970",
+     "host": "newsclaim.co.kr",
+     "at": "2026-11-24T04:38:00.000Z"
+    },
+    {
+     "title": "젠슨 황 복귀로 위험 선호 심리 회복…원·달러 환율 1340원대 중반 횡보",
+     "link": "https://www.widedaily.com/news/articleView.html?idxno=304485",
+     "host": "widedaily.com",
+     "at": "2026-11-24T01:50:00.000Z"
+    },
+    {
+     "title": "젠슨 황 복귀에 위험 선호 회복…원·달러는 1340원대 중반",
+     "link": "https://www.newsis.com/view/NISX20261124_0003880691",
+     "host": "newsis.com",
+     "at": "2026-11-24T01:44:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 54,
-    "spike": 2.2,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -887,35 +895,43 @@
    }
   },
   {
-   "id": "iu333m",
-   "title": "닷컴버블, 고점 회복까진 5년 6개월 … 美금리 향방이 반등 가늠자",
-   "firstSeen": "2026-11-23T08:51:00.000Z",
-   "lastSeen": "2026-11-23T12:51:00.000Z",
-   "count": 2,
-   "sources": 1,
+   "id": "1oecucx",
+   "title": "李대통령, 증시 급등락에 “급격한 조정에 널뛰기…대응 대책 필요”",
+   "firstSeen": "2026-11-24T02:39:00.000Z",
+   "lastSeen": "2026-11-24T06:36:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "rates"
+    "politics",
+    "market",
+    "policy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "닷컴버블 반토막 증시, 회복에 5년 6개월 걸려…개미들 ‘시간과의 싸움...",
-     "link": "https://www.mk.co.kr/article/12216561",
-     "host": "mk.co.kr",
-     "at": "2026-11-23T12:51:00.000Z"
+     "title": "이 대통령 “주가 널뛰기, 급격한 조정 때문”…금융위에 대책 주문",
+     "link": "https://www.mediapen.com/news/view/1139709",
+     "host": "mediapen.com",
+     "at": "2026-11-24T06:36:00.000Z"
     },
     {
-     "title": "닷컴버블, 고점 회복까진 5년 6개월 … 美금리 향방이 반등 가늠자",
-     "link": "https://www.mk.co.kr/article/12216407",
-     "host": "mk.co.kr",
-     "at": "2026-11-23T08:51:00.000Z"
+     "title": "李 “주가 널뛰기, 급격한 조정 때문”…금융위에 대응책 주문",
+     "link": "https://www.sedaily.com/article/20118192?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-24T03:15:00.000Z"
+    },
+    {
+     "title": "李대통령, 증시 급등락에 “급격한 조정에 널뛰기…대응 대책 필요”",
+     "link": "https://biz.heraldcorp.com/article/10947389?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-24T02:39:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 52,
-    "spike": 2.2,
+    "score": 53,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^GSPC",
@@ -925,12 +941,36 @@
      "z": 4.3
     },
     "why": [
-     "S&P 500 +4.73%(평소의 4.3배)"
+     "S&P 500 +4.73%(평소의 4.3배)",
+     "시장 반응만 있는 사건이 이미 2건"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-24T08:30:55.000Z",
+   "id": "hysfsj",
+   "level": "urgent",
+   "title": "코스피 5000 고지 탈환…젠슨 황 복귀에 매수 사이드카까지",
+   "why": [
+    "핵심 단어",
+    "S&P 500 +4.73%(평소의 4.3배)"
+   ],
+   "link": "http://www.queen.co.kr/news/articleView.html?idxno=466874",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-24T08:30:55.000Z",
+   "id": "fr8lux",
+   "level": "caution",
+   "title": "골드만삭스 “내년 한은 기준금리 3.5%가 상단…달러당 원화값은 1280원...",
+   "why": [
+    "S&P 500 +4.73%(평소의 4.3배)"
+   ],
+   "link": "https://www.betanews.net/article/view/beta202611240161",
+   "delivered": false
+  },
   {
    "at": "2026-11-24T08:18:29.636Z",
    "id": "c7xwuk",
@@ -1141,31 +1181,6 @@
     "S&P 500 +4.73%(평소의 4.3배)"
    ],
    "link": "https://www.yna.co.kr/view/AKR20261124096600008?input=1195m",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-24T05:14:30.741Z",
-   "id": "yfavk7",
-   "level": "caution",
-   "title": "코스피 5000 고지 탈환…젠슨 황 복귀에 매수 사이드카까지",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +4.73%(평소의 4.3배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8721015&ref=A",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-24T04:47:53.733Z",
-   "id": "1pdvmab",
-   "level": "caution",
-   "title": "코스피 3.31% 하락 마감…매도 사이드카 5분 발동",
-   "why": [
-    "핵심 단어",
-    "S&P 500 +4.73%(평소의 4.3배)"
-   ],
-   "link": "http://www.jeonmin.co.kr/news/articleView.html?idxno=450980",
    "delivered": false
   }
  ],
