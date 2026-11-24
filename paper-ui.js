@@ -95,6 +95,8 @@ page.innerHTML = `<div class="page-head"><div><h1>모의투자 ${tip('실제로 
 <div class="cr-card"><h3>절차</h3><ol class="pp-steps"><li>계획 비중<small>규칙의 한 종목 상한·현금 최소 비중 안에서 종목마다 균등</small></li><li>오늘 점검<small>주 마지막 거래일 종가(급할 때는 그날)에 규칙과 비교해 할 일을 냄</small></li><li>주문 점검<small>할 일마다 현금·비중·하루 손실 한도·매매 횟수를 확인, 하나라도 어기면 주문하지 않음</small></li><li>체결<small>다음 거래일 시가에 0.1% 불리하게, 편도 비용 0.2%, 국내 주식 1주 단위</small></li><li>평가와 비교<small>날마다 원화 환산, 같은 계획을 한 번 사서 둔 경우·지수와 비교</small></li></ol></div>
 </div></div>`;
 document.querySelector('main').append(page);
+// 결정 62: 내 가상 모의계좌(증권사 없이 · 이 브라우저) — 팀 모의계좌 카드 아래. 실패해도 화면의 나머지는 그대로.
+import('/virtual-ui.js').then(m => m.mountVirtual(page)).catch(() => { });
 // 2026-11-13: 과거 데이터 검증·절차 설명은 한 번 접는다 — 화면을 열면 계좌 상태(얼마 벌었나·무엇을 들고 있나)가 먼저 보이게.
 { const head = page.querySelector('#pp-sim-head'), box = document.createElement('details'); box.className = 'pp-fold'; box.id = 'pp-sim-fold'; box.innerHTML = '<summary>과거 데이터로 검증 · 절차<small>같은 계획·규칙을 지난 기간에 돌려 보기 (주문 없음)</small></summary>'; try { box.open = localStorage.getItem('teamQuantPaperFold') === '1'; } catch {} box.addEventListener('toggle', () => { try { localStorage.setItem('teamQuantPaperFold', box.open ? '1' : '0'); } catch {} }); if (head) { head.before(box); let n = head; while (n) { const next = n.nextElementSibling; box.append(n); n = next; } } }
 
