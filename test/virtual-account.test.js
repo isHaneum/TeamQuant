@@ -83,3 +83,13 @@ test('가져오기 검사: 버전·숫자·보유 형식이 맞는 것만', () =
   assert.throws(() => validateAccount({ ...a, version: 'X' }), /버전/); assert.throws(() => validateAccount({ ...a, positions: { '<img>': { qty: 1, costKrw: 1 } } }), /보유/);
   assert.throws(() => createAccount({ startKrw: 10 }), /시작 자금/);
 });
+
+test('결정 63: 가져오기 파일 검사 — HTML 이 든 수량 · 숫자 createdAt · 이상한 상태는 거부 · 정상 장부(체결 포함)는 통과', () => {
+  const a = createAccount({ startKrw: 5_000_000, now: KR_OPEN }); place(a, [{ symbol: '069500', name: 'KODEX 200', side: 'BUY', qty: 3 }], { quotes: { '069500': q(40000, KR_OPEN - 30e3) }, now: KR_OPEN });
+  const ok = JSON.parse(JSON.stringify(a)); assert.doesNotThrow(() => validateAccount(ok));
+  assert.throws(() => validateAccount({ ...ok, orders: [{ ...ok.orders[0], qty: "<meta http-equiv=refresh content='0;url=https://x'>" }] }), /주문/);
+  assert.throws(() => validateAccount({ ...ok, createdAt: 1 }), /기본 값/);
+  assert.throws(() => validateAccount({ ...ok, orders: [{ ...ok.orders[0], status: '<b>' }] }), /주문/);
+  assert.throws(() => validateAccount({ ...ok, orders: [null] }), /주문/);
+  assert.throws(() => validateAccount({ ...ok, orders: [{ ...ok.orders[0], fill: { ...ok.orders[0].fill, qty: '<i>' } }] }), /체결/);
+});

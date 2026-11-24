@@ -26,7 +26,7 @@ async function planNow(acc) {
   const doc = await getJson('/data/paper-plan.json').catch(() => null);
   return { plan: planFromDoc(doc), label: doc?.version ? `팀 기본 계획 ${doc.version}` : '팀 기본 계획' };
 }
-const symbolsOf = acc => [...new Set([...Object.keys(V.plan || {}), ...Object.keys(acc.positions), ...acc.orders.filter(o => o.status === 'queued').map(o => o.symbol)])].slice(0, 20);
+const symbolsOf = acc => [...new Set([...Object.keys(V.plan || {}), ...Object.keys(acc.positions), ...acc.orders.filter(o => o.status === 'queued').map(o => o.symbol)])].sort().slice(0, 20); // 정렬: 같은 종목 목록이면 같은 주소 → 공유 캐시(결정 63)
 async function readQuotes(acc) { const s = symbolsOf(acc); if (!s.length) return; const r = await getJson(`/api/quote?symbols=${encodeURIComponent(s.join(','))}`); V.quotes = Object.fromEntries(Object.entries(r.quotes || {}).filter(([, q]) => q && !q.error)); V.quotesAt = r.at || new Date().toISOString(); }
 async function readFx(force = false) { if (!force && V.fx && Date.now() - V.fxAt < 300_000) return; try { const d = await getJson(`/api/market?symbol=${encodeURIComponent('KRW=X')}&range=3mo&t=${Math.floor(Date.now() / 300_000)}`); const c = (d.candles || []).filter(x => x.close > 0); if (c.length) { V.fx = c.at(-1).close; V.fxAt = Date.now(); V.fxCandles = c; } } catch { } }
 /** 대기 주문 체결용 일봉(최근 3개월 · 5분마다 새로). 캐시된 2년 일봉은 오늘 봉이 낡을 수 있어 따로 읽는다. */
@@ -65,7 +65,8 @@ async function tick({ forceCheck = false } = {}) {
 }
 function schedule() {
   clearTimeout(V.timer); if (!V.acc) return;
-  const open = ['KR', 'US'].some(m => sessionState(new Date(), m).open), ms = document.visibilityState === 'visible' ? (open ? 30_000 : 300_000) : 600_000;
+  if (document.visibilityState !== 'visible') return; // 숨은 탭은 멈춤 · 보이면 visibilitychange 가 다시 부른다(결정 63)
+  const open = ['KR', 'US'].some(m => sessionState(new Date(), m).open), ms = open ? 30_000 : 300_000;
   V.timer = setTimeout(() => tick(), ms);
 }
 
@@ -81,11 +82,12 @@ function holdingsHtml(v, acc) {
 }
 function ordersHtml(acc) {
   const q = acc.orders.filter(o => o.status === 'queued'), recent = acc.orders.filter(o => o.status !== 'queued').slice(-15).reverse();
-  const row = o => `<tr class="${o.status === 'filled' ? '체결' : '차단'}"><td>${esc(String(o.fill?.at || o.at).slice(5, 16).replace('T', ' '))}</td><td>${o.side === 'SELL' ? '매도' : '매수'}</td><td>${esc(o.name)} ${o.fill ? `${o.fill.qty}주 @${px(o.fill.price, o.market === 'US')} · ${esc(o.fill.source)} · 비용 ${won((o.fill.feeKrw || 0) + (o.fill.taxKrw || 0))}${o.fill.realizedKrw !== undefined ? ` · 실현 ${swon(o.fill.realizedKrw)}` : ''}${o.fill.note ? ` · ${esc(o.fill.note)}` : ''}` : `${o.qty}주 · ${esc(o.reason || o.status)}`}<br><small class="cr-muted">${esc(o.why)}</small></td></tr>`;
-  return `${q.length ? `<h4>대기 주문 ${q.length}건 ${tip('장이 닫혀 있거나 시세가 낡아 바로 체결하지 못한 주문입니다. 그 시장의 다음 세션 시가로 체결합니다.')}</h4><ul class="pp-kis-items">${q.map(o => `<li>${o.side === 'SELL' ? '매도' : '매수'} ${esc(o.name)} ${o.qty}주 <small>${esc(o.waitWhy || '')} · ${esc(o.why)}</small></li>`).join('')}</ul>` : ''}
+  const row = o => `<tr class="${o.status === 'filled' ? '체결' : '차단'}"><td>${esc(String(o.fill?.at || o.at).slice(5, 16).replace('T', ' '))}</td><td>${o.side === 'SELL' ? '매도' : '매수'}</td><td>${esc(o.name)} ${o.fill ? `${Number(o.fill.qty)}주 @${px(o.fill.price, o.market === 'US')} · ${esc(o.fill.source)} · 비용 ${won((o.fill.feeKrw || 0) + (o.fill.taxKrw || 0))}${o.fill.realizedKrw !== undefined ? ` · 실현 ${swon(o.fill.realizedKrw)}` : ''}${o.fill.note ? ` · ${esc(o.fill.note)}` : ''}` : `${Number(o.qty)}주 · ${esc(o.reason || o.status)}`}<br><small class="cr-muted">${esc(o.why)}</small></td></tr>`;
+  return `${q.length ? `<h4>대기 주문 ${q.length}건 ${tip('장이 닫혀 있거나 시세가 낡아 바로 체결하지 못한 주문입니다. 그 시장의 다음 세션 시가로 체결합니다.')}</h4><ul class="pp-kis-items">${q.map(o => `<li>${o.side === 'SELL' ? '매도' : '매수'} ${esc(o.name)} ${Number(o.qty)}주 <small>${esc(o.waitWhy || '')} · ${esc(o.why)}</small></li>`).join('')}</ul>` : ''}
   ${recent.length ? `<h4>최근 체결</h4><div class="pp-scroll"><table class="pp-journal"><tbody>${recent.map(row).join('')}</tbody></table></div>` : ''}`;
 }
-function render() {
+function render() { try { renderInner(); } catch (e) { const box = document.getElementById('pp-va'); if (!box) return; box.innerHTML = `<header><h3>내 가상 모의계좌</h3></header><p class="cr-err">장부를 그리지 못했습니다(${esc(e.message)}). 파일이 손상됐을 수 있습니다.</p><div class="cr-actions"><button class="secondary" id="va-wipe">계좌 지우기</button></div>`; box.querySelector('#va-wipe').onclick = () => { clearTimeout(V.timer); V.acc = null; V.plan = null; save(null); render(); }; } }
+function renderInner() {
   const box = document.getElementById('pp-va'); if (!box) return; const acc = V.acc;
   if (!acc) {
     const mine = savedPlan();
