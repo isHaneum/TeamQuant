@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-25T19:47:54.866Z",
+ "updatedAt": "2026-11-25T20:13:11.266Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 7169.18994140625,
-   "change": -0.44,
-   "z": -0.3,
+   "last": 7178.5,
+   "change": -0.31,
+   "z": -0.2,
    "sd": 1.2664607111290063,
    "source": "Yahoo",
    "checked": true
@@ -51,8 +51,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 23513.611328125,
-   "change": -0.93,
+   "last": 23541.955078125,
+   "change": -0.81,
    "z": -0.5,
    "sd": 1.7532348734617134,
    "source": "Yahoo",
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 1343.199951171875,
-   "change": 0.16,
+   "last": 1343.5999755859375,
+   "change": 0.19,
    "z": 0.3,
    "sd": 0.6330935839063825,
    "source": "Yahoo"
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 83.66999816894531,
-   "change": 1.97,
-   "z": 0.7,
+   "last": 83.9000015258789,
+   "change": 2.25,
+   "z": 0.8,
    "sd": 2.9389073798912984,
    "source": "Yahoo"
   },
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 3579.39990234375,
-   "change": 0.49,
+   "last": 3578.5,
+   "change": 0.47,
    "z": 0.3,
    "sd": 1.5628529130825966,
    "source": "Yahoo"
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 27.760000228881836,
-   "change": 5.31,
-   "z": 0.4,
+   "last": 28.149999618530273,
+   "change": 6.79,
+   "z": 0.5,
    "sd": 13.023969823973816,
    "source": "Yahoo",
    "checked": true
@@ -113,44 +113,44 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-25",
-   "last": 4.838000297546387,
-   "change": -6.6,
-   "z": -1.2,
+   "last": 4.8480000495910645,
+   "change": -5.6,
+   "z": -1,
    "sd": 5.660637250950797,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -1.1,
-  "politics": -1.1,
-  "rates": -1.2,
+  "war": -1,
+  "politics": -1,
+  "rates": -1.1,
   "trade": 0.3,
   "fx": -0.2,
   "energy": -0.8,
-  "market": -1.5,
+  "market": -1.3,
   "credit": -0.3,
   "disaster": 0,
-  "policy": -0.4
+  "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 0.2,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.3,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 0.3,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
    "rate": 4.2,
-   "saturated": 1,
+   "saturated": 0,
    "queries": 2
   },
   "fx": {
@@ -164,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1.6,
+   "rate": 1.9,
    "saturated": 0,
    "queries": 3
   },
@@ -179,19 +179,19 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.7,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "3r3cpc",
-   "title": "금융당국, 디지털 뱅크런 대비…합동 모의훈련",
+   "id": "1bsejw9",
+   "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
    "firstSeen": "2026-11-25T06:00:00.000Z",
    "lastSeen": "2026-11-25T07:52:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "count": 7,
+   "sources": 7,
    "topics": [
     "credit",
     "policy"
@@ -228,7 +228,124 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 63,
+    "score": 60,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "r0p4b8",
+   "title": "금융당국, AI발 금융위기 대비…10개 금융기관과 합동훈련",
+   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "lastSeen": "2026-11-25T08:00:00.000Z",
+   "count": 7,
+   "sources": 7,
+   "topics": [
+    "credit",
+    "policy"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "금융당국, AI 공격에 '디지털뱅크런' 대응 체계 점검",
+     "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
+     "host": "cstimes.com",
+     "at": "2026-11-25T08:00:00.000Z"
+    },
+    {
+     "title": "'사이버 공격', 건전성 위협 시나리오 포함…금융당국·5대 지주 '디지털...",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348826?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-25T06:48:00.000Z"
+    },
+    {
+     "title": "AI 사이버 공격·디지털 뱅크런 대비…금융당국, 5대 금융그룹과 첫 합...",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=756488",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-25T06:46:00.000Z"
+    },
+    {
+     "title": "금융당국·5대 금융, 디지털 뱅크런 첫 모의 합동훈련",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446497",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-25T06:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 60,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "qbpuf3",
+   "title": "올해 사이드카 102회…국힘 “이재명 버블 특검 추진”",
+   "firstSeen": "2026-11-25T04:02:00.000Z",
+   "lastSeen": "2026-11-25T19:21:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "\"하루는 급등, 다음 날은 폭락\"…개미들 울린 사이드카 102회",
+     "link": "https://www.fnnews.com/news/202611252310100567",
+     "host": "fnnews.com",
+     "at": "2026-11-25T19:21:00.000Z"
+    },
+    {
+     "title": "투기판인가…韓증시 ‘퐁당퐁당’ 사이드카, 올해 102회",
+     "link": "https://www.munhwa.com/article/11634136?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-25T10:01:00.000Z"
+    },
+    {
+     "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
+     "link": "https://www.mk.co.kr/article/12218444",
+     "host": "mk.co.kr",
+     "at": "2026-11-25T08:37:00.000Z"
+    },
+    {
+     "title": "올해 사이드카 102회…국힘 “이재명 버블 특검 추진”",
+     "link": "https://www.naeil.com/news/read/610023?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-25T04:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 55,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -304,110 +421,6 @@
    }
   },
   {
-   "id": "12tdew9",
-   "title": "정점식 국민의힘 원내대표 '이재명 버블' 특검 및 사법 공세",
-   "firstSeen": "2026-11-25T00:04:00.000Z",
-   "lastSeen": "2026-11-25T09:07:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "“리밸런싱 유예 결정으로 220조 손실”…‘버블 특검’ 키우는 野",
-     "link": "https://www.joongang.co.kr/article/25481942",
-     "host": "joongang.co.kr",
-     "at": "2026-11-25T09:07:00.000Z"
-    },
-    {
-     "title": "올해 사이드카 102회…국힘 “이재명 버블 특검 추진”",
-     "link": "https://www.naeil.com/news/read/610023?ref=naver",
-     "host": "naeil.com",
-     "at": "2026-11-25T04:02:00.000Z"
-    },
-    {
-     "title": "정점식 국민의힘 원내대표 '이재명 버블' 특검 및 사법 공세",
-     "link": "http://www.breaknews.com/1253705",
-     "host": "breaknews.com",
-     "at": "2026-11-25T00:04:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 52,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "qbpuf3",
-   "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
-   "firstSeen": "2026-11-25T08:37:00.000Z",
-   "lastSeen": "2026-11-25T19:21:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "\"하루는 급등, 다음 날은 폭락\"…개미들 울린 사이드카 102회",
-     "link": "https://www.fnnews.com/news/202611252310100567",
-     "host": "fnnews.com",
-     "at": "2026-11-25T19:21:00.000Z"
-    },
-    {
-     "title": "투기판인가…韓증시 ‘퐁당퐁당’ 사이드카, 올해 102회",
-     "link": "https://www.munhwa.com/article/11634136?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-25T10:01:00.000Z"
-    },
-    {
-     "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
-     "link": "https://www.mk.co.kr/article/12218444",
-     "host": "mk.co.kr",
-     "at": "2026-11-25T08:37:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "urgent",
-    "label": "긴급",
-    "score": 52,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
    "id": "hluxuw",
    "title": "이틀에 한 번꼴 '급제동' 걸린 韓 증시…사이드카 102번·서킷브레이커...",
    "firstSeen": "2026-11-25T01:51:00.000Z",
@@ -432,52 +445,6 @@
      "link": "https://www.newsis.com/view/NISX20261125_0003882406",
      "host": "newsis.com",
      "at": "2026-11-25T01:51:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 49,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1kfj94j",
-   "title": "사이버 공격에 디지털뱅크런까지…금융당국, 위기대응 첫 합동훈련",
-   "firstSeen": "2026-11-25T06:02:00.000Z",
-   "lastSeen": "2026-11-25T08:00:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "금융당국, AI 공격에 '디지털뱅크런' 대응 체계 점검",
-     "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
-     "host": "cstimes.com",
-     "at": "2026-11-25T08:00:00.000Z"
-    },
-    {
-     "title": "사이버 공격에 디지털뱅크런까지…금융당국, 위기대응 첫 합동훈련",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=580420&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-25T06:02:00.000Z"
     }
    ],
    "assess": {
@@ -829,8 +796,8 @@
    "id": "58hcsd",
    "title": "美, 14개 경제주체에 ‘과잉생산 관세’ 예고...“韓 15% 상한 유지”",
    "firstSeen": "2026-11-25T13:21:00.000Z",
-   "lastSeen": "2026-11-25T16:26:00.000Z",
-   "count": 12,
+   "lastSeen": "2026-11-25T20:12:00.000Z",
+   "count": 13,
    "sources": 10,
    "topics": [
     "rates",
@@ -838,6 +805,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "美, 과잉생산 관세 추가…15% 상한은 유지",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261126051204ZAn",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-25T20:12:00.000Z"
+    },
     {
      "title": "美, 과잉생산 빌미 14개국 또 관세…\"한국 15% 상한 유지\"(종합2보)",
      "link": "https://www.newsis.com/view/NISX20261126_0003883585",
@@ -855,12 +828,6 @@
      "link": "https://www.newsis.com/view/NISX20261125_0003883569",
      "host": "newsis.com",
      "at": "2026-11-25T14:50:00.000Z"
-    },
-    {
-     "title": "미국, 14개국에 '과잉생산' 관세 예고…韓 15% 상한 유지",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=102032",
-     "host": "newsian.co.kr",
-     "at": "2026-11-25T14:36:00.000Z"
     }
    ],
    "assess": {
@@ -868,6 +835,61 @@
     "label": "관찰",
     "score": 40,
     "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1mscm8q",
+   "title": "미 성장도, 물가도 뜨겁다…GDP 4.3%·PCE 3.8%",
+   "firstSeen": "2026-11-25T13:58:00.000Z",
+   "lastSeen": "2026-11-25T17:12:00.000Z",
+   "count": 11,
+   "sources": 11,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "美 10월 PCE 물가 3.8% 상승… 12월 금리 인상 전망에 힘 실려",
+     "link": "https://www.chosun.com/economy/int_economy/2026/11/26/IAKV2262RFDBVGGRHSWCUVRILA/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-25T17:12:00.000Z"
+    },
+    {
+     "title": "미국 PCE 물가 3.8%↑...12월 금리 인상 전망 굳어져",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611260116042890",
+     "host": "ytn.co.kr",
+     "at": "2026-11-25T16:16:00.000Z"
+    },
+    {
+     "title": "美 10월 PCE 3.8%·3Q 성장률 4.3%…12월 금리 인상 굳어져(종합)",
+     "link": "https://view.asiae.co.kr/article/2026112601044624904",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-25T16:04:00.000Z"
+    },
+    {
+     "title": "美 10월 PCE 물가 3.8%↑… 12월 금리인상 굳어지나(종합)",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3452165",
+     "host": "newscj.com",
+     "at": "2026-11-25T16:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 38,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
