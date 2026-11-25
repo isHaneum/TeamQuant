@@ -1,5 +1,5 @@
 /* 내 자산 홈 리포트. 밝은 흑백 바탕, 상승 빨강·하락 파랑(국내 관례). */
-.rp{--ink:#14171c;--sub:#5b6573;--line:#e6e8ec;--soft:#f6f7f9;--up:#e0353b;--down:#2f6fe4;--flat:#6b7280;--mkt:#9aa3af;--own:#14171c;margin:8px 0 28px;color:var(--ink)}
+.rp{--ink:#14171c;--sub:#5b6573;--line:#e6e8ec;--soft:#f6f7f9;--up:#d32f2f;--down:#2563eb;--flat:#6b7280;--mkt:#9aa3af;--own:#14171c;margin:8px 0 28px;color:var(--ink)}
 .rp .up{color:var(--up)}.rp .down{color:var(--down)}.rp .flat{color:var(--flat)}
 .rp-hero{display:flex;gap:24px;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;padding:28px 28px 24px;border-radius:20px;background:linear-gradient(135deg,#fff 0%,#f3f5f8 100%);border:1px solid var(--line);animation:rpIn .6s cubic-bezier(.2,.7,.2,1) both}
 .rp-hero h2{margin:6px 0 8px;font-size:clamp(20px,2.4vw,26px);line-height:1.4;font-weight:750;letter-spacing:-.02em;max-width:760px}
@@ -107,7 +107,7 @@ i.mkt{background:var(--mkt)}i.own,i.stk{background:var(--own)}i.mark{background:
 #overview.hm-home{max-width:1440px}
 #overview.hm-home>.page-head .eyebrow{display:none}
 #overview.hm-loaded>p.muted[role="status"],#overview.hm-loaded #ov-source{display:none}
-.hm{--ink:#14171c;--sub:#5b6573;--line:#e6e8ec;--soft:#f6f7f9;--up:#e0353b;--down:#2f6fe4;--flat:#6b7280;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start;margin:8px 0 32px;color:var(--ink)}
+.hm{--ink:#14171c;--sub:#5b6573;--line:#e6e8ec;--soft:#f6f7f9;--up:#d32f2f;--down:#2563eb;--flat:#6b7280;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start;margin:8px 0 32px;color:var(--ink)}
 .hm-main{display:grid;gap:20px;min-width:0}
 .hm .up{color:var(--up)}.hm .down{color:var(--down)}.hm .flat{color:var(--flat)}
 .hm-note{margin:10px 0 0;font-size:13px;color:var(--sub);line-height:1.6}.hm-muted{color:var(--sub)}

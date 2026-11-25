@@ -7,8 +7,9 @@
   <link rel="stylesheet" crossorigin integrity="sha384-GIdEBaqGN9mNkDkMkzMHW8EKUqtpPIe/sLj1X7DIrnc9uPtLROJgmuDlh+3rBw0j" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="/styles.css?v=oos-20261105"><link rel="stylesheet" href="/overview.css?v=tr-20261108">
   <link rel="stylesheet" href="/typography.css?v=type-20261029">
+  <link rel="stylesheet" href="/tokens.css?v=p0-20261125">
 </head>
-<body>
+<body class="tq-booting">
   <section id="login-view" class="login-view">
     <div class="login-copy"><span class="brand-mark">TQ</span><p class="eyebrow">TEAM QUANT</p><h1>투자전략 검증<br>및 모의투자</h1><p>전략의 조건과 판단 근거를 확인하고 모의 자산으로 실행할 수 있습니다.</p></div>
     <form id="login-form" class="login-card"><p class="eyebrow">LOGIN</p><h2>프로필 열기</h2><p>이 브라우저에 저장되는 개인 체험 프로필입니다. 서버 회원 계정이 아니며 다른 PC와 동기화되지 않습니다. PIN 은 같은 PC 를 쓰는 사람끼리 화면을 나누는 잠금 번호일 뿐 보안 장치가 아닙니다 — 다른 곳의 비밀번호를 쓰지 마세요.</p><label>프로필 이름<input id="login-id" autocomplete="username" required maxlength="24" placeholder="프로필 이름"></label><label>4자리 PIN<input id="login-pin" type="password" inputmode="numeric" autocomplete="current-password" required pattern="[0-9]{4}" maxlength="4" placeholder="PIN"></label><label><input id="remember-profile" type="checkbox"> 이 PC에서 프로필 유지 (30일)</label><button class="primary" type="submit">프로필 열기</button><button id="demo-login" class="secondary" type="button">체험 계정</button><small>수업용 프로토타입 로그인 · 브라우저별 저장</small></form>

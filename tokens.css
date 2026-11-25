@@ -1,0 +1,84 @@
+/* Team Quant 디자인 토큰 — 2026-11-25 UI·UX 감사 P0 (worklogs/2026-11-25-ui-ux-audit.md).
+   새로 만들거나 고치는 화면은 이 값만 쓴다. 기존 파일의 !important·색 리터럴은 그 화면을 고칠 때 이 토큰으로 바꿔 나간다.
+   분기점은 두 개만: 640px(휴대폰) · 1024px(태블릿). */
+:root {
+  /* 색 — 글자색은 모두 흰 바탕·#f6f7f9 바탕에서 4.5:1 이상 */
+  --tq-ink: #14171c;      /* 본문·제목 */
+  --tq-sub: #4b5563;      /* 보조 글 (7.6:1) */
+  --tq-faint: #6b7280;    /* 캡션 (4.8:1) — #9aa3af 는 글자에 쓰지 않는다(2.5:1) */
+  --tq-line: #e5e7eb;
+  --tq-soft: #f6f7f9;
+  --tq-paper: #ffffff;
+  --tq-accent: #1d4ed8;   /* 선택·링크 (6.7:1) */
+  --tq-up: #d32f2f;       /* 오름 (4.98:1) */
+  --tq-down: #2563eb;     /* 내림 (5.17:1) */
+  --tq-ok: #067647; --tq-ok-bg: #ecfdf3;
+  --tq-warn: #b54708; --tq-warn-bg: #fffaeb;
+  /* 글자 크기 6단계 */
+  --tq-fs-1: 12px; --tq-fs-2: 14px; --tq-fs-3: 16px; --tq-fs-4: 20px; --tq-fs-5: 28px; --tq-fs-6: 40px;
+  /* 간격 — 4의 배수 */
+  --tq-sp-1: 4px; --tq-sp-2: 8px; --tq-sp-3: 12px; --tq-sp-4: 16px; --tq-sp-5: 24px; --tq-sp-6: 32px;
+  /* 모서리 */
+  --tq-r-1: 8px; --tq-r-2: 12px; --tq-r-pill: 999px;
+}
+
+/* 첫 화면: 체험 프로필로 바로 들어가는 동안 로그인 카드를 깜빡이지 않는다. 스크립트가 실패해도 1.5초 뒤에는 보인다. */
+.tq-booting #login-view { visibility: hidden; animation: tq-reveal 0s 1.5s forwards; }
+@keyframes tq-reveal { to { visibility: visible; } }
+
+/* 상단 '투자 권유 아님' — 언제든 고지를 여는 버튼 */
+.tq-notice-btn {
+  height: 32px; padding: 0 var(--tq-sp-3); border: 1px solid var(--tq-line); border-radius: var(--tq-r-pill);
+  background: var(--tq-paper); color: var(--tq-sub); font: inherit; font-size: var(--tq-fs-1); font-weight: 600; cursor: pointer;
+}
+.tq-notice-btn:hover { color: var(--tq-ink); border-color: var(--tq-faint); }
+.tq-notice-btn:focus-visible { outline: 2px solid var(--tq-accent); outline-offset: 2px; }
+
+/* 동의·고지 창: 버튼 줄이 화면 아래로 잘리지 않게 창 안에서 바닥에 붙인다 */
+.tq-consent > div > .tq-actions {
+  position: sticky; bottom: -18px; z-index: 1; margin-top: var(--tq-sp-3); padding: var(--tq-sp-3) 0 var(--tq-sp-2);
+  background: var(--tq-paper); border-top: 1px solid var(--tq-line);
+}
+
+/* 홈 첫 줄: 규칙을 지켰나 — 이 앱의 주인공 */
+#core-today .ct-hero {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--tq-sp-2) var(--tq-sp-4);
+  margin: 0 0 var(--tq-sp-3); padding: 0; border: 0;
+}
+#core-today .ct-hero h2 {
+  margin: 0; font-size: var(--tq-fs-5); line-height: 1.25; font-weight: 800; letter-spacing: -0.02em; color: var(--tq-ink);
+  font-variant-numeric: tabular-nums;
+}
+#core-today .ct-hero .ct-when { font-size: var(--tq-fs-2); color: var(--tq-sub); }
+#core-today .ct-hero .ct-when.urgent { color: var(--tq-warn); font-weight: 700; }
+#core-today .ct-broken { list-style: none; margin: 0 0 var(--tq-sp-4); padding: 0; display: grid; gap: var(--tq-sp-2); }
+#core-today .ct-broken li {
+  display: grid; grid-template-columns: auto 1fr; gap: var(--tq-sp-1) var(--tq-sp-3); align-items: baseline;
+  padding: var(--tq-sp-3) var(--tq-sp-4); border-radius: var(--tq-r-1); background: var(--tq-warn-bg);
+  font-size: var(--tq-fs-2); line-height: 1.5;
+}
+#core-today .ct-broken li b { color: var(--tq-warn); font-weight: 700; }
+#core-today .ct-broken li b::before { content: "✕ "; }
+#core-today .ct-broken li span { color: var(--tq-ink); max-width: 70ch; }
+#core-today .ct-allgood { margin: 0 0 var(--tq-sp-4); font-size: var(--tq-fs-3); color: var(--tq-ok); font-weight: 600; }
+#core-today .ct-unknown { margin: 0 0 var(--tq-sp-3); font-size: var(--tq-fs-1); color: var(--tq-faint); }
+#core-today .ct-skel { height: 56px; border-radius: var(--tq-r-1); }
+
+/* 모의투자: [내 가상계좌 | 팀 모의계좌] 탭 */
+.pp-tabs { display: flex; gap: var(--tq-sp-1); margin: 0 0 var(--tq-sp-4); border-bottom: 1px solid var(--tq-line); }
+.pp-tabs button {
+  min-height: 44px; padding: 0 var(--tq-sp-4); border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  background: none; color: var(--tq-sub); font: inherit; font-size: var(--tq-fs-3); font-weight: 600; cursor: pointer;
+}
+.pp-tabs button[aria-selected="true"] { color: var(--tq-ink); border-bottom-color: var(--tq-ink); }
+.pp-tabs button:hover { color: var(--tq-ink); }
+.pp-tabs button:focus-visible { outline: 2px solid var(--tq-accent); outline-offset: -2px; }
+[data-pp-tab="mine"] #pp-kis, [data-pp-tab="mine"] #pp-hyp { display: none; }
+[data-pp-tab="team"] #pp-va { display: none; }
+
+@media (max-width: 640px) {
+  #core-today .ct-hero h2 { font-size: 22px; }
+  #core-today .ct-broken li { grid-template-columns: 1fr; }
+  .pp-tabs button { flex: 1; padding: 0 var(--tq-sp-2); }
+  .tq-notice-btn { height: 28px; padding: 0 var(--tq-sp-2); }
+}

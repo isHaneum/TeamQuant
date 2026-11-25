@@ -34,9 +34,9 @@ installBridgeUi(panel,()=>$('#toss-refresh').onclick());
 // A local profile stores strategies and paper books; it is not broker authentication.
 const connectionHint=document.createElement('p');connectionHint.className='muted';connectionHint.id='local-key-hint';
 connectionHint.textContent=onPc?'PC 키 파일 확인 중…':'개인 계좌 키는 본인 PC에 보관합니다. Vercel에서는 PC 연결코드를 사용합니다.';
-$('#login-form').append(connectionHint);
+$('#login-form').append(connectionHint);connectionHint.hidden=true; // 2026-11-25 P0: 키 파일·서버 안내는 방문자에게 숨김
 const readiness=onPc?privateRead('status').then(d=>{
- connectionHint.textContent=d.keyFile==='ready'?'기존 토스 키 파일이 연결되어 있습니다. 프로필을 열고 내 실제 자산을 선택하면 자동 조회합니다.':d.keyFile==='missing'?'설정된 토스 키 파일을 찾지 못했습니다. PC의 파일 위치를 확인하십시오.':'토스 키 파일 초기 설정이 필요합니다. START-HERE.md를 확인하십시오.';
+ connectionHint.hidden=d.keyFile!=='ready';connectionHint.textContent=d.keyFile==='ready'?'기존 토스 키 파일이 연결되어 있습니다. 프로필을 열고 내 실제 자산을 선택하면 자동 조회합니다.':d.keyFile==='missing'?'설정된 토스 키 파일을 찾지 못했습니다. PC의 파일 위치를 확인하십시오.':'토스 키 파일 초기 설정이 필요합니다. START-HERE.md를 확인하십시오.';
  return d;
 }).catch(()=>{connectionHint.textContent='PC 서버 연결을 확인하십시오. start-personal-server.cmd로 실행할 수 있습니다.';return null;}):Promise.resolve(null);
 window.addEventListener('teamquant:asset-clear',()=>{

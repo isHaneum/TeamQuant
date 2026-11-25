@@ -42,15 +42,32 @@ function dialog({ title, sub, checks, notices = [], go, leave }) {
   });
 }
 
-let asking = false;
-async function ensureConsent() {
-  const app = document.getElementById('app'); if (!app || app.hidden || asking) return;
-  if (await valid(KEY, REQUIRED)) return;
-  asking = true;
-  const ok = await dialog({ title: '시작하기 전에 확인해 주세요', sub: `확인 조항 ${VER} · 체크한 내용은 이 브라우저에만 기록됩니다(설정 > 동의 관리에서 철회).`, checks: REQUIRED, notices: NOTICES, go: '확인하고 시작', leave: '나가기' });
-  asking = false;
-  if (ok) { write(KEY, { ver: VER, decidedAt: new Date().toISOString(), choices: Object.fromEntries(REQUIRED.map(([id]) => [id, 'accept'])), sha: await fingerprints(REQUIRED), notices: NOTICES.map(([id]) => id) }); renderManage(); }
-  else { document.getElementById('logout')?.click(); if (!document.getElementById('app')?.hidden) location.reload(); }
+let asking = null;
+/** 2026-11-25 UI·UX P0: 들어올 때 막지 않는다. 내 기록을 만드는 행동(가상 계좌 만들기·가져오기) 바로 전에 묻는다. 반환: 동의 있음 true · 취소 false. */
+async function requireConsent(what = '계속하기') {
+  if (await valid(KEY, REQUIRED)) return true;
+  if (asking) return asking;
+  asking = (async () => {
+    const ok = await dialog({ title: `${what} 전에 확인해 주세요`, sub: `확인 조항 ${VER} · 체크한 내용은 이 브라우저에만 기록됩니다(설정 > 동의 관리에서 철회).`, checks: REQUIRED, notices: NOTICES, go: '확인하고 계속', leave: '취소' });
+    if (ok) { write(KEY, { ver: VER, decidedAt: new Date().toISOString(), choices: Object.fromEntries(REQUIRED.map(([id]) => [id, 'accept'])), sha: await fingerprints(REQUIRED), notices: NOTICES.map(([id]) => id) }); renderManage(); }
+    return ok;
+  })();
+  try { return await asking; } finally { asking = null; }
+}
+window.tqRequireConsent = requireConsent;
+
+/** 고지(읽기 전용): 상단 '투자 권유 아님' 버튼으로 언제든 연다. 체크 없음. */
+function noticeDialog() {
+  const wrap = document.createElement('div'); wrap.className = 'tq-consent'; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-labelledby', 'tq-notice-title');
+  wrap.innerHTML = `<div><h2 id="tq-notice-title">쓰기 전에 알아 둘 것</h2>${[...REQUIRED, ...NOTICES].map(([, h, text]) => `<section><h3>${esc(h)}</h3><p>${esc(text)}</p></section>`).join('')}<div class="tq-actions"><button type="button" class="tq-go" data-tq-close>닫기</button></div></div>`;
+  const onKey = e => { if (e.key === 'Escape') close(); };
+  const close = () => { wrap.remove(); document.removeEventListener('keydown', onKey); document.getElementById('tq-notice-btn')?.focus(); };
+  wrap.addEventListener('click', e => { if (e.target === wrap || e.target.closest('[data-tq-close]')) close(); });
+  document.addEventListener('keydown', onKey); document.body.append(wrap); wrap.querySelector('[data-tq-close]').focus();
+}
+function mountNotice() {
+  const host = document.querySelector('.top-actions'); if (!host || document.getElementById('tq-notice-btn')) return;
+  const b = document.createElement('button'); b.type = 'button'; b.id = 'tq-notice-btn'; b.className = 'tq-notice-btn'; b.textContent = '투자 권유 아님'; b.title = '서비스 성격 · 투자 위험 · 데이터 한계'; b.addEventListener('click', noticeDialog); host.prepend(b);
 }
 
 /** 설정 > 동의 관리(C12): 무엇에 언제 동의했는지 보고 철회한다. 철회하면 다음에 다시 묻는다. */
@@ -60,7 +77,7 @@ function renderManage() {
   if (!box) { box = document.createElement('article'); box.className = 'panel'; box.id = 'tq-consent-manage'; host.append(box); }
   const r = read(KEY), pc = read(PCKEY), when = x => (x?.decidedAt ? new Date(x.decidedAt).toLocaleString('ko-KR') : '없음');
   box.innerHTML = `<h2>동의 관리</h2><p>시작 확인(서비스 성격 · 투자 위험 · 데이터 한계): ${esc(when(r))}${r?.ver ? ` · 문구 ${esc(r.ver)}` : ''}</p><p>PC 연결 확인(키 보관 · 본인 계좌 · 조회 전용 · 나이): ${esc(when(pc))}</p><p class="muted">기록은 이 브라우저에만 있고 서버로 보내지 않습니다. 철회하면 다음에 다시 묻습니다. ${esc(NOTICES.map(([, h, t]) => `${h}: ${t}`).join(' '))}</p><button type="button" class="secondary" id="tq-consent-withdraw">동의 철회</button>`;
-  box.querySelector('#tq-consent-withdraw').onclick = () => { try { localStorage.removeItem(KEY); localStorage.removeItem(PCKEY); } catch { } renderManage(); ensureConsent(); };
+  box.querySelector('#tq-consent-withdraw').onclick = () => { try { localStorage.removeItem(KEY); localStorage.removeItem(PCKEY); } catch { } renderManage(); };
 }
 
 // PC 연결 패키지(TeamQuant-PC.zip)는 C7·C8·C9·C13 을 확인한 뒤에만 내려받는다.
@@ -79,5 +96,5 @@ document.addEventListener('click', e => {
 }, true);
 
 const appEl = document.getElementById('app');
-if (appEl) new MutationObserver(() => ensureConsent()).observe(appEl, { attributes: true, attributeFilter: ['hidden'] });
-renderManage(); ensureConsent();
+if (appEl) new MutationObserver(() => mountNotice()).observe(appEl, { attributes: true, attributeFilter: ['hidden'] });
+renderManage(); mountNotice();

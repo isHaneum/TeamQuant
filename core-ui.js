@@ -90,15 +90,17 @@ function weekEndNote() { const d = new Date(Date.now() + 9 * 3600e3), w = d.getU
 function renderToday() {
   const host = document.querySelector('#overview .hm-main'); if (!host) return;
   let card = document.getElementById('core-today');
-  if (!card) { card = document.createElement('article'); card.className = 'hm-card core-today'; card.id = 'core-today'; const anchor = document.getElementById('hm-kpis'); if (anchor) anchor.after(card); else host.prepend(card); }
+  if (!card) { card = document.createElement('article'); card.className = 'hm-card core-today'; card.id = 'core-today'; const anchor = document.getElementById('hm-kpis'); if (anchor) anchor.before(card); else host.prepend(card); }
   if (!S.positions.length) { card.hidden = true; return; } card.hidden = false;
   const ready = Object.keys(S.risk).length > 0, { planSaved, rules } = current();
-  if (!ready) { card.innerHTML = `<header><h3>오늘 점검 ${tip(CHECK_TIP)}</h3></header><div class="shimmer ct-skel"></div>`; return; }
+  if (!ready) { card.innerHTML = `<header class="ct-hero"><h2>규칙 점검 중</h2></header><div class="shimmer ct-skel"></div>`; return; }
   const e = evaluate(state()), when = e.urgent ? '지금 바로 맞출 일이 있습니다' : weekEndNote(), paper = !!S.snap?.paper, la = paper ? (S.mock?.auto || []).at(-1) : null;
-  card.innerHTML = `<header><h3>오늘 점검 ${tip(CHECK_TIP)}</h3><span class="ct-when ${e.urgent ? 'urgent' : ''}">${esc(when)}</span></header>
+  const bad = e.checks.filter(c => c.ok === false); card.classList.toggle('ct-has-bad', bad.length > 0);
+  card.innerHTML = `<header class="ct-hero"><h2>규칙 ${e.known}개 중 ${e.okCount}개 지킴 ${tip(CHECK_TIP)}</h2><span class="ct-when ${e.urgent ? 'urgent' : ''}">${esc(when)}</span></header>
+    ${bad.length ? `<ul class="ct-broken">${bad.map(c => `<li><b>${esc(c.label)}</b><span>${esc(String(c.detail || '').split(String.fromCharCode(10))[0].slice(0, 140))}</span></li>`).join('')}</ul>` : '<p class="ct-allgood">오늘 어긴 규칙이 없습니다.</p>'}
     ${planSaved ? '' : `<p class="ct-note">아직 목표 비중을 저장하지 않아 지금 비중(한 종목 ${rules.maxSingle}% 이내)을 목표로 봤습니다. <button type="button" class="text-button" data-core-go="rules">규칙에서 정하기</button></p>`}
     <div class="ct-checks">${e.checks.map(c => `<span class="ct-chip ${c.ok === true ? 'ok' : c.ok === false ? 'bad' : 'na'}">${c.ok === true ? '✓' : c.ok === false ? '!' : '?'} ${esc(c.label)}${tip(c.detail)}</span>`).join('')}</div>
-    <p class="ct-score"><b>규칙 ${e.known}개 중 ${e.okCount}개 지킴</b>${e.known < e.checks.length ? ` · ${e.checks.length - e.known}개는 자료가 없어 확인 못 함` : ''}</p>
+    ${e.known < e.checks.length ? `<p class="ct-unknown">${e.checks.length - e.known}개는 자료가 없어 확인 못 함</p>` : ''}
     ${paper ? `<p class="ct-none">할 일은 모의계좌가 스스로 정해 주문합니다${la ? ` · 마지막 자동 실행 ${esc(String(la.at || '').slice(0, 10))} · 보냄 ${la.sent ?? 0}건 · 막힘 ${la.blocked ?? 0}건` : ''} ${tip('이 화면의 칩은 브라우저가 모의계좌의 규칙과 계획으로 다시 계산한 것입니다. 실제 주문 판단은 서버의 엔진이 하고(뉴스·공시 주의, 나눠 사기 단계 포함), 그 결과는 모의투자 화면에 있습니다.')}</p>` : e.actions.length ? `<ol class="ct-actions">${e.actions.slice(0, 6).map(a => `<li class="${a.kind}"><b>${esc(a.text)}</b>${a.why?.length ? `<small>${esc(a.why.join(' · '))}</small>` : ''}</li>`).join('')}</ol>` : '<p class="ct-none">할 일 없음 · 계획대로 유지</p>'}
     <div class="ct-risk"><span>계좌 하루 95% 손실 범위 ${tip('지금 보유를 최근 500거래일의 하루 움직임(지금 변동성으로 맞춤)에 넣어 본 값입니다. 20거래일에 하루쯤은 이보다 더 잃을 수 있는 수준이고, 과거 검증에서 이 범위를 넘은 날의 비율은 규칙 화면의 검증 자료 원표에 있습니다(목표 5%).')}</span><b>${e.varNow?.ok ? `−${won(e.varNow.var95)}` : '—'}</b><small>${e.varNow?.ok ? `총자산의 ${(e.varNow.var95 / e.total * 100).toFixed(2)}% · 한도 ${current().rules.dailyLoss}%` : ''}</small></div>
     <form class="ct-cash" id="ct-cash" ${paper ? 'hidden' : ''}><label>새로 넣을 돈 ${tip('들어온 돈을 계획보다 모자란 종목부터 나눕니다. 떨어졌거나 덜 산 종목에 자연히 더 들어갑니다. 한 종목 상한·현금 최소·하루 손실 한도를 지키고 남으면 현금으로 둡니다. 무작위 6종목 포트폴리오 120개 모의 운용(2016~2026)에서 균등 적립과 수익·손실은 비슷하고 매매는 약 40% 적었습니다.')}</label><input id="ct-cash-in" type="number" min="10000" step="any" inputmode="numeric" placeholder="예: 500000"><button type="submit" class="secondary">나누기</button></form><div id="ct-cash-out"></div>

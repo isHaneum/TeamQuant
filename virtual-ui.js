@@ -95,7 +95,7 @@ function renderInner() {
     <div class="pp-form"><label class="ck-field unit"><span>시작 자금</span><input id="va-cap" type="number" value="10000000" min="1000000" step="1000000" inputmode="numeric"><i>원</i></label>
     <label class="ck-field"><span>계획</span><select id="va-plan"><option value="team">팀 기본 계획(위 모의계좌와 같은 비중)</option><option value="mine"${mine ? '' : ' disabled'}>규칙 화면의 내 계획${mine ? '' : ' (저장 없음)'}</option></select></label></div>
     <div class="cr-actions"><button class="primary" id="va-create">가상 계좌 만들기</button><button class="secondary" id="va-import">파일에서 가져오기</button><span class="cr-err" id="va-err">${esc(V.err)}</span></div>`;
-    box.querySelector('#va-create').onclick = () => { try { V.acc = createAccount({ startKrw: Number(box.querySelector('#va-cap').value), planSource: box.querySelector('#va-plan').value }); V.plan = null; save(V.acc); tick(); } catch (e) { V.err = e.message; render(); } };
+    box.querySelector('#va-create').onclick = async () => { if (window.tqRequireConsent && !(await window.tqRequireConsent('내 가상 계좌 만들기'))) return; try { V.acc = createAccount({ startKrw: Number(box.querySelector('#va-cap').value), planSource: box.querySelector('#va-plan').value }); V.plan = null; save(V.acc); tick(); } catch (e) { V.err = e.message; render(); } };
     box.querySelector('#va-import').onclick = importFile; return;
   }
   const v = valuation(acc, { prices: priceMap(acc), fx: V.fx }), costs = acc.feesKrw + acc.taxKrw + acc.fxCostKrw + acc.slipKrw, last = acc.checks.at(-1), due = checkDue(acc);
@@ -113,7 +113,7 @@ function renderInner() {
   box.querySelector('#va-import').onclick = importFile;
   box.querySelector('#va-reset').onclick = () => { if (V.armed !== 'reset') { V.armed = 'reset'; render(); setTimeout(() => { if (V.armed === 'reset') { V.armed = null; render(); } }, 6000); return; } V.armed = null; clearTimeout(V.timer); V.acc = null; V.plan = null; save(null); render(); };
 }
-function importFile() {
+async function importFile() { if (window.tqRequireConsent && !(await window.tqRequireConsent('가상 계좌 가져오기'))) return;
   const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'application/json,.json';
   inp.onchange = async () => { try { const f = inp.files?.[0]; if (!f || f.size > 2_000_000) throw new Error('파일이 없거나 너무 큽니다.'); const a = validateAccount(JSON.parse(await f.text())); V.acc = a; V.plan = null; save(a); tick(); } catch (e) { V.err = e.message; render(); } };
   inp.click();
@@ -124,7 +124,15 @@ export function mountVirtual(page) {
   if (document.getElementById('pp-va')) return;
   const card = document.createElement('article'); card.className = 'cr-card'; card.id = 'pp-va';
   const anchor = page.querySelector('#pp-kis'); if (anchor) anchor.after(card); else page.querySelector('.cr-main')?.prepend(card);
-  V.acc = load(); render();
+  // 2026-11-25 UI·UX P0: 두 계좌를 탭으로 나눈다(띠·숫자·표가 고른 계좌만). 고른 탭은 이 브라우저에 기억(편의).
+  const tabs = document.createElement('div'); tabs.className = 'pp-tabs'; tabs.setAttribute('role', 'tablist'); tabs.setAttribute('aria-label', '계좌');
+  tabs.innerHTML = '<button type="button" role="tab" data-pp-tab-btn="mine">내 가상계좌</button><button type="button" role="tab" data-pp-tab-btn="team">팀 모의계좌</button>';
+  (page.querySelector('#pp-kis') || card).before(tabs);
+  const setTab = t => { page.dataset.ppTab = t; for (const b of tabs.querySelectorAll('[data-pp-tab-btn]')) { const on = b.dataset.ppTabBtn === t; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; } try { localStorage.setItem('teamQuantPaperTab', t); } catch { } };
+  tabs.addEventListener('click', e => { const b = e.target.closest('[data-pp-tab-btn]'); if (b) setTab(b.dataset.ppTabBtn); });
+  tabs.addEventListener('keydown', e => { if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return; const next = page.dataset.ppTab === 'mine' ? 'team' : 'mine'; setTab(next); tabs.querySelector('[data-pp-tab-btn="' + next + '"]')?.focus(); });
+  let savedTab = null; try { savedTab = localStorage.getItem('teamQuantPaperTab'); } catch { }
+  V.acc = load(); render(); setTab(savedTab === 'team' || savedTab === 'mine' ? savedTab : (V.acc ? 'mine' : 'team'));
   if (V.acc) tick();
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && V.acc) tick(); });
 }
