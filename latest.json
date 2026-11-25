@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-25T03:32:04.724Z",
+ "updatedAt": "2026-11-25T03:47:17.587Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 4707.31982421875,
-   "change": -5.97,
-   "z": -2,
+   "last": 4744.48,
+   "change": -5.22,
+   "z": -1.8,
    "sd": 2.9505075076952023,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,11 +24,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 648.77001953125,
-   "change": -2.57,
-   "z": -0.9,
+   "last": 653.62,
+   "change": -1.84,
+   "z": -0.6,
    "sd": 2.8687324737066797,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -62,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 1344.780029296875,
-   "change": 0.28,
+   "last": 1344.280029296875,
+   "change": 0.24,
    "z": 0.4,
    "sd": 0.6330935839063825,
    "source": "Yahoo"
@@ -74,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 80.91000366210938,
-   "change": -1.39,
+   "last": 80.8499984741211,
+   "change": -1.46,
    "z": -0.5,
    "sd": 2.9389073798912984,
    "source": "Yahoo"
@@ -86,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 3554.10009765625,
-   "change": -0.22,
-   "z": -0.1,
+   "last": 3548.89990234375,
+   "change": -0.36,
+   "z": -0.2,
    "sd": 1.5628529130825966,
    "source": "Yahoo"
   },
@@ -119,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 1.5,
-  "politics": 0.5,
+  "war": 1.4,
+  "politics": 0.4,
   "rates": 2,
   "trade": 2.3,
   "fx": -0.2,
-  "energy": 1.6,
+  "energy": 1.1,
   "market": 0.9,
   "credit": 0.5,
   "disaster": 0,
@@ -132,17 +134,17 @@
  },
  "rates": {
   "war": {
-   "rate": 2.8,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2.3,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 5.8,
+   "rate": 5.7,
    "saturated": 2,
    "queries": 3
   },
@@ -157,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 5,
+   "rate": 4,
    "saturated": 0,
    "queries": 1
   },
@@ -187,10 +189,11 @@
    "id": "5jpknz",
    "title": "[기자수첩] 코스피, 젠슨 황 복귀 효과에도 하루 만에 무너지며 4800선 붕...",
    "firstSeen": "2026-11-24T22:15:00.000Z",
-   "lastSeen": "2026-11-25T03:06:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "lastSeen": "2026-11-25T03:16:00.000Z",
+   "count": 10,
+   "sources": 9,
    "topics": [
+    "politics",
     "trade",
     "market"
    ],
@@ -198,6 +201,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "하루 만에 끝난 '젠슨 황 복귀' 효과...트럼프 개입 비판 [뉴스나우]",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611251216293611",
+     "host": "ytn.co.kr",
+     "at": "2026-11-25T03:16:00.000Z"
+    },
     {
      "title": "[오전시황] 코스피, 5000선 하루 만에 반납, 상한가는 5개 종목",
      "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38639",
@@ -215,30 +224,24 @@
      "link": "https://biz.sbs.co.kr/article_hub/20000348760?division=NAVER",
      "host": "biz.sbs.co.kr",
      "at": "2026-11-25T02:40:00.000Z"
-    },
-    {
-     "title": "하루 만에 식은 '젠슨 황 랠리'… 메모리 과잉·관세 악재에 코스피 4,7...",
-     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=400160",
-     "host": "fntoday.co.kr",
-     "at": "2026-11-25T02:32:00.000Z"
     }
    ],
    "assess": {
-    "level": "urgent",
-    "label": "긴급",
+    "level": "caution",
+    "label": "주의",
     "score": 75,
     "spike": 2.3,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -247,8 +250,8 @@
    "title": "美 반도체 충격에 코스피 4700선대로 후퇴…매도 사이드카 가동",
    "firstSeen": "2026-11-25T01:12:00.000Z",
    "lastSeen": "2026-11-25T03:01:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "count": 6,
+   "sources": 6,
    "topics": [
     "market"
    ],
@@ -263,6 +266,12 @@
      "at": "2026-11-25T03:01:00.000Z"
     },
     {
+     "title": "코스피 5천 선 회복 하루 만에 급락…매도 사이드카 발동·4,700선 추락",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8722106&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-25T03:01:00.000Z"
+    },
+    {
      "title": "코스피, 장 초반 급락에 매도 사이드카…4%대 하락세",
      "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=269150",
      "host": "whitepaper.co.kr",
@@ -273,31 +282,24 @@
      "link": "http://www.finomy.com/news/articleView.html?idxno=267837",
      "host": "finomy.com",
      "at": "2026-11-25T02:00:00.000Z"
-    },
-    {
-     "title": "[오늘증시] 하루짜리 '젠슨 황 효과'...코스피, 하루만에 매도 사이드카",
-     "link": "https://www.startuptoday.co.kr/news/articleView.html?idxno=820032",
-     "host": "startuptoday.co.kr",
-     "at": "2026-11-25T02:00:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 62,
+    "score": 60,
     "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.97%(평소의 2배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -343,78 +345,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 59,
+    "score": 56,
     "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.97%(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1o9i0pv",
-   "title": "코스피 5천 선 회복 하루 만에 급락…매도 사이드카 발동·4,700선 추락",
-   "firstSeen": "2026-11-25T00:15:00.000Z",
-   "lastSeen": "2026-11-25T03:01:00.000Z",
-   "count": 4,
-   "sources": 3,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "코스피 5천 선 회복 하루 만에 급락…매도 사이드카 발동·4,700선 추락",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8722106&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-25T03:01:00.000Z"
-    },
-    {
-     "title": "[뉴스1 PICK] 하루 만에 끝난 젠슨황 효과…코스피 급락에 '사이드카'",
-     "link": "https://www.news1.kr/finance/market-exr/6365410",
-     "host": "news1.kr",
-     "at": "2026-11-25T02:17:00.000Z"
-    },
-    {
-     "title": "하루 만에 끝난 '젠슨 황 효과'… 코스피, 급락에 매도 사이드카 발동",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3451924",
-     "host": "newscj.com",
-     "at": "2026-11-25T02:06:00.000Z"
-    },
-    {
-     "title": "코스피 5천 선 회복 하루 만에 급락…매도 사이드카 발동·4,700선 추락",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8721976&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-25T01:41:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 57,
-    "spike": 0.9,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -5.97,
-     "unit": "%",
-     "z": -2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -5.97%(평소의 2배)",
-     "같은 시장 움직임의 다른 사건이 먼저"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -448,74 +391,75 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 53,
+    "score": 50,
     "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
   {
    "id": "z73xtc",
-   "title": "가계대출 평균 5% 돌파…주담대도 6개월 연속 올라 4.98%",
+   "title": "가계대출 금리 5% 돌파…주담대 14년 7개월만에 최고",
    "firstSeen": "2026-11-25T03:00:00.000Z",
-   "lastSeen": "2026-11-25T03:22:00.000Z",
-   "count": 17,
-   "sources": 17,
+   "lastSeen": "2026-11-25T03:38:00.000Z",
+   "count": 19,
+   "sources": 19,
    "topics": [
-    "rates"
+    "rates",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "가계대출 금리 5%대로… 주담대 고정·변동 금리 차 0.23%p로 좁혀져",
-     "link": "https://www.pennmike.com/news/articleView.html?idxno=132723",
-     "host": "pennmike.com",
-     "at": "2026-11-25T03:22:00.000Z"
+     "title": "영끌·빚투족 어쩌나…주담대 금리 15년여 만에 최고",
+     "link": "https://www.busan.com/view/busan/view.php?code=2026112512371670128",
+     "host": "busan.com",
+     "at": "2026-11-25T03:38:00.000Z"
     },
     {
-     "title": "가계대출 금리 2년 11개월 만에 5% '돌파'…주담대는 14년 7개월 만에 '최...",
-     "link": "https://www.youthdaily.co.kr/news/article.html?no=230298",
-     "host": "youthdaily.co.kr",
-     "at": "2026-11-25T03:12:00.000Z"
+     "title": "주담대 금리 14년 7개월 만에 최고…기존 대출 금리도 10개월 연속 상승",
+     "link": "https://www.raonnews.com/news/article.html?no=63063",
+     "host": "raonnews.com",
+     "at": "2026-11-25T03:36:00.000Z"
     },
     {
-     "title": "10월 가계대출, 35개월 만에 5% 돌파…주담대 14년7개월만에 최고",
-     "link": "https://view.asiae.co.kr/article/2026112512113413034",
-     "host": "view.asiae.co.kr",
-     "at": "2026-11-25T03:11:00.000Z"
+     "title": "주택담보대출 금리 급등, 14년7개월만에 최고",
+     "link": "https://www.viewsnnews.com/article?q=239925",
+     "host": "viewsnnews.com",
+     "at": "2026-11-25T03:32:00.000Z"
     },
     {
-     "title": "은행 가계대출금리 5% 넘어…주담대 6개월 연속 상승",
-     "link": "http://www.metroseoul.co.kr/article/20261125500154",
-     "host": "metroseoul.co.kr",
-     "at": "2026-11-25T03:02:00.000Z"
+     "title": "가계대출 3년만에 5% 돌파...주담대 금리는 14년 7개월래 최고",
+     "link": "https://www.sedaily.com/article/20118749?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-25T03:32:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 51,
+    "score": 48,
     "spike": 2,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -561,18 +505,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
+    "score": 47,
     "spike": 2,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -600,19 +544,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
+    "score": 47,
     "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -640,19 +584,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
+    "score": 47,
     "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -680,19 +624,19 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 50,
+    "score": 47,
     "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -737,18 +681,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
+    "score": 46,
     "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -789,19 +733,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 47,
-    "spike": 1.6,
+    "score": 43,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -1.39,
+     "change": -1.46,
      "unit": "%",
      "z": -0.5
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 -1.39%"
+     "WTI 유가 -1.46%"
     ]
    }
   },
@@ -839,18 +783,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 42,
+    "score": 39,
     "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -888,18 +832,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
+    "score": 37,
     "spike": 2,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
     ]
    }
   },
@@ -933,18 +877,63 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 39,
+    "score": 36,
     "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.97,
+     "change": -5.22,
      "unit": "%",
-     "z": -2
+     "z": -1.8
     },
     "why": [
-     "코스피 -5.97%(평소의 2배)"
+     "코스피 -5.22%"
+    ]
+   }
+  },
+  {
+   "id": "1dvln1",
+   "title": "뉴욕증시, 엔비디아 5.86%·반도체지수 7.88% 급반락에 혼조…다우 5만선...",
+   "firstSeen": "2026-11-24T22:06:00.000Z",
+   "lastSeen": "2026-11-24T23:46:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시, AI 기술주 차익실현에 혼조 마감…나스닥 1.48%↓",
+     "link": "https://www.sentv.co.kr/article/view/sentv202611250018",
+     "host": "sentv.co.kr",
+     "at": "2026-11-24T23:46:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 엔비디아 5.86%·반도체지수 7.88% 급반락에 혼조…다우 5만선...",
+     "link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065568655420115",
+     "host": "megaeconomy.co.kr",
+     "at": "2026-11-24T23:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 36,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.22,
+     "unit": "%",
+     "z": -1.8
+    },
+    "why": [
+     "코스피 -5.22%"
     ]
    }
   }
