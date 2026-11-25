@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-25T02:30:43.976Z",
+ "updatedAt": "2026-11-25T02:47:41.239Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 4741.83984375,
-   "change": -5.28,
-   "z": -1.8,
+   "last": 4719.02,
+   "change": -5.73,
+   "z": -1.9,
    "sd": 2.9505075076952023,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,11 +24,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 650.3599853515625,
-   "change": -2.33,
-   "z": -0.8,
+   "last": 648.46,
+   "change": -2.62,
+   "z": -0.9,
    "sd": 2.8687324737066797,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -62,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 1342.5799560546875,
-   "change": 0.12,
+   "last": 1342.4100341796875,
+   "change": 0.1,
    "z": 0.2,
    "sd": 0.6330935839063825,
    "source": "Yahoo"
@@ -74,8 +76,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 80.91999816894531,
-   "change": -1.38,
+   "last": 80.9000015258789,
+   "change": -1.4,
    "z": -0.5,
    "sd": 2.9389073798912984,
    "source": "Yahoo"
@@ -86,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-24",
-   "last": 3563.39990234375,
-   "change": 0.04,
+   "last": 3562.800048828125,
+   "change": 0.03,
    "z": 0,
    "sd": 1.5628529130825966,
    "source": "Yahoo"
@@ -119,12 +121,12 @@
   }
  ],
  "spikes": {
-  "war": 2.2,
+  "war": 2.1,
   "politics": 1.2,
-  "rates": 2.4,
-  "trade": 2.4,
+  "rates": 2.3,
+  "trade": 2.3,
   "fx": -0.2,
-  "energy": 2.2,
+  "energy": 1.7,
   "market": 0.9,
   "credit": 0.5,
   "disaster": 0,
@@ -132,7 +134,7 @@
  },
  "rates": {
   "war": {
-   "rate": 3.4,
+   "rate": 3.3,
    "saturated": 1,
    "queries": 3
   },
@@ -142,8 +144,8 @@
    "queries": 3
   },
   "rates": {
-   "rate": 6.4,
-   "saturated": 2,
+   "rate": 6.2,
+   "saturated": 1,
    "queries": 3
   },
   "trade": {
@@ -157,7 +159,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6.3,
+   "rate": 5.3,
    "saturated": 0,
    "queries": 1
   },
@@ -184,13 +186,14 @@
  },
  "issues": [
   {
-   "id": "lnn28i",
-   "title": "美 반도체 충격에 코스피 4700선대로 후퇴…매도 사이드카 가동",
-   "firstSeen": "2026-11-25T01:12:00.000Z",
-   "lastSeen": "2026-11-25T02:26:00.000Z",
-   "count": 16,
-   "sources": 15,
+   "id": "zqhfeb",
+   "title": "삼전닉스 6%대↓…코스피 장초반 4800선 반납",
+   "firstSeen": "2026-11-25T00:28:00.000Z",
+   "lastSeen": "2026-11-25T02:40:00.000Z",
+   "count": 12,
+   "sources": 12,
    "topics": [
+    "trade",
     "market"
    ],
    "critical": [
@@ -198,10 +201,16 @@
    ],
    "links": [
     {
-     "title": "'5000피' 복귀 하루 만에 사이드카 폭락…'빚투' 개미 강제청산 비명",
-     "link": "https://news.tf.co.kr/read/economy/2393118.htm",
-     "host": "news.tf.co.kr",
-     "at": "2026-11-25T02:26:00.000Z"
+     "title": "코스피 매도사이드카 4700선 밀려…31.5% 폭등했던 엔비디아, 하루 만에...",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348760?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-25T02:40:00.000Z"
+    },
+    {
+     "title": "하루 만에 식은 '젠슨 황 랠리'… 메모리 과잉·관세 악재에 코스피 4,7...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=400160",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-25T02:32:00.000Z"
     },
     {
      "title": "[뉴스1 PICK] 하루 만에 끝난 젠슨황 효과…코스피 급락에 '사이드카'",
@@ -210,15 +219,67 @@
      "at": "2026-11-25T02:17:00.000Z"
     },
     {
+     "title": "하루 만에 식은 '젠슨 황 랠리'…AI 투자 불안 여전",
+     "link": "https://dealsite.co.kr/articles/173465",
+     "host": "dealsite.co.kr",
+     "at": "2026-11-25T02:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 77,
+    "spike": 2.3,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.73,
+     "unit": "%",
+     "z": -1.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -5.73%"
+    ]
+   }
+  },
+  {
+   "id": "lnn28i",
+   "title": "美 반도체 충격에 코스피 4700선대로 후퇴…매도 사이드카 가동",
+   "firstSeen": "2026-11-25T01:12:00.000Z",
+   "lastSeen": "2026-11-25T02:34:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피, 장 초반 급락에 매도 사이드카…4%대 하락세",
+     "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=269150",
+     "host": "whitepaper.co.kr",
+     "at": "2026-11-25T02:34:00.000Z"
+    },
+    {
      "title": "하루 만에 끝난 '젠슨 황 효과'… 코스피, 급락에 매도 사이드카 발동",
      "link": "https://www.newscj.com/news/articleView.html?idxno=3451924",
      "host": "newscj.com",
      "at": "2026-11-25T02:06:00.000Z"
     },
     {
-     "title": "코스피 5천선 하루 만에 붕괴… 장 초반 4%대 급락",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3451918",
-     "host": "newscj.com",
+     "title": "코스피, 5%대 급락에 '매도 사이드카'···4700선",
+     "link": "http://www.finomy.com/news/articleView.html?idxno=267837",
+     "host": "finomy.com",
+     "at": "2026-11-25T02:00:00.000Z"
+    },
+    {
+     "title": "[오늘증시] 하루짜리 '젠슨 황 효과'...코스피, 하루만에 매도 사이드카",
+     "link": "https://www.startuptoday.co.kr/news/articleView.html?idxno=820032",
+     "host": "startuptoday.co.kr",
      "at": "2026-11-25T02:00:00.000Z"
     }
    ],
@@ -231,13 +292,13 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   },
@@ -245,9 +306,9 @@
    "id": "1593m9d",
    "title": "‘롤러코스터’ K증시…올해 이틀에 한 번 사이드카",
    "firstSeen": "2026-11-24T07:53:00.000Z",
-   "lastSeen": "2026-11-25T02:20:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "lastSeen": "2026-11-25T02:37:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
     "market"
    ],
@@ -255,6 +316,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "올해 사이드카 102번...역대급 ‘롤러코스피’",
+     "link": "https://biz.heraldcorp.com/article/10948859?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-25T02:37:00.000Z"
+    },
     {
      "title": "롤러코스터 장세 빠진 韓 증시…올해 사이드카 102번·서킷브레이커 16번...",
      "link": "https://www.widedaily.com/news/articleView.html?idxno=304723",
@@ -277,19 +344,185 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 53,
+    "score": 58,
     "spike": 0.9,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
      "핵심 단어",
-     "코스피 -5.28%"
+     "코스피 -5.73%"
+    ]
+   }
+  },
+  {
+   "id": "1o9i0pv",
+   "title": "‘일장황몽’ 코스피…하루 만에 5000피 반납, 나흘 연속 사이드카",
+   "firstSeen": "2026-11-25T00:15:00.000Z",
+   "lastSeen": "2026-11-25T02:26:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "'5000피' 복귀 하루 만에 사이드카 폭락…'빚투' 개미 강제청산 비명",
+     "link": "https://news.tf.co.kr/read/economy/2393118.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-25T02:26:00.000Z"
+    },
+    {
+     "title": "‘일장황몽’ 코스피…하루 만에 5000피 반납, 나흘 연속 사이드카",
+     "link": "https://www.joongang.co.kr/article/25481765",
+     "host": "joongang.co.kr",
+     "at": "2026-11-25T01:21:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 52,
+    "spike": 0.9,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.73,
+     "unit": "%",
+     "z": -1.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -5.73%"
+    ]
+   }
+  },
+  {
+   "id": "34nwsy",
+   "title": "사이드카 올해 100회 돌파…코스피 발동 기준은 25년 넘게 ±5%",
+   "firstSeen": "2026-11-24T06:12:00.000Z",
+   "lastSeen": "2026-11-24T06:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "사이드카 올해 100회 돌파…코스피 발동 기준은 25년 넘게 ±5%",
+     "link": "https://www.raonnews.com/news/article.html?no=63037",
+     "host": "raonnews.com",
+     "at": "2026-11-24T06:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.73,
+     "unit": "%",
+     "z": -1.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -5.73%"
+    ]
+   }
+  },
+  {
+   "id": "182csaf",
+   "title": "증시 사이드카 올해 101회…매수 51회·매도 50회, 급등락 반복에 안전장...",
+   "firstSeen": "2026-11-24T08:36:00.000Z",
+   "lastSeen": "2026-11-24T08:36:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "증시 사이드카 올해 101회…매수 51회·매도 50회, 급등락 반복에 안전장...",
+     "link": "https://sateconomy.co.kr/news/view/1065593219015534",
+     "host": "sateconomy.co.kr",
+     "at": "2026-11-24T08:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.73,
+     "unit": "%",
+     "z": -1.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -5.73%"
+    ]
+   }
+  },
+  {
+   "id": "ru1xm8",
+   "title": "코스피, 장중 5％대 급락 하루만에 `5천피` 반납…오전 매도사이드카",
+   "firstSeen": "2026-11-25T01:42:00.000Z",
+   "lastSeen": "2026-11-25T02:35:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "코스피, 장중 5％대 급락 하루만에 `5천피` 반납…오전 매도사이드카",
+     "link": "http://tbs.seoul.kr/news/newsView.do?typ_800=1&idx_800=3538850&seq_800=20531751",
+     "host": "tbs.seoul.kr",
+     "at": "2026-11-25T02:35:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 49,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -5.73,
+     "unit": "%",
+     "z": -1.9
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -5.73%"
     ]
    }
   },
@@ -324,139 +557,75 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 49,
-    "spike": 2.2,
+    "score": 45,
+    "spike": 1.7,
     "news": true,
     "reaction": {
      "symbol": "CL=F",
      "label": "WTI 유가",
-     "change": -1.38,
+     "change": -1.4,
      "unit": "%",
      "z": -0.5
     },
     "why": [
      "핵심 단어",
-     "WTI 유가 -1.38%"
+     "WTI 유가 -1.4%"
     ]
    }
   },
   {
-   "id": "34nwsy",
-   "title": "사이드카 올해 100회 돌파…코스피 발동 기준은 25년 넘게 ±5%",
-   "firstSeen": "2026-11-24T06:12:00.000Z",
-   "lastSeen": "2026-11-24T06:12:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "16cnmu8",
+   "title": "美 연준, 12월 추가 긴축 가능성 부각…금리 인상에 촉각",
+   "firstSeen": "2026-11-24T23:42:00.000Z",
+   "lastSeen": "2026-11-25T01:34:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "market"
+    "rates",
+    "fx"
    ],
-   "critical": [
-    "market"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "사이드카 올해 100회 돌파…코스피 발동 기준은 25년 넘게 ±5%",
-     "link": "https://www.raonnews.com/news/article.html?no=63037",
-     "host": "raonnews.com",
-     "at": "2026-11-24T06:12:00.000Z"
+     "title": "BNP파리바 \"연준, 12월부터 세 차례 연속 금리 인상 전망\"",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446430",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-25T01:34:00.000Z"
+    },
+    {
+     "title": "집값·환율 진정됐지만 물가·가계빚은 '버티기'…한은, 26일 추가 인상...",
+     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=131087",
+     "host": "ntoday.co.kr",
+     "at": "2026-11-25T00:26:00.000Z"
+    },
+    {
+     "title": "한은 추가 긴축 갈림길…인상 시점·최종금리 전망 엇갈려",
+     "link": "https://www.sentv.co.kr/article/view/sentv202611240100",
+     "host": "sentv.co.kr",
+     "at": "2026-11-25T00:04:00.000Z"
+    },
+    {
+     "title": "美 연준, 12월 추가 긴축 가능성 부각…금리 인상에 촉각",
+     "link": "https://www.jemin.com/news/articleView.html?idxno=848395",
+     "host": "jemin.com",
+     "at": "2026-11-24T23:42:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 47,
-    "spike": 0.9,
+    "score": 44,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
-     "핵심 단어",
-     "코스피 -5.28%"
-    ]
-   }
-  },
-  {
-   "id": "182csaf",
-   "title": "증시 사이드카 올해 101회…매수 51회·매도 50회, 급등락 반복에 안전장...",
-   "firstSeen": "2026-11-24T08:36:00.000Z",
-   "lastSeen": "2026-11-24T08:36:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "증시 사이드카 올해 101회…매수 51회·매도 50회, 급등락 반복에 안전장...",
-     "link": "https://sateconomy.co.kr/news/view/1065593219015534",
-     "host": "sateconomy.co.kr",
-     "at": "2026-11-24T08:36:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 47,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -5.28,
-     "unit": "%",
-     "z": -1.8
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -5.28%"
-    ]
-   }
-  },
-  {
-   "id": "ru1xm8",
-   "title": "코스피, 4~5％대 급락 하루만에 `5천피` 반납…오전 매도사이드카",
-   "firstSeen": "2026-11-25T01:42:00.000Z",
-   "lastSeen": "2026-11-25T01:42:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "코스피, 4~5％대 급락 하루만에 `5천피` 반납…오전 매도사이드카",
-     "link": "http://tbs.seoul.kr/news/newsView.do?typ_800=1&idx_800=3538843&seq_800=20531744",
-     "host": "tbs.seoul.kr",
-     "at": "2026-11-25T01:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 47,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -5.28,
-     "unit": "%",
-     "z": -1.8
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   },
@@ -502,18 +671,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 46,
-    "spike": 2.2,
+    "score": 43,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   },
@@ -522,8 +691,8 @@
    "title": "\"美, 16개 교역 상대국 '과잉생산 관세' 이르면 오늘 발표\"",
    "firstSeen": "2026-11-24T22:34:00.000Z",
    "lastSeen": "2026-11-25T01:37:00.000Z",
-   "count": 4,
-   "sources": 4,
+   "count": 3,
+   "sources": 3,
    "topics": [
     "trade"
    ],
@@ -534,12 +703,6 @@
      "link": "https://www.sedaily.com/article/20118675?ref=naver",
      "host": "sedaily.com",
      "at": "2026-11-25T01:37:00.000Z"
-    },
-    {
-     "title": "[뉴스초점] 美 ‘과잉생산’ 관세 예고…'젠슨황 효과' 제동",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261125101259arZ",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-25T01:14:00.000Z"
     },
     {
      "title": "[국제금융 브리핑] 미국, 과잉생산 관세 발표 임박...한·EU·일본 15% 이...",
@@ -557,74 +720,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 2.4,
+    "score": 41,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
-     "코스피 -5.28%"
-    ]
-   }
-  },
-  {
-   "id": "16cnmu8",
-   "title": "美 연준, 12월 추가 긴축 가능성 부각…금리 인상에 촉각",
-   "firstSeen": "2026-11-24T23:42:00.000Z",
-   "lastSeen": "2026-11-25T01:34:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "BNP파리바 \"연준, 12월부터 세 차례 연속 금리 인상 전망\"",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446430",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-25T01:34:00.000Z"
-    },
-    {
-     "title": "집값·환율 진정됐지만 물가·가계빚은 '버티기'…한은, 26일 추가 인상...",
-     "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=131087",
-     "host": "ntoday.co.kr",
-     "at": "2026-11-25T00:26:00.000Z"
-    },
-    {
-     "title": "한은 추가 긴축 갈림길…인상 시점·최종금리 전망 엇갈려",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611240100",
-     "host": "sentv.co.kr",
-     "at": "2026-11-25T00:04:00.000Z"
-    },
-    {
-     "title": "美 연준, 12월 추가 긴축 가능성 부각…금리 인상에 촉각",
-     "link": "https://www.jemin.com/news/articleView.html?idxno=848395",
-     "host": "jemin.com",
-     "at": "2026-11-24T23:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 2.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -5.28,
-     "unit": "%",
-     "z": -1.8
-    },
-    "why": [
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   },
@@ -662,58 +769,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
-    "spike": 2.4,
+    "score": 41,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
-     "코스피 -5.28%"
-    ]
-   }
-  },
-  {
-   "id": "1sej2jk",
-   "title": "공매도 금지론 확산...통계 보면 '시기상조'",
-   "firstSeen": "2026-11-25T02:14:00.000Z",
-   "lastSeen": "2026-11-25T02:14:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "policy"
-   ],
-   "links": [
-    {
-     "title": "공매도 금지론 확산...통계 보면 '시기상조'",
-     "link": "http://www.00news.co.kr/news/articleView.html?idxno=108340",
-     "host": "00news.co.kr",
-     "at": "2026-11-25T02:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 40,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -5.28,
-     "unit": "%",
-     "z": -1.8
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   },
@@ -747,25 +814,25 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 2.4,
+    "score": 38,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   },
   {
-   "id": "ad8cnw",
+   "id": "11sd318",
    "title": "반짝 그친 젠슨 황 효과…앤트로픽 4일 만에 공모가 붕괴",
-   "firstSeen": "2026-11-24T14:42:00.000Z",
+   "firstSeen": "2026-11-24T22:05:00.000Z",
    "lastSeen": "2026-11-25T02:17:00.000Z",
    "count": 2,
    "sources": 2,
@@ -791,18 +858,18 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 2.4,
+    "score": 38,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   },
@@ -837,66 +904,35 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 37,
-    "spike": 2.4,
+    "score": 38,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -5.28,
+     "change": -5.73,
      "unit": "%",
-     "z": -1.8
+     "z": -1.9
     },
     "why": [
-     "코스피 -5.28%"
-    ]
-   }
-  },
-  {
-   "id": "anu7ii",
-   "title": "올해도 ‘깜짝 성장’인데, 내년 또 고성장?…반도체 호황의 숨은 ‘나...",
-   "firstSeen": "2026-11-25T00:11:00.000Z",
-   "lastSeen": "2026-11-25T01:39:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "골드만삭스 “내년 韓 성장률 3.2%…반도체 호황에도 내수 부진”",
-     "link": "https://www.sedaily.com/article/20118678?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-25T01:39:00.000Z"
-    },
-    {
-     "title": "올해도 ‘깜짝 성장’인데, 내년 또 고성장?…반도체 호황의 숨은 ‘나...",
-     "link": "https://www.chosun.com/economy/economy_general/2026/11/25/552S6PD7UFFURNAJSNOVJOKIL4/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-25T00:11:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 37,
-    "spike": 2.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -5.28,
-     "unit": "%",
-     "z": -1.8
-    },
-    "why": [
-     "코스피 -5.28%"
+     "코스피 -5.73%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-25T02:47:41.239Z",
+   "id": "zqhfeb",
+   "level": "caution",
+   "title": "삼전닉스 6%대↓…코스피 장초반 4800선 반납",
+   "why": [
+    "핵심 단어",
+    "코스피 -5.73%"
+   ],
+   "link": "https://biz.sbs.co.kr/article_hub/20000348760?division=NAVER",
+   "delivered": false
+  },
   {
    "at": "2026-11-25T02:30:43.976Z",
    "id": "lnn28i",
@@ -1123,18 +1159,6 @@
     "S&P 500 -0.5%"
    ],
    "link": "https://www.seoul.co.kr/news/economy/securities/2026/11/25/20261125500024?wlog_tag3=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-25T00:34:26.145Z",
-   "id": "ad8cnw",
-   "level": "caution",
-   "title": "하루 만에 다시 4800선 붕괴…美 AI주 급락에 삼전·하닉 6%대↓",
-   "why": [
-    "핵심 단어",
-    "S&P 500 -0.5%"
-   ],
-   "link": "https://www.seoulfn.com/news/articleView.html?idxno=643842",
    "delivered": false
   }
  ],
