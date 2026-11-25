@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-25T11:12:46.478Z",
+ "updatedAt": "2026-11-25T11:26:58.765Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 81.44000244140625,
-   "change": -0.74,
-   "z": -0.3,
+   "last": 81.44999694824219,
+   "change": -0.73,
+   "z": -0.2,
    "sd": 2.9389073798912984,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 3557.60009765625,
-   "change": -0.12,
+   "last": 3555.800048828125,
+   "change": -0.17,
    "z": -0.1,
    "sd": 1.5628529130825966,
    "source": "Yahoo"
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 29.389999389648438,
-   "change": 11.49,
+   "last": 29.520000457763672,
+   "change": 11.99,
    "z": 0.9,
    "sd": 13.023969823973816,
    "source": "Yahoo",
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": 0,
+  "war": -0.2,
   "politics": -0.4,
-  "rates": 0.5,
-  "trade": 1.6,
+  "rates": 0.2,
+  "trade": 1.2,
   "fx": -0.2,
-  "energy": 0.1,
+  "energy": -0.1,
   "market": 1,
   "credit": 0.2,
   "disaster": 0,
-  "policy": 0.3
+  "policy": 0.2
  },
  "rates": {
   "war": {
-   "rate": 1.3,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +142,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 3.3,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 6,
+   "rate": 5.5,
    "saturated": 1,
    "queries": 2
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   }
@@ -285,8 +285,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 64,
-    "spike": 0.3,
+    "score": 63,
+    "spike": 0.2,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -674,8 +674,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 1.6,
+    "score": 46,
+    "spike": 1.2,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -923,6 +923,18 @@
  ],
  "alerts": [
   {
+   "at": "2026-11-25T11:26:58.765Z",
+   "id": "qbpuf3",
+   "level": "caution",
+   "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
+   "why": [
+    "핵심 단어",
+    "코스피 -6.16%(평소의 2.1배)"
+   ],
+   "link": "https://www.munhwa.com/article/11634136?ref=naver",
+   "delivered": false
+  },
+  {
    "at": "2026-11-25T11:12:46.478Z",
    "id": "12tdew9",
    "level": "caution",
@@ -1155,19 +1167,6 @@
     "같은 시장 움직임의 다른 사건이 먼저"
    ],
    "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8722326&ref=A",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-25T09:16:05.547Z",
-   "id": "1ihkvmz",
-   "level": "caution",
-   "title": "코스피, 6%대 폭락에 4700선 붕괴...젠슨 황 복귀 전보다 더 떨어져",
-   "why": [
-    "핵심 단어",
-    "코스피 -6.16%(평소의 2.1배)",
-    "같은 시장 움직임의 다른 사건이 먼저"
-   ],
-   "link": "https://www.etoday.co.kr/news/view/2652906",
    "delivered": false
   }
  ],
