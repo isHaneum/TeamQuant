@@ -1,0 +1,588 @@
+{
+ "id": "2026-11-26-pre",
+ "version": "I1-2026-11-06",
+ "slot": "pre",
+ "title": "장 전 브리핑",
+ "at": "2026-11-25T23:32:05.945Z",
+ "headline": "S&P 500 -0.25%(11.25 기준), 나스닥 -0.62%(11.25 기준), 원/달러 +0.21%(11.25 기준) · 주요 이슈: 금리·통화, 유가·원자재, 신용·금융위기",
+ "markets": [
+  {
+   "symbol": "^GSPC",
+   "label": "S&P 500",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-25",
+   "last": 7182.77978515625,
+   "change": -0.25,
+   "z": -0.2,
+   "sd": 1.2664607111290063,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "^IXIC",
+   "label": "나스닥",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-25",
+   "last": 23585.802734375,
+   "change": -0.62,
+   "z": -0.4,
+   "sd": 1.7532348734617134,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "KRW=X",
+   "label": "원/달러",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-25",
+   "last": 1343.8800048828125,
+   "change": 0.21,
+   "z": 0.3,
+   "sd": 0.6330935839063825,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "CL=F",
+   "label": "WTI 유가",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-25",
+   "last": 83.98999786376953,
+   "change": 2.36,
+   "z": 0.8,
+   "sd": 2.9389073798912984,
+   "source": "Yahoo"
+  },
+  {
+   "symbol": "^VIX",
+   "label": "VIX 변동성",
+   "unit": "%",
+   "available": true,
+   "date": "2026-11-25",
+   "last": 28.290000915527344,
+   "change": 7.32,
+   "z": 0.6,
+   "sd": 13.023969823973816,
+   "source": "Yahoo",
+   "checked": true
+  },
+  {
+   "symbol": "^TNX",
+   "label": "미 10년 금리",
+   "unit": "bp",
+   "available": true,
+   "date": "2026-11-25",
+   "last": 4.8480000495910645,
+   "change": -5.6,
+   "z": -1,
+   "sd": 5.660637250950797,
+   "source": "Yahoo"
+  }
+ ],
+ "unusual": [],
+ "issues": [
+  {
+   "id": "v1tfp9",
+   "title": "금통위, 올해 마지막 통화정책 회의 개최···기준 금리 인상에 무게",
+   "firstSeen": "2026-11-25T20:00:00.000Z",
+   "lastSeen": "2026-11-25T23:16:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "rates",
+    "energy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "한은 올해 마지막 금통위 오늘 개최…기준금리 3.00%서 추가 인상 무게",
+     "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=370582",
+     "host": "ftoday.co.kr",
+     "at": "2026-11-25T23:16:00.000Z"
+    },
+    {
+     "title": "국제 금값, 美 금리 인상 전망에 하락…금 선물 0.7%↓",
+     "link": "https://www.etoday.co.kr/news/view/2653078",
+     "host": "etoday.co.kr",
+     "at": "2026-11-25T23:04:00.000Z"
+    },
+    {
+     "title": "[이슈체크] 한은 올해 마지막 금통위…금리 3.25%로 인상 유력",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=209234",
+     "host": "tfmedia.co.kr",
+     "at": "2026-11-25T23:04:00.000Z"
+    },
+    {
+     "title": "오늘 한은 금통위…금리 3.25%로 인상할 듯",
+     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000561707",
+     "host": "ichannela.com",
+     "at": "2026-11-25T22:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 60,
+    "spike": 2.4,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 -5.6bp"
+    ]
+   }
+  },
+  {
+   "id": "3r3cpc",
+   "title": "금융당국, 디지털 뱅크런 대비…합동 모의훈련",
+   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "lastSeen": "2026-11-25T07:52:00.000Z",
+   "count": 11,
+   "sources": 11,
+   "topics": [
+    "credit",
+    "policy"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "금융당국·5대 금융그룹, 금융위기 대비 합동 모의훈련",
+     "link": "http://www.iminju.net/news/articleView.html?idxno=173084",
+     "host": "iminju.net",
+     "at": "2026-11-25T07:52:00.000Z"
+    },
+    {
+     "title": "금융당국·5대 금융지주, 디지털 뱅크런 대비 첫 합동 모의훈련",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/25/2026112550266.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-25T07:34:00.000Z"
+    },
+    {
+     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
+     "host": "getnews.co.kr",
+     "at": "2026-11-25T07:02:00.000Z"
+    },
+    {
+     "title": "'AI 해킹·디지털 뱅크런' 겹치면 어떻게 막나… 금융당국·5대 금융 첫...",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2023351",
+     "host": "m-i.kr",
+     "at": "2026-11-25T06:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 47,
+    "spike": 0.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   },
+   "delivered": false
+  },
+  {
+   "id": "gnl5fo",
+   "title": "국제유가, 호르무즈 해협 선박 피해에 2%대 반등...공급 증가에 상승폭...",
+   "firstSeen": "2026-11-25T01:10:00.000Z",
+   "lastSeen": "2026-11-25T01:10:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "국제유가, 호르무즈 해협 선박 피해에 2%대 반등...공급 증가에 상승폭...",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=566435",
+     "host": "joongangenews.com",
+     "at": "2026-11-25T01:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 47,
+    "spike": 2.4,
+    "news": false,
+    "reaction": {
+     "symbol": "CL=F",
+     "label": "WTI 유가",
+     "change": 2.36,
+     "unit": "%",
+     "z": 0.8
+    },
+    "why": [
+     "핵심 단어",
+     "WTI 유가 +2.36%"
+    ]
+   }
+  },
+  {
+   "id": "1we3f6o",
+   "title": "30년전 오늘 탄생한 사이드카···코스피 올해 62회 발동, 24년치 맞먹어",
+   "firstSeen": "2026-11-25T05:00:00.000Z",
+   "lastSeen": "2026-11-25T09:00:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "24년치 사이드카 11개월 만에 추월… 증시 급제동 금융위기 두 배",
+     "link": "https://www.hankookilbo.com/news/article/A2026112510260001040?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-25T09:00:00.000Z"
+    },
+    {
+     "title": "하루 만에 4700선 밀린 코스피…올해 사이드카, 24년치 넘었다",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03227526645649328&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-25T06:30:00.000Z"
+    },
+    {
+     "title": "[마켓H] 올해만 102차례 발동…사이드카 제도 바뀌나?",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=887154",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-25T06:26:00.000Z"
+    },
+    {
+     "title": "30년전 오늘 탄생한 사이드카···코스피 올해 62회 발동, 24년치 맞먹어",
+     "link": "https://www.khan.co.kr/article/202611251400011",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T05:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 43,
+    "spike": 0.7,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "1om1eru",
+   "title": "뉴욕증시, AI 투자 불안 속 혼조세 마감…나스닥 0.62%↓",
+   "firstSeen": "2026-11-25T21:17:00.000Z",
+   "lastSeen": "2026-11-25T23:26:00.000Z",
+   "count": 12,
+   "sources": 11,
+   "topics": [
+    "politics",
+    "rates",
+    "trade",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나스닥도 4.6% 급락했다가 0.6% 하락 마감...AI 거품론에 널뛰기하는 글...",
+     "link": "https://www.chosun.com/economy/money/2026/11/26/N7VGHCPGVNF7RJN3BWB3JPUAHM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "host": "chosun.com",
+     "at": "2026-11-25T23:26:00.000Z"
+    },
+    {
+     "title": "[굿모닝 마켓] 뉴욕증시, AI 투자 불안에 연일 롤러코스터…혼조 마감",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348959?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-25T23:24:00.000Z"
+    },
+    {
+     "title": "AI 자금조달 불안에 나스닥 장중 4.64%↓... 0.62% 하락 마감 [뉴욕증시]",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2023587",
+     "host": "m-i.kr",
+     "at": "2026-11-25T23:24:00.000Z"
+    },
+    {
+     "title": "AI 투자 불안에 요동친 뉴욕증시…나스닥 0.62% 하락",
+     "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000086704",
+     "host": "jnilbo.com",
+     "at": "2026-11-25T23:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 39,
+    "spike": 2.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1
+    },
+    "why": [
+     "미 10년 금리 -5.6bp"
+    ]
+   }
+  },
+  {
+   "id": "1jp94pj",
+   "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
+   "firstSeen": "2026-11-25T21:00:00.000Z",
+   "lastSeen": "2026-11-25T21:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904439",
+     "host": "newsworks.co.kr",
+     "at": "2026-11-25T21:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 38,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "CL=F",
+     "label": "WTI 유가",
+     "change": 2.36,
+     "unit": "%",
+     "z": 0.8
+    },
+    "why": [
+     "핵심 단어",
+     "WTI 유가 +2.36%"
+    ]
+   }
+  }
+ ],
+ "alerts": [
+  {
+   "id": "v1tfp9",
+   "title": "금통위, 올해 마지막 통화정책 회의 개최···기준 금리 인상에 무게",
+   "firstSeen": "2026-11-25T20:00:00.000Z",
+   "lastSeen": "2026-11-25T23:16:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "rates",
+    "energy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "한은 올해 마지막 금통위 오늘 개최…기준금리 3.00%서 추가 인상 무게",
+     "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=370582",
+     "host": "ftoday.co.kr",
+     "at": "2026-11-25T23:16:00.000Z"
+    },
+    {
+     "title": "국제 금값, 美 금리 인상 전망에 하락…금 선물 0.7%↓",
+     "link": "https://www.etoday.co.kr/news/view/2653078",
+     "host": "etoday.co.kr",
+     "at": "2026-11-25T23:04:00.000Z"
+    },
+    {
+     "title": "[이슈체크] 한은 올해 마지막 금통위…금리 3.25%로 인상 유력",
+     "link": "https://www.tfmedia.co.kr/news/article.html?no=209234",
+     "host": "tfmedia.co.kr",
+     "at": "2026-11-25T23:04:00.000Z"
+    },
+    {
+     "title": "오늘 한은 금통위…금리 3.25%로 인상할 듯",
+     "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000561707",
+     "host": "ichannela.com",
+     "at": "2026-11-25T22:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 60,
+    "spike": 2.4,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 -5.6bp"
+    ]
+   }
+  },
+  {
+   "id": "3r3cpc",
+   "title": "금융당국, 디지털 뱅크런 대비…합동 모의훈련",
+   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "lastSeen": "2026-11-25T07:52:00.000Z",
+   "count": 11,
+   "sources": 11,
+   "topics": [
+    "credit",
+    "policy"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "금융당국·5대 금융그룹, 금융위기 대비 합동 모의훈련",
+     "link": "http://www.iminju.net/news/articleView.html?idxno=173084",
+     "host": "iminju.net",
+     "at": "2026-11-25T07:52:00.000Z"
+    },
+    {
+     "title": "금융당국·5대 금융지주, 디지털 뱅크런 대비 첫 합동 모의훈련",
+     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/25/2026112550266.html",
+     "host": "biz.newdaily.co.kr",
+     "at": "2026-11-25T07:34:00.000Z"
+    },
+    {
+     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
+     "host": "getnews.co.kr",
+     "at": "2026-11-25T07:02:00.000Z"
+    },
+    {
+     "title": "'AI 해킹·디지털 뱅크런' 겹치면 어떻게 막나… 금융당국·5대 금융 첫...",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2023351",
+     "host": "m-i.kr",
+     "at": "2026-11-25T06:48:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 47,
+    "spike": 0.2,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   },
+   "delivered": false
+  },
+  {
+   "id": "1we3f6o",
+   "title": "30년전 오늘 탄생한 사이드카···코스피 올해 62회 발동, 24년치 맞먹어",
+   "firstSeen": "2026-11-25T05:00:00.000Z",
+   "lastSeen": "2026-11-25T09:00:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "24년치 사이드카 11개월 만에 추월… 증시 급제동 금융위기 두 배",
+     "link": "https://www.hankookilbo.com/news/article/A2026112510260001040?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-25T09:00:00.000Z"
+    },
+    {
+     "title": "하루 만에 4700선 밀린 코스피…올해 사이드카, 24년치 넘었다",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=03227526645649328&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-25T06:30:00.000Z"
+    },
+    {
+     "title": "[마켓H] 올해만 102차례 발동…사이드카 제도 바뀌나?",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=887154",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-25T06:26:00.000Z"
+    },
+    {
+     "title": "30년전 오늘 탄생한 사이드카···코스피 올해 62회 발동, 24년치 맞먹어",
+     "link": "https://www.khan.co.kr/article/202611251400011",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T05:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 43,
+    "spike": 0.7,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  }
+ ],
+ "text": "[장 전 브리핑] 2026-11-26 08시\nS&P 500 -0.25%(11.25 기준), 나스닥 -0.62%(11.25 기준), 원/달러 +0.21%(11.25 기준) · 주요 이슈: 금리·통화, 유가·원자재, 신용·금융위기\n1. [주의] 금통위, 올해 마지막 통화정책 회의 개최···기준 금리 인상에 무게 (6곳 보도)\n   http://www.ftoday.co.kr/news/articleView.html?idxno=370582\n2. [주의] 금융당국, 디지털 뱅크런 대비…합동 모의훈련 (11곳 보도)\n   http://www.iminju.net/news/articleView.html?idxno=173084\n3. 국제유가, 호르무즈 해협 선박 피해에 2%대 반등...공급 증가에 상승폭... (1곳 보도)\n   https://www.joongangenews.com/news/articleView.html?idxno=566435\n4. [주의] 30년전 오늘 탄생한 사이드카···코스피 올해 62회 발동, 24년치 맞먹어 (4곳 보도)\n   https://www.hankookilbo.com/news/article/A2026112510260001040?did=NA\n5. 뉴욕증시, AI 투자 불안 속 혼조세 마감…나스닥 0.62%↓ (11곳 보도)\n   https://www.chosun.com/economy/money/2026/11/26/N7VGHCPGVNF7RJN3BWB3JPUAHM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news\n정해진 규칙으로 기사 제목과 시장 숫자만 정리했습니다. 원인을 단정하지 않으며 매수·매도 권유가 아닙니다.",
+ "delivered": false
+}
