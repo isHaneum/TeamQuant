@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-25T21:27:36.857Z",
+ "updatedAt": "2026-11-25T21:47:28.948Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 1343.93994140625,
-   "change": 0.22,
-   "z": 0.3,
+   "last": 1344.469970703125,
+   "change": 0.26,
+   "z": 0.4,
    "sd": 0.6330935839063825,
    "source": "Yahoo"
   },
@@ -88,8 +88,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 3601.300048828125,
-   "change": 1.11,
+   "last": 3602.199951171875,
+   "change": 1.13,
    "z": 0.7,
    "sd": 1.5628529130825966,
    "source": "Yahoo"
@@ -100,8 +100,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 28.360000610351562,
-   "change": 7.59,
+   "last": 28.290000915527344,
+   "change": 7.32,
    "z": 0.6,
    "sd": 13.023969823973816,
    "source": "Yahoo",
@@ -121,35 +121,35 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
-  "politics": -0.2,
-  "rates": 0.4,
-  "trade": 1,
+  "war": -0.1,
+  "politics": 0,
+  "rates": 0.6,
+  "trade": 1.7,
   "fx": -0.2,
-  "energy": 0.1,
-  "market": 0.4,
+  "energy": 0.6,
+  "market": 0.5,
   "credit": 0,
   "disaster": 0,
   "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 1,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.4,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.1,
+   "rate": 3.4,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 5.3,
+   "rate": 6.3,
    "saturated": 1,
    "queries": 2
   },
@@ -159,13 +159,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2,
+   "rate": 3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.2,
-   "saturated": 0,
+   "rate": 4.4,
+   "saturated": 2,
    "queries": 3
   },
   "credit": {
@@ -186,12 +186,12 @@
  },
  "issues": [
   {
-   "id": "1bsejw9",
-   "title": "AI 해킹에 디지털 뱅크런까지…5대 금융지주·은행 첫 합동 위기훈련",
+   "id": "3r3cpc",
+   "title": "금융당국, 디지털 뱅크런 대비…합동 모의훈련",
    "firstSeen": "2026-11-25T06:00:00.000Z",
    "lastSeen": "2026-11-25T07:52:00.000Z",
-   "count": 13,
-   "sources": 13,
+   "count": 9,
+   "sources": 9,
    "topics": [
     "credit",
     "policy"
@@ -213,10 +213,10 @@
      "at": "2026-11-25T07:34:00.000Z"
     },
     {
-     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
-     "host": "getnews.co.kr",
-     "at": "2026-11-25T07:02:00.000Z"
+     "title": "'AI 해킹·디지털 뱅크런' 겹치면 어떻게 막나… 금융당국·5대 금융 첫...",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2023351",
+     "host": "m-i.kr",
+     "at": "2026-11-25T06:48:00.000Z"
     },
     {
      "title": "'사이버 공격', 건전성 위협 시나리오 포함…금융당국·5대 지주 '디지털...",
@@ -228,7 +228,7 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 63,
+    "score": 62,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -287,8 +287,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 58,
-    "spike": 0.4,
+    "score": 59,
+    "spike": 0.5,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -339,8 +339,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 55,
-    "spike": 0.4,
+    "score": 56,
+    "spike": 0.5,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -385,9 +385,333 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 52,
-    "spike": 0.4,
+    "score": 53,
+    "spike": 0.5,
     "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "58hcsd",
+   "title": "美, 한국·중국·EU 등 14개 경제권에 신규 관세 추진…韓 15% 상한 유지...",
+   "firstSeen": "2026-11-25T13:30:00.000Z",
+   "lastSeen": "2026-11-25T20:42:00.000Z",
+   "count": 14,
+   "sources": 10,
+   "topics": [
+    "rates",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "미국, 과잉 생산 관세 한국 15% 유지...25% 인상 여지 남겨",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611260542587529",
+     "host": "ytn.co.kr",
+     "at": "2026-11-25T20:42:00.000Z"
+    },
+    {
+     "title": "미국, 과잉 생산 관세 한국 15% 유지...25% 인상 여지 남겨",
+     "link": "https://www.ytn.co.kr/_ln/0104_202611260541425424",
+     "host": "ytn.co.kr",
+     "at": "2026-11-25T20:41:00.000Z"
+    },
+    {
+     "title": "美, 과잉생산 관세 추가…15% 상한은 유지",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261126051204ZAn",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-25T20:12:00.000Z"
+    },
+    {
+     "title": "美, 과잉생산 빌미 14개국 또 관세…\"한국 15% 상한 유지\"(종합2보)",
+     "link": "https://www.newsis.com/view/NISX20261126_0003883585",
+     "host": "newsis.com",
+     "at": "2026-11-25T16:26:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 52,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1bsejw9",
+   "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
+   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "lastSeen": "2026-11-25T07:02:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
+     "host": "getnews.co.kr",
+     "at": "2026-11-25T07:02:00.000Z"
+    },
+    {
+     "title": "AI 해킹·디지털 뱅크런 대비…금융당국, 5대 은행과 위기대응 훈련",
+     "link": "https://www.dailian.co.kr/news/view/1719623/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-25T06:40:00.000Z"
+    },
+    {
+     "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
+     "link": "https://www.sidae.com/article/2026112508551697703",
+     "host": "sidae.com",
+     "at": "2026-11-25T06:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 52,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1h0dd7e",
+   "title": "S&P, 엔비디아 신용등급 강등 검토…지배구조·수출통제 위반 의혹 여파",
+   "firstSeen": "2026-11-25T19:26:00.000Z",
+   "lastSeen": "2026-11-25T21:43:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "trade",
+    "credit"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "엔비디아 신용등급 강등 검토하는 S&P…“경영·지배구조 평가 악화”",
+     "link": "https://www.mk.co.kr/article/12218865",
+     "host": "mk.co.kr",
+     "at": "2026-11-25T21:43:00.000Z"
+    },
+    {
+     "title": "S&P, ‘젠슨 황 사태’ 콕 집어 엔비디아 신용등급 강등 검토 착수 “이...",
+     "link": "https://www.khan.co.kr/article/202611260640001",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T21:40:00.000Z"
+    },
+    {
+     "title": "S&P, 엔비디아 신용등급 하향 검토…젠슨 황·지배구조 우려",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=01482566645649656&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-25T21:38:00.000Z"
+    },
+    {
+     "title": "S&P, 엔비디아 신용등급 강등 검토‥\"경영·지배구조 평가 악화\"",
+     "link": "https://imnews.imbc.com/news/2026/world/article/6868637_36925.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-25T21:18:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "w294ek",
+   "title": "美 반도체 충격에 코스피 4700선대로 후퇴…매도 사이드카 가동",
+   "firstSeen": "2026-11-25T01:12:00.000Z",
+   "lastSeen": "2026-11-25T01:12:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "美 반도체 충격에 코스피 4700선대로 후퇴…매도 사이드카 가동",
+     "link": "https://www.jemin.com/news/articleView.html?idxno=848407",
+     "host": "jemin.com",
+     "at": "2026-11-25T01:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "hluxuw",
+   "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
+   "firstSeen": "2026-11-25T01:51:00.000Z",
+   "lastSeen": "2026-11-25T08:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
+     "link": "https://www.sedaily.com/article/20118969?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-25T08:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "16m186g",
+   "title": "이틀에 한 번 꼴로 사이드카 울렸다…널뛰는 코스피에 개미들 ‘공황’",
+   "firstSeen": "2026-11-25T11:10:00.000Z",
+   "lastSeen": "2026-11-25T11:10:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "이틀에 한 번 꼴로 사이드카 울렸다…널뛰는 코스피에 개미들 ‘공황’",
+     "link": "https://www.mk.co.kr/article/12218652",
+     "host": "mk.co.kr",
+     "at": "2026-11-25T11:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -6.16,
+     "unit": "%",
+     "z": -2.2
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -6.16%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "ukjas0",
+   "title": "‘롤러코스피’ 감당 못하는 30년 된 사이드카 제도",
+   "firstSeen": "2026-11-25T12:21:00.000Z",
+   "lastSeen": "2026-11-25T12:21:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "‘롤러코스피’ 감당 못하는 30년 된 사이드카 제도",
+     "link": "https://www.khan.co.kr/article/202611252121005",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T12:21:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 50,
+    "spike": 0.5,
+    "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
@@ -448,31 +772,49 @@
    }
   },
   {
-   "id": "w294ek",
-   "title": "美 반도체 충격에 코스피 4700선대로 후퇴…매도 사이드카 가동",
-   "firstSeen": "2026-11-25T01:12:00.000Z",
-   "lastSeen": "2026-11-25T01:12:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "46k7nf",
+   "title": "뉴욕증시 프리뷰, AI주 투매·추가 관세 우려에 나스닥 선물 2%대 급락…...",
+   "firstSeen": "2026-11-25T11:56:00.000Z",
+   "lastSeen": "2026-11-25T21:33:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
+    "politics",
+    "trade",
     "market"
    ],
-   "critical": [
-    "market"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "美 반도체 충격에 코스피 4700선대로 후퇴…매도 사이드카 가동",
-     "link": "https://www.jemin.com/news/articleView.html?idxno=848407",
-     "host": "jemin.com",
-     "at": "2026-11-25T01:12:00.000Z"
+     "title": "뉴욕증시 AI주 투매에도 낙폭 축소…다우 0.33% 반등 성공",
+     "link": "https://www.news1.kr/world/international-economy/6366307",
+     "host": "news1.kr",
+     "at": "2026-11-25T21:33:00.000Z"
+    },
+    {
+     "title": "美 증시 극심한 변동성, 나스닥 장중 4.6% 급락 후 반등…물가·관세 우...",
+     "link": "https://www.ddaily.co.kr/page/view/2026112606255503218",
+     "host": "ddaily.co.kr",
+     "at": "2026-11-25T21:27:00.000Z"
+    },
+    {
+     "title": "[속보] 뉴욕증시 AI주 투매에도 낙폭 축소…다우 0.3% 반등 마감",
+     "link": "https://www.sidae.com/article/2026112606182750694",
+     "host": "sidae.com",
+     "at": "2026-11-25T21:23:00.000Z"
+    },
+    {
+     "title": "[뉴욕증시]AI주 투매에 나스닥 4% 하락…트럼프 관세도 부담",
+     "link": "https://view.asiae.co.kr/article/2026112510571572296",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-25T15:29:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 49,
-    "spike": 0.4,
+    "score": 48,
+    "spike": 1.7,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -482,127 +824,6 @@
      "z": -2.2
     },
     "why": [
-     "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "hluxuw",
-   "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
-   "firstSeen": "2026-11-25T01:51:00.000Z",
-   "lastSeen": "2026-11-25T08:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
-     "link": "https://www.sedaily.com/article/20118969?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-25T08:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 49,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "16m186g",
-   "title": "이틀에 한 번 꼴로 사이드카 울렸다…널뛰는 코스피에 개미들 ‘공황’",
-   "firstSeen": "2026-11-25T11:10:00.000Z",
-   "lastSeen": "2026-11-25T11:10:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "이틀에 한 번 꼴로 사이드카 울렸다…널뛰는 코스피에 개미들 ‘공황’",
-     "link": "https://www.mk.co.kr/article/12218652",
-     "host": "mk.co.kr",
-     "at": "2026-11-25T11:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 49,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "ukjas0",
-   "title": "‘롤러코스피’ 감당 못하는 30년 된 사이드카 제도",
-   "firstSeen": "2026-11-25T12:21:00.000Z",
-   "lastSeen": "2026-11-25T12:21:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "‘롤러코스피’ 감당 못하는 30년 된 사이드카 제도",
-     "link": "https://www.khan.co.kr/article/202611252121005",
-     "host": "khan.co.kr",
-     "at": "2026-11-25T12:21:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 49,
-    "spike": 0.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
      "코스피 -6.16%(평소의 2.2배)"
     ]
    }
@@ -654,123 +875,10 @@
    }
   },
   {
-   "id": "46k7nf",
-   "title": "뉴욕증시 프리뷰, AI주 투매·추가 관세 우려에 나스닥 선물 2%대 급락…...",
-   "firstSeen": "2026-11-25T11:56:00.000Z",
-   "lastSeen": "2026-11-25T21:27:00.000Z",
-   "count": 15,
-   "sources": 12,
-   "topics": [
-    "politics",
-    "trade",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "나스닥 장중 4.6% 급락 후 반등…물가·관세 충격에 AI주 흔들",
-     "link": "https://www.ddaily.co.kr/page/view/2026112606255503218",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-25T21:27:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI 투매 딛고 낙폭 축소하며 혼조 마감…다우 0.3%↑·나스닥 ...",
-     "link": "https://www.newspim.com/news/view/20261126000033",
-     "host": "newspim.com",
-     "at": "2026-11-25T21:24:00.000Z"
-    },
-    {
-     "title": "[속보] 뉴욕증시 AI주 투매에도 낙폭 축소…다우 0.3% 반등 마감",
-     "link": "https://www.sidae.com/article/2026112606182750694",
-     "host": "sidae.com",
-     "at": "2026-11-25T21:23:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI 투자 불안에 연일 롤러코스터‥나스닥 0.6%↓",
-     "link": "https://imnews.imbc.com/news/2026/world/article/6868636_36925.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-25T21:17:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "58hcsd",
-   "title": "美, 한국·중국·EU 등 14개 경제권에 신규 관세 추진…韓 15% 상한 유지...",
-   "firstSeen": "2026-11-25T13:30:00.000Z",
-   "lastSeen": "2026-11-25T20:42:00.000Z",
-   "count": 14,
-   "sources": 10,
-   "topics": [
-    "rates",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "미국, 과잉 생산 관세 한국 15% 유지...25% 인상 여지 남겨",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611260542587529",
-     "host": "ytn.co.kr",
-     "at": "2026-11-25T20:42:00.000Z"
-    },
-    {
-     "title": "미국, 과잉 생산 관세 한국 15% 유지...25% 인상 여지 남겨",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611260541425424",
-     "host": "ytn.co.kr",
-     "at": "2026-11-25T20:41:00.000Z"
-    },
-    {
-     "title": "美, 과잉생산 관세 추가…15% 상한은 유지",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261126051204ZAn",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-25T20:12:00.000Z"
-    },
-    {
-     "title": "美, 과잉생산 빌미 14개국 또 관세…\"한국 15% 상한 유지\"(종합2보)",
-     "link": "https://www.newsis.com/view/NISX20261126_0003883585",
-     "host": "newsis.com",
-     "at": "2026-11-25T16:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "3r3cpc",
-   "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
-   "firstSeen": "2026-11-25T06:00:00.000Z",
-   "lastSeen": "2026-11-25T09:24:00.000Z",
+   "id": "f6pz6o",
+   "title": "금융당국, AI 해킹·디지털뱅크런 가정한 대형은행 위기훈련 실시",
+   "firstSeen": "2026-11-25T06:01:00.000Z",
+   "lastSeen": "2026-11-25T06:01:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
@@ -781,10 +889,10 @@
    ],
    "links": [
     {
-     "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
-     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68460",
-     "host": "newsroad.co.kr",
-     "at": "2026-11-25T09:24:00.000Z"
+     "title": "금융당국, AI 해킹·디지털뱅크런 가정한 대형은행 위기훈련 실시",
+     "link": "https://www.etnews.com/20261125000097",
+     "host": "etnews.com",
+     "at": "2026-11-25T06:01:00.000Z"
     }
    ],
    "assess": {
@@ -802,103 +910,6 @@
     },
     "why": [
      "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1jp94pj",
-   "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-   "firstSeen": "2026-11-25T21:00:00.000Z",
-   "lastSeen": "2026-11-25T21:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904439",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-25T21:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 46,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -6.16%(평소의 2.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1h0dd7e",
-   "title": "S&P, 엔비디아 신용등급 강등 검토…젠슨 황 복귀에 지배구조 우려",
-   "firstSeen": "2026-11-25T19:26:00.000Z",
-   "lastSeen": "2026-11-25T21:18:00.000Z",
-   "count": 9,
-   "sources": 9,
-   "topics": [
-    "trade",
-    "credit"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "S&P, 엔비디아 신용등급 강등 검토‥\"경영·지배구조 평가 악화\"",
-     "link": "https://imnews.imbc.com/news/2026/world/article/6868637_36925.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-25T21:18:00.000Z"
-    },
-    {
-     "title": "엔비디아 신용등급 강등 경고등…S&P “이사회·내부통제 부실”",
-     "link": "https://www.joongang.co.kr/article/25482122",
-     "host": "joongang.co.kr",
-     "at": "2026-11-25T21:14:00.000Z"
-    },
-    {
-     "title": "S&P, 엔비디아 신용등급 강등 검토 \"지배구조 문제\"",
-     "link": "https://www.ajunews.com/view/20261126060119809",
-     "host": "ajunews.com",
-     "at": "2026-11-25T21:12:00.000Z"
-    },
-    {
-     "title": "젠슨 황 복귀 후폭풍…S&P, 엔비디아 신용등급 강등 검토",
-     "link": "https://biz.heraldcorp.com/article/10949540?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-25T21:09:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -6.16,
-     "unit": "%",
-     "z": -2.2
-    },
-    "why": [
      "코스피 -6.16%(평소의 2.2배)"
     ]
    }
