@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T05:48:01.126Z",
+ "updatedAt": "2026-11-26T06:23:23.065Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 4769.85009765625,
-   "change": 1.54,
-   "z": 0.5,
+   "last": 4710.65,
+   "change": 0.28,
+   "z": 0.1,
    "sd": 3.0283318709427105,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 664.02,
-   "change": 2.06,
-   "z": 0.7,
+   "last": 655.03,
+   "change": 0.67,
+   "z": 0.2,
    "sd": 2.871767536413246,
    "source": "네이버 현재가",
    "live": true,
@@ -75,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 84.54000091552734,
-   "change": 1.03,
-   "z": 0.4,
+   "last": 84.0999984741211,
+   "change": 0.5,
+   "z": 0.2,
    "sd": 2.870433546363806,
    "source": "Yahoo"
   },
@@ -87,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3630.199951171875,
-   "change": 2.67,
-   "z": 1.7,
+   "last": 3598.800048828125,
+   "change": 1.78,
+   "z": 1.1,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -120,31 +121,31 @@
   }
  ],
  "spikes": {
-  "war": 1.2,
-  "politics": -1.1,
-  "rates": 1.2,
+  "war": 0.7,
+  "politics": -0.9,
+  "rates": 1.3,
   "trade": 1.8,
   "fx": -0.2,
   "energy": 0,
-  "market": 0.1,
-  "credit": 0,
+  "market": -0.3,
+  "credit": -0.3,
   "disaster": 0,
-  "policy": -0.4
+  "policy": -0.1
  },
  "rates": {
   "war": {
-   "rate": 2.9,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.4,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 4.6,
-   "saturated": 1,
+   "rate": 4.9,
+   "saturated": 2,
    "queries": 3
   },
   "trade": {
@@ -163,12 +164,12 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.9,
+   "rate": 3.4,
    "saturated": 1,
    "queries": 3
   },
   "credit": {
-   "rate": 0.2,
+   "rate": 0,
    "saturated": 0,
    "queries": 2
   },
@@ -178,19 +179,19 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "r0p4b8",
-   "title": "금융당국, AI발 금융위기 대비…10개 금융기관과 합동훈련",
-   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "id": "lc4ohe",
+   "title": "AI 해킹·디지털 뱅크런 대비…금융당국, 5대 은행과 위기대응 훈련",
+   "firstSeen": "2026-11-25T06:01:00.000Z",
    "lastSeen": "2026-11-25T07:52:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "count": 7,
+   "sources": 7,
    "topics": [
     "credit",
     "policy"
@@ -227,7 +228,7 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 45,
+    "score": 42,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -240,53 +241,6 @@
     "why": [
      "핵심 단어",
      "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "27n60f",
-   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-   "firstSeen": "2026-11-26T01:47:00.000Z",
-   "lastSeen": "2026-11-26T02:16:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "박용진, 조희대 탄핵 추진에 “실익 없어…민주당 책임으로 돌아와”",
-     "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-26T02:16:00.000Z"
-    },
-    {
-     "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-     "link": "https://www.mk.co.kr/article/12219128",
-     "host": "mk.co.kr",
-     "at": "2026-11-26T01:47:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 42,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 2.67,
-     "unit": "%",
-     "z": 1.7
-    },
-    "why": [
-     "핵심 단어",
-     "금 +2.67%"
     ]
    }
   },
@@ -333,8 +287,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 39,
-    "spike": 0.1,
+    "score": 38,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -346,104 +300,6 @@
     "why": [
      "핵심 단어",
      "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "1jp94pj",
-   "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-   "firstSeen": "2026-11-25T21:00:00.000Z",
-   "lastSeen": "2026-11-25T21:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904439",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-25T21:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 39,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 2.67,
-     "unit": "%",
-     "z": 1.7
-    },
-    "why": [
-     "핵심 단어",
-     "금 +2.67%"
-    ]
-   }
-  },
-  {
-   "id": "1pt38h0",
-   "title": "국제유가, 후티 사우디 정유시설 공격에 급등…브렌트 3.5％↑",
-   "firstSeen": "2026-11-25T09:04:00.000Z",
-   "lastSeen": "2026-11-26T04:02:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "war",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국제유가 급등 속 탄소배출권 혼조…기업 저탄소 전환 지원 본격화",
-     "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=303257",
-     "host": "financialpost.co.kr",
-     "at": "2026-11-26T04:02:00.000Z"
-    },
-    {
-     "title": "대한항공 주가 장중 6%대 하락, 국제유가 급등에 항공주 동반 약세",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452991",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-26T02:32:00.000Z"
-    },
-    {
-     "title": "[특징주] 유가 급등에 항공주 '약세'…대한항공, 6%대 하락",
-     "link": "https://www.ajunews.com/view/20261126110333810",
-     "host": "ajunews.com",
-     "at": "2026-11-26T02:06:00.000Z"
-    },
-    {
-     "title": "[특징주] 대한항공, 중동 긴장에 국제유가 급등.. 7%대 '급락'",
-     "link": "https://www.g-enews.com/view.php?ud=20261126103934857844093b5d4e_1",
-     "host": "g-enews.com",
-     "at": "2026-11-26T01:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 35,
-    "spike": 1.2,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 2.67,
-     "unit": "%",
-     "z": 1.7
-    },
-    "why": [
-     "금 +2.67%"
     ]
    }
   },
@@ -483,8 +339,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 35,
-    "spike": 0.1,
+    "score": 34,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -500,58 +356,49 @@
    }
   },
   {
-   "id": "1fwzfb5",
-   "title": "美 증시, 혼조?나스닥·S&P500, 저가 매수에 낙폭 제한",
-   "firstSeen": "2026-11-25T22:02:00.000Z",
-   "lastSeen": "2026-11-26T04:08:00.000Z",
-   "count": 8,
-   "sources": 7,
+   "id": "27n60f",
+   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
+   "firstSeen": "2026-11-26T01:47:00.000Z",
+   "lastSeen": "2026-11-26T02:16:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "trade",
-    "market"
+    "politics"
    ],
-   "critical": [],
+   "critical": [
+    "war",
+    "politics"
+   ],
    "links": [
     {
-     "title": "나스닥 장중 4.6% 급락…뉴욕증시, AI불안에 극심한 변동성 끝 혼조",
-     "link": "https://www.thepublic.kr/news/articleView.html?idxno=328558",
-     "host": "thepublic.kr",
-     "at": "2026-11-26T04:08:00.000Z"
+     "title": "박용진, 조희대 탄핵 추진에 “실익 없어…민주당 책임으로 돌아와”",
+     "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-26T02:16:00.000Z"
     },
     {
-     "title": "코스피 4800 회복 시도…롤로코스터 이후 뉴욕증시 혼조 마감",
-     "link": "https://biz.sbs.co.kr/article_hub/20000349015?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-26T02:38:00.000Z"
-    },
-    {
-     "title": "日 증시, 美 증시 낙폭 축소·저가 매수에 상승 출발",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446674",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-26T02:24:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI 투매에 출렁...나스닥 4%대 급락 딛고 낙폭 축소",
-     "link": "https://www.newstopkorea.com/ko-kr/articles/49316",
-     "host": "newstopkorea.com",
-     "at": "2026-11-26T00:00:00.000Z"
+     "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
+     "link": "https://www.mk.co.kr/article/12219128",
+     "host": "mk.co.kr",
+     "at": "2026-11-26T01:47:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 32,
-    "spike": 1.8,
-    "news": false,
+    "level": "caution",
+    "label": "주의",
+    "score": 33,
+    "spike": 0,
+    "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.78,
      "unit": "%",
-     "z": 0.6
+     "z": 1.1
     },
     "why": [
-     "VIX 변동성 +7.32%"
+     "핵심 단어",
+     "금 +1.78%"
     ]
    }
   },
@@ -585,8 +432,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 32,
-    "spike": 0.1,
+    "score": 31,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -631,52 +478,6 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 32,
-    "spike": 0.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "f6pz6o",
-   "title": "금융당국, AI 해킹·디지털뱅크런 가정한 대형은행 위기훈련 실시",
-   "firstSeen": "2026-11-25T06:01:00.000Z",
-   "lastSeen": "2026-11-25T08:00:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "금융당국, AI 공격에 '디지털뱅크런' 대응 체계 점검",
-     "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
-     "host": "cstimes.com",
-     "at": "2026-11-25T08:00:00.000Z"
-    },
-    {
-     "title": "금융당국, AI 해킹·디지털뱅크런 가정한 대형은행 위기훈련 실시",
-     "link": "https://www.etnews.com/20261125000097",
-     "host": "etnews.com",
-     "at": "2026-11-25T06:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
     "score": 31,
     "spike": 0,
     "news": true,
@@ -695,46 +496,46 @@
   },
   {
    "id": "1qlagen",
-   "title": "반도체 호황·물가 부담에…한은, 기준금리 3.25%로 인상(종합)",
+   "title": "반도체 호황·물가 부담에…한은, 기준금리 3.25%로 인상",
    "firstSeen": "2026-11-26T00:52:00.000Z",
-   "lastSeen": "2026-11-26T05:32:00.000Z",
-   "count": 25,
-   "sources": 24,
+   "lastSeen": "2026-11-26T06:22:00.000Z",
+   "count": 31,
+   "sources": 30,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "한은, 기준금리 3.25%로 인상…내년 추가 긴축 가능성도 열어둬",
-     "link": "https://daily.hankooki.com/news/articleView.html?idxno=1429405",
-     "host": "daily.hankooki.com",
-     "at": "2026-11-26T05:32:00.000Z"
+     "title": "한은, 기준금리 3.25%로 인상...신현송 \"내년 4.1% 성장, 근거 있다\"",
+     "link": "https://www.womentimes.co.kr/news/articleView.html?idxno=108300",
+     "host": "womentimes.co.kr",
+     "at": "2026-11-26T06:22:00.000Z"
     },
     {
-     "title": "한은, 기준금리 3.25% 인상...성장률 전망 4%대 상향",
-     "link": "https://www.asiaa.co.kr/news/articleView.html?idxno=273100",
-     "host": "asiaa.co.kr",
-     "at": "2026-11-26T05:32:00.000Z"
+     "title": "한은, 기준금리 3.25%로 인상…내년 성장률 전망 크게 올려",
+     "link": "https://www.theguru.co.kr/news/article.html?no=110252",
+     "host": "theguru.co.kr",
+     "at": "2026-11-26T06:20:00.000Z"
     },
     {
-     "title": "한은, 기준금리 3.25%로 인상...\"반도체 호황, 물가는 부담\"",
-     "link": "https://www.insight.co.kr/news/583658",
-     "host": "insight.co.kr",
-     "at": "2026-11-26T05:24:00.000Z"
+     "title": "한은 기준금리 3.25% 인상…충청 가계 '이자 부담' 더 커진다",
+     "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2316613",
+     "host": "daejonilbo.com",
+     "at": "2026-11-26T06:18:00.000Z"
     },
     {
-     "title": "반도체 호황·물가 부담에 '긴축 고삐'…한은, 기준금리 3.25%로 인상",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=758585",
-     "host": "econovill.com",
-     "at": "2026-11-26T04:54:00.000Z"
+     "title": "한은, 기준금리 3.25%로 인상··· 반도체 호황 속 물가 대응",
+     "link": "https://www.greenpostkorea.co.kr/news/articleView.html?idxno=308181",
+     "host": "greenpostkorea.co.kr",
+     "at": "2026-11-26T06:08:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 30,
-    "spike": 1.2,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -752,14 +553,26 @@
    "id": "f40fiw",
    "title": "기준금리 3.25% 됐다…내년 성장률 4.1%로 깜짝 상향",
    "firstSeen": "2026-11-26T01:12:00.000Z",
-   "lastSeen": "2026-11-26T05:46:00.000Z",
-   "count": 15,
-   "sources": 15,
+   "lastSeen": "2026-11-26T06:06:00.000Z",
+   "count": 14,
+   "sources": 14,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "반도체 슈퍼사이클 성장률 판도 바꿨다…한은, 내년 4.1% 고성장 예고",
+     "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=370639",
+     "host": "ftoday.co.kr",
+     "at": "2026-11-26T06:06:00.000Z"
+    },
+    {
+     "title": "JP모건 \"한은, 성장률 대폭 상향은 매파적 신호\"",
+     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=316298",
+     "host": "straightnews.co.kr",
+     "at": "2026-11-26T06:04:00.000Z"
+    },
     {
      "title": "한은, 내년 성장률 전망 2.9%→4.1%...\"수출과 투자가 높은 증가세를 지...",
      "link": "http://www.kdfnews.com/news/articleView.html?idxno=191489",
@@ -771,25 +584,13 @@
      "link": "https://www.newsway.co.kr/news/view?ud=2026112612341824546",
      "host": "newsway.co.kr",
      "at": "2026-11-26T05:44:00.000Z"
-    },
-    {
-     "title": "한은, 내년 성장률 전망 4.1%로 대폭 상향…AI·반도체 호황에 '역대 최...",
-     "link": "https://www.youthdaily.co.kr/news/article.html?no=230370",
-     "host": "youthdaily.co.kr",
-     "at": "2026-11-26T05:40:00.000Z"
-    },
-    {
-     "title": "기준금리 연 3.25%로 인상...\"내년 성장률 4.1%\" 대폭 상향",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611261434013797",
-     "host": "ytn.co.kr",
-     "at": "2026-11-26T05:34:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 30,
-    "spike": 1.2,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -800,6 +601,103 @@
     },
     "why": [
      "미 10년 금리 -5.6bp"
+    ]
+   }
+  },
+  {
+   "id": "37z0zv",
+   "title": "뉴욕증시, AI 불안·관세 우려 속 혼조 마감⋯나스닥 0.6%↓[종합]",
+   "firstSeen": "2026-11-25T22:24:00.000Z",
+   "lastSeen": "2026-11-26T04:08:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "trade",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "나스닥 장중 4.6% 급락…뉴욕증시, AI불안에 극심한 변동성 끝 혼조",
+     "link": "https://www.thepublic.kr/news/articleView.html?idxno=328558",
+     "host": "thepublic.kr",
+     "at": "2026-11-26T04:08:00.000Z"
+    },
+    {
+     "title": "코스피 4800 회복 시도…롤로코스터 이후 뉴욕증시 혼조 마감",
+     "link": "https://biz.sbs.co.kr/article_hub/20000349015?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-26T02:38:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 투매에 출렁...나스닥 4%대 급락 딛고 낙폭 축소",
+     "link": "https://www.newstopkorea.com/ko-kr/articles/49316",
+     "host": "newstopkorea.com",
+     "at": "2026-11-26T00:00:00.000Z"
+    },
+    {
+     "title": "[해외시황] 뉴욕증시, AI 투자·추가 긴축 우려에 '혼조'…나스닥 0.62%↓",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=756565",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-25T23:36:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 1.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "1jp94pj",
+   "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
+   "firstSeen": "2026-11-25T21:00:00.000Z",
+   "lastSeen": "2026-11-25T21:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904439",
+     "host": "newsworks.co.kr",
+     "at": "2026-11-25T21:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 30,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.78,
+     "unit": "%",
+     "z": 1.1
+    },
+    "why": [
+     "핵심 단어",
+     "금 +1.78%"
     ]
    }
   },
@@ -847,14 +745,14 @@
     "spike": 1.8,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.54,
+     "symbol": "^GSPC",
+     "label": "S&P 500",
+     "change": -0.25,
      "unit": "%",
-     "z": 0.5
+     "z": -0.2
     },
     "why": [
-     "코스피 +1.54%"
+     "S&P 500 -0.25%"
     ]
    }
   },
@@ -905,6 +803,86 @@
    }
   },
   {
+   "id": "1kfj94j",
+   "title": "금융당국, AI 공격에 '디지털뱅크런' 대응 체계 점검",
+   "firstSeen": "2026-11-25T06:02:00.000Z",
+   "lastSeen": "2026-11-25T08:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "금융당국, AI 공격에 '디지털뱅크런' 대응 체계 점검",
+     "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
+     "host": "cstimes.com",
+     "at": "2026-11-25T08:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "guwsq3",
+   "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
+   "firstSeen": "2026-11-25T09:24:00.000Z",
+   "lastSeen": "2026-11-25T09:24:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68460",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-25T09:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
    "id": "16m186g",
    "title": "이틀에 한 번 꼴로 사이드카 울렸다…널뛰는 코스피에 개미들 ‘공황’",
    "firstSeen": "2026-11-25T11:10:00.000Z",
@@ -928,8 +906,8 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
+    "score": 28,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
@@ -946,6 +924,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-26T06:23:23.065Z",
+   "id": "lc4ohe",
+   "level": "caution",
+   "title": "AI 해킹·디지털 뱅크런 대비…금융당국, 5대 은행과 위기대응 훈련",
+   "why": [
+    "핵심 단어",
+    "VIX 변동성 +7.32%"
+   ],
+   "link": "http://www.iminju.net/news/articleView.html?idxno=173084",
+   "delivered": false
+  },
   {
    "at": "2026-11-26T05:48:01.126Z",
    "id": "r0p4b8",
@@ -1172,18 +1162,6 @@
     "VIX 변동성 +7.32%"
    ],
    "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-26T03:30:47.886Z",
-   "id": "chzb4m",
-   "level": "caution",
-   "title": "[특징주] 국제유가 급등에 항공주 동반 약세…대한항공 6% 하락",
-   "why": [
-    "기사 급증(평소 대비 4.7σ)",
-    "금 +1.92%"
-   ],
-   "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452991",
    "delivered": false
   }
  ],
