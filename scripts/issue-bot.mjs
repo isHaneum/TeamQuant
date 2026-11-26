@@ -7,7 +7,7 @@ import { join, resolve } from 'node:path';
 import { fetchMarketSeries } from '../lib/market.js';
 import { fetchNews } from '../lib/news.js';
 import { fetchQuote } from '../lib/quote-check.js';
-import { TOPICS, CONTEXT_QUERIES, MARKETS, ISSUE_VERSION, marketMove, applyQuote, clusterArticles, topicRate, spikeZ, assess, dedupeUrgent, worthRecording, shouldAlert, matchKnown, composeBriefing, eventRecord, kstDate } from '../lib/issue-bot.js';
+import { TOPICS, CONTEXT_QUERIES, MARKETS, ISSUE_VERSION, marketMove, applyQuote, clusterArticles, topicRate, spikeZ, assess, dedupeUrgent, worthRecording, shouldAlert, matchKnown, composeBriefing, alertText, eventRecord, kstDate } from '../lib/issue-bot.js';
 
 const arg = (name, fallback) => { const i = process.argv.indexOf('--' + name); return i < 0 ? fallback : process.argv[i + 1]; };
 const mode = arg('mode', 'watch'), dir = resolve(arg('data', '.issue-data')), base = arg('news-base', process.env.NEWS_BASE || 'https://teamquant.vercel.app');
@@ -78,7 +78,7 @@ async function telegram(text) {
   catch { return false; }
 }
 for (const i of alerts) {
-  const text = `[${i.assess.label}] ${i.title}\n${i.assess.why.join(' · ')}\n${i.sources}곳 보도 · 처음 ${new Date(i.firstSeen).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}\n${i.links[0]?.link || ''}\n원인을 단정하지 않으며 매수·매도 권유가 아닙니다.`;
+  const text = alertText(i, { now }); // 형식은 lib/issue-bot.js alertText(왜 알리는지 → 제목 → 시장 · 기사 · 원문 → 고지)
   i.delivered = await telegram(text);
 }
 

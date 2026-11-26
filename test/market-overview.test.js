@@ -41,3 +41,11 @@ test('입력 검사 · 전부 실패하면 오류 · 업종 종목은 시가총�
   await assert.rejects(fetchIndustryStocks('abc', { fetchImpl: mk().fetchImpl }), e => e.status === 400);
   const r = await fetchIndustryStocks('301', { fetchImpl: mk().fetchImpl }); assert.equal(r.name, '은행'); assert.deepEqual(r.stocks.map(s => s.code), ['105560', '055550']);
 });
+
+test('part=index: 지수 4개와 달러 환율 출처 5개만 읽고 따로 캐시 · 다른 part 는 400', async () => {
+  _clearMarketOverviewCache(); const m = mk(), v = await fetchMarketOverview({ market: 'KOSPI', part: 'index', fetchImpl: m.fetchImpl, now: () => 2e12 });
+  assert.equal(m.calls.length, 5, '투자자별·업종·순위는 읽지 않는다'); assert.equal(v.part, 'index'); assert.ok(v.indices.length >= 4); assert.equal(v.lists, undefined);
+  await fetchMarketOverview({ part: 'index', fetchImpl: m.fetchImpl, now: () => 2e12 + 10000 }); assert.equal(m.calls.length, 5, '45초 캐시');
+  const full = await fetchMarketOverview({ market: 'KOSPI', fetchImpl: m.fetchImpl, now: () => 2e12 + 10000 }); assert.ok(full.lists, '전체 요청은 따로 캐시');
+  await assert.rejects(fetchMarketOverview({ part: 'all', fetchImpl: m.fetchImpl }), e => e.status === 400);
+});

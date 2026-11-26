@@ -34,11 +34,22 @@
 .tq-notice-btn:hover { color: var(--tq-ink); border-color: var(--tq-faint); }
 .tq-notice-btn:focus-visible { outline: 2px solid var(--tq-accent); outline-offset: 2px; }
 
-/* 동의·고지 창: 버튼 줄이 화면 아래로 잘리지 않게 창 안에서 바닥에 붙인다 */
+/* 동의·고지 창: 버튼 줄이 화면 아래로 잘리지 않게 창 안에서 바닥에 붙인다(창 아래 안쪽 여백 --tq-sp-4 만큼 내려 붙임) */
 .tq-consent > div > .tq-actions {
-  position: sticky; bottom: -18px; z-index: 1; margin-top: var(--tq-sp-3); padding: var(--tq-sp-3) 0 var(--tq-sp-2);
+  position: sticky; bottom: calc(-1 * var(--tq-sp-4)); z-index: 1; margin-top: var(--tq-sp-3); padding: var(--tq-sp-3) 0 var(--tq-sp-2);
   background: var(--tq-paper); border-top: 1px solid var(--tq-line);
 }
+
+/* 2026-11-26 공용 조각 — 화면 낭독기에만 남기는 글(보이는 제목을 뺀 곳) · 작은 아이콘 버튼(↻ 새로고침) */
+.tq-vh { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.tq-icon-btn {
+  display: inline-grid; place-items: center; width: 32px; height: 32px; min-height: 0; padding: 0; flex: none;
+  border: 1px solid var(--tq-line); border-radius: var(--tq-r-pill); background: var(--tq-paper); color: var(--tq-sub);
+  font: inherit; font-size: var(--tq-fs-3); line-height: 1; cursor: pointer;
+}
+.tq-icon-btn:hover { color: var(--tq-ink); border-color: var(--tq-faint); }
+.tq-icon-btn:focus-visible { outline: 2px solid var(--tq-accent); outline-offset: 2px; }
+.tq-icon-btn:disabled { opacity: .45; cursor: default; }
 
 /* 홈 첫 줄: 규칙을 지켰나 — 이 앱의 주인공 */
 #core-today .ct-hero {

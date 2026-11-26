@@ -2,7 +2,7 @@
  "version": "PUB2-2026-11-10",
  "engine": "L6-2026-11-10",
  "label": "한투 모의계좌 (팀 공용)",
- "asOf": "2026-11-15T16:19:20.041Z",
+ "asOf": "2026-11-16T04:46:27.920Z",
  "mode": "vps",
  "public": true,
  "since": "2026-11-09",
@@ -11,11 +11,11 @@
  "principalKrw": 100000000,
  "prefsCooldownDays": 28,
  "prefsNextChangeAt": null,
- "total": 100077727,
+ "total": 99541514,
  "markets": {
   "KR": {
-   "open": false,
-   "reason": "장 시작 전입니다(09:00 KST).",
+   "open": true,
+   "reason": "",
    "openAt": "2026-11-16T00:00:00.000Z",
    "closeAt": "2026-11-16T06:30:00.000Z",
    "market": "KR"
@@ -23,14 +23,14 @@
   "US": {
    "open": false,
    "reason": "미국 주말에는 주문하지 않습니다.",
-   "openAt": "2026-11-15T14:30:00.037Z",
-   "closeAt": "2026-11-15T21:00:00.037Z",
+   "openAt": "2026-11-15T14:30:00.917Z",
+   "closeAt": "2026-11-15T21:00:00.917Z",
    "market": "US"
   }
  },
  "market": {
-  "open": false,
-  "reason": "장 시작 전입니다(09:00 KST).",
+  "open": true,
+  "reason": "",
   "openAt": "2026-11-16T00:00:00.000Z",
   "closeAt": "2026-11-16T06:30:00.000Z",
   "market": "KR"
@@ -46,15 +46,15 @@
   "duplicateWindowMin": 10,
   "allowLive": false
  },
- "fx": 1336.199951171875,
+ "fx": 1335.4000244140625,
  "balance": {
-  "cash": 42201861,
-  "cashRawKrw": 75102195,
+  "cash": 47756358,
+  "cashRawKrw": 80656692,
   "usFundingKrw": 32900334,
   "fundingBasis": "ledger",
   "cashUsd": 0,
-  "total": 100077727,
-  "stock": 57875866,
+  "total": 99541514,
+  "stock": 51785156,
   "positions": [
    {
     "symbol": "000660",
@@ -62,47 +62,35 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 2,
-    "price": 1216000,
+    "price": 1130000,
     "avgCost": 1176000,
-    "value": 2432000,
-    "valueKrw": 2432000,
-    "weightPct": 2.430111147508376
-   },
-   {
-    "symbol": "005930",
-    "name": "삼성전자",
-    "market": "KR",
-    "currency": "KRW",
-    "qty": 13,
-    "price": 206000,
-    "avgCost": 192900,
-    "value": 2678000,
-    "valueKrw": 2678000,
-    "weightPct": 2.675920087593516
+    "value": 2260000,
+    "valueKrw": 2260000,
+    "weightPct": 2.270409509744849
    },
    {
     "symbol": "047810",
     "name": "한국항공우주",
     "market": "KR",
     "currency": "KRW",
-    "qty": 28,
-    "price": 104200,
+    "qty": 25,
+    "price": 107000,
     "avgCost": 107117.857,
-    "value": 2917600,
-    "valueKrw": 2917600,
-    "weightPct": 2.915333998343108
+    "value": 2675000,
+    "valueKrw": 2675000,
+    "weightPct": 2.68732099051658
    },
    {
     "symbol": "068270",
     "name": "셀트리온",
     "market": "KR",
     "currency": "KRW",
-    "qty": 14,
-    "price": 214000,
-    "avgCost": 210000,
-    "value": 2996000,
-    "valueKrw": 2996000,
-    "weightPct": 2.993673107703575
+    "qty": 15,
+    "price": 214500,
+    "avgCost": 210366.666,
+    "value": 3217500,
+    "valueKrw": 3217500,
+    "weightPct": 3.23231973345312
    },
    {
     "symbol": "069500",
@@ -110,23 +98,11 @@
     "market": "KR",
     "currency": "KRW",
     "qty": 138,
-    "price": 83115,
+    "price": 80165,
     "avgCost": 80298.26,
-    "value": 11469870,
-    "valueKrw": 11469870,
-    "weightPct": 11.460961738269695
-   },
-   {
-    "symbol": "128940",
-    "name": "한미약품",
-    "market": "KR",
-    "currency": "KRW",
-    "qty": 6,
-    "price": 465500,
-    "avgCost": 469500,
-    "value": 2793000,
-    "valueKrw": 2793000,
-    "weightPct": 2.7908307709666507
+    "value": 11062770,
+    "valueKrw": 11062770,
+    "weightPct": 11.113724872619478
    },
    {
     "symbol": "AMZN",
@@ -137,8 +113,8 @@
     "price": 266.66,
     "avgCost": 270.73,
     "value": 2133.28,
-    "valueKrw": 2850488.631835938,
-    "weightPct": 2.848274753318426
+    "valueKrw": 2848782.1640820317,
+    "weightPct": 2.8619035913820157
    },
    {
     "symbol": "GE",
@@ -149,8 +125,8 @@
     "price": 331.81,
     "avgCost": 340.39,
     "value": 1990.86,
-    "valueKrw": 2660187.034790039,
-    "weightPct": 2.658120957113703
+    "valueKrw": 2658594.4926049802,
+    "weightPct": 2.6708399197193042
    },
    {
     "symbol": "LLY",
@@ -161,8 +137,8 @@
     "price": 1443.5,
     "avgCost": 1440.22,
     "value": 1443.5,
-    "valueKrw": 1928804.6295166016,
-    "weightPct": 1.9273065919218983
+    "valueKrw": 1927649.9352416992,
+    "weightPct": 1.9365286479786705
    },
    {
     "symbol": "LMT",
@@ -173,8 +149,8 @@
     "price": 596.04,
     "avgCost": 592.47,
     "value": 2980.2,
-    "valueKrw": 3982143.0944824214,
-    "weightPct": 3.9790502980572504
+    "valueKrw": 3979759.152758789,
+    "weightPct": 3.998089834919317
    },
    {
     "symbol": "SPY",
@@ -185,8 +161,8 @@
     "price": 754.37,
     "avgCost": 754.17,
     "value": 15841.77,
-    "valueKrw": 21167772.300476074,
-    "weightPct": 21.151332004648822
+    "valueKrw": 21155100.044761963,
+    "weightPct": 21.252539965146568
    }
   ],
   "usError": null
@@ -194,83 +170,81 @@
  "error": null,
  "markStale": false,
  "rulesVersion": null,
- "ordersToday": [],
- "recentOrders": [
+ "ordersToday": [
   {
-   "at": "2026-11-10T14:36:46.991Z",
-   "symbol": "JPM",
-   "name": "JP모건",
-   "market": "US",
-   "currency": "USD",
-   "side": "BUY",
-   "qty": 14,
-   "price": 344.14,
-   "fx": 1342.47998046875,
-   "amountKrw": 6468015,
-   "why": "계획 비중보다 적음",
-   "batch": "RB-2026-11-10-mwasmw9e",
-   "status": "filled",
-   "filledQty": 14,
-   "avgPrice": 343.93,
-   "remaining": 0,
-   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
-  },
-  {
-   "at": "2026-11-10T14:36:47.537Z",
-   "symbol": "MSFT",
-   "name": "마이크로소프트",
-   "market": "US",
-   "currency": "USD",
-   "side": "BUY",
+   "at": "2026-11-16T00:06:56.312Z",
+   "symbol": "128940",
+   "name": "한미약품",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "SELL",
    "qty": 6,
-   "price": 542.39,
-   "fx": 1342.47998046875,
-   "amountKrw": 4368886,
-   "why": "계획 비중보다 적음",
-   "batch": "RB-2026-11-10-mwasmw9e",
+   "price": 460500,
+   "fx": 0,
+   "amountKrw": 2763000,
+   "why": "계획 비중보다 많음",
+   "batch": "RB-2026-11-16-mwii7fw8",
    "status": "filled",
    "filledQty": 6,
-   "avgPrice": 542.315,
-   "remaining": 0,
-   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
-  },
-  {
-   "at": "2026-11-10T14:36:48.578Z",
-   "symbol": "LMT",
-   "name": "록히드마틴",
-   "market": "US",
-   "currency": "USD",
-   "side": "BUY",
-   "qty": 5,
-   "price": 592.69,
-   "fx": 1342.47998046875,
-   "amountKrw": 3978372,
-   "why": "계획 비중보다 적음",
-   "batch": "RB-2026-11-10-mwasmw9e",
-   "status": "filled",
-   "filledQty": 5,
-   "avgPrice": 592.47,
-   "remaining": 0,
-   "note": "재조회로 체결을 확인했습니다(앞서 '목록에 없음'으로 소멸 처리한 기록을 바로잡음 2026-11-12)."
-  },
-  {
-   "at": "2026-11-12T14:38:19.559Z",
-   "symbol": "JPM",
-   "name": "제이피모간 체이스",
-   "market": "US",
-   "currency": "USD",
-   "side": "SELL",
-   "qty": 14,
-   "price": 344.88,
-   "fx": 1331.949951171875,
-   "amountKrw": 6431081,
-   "why": "계획 비중보다 많음",
-   "batch": "RB-2026-11-12-mwdnkn8n",
-   "status": "filled",
-   "filledQty": 14,
-   "avgPrice": 344.95342857,
+   "avgPrice": 463500,
    "remaining": 0
   },
+  {
+   "at": "2026-11-16T00:06:56.626Z",
+   "symbol": "005930",
+   "name": "삼성전자",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "SELL",
+   "qty": 13,
+   "price": 204000,
+   "fx": 0,
+   "amountKrw": 2652000,
+   "why": "계획 비중보다 많음",
+   "batch": "RB-2026-11-16-mwii7fw8",
+   "status": "filled",
+   "filledQty": 13,
+   "avgPrice": 206307,
+   "remaining": 0
+  },
+  {
+   "at": "2026-11-16T00:06:57.726Z",
+   "symbol": "047810",
+   "name": "한국항공우주",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "SELL",
+   "qty": 3,
+   "price": 105800,
+   "fx": 0,
+   "amountKrw": 317400,
+   "why": "계획 비중보다 많음",
+   "batch": "RB-2026-11-16-mwii7fw8",
+   "status": "filled",
+   "filledQty": 3,
+   "avgPrice": 106466,
+   "remaining": 0
+  },
+  {
+   "at": "2026-11-16T00:06:58.837Z",
+   "symbol": "068270",
+   "name": "셀트리온",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "BUY",
+   "qty": 1,
+   "price": 217000,
+   "fx": 0,
+   "amountKrw": 217000,
+   "why": "계획 비중보다 적음",
+   "batch": "RB-2026-11-16-mwii7fw8",
+   "status": "filled",
+   "filledQty": 1,
+   "avgPrice": 215500,
+   "remaining": 0
+  }
+ ],
+ "recentOrders": [
   {
    "at": "2026-11-12T14:38:20.635Z",
    "symbol": "JNJ",
@@ -559,23 +533,81 @@
    "filledQty": 28,
    "avgPrice": 107117,
    "remaining": 0
+  },
+  {
+   "at": "2026-11-16T00:06:56.312Z",
+   "symbol": "128940",
+   "name": "한미약품",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "SELL",
+   "qty": 6,
+   "price": 460500,
+   "fx": 0,
+   "amountKrw": 2763000,
+   "why": "계획 비중보다 많음",
+   "batch": "RB-2026-11-16-mwii7fw8",
+   "status": "filled",
+   "filledQty": 6,
+   "avgPrice": 463500,
+   "remaining": 0
+  },
+  {
+   "at": "2026-11-16T00:06:56.626Z",
+   "symbol": "005930",
+   "name": "삼성전자",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "SELL",
+   "qty": 13,
+   "price": 204000,
+   "fx": 0,
+   "amountKrw": 2652000,
+   "why": "계획 비중보다 많음",
+   "batch": "RB-2026-11-16-mwii7fw8",
+   "status": "filled",
+   "filledQty": 13,
+   "avgPrice": 206307,
+   "remaining": 0
+  },
+  {
+   "at": "2026-11-16T00:06:57.726Z",
+   "symbol": "047810",
+   "name": "한국항공우주",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "SELL",
+   "qty": 3,
+   "price": 105800,
+   "fx": 0,
+   "amountKrw": 317400,
+   "why": "계획 비중보다 많음",
+   "batch": "RB-2026-11-16-mwii7fw8",
+   "status": "filled",
+   "filledQty": 3,
+   "avgPrice": 106466,
+   "remaining": 0
+  },
+  {
+   "at": "2026-11-16T00:06:58.837Z",
+   "symbol": "068270",
+   "name": "셀트리온",
+   "market": "KR",
+   "currency": "KRW",
+   "side": "BUY",
+   "qty": 1,
+   "price": 217000,
+   "fx": 0,
+   "amountKrw": 217000,
+   "why": "계획 비중보다 적음",
+   "batch": "RB-2026-11-16-mwii7fw8",
+   "status": "filled",
+   "filledQty": 1,
+   "avgPrice": 215500,
+   "remaining": 0
   }
  ],
  "runs": [
-  {
-   "at": "2026-11-09T14:38:26.910Z",
-   "blockedReasons": {
-    "장이 끝났습니다(15": 4,
-    "오늘 주문 합계가 한도 60,000,000원을 넘습니다.": 5
-   },
-   "actions": 9,
-   "sent": 0,
-   "rejected": 0,
-   "unknown": 0,
-   "blocked": 9,
-   "planSource": "default",
-   "rebalance": true
-  },
   {
    "at": "2026-11-10T14:36:49.685Z",
    "blockedReasons": {
@@ -632,19 +664,23 @@
    "blocked": 7,
    "planSource": "default",
    "rebalance": true
+  },
+  {
+   "at": "2026-11-16T00:06:59.981Z",
+   "blockedReasons": {
+    "미국 주말에는 주문하지 않습니다.": 6,
+    "1주 미만이라 주문하지 않습니다.": 1
+   },
+   "actions": 11,
+   "sent": 4,
+   "rejected": 0,
+   "unknown": 0,
+   "blocked": 7,
+   "planSource": "default",
+   "rebalance": true
   }
  ],
  "auto": [
-  {
-   "key": "KR:2026-11-09",
-   "at": "2026-11-09T03:54:50.848Z",
-   "market": "KR",
-   "reason": "계획 변경(PP1-2026-11-09)",
-   "rebalance": false,
-   "sent": 3,
-   "blocked": 9,
-   "items": 13
-  },
   {
    "key": "US:2026-11-09",
    "at": "2026-11-09T14:38:30.225Z",
@@ -694,16 +730,26 @@
    "sent": 0,
    "blocked": 7,
    "items": 7
+  },
+  {
+   "key": "KR:2026-11-16",
+   "at": "2026-11-16T00:07:03.530Z",
+   "market": "KR",
+   "reason": "계획 변경(PP4c-2026-11-15-erc)",
+   "rebalance": true,
+   "sent": 4,
+   "blocked": 1,
+   "items": 5
   }
  ],
  "settings": null,
  "planVersion": {
-  "KR": "PP3-2026-11-12",
+  "KR": "PP4c-2026-11-15-erc",
   "US": "PP3-2026-11-12"
  },
  "planApplied": {
   "KR": {
-   "applied": false,
+   "applied": true,
    "at": null,
    "version": null
   },
@@ -715,15 +761,15 @@
  },
  "sleeve": {
   "n": 6,
-  "excessPp": 0,
+  "excessPp": 0.93,
   "items": [
    {
     "symbol": "000660",
     "name": "SK하이닉스",
     "since": "2026-11-09",
-    "returnPct": 0.03401360544217691,
-    "indexPct": 0.055897859366067504,
-    "excessPct": -0.021884253923890595,
+    "returnPct": -0.03911564625850339,
+    "indexPct": 0.02655148319888201,
+    "excessPct": -0.0656671294573854,
     "step": 1,
     "targetPct": 5.47
    },
@@ -741,9 +787,9 @@
     "symbol": "068270",
     "name": "셀트리온",
     "since": "2026-11-13",
-    "returnPct": 0.01904761904761898,
-    "indexPct": -0.031293706293706314,
-    "excessPct": 0.050341325341325294,
+    "returnPct": 0.019648233243543034,
+    "indexPct": -0.05821678321678325,
+    "excessPct": 0.07786501646032629,
     "step": 1,
     "targetPct": 5.72
    },
@@ -761,9 +807,9 @@
     "symbol": "047810",
     "name": "한국항공우주",
     "since": "2026-11-13",
-    "returnPct": -0.027231905299812342,
-    "indexPct": -0.031293706293706314,
-    "excessPct": 0.004061800993893971,
+    "returnPct": -0.0010922635996153396,
+    "indexPct": -0.05821678321678325,
+    "excessPct": 0.05712451961716791,
     "step": 1,
     "targetPct": 4.25
    },
@@ -785,11 +831,22 @@
    "name": "엔비디아 (NVDA)",
    "level": "caution",
    "factor": 1,
-   "reason": "뉴스(경영진): ‘대만의 자랑’ 젠슨 황 사임에…고향에서는",
+   "reason": "뉴스(경영진): 젠슨 황 사임에도 리벨리온 \"협력 변경無\"…K-NPU '이기종 공존' 무게",
    "source": "뉴스",
-   "date": "2026-11-15",
-   "at": "2026-11-15T10:40:44.094Z",
-   "until": "2026-11-29T10:40:44.094Z"
+   "date": "2026-11-16",
+   "at": "2026-11-16T04:46:15.000Z",
+   "until": "2026-11-30T04:46:15.000Z"
+  },
+  {
+   "symbol": "000660",
+   "name": "SK하이닉스",
+   "level": "caution",
+   "factor": 1,
+   "reason": "뉴스(과징금): 삼성·SK하이닉스 HBM 전환이 담합?…美법원도 인정한 '합리적 경영 판단...",
+   "source": "뉴스",
+   "date": "2026-11-16",
+   "at": "2026-11-16T04:16:13.918Z",
+   "until": "2026-11-30T04:16:13.918Z"
   }
  ],
  "marks": [
@@ -843,9 +900,9 @@
   },
   {
    "date": "2026-11-16",
-   "total": 100077727,
-   "cash": 42201861,
-   "stock": 57875866,
+   "total": 99541514,
+   "cash": 47756358,
+   "stock": 51785156,
    "funding": 32900334
   }
  ],
@@ -853,15 +910,15 @@
  "hypotheses": [],
  "hiddenHypotheses": 0,
  "activity30": {
-  "decisions": 9,
-  "orders": 39,
-  "submitted": 39,
-  "fills": 34,
+  "decisions": 10,
+  "orders": 43,
+  "submitted": 43,
+  "fills": 38,
   "rejected": 0,
   "notFound": 0,
-  "batches": 4,
-  "tradedKrw": 180657761,
-  "turnoverPct": 179.9
+  "batches": 5,
+  "tradedKrw": 186655650,
+  "turnoverPct": 186
  },
  "integrity": {
   "ok": true,
@@ -907,7 +964,7 @@
   "rejected": 0,
   "pending": 0,
   "leftOpen": 0,
-  "orders": 39
+  "orders": 43
  },
  "prefsHistory": [],
  "baseline": {
@@ -1389,9 +1446,9 @@
     "currency": "USD"
    }
   },
-  "ownRetPct": 0.7,
-  "benchRetPct": 0.89,
-  "diffPp": -0.19,
+  "ownRetPct": 0.16,
+  "benchRetPct": -0.05,
+  "diffPp": 0.21,
   "days": 8,
   "from": "2026-11-09",
   "asOf": "2026-11-16",

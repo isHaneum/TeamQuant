@@ -31,7 +31,7 @@ test('시스템 점검: 마감 뒤 남은 미체결(leftOpen)은 시장별 거�
   const krSent = o({ symbol: '069500', side: 'SELL', status: 'sent', filledQty: 0, remaining: 100, qty: 100, at: '2026-11-09T04:02:31Z' });
   const t1 = Date.parse('2026-11-10T01:30:00Z');
   const r1 = systemCheck({ orders: [krSent] }, t1); assert.equal(r1.leftOpen, 1); assert.equal(r1.staleUnknown, 0, 'sent 는 미확인이 아니다'); assert.equal(r1.ok, false);
-  assert.deepEqual(r1.items.find(i => i.key === 'leftOpen'), { key: 'leftOpen', label: '마감 뒤 남은 미체결', count: 1, target: 0 });
+  assert.deepEqual(r1.items.find(i => i.key === 'leftOpen'), { key: 'leftOpen', label: '장 마감 뒤 남은 미체결', count: 1, target: 0 });
   // 같은 KST 날짜 안(11-09 23:00 KST)이면 아직 남은 것이 아니다
   assert.equal(systemCheck({ orders: [krSent] }, Date.parse('2026-11-09T14:00:00Z')).leftOpen, 0);
   // 미국 11-09 23:40 KST(09:40 ET) 주문은 KST 자정을 넘긴 11-10 01:30 KST 에도 뉴욕은 아직 11-09 → 남은 것이 아니다. 뉴욕 날짜가 바뀐 뒤(11-10 15:00 KST)엔 1건.

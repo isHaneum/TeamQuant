@@ -94,7 +94,7 @@ test('킬 스위치: 켜면 열린 주문을 취소하고 새 주문을 막는�
   const k = await pl.kill(true);
   assert.equal(k.killSwitch, true); assert.equal(k.cancelled.length, r.sent.length); assert.ok(k.cancelled.every(c => c.ok));
   assert.ok(b.orders.every(o => o.cancelled));
-  const r2 = await pl.run({ rules, plan }); assert.equal(r2.sent.length, 0); assert.ok(r2.items.every(i => i.blocks.some(t => /킬 스위치/.test(t))));
+  const r2 = await pl.run({ rules, plan }); assert.equal(r2.sent.length, 0); assert.ok(r2.items.every(i => i.blocks.some(t => /전체 정지/.test(t)))); // 2026-11-26 화면 말: 킬 스위치 → 전체 정지
   await pl.kill(false); const st = await pl.status(); assert.equal(st.killSwitch, false); assert.ok(st.recentOrders.every(o => o.status === 'cancelled'));
 });
 

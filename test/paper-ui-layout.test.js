@@ -13,7 +13,7 @@ test('TC-UI-REORG-01 모의투자 화면 순서: 실시간 모의계좌 → 종�
   assert.ok(order.every(i => i >= 0), `missing id: ${order}`);
   assert.deepEqual(order, order.slice().sort((a, b) => a - b));
   for (const id of ['pp-kis', 'pp-hyp', 'pp-sim-head', 'pp-setup', 'pp-kis-body', 'pp-kis-actions', 'pp-kis-title-state']) assert.equal(paperUi.split(`id="${id}"`).length - 1, 1, `id ${id} must appear exactly once`);
-  assert.match(paperUi, /과거 데이터로 검증 \(시뮬레이션\)/);
+  assert.match(paperUi, /<h2[^>]*>과거 시세로 테스트<\/h2>/); // 2026-11-26 문구 정리: '과거 데이터로 검증 (시뮬레이션)' → '과거 시세로 테스트'(접힘 제목과 같은 말이라 화면 낭독기용)
 });
 
 test('TC-UI-REORG-02 폰 폭 보유 표: 담은 이유 셀을 종목 줄 아래 전체 폭으로 내리는 규칙이 #pp-kis-held 에 묶여 있다', () => {
@@ -31,16 +31,17 @@ test('TC-UI-REORG-02 폰 폭 보유 표: 담은 이유 셀을 종목 줄 아래 
 test('TC-UI-REORG-03 문구 규칙: "~할까요?" 없음 · 상태 띠 다섯 항목 · 홈 배너에 진행 상태와 투자 비중', () => {
   assert.doesNotMatch(paperUi, /할까요\?/);
   assert.doesNotMatch(briefUi, /할까요\?/);
-  for (const k of ['운용 상태', '마지막 자동 실행', '다음 점검', '계획 버전', '투자 비중']) assert.ok(paperUi.includes(`<span>${k} ${'$'}{tip(`), `strip item ${k} with tip()`);
-  assert.match(paperUi, /아직 집행되지 않았습니다 \(원인: /);
+  // 2026-11-26 문구 정리: 운용 상태 → 자동 매매 · 마지막 자동 실행 → 마지막 자동 주문 · 계획 버전 → 계획 반영 · '아직 집행되지 않았습니다 (원인:' → '아직 못 삼 (이유:'
+  for (const k of ['자동 매매', '마지막 자동 주문', '다음 점검', '계획 반영', '투자 비중']) assert.ok(paperUi.includes(`<span>${k} ${'$'}{tip(`), `strip item ${k} with tip()`);
+  assert.match(paperUi, /아직 못 삼 \(이유: /);
   assert.match(briefUi, /투자 비중 \$\{m\.investedPct\.toFixed\(0\)\}%/);
   assert.match(briefUi, /m\.run\?\.label/);
 });
 
-test('TC-UI-REORG-05 실계좌 읽기 전용 기록(결정 22 · 위치는 결정 34): 모의투자 화면에는 없고 홈 카드 #hm-real · 기본 숨김(홈이 실계좌이고 브리지 응답이 있을 때만) · "주문 기능 없음" 배지와 tip() ⓘ · 지수 대비·해시 체인은 모의 카드 함수를 이 계좌의 문구로 재사용 · 보유표 없음 · 보류 사유·마지막 정상 평가 · KST 시각 · 주문 경로 없음 · 수동 실행은 브라우저 규칙을 보내지 않음', () => {
+test('TC-UI-REORG-05 실계좌 읽기 전용 기록(결정 22 · 위치는 결정 34): 모의투자 화면에는 없고 홈 카드 #hm-real · 기본 숨김(홈이 실계좌이고 브리지 응답이 있을 때만) · "조회만 하는 기록" 배지와 tip() ⓘ · 지수 대비·해시 체인은 모의 카드 함수를 이 계좌의 문구로 재사용 · 보유표 없음 · 보류 사유·마지막 정상 평가 · KST 시각 · 주문 경로 없음 · 수동 실행은 브라우저 규칙을 보내지 않음', () => {
   assert.equal(paperUi.indexOf('id="pp-real"'), -1, '모의투자 화면 틀에는 실계좌 카드가 없다(결정 34: 모의투자 화면에는 모의계좌 하나만)');
   assert.match(paperUi, /card\.id = 'hm-real'; card\.hidden = true;/, '홈 카드 · 기본 숨김'); assert.match(paperUi, /document\.querySelector\('#overview \.hm-main'\)/);
-  assert.match(paperUi, /실계좌 기록 \(<span id="pp-real-label">토스<\/span>\) <span class="pp-badge">주문 기능 없음<\/span> \$\{tip\('이 계좌로는 조회만 합니다\./, 'title 속성만 있는 span 은 폰에서 안 보이므로 tip() 을 쓴다');
+  assert.match(paperUi, /실계좌 기록 \(<span id="pp-real-label">토스<\/span>\) <span class="pp-badge">조회만 하는 기록<\/span> \$\{tip\('이 계좌로는 조회만 합니다\./, 'title 속성만 있는 span 은 폰에서 안 보이므로 tip() 을 쓴다');
   const s = paperUi.indexOf('async function realRefresh('), e = paperUi.indexOf("window.addEventListener('teamquant:page', () => { const p ="); assert.ok(s >= 0 && e > s);
   assert.match(paperUi.slice(s, e), /document\.body\.dataset\.account !== 'real'\) \{ card\.hidden = true/, '홈이 실계좌일 때만'); assert.doesNotMatch(paperUi.slice(s, e), /holdTable\(/, '기록 응답에는 평균단가·현재가가 없어 보유표를 그리면 손익이 0으로 찍힌다');
   assert.doesNotMatch(paperUi, /privateRead\('paper-live-(preview|run)', \{ rules:/, '수동 미리보기·주문은 브라우저 규칙·계획을 보내지 않는다(엔진의 규칙과 기본 계획만)');
@@ -48,12 +49,13 @@ test('TC-UI-REORG-05 실계좌 읽기 전용 기록(결정 22 · 위치는 결�
   assert.match(block, /privateRead\('kis-real-status'\)/); assert.match(block, /catch \{ card\.hidden = true; return; \}/); assert.match(block, /s\.readOnly !== true\) \{ card\.hidden = true/);
   assert.match(block, /chainHtml\(s, \{ published: false \}\)/, '실계좌 체인은 공개 파일에 없으므로 공개 파일로 검증하라는 문장을 쓰지 않는다'); assert.match(block, /progressHtml\(s, \{ basis: 'holdings' \}\)/, '비교선 비중은 계획이 아니라 보유에서');
   assert.doesNotMatch(block, /chainHtml\(s\)|progressHtml\(s\)/);
-  assert.match(block, /b\.usCostKrw > 0 && b\.cashUsd === 0/, '외화예수금 조회 실패(null)는 D+1 메모의 조건이 아니다'); assert.match(block, /D\+1 정산 전까지 과대 평가될 수 있음\(2026-11-12 미검증\)/);
-  assert.match(block, /us_failed: '미국 잔고 조회에 실패해'/); assert.match(block, /마지막 정상 평가 \$\{esc\(lastM\.date\)\} \$\{won\(lastM\.total\)\}/); assert.match(block, /총자산 평가 <b>\$\{s\.markStale \? '보류' : won\(b\.total\)\}<\/b>/);
-  assert.match(block, /\$\{esc\(kstStamp\(s\.asOf\)\)\} 기준/, '기준 시각은 KST'); assert.match(block, /tot_evlu_amt/, '총자산 ⓘ 는 실제 계산 규칙을 적는다');
-  // chainHtml/progressHtml 의 문구 분기: 실계좌용 문장이 있고 공개 파일 검증 문장은 published 일 때만
-  const ch = paperUi.slice(paperUi.indexOf('function chainHtml('), paperUi.indexOf('function kisSummary(')); assert.match(ch, /published \? '공개 파일에는 닫힌 날/); assert.match(ch, /kis-prod-\*\.json\)로만/); assert.match(ch, /마지막 봉인 \$\{last\.date\} 해시 앞 12자/); assert.doesNotMatch(ch, /오늘 해시/); assert.match(ch, /<b class="\$\{ok === false \? 'cr-err' : ''\}">/, "판정 색은 체인 자체만 따른다('정상'이 붉게 찍히지 않게)");
-  const pg = paperUi.slice(paperUi.indexOf('function progressHtml('), paperUi.indexOf('function chainHtml(')); assert.match(pg, /basis === 'holdings' \? `첫 평가점\(\$\{esc\(from\)\}\)의 보유 국가 비중/); assert.match(pg, /의 계획에서 국가 비중과 현금 비중만 가져와`/);
+  // 2026-11-26 문구 정리(쉬운 말 · ⓘ 에 내부 필드 이름·파일·해시를 쓰지 않음): D+1 과대 평가 → 다음 날 정산 전까지 크게 보임 · 보류 → 확인 못 함 · tot_evlu_amt → 국내 총평가
+  assert.match(block, /b\.usCostKrw > 0 && b\.cashUsd === 0/, '달러 예수금 조회 실패(null)는 다음 날 정산 메모의 조건이 아니다'); assert.match(block, /다음 날 정산 전까지 평가액이 실제보다 크게 보일 수 있습니다\(2026-11-12 기준 · 확인 전\)/);
+  assert.match(block, /us_failed: '미국 잔고 조회에 실패해'/); assert.match(block, /마지막 정상 평가 \$\{esc\(lastM\.date\)\} \$\{won\(lastM\.total\)\}/); assert.match(block, /총자산 <b>\$\{s\.markStale \? '확인 못 함' : won\(b\.total\)\}<\/b>/);
+  assert.match(block, /\$\{esc\(kstStamp\(s\.asOf\)\)\} 기준/, '기준 시각은 KST'); assert.match(block, /총자산 = 국내 총평가 \+ 미국 주식 평가액×환율 \+ 달러 예수금×환율/, '총자산 ⓘ 는 실제 계산 규칙을 적는다');
+  // chainHtml/progressHtml 의 문구 분기: 실계좌용 문장이 있고 공개 자료로 확인하라는 문장은 published 일 때만
+  const ch = paperUi.slice(paperUi.indexOf('function chainHtml('), paperUi.indexOf('function kisSummary(')); assert.match(ch, /published \? '공개 자료에는 어제까지만/); assert.match(ch, /이 PC의 기록으로만/); assert.match(ch, /마지막 잠금 \$\{last\.date\}/); assert.doesNotMatch(ch, /오늘 해시|해시 앞/); assert.match(ch, /<b class="\$\{ok === false \? 'cr-err' : ''\}">/, "결과 색은 기록 검사 자체만 따른다('고친 흔적 없음'이 붉게 찍히지 않게)");
+  const pg = paperUi.slice(paperUi.indexOf('function progressHtml('), paperUi.indexOf('function chainHtml(')); assert.match(pg, /basis === 'holdings' \? `첫 기록일\(\$\{esc\(from\)\}\)의 보유 국가 비중/); assert.match(pg, /처음 계획\(\$\{esc\(s\.baseline\?\.from \|\| from\)\}\)에서 국가 비중과 현금 비중만 가져와`/);
   assert.doesNotMatch(block, /paper-live-run|paper-live-preview|privateRead\('paper-live|주문 보내기|kisRun|kisPreview/, '실계좌 카드에는 주문 경로가 없다');
   assert.doesNotMatch(paperUi, /할까요\?/);
 });
@@ -62,13 +64,14 @@ test('TC-UI-REORG-04 헤드라인 규칙(결정 21): 모의계좌 카드의 운�
   const s = paperUi.indexOf('function progressHtml('), e = paperUi.indexOf('function chainHtml('); assert.ok(s >= 0 && e > s);
   const block = paperUi.slice(s, e);
   assert.doesNotMatch(paperUi, /운용 \$\{s\.marks\.length\}일 · 시작 /, '절대 수익률이 헤드라인이면 안 된다');
-  assert.match(block, /지수 대비 <b class="\$\{tone\(bm\.diffPp\)\}">\$\{pp\(bm\.diffPp\)\}<\/b> \(절차 \$\{pct\(/);
+  // 2026-11-26 문구 정리: (절차 x%) → (이 계좌 x% · 지수로만 y%), 실계좌 줄은 '내 계좌' · 운용 n일 → n일째 · 비교선/기준선 → 지수로만 담은 경우/처음 계획
+  assert.match(block, /지수 대비 <b class="\$\{tone\(bm\.diffPp\)\}">\$\{pp\(bm\.diffPp\)\}<\/b> \(\$\{who\} \$\{pct\(/);
   assert.equal(block.split('<b').length - 1, 1, '굵은 숫자는 지수 대비 하나뿐');
-  assert.match(block, /지수 대비 — <span class="cr-muted">\(\$\{esc\(why\)\}\)<\/span> <small class="cr-muted">절차 /);
-  // 사유는 빠진 것에서: 비교선 객체가 있으면 그 error · 기준선만 있으면 공개 파일 갱신 전 · 둘 다 없으면 기준선 없음
-  assert.match(block, /const why = bm \? \(bm\.error \|\| '비교할 자료 부족'\) : s\.baseline \? '비교선 자료 없음 · 공개 파일 갱신 전' : '기준선 없음';/);
-  // 일수·구간은 비교선이 잰 구간(bm.days/from/asOf)을 따르고 marks 는 대체값
-  assert.match(block, /const from = bm\?\.from \|\| m0\.date, asOf = bm\?\.asOf \|\| m1\.date, days = bm\?\.days \|\| s\.marks\.length;/); assert.match(block, /운용 \$\{days\}일 · 지수 대비 <b/); assert.doesNotMatch(block, /운용 \$\{s\.marks\.length\}일/);
-  assert.match(block, /같은 위험 수준은 아닙니다/); assert.match(block, /class="cr-muted" title="\$\{esc\(tipText\)\}">ⓘ/);
+  assert.match(block, /지수 대비 — <span class="cr-muted">\(\$\{esc\(why\)\}\)<\/span> <small class="cr-muted">\$\{who\} /);
+  // 이유는 빠진 것에서: 비교 객체가 있으면 그 error · 처음 계획만 있으면 공개 자료 받기 전 · 둘 다 없으면 처음 계획 없음 (2026-11-26 용어표 #16: 갱신 → 받기)
+  assert.match(block, /const why = bm \? \(bm\.error \|\| '비교할 자료 부족'\) : s\.baseline \? '지수 비교 자료 없음 · 공개 자료 받기 전' : '처음 계획 없음';/);
+  // 일수·기간은 비교 계산이 잰 기간(bm.days/from/asOf)을 따르고 marks 는 대체값
+  assert.match(block, /const from = bm\?\.from \|\| m0\.date, asOf = bm\?\.asOf \|\| m1\.date, days = bm\?\.days \|\| s\.marks\.length;/); assert.match(block, /\$\{days\}일째 · 지수 대비 <b/); assert.doesNotMatch(block, /운용 \$\{s\.marks\.length\}일/);
+  assert.match(block, /위험이 같지는 않습니다/); assert.match(block, /class="cr-muted" title="\$\{esc\(tipText\)\}">ⓘ/);
   assert.match(paperUi, /prog = progressHtml\(s\)/);
 });

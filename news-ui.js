@@ -3,6 +3,10 @@ const query = document.querySelector('#news-query');
 const status = document.querySelector('#news-status');
 const list = document.querySelector('#news-results');
 let controller;
+// 시각: 올해는 'MM-DD HH:mm', 다른 해는 'YYYY-MM-DD HH:mm'. 오늘 조회 시각은 'HH:mm'.
+const two = n => String(n).padStart(2, '0');
+const clock = d => `${two(d.getHours())}:${two(d.getMinutes())}`;
+const stamp = iso => { const d = new Date(iso); if (!Number.isFinite(d.getTime())) return '시각 없음'; const md = `${two(d.getMonth() + 1)}-${two(d.getDate())}`; return `${d.getFullYear() === new Date().getFullYear() ? md : `${d.getFullYear()}-${md}`} ${clock(d)}`; };
 
 async function searchNews() {
   const keyword = query.value.trim();
@@ -20,12 +24,12 @@ async function searchNews() {
     if (!response.ok) throw new Error(data.error || '뉴스를 불러오지 못했습니다.');
     if (current !== controller) return;
     status.textContent = data.items.length
-      ? `‘${data.query}’ · ${data.items.length}건 · ${data.source} · 조회 ${new Date(data.fetchedAt).toLocaleString('ko-KR')}`
-      : `‘${data.query}’ 검색 결과가 없습니다. 다른 키워드로 검색해 확인하십시오.`;
+      ? `‘${data.query}’ · 기사 ${data.items.length}건 · ${clock(Number.isFinite(new Date(data.fetchedAt).getTime()) ? new Date(data.fetchedAt) : new Date())} 기준`
+      : `‘${data.query}’ 결과 없음 · 다른 검색어로 찾아보세요`;
     for (const item of data.items) {
       const article = document.createElement('article'); article.className = 'news-item';
       const meta = document.createElement('p'); meta.className = 'muted';
-      meta.textContent = `${item.sourceHost} · ${item.publishedAt ? new Date(item.publishedAt).toLocaleString('ko-KR') : '게시 시각 미상'}`;
+      meta.textContent = `${item.sourceHost} · ${item.publishedAt ? stamp(item.publishedAt) : '시각 없음'}`;
       const title = document.createElement('h2'); const link = document.createElement('a');
       const url = new URL(item.link);
       if (!['http:','https:'].includes(url.protocol)) continue;
@@ -40,12 +44,15 @@ async function searchNews() {
 }
 
 form.addEventListener('submit', event => {event.preventDefault(); searchNews();});
-document.querySelectorAll('[data-news-query]').forEach(button => button.addEventListener('click', () => {
-  query.value = button.dataset.newsQuery; searchNews();
-}));
-document.querySelector('#strategy-news').addEventListener('click', () => {
-  const symbol = document.querySelector('#symbol').value.trim().toUpperCase();
-  const names = {'005930.KS':'삼성전자', '000660.KS':'SK하이닉스', '035420.KS':'NAVER', '035720.KS':'카카오'};
-  query.value = names[symbol] || document.querySelector("#symbol").value.trim();
-  document.querySelector('[data-view="news"]').click(); searchNews();
-});
+// 검색어 칩: 내 보유 종목 이름(teamquant:asset-snapshot · 이 탭 메모리)으로 바꾸고, 없으면 예시 4종목. 칩 묶음에 한 번만 묶어 다시 그려도 동작한다.
+// 보내는 것은 누른 종목 이름 하나뿐이다(뉴스 검색).
+const chips = document.querySelector('.news-keywords');
+const FALLBACK = ['삼성전자', 'SK하이닉스', 'NAVER', '카카오'];
+function setChips(names = []) {
+  if (!chips) return;
+  const own = [...new Set(names.map(n => String(n || '').trim()).filter(Boolean))].slice(0, 8);
+  chips.replaceChildren(...(own.length ? own : FALLBACK).map(n => { const b = document.createElement('button'); b.type = 'button'; b.dataset.newsQuery = n; b.textContent = n; return b; }));
+}
+chips?.addEventListener('click', event => { const b = event.target.closest('[data-news-query]'); if (!b) return; query.value = b.dataset.newsQuery; searchNews(); });
+window.addEventListener('teamquant:asset-snapshot', event => setChips((event.detail?.positions || []).map(p => p.name)));
+window.addEventListener('teamquant:asset-clear', () => setChips());

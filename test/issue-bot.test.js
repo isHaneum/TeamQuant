@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { tokensOf, similarity, clusterArticles, topicRate, spikeZ, assess, dedupeUrgent, worthRecording, shouldAlert, matchKnown, composeBriefing, eventRecord, relatedToHoldings, marketMove, slotOf } from '../lib/issue-bot.js';
+import { tokensOf, similarity, clusterArticles, topicRate, spikeZ, assess, dedupeUrgent, worthRecording, shouldAlert, matchKnown, composeBriefing, alertText, eventRecord, relatedToHoldings, marketMove, slotOf } from '../lib/issue-bot.js';
 
 const NOW = Date.parse('2026-11-05T06:00:00Z'); // 한국 15시
 const at = h => new Date(NOW - h * 3600000).toISOString();
@@ -86,4 +86,24 @@ test('시장 움직임 표준점수', () => {
   const m = marketMove('^KS11', '코스피', '%', c);
   assert.ok(m.available && m.change > 4.9 && m.z > 2);
   assert.equal(marketMove('X', 'x', '%', c.slice(0, 5)).available, false);
+});
+
+// 2026-11-26 사용자: 텔레그램이 "뭘 말하려는 건지 모르겠다" → 첫 줄에 왜 알리는지, 숫자에는 기준을, 내부 메모는 빼고.
+test('텔레그램 알림·브리핑: 첫 줄이 무엇을 알리는지 말하고, 숫자의 기준을 밝힌다', () => {
+  const mv = (symbol, label, change, z, date) => ({ symbol, label, unit: '%', available: true, date, change, z });
+  const old = mv('CL=F', '유가(WTI)', 6.2, 3.1, '2026-11-04');
+  const issue = { id: 'i', title: '이란 공습 개시…유가 급등', firstSeen: at(2), lastSeen: at(1), count: 5, sources: 4, topics: ['war'], critical: ['war'], links: [{ link: 'https://a.kr/1', title: '이란 공습 개시' }] };
+  issue.assess = assess(issue, { moves: [old], now: NOW });
+  issue.assess = { ...issue.assess, why: [...issue.assess.why, '같은 시장 움직임에 더 큰 이슈가 있어 한 단계 낮춤'] };
+  const t = alertText(issue, { now: NOW }), lines = t.split('\n');
+  assert.match(lines[0], /^\[(긴급|주의)\] 큰 사건 기사( \+ .+)?$/, '첫 줄: 등급과 알리는 이유');
+  assert.equal(lines[1], issue.title);
+  assert.match(t, /시장: 유가\(WTI\) \+6\.2% · 평소 하루 움직임의 3\.1배 · 11-04 기준/, '오늘이 아닌 시세는 날짜를 밝힌다');
+  assert.match(t, /기사: 제목에 '공습' · 언론사 4곳 · 처음 보도 11-05 13:00/);
+  assert.match(t, /원문: https:\/\/a\.kr\/1/); assert.doesNotMatch(t, /한 단계 낮춤/, '등급 조정 메모는 기록에만');
+  const b = composeBriefing({ now: NOW, moves: [mv('^KS11', '코스피', -2.5, -3.1, '2026-11-05'), old], issues: [issue] });
+  const bl = b.text.split('\n');
+  assert.match(bl[1], /^요약: 알림 이슈 (긴급|주의) 1건$/); assert.match(bl[2], /^평소보다 크게 움직인 지표: 코스피, 유가\(WTI\)$/);
+  assert.match(b.text, /유가\(WTI\) \+6\.2% · 평소의 3\.1배 · 11-04 기준/); assert.match(b.text, /\(평소의 n배 = 최근 3개월 보통 하루 움직임의 n배\)/);
+  assert.match(b.headline, /코스피 −2\.5%/, '화면용 한 줄은 그대로');
 });

@@ -1,29 +1,47 @@
-/* 시장 화면(2026-11-13). 빨강·파랑은 등락·순매수/순매도에만 쓴다. */
-.mk-sub{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
-.mk-sub button{border:1px solid #d9dee6;background:#fff;border-radius:999px;padding:7px 14px;font:inherit;font-size:13.5px;color:#40516a;cursor:pointer;min-height:0}
-.mk-sub button.on{background:#111827;border-color:#111827;color:#fff;font-weight:600}
-#mk-line{font-size:14.5px}#mk-line b{font-weight:700}
-#core-market .up,.mk-table .up{color:var(--ck-up,#d73b47)}#core-market .down,.mk-table .down{color:var(--ck-down,#2565c6)}
-.mk-idx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 16px}
-.mk-tile{background:#fff;border:1px solid #e5e9ef;border-radius:16px;padding:14px 16px;display:grid;gap:4px;min-width:0}
-.mk-tile span{font-size:13px;color:#56637a;display:flex;justify-content:space-between;gap:6px}.mk-tile small{font-size:11.5px;color:#8a94a6}.mk-tile small.live{color:#0a7d4f;font-weight:600}
-.mk-tile b{font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.mk-tile em{font-style:normal;font-size:13.5px;font-variant-numeric:tabular-nums}
-.mk-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin:0 0 16px;align-items:start}
-.mk-two .cr-card{min-width:0}.mk-two header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-.mk-flow{display:grid;gap:6px;padding:8px 0}.mk-flow+.mk-flow{border-top:1px solid #eef1f5;margin-top:6px;padding-top:14px}.mk-flow>b{font-size:13.5px}
-.mk-bar{display:grid;grid-template-columns:52px minmax(0,1fr) 84px;align-items:center;gap:10px;font-size:13.5px}
-.mk-bar i,.mk-row i{display:block;height:8px;background:#f1f4f8;border-radius:6px;overflow:hidden}.mk-bar u,.mk-row u{display:block;height:100%;border-radius:6px;background:#9aa5b5;text-decoration:none}
-.mk-bar u.up,.mk-row u.up{background:var(--ck-up,#d73b47)}.mk-bar u.down,.mk-row u.down{background:var(--ck-down,#2565c6)}
+/* 시장 화면(2026-11-13 · 2026-11-26 토큰·배치 정리: 값은 tokens.css의 --tq-*, 분기점 640px·1024px). 빨강·파랑은 등락·순매수/순매도에만 쓴다. */
+/* 넓은 화면에서 타일이 늘어나 숫자 옆이 비지 않게(홈과 같은 최대 폭) */
+#core-market{max-width:1440px}
+/* 시장 묶음 작은 탭: 모의투자 탭(.pp-tabs)과 같은 밑줄 모양 */
+.mk-sub{display:flex;flex-wrap:wrap;gap:var(--tq-sp-1);margin:0 0 var(--tq-sp-3);border-bottom:1px solid var(--tq-line)}
+.mk-sub button{min-height:44px;padding:0 var(--tq-sp-4);border:0;border-bottom:2px solid transparent;border-radius:0;margin-bottom:-1px;background:none;font:inherit;font-size:var(--tq-fs-3);font-weight:600;color:var(--tq-sub);cursor:pointer}
+.mk-sub button.on{color:var(--tq-ink);border-bottom-color:var(--tq-ink)}
+.mk-sub button:hover{color:var(--tq-ink)}
+.mk-sub button:focus-visible{outline:2px solid var(--tq-accent);outline-offset:-2px}
+#mk-line{font-size:var(--tq-fs-2)}#mk-line b{font-weight:700}
+#core-market .up,.mk-table .up{color:var(--tq-up)}#core-market .down,.mk-table .down{color:var(--tq-down)}
+/* 투자자별 순매수 한 줄(막대는 접힘) */
+.mk-flowline{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--tq-sp-1) var(--tq-sp-3);margin:var(--tq-sp-1) 0 0;font-size:var(--tq-fs-2);color:var(--tq-sub)}
+.mk-flowhead{display:inline-flex;align-items:center;font-weight:600;color:var(--tq-ink)}
+#mk-flow-line{display:flex;flex-wrap:wrap;gap:var(--tq-sp-1) var(--tq-sp-3)}
+.mk-flowmkt b{font-weight:600;color:var(--tq-ink)}.mk-flowmkt em{font-style:normal;font-weight:600;font-variant-numeric:tabular-nums}
+.mk-flowmore{flex-basis:100%}.mk-flowmore summary{cursor:pointer;font-size:var(--tq-fs-1);color:var(--tq-sub)}.mk-flowmore[open]{max-width:560px}
+.mk-idx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--tq-sp-3);margin:0 0 var(--tq-sp-4)}.mk-idx>p{grid-column:1/-1;margin:0}
+.mk-tile{background:var(--tq-paper);border:1px solid var(--tq-line);border-radius:var(--tq-r-2);padding:var(--tq-sp-3);display:grid;gap:var(--tq-sp-1);min-width:0}
+.mk-tile.mk-skel{min-height:88px;border-color:transparent}.mk-skel-row{height:120px}
+.mk-tile span{font-size:var(--tq-fs-2);color:var(--tq-sub);display:flex;justify-content:space-between;gap:var(--tq-sp-1)}.mk-tile small{font-size:var(--tq-fs-1);color:var(--tq-faint)}.mk-tile small.live{color:var(--tq-ok);font-weight:600}
+.mk-tile b{font-size:var(--tq-fs-4);font-variant-numeric:tabular-nums;letter-spacing:-.01em}.mk-tile em{font-style:normal;font-size:var(--tq-fs-2);font-variant-numeric:tabular-nums}
+/* 내 종목 오늘: 지수 바로 아래 전체 폭 */
+.mk-mine{margin:0 0 var(--tq-sp-4);min-width:0}
+.mk-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--tq-sp-4);margin:0 0 var(--tq-sp-4);align-items:start}
+.mk-two .cr-card{min-width:0}.mk-two header,.mk-mine header{display:flex;align-items:center;justify-content:space-between;gap:var(--tq-sp-2);flex-wrap:wrap;margin-bottom:var(--tq-sp-2)}
+.mk-flow{display:grid;gap:6px;padding:var(--tq-sp-2) 0}.mk-flow+.mk-flow{border-top:1px solid var(--tq-line);margin-top:6px;padding-top:var(--tq-sp-3)}.mk-flow>b{font-size:var(--tq-fs-2)}
+.mk-bar{display:grid;grid-template-columns:52px minmax(0,1fr) 84px;align-items:center;gap:10px;font-size:var(--tq-fs-2)}
+.mk-bar i,.mk-row i{display:block;height:8px;background:var(--tq-soft);border-radius:6px;overflow:hidden}.mk-bar u,.mk-row u{display:block;height:100%;border-radius:6px;background:var(--tq-faint);text-decoration:none}
+.mk-bar u.up,.mk-row u.up{background:var(--tq-up)}.mk-bar u.down,.mk-row u.down{background:var(--tq-down)}
 .mk-bar em,.mk-row em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
-.mk-rows{display:grid;gap:2px}.mk-rows.all{max-height:520px;overflow:auto}.mk-cap{margin:10px 0 4px;font-size:12px;color:#6b7686;font-weight:600}.mk-cap:first-child{margin-top:0}
-.mk-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) 64px 78px;align-items:center;gap:10px;border:0;background:none;padding:7px 8px;border-radius:8px;font:inherit;font-size:13.5px;text-align:left;cursor:pointer;color:inherit;min-height:0}
-.mk-row:hover,.mk-row.on{background:#f3f6fa}.mk-row span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mk-row small{color:#6b7686;font-size:12px;text-align:right;white-space:nowrap}
-.mk-seg{display:inline-flex;flex-wrap:wrap;border:1px solid #d9dee6;border-radius:10px;overflow:hidden}
-.mk-seg button{border:0;background:#fff;padding:7px 12px;font:inherit;font-size:13px;color:#40516a;cursor:pointer;min-height:0}.mk-seg button+button{border-left:1px solid #e5e9ef}.mk-seg button.on{background:#111827;color:#fff;font-weight:600}
+.mk-rows{display:grid;gap:2px}.mk-rows.all{max-height:520px;overflow:auto}.mk-cap{margin:10px 0 var(--tq-sp-1);font-size:var(--tq-fs-1);color:var(--tq-faint);font-weight:600}.mk-cap:first-child{margin-top:0}
+.mk-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) 64px 104px;align-items:center;gap:10px;border:0;background:none;padding:7px var(--tq-sp-2);border-radius:var(--tq-r-1);font:inherit;font-size:var(--tq-fs-2);text-align:left;cursor:pointer;color:inherit;min-height:0}
+.mk-row:hover,.mk-row.on{background:var(--tq-soft)}.mk-row span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mk-row small{color:var(--tq-faint);font-size:var(--tq-fs-1);text-align:right;white-space:nowrap}
+.mk-seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--tq-line);border-radius:10px;overflow:hidden}
+.mk-seg button{border:0;background:var(--tq-paper);padding:7px var(--tq-sp-3);font:inherit;font-size:13px;color:var(--tq-sub);cursor:pointer;min-height:0}.mk-seg button+button{border-left:1px solid var(--tq-line)}.mk-seg button.on{background:var(--tq-ink);color:var(--tq-paper);font-weight:600}
 .mk-tabs2{margin:0 0 10px}
-.mk-table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
-.mk-table th{font-size:12px;color:#6b7686;font-weight:600;text-align:right;padding:6px 8px;border-bottom:1px solid #e5e9ef}.mk-table th:first-child{text-align:left}
-.mk-table td{padding:8px;text-align:right;border-bottom:1px solid #f1f4f8;white-space:nowrap}.mk-table td:first-child{text-align:left;white-space:normal}
-.mk-table tr[data-open]{cursor:pointer}.mk-table tr[data-open]:hover td{background:#f7f9fc}.mk-table tr[data-open]:focus-visible{outline:2px solid #111827;outline-offset:-2px}
-@media (max-width:1100px){.mk-idx{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:760px){.mk-idx{grid-template-columns:repeat(2,minmax(0,1fr))}.mk-two{grid-template-columns:minmax(0,1fr)}.mk-tile b{font-size:19px}.mk-row{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr) 58px;}.mk-row small{display:none}.mk-table td,.mk-table th{padding:7px 5px}}
+/* styles.css의 전역 table{min-width:620px}를 푼다(반쪽 카드·휴대폰에서 가로로 밀리던 문제) */
+.mk-table{width:100%;min-width:0;border-collapse:collapse;font-size:var(--tq-fs-2);font-variant-numeric:tabular-nums}
+.mk-table th{font-size:var(--tq-fs-1);color:var(--tq-faint);font-weight:600;text-align:right;padding:6px var(--tq-sp-2);border-bottom:1px solid var(--tq-line)}.mk-table th:first-child{text-align:left}
+.mk-table td{padding:var(--tq-sp-2);text-align:right;border-bottom:1px solid var(--tq-soft);white-space:nowrap}.mk-table td:first-child{text-align:left;white-space:normal}
+.mk-table tfoot td{font-weight:600;border-top:1px solid var(--tq-line);border-bottom:0}
+.mk-table tr[data-open]{cursor:pointer}.mk-table tr[data-open]:hover td{background:var(--tq-soft)}.mk-table tr[data-open]:focus-visible{outline:2px solid var(--tq-ink);outline-offset:-2px}
+@media (max-width:1024px){.mk-idx{grid-template-columns:repeat(3,minmax(0,1fr))}.mk-two{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.mk-sub{flex-wrap:nowrap;overflow-x:auto}.mk-sub button{flex:none;padding:0 var(--tq-sp-3);font-size:var(--tq-fs-2)}
+  .mk-idx{grid-template-columns:repeat(2,minmax(0,1fr))}.mk-tile b{font-size:var(--tq-fs-3)}.mk-row{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr) 58px}.mk-row small{display:none}
+  .mk-table td,.mk-table th{padding:var(--tq-sp-2) var(--tq-sp-1)}.mk-table .mk-val{display:none}}

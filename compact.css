@@ -2,19 +2,17 @@
    설명은 ⓘ 와 마우스를 올렸을 때(title)에 남는다. 상태·오류·빈 화면 안내(불러오는 중·자료 없음 등)는 가리지 않는다. 숫자 없는 타일 보조 설명은 compact-ui.js 가 가린다. */
 .tq-hide{display:none!important}
 
-/* 화면 머리말 설명(시장 요약 줄은 숫자라 남김) */
-.page-head p:not(#mk-line){display:none!important}
+/* 화면 머리말 설명(시장 요약 줄은 숫자라 남김 · 규칙 화면의 '어느 계좌 규칙인지' 줄도 남김) */
+.page-head p:not(#mk-line):not(#rl-sub){display:none!important}
 
-/* 홈: '오늘 점검' 설명 줄 · 맞춤 시점 표시 · 예전 화면 도구 */
-#core-today .ct-when,#core-today .ct-none{display:none!important}
+/* 홈: 예전 화면 도구. (2026-11-26) '오늘 점검'의 맞춤 시점(.ct-when)과 할 일 없음·자동 주문 줄(.ct-none)은 숫자·상태라 다시 보인다. */
 details.hm-more{display:none!important}
 
-/* 규칙: 요약·설명 문장, 표의 설명 열(규칙표 '하는 일' · 이유표 '이유'), 검토 결과의 조언 문장, 위험 문단(표만 남김) */
-#core-rules .rl-lead,#core-rules .rl-status,#core-rules .rl-note{display:none!important}
-table.rl-rules th:nth-child(3),table.rl-rules td:nth-child(3){display:none}
-#rl-why table th:nth-child(2),#rl-why table td:nth-child(2){display:none}
+/* 규칙: 숫자 없는 설명 줄(.rl-note)과 검토 결과의 조언 문장만 가린다. 숫자·판정 줄은 .rl-cap 이라 보인다(2026-11-26).
+   규칙 표의 셋째 열은 이제 '과거 숫자'라 가리지 않는다. */
+#core-rules .rl-note{display:none!important}
 #cr-review-body .cr-find li small{display:none}
-.rl-sizing>p{display:none}
+#core-rules .rl-sizing>p:not(.rl-cap):not(.cr-err){display:none}
 
 /* 모의투자: 읽기 전용 안내 · 상태 줄의 설명성 보조 줄(운용 상태 · 다음 점검) */
 #pp-kis .pp-ro{display:none!important}
@@ -24,11 +22,11 @@ table.rl-rules th:nth-child(3),table.rl-rules td:nth-child(3){display:none}
 #toss .pf-stance+small,#toss .gr-flags,#gr-sub{display:none!important}
 
 /* 전략 테스트: 소개·방법 설명 */
-#quicktest .lt-muted,#ch-intro{display:none!important}
+#quicktest .lt-muted{display:none!important}
 
 /* 과거 투자 성과 · 목표·ETF 적립: 설명 문단과 도움말 */
 #performance>article.panel>p:not([id]),#performance p.muted{display:none!important}
-#pl-context,#planner p.muted,details.pl-help{display:none!important}
+#planner p.muted{display:none!important}
 
 /* 원칙 승인: 안내 문장 */
 #strategy .connected-strategy,#strategy .action-state,#strategy .principle-input .step-title p{display:none!important}

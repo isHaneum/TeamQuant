@@ -1,5 +1,5 @@
 // 예시 자산으로 둘러보기: 계좌를 연결하지 않은 사람도 홈·포트폴리오·성적표 흐름을 체험한다.
-// 공개 시세로 만든 가짜 보유 종목과 가짜 체결이며 실제 계좌가 아니다. 실제 계좌가 연결되면 그 자료로 바로 바뀐다.
+// 공개 시세로 만든 예시 보유 종목과 예시 체결이며 실제가 아니다(화면 이름: '예시 자산 · 실제 아님'). 실계좌가 연결되면 그 자료로 바로 바뀐다.
 import { candles } from '/lib/client-data.js';
 
 const BOOK = [['005930', '삼성전자', 'KRW'], ['000660', 'SK하이닉스', 'KRW'], ['069500', 'KODEX 200', 'KRW'], ['NVDA', '엔비디아', 'USD'], ['KO', '코카콜라', 'USD'], ['035420', 'NAVER', 'KRW']];
@@ -19,16 +19,16 @@ export async function buildDemo() {
     return { symbol: s, name: meta[s].name, currency: meta[s].currency, quantity: q, avgCost: cost[s] / q, price, cost: cost[s], value, pnl: value - cost[s], returnPct: (value / cost[s] - 1) * 100, dailyPnl: q * (price - prev) }; });
   const fx = (await candles('KRW=X', 'USD').catch(() => null))?.candles?.at(-1)?.close || 1400;
   const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' }).format(new Date());
-  return { source: '예시 자산 (공개 시세로 만든 가짜 보유 종목)', fetchedAt: new Date().toISOString(), fx: { midRate: fx, asOf: '예시' }, positions, totals: [], cashKnown: false, demo: true,
+  return { source: '예시 자산 · 실제 아님', fetchedAt: new Date().toISOString(), fx: { midRate: fx, asOf: '예시' }, positions, totals: [], cashKnown: false, demo: true,
     demoCash: 3_000_000, demoOrders: { query: { from: new Date(Date.parse(today) - 365 * 864e5).toISOString().slice(0, 10), to: today, status: 'CLOSED', symbol: '' }, orders: orders.reverse(), totals: [], pages: 1, paginationComplete: true, issue: null, fetchedAt: new Date().toISOString(), source: '예시', notice: '' } };
 }
 export async function startDemo(button) {
   if (button) { button.disabled = true; button.textContent = '예시 자산 준비 중…'; }
   try { const snap = await buildDemo(); demoActive = true; window.dispatchEvent(new CustomEvent('teamquant:asset-snapshot', { detail: snap })); }
-  catch (e) { if (button) button.textContent = `예시를 만들지 못했습니다 (${e.message})`; return; }
+  catch (e) { if (button) button.textContent = `예시를 만들지 못했습니다(${e.message})`; return; }
   finally { if (button) button.disabled = false; }
 }
 export function stopDemo() { demoActive = false; window.dispatchEvent(new Event('teamquant:asset-clear')); }
 document.addEventListener('click', e => { const b = e.target.closest?.('[data-demo-start]'); if (b) void startDemo(b); const x = e.target.closest?.('[data-demo-stop]'); if (x) stopDemo(); });
-// 실제 계좌 자료가 들어오면 예시는 끝난다.
+// 실계좌 자료가 들어오면 예시는 끝난다.
 window.addEventListener('teamquant:asset-snapshot', e => { if (!e.detail?.demo) demoActive = false; });

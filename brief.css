@@ -101,122 +101,203 @@ i.mkt{background:var(--mkt)}i.own,i.stk{background:var(--own)}i.mark{background:
 @keyframes rpFade{to{opacity:1}}
 @keyframes rpShimmer{from{background-position:200% 0}to{background-position:-200% 0}}
 @media (prefers-reduced-motion:reduce){.rp *,.rp{animation-duration:.01ms!important;animation-delay:0s!important;transition:none!important}.rp-chart .stk{stroke-dashoffset:0}}
-@media (max-width:720px){.rp-hero{padding:20px}.rp-cards{grid-template-columns:1fr}.rp-card-main{padding:16px 16px 12px 18px}.rp-detail-inner{padding:0 16px}.rp-fin-row{grid-template-columns:52px 1fr;}.rp-fin-row em{grid-column:2}}
+@media (max-width:640px){.rp-hero{padding:20px}.rp-cards{grid-template-columns:1fr}.rp-card-main{padding:16px 16px 12px 18px}.rp-detail-inner{padding:0 16px}.rp-fin-row{grid-template-columns:52px 1fr;}.rp-fin-row em{grid-column:2}}
 
-/* ── 2026-11-05 홈 개편: 왼쪽 요약·그래프·이유·성적표 / 오른쪽 보유 종목 ── */
-#overview.hm-home{max-width:1440px}
+/* ── 2026-11-26 홈: 계좌 띠 → 맨 위 두 칸(지수 대비 수익률 · 오늘 시장, home-top-ui.js) → 규칙 한 줄 → 접힌 카드 | 보유 종목 ──
+   색·간격·글자 크기는 tokens.css(--tq-*)만 쓴다. 분기점은 1024px(태블릿)·640px(휴대폰) 두 개뿐이다. */
+#overview.hm-home{max-width:1280px}
+/* 머리말: 제목은 화면 읽기용으로만 남긴다(메뉴에 이미 '홈'). 새로고침은 계좌 띠로 옮겼다. 다른 모듈이 .ov-actions 에 붙이는 버튼은 그대로 둔다. */
+#overview.hm-home>.page-head{margin:0;min-height:0}
+#overview.hm-home>.page-head h1{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 #overview.hm-home>.page-head .eyebrow{display:none}
-#overview.hm-loaded>p.muted[role="status"],#overview.hm-loaded #ov-source{display:none}
-.hm{--ink:#14171c;--sub:#5b6573;--line:#e6e8ec;--soft:#f6f7f9;--up:#d32f2f;--down:#2563eb;--flat:#6b7280;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start;margin:8px 0 32px;color:var(--ink)}
-.hm-main{display:grid;gap:20px;min-width:0}
-.hm .up{color:var(--up)}.hm .down{color:var(--down)}.hm .flat{color:var(--flat)}
-.hm-note{margin:10px 0 0;font-size:13px;color:var(--sub);line-height:1.6}.hm-muted{color:var(--sub)}
-.hm-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.hm-kpis>div{border:1px solid var(--line);border-radius:16px;background:#fff;padding:16px 18px;animation:rpIn .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*60ms)}
-.hm-kpis span{display:block;font-size:13px;color:var(--sub)}
-.hm-kpis b{display:block;margin:6px 0 4px;font-size:24px;font-weight:750;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.hm-kpis small{font-size:12px;color:var(--sub)}
-.hm-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:20px 22px}
-.hm-card>header{display:flex;justify-content:space-between;gap:16px;margin-bottom:12px}
-.hm-card h3,.hm-side h3{margin:0;font-size:18px;font-weight:750}
-.hm-card>header p{margin:4px 0 0;font-size:13px;color:var(--sub)}
-.hm-chart svg{width:100%;height:auto;display:block}
-.hm-chart .grid{stroke:#eef0f3}.hm-chart text{font:500 11px var(--font-ui,sans-serif);fill:#7a8494}
-.hm-chart .bar{fill:#c8ced8;transform-box:fill-box;transform-origin:bottom;animation:hmGrow .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*40ms)}
-.hm-chart .bar.up{fill:#f3a8ab}.hm-chart .bar.down{fill:#a9c3f5}.hm-chart .bar.now.up{fill:var(--up)}.hm-chart .bar.now.down{fill:var(--down)}
-.hm-chart .bar.none{fill:none;stroke:#d5dae2;stroke-dasharray:4 4;animation:none}
-.hm-chart .principal{fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round}.hm-chart .principal-dot{fill:#fff;stroke:var(--ink);stroke-width:2}
-.hm-chart .hit{fill:transparent;cursor:crosshair;outline:none}.hm-chart .hit.on,.hm-chart .hit:focus{fill:rgba(20,23,28,.05)}
-.hm-readout{margin:0 0 8px;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;min-height:22px}
-.hm-legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--sub);margin-top:6px}
-.hm-legend i{display:inline-block;width:12px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
-.hm-legend i.bar.up{background:#f3a8ab}.hm-legend i.bar.down{background:#a9c3f5}.hm-legend i.line{height:2px;background:var(--ink);vertical-align:3px}
-.hm-chart-skel{height:240px;border-radius:12px}
-.hm-why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.hm-why-col{background:var(--soft);border-radius:14px;padding:16px}
-.hm-why-idx{display:flex;justify-content:space-between;align-items:baseline}.hm-why-idx span{font-weight:700}.hm-why-idx small{font-weight:400;color:var(--sub);font-size:12px;margin-left:6px}.hm-why-idx b{font-size:22px;font-variant-numeric:tabular-nums}
-.hm-why-sum{margin:8px 0;font-size:14px;font-weight:600}
-.hm-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.hm-chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px}.hm-chips small{color:var(--sub)}
-.hm-articles{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.hm-articles li{background:#fff;border-radius:10px;padding:10px 12px}.hm-articles a{color:var(--ink);font-weight:600;font-size:14px;text-decoration:none}.hm-articles a:hover{text-decoration:underline}
-.hm-articles p{margin:4px 0;font-size:12.5px;color:var(--sub);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.hm-articles small{font-size:11px;color:#8a93a1}
-.hm-verdict{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}.hm-verdict b{font-size:22px}.hm-verdict span{font-size:13px;color:var(--sub)}
-.hm-verdict.up b{color:var(--up)}.hm-verdict.down b{color:var(--down)}
-.hm-grade-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.hm-grade-grid>div{background:var(--soft);border-radius:12px;padding:12px 14px}.hm-grade-grid span{font-size:12px;color:var(--sub);display:block}.hm-grade-grid b{display:block;font-size:18px;margin:4px 0}.hm-grade-grid small{font-size:12px;color:var(--sub)}
-.hm-lines{margin:14px 0 0;padding-left:18px;font-size:14px;line-height:1.7}
-.hm-picks{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
-.hm-picks li{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;font-size:13.5px;border-top:1px solid var(--line);padding-top:8px}
-.hm-picks span{min-width:96px;font-size:12px;color:var(--sub)}.hm-picks em{margin-left:auto;font-style:normal;font-weight:700}
-.hm-trades{margin-top:14px}.hm-trades summary{cursor:pointer;font-weight:600;font-size:14px}.hm-trades table{font-size:13px}
-.hm-side{position:sticky;top:12px;border:1px solid var(--line);border-radius:18px;background:#fff;padding:18px;max-height:calc(100vh - 24px);overflow:auto}
-.hm-side-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}.hm-side-head span{font-size:13px;color:var(--sub)}
-.hm-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+/* 불러오는 동안의 상태 문장은 계좌 띠('계좌 확인 중…')가 대신한다 */
+#overview.hm-home>p.muted[role="status"],#overview.hm-loaded #ov-source{display:none}
+.hm{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:var(--tq-sp-4);align-items:start;margin:var(--tq-sp-2) 0 var(--tq-sp-5);color:var(--tq-ink)}
+.hm>.hm-connect,.hm>.hm-band,.hm>.ht,.hm>#core-today{grid-column:1/-1}
+.hm-main{display:grid;gap:var(--tq-sp-3);min-width:0}
+.hm .up{color:var(--tq-up)}.hm .down{color:var(--tq-down)}.hm .flat{color:var(--tq-sub)}
+.hm-note{margin:var(--tq-sp-2) 0 0;font-size:var(--tq-fs-2);color:var(--tq-sub);line-height:1.6;max-width:70ch}.hm-muted{color:var(--tq-sub)}
+.hm [hidden]{display:none!important}
+
+/* 계좌 띠: 계좌 이름 · 기준 시각 · 새로고침 + 숫자 한 줄(평가액 · 원금 · 평가 손익 · 오늘 손익) */
+.hm-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--tq-sp-2) var(--tq-sp-5);padding:var(--tq-sp-2) var(--tq-sp-4);border:1px solid var(--tq-line);border-radius:var(--tq-r-2);background:var(--tq-paper);font-size:var(--tq-fs-2);min-width:0}
+/* 계좌 이름 줄은 글처럼 이어 쓴다(휴대폰에서 버튼마다 줄이 바뀌지 않게) */
+.hm-band-id{min-width:0;line-height:1.8}
+.hm-band-id>*{display:inline;margin:0}
+.hm-acct{color:var(--tq-sub)}.hm-acct b{color:var(--tq-ink)}
+.hm-band .hm-demo{display:inline;margin:0;padding:0;border:0;border-radius:0;background:none;font-size:var(--tq-fs-2);color:var(--tq-sub)}
+.hm-band .hm-demo b{color:var(--tq-ink)}.hm-band .hm-demo span{color:var(--tq-sub)}
+.hm-band .text-button{margin-left:var(--tq-sp-2);font-size:var(--tq-fs-2);color:var(--tq-accent);white-space:nowrap}
+.hm-band-msg{margin-left:var(--tq-sp-2)}
+.hm-band .text-button:disabled{color:var(--tq-faint)}
+.hm-band-msg{font-size:var(--tq-fs-1);color:var(--tq-warn)}.hm-band-msg:empty{display:none}
+.hm-kpis{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--tq-sp-1) var(--tq-sp-4);margin:0;min-width:0}
+.hm-kpi{display:inline-flex;align-items:baseline;gap:var(--tq-sp-1);white-space:nowrap}
+.hm-kpi>span{display:inline-flex;align-items:center;color:var(--tq-sub)}
+.hm-kpi b{font-size:var(--tq-fs-3);font-weight:700;font-variant-numeric:tabular-nums;color:var(--tq-ink)}
+.hm-kpi small{font-size:var(--tq-fs-1);color:var(--tq-sub);font-variant-numeric:tabular-nums}
+.hm-kpi b.up,.hm-kpi small.up{color:var(--tq-up)}.hm-kpi b.down,.hm-kpi small.down{color:var(--tq-down)}
+
+/* 맨 위 두 칸(PC 화면에서 셋째 칸 #hm-tonight 가 보이면 세 칸) */
+.ht{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--tq-sp-3);min-width:0}
+.ht.ht-3,.ht:has(>#hm-tonight:not([hidden])){grid-template-columns:repeat(3,minmax(0,1fr))}
+.ht-card,.ht>#hm-tonight{min-width:0;border:1px solid var(--tq-line);border-radius:var(--tq-r-2);background:var(--tq-paper);padding:var(--tq-sp-4)}
+.ht>#hm-tonight[hidden]{display:none}
+.ht-card>header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--tq-sp-2);margin:0 0 var(--tq-sp-2)}
+.ht-card h3{margin:0;display:flex;align-items:center;font-size:var(--tq-fs-3);font-weight:700}
+.ht-skel{height:176px;border-radius:var(--tq-r-1)}
+.ht-when{font-size:var(--tq-fs-1);color:var(--tq-faint)}
+.ht-empty{margin:var(--tq-sp-1) 0 0;font-size:var(--tq-fs-2);color:var(--tq-sub)}
+.ht-seg{display:inline-flex;gap:2px;padding:2px;border-radius:var(--tq-r-pill);background:var(--tq-soft)}
+.ht-seg button{min-height:32px;padding:0 var(--tq-sp-3);border:0;border-radius:var(--tq-r-pill);background:none;color:var(--tq-sub);font:inherit;font-size:var(--tq-fs-1);font-weight:600;cursor:pointer}
+.ht-seg button[aria-pressed="true"]{background:var(--tq-paper);color:var(--tq-ink);box-shadow:0 0 0 1px var(--tq-line)}
+.ht-seg button:focus-visible{outline:2px solid var(--tq-accent);outline-offset:1px}
+.ht-meta{margin:0 0 var(--tq-sp-1);font-size:var(--tq-fs-1);color:var(--tq-faint)}
+.ht-nums{display:flex;flex-wrap:wrap;gap:var(--tq-sp-1) var(--tq-sp-4);margin:0;font-size:var(--tq-fs-2);color:var(--tq-sub)}
+.ht-nums b{font-size:var(--tq-fs-4);font-weight:700;font-variant-numeric:tabular-nums;color:var(--tq-ink)}
+.ht-vs{margin:var(--tq-sp-1) 0 0;font-size:var(--tq-fs-2);color:var(--tq-ink)}.ht-vs b{font-variant-numeric:tabular-nums}
+.ht-chart{height:120px;margin-top:var(--tq-sp-2)}
+.ht-chart svg{display:block;overflow:visible}
+.ht-chart .base{stroke:var(--tq-line);stroke-width:1}
+.ht-chart polyline{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+/* 빨강·파랑은 오름·내림 뜻이라 선 색으로 쓰지 않는다: 내 계좌 실선 · S&P500 긴 점선 · 코스피 짧은 점선 */
+.ht-chart .l-own{stroke:var(--tq-ink);stroke-width:2.5}.ht-chart .l-spx{stroke:var(--tq-sub);stroke-dasharray:7 4}.ht-chart .l-kospi{stroke:var(--tq-faint);stroke-dasharray:2 3}
+.ht-chart text{font-size:var(--tq-fs-1);fill:var(--tq-sub);font-variant-numeric:tabular-nums}.ht-chart text.t-own{fill:var(--tq-ink);font-weight:700}
+.ht-note{margin:var(--tq-sp-2) 0 0;font-size:var(--tq-fs-1);color:var(--tq-faint)}
+.ht-lines{list-style:none;margin:0;padding:0;display:grid;gap:var(--tq-sp-2);font-size:var(--tq-fs-2);line-height:1.5}
+.ht-lines li{min-width:0;overflow-wrap:anywhere}
+.ht-lines b{font-variant-numeric:tabular-nums}
+.ht-lines small{font-size:var(--tq-fs-1);color:var(--tq-faint)}
+.ht-lines small.up{color:var(--tq-up)}.ht-lines small.down{color:var(--tq-down)}
+.ht-k{color:var(--tq-sub);margin-right:var(--tq-sp-1)}
+.ht-ix{white-space:nowrap}
+.ht-big{display:inline-block;margin-left:var(--tq-sp-1);padding:0 var(--tq-sp-2);border-radius:var(--tq-r-pill);background:var(--tq-warn-bg);color:var(--tq-warn);font-size:var(--tq-fs-1);font-weight:700;white-space:nowrap}
+.ht-level{display:inline-block;margin-right:var(--tq-sp-1);padding:0 var(--tq-sp-2);border-radius:var(--tq-r-pill);background:var(--tq-warn-bg);color:var(--tq-warn);font-size:var(--tq-fs-1);font-weight:700}
+.ht-card a{color:var(--tq-accent)}
+.ht-mine{margin-top:var(--tq-sp-3);padding-top:var(--tq-sp-3);border-top:1px solid var(--tq-line)}
+.ht-mine h4{margin:0 0 var(--tq-sp-2);font-size:var(--tq-fs-1);font-weight:700;color:var(--tq-sub)}
+.ht-name{padding:0;border:0;background:none;font:inherit;font-weight:700;color:var(--tq-ink);text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.ht-name:focus-visible{outline:2px solid var(--tq-accent);outline-offset:2px}
+
+/* 카드 공통(규칙 점검·섹터·실계좌 기록 카드도 이 이름을 쓴다) */
+.hm-card{border:1px solid var(--tq-line);border-radius:var(--tq-r-2);background:var(--tq-paper);padding:var(--tq-sp-4);min-width:0}
+.hm-card>header{display:flex;justify-content:space-between;gap:var(--tq-sp-3);margin-bottom:var(--tq-sp-3)}
+.hm-card h3,.hm-side h3{margin:0;font-size:var(--tq-fs-3);font-weight:700}
+.hm-card>header p{margin:var(--tq-sp-1) 0 0;font-size:var(--tq-fs-1);color:var(--tq-sub)}
+.hm-card>header h3,.hm-side-head h3{display:flex;align-items:center}
+/* 접힌 카드(월별 주식 평가액 · 매매 성적표): 제목 줄에 핵심 숫자 하나만 */
+.hm-fold{padding:0}
+.hm-fold>summary{display:flex;flex-wrap:wrap;align-items:center;gap:var(--tq-sp-1) var(--tq-sp-3);padding:var(--tq-sp-3) var(--tq-sp-4);cursor:pointer;list-style:none}
+.hm-fold>summary::-webkit-details-marker{display:none}
+.hm-fold>summary::before{content:"▸";color:var(--tq-faint)}.hm-fold[open]>summary::before{content:"▾"}
+.hm-fold>summary h3{flex:1;display:inline-flex;align-items:center;margin:0;font-size:var(--tq-fs-3)}
+.hm-fold>summary:focus-visible{outline:2px solid var(--tq-accent);outline-offset:-2px;border-radius:var(--tq-r-2)}
+.hm-fold-sum{font-size:var(--tq-fs-2);color:var(--tq-sub);font-variant-numeric:tabular-nums}
+.hm-fold>:not(summary){margin-left:var(--tq-sp-4);margin-right:var(--tq-sp-4)}
+.hm-fold>:last-child:not(summary){margin-bottom:var(--tq-sp-4)}
+
+/* 월별 주식 평가액 그래프 */
+.hm-chart svg{width:100%;height:auto;max-height:240px;display:block}
+.hm-chart .grid{stroke:var(--tq-line)}.hm-chart text{font:500 var(--tq-fs-1) var(--font-ui,sans-serif);fill:var(--tq-faint)}
+.hm-chart .bar{fill:var(--tq-faint);fill-opacity:.35;transform-box:fill-box;transform-origin:bottom;animation:hmGrow .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*40ms)}
+.hm-chart .bar.up{fill:var(--tq-up)}.hm-chart .bar.down{fill:var(--tq-down)}.hm-chart .bar.now{fill-opacity:1}
+.hm-chart .bar.none{fill:none;stroke:var(--tq-line);stroke-dasharray:4 4;animation:none}
+.hm-chart .principal{fill:none;stroke:var(--tq-ink);stroke-width:2;stroke-linejoin:round}.hm-chart .principal-dot{fill:var(--tq-paper);stroke:var(--tq-ink);stroke-width:2}
+.hm-chart .hit{fill:transparent;cursor:crosshair;outline:none}.hm-chart .hit.on,.hm-chart .hit:focus{fill:var(--tq-soft);fill-opacity:.6}
+.hm-readout{margin:0 0 var(--tq-sp-2);font-size:var(--tq-fs-2);font-weight:600;font-variant-numeric:tabular-nums;min-height:22px}
+.hm-legend{display:flex;flex-wrap:wrap;gap:var(--tq-sp-4);font-size:var(--tq-fs-1);color:var(--tq-sub);margin-top:var(--tq-sp-1)}
+.hm-legend i{display:inline-block;width:12px;height:10px;border-radius:2px;margin-right:var(--tq-sp-1);vertical-align:-1px}
+.hm-legend i.bar.up{background:var(--tq-up);opacity:.35}.hm-legend i.bar.down{background:var(--tq-down);opacity:.35}.hm-legend i.line{height:2px;background:var(--tq-ink);vertical-align:3px}
+.hm-chart-skel{height:220px;border-radius:var(--tq-r-2)}
+
+/* 매매 성적표 */
+.hm-verdict{display:flex;align-items:baseline;gap:var(--tq-sp-3);flex-wrap:wrap;margin-bottom:var(--tq-sp-3)}.hm-verdict b{font-size:var(--tq-fs-4)}.hm-verdict span{font-size:var(--tq-fs-2);color:var(--tq-sub)}
+.hm-verdict.up b{color:var(--tq-up)}.hm-verdict.down b{color:var(--tq-down)}
+.hm-grade-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--tq-sp-3)}
+.hm-grade-grid>div{background:var(--tq-soft);border-radius:var(--tq-r-2);padding:var(--tq-sp-3)}.hm-grade-grid span{font-size:var(--tq-fs-1);color:var(--tq-sub);display:block}.hm-grade-grid b{display:block;font-size:var(--tq-fs-3);margin:var(--tq-sp-1) 0}.hm-grade-grid small{font-size:var(--tq-fs-1);color:var(--tq-sub)}
+.hm-picks{list-style:none;margin:var(--tq-sp-3) 0 0;padding:0;display:grid;gap:var(--tq-sp-2)}
+.hm-picks li{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--tq-sp-1) var(--tq-sp-2);font-size:var(--tq-fs-2);border-top:1px solid var(--tq-line);padding-top:var(--tq-sp-2)}
+.hm-picks span{min-width:96px;font-size:var(--tq-fs-1);color:var(--tq-sub)}.hm-picks em{margin-left:auto;font-style:normal;font-weight:700}
+.hm-trades{margin-top:var(--tq-sp-3)}.hm-trades summary{cursor:pointer;font-weight:600;font-size:var(--tq-fs-2)}.hm-trades table{font-size:var(--tq-fs-2)}
+
+/* 보유 종목(1024px 넘으면 오른쪽 · 위쪽 바 60px 아래에 붙는다) */
+.hm-side{position:sticky;top:calc(60px + var(--tq-sp-3));max-height:calc(100vh - 60px - var(--tq-sp-5));overflow:auto;border:1px solid var(--tq-line);border-radius:var(--tq-r-2);background:var(--tq-paper);padding:var(--tq-sp-3)}
+.hm-side-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:var(--tq-sp-2)}.hm-side-head span{font-size:var(--tq-fs-1);color:var(--tq-sub)}
+.hm-list{list-style:none;margin:0;padding:0;display:grid;gap:var(--tq-sp-2)}
 .hm-list li{animation:rpIn .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*50ms)}
-.hm-list button{all:unset;box-sizing:border-box;display:block;width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--line);cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s}
-.hm-list button:hover{border-color:#c9cfd8;box-shadow:0 6px 18px rgba(20,23,28,.06);transform:translateY(-1px)}.hm-list button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.hm-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.hm-row strong{font-size:15px}
-.hm-day{font-weight:700;font-variant-numeric:tabular-nums}.hm-sub{font-size:13px;color:var(--sub);margin-top:2px}
-.hm-weight{display:flex;align-items:center;gap:8px;margin:8px 0 6px}.hm-weight i{display:block;height:5px;border-radius:3px;background:var(--ink);width:var(--w);max-width:85%;opacity:.75}.hm-weight small{font-size:11px;color:var(--sub)}
-.hm-reason{margin:0;font-size:12.5px;line-height:1.5;color:#3b4350}
-.hm-tag{display:inline-block;margin-top:6px;font-size:11px;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--sub)}
-.hm-tag.v-keep{background:#eef6ee;color:#2d6a35}.hm-tag.v-watch,.hm-tag.v-cap{background:#fff5e6;color:#8a5a12}.hm-tag.v-review{background:#fdeeee;color:#a8332f}
-.hm-empty{font-size:13px;color:var(--sub);padding:12px 0}
+.hm-list button{all:unset;box-sizing:border-box;display:grid;gap:var(--tq-sp-1);width:100%;padding:var(--tq-sp-2) var(--tq-sp-3);border-radius:var(--tq-r-1);border:1px solid var(--tq-line);cursor:pointer;transition:border-color .2s}
+.hm-list button:hover{border-color:var(--tq-faint)}.hm-list button:focus-visible{outline:2px solid var(--tq-accent);outline-offset:2px}
+.hm-row{display:flex;justify-content:space-between;align-items:baseline;gap:var(--tq-sp-2);min-width:0}.hm-row strong{font-size:var(--tq-fs-2);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hm-day{flex:none;font-size:var(--tq-fs-2);font-weight:700;font-variant-numeric:tabular-nums}
+.hm-sub{font-size:var(--tq-fs-1);color:var(--tq-sub);font-variant-numeric:tabular-nums}
+.hm-empty{font-size:var(--tq-fs-2);color:var(--tq-sub);padding:var(--tq-sp-3) 0}
+
+/* 종목 상세 창 */
 .hm-dialog{width:min(920px,calc(100% - 24px));max-height:calc(100vh - 40px);border:0;border-radius:20px;padding:0;box-shadow:0 30px 80px rgba(0,0,0,.25)}
 .hm-dialog::backdrop{background:rgba(15,18,24,.45)}
-.hm-dialog-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:#fff;border-bottom:1px solid #e6e8ec}
-.hm-dialog-head strong{display:block;font-size:19px}.hm-dialog-head small{color:#5b6573;font-size:13px}
-.hm-dialog .rp{margin:0;padding:0 4px 8px}.hm-detail-card{border:0!important;box-shadow:none!important;transform:none!important;animation:none}.hm-detail-card::before{display:none}
-.hm-mkt-box{background:#f6f7f9;border-radius:12px;padding:12px 14px;margin-bottom:8px}.hm-mkt-box b{font-size:14px}.hm-mkt-box p{margin:4px 0;font-size:13px;color:#5b6573}.hm-mkt-box a{display:block;font-size:13px;color:#14171c;margin-top:4px}
-.hm-more{margin-top:12px}
+.hm-dialog-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;padding:var(--tq-sp-4) var(--tq-sp-5);background:var(--tq-paper);border-bottom:1px solid var(--tq-line)}
+.hm-dialog-head strong{display:block;font-size:var(--tq-fs-4)}.hm-dialog-head small{color:var(--tq-sub);font-size:var(--tq-fs-2)}
+.hm-dialog .rp{margin:0;padding:0 4px 8px}
+.hm-more{margin-top:var(--tq-sp-3)}
 @keyframes hmGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-@media(prefers-reduced-motion:reduce){.hm-chart .bar,.hm-kpis>div,.hm-list li{animation:none}}
-@media(max-width:1180px){.hm{grid-template-columns:minmax(0,1fr) 320px}.hm-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:920px){.hm{display:flex;flex-direction:column;gap:16px}.hm-main{display:contents}#hm-kpis{order:1}.hm-side{order:2;position:static;max-height:none}#hm-trend{order:3}#hm-why{order:4}#hm-grade{order:5}.hm-grade-grid{grid-template-columns:1fr}.hm-kpis b{font-size:20px}.hm-card{padding:16px}}
-
-/* 2026-11-05 b: 넓은 화면 활용 + 종목 상세 정리 */
-#overview.hm-home{max-width:1840px}
-@media(min-width:1600px){.hm{grid-template-columns:minmax(0,1fr) 420px}}
+@media(prefers-reduced-motion:reduce){.hm-chart .bar,.hm-list li{animation:none}}
 .hm .pf-stance{margin-top:6px}
-.hm-detail{padding:4px 24px 20px}.hm-detail section{padding:16px 0;border-bottom:1px solid #eef0f3}.hm-detail section:last-of-type{border-bottom:0}
-.hm-detail h4{margin:0 0 10px;font-size:15px;font-weight:700}.hm-detail h4 small{font-weight:400;color:#5b6573;font-size:12.5px;margin-left:6px}
+.hm-detail{padding:4px 24px 20px}.hm-detail section{padding:var(--tq-sp-4) 0;border-bottom:1px solid var(--tq-line)}.hm-detail section:last-of-type{border-bottom:0}
+.hm-detail h4{margin:0 0 var(--tq-sp-2);font-size:var(--tq-fs-3);font-weight:700;display:flex;align-items:center;flex-wrap:wrap}.hm-detail h4 small{font-weight:400;color:var(--tq-sub);font-size:var(--tq-fs-1);margin-left:6px}
 .hm-verdict-box{display:grid;gap:6px;padding:14px 16px!important;border-radius:14px;border:0!important;margin-top:12px}.hm-verdict-box p{margin:0;font-size:14px;color:#14171c;line-height:1.6}.hm-verdict-box small{color:#5b6573;font-size:12px}
 .hm-verdict-box.s-buy{background:#fff5f5}.hm-verdict-box.s-hold{background:#f6f7f9}.hm-verdict-box.s-trim{background:#f3f7ff}.hm-verdict-box.s-unknown{background:#f6f7f9}.hm-verdict-box .pf-stance{justify-self:start;background:#fff}
 .hm-conclusion{margin:0 0 12px;font-size:15px;line-height:1.7}
 .hm-evidence{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}.hm-evidence li{display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:start}
 .hm-fit{font-size:11px;font-weight:700;text-align:center;border-radius:6px;padding:3px 0;background:#f4f4f5;color:#52525b}.hm-fit.up{background:#fdecec;color:#b42318}.hm-fit.down{background:#e8f0fe;color:#1d4fb8}
 .hm-evidence small{display:block;font-size:11.5px;color:#5b6573}.hm-evidence a,.hm-evidence b{font-size:13.5px;color:#14171c;line-height:1.5;font-weight:500}
-.hm-kvs{display:grid}.hm-kv{display:grid;grid-template-columns:170px 160px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid #f1f3f5;align-items:baseline}.hm-kv:last-child{border-bottom:0}
-.hm-kv span{font-size:13px;color:#5b6573}.hm-kv b{font-size:14px;font-weight:650;font-variant-numeric:tabular-nums;color:#14171c}.hm-kv b.up{color:#d92d20}.hm-kv b.down{color:#1d4fb8}.hm-kv small{font-size:12.5px;color:#5b6573;line-height:1.5}
-.hm-biz{font-size:13px;color:#3b4350;line-height:1.6;margin:0 0 8px}
+.hm-kvs{display:grid}.hm-kv{display:grid;grid-template-columns:minmax(150px,240px) 1fr;gap:var(--tq-sp-3);padding:var(--tq-sp-2) 0;border-bottom:1px solid var(--tq-soft);align-items:baseline}.hm-kv:last-child{border-bottom:0}
+.hm-kv span{font-size:var(--tq-fs-2);color:var(--tq-sub);display:flex;align-items:center}.hm-kv b{font-size:var(--tq-fs-2);font-weight:650;font-variant-numeric:tabular-nums;color:var(--tq-ink)}.hm-kv b.up{color:var(--tq-up)}.hm-kv b.down{color:var(--tq-down)}.hm-kv small{font-size:var(--tq-fs-1);color:var(--tq-sub);line-height:1.5}
+.hm-biz{font-size:var(--tq-fs-2);color:var(--tq-sub);line-height:1.6;margin:0 0 var(--tq-sp-2)}
 .hm-fit-rows{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.hm-fit-rows span{font-size:12.5px;background:#f6f7f9;border-radius:8px;padding:5px 9px}.hm-fit-rows .up{color:#d92d20}.hm-fit-rows .down{color:#1d4fb8}
-.hm-news{list-style:none;margin:0;padding:0;display:grid;gap:7px}.hm-news li{display:flex;gap:8px;align-items:baseline;font-size:13.5px}.hm-news small{color:#8a93a1;font-size:11.5px;white-space:nowrap}.hm-news a{color:#14171c}
+.hm-news{list-style:none;margin:0;padding:0;display:grid;gap:var(--tq-sp-2)}.hm-news li{display:flex;gap:var(--tq-sp-2);align-items:baseline;font-size:var(--tq-fs-2)}.hm-news small{color:var(--tq-faint);font-size:var(--tq-fs-1);white-space:nowrap}.hm-news a{color:var(--tq-ink)}.hm-news .hm-dot{flex:none;margin-right:0}
 .hm-checks{margin:0;padding-left:20px;display:grid;gap:4px;font-size:14px;line-height:1.6}
 .hm-detail .rp-chart{max-width:none}
-@media(max-width:640px){.hm-detail{padding:4px 14px 16px}.hm-kv{grid-template-columns:1fr auto}.hm-kv small{grid-column:1/-1}.hm-evidence li{grid-template-columns:1fr}}
 .hm-dialog{max-width:none!important;width:min(960px,calc(100% - 24px))!important}
-.hm-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#d0d5dd;margin-right:8px;vertical-align:1px}.hm-dot.good{background:#12b76a}.hm-dot.bad{background:#f79009}
+.hm-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--tq-line);margin-right:var(--tq-sp-2);vertical-align:1px}.hm-dot.good{background:var(--tq-ok)}.hm-dot.bad{background:var(--tq-warn)}
 .hm-detail .rp-chart .stk{stroke-dasharray:none;stroke-dashoffset:0;animation:none}
-
-/* 2026-11-05 c: 연결 안내 · 예시 모드 · 툴팁형 설명 */
-.hm-connect{grid-column:1/-1;border:1px solid #e6e8ec;border-radius:20px;background:#fff;padding:32px 36px}
-.hm-connect h2{margin:0 0 20px;font-size:24px;letter-spacing:-.02em}
-.hm-steps{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:s}
-.hm-steps li{counter-increment:s;background:#f6f7f9;border-radius:14px;padding:16px 18px;display:grid;gap:4px}
-.hm-steps li::before{content:counter(s);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#14171c;color:#fff;font-size:13px;font-weight:700;margin-bottom:6px}
-.hm-steps b{font-size:15px}.hm-steps span{font-size:13px;color:#5b6573}
-.hm-connect-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.hm-connect-actions a{font-size:13px;color:#5b6573}
-.hm-connect-state{margin:14px 0 0;font-size:12.5px;color:#8a93a1}
-.hm.hm-state-connect>.hm-main,.hm.hm-state-connect>.hm-side{display:none}
-.hm-demo,.pf .hm-demo{grid-column:1/-1;display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#fff8e6;border:1px solid #f5dfa8;border-radius:12px;padding:10px 16px;font-size:13.5px}
-.hm-demo b{color:#8a5a12}.hm-demo span{color:#5b4a2a;flex:1}
-.hm-demo[hidden],.hm-connect[hidden]{display:none!important}
-.hm-paper{background:#eef4ff;border-color:#c7d7f5}.hm-paper b{color:#1849a8}.hm-paper span{color:#2b3a55}.hm-paper .text-button{font-size:13px}
-.hm-card>header h3,.hm-side-head h3{display:flex;align-items:center}
-.hm-kv{grid-template-columns:minmax(150px,240px) 1fr!important}
-@media(max-width:920px){.hm-steps{grid-template-columns:1fr}.hm-connect{padding:22px}}
-#overview.hm-home:has(.hm-state-connect)>p.muted[role="status"]{display:none}
 .hm-sit{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13.5px;color:#3b4350;margin:0 0 6px}
+/* 2026-11-09 투자 지표: 회사 설명 접기 · 소제목 */
+.hm-bizbox{margin:0 0 var(--tq-sp-2)}.hm-bizbox>summary{cursor:pointer;font-size:var(--tq-fs-1);color:var(--tq-sub);font-weight:600}.hm-bizbox .hm-biz{margin:6px 0 0}.hm-h5{margin:var(--tq-sp-3) 0 var(--tq-sp-1);font-size:var(--tq-fs-1);color:var(--tq-sub);font-weight:700;letter-spacing:.2px;display:flex;align-items:center;gap:4px}.hm-vs{color:var(--tq-faint);font-weight:500;font-size:var(--tq-fs-1)}
+
+/* 연결 안내(계좌도 팀 모의계좌도 못 읽었을 때만) · 예시 자산 띠(포트폴리오 화면도 같은 이름을 쓴다) */
+.hm-connect{border:1px solid var(--tq-line);border-radius:var(--tq-r-2);background:var(--tq-paper);padding:var(--tq-sp-5)}
+.hm-connect h2{margin:0 0 var(--tq-sp-2);font-size:var(--tq-fs-4);letter-spacing:-.02em}
+.hm-connect-steps{display:flex;flex-wrap:wrap;align-items:center;margin:0 0 var(--tq-sp-4);font-size:var(--tq-fs-2);color:var(--tq-sub)}
+.hm-connect-actions{display:flex;flex-wrap:wrap;gap:var(--tq-sp-2);align-items:center}.hm-connect-actions a{font-size:var(--tq-fs-2);color:var(--tq-sub)}
+.hm-connect-state{margin:var(--tq-sp-3) 0 0;font-size:var(--tq-fs-1);color:var(--tq-faint)}
+.hm.hm-state-connect>.hm-main,.hm.hm-state-connect>.hm-side,.hm.hm-state-connect>.hm-band{display:none}
+.hm-demo,.pf .hm-demo{grid-column:1/-1;display:flex;align-items:center;gap:var(--tq-sp-3);flex-wrap:wrap;background:var(--tq-warn-bg);border:1px solid var(--tq-line);border-radius:var(--tq-r-2);padding:var(--tq-sp-2) var(--tq-sp-4);font-size:var(--tq-fs-2)}
+.hm-demo b{color:var(--tq-warn)}.hm-demo span{color:var(--tq-sub);flex:1}
+.hm-demo[hidden],.hm-connect[hidden]{display:none!important}
 #overview .hm,#overview .hm-main,#overview .hm-card,#overview .hm-side{min-width:0;max-width:100%}
-/* 2026-11-09 투자 지표: 회사 설명 접기 · 소제목 · 최근 기사 3건 */
-.hm-bizbox{margin:0 0 10px}.hm-bizbox>summary{cursor:pointer;font-size:12.5px;color:#5b6573;font-weight:600}.hm-bizbox .hm-biz{margin:6px 0 0}.hm-h5{margin:12px 0 4px;font-size:12px;color:#5b6573;font-weight:700;letter-spacing:.2px;display:flex;align-items:center;gap:4px}.hm-vs{color:#8a93a1;font-weight:500;font-size:12px}.hm-news-mini{margin-top:6px}.hm-news-mini li{align-items:center}.hm-news-mini .hm-dot{flex:none}
+
+/* 1024px 이하: 한 줄로 — 띠 → 맨 위 칸 → 규칙 → 보유 종목 → 접힌 카드 → 섹터 · 실계좌 기록 */
+@media(max-width:1024px){
+  .hm{display:flex;flex-direction:column;align-items:stretch;gap:var(--tq-sp-3)}
+  .hm-main{display:contents}
+  .hm>.hm-connect{order:0}.hm>.hm-band{order:1}.hm>.ht{order:2}.hm>#core-today{order:3}
+  .hm-side{order:4;position:static;max-height:none}
+  .hm-main>*{order:5}.hm-main>#hm-grade{order:6}.hm-main>#home-sectors{order:7}.hm-main>#hm-real{order:8}
+  .ht,.ht.ht-3,.ht:has(>#hm-tonight:not([hidden])){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ht>#hm-tonight{grid-column:1/-1}
+  .hm-grade-grid{grid-template-columns:1fr}
+}
+/* 640px 이하: 한 칸 · 숫자 줄은 평가액과 오늘 손익만 */
+@media(max-width:640px){
+  .ht,.ht.ht-3,.ht:has(>#hm-tonight:not([hidden])){grid-template-columns:minmax(0,1fr)}
+  .hm-band{padding:var(--tq-sp-2) var(--tq-sp-3)}
+  .hm-kpis .k-cost,.hm-kpis .k-gain{display:none}
+  .ht-card,.ht>#hm-tonight,.hm-card{padding:var(--tq-sp-3)}
+  .hm-fold{padding:0}.hm-fold>summary{padding:var(--tq-sp-3)}.hm-fold>:not(summary){margin-left:var(--tq-sp-3);margin-right:var(--tq-sp-3)}
+  .hm-connect{padding:var(--tq-sp-4)}
+  .hm-detail{padding:4px 14px 16px}.hm-kv{grid-template-columns:1fr auto}.hm-kv small{grid-column:1/-1}.hm-evidence li{grid-template-columns:1fr}
+}
+/* 2026-11-26 홈 '오늘 시장' AI 요약(이유 최대 3줄 · 출처 링크) */
+.ht-ai{margin-left:var(--tq-sp-1)}
+.ht-why{list-style:disc;margin:var(--tq-sp-1) 0 0;padding-left:1.2em;display:grid;gap:2px;color:var(--tq-ink)}
+.ht-why li{font-size:var(--tq-fs-2);overflow-wrap:anywhere}

@@ -62,7 +62,7 @@ test('P0-3 해외 자산이 있는데 환율을 못 읽으면 새 평가점을 �
   const m1 = ok._ledger().marks.at(-1); assert.ok(m1.total > 17_000_000, '환율 있으면 미국 자산 포함: ' + m1.total);
   t += 864e5; const bad = createPaperLive({ client: b.client, store: createLedgerStore(dir), readMarket: noFx, now: () => t, limits: L });
   const pv = await bad.preview({ rules, plan: { '005930': { pct: 20, name: '삼성전자' }, NVDA: { pct: 20, name: '엔비디아' } } });
-  assert.equal(pv.fxMissing, true); assert.ok(pv.items.length >= 1); assert.ok(pv.items.every(i => !i.ok && i.blocks.some(x => /환율.*모든 주문을 보류/.test(x))), JSON.stringify(pv.items.map(i => i.blocks)));
+  assert.equal(pv.fxMissing, true); assert.ok(pv.items.length >= 1); assert.ok(pv.items.every(i => !i.ok && i.blocks.some(x => /환율.*주문하지 않습니다/.test(x))), JSON.stringify(pv.items.map(i => i.blocks))); // 2026-11-26 문구: '모든 주문을 보류합니다' → '주문하지 않습니다'
   const marks = bad._ledger().marks; assert.equal(marks.length, 1, '새 평가점을 적지 않음'); assert.equal(marks[0].total, m1.total);
   const st = await bad.status(); assert.equal(st.markStale, true); assert.equal(st.balance.total, m1.total);
 });
@@ -74,9 +74,9 @@ test('가설 승인: 등록은 승인 대기이고 계획에 없다 · 승인하
   const h = pl.hypothesis('add', { symbol: '000660', name: 'SK하이닉스', capPct: 5, thesis: 'x' }); assert.equal(h.status, 'proposed');
   assert.equal((await pl.status()).planVersionNow, v0, '승인 전엔 계획 버전 그대로');
   t += 864e5; assert.equal((await pl.autoRun()).ran, false, '다음 날, 승인 전엔 계획 변경이 아니다'); // 화요일
-  assert.throws(() => pl.hypothesis('add', { symbol: '000660', name: 'SK하이닉스', capPct: 3, thesis: 'dup' }), /승인 대기/);
+  assert.throws(() => pl.hypothesis('add', { symbol: '000660', name: 'SK하이닉스', capPct: 3, thesis: 'dup' }), /넣기 전/); // 화면 말: 승인 대기 → 계획에 넣기 전
   pl.hypothesis('approve', { id: h.id }); const st = await pl.status(); assert.notEqual(st.planVersionNow, v0); assert.equal(st.hypotheses[0].status, 'open'); assert.ok(st.hypotheses[0].approvedAt);
   const r = await pl.autoRun(); assert.ok(r.ran && /계획 변경/.test(r.reason), JSON.stringify(r)); assert.ok(b.state.placed.some(p => p.code === '000660'));
   const h2 = pl.hypothesis('add', { symbol: '035420', name: 'NAVER', capPct: 3, thesis: 'y' }); pl.hypothesis('remove', { id: h2.id }); assert.ok(!pl._ledger().hypotheses.some(x => x.id === h2.id));
-  assert.throws(() => pl.hypothesis('approve', { id: h.id }), /승인 대기 중인/);
+  assert.throws(() => pl.hypothesis('approve', { id: h.id }), /넣기 전인/);
 });

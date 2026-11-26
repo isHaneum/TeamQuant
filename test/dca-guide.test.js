@@ -97,13 +97,14 @@ test('규칙 문장: 금액·계좌·상품이 들어가고 질문형이 없다'
   assert.match(r.rule, /모자란 쪽부터/);
   assert.match(r.rule, /28일/);
   assert.doesNotMatch(r.rule, /\?|할까요/);
-  assert.doesNotMatch(r.rule, /IRP 에서는/, 'IRP 에 넣는 돈이 없으면 IRP 문장도 없다');
+  assert.doesNotMatch(r.rule, /IRP ?에서는/, 'IRP 에 넣는 돈이 없으면 IRP 문장도 없다');
 });
 
 test('규칙 문장: IRP 에 넣는 돈이 있으면 30% 이상 안전자산 문장을 넣는다(법정 위험자산 70% · 교차 검증 F25)', () => {
   const r = planGuide({ monthly: 1000000, salaryMan: 6000, oldAge: 800000, mix: { us500: 100 } }, guide);
   assert.ok(r.plan.rows.find(x => x.id === 'irp').monthly > 0);
-  assert.match(r.rule, /IRP 에서는 30% 이상을 예금이나 채권형으로 둔다\(주식형은 법으로 70%까지\)/);
+  // 2026-11-26 쉬운 말 정리: 조사는 붙여 쓴다(IRP에서는).
+  assert.match(r.rule, /IRP에서는 30% 이상을 예금이나 채권형으로 둔다\(주식형은 법으로 70%까지\)/);
 });
 
 test('수수료: 매달 30만 원 × 0.015% = 45원, 비용 차이는 섞는 비율로 가중', () => {

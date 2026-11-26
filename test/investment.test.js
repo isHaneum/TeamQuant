@@ -36,7 +36,7 @@ test('allocation: KRW/USD conversion direction and frozen non-ETF holdings',()=>
 test('allocation: inputs/target sum/lot precision/cash/date and concentration gates',()=>{
  for(const alter of [b=>b.cash=null,b=>b.goal.costPct=null,b=>b.assets[0].lot=0,b=>b.assets[0].targetPct=50,b=>b.assets[0].quantity=.00000001,b=>b.assets[0].priceDate='2026-02-30',b=>b.assets.push({...b.assets[0]}),b=>b.goal.monthly=.001]){const b=fixture();alter(b);assert.throws(()=>normalizeBook(b,now));}
  const stale=fixture();stale.assets[0].priceDate='2026-10-01';assert.ok(allocationPlan(stale,{month},now).blockers.some(x=>x.includes('7일')));
- const future=fixture();future.goal.startMonth='2027-01';assert.ok(allocationPlan(future,{month},now).blockers.some(x=>x.includes('납입 시작')));
+ const future=fixture();future.goal.startMonth='2027-01';assert.ok(allocationPlan(future,{month},now).blockers.some(x=>x.includes('적립 시작')));
  const concentrated=fixture();concentrated.goal.maxPct=60;concentrated.assets[0].quantity=1000;assert.ok(allocationPlan(concentrated,{month},now).blockers.length);
  const cash=fixture();cash.cash=0;cash.goal.cashPct=40;cash.assets[0].targetPct=40;cash.assets[1].targetPct=20;assert.ok(allocationPlan(cash,{month},now).blockers.some(x=>x.includes('현금')));
 });

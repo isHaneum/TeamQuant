@@ -148,7 +148,7 @@ test('기록 해시 체인(엔진): 하루 한 항목 · 같은 날은 교체 ·
   const sealed = JSON.stringify(L()[0]); pl._ledger().marks.find(m => m.date === '2026-11-09').total += 1000; t += 864e5; st = await pl.status();
   assert.equal(JSON.stringify(L()[0]), sealed, '지난 항목은 다시 쓰지 않는다'); assert.equal(L().length, 3); assert.deepEqual(st.chain.map(e => e.date), ['2026-11-09', '2026-11-10']); assert.equal(st.chainCheck.ok, true, '체인 자체는 깨지지 않았다');
   assert.equal(st.chainBreaks.length, 1); assert.equal(st.chainBreaks[0].date, '2026-11-09'); assert.match(st.chainBreaks[0].note, /total/);
-  assert.deepEqual(st.integrity.items.find(i => i.key === 'chain'), { key: 'chain', label: '기록 변경 감지', count: 0, target: 0 }); assert.equal(st.integrity.ok, true); assert.equal(st.integrity.chainBreaks, 1, '흔적은 따로 센다');
+  assert.deepEqual(st.integrity.items.find(i => i.key === 'chain'), { key: 'chain', label: '기록을 고친 흔적', count: 0, target: 0 }); assert.equal(st.integrity.ok, true); assert.equal(st.integrity.chainBreaks, 1, '흔적은 따로 센다');
   // 한 번 더 평가해도 같은 날짜의 break 는 중복으로 쌓이지 않는다 · 공개 체인에 오늘 날짜는 절대 없다
   t += 3600e3; st = await pl.status(); assert.equal(st.chainBreaks.length, 1); assert.ok(st.chain.every(e => e.date < '2026-11-11'));
   // 공개 스냅샷: 닫힌 날의 체인·검증 결과·break 가 실리고 계좌번호가 없다 · 공개 파일만으로 다시 검증되고 한 칸 바꾸면 깨진다

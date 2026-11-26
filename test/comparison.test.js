@@ -13,7 +13,7 @@ test('평가 전 가격은 지표 준비에만 쓰고 이전 주문·자산은 �
 test('시장 자료가 없거나 허용하지 않으면 신규 매수를 보류한다',()=>{
   const r=runBacktest(candles,{...config,entryAllowedByDate:{}});
   assert.equal(r.trades.length,0);
-  assert.ok(r.decisions.some(d=>d.reason.includes('시장 조건')));
+  assert.ok(r.decisions.some(d=>d.reason.includes('지수 60일선 조건')));
 });
 test('종목 간 같은 날짜·시작 자금으로 3개월 비교하며 결과가 재현된다',()=>{
   const series=[{symbol:'A',candles},{symbol:'B',candles}],market={candles};

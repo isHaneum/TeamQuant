@@ -71,7 +71,7 @@ test('공개 스냅샷(결정 21): 비교선은 정의(이름·국가 비중·�
 
 test('자산 스냅샷 변환: 토스 모양의 보유·체결(demo+paper 표식) · 현금은 달러 예수금을 환율로 합친다 · paperMeta 에 운용 상태·투자 비중·마지막 자동 실행', () => {
   const pub = publicSnapshot(status, { asOf: '2026-11-09T07:00:00Z' }), snap = assetSnapshotFrom(pub, { now: Date.parse('2026-11-09T07:00:00Z') });
-  assert.equal(snap.demo, true); assert.equal(snap.paper, true); assert.ok(snap.source.includes('실제 돈 아님'));
+  assert.equal(snap.demo, true); assert.equal(snap.paper, true); assert.ok(snap.source.includes('가상 돈'), '2026-11-26 상단 띠 용어: 팀 모의계좌 · 가상 돈');
   assert.equal(snap.positions.length, 2); const s = snap.positions[0];
   assert.deepEqual([s.symbol, s.quantity, s.price, s.cost, s.value], ['005930', 100, 70000, 6_800_000, 7_000_000]); assert.ok(Math.abs(s.returnPct - 2.941) < 0.01);
   assert.equal(snap.demoCash, 20_000_000 + 1000 * 1450); assert.equal(snap.fx.midRate, 1450);
@@ -107,17 +107,17 @@ test('투자 비중·다음 점검·시각 표기', () => {
   assert.deepEqual(invested(pub), { nowPct: 78.55, planPct: 85 }); assert.deepEqual(invested(null), { nowPct: null, planPct: null });
   // 2026-11-10 (화) 14:00 KST: 국내는 다음 날 09:00, 미국은 당일 23:30 KST(겨울)
   const nc = nextChecks(pub, Date.parse('2026-11-10T05:00:00Z'));
-  assert.deepEqual(nc.checks.map(c => c.kst), ['2026-11-11 (수) 09:00', '2026-11-10 (화) 23:30']); assert.equal(nc.cadence, 'monthly'); assert.ok(nc.cadenceLabel.includes('월 1회'));
+  assert.deepEqual(nc.checks.map(c => c.kst), ['2026-11-11 (수) 09:00', '2026-11-10 (화) 23:30']); assert.equal(nc.cadence, 'monthly'); assert.ok(nc.cadenceLabel.includes('한 달 1번'));
   // 금요일 밤 → 월요일; 여름(서머타임)에는 미국 22:30 KST
   assert.deepEqual(nextChecks(null, Date.parse('2026-11-13T15:00:00Z')).checks.map(c => c.kst), ['2026-11-16 (월) 09:00', '2026-11-16 (월) 22:30'.replace('22:30', '23:30')]);
   assert.equal(nextChecks(null, Date.parse('2026-07-14T05:00:00Z')).checks[1].kst, '2026-07-14 (화) 22:30');
-  assert.equal(nextChecks(null).cadenceLabel, '정기 주문은 주 1회(금요일)');
+  assert.equal(nextChecks(null).cadenceLabel, '정기 주문은 주 1번(금요일)');
   assert.equal(kstStamp('2026-11-09T14:38:30.225Z'), '2026-11-09 23:38'); assert.equal(kstStamp(''), ''); assert.equal(kstStamp('garbage'), 'garbage');
   assert.equal(MARKET_NAME.US, '미국');
 });
 
-test('주문 상태 글자: expired 는 소멸(마감), 모르는 상태는 그대로', () => {
-  assert.equal(orderStatusLabel('expired'), '소멸(마감)'); assert.equal(orderStatusLabel('sent'), '보냄(미체결)'); assert.equal(orderStatusLabel('filled'), '체결'); assert.equal(orderStatusLabel('weird'), 'weird'); assert.equal(orderStatusLabel(undefined), '—');
+test('주문 상태 글자(2026-11-26 증권 앱 말로): expired 는 장 마감 취소, sent 는 미체결, 모르는 상태는 그대로', () => {
+  assert.equal(orderStatusLabel('expired'), '장 마감 취소'); assert.equal(orderStatusLabel('sent'), '미체결'); assert.equal(orderStatusLabel('not_found'), '확인 안 됨'); assert.equal(orderStatusLabel('filled'), '체결'); assert.equal(orderStatusLabel('weird'), 'weird'); assert.equal(orderStatusLabel(undefined), '—');
 });
 
 // 2026-11-09 실제 상황: 국내 재조정은 나갔고, 미국은 23:38 KST 자동 실행이 하루 한도 합산 때문에 전부 차단됐다.
@@ -137,24 +137,25 @@ const live = publicSnapshot({
 test('미집행 사유: 시장별 계획·보유 비중 차이가 10%p 넘으면 마지막 자동 실행의 차단 이유를 붙인다 · 계획 중 미보유는 마지막 주문 → 자동 실행 → 아직 집행 전 순으로 설명 · 계획에 없는 보유는 정리 대상', () => {
   const g = planGaps(live), us = g.find(x => x.market === 'US'), kr = g.find(x => x.market === 'KR');
   assert.equal(us.planPct, 26); assert.equal(us.heldPct, 0); assert.equal(us.gapPct, 26);
-  assert.ok(us.reason.startsWith('2026-11-09 23:38 자동 실행에서 미국 주문 9건 전부 차단 — 오늘 주문 합계가 한도 60,000,000원을 넘습니다.'), us.reason);
+  assert.ok(us.reason.startsWith('2026-11-09 23:38 자동 주문에서 미국 주문 9건 전부 막힘 — 오늘 주문 합계가 한도 60,000,000원을 넘습니다.'), us.reason);
   assert.equal(kr.planPct, 15); assert.equal(kr.reason, null, '국내는 7.8% 보유 vs 15% 계획 → 10%p 미만');
   const nh = plannedNotHeld(live);
   assert.deepEqual(nh.map(n => n.symbol), ['TLT', 'SPY', '105560', 'NVDA'], '목표 비중 내림차순');
   assert.equal(nh[0].reason, '2026-11-09 23:38 매수 10주 거부', '마지막 주문 기록이 있으면 그것');
-  assert.ok(nh[1].reason.startsWith('2026-11-09 23:38 자동 실행 차단 — 오늘 주문 합계'), '주문 기록이 없으면 그 시장 자동 실행');
-  assert.equal(nh[2].market, 'KR'); assert.ok(nh[2].reason.includes('자동 실행 뒤에도 미보유'), nh[2].reason);
+  assert.ok(nh[1].reason.startsWith('2026-11-09 23:38 자동 주문 막힘 — 오늘 주문 합계'), '주문 기록이 없으면 그 시장 자동 주문');
+  assert.equal(nh[2].market, 'KR'); assert.ok(nh[2].reason.includes('자동 주문 뒤에도 아직 안 삼'), nh[2].reason);
   assert.deepEqual(heldNotPlanned(live), ['999999']);
-  assert.deepEqual(plannedNotHeld({ planDoc: { weights: { QQQ: { pct: 5, name: 'q' } } } })[0].reason, '아직 집행 전');
+  assert.deepEqual(plannedNotHeld({ planDoc: { weights: { QQQ: { pct: 5, name: 'q' } } } })[0].reason, '아직 주문 전');
   assert.deepEqual(planGaps(null).map(x => x.reason), [null, null]);
   assert.equal(lastAuto(live).market, 'US'); assert.equal(lastAutoFor(live, 'KR').sent, 3); assert.equal(lastAutoFor(live, 'US').topBlock, '오늘 주문 합계가 한도 60,000,000원을 넘습니다.'); assert.equal(lastAutoFor({}, 'KR'), null);
 });
 
 test('계획 적용 여부: 서버 planApplied 우선, 없으면 planVersion[시장]과 지금 버전 비교, 실행했지만 전부 차단이면 미적용', () => {
-  assert.deepEqual(planAppliedFor(live, 'KR'), { applied: true, label: '적용', at: '2026-11-09T03:54:50Z', source: 'version' }, '공개 파일에 planVersion 이 없어도 자동 실행 이유의 버전으로 판단');
-  assert.equal(planAppliedFor(live, 'US').applied, false); assert.equal(planAppliedFor(live, 'US').label, '미적용(실행했으나 전부 차단)');
-  assert.equal(planAppliedFor({ ...live, planVersion: { KR: 'PP0', US: null } }, 'KR').label, '미적용(이전 버전)');
-  assert.deepEqual(planAppliedFor({ ...live, planApplied: { KR: { applied: false, at: null, version: null }, US: { applied: true, at: '2026-11-10T14:40:00Z', version: 'PP1-2026-11-09' } } }, 'US'), { applied: true, label: '적용', at: '2026-11-10T14:40:00Z', source: 'server' });
+  // 2026-11-26 화면 글자: 적용 → 반영됨 · 미적용 → 아직
+  assert.deepEqual(planAppliedFor(live, 'KR'), { applied: true, label: '반영됨', at: '2026-11-09T03:54:50Z', source: 'version' }, '공개 파일에 planVersion 이 없어도 자동 실행 이유의 버전으로 판단');
+  assert.equal(planAppliedFor(live, 'US').applied, false); assert.equal(planAppliedFor(live, 'US').label, '아직(실행했지만 전부 막힘)');
+  assert.equal(planAppliedFor({ ...live, planVersion: { KR: 'PP0', US: null } }, 'KR').label, '아직(이전 계획으로 주문됨)');
+  assert.deepEqual(planAppliedFor({ ...live, planApplied: { KR: { applied: false, at: null, version: null }, US: { applied: true, at: '2026-11-10T14:40:00Z', version: 'PP1-2026-11-09' } } }, 'US'), { applied: true, label: '반영됨', at: '2026-11-10T14:40:00Z', source: 'server' });
   assert.equal(planAppliedFor({}, 'KR').label, '—');
   // 운용 상태: 플래그 없는 공개 파일 → 11-09 자동 실행으로 추정, 평가 11-10 → 진행 중
   assert.deepEqual([runState(live, Date.parse('2026-11-10T06:00:00Z')).state, runState(live, Date.parse('2026-11-10T06:00:00Z')).inferred], ['running', true]);

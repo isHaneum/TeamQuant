@@ -36,5 +36,5 @@ test('주문 보호(order-guard): capExempt 주문은 한 종목 비중 검사�
   const ctx = { limits: { maxOrderKrw: 15_000_000, maxDailyKrw: 60_000_000 }, fx: 1330, equityKrw: 100_000_000, positions: [{ symbol: 'SPY', qty: 24, valueKrw: 23_400_000 }], todayOrders: [], dayPnlPct: -0.5, lastPrice: 700, marketOpenAt: '2026-11-18T14:30:00Z' };
   assert.match(checkOrder(base, ctx).blocks.join(), /한 종목 비중/);
   const ok = checkOrder({ ...base, capExempt: true }, ctx); assert.equal(ok.ok, true, ok.blocks.join(' | '));
-  assert.match(checkOrder({ ...base, capExempt: true }, { ...ctx, killSwitch: true }).blocks.join(), /킬 스위치/);
+  assert.match(checkOrder({ ...base, capExempt: true }, { ...ctx, killSwitch: true }).blocks.join(), /전체 정지/);
 });

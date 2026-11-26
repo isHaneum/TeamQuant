@@ -14,7 +14,7 @@ test('정상 모의 주문은 통과하고 감사 기록을 남긴다', () => {
 
 test('실계좌·킬 스위치·일 손실 한도는 막는다', () => {
   assert.match(checkOrder({ ...base, mode: 'live' }, ctx).blocks.join(), /실계좌/);
-  assert.match(checkOrder(base, { ...ctx, killSwitch: true }).blocks.join(), /킬 스위치/);
+  assert.match(checkOrder(base, { ...ctx, killSwitch: true }).blocks.join(), /전체 정지/);
   assert.match(checkOrder(base, { ...ctx, dayPnlPct: -3.2 }).blocks.join(), /일 손실 한도/);
 });
 

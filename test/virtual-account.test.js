@@ -66,7 +66,7 @@ test('평가 · 하루 평가점 · 점검 주기(첫 운용 → 그 주 첫 점
   const a = createAccount({ startKrw: 2_000_000, now: KR_OPEN }); fill(a, { symbol: '069500', name: 'KODEX 200', side: 'BUY', qty: 10 }, { price: 40000 });
   const v = valuation(a, { prices: { '069500': 42000 } }); assert.ok(v.complete && v.totalKrw > 2_000_000 && v.rows[0].pnlKrw > 0);
   mark(a, v.totalKrw, KR_OPEN); mark(a, v.totalKrw + 1, KR_OPEN + 3600e3); assert.equal(a.marks.length, 1, '같은 날은 덮어씀');
-  assert.equal(checkDue(a, KR_OPEN).why, '첫 운용'); recordCheck(a, { now: KR_OPEN, why: '첫 운용' });
+  assert.equal(checkDue(a, KR_OPEN).why, '처음 시작'); recordCheck(a, { now: KR_OPEN, why: '처음 시작' }); // 2026-11-26 화면 글자: 첫 운용 → 처음 시작
   assert.equal(checkDue(a, KR_OPEN + 864e5).due, false, '같은 주'); assert.equal(checkDue(a, KR_OPEN + 7 * 864e5).due, true, '다음 주');
 });
 

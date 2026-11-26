@@ -1,22 +1,26 @@
 /* 핵심 기능 화면 (2026-11-06 c) */
 :root{--ck-ink:#14171c;--ck-sub:#5b6573;--ck-line:#e6e8ec;--ck-soft:#f6f7f9;--ck-up:#d32f2f;--ck-down:#2563eb;--ck-ok:#067647;--ck-ok-bg:#ecfdf3;--ck-bad:#b54708;--ck-bad-bg:#fffaeb}
-/* 검증하지 않은 표시는 홈에서 내린다(시장·포트폴리오 화면은 더보기의 참고로 남김) */
-#overview #hm-why,#overview #iss-band,#hm-list .pf-stance,#hm-list .hm-reason{display:none!important}
+/* 2026-11-26: 홈에서 숨기던 표시(#iss-band · 보유 목록의 판단 칩)는 만드는 코드가 없어져 숨김 규칙도 뺐다. '오늘 시장'은 home-top-ui.js 가 홈 맨 위에 그린다. */
 .core-today header{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.core-today h3{margin:0;display:flex;align-items:center}
-.ct-when{font-size:12.5px;color:var(--ck-sub);border:1px solid var(--ck-line);border-radius:999px;padding:3px 10px}.ct-when.urgent{border-color:var(--ck-bad);color:var(--ck-bad);background:var(--ck-bad-bg);font-weight:700}
+/* 맞춤 시점: 제목 옆 작은 글(테두리 없음). 급할 때만 주황 굵게. */
+.ct-when{font-size:var(--tq-fs-2);color:var(--tq-sub)}.ct-when.urgent{color:var(--tq-warn);font-weight:700}
 .ct-note{font-size:13px;color:#7a4e0c;background:var(--ck-bad-bg);border-radius:10px;padding:8px 12px;margin:10px 0 0}
-.ct-checks{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 6px}
+.ct-checks{display:flex;flex-wrap:wrap;gap:6px;margin:var(--tq-sp-2) 0 var(--tq-sp-3)}
 .ct-chip{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;border-radius:999px;padding:3px 10px;border:1px solid var(--ck-line);background:#fff;white-space:nowrap}
+#core-today .ct-chip{white-space:normal;font-variant-numeric:tabular-nums}
 .ct-chip.ok{color:var(--ck-ok);border-color:#abefc6;background:var(--ck-ok-bg)}.ct-chip.bad{color:var(--ck-bad);border-color:#fedf89;background:var(--ck-bad-bg);font-weight:700}.ct-chip.na{color:var(--ck-sub)}
 .ct-score{margin:4px 0 8px;font-size:14px}
 .ct-actions{margin:0 0 10px;padding-left:20px;display:grid;gap:6px}.ct-actions li{font-size:14px;line-height:1.5}.ct-actions li small{display:block;color:var(--ck-sub);font-size:12px}
 .ct-actions li.reduce b{color:var(--ck-bad)}.ct-actions li.add b{color:var(--ck-ok)}
-.ct-none{margin:0 0 10px;font-size:14px;color:var(--ck-ok);font-weight:600}
-.ct-risk{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:var(--ck-soft);border-radius:12px;padding:10px 14px}.ct-risk span{font-size:12.5px;color:var(--ck-sub);display:inline-flex;align-items:center}.ct-risk b{font-size:18px;font-variant-numeric:tabular-nums}.ct-risk small{font-size:12px;color:var(--ck-sub)}
-.ct-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.ct-skel{height:22px;border-radius:8px;margin:8px 0}
+.ct-none{margin:0 0 var(--tq-sp-3);font-size:var(--tq-fs-2);color:var(--tq-ok);font-weight:600}
+/* 팀 모의계좌의 '자동 주문 · 마지막 … · 주문 N건 · 막힘 N건'은 좋고 나쁨이 아니라 사실 줄이라 보통 글색. */
+.ct-none.ct-auto{color:var(--tq-sub);font-weight:400;display:flex;align-items:center;flex-wrap:wrap}
+.ct-links{display:flex;gap:var(--tq-sp-2);flex-wrap:wrap;margin-top:var(--tq-sp-3)}.ct-skel{height:22px;border-radius:8px;margin:8px 0}
+#core-today .ct-skel.ct-skel-line{height:var(--tq-sp-5)}
 .cr-grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:22px;align-items:start;margin:8px 0 40px}.cr-main,.cr-side{display:grid;gap:18px;min-width:0}
-.cr-card{border:1px solid var(--ck-line);border-radius:18px;background:#fff;padding:20px 22px;min-width:0;max-width:100%}
-.cr-card header{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.cr-card h3{margin:0;font-size:18px;display:flex;align-items:center}.cr-card h4{margin:18px 0 8px;font-size:13px;color:var(--ck-sub);display:flex;align-items:center}
+/* 카드(규칙·모의투자·종목·주문 점검·시장·섹터 공용): 토큰 값 하나로 맞춘다. */
+.cr-card{border:1px solid var(--tq-line);border-radius:var(--tq-r-2);background:var(--tq-paper);padding:var(--tq-sp-4) var(--tq-sp-5);min-width:0;max-width:100%}
+.cr-card header{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:var(--tq-sp-2)}.cr-card h3{margin:0;font-size:var(--tq-fs-3);display:flex;align-items:center}.cr-card h4{margin:var(--tq-sp-4) 0 var(--tq-sp-2);font-size:13px;color:var(--ck-sub);display:flex;align-items:center}
 .cr-muted{font-size:13px;color:var(--ck-sub);line-height:1.6}.cr-err{color:var(--ck-bad);font-size:13px;min-height:18px}.cr-note{font-size:13px;color:#7a4e0c;background:var(--ck-bad-bg);border-radius:10px;padding:8px 12px}
 .cr-rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px}
 .cr-rule{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--ck-line);border-radius:12px;padding:10px 12px;font-size:14px}.cr-rule>span:first-child{display:inline-flex;align-items:center}
@@ -30,8 +34,12 @@
 .cr-cash-now{margin:0 0 8px;display:flex;align-items:baseline;gap:10px}.cr-cash-now b{font-size:20px}.cr-cash-now small{color:var(--ck-sub)}
 .cr-facts{margin:10px 0 0;padding-left:18px;font-size:13px;color:#3b4350;display:grid;gap:4px}
 .cr-ev td:first-child{white-space:nowrap}
-.cp{display:grid;grid-template-columns:380px minmax(0,1fr);gap:22px;align-items:start;margin:8px 0 40px}
-.cp-form{display:grid;gap:8px;position:sticky;top:12px}.cp-l{font-size:13px;font-weight:700;color:var(--ck-sub);margin-top:6px}
+/* 종목·주문 점검: 종목을 고르기 전에는 한 열(넓은 빈 칸 없이), 고르면(cp-picked) 1024px 넘는 화면에서 주문 칸 | 시세·결과 두 열.
+   주문 칸은 위쪽 메뉴 밑으로 가려지지 않게 고정(sticky)하지 않는다. */
+.cp{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--tq-sp-5);align-items:start;margin:0 0 var(--tq-sp-6)}
+.cp:not(.cp-picked){max-width:560px}
+@media(min-width:1025px){.cp.cp-picked{grid-template-columns:380px minmax(0,1fr)}}
+.cp-form{display:grid;gap:var(--tq-sp-2)}.cp-l{font-size:13px;font-weight:700;color:var(--ck-sub);margin-top:6px}
 .cp-chips{display:flex;flex-wrap:wrap;gap:6px}.cp-chips button{border:1px solid var(--ck-line);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}.cp-chips button.on{background:var(--ck-ink);color:#fff;border-color:var(--ck-ink)}
 .cp-seg{display:flex;gap:6px}.cp-seg label{flex:1;cursor:pointer}.cp-seg input{position:absolute;opacity:0}.cp-seg span{display:block;text-align:center;border:1px solid var(--ck-line);border-radius:10px;padding:9px 14px;font-size:14px;white-space:nowrap}.cp-seg input:checked+span{background:var(--ck-ink);color:#fff;border-color:var(--ck-ink)}.cp-seg input:focus-visible+span{outline:2px solid #245ad1}
 .cp-state{font-size:13px;color:var(--ck-bad);min-height:18px;margin:0}
@@ -48,8 +56,8 @@
 .rp-chart{margin:14px 0 0}.rp-chart svg{width:100%;height:auto;display:block}.rp-chart text{font:500 11px var(--font-ui,sans-serif);fill:#7a8494}.rp-chart .g{stroke:#eef0f3}.rp-chart .b{stroke:#c9cfd8;stroke-dasharray:3 3}
 .rp-chart polyline{fill:none;stroke-width:2}.rp-chart .l-actual{stroke:#14171c;stroke-width:2.4}.rp-chart .l-hold{stroke:#9aa3af;stroke-dasharray:5 4}.rp-chart .l-rule{stroke:#0e7c66}
 .rp-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ck-sub);margin-top:6px}.rp-legend i{display:inline-block;width:14px;height:2px;margin-right:6px;vertical-align:3px}.rp-legend i.l-actual{background:#14171c}.rp-legend i.l-hold{background:#9aa3af}.rp-legend i.l-rule{background:#0e7c66}
-@media(max-width:1100px){.cr-grid,.cp{grid-template-columns:minmax(0,1fr)}.cp-form{position:static}}
-@media(max-width:640px){.cr-rules,.cr-adv>div{grid-template-columns:1fr}.cp-loss,.rp-tiles{grid-template-columns:1fr}.cr-card{padding:16px}.rp-verdict{font-size:17px}}
+@media(max-width:1024px){.cr-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px){.cr-rules,.cr-adv>div{grid-template-columns:1fr}.cp-loss,.rp-tiles{grid-template-columns:1fr}.cr-card{padding:var(--tq-sp-4)}.rp-verdict{font-size:17px}}
 .cp-max small{flex-basis:100%;font-size:12.5px;color:var(--ck-bad)}
 .rp-chart,.rp-chart svg{width:100%;max-width:none}
 .ct-cash{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}.ct-cash label{font-size:13px;font-weight:700;color:var(--ck-sub);display:inline-flex;align-items:center}.ct-cash input{width:160px}
@@ -75,7 +83,7 @@
 .cp-sugg b{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.cp-sugg small{color:var(--ck-sub);font-size:12px}.cp-sugg .q{text-align:right;font-variant-numeric:tabular-nums;font-size:13px;color:var(--ck-sub)}.cp-sugg .q.up{color:var(--ck-up)}.cp-sugg .q.down{color:var(--ck-down)}.cp-sugg-empty{padding:10px 12px;font-size:13px;color:var(--ck-sub)}
 .cp-stockcard header{margin-bottom:8px}.cp-quote{font-size:14px;display:inline-flex;align-items:baseline;gap:6px}.cp-quote b{font-size:18px}.cp-quote .up{color:var(--ck-up)}.cp-quote .down{color:var(--ck-down)}
 .cp-chart{min-width:0}.cp-chart .candle-controls{margin:0 0 6px}.cp-chart .candle-plot svg{max-height:360px}.cp-result{display:grid;gap:16px}
-@media(max-width:760px){.cp-sugg button{grid-template-columns:minmax(0,1fr) auto 56px;font-size:13px}}
+@media(max-width:640px){.cp-sugg button{grid-template-columns:minmax(0,1fr) auto 56px;font-size:13px}}
 /* 2026-11-09 세 질문 · 기록으로 점검 · 가설 */
 .cq{display:grid;gap:12px}.cq-q{display:grid;gap:6px}.cq-q>span{font-size:14px;font-weight:600}.cq .cp-seg{flex-wrap:wrap}.cq .cp-seg label{flex:1 1 90px}.cq-explain{margin:12px 0 4px;padding-left:18px;font-size:13.5px;line-height:1.7;color:#3b4350}
 .cr-find{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}.cr-find li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5}.cr-find li b{font-weight:600}.cr-find li small{display:block;color:var(--ck-sub);margin-top:2px}
@@ -85,26 +93,41 @@
 
 /* 규칙 화면(2026-11-13 · 결정 34): 한 줄 배치. 좁은 옆 칸에서 표가 잘리던 원인(.table-wrap table 의 최소 폭 420px)을 이 화면들에서는 푼다. */
 .ck .table-wrap table{min-width:0}
-.rl{display:grid;gap:18px;margin:8px 0 40px}.rl-two{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:18px;align-items:start}
+/* 2026-11-26 쉬운 말 정리: 간격은 토큰만. '왜 이 규칙인가' 카드를 '지금 규칙' 표에 합쳐 두 칸 배치(.rl-two)는 없앴다. */
+.rl{display:grid;gap:var(--tq-sp-4);margin:0 0 var(--tq-sp-6)}
 .rl .cr-card>header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .rl-lead{font-size:16px;line-height:1.55;margin:0 0 6px}.rl-lead b{font-weight:700}.rl-status{font-size:13px;color:var(--ck-sub);margin:0 0 12px}
-.rl-note,.rl-cap{font-size:12.5px;color:var(--ck-sub);margin:8px 0 0;line-height:1.5}.rl-cap{margin:0 0 6px;font-size:13.5px}.rl-cap b{color:var(--ck-ink)}.rl-bad{color:var(--ck-bad)}
+/* 숫자·판정 줄(.rl-cap)은 간결 화면에서도 보인다. 숫자 없는 설명 줄(.rl-note)만 간결 화면이 가린다. */
+.rl-note{font-size:12.5px;color:var(--ck-sub);margin:8px 0 0;line-height:1.5}
+.rl-cap{margin:var(--tq-sp-1) 0 var(--tq-sp-2);font-size:var(--tq-fs-2);color:var(--tq-sub);line-height:1.5}.rl-cap b{color:var(--tq-ink)}.rl-cap .tip{vertical-align:0}.rl-bad{color:var(--ck-bad)}
 .rl-badge{font-size:12px;border-radius:999px;padding:3px 10px;white-space:nowrap;font-weight:600}.rl-badge.ok{background:var(--ck-ok-bg);color:var(--ck-ok)}.rl-badge.warn{background:var(--ck-bad-bg);color:#7a4e0c}
-.rl-rules td,.rl-rules th,.rl-why td,.rl-why th,.rl-confirm td{text-align:left}.rl-crisis td:not(:first-child),.rl-crisis th:not(:first-child){text-align:right}.rl-rules td:nth-child(2){white-space:nowrap}.rl-rules td:nth-child(3),.rl-why td:nth-child(2){color:var(--ck-sub)}.rl-why td:first-child{white-space:nowrap}
+.rl-rules td,.rl-rules th,.rl-confirm td{text-align:left}.rl-crisis td:not(:first-child),.rl-crisis th:not(:first-child){text-align:right}.rl-rules td:nth-child(2){white-space:nowrap}.rl-rules td.rl-wrap{white-space:normal}.rl-rules td:nth-child(3){color:var(--tq-sub)}.rl-rules td:nth-child(3) b{color:var(--tq-ink)}.rl-rules th .tip{vertical-align:0}
 .rl-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0 0}.rl-tiles>div{background:var(--ck-soft);border-radius:12px;padding:10px 12px;display:grid;gap:2px;min-width:0;align-content:start}.rl-tiles span{font-size:12px;color:var(--ck-sub)}.rl-tiles b{font-size:18px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.rl-tiles small{font-size:12px;color:var(--ck-sub)}.rl-tiles.two{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* 내 계좌 위험은 이제 한 줄 전체 폭이라 넓은 화면에서 타일 4개를 한 줄에 둔다. */
+#rl-risk-body>.rl-tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rl-pfpick{display:flex;align-items:center;gap:var(--tq-sp-2);flex-wrap:wrap}.rl-pf-label{font-size:var(--tq-fs-1);color:var(--tq-sub)}
 .rl-seg{display:inline-flex;flex-wrap:wrap;border:1px solid #d9dee6;border-radius:10px;overflow:hidden}.rl-seg button{border:0;background:#fff;padding:6px 11px;font:inherit;font-size:12.5px;color:#40516a;cursor:pointer;min-height:0}.rl-seg button+button{border-left:1px solid #e5e9ef}.rl-seg button.on{background:#111827;color:#fff;font-weight:600}
 .rl-pastgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:10px}.rl-crisis small{white-space:nowrap}
 .rl-in{margin-top:14px;border-top:1px solid #eef1f5;padding-top:10px}.rl-in>summary{cursor:pointer;font-size:13.5px;font-weight:600;color:#2b4a8b}
-.rl-fold>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.rl-fold>summary::-webkit-details-marker{display:none}.rl-fold>summary::before{content:'▸';color:var(--ck-sub)}.rl-fold[open]>summary::before{content:'▾'}.rl-fold>summary b{font-size:16px}.rl-fold>summary small{font-size:12.5px;color:var(--ck-sub)}.rl-fold[open]>summary{margin-bottom:14px}
+.rl-fold>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.rl-fold>summary::-webkit-details-marker{display:none}.rl-fold>summary::before{content:'▸';color:var(--ck-sub)}.rl-fold[open]>summary::before{content:'▾'}.rl-fold>summary b{font-size:16px}.rl-fold>summary small{font-size:12.5px;color:var(--ck-sub)}.rl-fold[open]>summary{margin-bottom:var(--tq-sp-3)}
+/* 접힘 세 개(규칙 바꾸기 · 종목별 목표 비중 · 근거 자료)는 한 카드 안 목록: 줄 사이 구분선, 카드 하나 몫의 여백만. 숨긴 접힘 다음 줄에는 선을 긋지 않는다. */
+.rl-folds{padding:0}
+.rl-folds>.rl-fold{padding:0 var(--tq-sp-4)}.rl-folds>.rl-fold>summary{padding:var(--tq-sp-3) 0}.rl-folds>.rl-fold[open]{padding-bottom:var(--tq-sp-4)}
+.rl-folds>.rl-fold:not([hidden])~.rl-fold{border-top:1px solid var(--tq-line)}
+/* 월급 적립 접힘: 닫혀 있으면 '매달 넣을 돈 · 계좌별 금액 · 돌려받는 세금' 한 줄만. */
+.rl-dca-fold>summary .dg-sum{flex-basis:100%;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--tq-fs-2);color:var(--tq-ink)}
+.rl-dca-fold[open]>summary .dg-sum{display:none}
 .rl-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 12px}.rl-level{position:relative;border:1px solid var(--ck-line);border-radius:14px;padding:12px 14px;display:grid;gap:4px;cursor:pointer;align-content:start}.rl-level.on{border-color:#111827;box-shadow:0 0 0 1px #111827 inset}.rl-level input{position:absolute;opacity:0;pointer-events:none}.rl-level b{font-size:15px}.rl-level span{font-size:13px;color:var(--ck-sub)}.rl-level small{font-size:12px;color:var(--ck-sub);line-height:1.5}
 .rl-confirm{border:1px solid var(--ck-line);border-radius:14px;padding:14px 16px;margin-top:12px;background:var(--ck-soft)}.rl-confirm h4{margin:0 0 8px;font-size:14px}.rl-confirm td:first-child{white-space:nowrap;color:var(--ck-sub);width:110px}.rl-confirm .ck-field{margin-top:10px}
 .rl-h4{margin:14px 0 6px;font-size:14px}.rl-planhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 8px;flex-wrap:wrap}
 .rl-cash{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px;font-size:13.5px}.rl-cash b{font-size:15px}.rl-cash form{margin:0}
 #rl-recent .cr-card{border:0;padding:0}#rl-recent-body{margin-top:10px}#rl-recent .rp-period{margin:0 0 10px}
-@media(max-width:1100px){.rl-two,.rl-pastgrid{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:640px){.rl-levels,.rl-tiles.two{grid-template-columns:1fr}.rl-rules th:nth-child(3),.rl-rules td:nth-child(3){display:none}.rl-why td:first-child{white-space:normal}.rl-lead{font-size:15px}}
+@media(max-width:1024px){.rl-pastgrid{grid-template-columns:minmax(0,1fr)}#rl-risk-body>.rl-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.rl-levels,.rl-tiles.two{grid-template-columns:1fr}.rl-lead{font-size:15px}}
+/* 팀 모의계좌일 때 홈의 매매 성적표·월별 그래프는 공개 자료에 주문이 일부만 있어 그대로 숨긴다(지수 비교는 홈 '지수와 비교'가 맡음). */
 body[data-account="paper"] #hm-trend,body[data-account="paper"] #hm-grade{display:none}
-@media (max-width:640px){.rl-why thead{display:none}.rl-why tr{display:block;padding:9px 0;border-bottom:1px solid #f0f2f5}.rl-why td{display:block;padding:1px 0;border:0;white-space:normal;width:auto}.rl-why td:nth-child(3){font-size:13px;margin-top:2px}}
+/* 휴대폰: 규칙 표는 줄마다 '이름 | 값' 한 줄 + 아래 과거 숫자(열을 숨기지 않는다). */
+@media (max-width:640px){.rl-rules thead{display:none}.rl-rules tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px var(--tq-sp-2);padding:var(--tq-sp-2) 0;border-bottom:1px solid #f0f2f5}.rl-rules td{display:block;padding:0;border:0}.rl-rules td:nth-child(3){grid-column:1/-1;font-size:var(--tq-fs-1)}.rl-rules td.rl-wrap{grid-column:1/-1}}
 .rl-sizing{margin-top:14px;padding-top:12px;border-top:1px solid var(--ck-line)}.rl-sizing p{margin:0 0 6px;font-size:14px;line-height:1.55}.rl-size td:not(:first-child),.rl-size th:not(:first-child){text-align:right}.rl-size td,.rl-size th{padding:6px 8px}
 .rl-confirm .cr-table td{white-space:normal;word-break:keep-all;overflow-wrap:anywhere}.rl-confirm .cr-table td:first-child{white-space:nowrap}.rl-confirm .cr-table{min-width:0;width:100%}
 .rl-sqt{min-width:0!important;width:100%}.rl-sqt td{white-space:normal;vertical-align:top;text-align:left!important}.rl-sqt th{text-align:left!important}.rl-sqt td small{display:block;font-size:12px;color:var(--ck-sub);margin-top:2px}.rl-sqt .sq-breaks div{margin-bottom:4px;font-size:13px}.rl-sqt .sq-breaks .ct-chip{margin-right:4px}.rl-sqt tr:not(.sq-more) td{border-bottom:0}.rl-sqt .sq-more td{padding-top:0}.rl-sqt .sq-more p{margin:6px 0;font-size:13px;line-height:1.55}.rl-why-line{display:block;font-size:11.5px;white-space:normal}
@@ -118,7 +141,7 @@ body[data-account="paper"] #hm-trend,body[data-account="paper"] #hm-grade{displa
 #rl-dca .dg-chips{display:flex;gap:6px;flex-wrap:wrap}
 #rl-dca .dg-chips button{border:1px solid #d9dee6;background:#fff;border-radius:999px;padding:3px 11px;font:inherit;font-size:12px;color:#40516a;cursor:pointer;min-height:0}
 #rl-dca .dg-chips button:hover{border-color:#111827;color:#111827}
-#rl-dca .dg-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 6px}
+#rl-dca .dg-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--tq-sp-3);margin:0 0 6px}
 #rl-dca .dg-kpis article{background:var(--ck-soft);border-radius:14px;padding:12px 14px;min-width:0}
 #rl-dca .dg-kpis span{display:flex;align-items:center;font-size:12.5px;color:var(--ck-sub)}
 #rl-dca .dg-kpis strong{display:block;font-size:19px;margin-top:4px;color:var(--ck-ink)}
@@ -150,4 +173,6 @@ body[data-account="paper"] #hm-trend,body[data-account="paper"] #hm-grade{displa
 #rl-dca .dg-skip li{line-height:1.6}
 #rl-dca .dg-rule p{background:var(--ck-soft);border-radius:12px;padding:12px 14px;margin:0 0 8px;line-height:1.75;font-size:14.5px;color:var(--ck-ink)}
 #rl-dca .dg-actions{display:flex;align-items:center;gap:10px}
-@media (max-width:760px){#rl-dca .dg-in,#rl-dca .dg-kpis,#rl-dca .dg-grid{grid-template-columns:minmax(0,1fr)}#rl-dca .dg-kpis strong{font-size:17px}}
+@media (max-width:640px){#rl-dca .dg-in,#rl-dca .dg-kpis,#rl-dca .dg-grid{grid-template-columns:minmax(0,1fr)}#rl-dca .dg-kpis strong{font-size:17px}}
+/* 규칙 화면 제목 아래 '어느 계좌의 규칙인지' 한 줄(간결 화면에서도 보임) */
+#rl-sub{font-size:var(--tq-fs-2);margin:var(--tq-sp-1) 0 0;color:var(--tq-sub)}

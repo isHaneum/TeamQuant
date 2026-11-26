@@ -129,7 +129,7 @@ test('결정 60 ⑤: close 조건은 끝난 세션 종가로만 깨진다(오늘
   h = pl.hypothesis('add', { symbol: 'UPRO', name: 'UPRO', capPct: 5, thesis: 't', approve: true, stops: [{ kind: 'close', symbol: 'SPY', below: 623 }] }); backdate(pl, h.id);
   const before = (await pl.status()).planVersionNow; // status 도 자동 깨짐을 본다(10분 간격 · 첫 호출은 바로)
   const x = pl._ledger().hypotheses[0];
-  assert.equal(x.status, 'broken'); assert.match(x.closeNote, /^자동 깨짐: SPY 종가 623 아래 \(2026-11-23 SPY 종가 610\)/); assert.equal(x.autoBroken.close, 610); assert.equal(x.autoBroken.date, '2026-11-23');
+  assert.equal(x.status, 'broken'); assert.match(x.closeNote, /^자동 제외: SPY 종가 623 아래 \(2026-11-23 SPY 종가 610\)/); // 2026-11-26 화면 말: 자동 깨짐 → 자동 제외 assert.equal(x.autoBroken.close, 610); assert.equal(x.autoBroken.date, '2026-11-23');
   assert.ok(!/\+H:/.test(before), '열린 가설이 없어져 계획 버전에서 빠진다(→ 자동 실행이 재조정): ' + before);
   assert.ok(pl._ledger().hypLog.some(l => l.event === 'auto-broken'));
 });
@@ -141,7 +141,7 @@ test('결정 60 ⑤: selfReturn · recoverHigh · VIX — 조건 그대로 깨�
     const h = pl.hypothesis('add', { symbol: 'TQQQ', name: 'TQQQ', capPct: 5, thesis: 't', approve: true, stops: [{ kind: 'selfReturn', le: -35 }] }); backdate(pl, h.id);
     fill(pl, { at: '2026-11-20T15:30:00Z', symbol: 'TQQQ', side: 'BUY', qty: 10, price: 100, filledQty: 10, avgPrice: 100 });
     await pl.checkHypStops(); const x = pl._ledger().hypotheses[0];
-    assert.equal(x.status === 'broken', broken, `selfReturn done=${done}`); if (broken) { assert.match(x.closeNote, /가설 수익 -40% · TQQQ 종가 60/); assert.equal(x.autoBroken.returnPct, -40); }
+    assert.equal(x.status === 'broken', broken, `selfReturn done=${done}`); if (broken) { assert.match(x.closeNote, /이 종목 수익 -40% · TQQQ 종가 60/); assert.equal(x.autoBroken.returnPct, -40); }
   }
   // recoverHigh: 직전 20개 끝난 봉 최고 ≈ 650.x → 끝난 종가 660 이면 회복(깨짐) · 600 이면 그대로
   for (const [done, broken] of [[660, true], [600, false]]) {
