@@ -70,9 +70,9 @@ test('현금·집중·업종 기준으로 방향을 제안한다', () => {
   assert.ok(a.checks.find(c => c.key === 'cash').tone < 0);
   assert.match(a.checks.find(c => c.key === 'single').title, /A 60%/);
   assert.match(a.checks.find(c => c.key === 'sector').title, /반도체 업종 90%/);
-  assert.ok(a.actions.some(x => /B는 지표가 약합니다/.test(x)));
+  assert.ok(a.actions.some(x => /지표가 약한 종목: .*B/.test(x)));
   assert.ok(a.actions.some(x => /A, B는 더 사지 말고/.test(x)));
-  assert.ok(!a.actions.some(x => /추가로 산다면.*A/.test(x))); // 비중이 큰 종목은 매수 후보에서 뺀다
+  assert.ok(!a.actions.some(x => /지표 상위: .*A/.test(x))); // 비중이 큰 종목은 매수 후보에서 뺀다
   assert.equal(a.dividend, 6 + 0 + 3);
   assert.equal(advisePortfolio(holdings, {}).cashPct, null);
 });
