@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T04:16:16.317Z",
+ "updatedAt": "2026-11-26T04:30:07.212Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 4769.06,
-   "change": 1.52,
-   "z": 0.5,
+   "last": 4760.93017578125,
+   "change": 1.35,
+   "z": 0.4,
    "sd": 3.0283318709427105,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,11 +23,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 663.8599853515625,
-   "change": 2.03,
-   "z": 0.7,
+   "last": 666.4,
+   "change": 2.42,
+   "z": 0.8,
    "sd": 2.871767536413246,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -63,9 +63,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1342.780029296875,
-   "change": 0.01,
-   "z": 0,
+   "last": 1343.1800537109375,
+   "change": 0.04,
+   "z": 0.1,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
   },
@@ -87,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 3604.699951171875,
-   "change": 1.95,
-   "z": 1.3,
+   "last": 3612.199951171875,
+   "change": 2.16,
+   "z": 1.4,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -120,12 +120,12 @@
   }
  ],
  "spikes": {
-  "war": 3.3,
-  "politics": 0.8,
+  "war": 3.2,
+  "politics": 0.7,
   "rates": 1.3,
-  "trade": 1.7,
+  "trade": 1,
   "fx": -0.2,
-  "energy": 1.7,
+  "energy": 1.5,
   "market": 0.8,
   "credit": 0.4,
   "disaster": 0,
@@ -133,12 +133,12 @@
  },
  "rates": {
   "war": {
-   "rate": 5.2,
+   "rate": 5.1,
    "saturated": 1,
    "queries": 3
   },
   "politics": {
-   "rate": 2.8,
+   "rate": 2.6,
    "saturated": 0,
    "queries": 3
   },
@@ -148,7 +148,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 6.5,
+   "rate": 5.5,
    "saturated": 1,
    "queries": 2
   },
@@ -158,7 +158,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 5.7,
+   "rate": 5.3,
    "saturated": 0,
    "queries": 1
   },
@@ -208,30 +208,30 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 58,
-    "spike": 3.3,
+    "score": 59,
+    "spike": 3.2,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.95,
+     "change": 2.16,
      "unit": "%",
-     "z": 1.3
+     "z": 1.4
     },
     "why": [
      "핵심 단어",
-     "기사 급증(평소 대비 3.3σ)",
-     "금 +1.95%"
+     "기사 급증(평소 대비 3.2σ)",
+     "금 +2.16%"
     ]
    }
   },
   {
    "id": "lc4ohe",
-   "title": "AI 해킹에 디지털 뱅크런까지…5대 금융지주·은행 첫 합동 위기훈련",
-   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "title": "금융당국, ‘디지털 뱅크런’ 대비 첫 합동훈련",
+   "firstSeen": "2026-11-25T06:01:00.000Z",
    "lastSeen": "2026-11-25T07:52:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "count": 8,
+   "sources": 8,
    "topics": [
     "credit",
     "policy"
@@ -253,22 +253,22 @@
      "at": "2026-11-25T07:34:00.000Z"
     },
     {
-     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
-     "host": "getnews.co.kr",
-     "at": "2026-11-25T07:02:00.000Z"
-    },
-    {
      "title": "'AI 해킹·디지털 뱅크런' 겹치면 어떻게 막나… 금융당국·5대 금융 첫...",
      "link": "https://www.m-i.kr/news/articleView.html?idxno=2023351",
      "host": "m-i.kr",
+     "at": "2026-11-25T06:48:00.000Z"
+    },
+    {
+     "title": "'사이버 공격', 건전성 위협 시나리오 포함…금융당국·5대 지주 '디지털...",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348826?division=NAVER",
+     "host": "biz.sbs.co.kr",
      "at": "2026-11-25T06:48:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 48,
+    "score": 46,
     "spike": 0.4,
     "news": true,
     "reaction": {
@@ -326,19 +326,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 45,
-    "spike": 3.3,
+    "score": 46,
+    "spike": 3.2,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.95,
+     "change": 2.16,
      "unit": "%",
-     "z": 1.3
+     "z": 1.4
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
-     "금 +1.95%"
+     "기사 급증(평소 대비 3.2σ)",
+     "금 +2.16%"
     ]
    }
   },
@@ -432,19 +432,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 42,
-    "spike": 0.8,
+    "score": 43,
+    "spike": 0.7,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.95,
+     "change": 2.16,
      "unit": "%",
-     "z": 1.3
+     "z": 1.4
     },
     "why": [
      "핵심 단어",
-     "금 +1.95%"
+     "금 +2.16%"
     ]
    }
   },
@@ -534,19 +534,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 39,
-    "spike": 3.3,
+    "score": 40,
+    "spike": 3.2,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.95,
+     "change": 2.16,
      "unit": "%",
-     "z": 1.3
+     "z": 1.4
     },
     "why": [
-     "기사 급증(평소 대비 3.3σ)",
-     "금 +1.95%"
+     "기사 급증(평소 대비 3.2σ)",
+     "금 +2.16%"
     ]
    }
   },
@@ -575,19 +575,71 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 39,
-    "spike": 0.8,
+    "score": 40,
+    "spike": 0.7,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.95,
+     "change": 2.16,
      "unit": "%",
-     "z": 1.3
+     "z": 1.4
     },
     "why": [
      "핵심 단어",
-     "금 +1.95%"
+     "금 +2.16%"
+    ]
+   }
+  },
+  {
+   "id": "lc4ohe",
+   "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
+   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "lastSeen": "2026-11-25T07:02:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
+     "host": "getnews.co.kr",
+     "at": "2026-11-25T07:02:00.000Z"
+    },
+    {
+     "title": "AI 해킹·디지털 뱅크런 대비…금융당국, 5대 은행과 위기대응 훈련",
+     "link": "https://www.dailian.co.kr/news/view/1719623/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-25T06:40:00.000Z"
+    },
+    {
+     "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
+     "link": "https://www.sidae.com/article/2026112508551697703",
+     "host": "sidae.com",
+     "at": "2026-11-25T06:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 37,
+    "spike": 0.4,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
     ]
    }
   },
@@ -634,50 +686,6 @@
     "why": [
      "핵심 단어",
      "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "1ramjm7",
-   "title": "네타냐후가 '젠슨 황' 복귀를 환영한 이유",
-   "firstSeen": "2026-11-26T02:34:00.000Z",
-   "lastSeen": "2026-11-26T04:02:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"美국방부, 이사회에 젠슨 황 복귀 압박하려 '전시법' 발동 검토\"",
-     "link": "https://www.newsis.com/view/NISX20261126_0003884270",
-     "host": "newsis.com",
-     "at": "2026-11-26T04:02:00.000Z"
-    },
-    {
-     "title": "네타냐후가 '젠슨 황' 복귀를 환영한 이유",
-     "link": "http://www.newstown.co.kr/news/articleView.html?idxno=723467",
-     "host": "newstown.co.kr",
-     "at": "2026-11-26T03:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 36,
-    "spike": 3.3,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.95,
-     "unit": "%",
-     "z": 1.3
-    },
-    "why": [
-     "기사 급증(평소 대비 3.3σ)",
-     "금 +1.95%"
     ]
    }
   },
@@ -848,43 +856,41 @@
    }
   },
   {
-   "id": "15v1cl3",
-   "title": "“증안펀드 늘리고 공매도 금지하나”…코스피 급등락에 금융당국 추가...",
-   "firstSeen": "2026-11-26T00:54:00.000Z",
-   "lastSeen": "2026-11-26T00:54:00.000Z",
+   "id": "1lqcfj",
+   "title": "美 연방정부 셧다운 시한 임박…공화·민주당, 이란 전쟁 예산 놓고 협...",
+   "firstSeen": "2026-11-25T22:50:00.000Z",
+   "lastSeen": "2026-11-25T22:50:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "market",
-    "policy"
+    "war",
+    "politics"
    ],
-   "critical": [
-    "policy"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "“증안펀드 늘리고 공매도 금지하나”…코스피 급등락에 금융당국 추가...",
-     "link": "https://www.ddaily.co.kr/page/view/2026112609460304939",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-26T00:54:00.000Z"
+     "title": "美 연방정부 셧다운 시한 임박…공화·민주당, 이란 전쟁 예산 놓고 협...",
+     "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=400349",
+     "host": "fntoday.co.kr",
+     "at": "2026-11-25T22:50:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 34,
-    "spike": 0.8,
+    "spike": 3.2,
     "news": false,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 2.16,
      "unit": "%",
-     "z": 0.6
+     "z": 1.4
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "기사 급증(평소 대비 3.2σ)",
+     "금 +2.16%"
     ]
    }
   }
