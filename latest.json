@@ -1,7 +1,7 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T07:05:48.527Z",
- "mode": "briefing",
+ "updatedAt": "2026-11-26T07:15:53.338Z",
+ "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
   {
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1342.6700439453125,
-   "change": 0,
+   "last": 1342.780029296875,
+   "change": 0.01,
    "z": 0,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 83.9800033569336,
-   "change": 0.36,
+   "last": 83.87999725341797,
+   "change": 0.24,
    "z": 0.1,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3594.39990234375,
-   "change": 1.66,
+   "last": 3598.800048828125,
+   "change": 1.78,
    "z": 1.1,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
@@ -119,7 +119,7 @@
   }
  ],
  "spikes": {
-  "war": 1,
+  "war": 0.8,
   "politics": -0.7,
   "rates": 1.4,
   "trade": 1.7,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 2.6,
+   "rate": 2.4,
    "saturated": 0,
    "queries": 3
   },
@@ -232,6 +232,59 @@
     "why": [
      "핵심 단어",
      "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "146knoq",
+   "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
+   "firstSeen": "2026-11-26T06:38:00.000Z",
+   "lastSeen": "2026-11-26T07:10:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "market",
+    "policy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "증시 폭락에 '증안펀드' 만지작…금융위, 5대 금융지주 회장 소집",
+     "link": "http://www.press9.kr/news/articleView.html?idxno=87103",
+     "host": "press9.kr",
+     "at": "2026-11-26T07:10:00.000Z"
+    },
+    {
+     "title": "10조원대 증안펀드 가동 검토…금융위, 30일 시장안정 긴급회의",
+     "link": "https://www.slist.kr/news/articleView.html?idxno=785109",
+     "host": "slist.kr",
+     "at": "2026-11-26T06:50:00.000Z"
+    },
+    {
+     "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
+     "link": "https://www.news1.kr/finance/general-finance/6367286",
+     "host": "news1.kr",
+     "at": "2026-11-26T06:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 39,
+    "spike": 0.6,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1
+    },
+    "why": [
+     "핵심 단어",
+     "미 10년 금리 -5.6bp"
     ]
    }
   },
@@ -371,13 +424,13 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.66,
+     "change": 1.78,
      "unit": "%",
      "z": 1.1
     },
     "why": [
      "핵심 단어",
-     "금 +1.66%"
+     "금 +1.78%"
     ]
    }
   },
@@ -584,58 +637,12 @@
    }
   },
   {
-   "id": "146knoq",
-   "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
-   "firstSeen": "2026-11-26T06:38:00.000Z",
-   "lastSeen": "2026-11-26T06:50:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "10조원대 증안펀드 가동 검토…금융위, 30일 시장안정 긴급회의",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=785109",
-     "host": "slist.kr",
-     "at": "2026-11-26T06:50:00.000Z"
-    },
-    {
-     "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
-     "link": "https://www.news1.kr/finance/general-finance/6367286",
-     "host": "news1.kr",
-     "at": "2026-11-26T06:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 32,
-    "spike": 0.1,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 -5.6bp"
-    ]
-   }
-  },
-  {
    "id": "1ehlmcp",
    "title": "한은, 기준금리 3.25%로 0.25%p 인상…성장 전망 대폭 높이고 긴축 가속",
    "firstSeen": "2026-11-26T01:02:00.000Z",
    "lastSeen": "2026-11-26T06:56:00.000Z",
-   "count": 22,
-   "sources": 20,
+   "count": 20,
+   "sources": 18,
    "topics": [
     "rates"
    ],
@@ -648,22 +655,22 @@
      "at": "2026-11-26T06:56:00.000Z"
     },
     {
-     "title": "한은, 기준금리 연 3.25%로 0.25%p 인상",
-     "link": "https://m.skyedaily.com/news_view.html?ID=315292",
-     "host": "m.skyedaily.com",
-     "at": "2026-11-26T06:50:00.000Z"
-    },
-    {
-     "title": "한은, 기준금리 3.25%로 인상",
-     "link": "https://www.newspim.com/news/view/20261126001113",
-     "host": "newspim.com",
-     "at": "2026-11-26T06:50:00.000Z"
-    },
-    {
      "title": "한은, '5대 2'로 기준금리 3.25% 인상…6개월 뒤 전망은 3.50%",
      "link": "https://www.greened.kr/news/articleView.html?idxno=355671",
      "host": "greened.kr",
      "at": "2026-11-26T06:38:00.000Z"
+    },
+    {
+     "title": "한은, 기준금리 3.25%로 인상...\"반도체 호황, 물가는 부담\"",
+     "link": "https://www.insight.co.kr/news/583658",
+     "host": "insight.co.kr",
+     "at": "2026-11-26T05:24:00.000Z"
+    },
+    {
+     "title": "반도체 호황·물가 부담에 '긴축 고삐'…한은, 기준금리 3.25%로 인상",
+     "link": "https://www.econovill.com/news/articleView.html?idxno=758585",
+     "host": "econovill.com",
+     "at": "2026-11-26T04:54:00.000Z"
     }
    ],
    "assess": {
@@ -685,12 +692,12 @@
    }
   },
   {
-   "id": "f40fiw",
-   "title": "한은, 내년 성장률 4.1% 전망…2008년 이후 최대폭 상향",
-   "firstSeen": "2026-11-26T01:12:00.000Z",
-   "lastSeen": "2026-11-26T07:00:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "id": "6jc6wk",
+   "title": "3%대 넘어 4%대로…한은, 내년 성장률 전망 ‘파격 상향’",
+   "firstSeen": "2026-11-26T04:57:00.000Z",
+   "lastSeen": "2026-11-26T07:14:00.000Z",
+   "count": 13,
+   "sources": 13,
    "topics": [
     "rates",
     "fx"
@@ -698,10 +705,16 @@
    "critical": [],
    "links": [
     {
-     "title": "반도체 호황에 한은 내년 성장률 2.9→4.1%…AI 투자 조정돼도 3.4%(종합...",
-     "link": "https://www.news1.kr/economy/trend/6367359",
-     "host": "news1.kr",
-     "at": "2026-11-26T07:00:00.000Z"
+     "title": "한은, 내년 성장률 4.1%로 대폭 상향…경상흑자 5천400억달러(종합3보)",
+     "link": "https://www.yna.co.kr/view/AKR20261126059053002?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-26T07:14:00.000Z"
+    },
+    {
+     "title": "[그래픽뉴스] 한은, 내년 성장률 4.1%로 대폭 상향…기준금리 3.25% 인상",
+     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316449",
+     "host": "jeonmae.co.kr",
+     "at": "2026-11-26T07:10:00.000Z"
     },
     {
      "title": "한은 “내년 경상흑자 5400억달러...반도체 악재 와도 3% 중반 성장”",
@@ -710,16 +723,10 @@
      "at": "2026-11-26T07:00:00.000Z"
     },
     {
-     "title": "[11월 금통위] 한은, 내년 성장률 전망 4.1%로…2008년 이후 최대폭 상향",
-     "link": "https://www.ajunews.com/view/20261126144908614",
-     "host": "ajunews.com",
-     "at": "2026-11-26T06:56:00.000Z"
-    },
-    {
-     "title": "한은, 내년 성장률 전망 4.1%로 대폭 상향…올해는 3.9%",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865156&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-26T06:32:00.000Z"
+     "title": "반도체 호황에 한은 내년 성장률 2.9→4.1%…AI 투자 조정돼도 3.4%(종합...",
+     "link": "https://www.news1.kr/economy/trend/6367359",
+     "host": "news1.kr",
+     "at": "2026-11-26T07:00:00.000Z"
     }
    ],
    "assess": {
@@ -771,125 +778,99 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.66,
+     "change": 1.78,
      "unit": "%",
      "z": 1.1
     },
     "why": [
      "핵심 단어",
-     "금 +1.66%"
+     "금 +1.78%"
     ]
    }
   },
   {
-   "id": "350ggq",
-   "title": "코스피, 장 초반 0.66% 올라 4700선 회복...반도체주 반등",
-   "firstSeen": "2026-11-26T00:16:00.000Z",
-   "lastSeen": "2026-11-26T07:04:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "id": "1epeupm",
+   "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
+   "firstSeen": "2026-11-25T07:56:00.000Z",
+   "lastSeen": "2026-11-25T11:32:00.000Z",
+   "count": 2,
+   "sources": 1,
    "topics": [
-    "rates",
-    "market"
+    "credit"
    ],
-   "critical": [],
+   "critical": [
+    "credit"
+   ],
    "links": [
     {
-     "title": "코스피, 강보합 4700선 회복…삼전‧SK하닉 소폭 상승 마감",
-     "link": "https://www.etoday.co.kr/news/view/2653542",
-     "host": "etoday.co.kr",
-     "at": "2026-11-26T07:04:00.000Z"
+     "title": "뱅크런 막아라…은행 유동성 ‘매일 관리’",
+     "link": "https://www.khan.co.kr/article/202611252032005",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T11:32:00.000Z"
     },
     {
-     "title": "금리 인상 무난히 소화한 코스피, 4700선 회복…‘삼전닉스’ 상승",
-     "link": "https://www.dt.co.kr/article/12097464?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-26T07:04:00.000Z"
-    },
-    {
-     "title": "코스피, 기관 '사자'에 강보합…4700선 회복 마감",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904571",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-26T07:04:00.000Z"
-    },
-    {
-     "title": "코스피, 6% 폭락 뒤 0.29% 반등…4700선 턱걸이",
-     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=316313",
-     "host": "straightnews.co.kr",
-     "at": "2026-11-26T07:04:00.000Z"
+     "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
+     "link": "https://www.khan.co.kr/article/202611251656001",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T07:56:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
     "score": 29,
-    "spike": 1.4,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1
-    },
-    "why": [
-     "미 10년 금리 -5.6bp"
-    ]
-   }
-  },
-  {
-   "id": "qi8tec",
-   "title": "美, 韓 반도체·車 지원 '과잉생산' 지목…관세 15% 유지·최대 25% 가능...",
-   "firstSeen": "2026-11-26T00:42:00.000Z",
-   "lastSeen": "2026-11-26T07:02:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "politics",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 과잉생산 관세에 EU·中 반발…日 '유감'·한국 일단 안도",
-     "link": "https://www.ajunews.com/view/20261126155046941",
-     "host": "ajunews.com",
-     "at": "2026-11-26T07:02:00.000Z"
-    },
-    {
-     "title": "美 과잉생산 관세 예고...중국 최대 40% 가능, EU 반발",
-     "link": "https://www.m-economynews.com/news/article.html?no=73638",
-     "host": "m-economynews.com",
-     "at": "2026-11-26T06:28:00.000Z"
-    },
-    {
-     "title": "미 ‘과잉생산 관세’에 각국 반발…민주 “문제는 중국, 트럼프는 배우...",
-     "link": "https://www.hani.co.kr/arti/international/international_general/1289224.html",
-     "host": "hani.co.kr",
-     "at": "2026-11-26T05:12:00.000Z"
-    },
-    {
-     "title": "미국, 중국 등 14개 경제주체에 '과잉생산' 관세...한국은 15% 상한 유지...",
-     "link": "https://www.bbc.com/korean/articles/cme3dn0n5j49o?xtor=AL-73-%5Bpartner%5D-%5Bnaver%5D-%5Bheadline%5D-%5Bkorean%5D-%5Bbizdev%5D-%5Bisapi%5D",
-     "host": "bbc.com",
-     "at": "2026-11-26T03:17:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 1.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^GSPC",
-     "label": "S&P 500",
-     "change": -0.25,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
      "unit": "%",
-     "z": -0.2
+     "z": 0.6
     },
     "why": [
-     "S&P 500 -0.25%"
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "1veb08o",
+   "title": "공매도 금지로 코스피 심폐 소생? \"전면 중단 조심해야 하는 이유\"",
+   "firstSeen": "2026-11-25T22:58:00.000Z",
+   "lastSeen": "2026-11-25T22:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "policy"
+   ],
+   "critical": [
+    "policy"
+   ],
+   "links": [
+    {
+     "title": "공매도 금지로 코스피 심폐 소생? \"전면 중단 조심해야 하는 이유\"",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611260758387440",
+     "host": "ytn.co.kr",
+     "at": "2026-11-25T22:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 29,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 0.29,
+     "unit": "%",
+     "z": 0.1
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 +0.29%"
     ]
    }
   }
