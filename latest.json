@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T14:28:34.773Z",
+ "updatedAt": "2026-11-26T14:47:44.917Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1343.27001953125,
-   "change": 0.05,
+   "last": 1343.719970703125,
+   "change": 0.08,
    "z": 0.1,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 84.69999694824219,
-   "change": 1.22,
+   "last": 84.68000030517578,
+   "change": 1.2,
    "z": 0.4,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3601.699951171875,
-   "change": 1.86,
-   "z": 1.2,
+   "last": 3608,
+   "change": 2.04,
+   "z": 1.3,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -98,9 +98,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 27.110000610351562,
-   "change": -4.17,
-   "z": -0.3,
+   "last": 26.8700008392334,
+   "change": -5.02,
+   "z": -0.4,
    "sd": 12.996579075365517,
    "source": "Yahoo",
    "checked": true
@@ -119,20 +119,20 @@
   }
  ],
  "spikes": {
-  "war": -1,
+  "war": -0.9,
   "politics": -1.3,
-  "rates": -0.1,
-  "trade": -1.4,
+  "rates": -0.2,
+  "trade": -1.1,
   "fx": -0.2,
-  "energy": -0.6,
-  "market": -1.7,
+  "energy": -0.4,
+  "market": -2.2,
   "credit": -0.3,
   "disaster": 0,
   "policy": -0.7
  },
  "rates": {
   "war": {
-   "rate": 0.2,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 1.8,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.7,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.6,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -274,20 +274,103 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 34,
+    "score": 36,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.86,
+     "change": 2.04,
      "unit": "%",
-     "z": 1.2,
+     "z": 1.3,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '계엄'",
-     "금 +1.86%"
+     "금 +2.04%"
+    ]
+   }
+  },
+  {
+   "id": "1jp94pj",
+   "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
+   "firstSeen": "2026-11-25T21:00:00.000Z",
+   "lastSeen": "2026-11-25T21:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904439",
+     "host": "newsworks.co.kr",
+     "at": "2026-11-25T21:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 33,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 2.04,
+     "unit": "%",
+     "z": 1.3,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '계엄'",
+     "금 +2.04%"
+    ]
+   }
+  },
+  {
+   "id": "1pt9tl2",
+   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+   "firstSeen": "2026-11-26T07:31:00.000Z",
+   "lastSeen": "2026-11-26T07:31:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/26/20261126500259?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-26T07:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 33,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 2.04,
+     "unit": "%",
+     "z": 1.3,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '긴급회의'",
+     "금 +2.04%"
     ]
    }
   },
@@ -327,97 +410,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.17,
+     "change": -5.02,
      "unit": "%",
-     "z": -0.3,
+     "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −4.17%"
-    ]
-   }
-  },
-  {
-   "id": "1jp94pj",
-   "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-   "firstSeen": "2026-11-25T21:00:00.000Z",
-   "lastSeen": "2026-11-25T21:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904439",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-25T21:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 31,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.86,
-     "unit": "%",
-     "z": 1.2,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '계엄'",
-     "금 +1.86%"
-    ]
-   }
-  },
-  {
-   "id": "1pt9tl2",
-   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-   "firstSeen": "2026-11-26T07:31:00.000Z",
-   "lastSeen": "2026-11-26T07:31:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/26/20261126500259?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-26T07:31:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 31,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.86,
-     "unit": "%",
-     "z": 1.2,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '긴급회의'",
-     "금 +1.86%"
+     "공포지수(VIX) −5.02%"
     ]
    }
   },
@@ -493,14 +493,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.17,
+     "change": -5.02,
      "unit": "%",
-     "z": -0.3,
+     "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '공매도 금지'",
-     "공포지수(VIX) −4.17%"
+     "공포지수(VIX) −5.02%"
     ]
    }
   },
@@ -534,14 +534,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.17,
+     "change": -5.02,
      "unit": "%",
-     "z": -0.3,
+     "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −4.17%"
+     "공포지수(VIX) −5.02%"
     ]
    }
   },
@@ -575,24 +575,24 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.17,
+     "change": -5.02,
      "unit": "%",
-     "z": -0.3,
+     "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −4.17%"
+     "공포지수(VIX) −5.02%"
     ]
    }
   },
   {
-   "id": "1ehlmcp",
-   "title": "한은, 기준금리 연 3.25%로 0.25%p 인상…올해 성장률 전망 3.9%로 대폭 상...",
-   "firstSeen": "2026-11-26T01:02:00.000Z",
+   "id": "6jc6wk",
+   "title": "한은 금통위 기준금리 0.25%p 인상 내년 성장률은 2.9%→4.1%로 상향",
+   "firstSeen": "2026-11-26T01:36:00.000Z",
    "lastSeen": "2026-11-26T14:13:00.000Z",
-   "count": 26,
-   "sources": 24,
+   "count": 23,
+   "sources": 21,
    "topics": [
     "rates"
    ],
@@ -611,10 +611,10 @@
      "at": "2026-11-26T14:09:00.000Z"
     },
     {
-     "title": "한은, 기준금리 3.25%로 인상…성장률 전망 4.1% '파격 상향'",
-     "link": "http://www.newsbrite.net/news/articleView.html?idxno=201794",
-     "host": "newsbrite.net",
-     "at": "2026-11-26T13:12:00.000Z"
+     "title": "물가·성장률 고공행진에 추가 인상 하나?",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723974&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-26T14:06:00.000Z"
     },
     {
      "title": "기준금리 연 3.25%로 인상...내년 초도 금리 오를까?",
@@ -643,12 +643,12 @@
    }
   },
   {
-   "id": "1ro2v7w",
-   "title": "한은 “내년 경상흑자 5400억달러...반도체 악재 와도 3% 중반 성장”",
-   "firstSeen": "2026-11-26T07:00:00.000Z",
-   "lastSeen": "2026-11-26T12:15:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "id": "6jc6wk",
+   "title": "기준금리 3.25% 됐다…내년 성장률 4.1%로 깜짝 상향",
+   "firstSeen": "2026-11-26T03:03:00.000Z",
+   "lastSeen": "2026-11-26T13:12:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "rates",
     "fx"
@@ -656,34 +656,34 @@
    "critical": [],
    "links": [
     {
+     "title": "한은, 기준금리 3.25%로 인상…성장률 전망 4.1% '파격 상향'",
+     "link": "http://www.newsbrite.net/news/articleView.html?idxno=201794",
+     "host": "newsbrite.net",
+     "at": "2026-11-26T13:12:00.000Z"
+    },
+    {
      "title": "성장률 대폭 상향…올해 3.9% 내년엔 4.1%",
      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723782&ref=A",
      "host": "news.kbs.co.kr",
      "at": "2026-11-26T12:15:00.000Z"
     },
     {
-     "title": "반도체 호황에 눈높이 높인 한은···내년 성장률 4.1% 전망",
-     "link": "https://www.todaykorea.co.kr/news/articleView.html?idxno=409293",
-     "host": "todaykorea.co.kr",
-     "at": "2026-11-26T07:56:00.000Z"
+     "title": "한은, 기준금리 0.25%p 인상…내년 성장률은 4.1%로 전망",
+     "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=90308",
+     "host": "industrynews.co.kr",
+     "at": "2026-11-26T09:14:00.000Z"
     },
     {
      "title": "반도체 호황에 성장률 ‘상향’…경상흑자 올해 5000억달러·내년 5400억...",
      "link": "http://www.joseilbo.com/news/news_read.php?uid=580540&class=18&grp=",
      "host": "joseilbo.com",
      "at": "2026-11-26T07:55:00.000Z"
-    },
-    {
-     "title": "한은, 내년 성장률 4.1% 전망…반도체 호황에 투자·소비 선순환 기대",
-     "link": "https://www.newspim.com/news/view/20261126001210",
-     "host": "newspim.com",
-     "at": "2026-11-26T07:28:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 17,
+    "score": 19,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -700,12 +700,70 @@
    }
   },
   {
+   "id": "1peame7",
+   "title": "[포착] 우주에서도 사우디의 ‘굴욕’ 보였다…후티에 또 박살난 최대 ...",
+   "firstSeen": "2026-11-26T04:03:00.000Z",
+   "lastSeen": "2026-11-26T13:56:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국제유가 전망, 사우디 정유시설 공격에 급등락…29일 OPEC+ 분수령",
+     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16287380",
+     "host": "topstarnews.net",
+     "at": "2026-11-26T13:56:00.000Z"
+    },
+    {
+     "title": "유가 또 들썩 … 후티, 사우디 정유시설 공격",
+     "link": "https://www.mk.co.kr/article/12219683",
+     "host": "mk.co.kr",
+     "at": "2026-11-26T08:43:00.000Z"
+    },
+    {
+     "title": "후티, 사우디 최대 정유시설 공격 주장에 브렌트유 3.51% 급등…94.61달러",
+     "link": "https://www.wikitree.co.kr/articles/1178107",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-26T08:40:00.000Z"
+    },
+    {
+     "title": "[포착] 우주에서도 사우디의 ‘굴욕’ 보였다…후티에 또 박살난 최대 ...",
+     "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261126601006&wlog_tag3=naver",
+     "host": "nownews.seoul.co.kr",
+     "at": "2026-11-26T04:03:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 17,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 2.04,
+     "unit": "%",
+     "z": 1.3,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "금 +2.04%"
+    ]
+   }
+  },
+  {
    "id": "350ggq",
    "title": "코스피, 장 초반 0.66% 올라 4700선 회복...반도체주 반등",
    "firstSeen": "2026-11-26T00:16:00.000Z",
    "lastSeen": "2026-11-26T11:45:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "count": 5,
+   "sources": 5,
    "topics": [
     "rates",
     "market"
@@ -725,22 +783,22 @@
      "at": "2026-11-26T07:41:00.000Z"
     },
     {
-     "title": "기관 '사자' 코스피 강보합…삼성전자 0.35%↑",
-     "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=366682",
-     "host": "smedaily.co.kr",
-     "at": "2026-11-26T07:00:00.000Z"
-    },
-    {
      "title": "[食전食후] 코스피, 급락 하루 만에 4750선 회복…외국인·기관 '사자'",
      "link": "https://www.ajunews.com/view/20261126124531155",
      "host": "ajunews.com",
      "at": "2026-11-26T03:52:00.000Z"
+    },
+    {
+     "title": "코스피, 급락 딛고 4700선 회복…증안펀드 대책 주목",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/26/5SNP4CHRABDYNB7RTUUHYV7JYA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-26T00:16:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 16,
+    "score": 15,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -802,71 +860,13 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.17,
+     "change": -5.02,
      "unit": "%",
-     "z": -0.3,
+     "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
-     "공포지수(VIX) −4.17%"
-    ]
-   }
-  },
-  {
-   "id": "1peame7",
-   "title": "[포착] 우주에서도 사우디의 ‘굴욕’ 보였다…후티에 또 박살난 최대 ...",
-   "firstSeen": "2026-11-26T04:03:00.000Z",
-   "lastSeen": "2026-11-26T13:56:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국제유가 전망, 사우디 정유시설 공격에 급등락…29일 OPEC+ 분수령",
-     "link": "https://www.topstarnews.net/news/articleView.html?idxno=16287380",
-     "host": "topstarnews.net",
-     "at": "2026-11-26T13:56:00.000Z"
-    },
-    {
-     "title": "유가 또 들썩 … 후티, 사우디 정유시설 공격",
-     "link": "https://www.mk.co.kr/article/12219683",
-     "host": "mk.co.kr",
-     "at": "2026-11-26T08:43:00.000Z"
-    },
-    {
-     "title": "후티, 사우디 최대 정유시설 공격 주장에 브렌트유 3.51% 급등…94.61달러",
-     "link": "https://www.wikitree.co.kr/articles/1178107",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-26T08:40:00.000Z"
-    },
-    {
-     "title": "[포착] 우주에서도 사우디의 ‘굴욕’ 보였다…후티에 또 박살난 최대 ...",
-     "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261126601006&wlog_tag3=naver",
-     "host": "nownews.seoul.co.kr",
-     "at": "2026-11-26T04:03:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 15,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.86,
-     "unit": "%",
-     "z": 1.2,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "금 +1.86%"
+     "공포지수(VIX) −5.02%"
     ]
    }
   },
