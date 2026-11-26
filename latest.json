@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T12:33:37.047Z",
+ "updatedAt": "2026-11-26T12:47:40.519Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1344.489990234375,
-   "change": 0.14,
+   "last": 1344,
+   "change": 0.1,
    "z": 0.2,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 84.52999877929688,
-   "change": 1.02,
+   "last": 84.62999725341797,
+   "change": 1.14,
    "z": 0.4,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3592.60009765625,
-   "change": 1.61,
-   "z": 1,
+   "last": 3599.199951171875,
+   "change": 1.79,
+   "z": 1.2,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 26.8799991607666,
-   "change": -4.98,
+   "last": 26.940000534057617,
+   "change": -4.77,
    "z": -0.4,
    "sd": 12.996579075365517,
    "source": "Yahoo",
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": -1,
+  "war": -0.8,
   "politics": -1.1,
   "rates": 0.1,
   "trade": 0,
   "fx": -0.2,
   "energy": -0.3,
-  "market": -0.5,
+  "market": -0.8,
   "credit": -0.3,
   "disaster": 0,
   "policy": -0.3
  },
  "rates": {
   "war": {
-   "rate": 0.2,
-   "saturated": 0,
-   "queries": 3
-  },
-  "politics": {
    "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
+  "politics": {
+   "rate": 0.3,
+   "saturated": 0,
+   "queries": 3
+  },
   "rates": {
-   "rate": 2.7,
+   "rate": 2.8,
    "saturated": 1,
    "queries": 3
   },
@@ -162,8 +162,8 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.1,
-   "saturated": 1,
+   "rate": 2.8,
+   "saturated": 0,
    "queries": 3
   },
   "credit": {
@@ -244,6 +244,54 @@
    }
   },
   {
+   "id": "1wsbaf2",
+   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
+   "firstSeen": "2026-11-25T13:26:00.000Z",
+   "lastSeen": "2026-11-26T02:16:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "박용진, 조희대 탄핵 추진에 “실익 없어…민주당 책임으로 돌아와”",
+     "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-26T02:16:00.000Z"
+    },
+    {
+     "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
+     "link": "https://www.mk.co.kr/article/12219128",
+     "host": "mk.co.kr",
+     "at": "2026-11-26T01:47:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 34,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.79,
+     "unit": "%",
+     "z": 1.2,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '계엄'",
+     "금 +1.79%"
+    ]
+   }
+  },
+  {
    "id": "155f6dn",
    "title": "\"사이드카 정도론 놀라지 않아\"…AI發 롤러코스터 장세 언제까지?",
    "firstSeen": "2026-11-25T22:00:00.000Z",
@@ -279,62 +327,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.98,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −4.98%"
-    ]
-   }
-  },
-  {
-   "id": "1wsbaf2",
-   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-   "firstSeen": "2026-11-25T13:26:00.000Z",
-   "lastSeen": "2026-11-26T02:16:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "박용진, 조희대 탄핵 추진에 “실익 없어…민주당 책임으로 돌아와”",
-     "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-26T02:16:00.000Z"
-    },
-    {
-     "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-     "link": "https://www.mk.co.kr/article/12219128",
-     "host": "mk.co.kr",
-     "at": "2026-11-26T01:47:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 31,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.61,
-     "unit": "%",
-     "z": 1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '계엄'",
-     "금 +1.61%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -363,20 +363,61 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
+    "score": 31,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.61,
+     "change": 1.79,
      "unit": "%",
-     "z": 1,
+     "z": 1.2,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '계엄'",
-     "금 +1.61%"
+     "금 +1.79%"
+    ]
+   }
+  },
+  {
+   "id": "1pt9tl2",
+   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+   "firstSeen": "2026-11-26T07:31:00.000Z",
+   "lastSeen": "2026-11-26T07:31:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/26/20261126500259?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-26T07:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 31,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.79,
+     "unit": "%",
+     "z": 1.2,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '긴급회의'",
+     "금 +1.79%"
     ]
    }
   },
@@ -452,14 +493,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.98,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '공매도 금지'",
-     "공포지수(VIX) −4.98%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -493,14 +534,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.98,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −4.98%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -534,55 +575,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -4.98,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −4.98%"
-    ]
-   }
-  },
-  {
-   "id": "1pt9tl2",
-   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-   "firstSeen": "2026-11-26T07:31:00.000Z",
-   "lastSeen": "2026-11-26T07:31:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/26/20261126500259?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-26T07:31:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.61,
-     "unit": "%",
-     "z": 1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '긴급회의'",
-     "금 +1.61%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -646,15 +646,21 @@
    "id": "350ggq",
    "title": "코스피, 장 초반 0.66% 올라 4700선 회복...반도체주 반등",
    "firstSeen": "2026-11-26T00:16:00.000Z",
-   "lastSeen": "2026-11-26T11:45:00.000Z",
-   "count": 11,
-   "sources": 10,
+   "lastSeen": "2026-11-26T12:42:00.000Z",
+   "count": 12,
+   "sources": 11,
    "topics": [
     "rates",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "코스피, 기관 순매수세에 강보합 마감",
+     "link": "https://www.betanews.net/article/view/beta202611260144",
+     "host": "betanews.net",
+     "at": "2026-11-26T12:42:00.000Z"
+    },
     {
      "title": "코스피, 금리인상에 뒷심 부족…4,700선은 회복",
      "link": "http://www.yonhapnewstv.co.kr/news/MYH20261126204403QK0",
@@ -672,75 +678,12 @@
      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723512&ref=A",
      "host": "news.kbs.co.kr",
      "at": "2026-11-26T09:06:00.000Z"
-    },
-    {
-     "title": "코스피, 6%대 급락 하루 만에 0.3% 반등",
-     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=55196",
-     "host": "koreareport.co.kr",
-     "at": "2026-11-26T08:58:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
     "score": 21,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미국 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "미국 10년 금리 −0.06%p"
-    ]
-   }
-  },
-  {
-   "id": "1ro2v7w",
-   "title": "한은 “내년 경상흑자 5400억달러...반도체 악재 와도 3% 중반 성장”",
-   "firstSeen": "2026-11-26T07:00:00.000Z",
-   "lastSeen": "2026-11-26T12:15:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "성장률 대폭 상향…올해 3.9% 내년엔 4.1%",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723782&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-26T12:15:00.000Z"
-    },
-    {
-     "title": "내년 성장률 4.1% 깜짝 상향...반도체 호황이 이끌어",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611261838328927",
-     "host": "ytn.co.kr",
-     "at": "2026-11-26T09:38:00.000Z"
-    },
-    {
-     "title": "반도체 호황에 성장률 ‘상향’…경상흑자 올해 5000억달러·내년 5400억...",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=580540&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-26T07:55:00.000Z"
-    },
-    {
-     "title": "한은, 내년 성장률 4.1% 상향…6년 만에 4%대 복귀 전망",
-     "link": "https://www.goodnews1.com/news/articleView.html?idxno=466699",
-     "host": "goodnews1.com",
-     "at": "2026-11-26T07:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 17,
     "spike": 0.1,
     "news": false,
     "reaction": {
@@ -791,6 +734,63 @@
      "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5233030",
      "host": "mbn.mk.co.kr",
      "at": "2026-11-26T01:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 16,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "미국 10년 금리 −0.06%p"
+    ]
+   }
+  },
+  {
+   "id": "1ro2v7w",
+   "title": "한은 “내년 경상흑자 5400억달러...반도체 악재 와도 3% 중반 성장”",
+   "firstSeen": "2026-11-26T07:00:00.000Z",
+   "lastSeen": "2026-11-26T12:15:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "성장률 대폭 상향…올해 3.9% 내년엔 4.1%",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723782&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-26T12:15:00.000Z"
+    },
+    {
+     "title": "반도체 호황에 성장률 ‘상향’…경상흑자 올해 5000억달러·내년 5400억...",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=580540&class=18&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-26T07:55:00.000Z"
+    },
+    {
+     "title": "한은, 내년 성장률 4.1% 상향…6년 만에 4%대 복귀 전망",
+     "link": "https://www.goodnews1.com/news/articleView.html?idxno=466699",
+     "host": "goodnews1.com",
+     "at": "2026-11-26T07:28:00.000Z"
+    },
+    {
+     "title": "한은, 내년 성장률 4.1%로 대폭 상향…경상흑자 5천400억달러(종합3보)",
+     "link": "https://www.yna.co.kr/view/AKR20261126059053002?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-26T07:14:00.000Z"
     }
    ],
    "assess": {
