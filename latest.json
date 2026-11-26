@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T07:15:53.338Z",
+ "updatedAt": "2026-11-26T07:29:32.590Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -32,7 +32,7 @@
   },
   {
    "symbol": "^GSPC",
-   "label": "S&P 500",
+   "label": "S&P500",
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
@@ -58,25 +58,25 @@
   },
   {
    "symbol": "KRW=X",
-   "label": "원/달러",
+   "label": "달러 환율",
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1342.780029296875,
-   "change": 0.01,
+   "last": 1343.030029296875,
+   "change": 0.03,
    "z": 0,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
   },
   {
    "symbol": "CL=F",
-   "label": "WTI 유가",
+   "label": "유가(WTI)",
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 83.87999725341797,
-   "change": 0.24,
-   "z": 0.1,
+   "last": 83.75,
+   "change": 0.08,
+   "z": 0,
    "sd": 2.870433546363806,
    "source": "Yahoo"
   },
@@ -86,15 +86,15 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3598.800048828125,
-   "change": 1.78,
-   "z": 1.1,
+   "last": 3600.300048828125,
+   "change": 1.82,
+   "z": 1.2,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
   {
    "symbol": "^VIX",
-   "label": "VIX 변동성",
+   "label": "공포지수(VIX)",
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
@@ -107,7 +107,7 @@
   },
   {
    "symbol": "^TNX",
-   "label": "미 10년 금리",
+   "label": "미국 10년 금리",
    "unit": "bp",
    "available": true,
    "date": "2026-11-25",
@@ -119,25 +119,25 @@
   }
  ],
  "spikes": {
-  "war": 0.8,
-  "politics": -0.7,
-  "rates": 1.4,
+  "war": 0.7,
+  "politics": -0.5,
+  "rates": 1.3,
   "trade": 1.7,
   "fx": -0.2,
-  "energy": 0.5,
+  "energy": 0.6,
   "market": 0.6,
-  "credit": -0.3,
+  "credit": 0,
   "disaster": 0,
-  "policy": 0.1
+  "policy": 0.4
  },
  "rates": {
   "war": {
-   "rate": 2.4,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.9,
+   "rate": 1.1,
    "saturated": 0,
    "queries": 3
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 1
   },
@@ -167,7 +167,7 @@
    "queries": 3
   },
   "credit": {
-   "rate": 0,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 2
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.7,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 1
   }
@@ -224,113 +224,15 @@
     "news": true,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "146knoq",
-   "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
-   "firstSeen": "2026-11-26T06:38:00.000Z",
-   "lastSeen": "2026-11-26T07:10:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "증시 폭락에 '증안펀드' 만지작…금융위, 5대 금융지주 회장 소집",
-     "link": "http://www.press9.kr/news/articleView.html?idxno=87103",
-     "host": "press9.kr",
-     "at": "2026-11-26T07:10:00.000Z"
-    },
-    {
-     "title": "10조원대 증안펀드 가동 검토…금융위, 30일 시장안정 긴급회의",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=785109",
-     "host": "slist.kr",
-     "at": "2026-11-26T06:50:00.000Z"
-    },
-    {
-     "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
-     "link": "https://www.news1.kr/finance/general-finance/6367286",
-     "host": "news1.kr",
-     "at": "2026-11-26T06:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 39,
-    "spike": 0.6,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1
-    },
-    "why": [
-     "핵심 단어",
-     "미 10년 금리 -5.6bp"
-    ]
-   }
-  },
-  {
-   "id": "1pb8937",
-   "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
-   "firstSeen": "2026-11-25T08:58:00.000Z",
-   "lastSeen": "2026-11-26T01:32:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "이틀에 한 번 울린 '사이드카'... 도입 30년 '증시 안전판' 효용성 도마...",
-     "link": "https://www.lawtv.kr/news/articleView.html?idxno=61531",
-     "host": "lawtv.kr",
-     "at": "2026-11-26T01:32:00.000Z"
-    },
-    {
-     "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
-     "link": "https://www.sedaily.com/article/20118969?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-25T08:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 36,
-    "spike": 0.6,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "큰 사건 단어 '사이드카'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
@@ -371,29 +273,30 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 35,
-    "spike": 0.1,
+    "score": 37,
+    "spike": 0.4,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "큰 사건 단어 '뱅크런'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
   {
    "id": "27n60f",
-   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-   "firstSeen": "2026-11-26T01:47:00.000Z",
+   "title": "김민석 민주당 대표 \"조희대 탄핵 5당 연대·민생 총력\"",
+   "firstSeen": "2026-11-25T13:26:00.000Z",
    "lastSeen": "2026-11-26T02:16:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "count": 3,
+   "sources": 3,
    "topics": [
     "politics"
    ],
@@ -413,24 +316,131 @@
      "link": "https://www.mk.co.kr/article/12219128",
      "host": "mk.co.kr",
      "at": "2026-11-26T01:47:00.000Z"
+    },
+    {
+     "title": "김민석 민주당 대표 \"조희대 탄핵 5당 연대·민생 총력\"",
+     "link": "http://www.breaknews.com/1253997",
+     "host": "breaknews.com",
+     "at": "2026-11-25T13:26:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 33,
+    "score": 37,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.78,
+     "change": 1.82,
      "unit": "%",
-     "z": 1.1
+     "z": 1.2,
+     "date": "2026-11-26"
     },
     "why": [
-     "핵심 단어",
-     "금 +1.78%"
+     "큰 사건 단어 '계엄'",
+     "금 +1.82%"
+    ]
+   }
+  },
+  {
+   "id": "146knoq",
+   "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
+   "firstSeen": "2026-11-26T06:38:00.000Z",
+   "lastSeen": "2026-11-26T07:25:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "policy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "금융위, 금융지주 긴급 소집…10.7조 증안펀드 추가 논의",
+     "link": "https://www.sidae.com/article/2026112615414744443",
+     "host": "sidae.com",
+     "at": "2026-11-26T07:25:00.000Z"
+    },
+    {
+     "title": "10조원대 증안펀드 가동 검토…금융위, 30일 시장안정 긴급회의",
+     "link": "https://www.slist.kr/news/articleView.html?idxno=785109",
+     "host": "slist.kr",
+     "at": "2026-11-26T06:50:00.000Z"
+    },
+    {
+     "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
+     "link": "https://www.news1.kr/finance/general-finance/6367286",
+     "host": "news1.kr",
+     "at": "2026-11-26T06:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 37,
+    "spike": 0.4,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "큰 사건 단어 '긴급회의'",
+     "미국 10년 금리 −0.06%p"
+    ]
+   }
+  },
+  {
+   "id": "1pb8937",
+   "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
+   "firstSeen": "2026-11-25T08:58:00.000Z",
+   "lastSeen": "2026-11-26T01:32:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "이틀에 한 번 울린 '사이드카'... 도입 30년 '증시 안전판' 효용성 도마...",
+     "link": "https://www.lawtv.kr/news/articleView.html?idxno=61531",
+     "host": "lawtv.kr",
+     "at": "2026-11-26T01:32:00.000Z"
+    },
+    {
+     "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
+     "link": "https://www.sedaily.com/article/20118969?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-25T08:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 36,
+    "spike": 0.6,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "공포지수(VIX)",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "큰 사건 단어 '사이드카'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
@@ -458,20 +468,21 @@
    ],
    "assess": {
     "level": "watch",
-    "label": "관찰",
+    "label": "참고",
     "score": 33,
     "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "큰 사건 단어 '사이드카'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
@@ -498,20 +509,21 @@
    ],
    "assess": {
     "level": "watch",
-    "label": "관찰",
+    "label": "참고",
     "score": 33,
     "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "큰 사건 단어 '사이드카'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
@@ -538,20 +550,21 @@
    ],
    "assess": {
     "level": "watch",
-    "label": "관찰",
+    "label": "참고",
     "score": 33,
     "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "큰 사건 단어 '사이드카'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
@@ -578,20 +591,21 @@
    ],
    "assess": {
     "level": "watch",
-    "label": "관찰",
+    "label": "참고",
     "score": 33,
     "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "큰 사건 단어 '사이드카'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
@@ -619,131 +633,21 @@
    ],
    "assess": {
     "level": "watch",
-    "label": "관찰",
+    "label": "참고",
     "score": 33,
     "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "1ehlmcp",
-   "title": "한은, 기준금리 3.25%로 0.25%p 인상…성장 전망 대폭 높이고 긴축 가속",
-   "firstSeen": "2026-11-26T01:02:00.000Z",
-   "lastSeen": "2026-11-26T06:56:00.000Z",
-   "count": 20,
-   "sources": 18,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "높은 성장률·물가 부담에 한은, 기준금리 3.25%로 인상(종합)",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3452237",
-     "host": "newscj.com",
-     "at": "2026-11-26T06:56:00.000Z"
-    },
-    {
-     "title": "한은, '5대 2'로 기준금리 3.25% 인상…6개월 뒤 전망은 3.50%",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=355671",
-     "host": "greened.kr",
-     "at": "2026-11-26T06:38:00.000Z"
-    },
-    {
-     "title": "한은, 기준금리 3.25%로 인상...\"반도체 호황, 물가는 부담\"",
-     "link": "https://www.insight.co.kr/news/583658",
-     "host": "insight.co.kr",
-     "at": "2026-11-26T05:24:00.000Z"
-    },
-    {
-     "title": "반도체 호황·물가 부담에 '긴축 고삐'…한은, 기준금리 3.25%로 인상",
-     "link": "https://www.econovill.com/news/articleView.html?idxno=758585",
-     "host": "econovill.com",
-     "at": "2026-11-26T04:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1
-    },
-    "why": [
-     "미 10년 금리 -5.6bp"
-    ]
-   }
-  },
-  {
-   "id": "6jc6wk",
-   "title": "3%대 넘어 4%대로…한은, 내년 성장률 전망 ‘파격 상향’",
-   "firstSeen": "2026-11-26T04:57:00.000Z",
-   "lastSeen": "2026-11-26T07:14:00.000Z",
-   "count": 13,
-   "sources": 13,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "한은, 내년 성장률 4.1%로 대폭 상향…경상흑자 5천400억달러(종합3보)",
-     "link": "https://www.yna.co.kr/view/AKR20261126059053002?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-26T07:14:00.000Z"
-    },
-    {
-     "title": "[그래픽뉴스] 한은, 내년 성장률 4.1%로 대폭 상향…기준금리 3.25% 인상",
-     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316449",
-     "host": "jeonmae.co.kr",
-     "at": "2026-11-26T07:10:00.000Z"
-    },
-    {
-     "title": "한은 “내년 경상흑자 5400억달러...반도체 악재 와도 3% 중반 성장”",
-     "link": "https://biz.heraldcorp.com/article/10950705?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-26T07:00:00.000Z"
-    },
-    {
-     "title": "반도체 호황에 한은 내년 성장률 2.9→4.1%…AI 투자 조정돼도 3.4%(종합...",
-     "link": "https://www.news1.kr/economy/trend/6367359",
-     "host": "news1.kr",
-     "at": "2026-11-26T07:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 31,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1
-    },
-    "why": [
-     "미 10년 금리 -5.6bp"
+     "큰 사건 단어 '공매도 금지'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   },
@@ -771,20 +675,175 @@
    ],
    "assess": {
     "level": "watch",
-    "label": "관찰",
-    "score": 30,
+    "label": "참고",
+    "score": 31,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.78,
+     "change": 1.82,
      "unit": "%",
-     "z": 1.1
+     "z": 1.2,
+     "date": "2026-11-26"
     },
     "why": [
-     "핵심 단어",
-     "금 +1.78%"
+     "큰 사건 단어 '계엄'",
+     "금 +1.82%"
+    ]
+   }
+  },
+  {
+   "id": "1veb08o",
+   "title": "공매도 금지로 코스피 심폐 소생? \"전면 중단 조심해야 하는 이유\"",
+   "firstSeen": "2026-11-25T22:58:00.000Z",
+   "lastSeen": "2026-11-25T22:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "policy"
+   ],
+   "critical": [
+    "policy"
+   ],
+   "links": [
+    {
+     "title": "공매도 금지로 코스피 심폐 소생? \"전면 중단 조심해야 하는 이유\"",
+     "link": "https://www.ytn.co.kr/_ln/0102_202611260758387440",
+     "host": "ytn.co.kr",
+     "at": "2026-11-25T22:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 31,
+    "spike": 0.4,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 0.29,
+     "unit": "%",
+     "z": 0.1,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '공매도 금지'",
+     "코스피 +0.29%"
+    ]
+   }
+  },
+  {
+   "id": "1ehlmcp",
+   "title": "한은, 기준금리 3.25%로 0.25%p 인상…성장 전망 대폭 높이고 긴축 가속",
+   "firstSeen": "2026-11-26T01:02:00.000Z",
+   "lastSeen": "2026-11-26T07:29:00.000Z",
+   "count": 21,
+   "sources": 19,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "기준금리 3.25%로 인상… 한은 통화긴축 기조 재확인",
+     "link": "https://www.imaeil.com/page/view/2026112613160224691",
+     "host": "imaeil.com",
+     "at": "2026-11-26T07:29:00.000Z"
+    },
+    {
+     "title": "한은, 기준금리 0.25%p 인상…내년 경제성장률 전망 1.2%p 상향",
+     "link": "https://sports.hankooki.com/news/articleView.html?idxno=6944246",
+     "host": "sports.hankooki.com",
+     "at": "2026-11-26T07:18:00.000Z"
+    },
+    {
+     "title": "높은 성장률·물가 부담에 한은, 기준금리 3.25%로 인상(종합)",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3452237",
+     "host": "newscj.com",
+     "at": "2026-11-26T06:56:00.000Z"
+    },
+    {
+     "title": "한은, '5대 2'로 기준금리 3.25% 인상…6개월 뒤 전망은 3.50%",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=355671",
+     "host": "greened.kr",
+     "at": "2026-11-26T06:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 30,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "미국 10년 금리 −0.06%p"
+    ]
+   }
+  },
+  {
+   "id": "6jc6wk",
+   "title": "한은, 내년 성장률 '2.9→4.1%' 상향…반도체 낙관 땐 '4% 중반' 가능",
+   "firstSeen": "2026-11-26T04:57:00.000Z",
+   "lastSeen": "2026-11-26T07:28:00.000Z",
+   "count": 12,
+   "sources": 12,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "한은, 내년 성장률 4.1% 상향…6년 만에 4%대 복귀 전망",
+     "link": "https://www.goodnews1.com/news/articleView.html?idxno=466699",
+     "host": "goodnews1.com",
+     "at": "2026-11-26T07:28:00.000Z"
+    },
+    {
+     "title": "한은, 내년 성장률 4.1%로 대폭 상향…경상흑자 5천400억달러(종합3보)",
+     "link": "https://www.yna.co.kr/view/AKR20261126059053002?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-26T07:14:00.000Z"
+    },
+    {
+     "title": "[그래픽뉴스] 한은, 내년 성장률 4.1%로 대폭 상향…기준금리 3.25% 인상",
+     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316449",
+     "host": "jeonmae.co.kr",
+     "at": "2026-11-26T07:10:00.000Z"
+    },
+    {
+     "title": "반도체 호황에 한은 내년 성장률 2.9→4.1%…AI 투자 조정돼도 3.4%(종합...",
+     "link": "https://www.news1.kr/economy/trend/6367359",
+     "host": "news1.kr",
+     "at": "2026-11-26T07:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 30,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "미국 10년 금리 −0.06%p"
     ]
    }
   },
@@ -817,65 +876,38 @@
    ],
    "assess": {
     "level": "watch",
-    "label": "관찰",
+    "label": "참고",
     "score": 29,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^VIX",
-     "label": "VIX 변동성",
+     "label": "공포지수(VIX)",
      "change": 7.32,
      "unit": "%",
-     "z": 0.6
+     "z": 0.6,
+     "date": "2026-11-25"
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "1veb08o",
-   "title": "공매도 금지로 코스피 심폐 소생? \"전면 중단 조심해야 하는 이유\"",
-   "firstSeen": "2026-11-25T22:58:00.000Z",
-   "lastSeen": "2026-11-25T22:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "policy"
-   ],
-   "links": [
-    {
-     "title": "공매도 금지로 코스피 심폐 소생? \"전면 중단 조심해야 하는 이유\"",
-     "link": "https://www.ytn.co.kr/_ln/0102_202611260758387440",
-     "host": "ytn.co.kr",
-     "at": "2026-11-25T22:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 29,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 0.29,
-     "unit": "%",
-     "z": 0.1
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 +0.29%"
+     "큰 사건 단어 '뱅크런'",
+     "공포지수(VIX) +7.32%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-26T07:29:32.590Z",
+   "id": "lc4ohe",
+   "level": "caution",
+   "title": "금융당국·5대 금융지주, 디지털 뱅크런 대비 첫 합동 모의훈련",
+   "why": [
+    "큰 사건 단어 '뱅크런'",
+    "공포지수(VIX) +7.32%"
+   ],
+   "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68460",
+   "delivered": false
+  },
   {
    "at": "2026-11-26T07:05:48.527Z",
    "id": "146knoq",
@@ -1102,18 +1134,6 @@
     "VIX 변동성 +7.32%"
    ],
    "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-26T04:16:16.317Z",
-   "id": "qbpuf3",
-   "level": "caution",
-   "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +7.32%"
-   ],
-   "link": "http://www.weeklytoday.com/news/articleView.html?idxno=803511",
    "delivered": false
   }
  ],
