@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T00:54:38.013Z",
+ "updatedAt": "2026-11-26T01:14:43.168Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,8 +10,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 4790.58984375,
-   "change": -4.3,
+   "last": 4787.580078125,
+   "change": -4.36,
    "z": -1.5,
    "sd": 2.9505075076952023,
    "source": "Yahoo",
@@ -23,11 +23,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 670.989990234375,
-   "change": 0.77,
-   "z": 0.3,
+   "last": 666.61,
+   "change": 2.45,
+   "z": 0.9,
    "sd": 2.8687324737066797,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -62,9 +63,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1343.6800537109375,
-   "change": 0.08,
-   "z": 0.1,
+   "last": 1342.6700439453125,
+   "change": 0,
+   "z": 0,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
   },
@@ -74,9 +75,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 84.06999969482422,
-   "change": 2.46,
-   "z": 0.8,
+   "last": 84.2300033569336,
+   "change": 2.66,
+   "z": 0.9,
    "sd": 2.9389073798912984,
    "source": "Yahoo"
   },
@@ -86,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 3599.60009765625,
-   "change": 1.06,
-   "z": 0.7,
+   "last": 3592.5,
+   "change": 0.86,
+   "z": 0.5,
    "sd": 1.5628529130825966,
    "source": "Yahoo"
   },
@@ -119,21 +120,21 @@
   }
  ],
  "spikes": {
-  "war": 2.5,
+  "war": 4,
   "politics": 1.2,
-  "rates": 2.2,
-  "trade": 1.9,
+  "rates": 2.1,
+  "trade": 1.8,
   "fx": -0.2,
   "energy": 2.3,
   "market": 0.8,
-  "credit": 0.9,
+  "credit": 1.1,
   "disaster": 0,
-  "policy": 0.7
+  "policy": 0.5
  },
  "rates": {
   "war": {
-   "rate": 3.8,
-   "saturated": 0,
+   "rate": 5.2,
+   "saturated": 1,
    "queries": 3
   },
   "politics": {
@@ -142,13 +143,13 @@
    "queries": 3
   },
   "rates": {
-   "rate": 6.3,
-   "saturated": 1,
+   "rate": 6.2,
+   "saturated": 2,
    "queries": 3
   },
   "trade": {
-   "rate": 6.7,
-   "saturated": 2,
+   "rate": 6.5,
+   "saturated": 1,
    "queries": 2
   },
   "fx": {
@@ -167,7 +168,7 @@
    "queries": 3
   },
   "credit": {
-   "rate": 0.8,
+   "rate": 1,
    "saturated": 0,
    "queries": 2
   },
@@ -177,7 +178,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2.7,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 1
   }
@@ -188,8 +189,8 @@
    "title": "후티 반군, 사우디아라비아 최대 정유시설 공격 주장",
    "firstSeen": "2026-11-25T19:52:00.000Z",
    "lastSeen": "2026-11-26T00:47:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "count": 6,
+   "sources": 6,
    "topics": [
     "fx",
     "energy",
@@ -227,77 +228,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 68,
+    "score": 67,
     "spike": 2.3,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
-    ]
-   }
-  },
-  {
-   "id": "d09gq6",
-   "title": "[속보] 코스피, 급락 하루 만에 반등…1%대 상승 출발",
-   "firstSeen": "2026-11-26T00:03:00.000Z",
-   "lastSeen": "2026-11-26T00:52:00.000Z",
-   "count": 16,
-   "sources": 16,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[개장시황] 코스피, 외국인 귀환에 1%대 반등…SK하이닉스 4%대 상승",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=566722",
-     "host": "joongangenews.com",
-     "at": "2026-11-26T00:52:00.000Z"
-    },
-    {
-     "title": "코스피, 1.8% 상승한 4780대 출발…코스닥 2.88%↑",
-     "link": "https://www.etnews.com/20261126000107",
-     "host": "etnews.com",
-     "at": "2026-11-26T00:48:00.000Z"
-    },
-    {
-     "title": "코스피, 폭락 하루 만에 2%대 상승...반도체·이차전지주 반등",
-     "link": "https://www.m-economynews.com/news/article.html?no=73599",
-     "host": "m-economynews.com",
-     "at": "2026-11-26T00:48:00.000Z"
-    },
-    {
-     "title": "코스피, 장 초반 2.2% 상승해 4800선 회복…외국인 매수세 유입",
-     "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=90254",
-     "host": "industrynews.co.kr",
-     "at": "2026-11-26T00:46:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 59,
-    "spike": 0.8,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -4.3,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
@@ -306,8 +249,8 @@
    "title": "금융당국, 디지털 뱅크런 대비…합동 모의훈련",
    "firstSeen": "2026-11-25T06:00:00.000Z",
    "lastSeen": "2026-11-25T07:52:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "count": 11,
+   "sources": 11,
    "topics": [
     "credit",
     "policy"
@@ -329,10 +272,10 @@
      "at": "2026-11-25T07:34:00.000Z"
     },
     {
-     "title": "'사이버 공격', 건전성 위협 시나리오 포함…금융당국·5대 지주 '디지털...",
-     "link": "https://biz.sbs.co.kr/article_hub/20000348826?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-25T06:48:00.000Z"
+     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
+     "host": "getnews.co.kr",
+     "at": "2026-11-25T07:02:00.000Z"
     },
     {
      "title": "'AI 해킹·디지털 뱅크런' 겹치면 어떻게 막나… 금융당국·5대 금융 첫...",
@@ -344,67 +287,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 59,
-    "spike": 0.9,
+    "score": 61,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
-    ]
-   }
-  },
-  {
-   "id": "wuogwn",
-   "title": "이달 국제유가 급락...중동 긴장보다 '원유 공급 증가' 영향 우위",
-   "firstSeen": "2026-11-25T00:49:00.000Z",
-   "lastSeen": "2026-11-25T01:10:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "energy",
-    "market"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "국제유가, 호르무즈 해협 선박 피해에 2%대 반등...공급 증가에 상승폭...",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=566435",
-     "host": "joongangenews.com",
-     "at": "2026-11-25T01:10:00.000Z"
-    },
-    {
-     "title": "이달 국제유가 급락...중동 긴장보다 '원유 공급 증가' 영향 우위",
-     "link": "https://www.ytn.co.kr/_ln/0104_202611251004079523",
-     "host": "ytn.co.kr",
-     "at": "2026-11-25T01:04:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 59,
-    "spike": 2.5,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -4.3,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
@@ -457,65 +352,65 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
   {
-   "id": "1bsejw9",
-   "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
-   "firstSeen": "2026-11-25T06:00:00.000Z",
-   "lastSeen": "2026-11-25T07:02:00.000Z",
+   "id": "qbpuf3",
+   "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
+   "firstSeen": "2026-11-25T08:37:00.000Z",
+   "lastSeen": "2026-11-26T00:56:00.000Z",
    "count": 3,
    "sources": 3,
    "topics": [
-    "credit"
+    "market"
    ],
    "critical": [
-    "credit"
+    "market"
    ],
    "links": [
     {
-     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
-     "host": "getnews.co.kr",
-     "at": "2026-11-25T07:02:00.000Z"
+     "title": "[위클리오늘] 사이드카 올해 102회 발동…30년 된 증시 안전장치 실효성...",
+     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=803511",
+     "host": "weeklytoday.com",
+     "at": "2026-11-26T00:56:00.000Z"
     },
     {
-     "title": "AI 해킹·디지털 뱅크런 대비…금융당국, 5대 은행과 위기대응 훈련",
-     "link": "https://www.dailian.co.kr/news/view/1719623/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-25T06:40:00.000Z"
+     "title": "투기판인가…韓증시 ‘퐁당퐁당’ 사이드카, 올해 102회",
+     "link": "https://www.munhwa.com/article/11634136?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-25T10:01:00.000Z"
     },
     {
-     "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
-     "link": "https://www.sidae.com/article/2026112508551697703",
-     "host": "sidae.com",
-     "at": "2026-11-25T06:00:00.000Z"
+     "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
+     "link": "https://www.mk.co.kr/article/12218444",
+     "host": "mk.co.kr",
+     "at": "2026-11-25T08:37:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 49,
-    "spike": 0.9,
+    "score": 48,
+    "spike": 0.8,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
@@ -549,74 +444,19 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 46,
-    "spike": 0.9,
+    "score": 47,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
-    ]
-   }
-  },
-  {
-   "id": "1qlagen",
-   "title": "반도체 호황·물가 부담에…한은, 기준금리 3.25%로 인상(종합)",
-   "firstSeen": "2026-11-26T00:52:00.000Z",
-   "lastSeen": "2026-11-26T00:54:00.000Z",
-   "count": 20,
-   "sources": 20,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[속보] 11월 한은 금통위, 기준금리 0.25%p 인상…연 3.25%",
-     "link": "https://www.fntimes.com/html/view.php?ud=202611260950348434179ad43907_18",
-     "host": "fntimes.com",
-     "at": "2026-11-26T00:54:00.000Z"
-    },
-    {
-     "title": "[속보] 한은, 기준금리 연 3.25% 결정…석 달 만에 0.25%p↑",
-     "link": "https://www.cstimes.com/news/articleView.html?idxno=729506",
-     "host": "cstimes.com",
-     "at": "2026-11-26T00:54:00.000Z"
-    },
-    {
-     "title": "[속보] 한은, 기준금리 연 3.25%로 0.25%p 인상",
-     "link": "https://www.viva100.com/article/20261126500375",
-     "host": "viva100.com",
-     "at": "2026-11-26T00:54:00.000Z"
-    },
-    {
-     "title": "[속보] 한은, 기준금리 연 3.00%→3.25%로… 0.25%p 올려",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3452198",
-     "host": "newscj.com",
-     "at": "2026-11-26T00:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 45,
-    "spike": 2.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -4.3,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
@@ -656,21 +496,67 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
   {
-   "id": "qbpuf3",
-   "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
-   "firstSeen": "2026-11-25T08:37:00.000Z",
-   "lastSeen": "2026-11-25T10:01:00.000Z",
+   "id": "1epeupm",
+   "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
+   "firstSeen": "2026-11-25T07:56:00.000Z",
+   "lastSeen": "2026-11-25T11:32:00.000Z",
+   "count": 2,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "뱅크런 막아라…은행 유동성 ‘매일 관리’",
+     "link": "https://www.khan.co.kr/article/202611252032005",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T11:32:00.000Z"
+    },
+    {
+     "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
+     "link": "https://www.khan.co.kr/article/202611251656001",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T07:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 45,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -4.36,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -4.36%"
+    ]
+   }
+  },
+  {
+   "id": "lxzyqd",
+   "title": "한병도 \"국힘, 엉터리 주장으로 자본시장 신뢰 훼손…시장 안정 협력해...",
+   "firstSeen": "2026-11-26T01:00:00.000Z",
+   "lastSeen": "2026-11-26T01:08:00.000Z",
    "count": 2,
    "sources": 2,
    "topics": [
@@ -681,16 +567,16 @@
    ],
    "links": [
     {
-     "title": "투기판인가…韓증시 ‘퐁당퐁당’ 사이드카, 올해 102회",
-     "link": "https://www.munhwa.com/article/11634136?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-25T10:01:00.000Z"
+     "title": "한병도 \"사이드카 폐지? 국힘, 시장 불안 키우는 엉터리 주장 그만\"",
+     "link": "https://www.mt.co.kr/politics/2026/11/26/2026112609472169257",
+     "host": "mt.co.kr",
+     "at": "2026-11-26T01:08:00.000Z"
     },
     {
-     "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
-     "link": "https://www.mk.co.kr/article/12218444",
-     "host": "mk.co.kr",
-     "at": "2026-11-25T08:37:00.000Z"
+     "title": "한병도 \"국힘, 엉터리 주장으로 자본시장 신뢰 훼손…시장 안정 협력해...",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446634",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-26T01:00:00.000Z"
     }
    ],
    "assess": {
@@ -702,13 +588,13 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
@@ -743,170 +629,126 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
     ]
    }
   },
   {
-   "id": "1epeupm",
-   "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
-   "firstSeen": "2026-11-25T07:56:00.000Z",
-   "lastSeen": "2026-11-25T11:32:00.000Z",
-   "count": 2,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "뱅크런 막아라…은행 유동성 ‘매일 관리’",
-     "link": "https://www.khan.co.kr/article/202611252032005",
-     "host": "khan.co.kr",
-     "at": "2026-11-25T11:32:00.000Z"
-    },
-    {
-     "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
-     "link": "https://www.khan.co.kr/article/202611251656001",
-     "host": "khan.co.kr",
-     "at": "2026-11-25T07:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 44,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -4.3,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "핵심 단어",
-     "코스피 -4.3%"
-    ]
-   }
-  },
-  {
-   "id": "58hcsd",
-   "title": "美, 한국·중국·EU 등 14개 경제권에 신규 관세 추진…韓 15% 상한 유지...",
-   "firstSeen": "2026-11-25T13:30:00.000Z",
-   "lastSeen": "2026-11-26T00:42:00.000Z",
-   "count": 8,
-   "sources": 7,
-   "topics": [
-    "rates",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "美 과잉생산 관세, 한국엔 15% 상한 유지…합의 이행 미흡하면 25% 검토",
-     "link": "https://theopiniontimes.news/%e7%be%8e-%ea%b3%bc%ec%9e%89%ec%83%9d%ec%82%b0-%ea%b4%80%ec%84%b8-%ed%95%9c%ea%b5%ad%ec%97%94-15-%ec%83%81%ed%95%9c-%ec%9c%a0%ec%a7%80%ed%95%a9%ec%9d%98-%ec%9d%b4%ed%96%89-%eb%af%b8%ed%9d%a1/",
-     "host": "theopiniontimes.news",
-     "at": "2026-11-26T00:42:00.000Z"
-    },
-    {
-     "title": "美, 과잉생산 이유로 韓·中·日·EU 등 14개 경제권에 신규 관세 추진",
-     "link": "https://www.theguru.co.kr/news/article.html?no=110209",
-     "host": "theguru.co.kr",
-     "at": "2026-11-25T23:50:00.000Z"
-    },
-    {
-     "title": "[국제금융 브리핑] 미국, 14개 교역국에 과잉생산 관세 예고...10월 근원...",
-     "link": "https://www.tokenpost.kr/news/economy/444594",
-     "host": "tokenpost.kr",
-     "at": "2026-11-25T23:32:00.000Z"
-    },
-    {
-     "title": "美, 한국 등에 '과잉생산' 관세…15% 상한은 유지",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611260825155tx",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-25T23:26:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 43,
-    "spike": 2.2,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": -4.3,
-     "unit": "%",
-     "z": -1.5
-    },
-    "why": [
-     "코스피 -4.3%"
-    ]
-   }
-  },
-  {
-   "id": "m5fjx7",
-   "title": "한은 금통위, 오늘 기준금리 결정…인상 재개·성장률 상향 주목",
-   "firstSeen": "2026-11-25T22:03:00.000Z",
-   "lastSeen": "2026-11-26T00:52:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "id": "1qlagen",
+   "title": "[속보] 반도체 호황·물가 부담에…한은, 기준금리 3.25%로 인상",
+   "firstSeen": "2026-11-26T00:52:00.000Z",
+   "lastSeen": "2026-11-26T01:14:00.000Z",
+   "count": 30,
+   "sources": 30,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[속보] 한은, 올해 마지막 금통위서 기준금리 인상… 연3.25%",
-     "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001868",
-     "host": "it.chosun.com",
-     "at": "2026-11-26T00:52:00.000Z"
+     "title": "[속보] 한국은행, 기준금리 인상...연 3.00%→3.25%",
+     "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=321068",
+     "host": "wolyo.co.kr",
+     "at": "2026-11-26T01:14:00.000Z"
     },
     {
-     "title": "[속보] 한은, 기준금리 연 3.0%→연 3.25% 인상",
-     "link": "https://www.hankyung.com/article/202611261251i",
-     "host": "hankyung.com",
-     "at": "2026-11-26T00:51:00.000Z"
+     "title": "한은, 기준금리 3.25%로 0.25%p 인상…올해 성장률 전망 3.9%로 상향",
+     "link": "http://www.beyondpost.co.kr/view.php?ud=202611261007407528be44c0aacd_30",
+     "host": "beyondpost.co.kr",
+     "at": "2026-11-26T01:14:00.000Z"
     },
     {
-     "title": "올해 마지막 금통위...금리 3.25%로 올리고 성장전망 상향할 듯",
-     "link": "https://www.m-economynews.com/news/article.html?no=73596",
-     "host": "m-economynews.com",
-     "at": "2026-11-26T00:22:00.000Z"
+     "title": "한은, 기준금리 3.25%로 인상…내년 성장률 전망 4.1%로 깜짝 상향",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005970656",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-26T01:14:00.000Z"
     },
     {
-     "title": "성장·물가에 금리 다시 올릴 듯…올해 마지막 금통위 주목",
-     "link": "https://www.goodnews1.com/news/articleView.html?idxno=466669",
-     "host": "goodnews1.com",
-     "at": "2026-11-26T00:22:00.000Z"
+     "title": "한은, 기준금리 3.00%→3.25% 인상…올해 마지막 인상",
+     "link": "https://www.m-i.kr/news/articleView.html?idxno=2023694",
+     "host": "m-i.kr",
+     "at": "2026-11-26T01:14:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 2.2,
+    "score": 44,
+    "spike": 2.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
-     "코스피 -4.3%"
+     "코스피 -4.36%"
+    ]
+   }
+  },
+  {
+   "id": "7ybz4i",
+   "title": "[뉴욕증시] AI 투매 진정, 혼조 '전약후강'···나스닥 4.6%→0.6%↓·앤...",
+   "firstSeen": "2026-11-25T21:57:00.000Z",
+   "lastSeen": "2026-11-26T00:54:00.000Z",
+   "count": 8,
+   "sources": 7,
+   "topics": [
+    "rates",
+    "trade",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[마켓무버]뉴욕증시 혼조…AI 수익성 우려에 물가·관세 악재까지",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=02171366645649656&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-26T00:54:00.000Z"
+    },
+    {
+     "title": "AI 과투자·연준 긴축 우려에 기술주 약세…나스닥 0.62%↓ [뉴욕증시]",
+     "link": "https://www.mk.co.kr/article/12219001",
+     "host": "mk.co.kr",
+     "at": "2026-11-26T00:32:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 투자 불안에 또 롤러코스터...국제유가, 급등",
+     "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=887447",
+     "host": "hansbiz.co.kr",
+     "at": "2026-11-26T00:06:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, AI 투매에 출렁...나스닥 4%대 급락 딛고 낙폭 축소",
+     "link": "https://www.newstopkorea.com/ko-kr/articles/49316",
+     "host": "newstopkorea.com",
+     "at": "2026-11-26T00:00:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -4.36,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "코스피 -4.36%"
     ]
    }
   },
@@ -934,24 +776,156 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 43,
-    "spike": 0.9,
+    "score": 44,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": -4.3,
+     "change": -4.36,
      "unit": "%",
      "z": -1.5
     },
     "why": [
      "핵심 단어",
-     "코스피 -4.3%"
+     "코스피 -4.36%"
+    ]
+   }
+  },
+  {
+   "id": "3r3cpc",
+   "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
+   "firstSeen": "2026-11-25T06:00:00.000Z",
+   "lastSeen": "2026-11-25T09:24:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68460",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-25T09:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 44,
+    "spike": 1.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -4.36,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -4.36%"
+    ]
+   }
+  },
+  {
+   "id": "hluxuw",
+   "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
+   "firstSeen": "2026-11-25T01:51:00.000Z",
+   "lastSeen": "2026-11-25T08:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
+     "link": "https://www.sedaily.com/article/20118969?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-25T08:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 42,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -4.36,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -4.36%"
+    ]
+   }
+  },
+  {
+   "id": "16m186g",
+   "title": "이틀에 한 번 꼴로 사이드카 울렸다…널뛰는 코스피에 개미들 ‘공황’",
+   "firstSeen": "2026-11-25T11:10:00.000Z",
+   "lastSeen": "2026-11-25T11:10:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "이틀에 한 번 꼴로 사이드카 울렸다…널뛰는 코스피에 개미들 ‘공황’",
+     "link": "https://www.mk.co.kr/article/12218652",
+     "host": "mk.co.kr",
+     "at": "2026-11-25T11:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 42,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": -4.36,
+     "unit": "%",
+     "z": -1.5
+    },
+    "why": [
+     "핵심 단어",
+     "코스피 -4.36%"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-26T01:14:43.168Z",
+   "id": "lxzyqd",
+   "level": "caution",
+   "title": "한병도 \"국힘, 엉터리 주장으로 자본시장 신뢰 훼손…시장 안정 협력해...",
+   "why": [
+    "핵심 단어",
+    "코스피 -4.36%"
+   ],
+   "link": "https://www.mt.co.kr/politics/2026/11/26/2026112609472169257",
+   "delivered": false
+  },
   {
    "at": "2026-11-26T00:54:38.013Z",
    "id": "wuogwn",
@@ -1178,18 +1152,6 @@
     "미 10년 금리 -5.6bp"
    ],
    "link": "https://www.tfmedia.co.kr/news/article.html?no=209234",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-25T22:27:30.812Z",
-   "id": "3r3cpc",
-   "level": "caution",
-   "title": "금융당국, 디지털 뱅크런 대비…합동 모의훈련",
-   "why": [
-    "핵심 단어",
-    "코스피 -6.16%(평소의 2.2배)"
-   ],
-   "link": "http://www.iminju.net/news/articleView.html?idxno=173084",
    "delivered": false
   }
  ],
