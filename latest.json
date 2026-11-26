@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T20:47:44.978Z",
+ "updatedAt": "2026-11-26T21:12:12.091Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1343.050048828125,
-   "change": 0.03,
+   "last": 1342.6300048828125,
+   "change": 0,
    "z": 0,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
@@ -121,35 +121,35 @@
   }
  ],
  "spikes": {
-  "war": -0.1,
-  "politics": -1.2,
-  "rates": -0.4,
-  "trade": -0.8,
+  "war": 0,
+  "politics": -0.9,
+  "rates": 0.3,
+  "trade": 0,
   "fx": -0.2,
-  "energy": -0.5,
-  "market": -2.1,
+  "energy": -0.1,
+  "market": -1.7,
   "credit": -0.3,
   "disaster": 0,
-  "policy": -0.8
+  "policy": -0.5
  },
  "rates": {
   "war": {
-   "rate": 1.3,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.2,
+   "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.8,
-   "saturated": 0,
+   "rate": 3.2,
+   "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 2.7,
+   "rate": 4,
    "saturated": 0,
    "queries": 2
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.2,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 3
   },
@@ -179,7 +179,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 1
   }
@@ -189,9 +189,9 @@
    "id": "6v8qpu",
    "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
    "firstSeen": "2026-11-26T06:38:00.000Z",
-   "lastSeen": "2026-11-26T15:18:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "lastSeen": "2026-11-26T10:00:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
     "market",
     "policy"
@@ -200,12 +200,6 @@
     "rates"
    ],
    "links": [
-    {
-     "title": "10조대 증안펀드 규모 늘리나… 내주 금융권 긴급 점검 회의",
-     "link": "https://www.kmib.co.kr/article/20261126501923",
-     "host": "kmib.co.kr",
-     "at": "2026-11-26T15:18:00.000Z"
-    },
     {
      "title": "금융위, 30일 금융권 긴급 점검회의…10조원대 증안펀드 가동 논의",
      "link": "https://www.dt.co.kr/article/12097541?ref=naver",
@@ -223,12 +217,18 @@
      "link": "https://www.newsway.co.kr/news/view?ud=2026112617184807347",
      "host": "newsway.co.kr",
      "at": "2026-11-26T08:30:00.000Z"
+    },
+    {
+     "title": "금융위, 30일 금융권 긴급 점검회의…10조원대 증안펀드 준비 속도",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/26/FZGNIRCOIRHVVEDWS63QA3YRBM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-26T08:30:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 43,
+    "score": 42,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -350,6 +350,103 @@
     },
     "why": [
      "큰 사건 단어 '계엄'",
+     "금 +1.63%"
+    ]
+   }
+  },
+  {
+   "id": "1fge51u",
+   "title": "호르무즈 기뢰 피격 소식에 유가 94달러대…중동 공급 불안 재부각",
+   "firstSeen": "2026-11-26T17:02:00.000Z",
+   "lastSeen": "2026-11-26T20:56:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "war",
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "브렌트유 2% 급등…사우디 정유시설 피격·호르무즈 공급 불안",
+     "link": "https://www.news1.kr/world/international-economy/6367773",
+     "host": "news1.kr",
+     "at": "2026-11-26T20:56:00.000Z"
+    },
+    {
+     "title": "호르무즈 기뢰 피격 소식에 유가 94달러대…중동 공급 불안 재부각",
+     "link": "https://www.g-enews.com/view.php?ud=2026112618042415889a1f309431_1",
+     "host": "g-enews.com",
+     "at": "2026-11-26T17:02:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 33,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.63,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '호르무즈'",
+     "금 +1.63%"
+    ]
+   }
+  },
+  {
+   "id": "1pt9tl2",
+   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+   "firstSeen": "2026-11-26T07:31:00.000Z",
+   "lastSeen": "2026-11-26T21:02:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "[독자투고] 금값 14개월 만에 최저, 자산 배분에서 금은 여전히 유효하...",
+     "link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2241019",
+     "host": "cctoday.co.kr",
+     "at": "2026-11-26T21:02:00.000Z"
+    },
+    {
+     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/27/20261127031002?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-26T20:05:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 33,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.63,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '긴급회의'",
      "금 +1.63%"
     ]
    }
@@ -496,175 +593,6 @@
    }
   },
   {
-   "id": "1jp94pj",
-   "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-   "firstSeen": "2026-11-25T21:00:00.000Z",
-   "lastSeen": "2026-11-25T21:00:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904439",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-25T21:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 30,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.63,
-     "unit": "%",
-     "z": 1.1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '계엄'",
-     "금 +1.63%"
-    ]
-   }
-  },
-  {
-   "id": "bk2ytz",
-   "title": "호르무즈 선박 공격 개전 후 최다…유가 떨어지자 다시 고삐 죄는 이란",
-   "firstSeen": "2026-11-26T15:51:00.000Z",
-   "lastSeen": "2026-11-26T15:51:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "energy"
-   ],
-   "critical": [
-    "war",
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "호르무즈 선박 공격 개전 후 최다…유가 떨어지자 다시 고삐 죄는 이란",
-     "link": "https://www.joongang.co.kr/article/25482439",
-     "host": "joongang.co.kr",
-     "at": "2026-11-26T15:51:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 30,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.63,
-     "unit": "%",
-     "z": 1.1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '개전'",
-     "금 +1.63%"
-    ]
-   }
-  },
-  {
-   "id": "1fge51u",
-   "title": "호르무즈 기뢰 피격 소식에 유가 94달러대…중동 공급 불안 재부각",
-   "firstSeen": "2026-11-26T17:02:00.000Z",
-   "lastSeen": "2026-11-26T17:02:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "fx",
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "호르무즈 기뢰 피격 소식에 유가 94달러대…중동 공급 불안 재부각",
-     "link": "https://www.g-enews.com/view.php?ud=2026112618042415889a1f309431_1",
-     "host": "g-enews.com",
-     "at": "2026-11-26T17:02:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 30,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.63,
-     "unit": "%",
-     "z": 1.1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '호르무즈'",
-     "금 +1.63%"
-    ]
-   }
-  },
-  {
-   "id": "1pt9tl2",
-   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-   "firstSeen": "2026-11-26T07:31:00.000Z",
-   "lastSeen": "2026-11-26T20:05:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/27/20261127031002?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-26T20:05:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 30,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.63,
-     "unit": "%",
-     "z": 1.1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '긴급회의'",
-     "금 +1.63%"
-    ]
-   }
-  },
-  {
    "id": "1veb08o",
    "title": "공매도 금지로 코스피 심폐 소생? \"전면 중단 조심해야 하는 이유\"",
    "firstSeen": "2026-11-25T22:58:00.000Z",
@@ -706,64 +634,28 @@
    }
   },
   {
-   "id": "15v1cl3",
-   "title": "“증안펀드 늘리고 공매도 금지하나”…코스피 급등락에 금융당국 추가...",
-   "firstSeen": "2026-11-26T00:54:00.000Z",
-   "lastSeen": "2026-11-26T00:54:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [
-    "policy"
-   ],
-   "links": [
-    {
-     "title": "“증안펀드 늘리고 공매도 금지하나”…코스피 급등락에 금융당국 추가...",
-     "link": "https://www.ddaily.co.kr/page/view/2026112609460304939",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-26T00:54:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "공포지수(VIX)",
-     "change": -5.27,
-     "unit": "%",
-     "z": -0.4,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '공매도 금지'",
-     "공포지수(VIX) −5.27%"
-    ]
-   }
-  },
-  {
    "id": "krtgft",
    "title": "높아진 성장·물가 부담에 한은 기준금리 3.00%→3.25% 인상",
    "firstSeen": "2026-11-26T01:06:00.000Z",
-   "lastSeen": "2026-11-26T19:00:00.000Z",
-   "count": 23,
-   "sources": 22,
+   "lastSeen": "2026-11-26T21:06:00.000Z",
+   "count": 20,
+   "sources": 19,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "한은, 기준금리 3.25%로 인상…내년 韓성장률 '4.1%' 파격 전망",
-     "link": "https://www.mt.co.kr/economy/2026/11/27/2026112609440331836",
-     "host": "mt.co.kr",
-     "at": "2026-11-26T19:00:00.000Z"
+     "title": "한은 기준금리 인상‥성장률 전망 대폭 상향",
+     "link": "https://imnews.imbc.com/replay/2026/nwtoday/article/6868951_37012.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-26T21:06:00.000Z"
+    },
+    {
+     "title": "[오승호 칼럼] 한은의 기준금리 조정, 반도체 호황 외에 대외통상 불확...",
+     "link": "https://www.ddaily.co.kr/page/view/2026112617513410978",
+     "host": "ddaily.co.kr",
+     "at": "2026-11-26T21:01:00.000Z"
     },
     {
      "title": "한은 기준금리 0.25%포인트 인상…내년 성장률 전망 4.1%",
@@ -772,23 +664,75 @@
      "at": "2026-11-26T16:24:00.000Z"
     },
     {
-     "title": "긴축 시계 다시 돈다… 기준금리 3.25%, 올해 3번째 인상",
-     "link": "https://www.chosun.com/economy/economy_general/2026/11/27/F7SKWKCNJZEBHNI56JZQY6RV3Q/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-26T15:53:00.000Z"
-    },
-    {
-     "title": "한은, 기준금리 3.25%로 인상…내년 성장률 전망 4.1%로↑",
-     "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7195989",
-     "host": "weekly.hankooki.com",
-     "at": "2026-11-26T15:32:00.000Z"
+     "title": "한국은행 기준금리 3.25%로 인상…하반기에만 세번째",
+     "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1073739",
+     "host": "ksilbo.co.kr",
+     "at": "2026-11-26T15:04:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 20,
-    "spike": 0,
+    "score": 22,
+    "spike": 0.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "미국 10년 금리 −0.06%p"
+    ]
+   }
+  },
+  {
+   "id": "h600rb",
+   "title": "차기 ECB 총재 '비둘기파' 스페인 데코스 낙점",
+   "firstSeen": "2026-11-26T14:44:00.000Z",
+   "lastSeen": "2026-11-26T21:10:00.000Z",
+   "count": 7,
+   "sources": 5,
+   "topics": [
+    "politics",
+    "rates",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[김대호 인물] 유럽중앙은행(ECB) 새 총재... 에르난데스 데코스",
+     "link": "https://www.g-enews.com/view.php?ud=20261127060308637906806b77b_1",
+     "host": "g-enews.com",
+     "at": "2026-11-26T21:10:00.000Z"
+    },
+    {
+     "title": ".유로존 차기 ECB 총재에 스페인 데 코스 지명 합의, 물가 4% 압박 속 정...",
+     "link": "https://www.g-enews.com/view.php?ud=2026112705353557452bd56fbc3c_1",
+     "host": "g-enews.com",
+     "at": "2026-11-26T20:40:00.000Z"
+    },
+    {
+     "title": "차기 ECB 총재에 '비둘기파' 스페인 데코스 내정",
+     "link": "https://biz.sbs.co.kr/article_hub/20000349211?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-26T18:51:00.000Z"
+    },
+    {
+     "title": "스페인 출신 첫 ECB 총재 탄생…유럽 금융권력 지형 바뀐다",
+     "link": "https://www.mt.co.kr/world/2026/11/27/2026112702320247234",
+     "host": "mt.co.kr",
+     "at": "2026-11-26T17:39:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 19,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -807,15 +751,21 @@
    "id": "rah970",
    "title": "美 과잉생산 관세에 中 반발…미중 무역휴전 다시 '시험대'",
    "firstSeen": "2026-11-26T06:28:00.000Z",
-   "lastSeen": "2026-11-26T19:08:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "lastSeen": "2026-11-26T20:59:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
     "war",
     "trade"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "中, 美 ‘최대 40% 관세’ 압박에 반발…미중 무역휴전 ‘기로’",
+     "link": "https://biz.heraldcorp.com/article/10951017?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-26T20:59:00.000Z"
+    },
     {
      "title": "\"미국 '과잉 생산' 관세에 중국 반발...무역 휴전 다시 시험대\"",
      "link": "https://www.ytn.co.kr/_ln/0104_202611270408460957",
@@ -833,18 +783,12 @@
      "link": "http://www.yonhapnewstv.co.kr/news/AKR2026112701262578z",
      "host": "yonhapnewstv.co.kr",
      "at": "2026-11-26T16:27:00.000Z"
-    },
-    {
-     "title": "미국 과잉생산 관세에 중국 반발…미중 무역휴전 다시 ‘시험대’",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8724016&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-26T16:04:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 17,
+    "score": 18,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -861,49 +805,155 @@
    }
   },
   {
-   "id": "h600rb",
-   "title": "차기 ECB 총재 '비둘기파' 스페인 데코스 낙점",
-   "firstSeen": "2026-11-26T14:44:00.000Z",
-   "lastSeen": "2026-11-26T20:40:00.000Z",
-   "count": 6,
-   "sources": 5,
+   "id": "gnyjm0",
+   "title": "中, 美 '과잉생산 관세'에 \"단호히 반대\"…대응 조치 시사",
+   "firstSeen": "2026-11-26T08:20:00.000Z",
+   "lastSeen": "2026-11-26T20:03:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "politics",
-    "rates",
-    "market"
+    "war",
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": ".유로존 차기 ECB 총재에 스페인 데 코스 지명 합의, 물가 4% 압박 속 정...",
-     "link": "https://www.g-enews.com/view.php?ud=2026112705353557452bd56fbc3c_1",
-     "host": "g-enews.com",
-     "at": "2026-11-26T20:40:00.000Z"
+     "title": "美 “최대 40% 관세” 中 “단호히 반대”… 관세전쟁 다시 불붙나",
+     "link": "https://www.seoul.co.kr/news/international/2026/11/27/20261127012007?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-26T20:03:00.000Z"
     },
     {
-     "title": "차기 ECB 총재에 '비둘기파' 스페인 데코스 내정",
-     "link": "https://biz.sbs.co.kr/article_hub/20000349211?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-26T18:51:00.000Z"
+     "title": "美 “中 관세 40%까지 올릴수도” 中 “단호히 반대, 대응 조치”",
+     "link": "https://www.donga.com/news/Inter/article/all/20261127/135099597/2",
+     "host": "donga.com",
+     "at": "2026-11-26T19:35:00.000Z"
     },
     {
-     "title": "스페인 출신 첫 ECB 총재 탄생…유럽 금융권력 지형 바뀐다",
-     "link": "https://www.mt.co.kr/world/2026/11/27/2026112702320247234",
-     "host": "mt.co.kr",
-     "at": "2026-11-26T17:39:00.000Z"
+     "title": "중국 \"미국 추가 관세 단호히 반대…정당한 권익 수호할 것\"",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865594&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-26T08:56:00.000Z"
     },
     {
-     "title": "차기 ECB 총재에 '비둘기파' 스페인 데코스(종합)",
-     "link": "https://www.yna.co.kr/view/AKR20261126196051082?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-26T16:56:00.000Z"
+     "title": "中, 美 '과잉생산 관세'에 \"단호히 반대\"…대응 조치 시사",
+     "link": "https://view.asiae.co.kr/article/2026112617201639562",
+     "host": "view.asiae.co.kr",
+     "at": "2026-11-26T08:20:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 16,
+    "score": 14,
     "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.63,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "금 +1.63%"
+    ]
+   }
+  },
+  {
+   "id": "a2x6ol",
+   "title": "[食전食후] 코스피, 급락 하루 만에 4750선 회복…외국인·기관 '사자'",
+   "firstSeen": "2026-11-26T03:52:00.000Z",
+   "lastSeen": "2026-11-26T20:03:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "생방송 중 울먹인 증시 전문가…삼성전자 레버리지 하루 만에 19% 폭락 ...",
+     "link": "https://www.segye.com/newsView/20261127500770?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-26T20:03:00.000Z"
+    },
+    {
+     "title": "[증시 인싸잇] 코스피, 6%대 폭락 하루 만에 반등... 4800선 찍고 상승폭...",
+     "link": "https://www.mediawatch.kr/news/article.html?no=261900",
+     "host": "mediawatch.kr",
+     "at": "2026-11-26T13:50:00.000Z"
+    },
+    {
+     "title": "코스피, 6%대 급락 하루 만에 0.3% 반등",
+     "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=55196",
+     "host": "koreareport.co.kr",
+     "at": "2026-11-26T08:58:00.000Z"
+    },
+    {
+     "title": "[食전食후] 코스피, 급락 하루 만에 4750선 회복…외국인·기관 '사자'",
+     "link": "https://www.ajunews.com/view/20261126124531155",
+     "host": "ajunews.com",
+     "at": "2026-11-26T03:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 12,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "공포지수(VIX)",
+     "change": -5.27,
+     "unit": "%",
+     "z": -0.4,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "공포지수(VIX) −5.27%"
+    ]
+   }
+  },
+  {
+   "id": "vgeqp7",
+   "title": "반도체 호황에 성장률 ‘상향’…경상흑자 올해 5000억달러·내년 5400억...",
+   "firstSeen": "2026-11-26T07:14:00.000Z",
+   "lastSeen": "2026-11-26T19:35:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates",
+    "fx"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "“내년 성장률 2.9→4.1%” 한은, 전망치 대폭 올려",
+     "link": "https://www.donga.com/news/Economy/article/all/20261127/135099715/2",
+     "host": "donga.com",
+     "at": "2026-11-26T19:35:00.000Z"
+    },
+    {
+     "title": "반도체 호황에 눈높이 높인 한은···내년 성장률 4.1% 전망",
+     "link": "https://www.todaykorea.co.kr/news/articleView.html?idxno=409293",
+     "host": "todaykorea.co.kr",
+     "at": "2026-11-26T07:56:00.000Z"
+    },
+    {
+     "title": "반도체 호황에 성장률 ‘상향’…경상흑자 올해 5000억달러·내년 5400억...",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=580540&class=18&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-26T07:55:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 11,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
