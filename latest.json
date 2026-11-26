@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T13:28:08.358Z",
+ "updatedAt": "2026-11-26T13:48:08.567Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1343.739990234375,
-   "change": 0.08,
-   "z": 0.1,
+   "last": 1342.780029296875,
+   "change": 0.01,
+   "z": 0,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
   },
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 84.52999877929688,
-   "change": 1.02,
+   "last": 84.66000366210938,
+   "change": 1.17,
    "z": 0.4,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -86,9 +86,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3592.60009765625,
-   "change": 1.61,
-   "z": 1,
+   "last": 3597.699951171875,
+   "change": 1.75,
+   "z": 1.1,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 26.799999237060547,
-   "change": -5.27,
+   "last": 26.940000534057617,
+   "change": -4.77,
    "z": -0.4,
    "sd": 12.996579075365517,
    "source": "Yahoo",
@@ -120,15 +120,15 @@
  ],
  "spikes": {
   "war": -0.9,
-  "politics": -1.2,
+  "politics": -1.3,
   "rates": 0.1,
-  "trade": -0.9,
+  "trade": -1.1,
   "fx": -0.2,
-  "energy": -0.6,
-  "market": -1.2,
+  "energy": -0.8,
+  "market": -1.5,
   "credit": -0.3,
   "disaster": 0,
-  "policy": -0.5
+  "policy": -0.7
  },
  "rates": {
   "war": {
@@ -137,7 +137,7 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.2,
+   "rate": 0.1,
    "saturated": 0,
    "queries": 3
   },
@@ -147,7 +147,7 @@
    "queries": 3
   },
   "trade": {
-   "rate": 2.5,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 0.7,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 2.2,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
@@ -177,7 +177,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0.7,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
@@ -244,6 +244,54 @@
    }
   },
   {
+   "id": "1wsbaf2",
+   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
+   "firstSeen": "2026-11-25T13:26:00.000Z",
+   "lastSeen": "2026-11-26T02:16:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "박용진, 조희대 탄핵 추진에 “실익 없어…민주당 책임으로 돌아와”",
+     "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-26T02:16:00.000Z"
+    },
+    {
+     "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
+     "link": "https://www.mk.co.kr/article/12219128",
+     "host": "mk.co.kr",
+     "at": "2026-11-26T01:47:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 33,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.75,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '계엄'",
+     "금 +1.75%"
+    ]
+   }
+  },
+  {
    "id": "155f6dn",
    "title": "\"사이드카 정도론 놀라지 않아\"…AI發 롤러코스터 장세 언제까지?",
    "firstSeen": "2026-11-25T22:00:00.000Z",
@@ -279,62 +327,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -5.27,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −5.27%"
-    ]
-   }
-  },
-  {
-   "id": "1wsbaf2",
-   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-   "firstSeen": "2026-11-25T13:26:00.000Z",
-   "lastSeen": "2026-11-26T02:16:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "박용진, 조희대 탄핵 추진에 “실익 없어…민주당 책임으로 돌아와”",
-     "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-26T02:16:00.000Z"
-    },
-    {
-     "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-     "link": "https://www.mk.co.kr/article/12219128",
-     "host": "mk.co.kr",
-     "at": "2026-11-26T01:47:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 31,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.61,
-     "unit": "%",
-     "z": 1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '계엄'",
-     "금 +1.61%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -363,20 +363,61 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
+    "score": 30,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.61,
+     "change": 1.75,
      "unit": "%",
-     "z": 1,
+     "z": 1.1,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '계엄'",
-     "금 +1.61%"
+     "금 +1.75%"
+    ]
+   }
+  },
+  {
+   "id": "1pt9tl2",
+   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+   "firstSeen": "2026-11-26T07:31:00.000Z",
+   "lastSeen": "2026-11-26T07:31:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
+     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/26/20261126500259?wlog_tag3=naver",
+     "host": "seoul.co.kr",
+     "at": "2026-11-26T07:31:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 30,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.75,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "큰 사건 단어 '긴급회의'",
+     "금 +1.75%"
     ]
    }
   },
@@ -452,14 +493,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -5.27,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '공매도 금지'",
-     "공포지수(VIX) −5.27%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -493,14 +534,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -5.27,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −5.27%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -534,55 +575,14 @@
     "reaction": {
      "symbol": "^VIX",
      "label": "공포지수(VIX)",
-     "change": -5.27,
+     "change": -4.77,
      "unit": "%",
      "z": -0.4,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "공포지수(VIX) −5.27%"
-    ]
-   }
-  },
-  {
-   "id": "1pt9tl2",
-   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-   "firstSeen": "2026-11-26T07:31:00.000Z",
-   "lastSeen": "2026-11-26T07:31:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-     "link": "https://www.seoul.co.kr/news/economy/finance/2026/11/26/20261126500259?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-26T07:31:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 28,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.61,
-     "unit": "%",
-     "z": 1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '긴급회의'",
-     "금 +1.61%"
+     "공포지수(VIX) −4.77%"
     ]
    }
   },
@@ -590,14 +590,21 @@
    "id": "1ehlmcp",
    "title": "한은, 기준금리 연 3.25%로 0.25%p 인상…올해 성장률 전망 3.9%로 대폭 상...",
    "firstSeen": "2026-11-26T01:02:00.000Z",
-   "lastSeen": "2026-11-26T13:06:00.000Z",
-   "count": 26,
-   "sources": 25,
+   "lastSeen": "2026-11-26T13:12:00.000Z",
+   "count": 34,
+   "sources": 30,
    "topics": [
-    "rates"
+    "rates",
+    "fx"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "한은, 기준금리 3.25%로 인상…성장률 전망 4.1% '파격 상향'",
+     "link": "http://www.newsbrite.net/news/articleView.html?idxno=201794",
+     "host": "newsbrite.net",
+     "at": "2026-11-26T13:12:00.000Z"
+    },
     {
      "title": "기준금리 연 3.25%로 인상...내년 초도 금리 오를까?",
      "link": "https://www.ytn.co.kr/_ln/0102_202611262206594738",
@@ -615,12 +622,6 @@
      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1733167",
      "host": "ebn.co.kr",
      "at": "2026-11-26T12:02:00.000Z"
-    },
-    {
-     "title": "기준금리 3.25%로 인상…내년 성장률 4.1% 전망",
-     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1545119",
-     "host": "obsnews.co.kr",
-     "at": "2026-11-26T11:16:00.000Z"
     }
    ],
    "assess": {
@@ -700,63 +701,6 @@
    }
   },
   {
-   "id": "6jc6wk",
-   "title": "기준금리 3.25% 됐다…내년 성장률 4.1%로 깜짝 상향",
-   "firstSeen": "2026-11-26T03:03:00.000Z",
-   "lastSeen": "2026-11-26T13:12:00.000Z",
-   "count": 9,
-   "sources": 8,
-   "topics": [
-    "rates",
-    "fx"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "한은, 기준금리 3.25%로 인상…성장률 전망 4.1% '파격 상향'",
-     "link": "http://www.newsbrite.net/news/articleView.html?idxno=201794",
-     "host": "newsbrite.net",
-     "at": "2026-11-26T13:12:00.000Z"
-    },
-    {
-     "title": "성장률 대폭 상향…올해 3.9% 내년엔 4.1%",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723782&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-26T12:15:00.000Z"
-    },
-    {
-     "title": "또 오른 기준금리…살림 팍팍한데 \"내년 성장률 더 뛴다\"",
-     "link": "https://news.jtbc.co.kr/article/NB12330026?influxDiv=NAVER",
-     "host": "news.jtbc.co.kr",
-     "at": "2026-11-26T11:17:00.000Z"
-    },
-    {
-     "title": "'고물가 우려' 금리 또 인상…내년 성장률 4.1%로 높여",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865638&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-26T11:03:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 20,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미국 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "미국 10년 금리 −0.06%p"
-    ]
-   }
-  },
-  {
    "id": "1ypsl06",
    "title": "S&P, 엔비디아 신용등급 강등 검토 \"지배구조 문제\"",
    "firstSeen": "2026-11-25T21:12:00.000Z",
@@ -813,62 +757,6 @@
    }
   },
   {
-   "id": "krtgft",
-   "title": "한은, 기준금리 연 3.25%로 또 올려…하반기만 세 번째",
-   "firstSeen": "2026-11-26T01:06:00.000Z",
-   "lastSeen": "2026-11-26T10:52:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "한은, 기준금리 3.25%로 올려…올해 세 번째 인상",
-     "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4092321",
-     "host": "kyongbuk.co.kr",
-     "at": "2026-11-26T10:52:00.000Z"
-    },
-    {
-     "title": "한은, 기준금리 3.25%로 인상…하반기에만 세 번째",
-     "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=269190",
-     "host": "whitepaper.co.kr",
-     "at": "2026-11-26T02:06:00.000Z"
-    },
-    {
-     "title": "7, 8월 이어 세 번째 인상…기준금리 3.25%",
-     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5233030",
-     "host": "mbn.mk.co.kr",
-     "at": "2026-11-26T01:34:00.000Z"
-    },
-    {
-     "title": "한은, 기준금리 연 3.25%로 또 올려…하반기만 세 번째",
-     "link": "https://www.joongangenews.com/news/articleView.html?idxno=566754",
-     "host": "joongangenews.com",
-     "at": "2026-11-26T01:06:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 13,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미국 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "미국 10년 금리 −0.06%p"
-    ]
-   }
-  },
-  {
    "id": "1fsq9r9",
    "title": "한은 금리 인상 충격에 상승분 반납한 코스피 … 4730선으로 후퇴",
    "firstSeen": "2026-11-26T03:14:00.000Z",
@@ -909,6 +797,108 @@
     "level": "watch",
     "label": "참고",
     "score": 13,
+    "spike": 0.1,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "미국 10년 금리 −0.06%p"
+    ]
+   }
+  },
+  {
+   "id": "1peame7",
+   "title": "[포착] 우주에서도 사우디의 ‘굴욕’ 보였다…후티에 또 박살난 최대 ...",
+   "firstSeen": "2026-11-26T04:03:00.000Z",
+   "lastSeen": "2026-11-26T08:43:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "유가 또 들썩 … 후티, 사우디 정유시설 공격",
+     "link": "https://www.mk.co.kr/article/12219683",
+     "host": "mk.co.kr",
+     "at": "2026-11-26T08:43:00.000Z"
+    },
+    {
+     "title": "후티, 사우디 최대 정유시설 공격 주장에 브렌트유 3.51% 급등…94.61달러",
+     "link": "https://www.wikitree.co.kr/articles/1178107",
+     "host": "wikitree.co.kr",
+     "at": "2026-11-26T08:40:00.000Z"
+    },
+    {
+     "title": "[포착] 우주에서도 사우디의 ‘굴욕’ 보였다…후티에 또 박살난 최대 ...",
+     "link": "https://nownews.seoul.co.kr/news/newsView.php?id=20261126601006&wlog_tag3=naver",
+     "host": "nownews.seoul.co.kr",
+     "at": "2026-11-26T04:03:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 11,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.75,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "금 +1.75%"
+    ]
+   }
+  },
+  {
+   "id": "krtgft",
+   "title": "한은, 기준금리 연 3.25%로 또 올려…하반기만 세 번째",
+   "firstSeen": "2026-11-26T01:06:00.000Z",
+   "lastSeen": "2026-11-26T02:06:00.000Z",
+   "count": 3,
+   "sources": 3,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "한은, 기준금리 3.25%로 인상…하반기에만 세 번째",
+     "link": "http://www.whitepaper.co.kr/news/articleView.html?idxno=269190",
+     "host": "whitepaper.co.kr",
+     "at": "2026-11-26T02:06:00.000Z"
+    },
+    {
+     "title": "7, 8월 이어 세 번째 인상…기준금리 3.25%",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5233030",
+     "host": "mbn.mk.co.kr",
+     "at": "2026-11-26T01:34:00.000Z"
+    },
+    {
+     "title": "한은, 기준금리 연 3.25%로 또 올려…하반기만 세 번째",
+     "link": "https://www.joongangenews.com/news/articleView.html?idxno=566754",
+     "host": "joongangenews.com",
+     "at": "2026-11-26T01:06:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 10,
     "spike": 0.1,
     "news": false,
     "reaction": {
