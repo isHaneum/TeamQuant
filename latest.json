@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T07:29:32.590Z",
+ "updatedAt": "2026-11-26T07:47:46.920Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,8 +62,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1343.030029296875,
-   "change": 0.03,
+   "last": 1342.5799560546875,
+   "change": -0.01,
    "z": 0,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
@@ -74,8 +74,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 83.75,
-   "change": 0.08,
+   "last": 83.7300033569336,
+   "change": 0.06,
    "z": 0,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3600.300048828125,
-   "change": 1.82,
+   "last": 3601.5,
+   "change": 1.86,
    "z": 1.2,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
@@ -119,12 +119,12 @@
   }
  ],
  "spikes": {
-  "war": 0.7,
+  "war": 0.5,
   "politics": -0.5,
   "rates": 1.3,
   "trade": 1.7,
   "fx": -0.2,
-  "energy": 0.6,
+  "energy": 0.9,
   "market": 0.6,
   "credit": 0,
   "disaster": 0,
@@ -132,7 +132,7 @@
  },
  "rates": {
   "war": {
-   "rate": 2.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 3.3,
+   "rate": 4,
    "saturated": 0,
    "queries": 1
   },
@@ -183,6 +183,65 @@
   }
  },
  "issues": [
+  {
+   "id": "146knoq",
+   "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
+   "firstSeen": "2026-11-26T06:38:00.000Z",
+   "lastSeen": "2026-11-26T07:30:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "policy"
+   ],
+   "critical": [
+    "rates"
+   ],
+   "links": [
+    {
+     "title": "금융위, 30일 긴급회의 추진…증안펀드 가동 기준 주목",
+     "link": "https://sateconomy.co.kr/news/view/1065595622130462",
+     "host": "sateconomy.co.kr",
+     "at": "2026-11-26T07:30:00.000Z"
+    },
+    {
+     "title": "금융위, 금융지주 긴급 소집…10.7조 증안펀드 추가 논의",
+     "link": "https://www.sidae.com/article/2026112615414744443",
+     "host": "sidae.com",
+     "at": "2026-11-26T07:25:00.000Z"
+    },
+    {
+     "title": "10조원대 증안펀드 가동 검토…금융위, 30일 시장안정 긴급회의",
+     "link": "https://www.slist.kr/news/articleView.html?idxno=785109",
+     "host": "slist.kr",
+     "at": "2026-11-26T06:50:00.000Z"
+    },
+    {
+     "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
+     "link": "https://www.news1.kr/finance/general-finance/6367286",
+     "host": "news1.kr",
+     "at": "2026-11-26T06:38:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 40,
+    "spike": 0.4,
+    "news": true,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "큰 사건 단어 '긴급회의'",
+     "미국 10년 금리 −0.06%p"
+    ]
+   }
+  },
   {
    "id": "qbpuf3",
    "title": "작년 5회였는데…올해 102회, 이틀에 한번꼴 울린 사이드카",
@@ -237,61 +296,7 @@
    }
   },
   {
-   "id": "lc4ohe",
-   "title": "금융당국·5대 금융지주, 디지털 뱅크런 대비 첫 합동 모의훈련",
-   "firstSeen": "2026-11-25T06:01:00.000Z",
-   "lastSeen": "2026-11-25T09:24:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "credit",
-    "policy"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
-     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68460",
-     "host": "newsroad.co.kr",
-     "at": "2026-11-25T09:24:00.000Z"
-    },
-    {
-     "title": "금융당국·5대 금융그룹, 금융위기 대비 합동 모의훈련",
-     "link": "http://www.iminju.net/news/articleView.html?idxno=173084",
-     "host": "iminju.net",
-     "at": "2026-11-25T07:52:00.000Z"
-    },
-    {
-     "title": "금융당국·5대 금융지주, 디지털 뱅크런 대비 첫 합동 모의훈련",
-     "link": "https://biz.newdaily.co.kr/site/data/html/2026/11/25/2026112550266.html",
-     "host": "biz.newdaily.co.kr",
-     "at": "2026-11-25T07:34:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 0.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "공포지수(VIX)",
-     "change": 7.32,
-     "unit": "%",
-     "z": 0.6,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "큰 사건 단어 '뱅크런'",
-     "공포지수(VIX) +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "27n60f",
+   "id": "1wsbaf2",
    "title": "김민석 민주당 대표 \"조희대 탄핵 5당 연대·민생 총력\"",
    "firstSeen": "2026-11-25T13:26:00.000Z",
    "lastSeen": "2026-11-26T02:16:00.000Z",
@@ -333,67 +338,14 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.82,
+     "change": 1.86,
      "unit": "%",
      "z": 1.2,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '계엄'",
-     "금 +1.82%"
-    ]
-   }
-  },
-  {
-   "id": "146knoq",
-   "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
-   "firstSeen": "2026-11-26T06:38:00.000Z",
-   "lastSeen": "2026-11-26T07:25:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "policy"
-   ],
-   "critical": [
-    "rates"
-   ],
-   "links": [
-    {
-     "title": "금융위, 금융지주 긴급 소집…10.7조 증안펀드 추가 논의",
-     "link": "https://www.sidae.com/article/2026112615414744443",
-     "host": "sidae.com",
-     "at": "2026-11-26T07:25:00.000Z"
-    },
-    {
-     "title": "10조원대 증안펀드 가동 검토…금융위, 30일 시장안정 긴급회의",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=785109",
-     "host": "slist.kr",
-     "at": "2026-11-26T06:50:00.000Z"
-    },
-    {
-     "title": "금융위, 29일 증안펀드 투자관리위 개최…30일 금융지주 회장 소집",
-     "link": "https://www.news1.kr/finance/general-finance/6367286",
-     "host": "news1.kr",
-     "at": "2026-11-26T06:38:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
-    "spike": 0.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미국 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "큰 사건 단어 '긴급회의'",
-     "미국 10년 금리 −0.06%p"
+     "금 +1.86%"
     ]
    }
   },
@@ -440,6 +392,54 @@
     },
     "why": [
      "큰 사건 단어 '사이드카'",
+     "공포지수(VIX) +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "lc4ohe",
+   "title": "금융당국·5대 금융그룹, 금융위기 대비 합동 모의훈련",
+   "firstSeen": "2026-11-25T06:01:00.000Z",
+   "lastSeen": "2026-11-25T09:24:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "credit",
+    "policy"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
+     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68460",
+     "host": "newsroad.co.kr",
+     "at": "2026-11-25T09:24:00.000Z"
+    },
+    {
+     "title": "금융당국·5대 금융그룹, 금융위기 대비 합동 모의훈련",
+     "link": "http://www.iminju.net/news/articleView.html?idxno=173084",
+     "host": "iminju.net",
+     "at": "2026-11-25T07:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 34,
+    "spike": 0.4,
+    "news": true,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "공포지수(VIX)",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "큰 사건 단어 '뱅크런'",
      "공포지수(VIX) +7.32%"
     ]
    }
@@ -652,6 +652,64 @@
    }
   },
   {
+   "id": "hghcwo",
+   "title": "트럼프, 선거 참패에도 관세 폭주…中에 “40%까지 인상” 압박",
+   "firstSeen": "2026-11-26T01:07:00.000Z",
+   "lastSeen": "2026-11-26T07:28:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "war",
+    "politics",
+    "trade"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[OBS 뉴스 오늘2] 북미대화 솔솔?…트럼프, 또 추가 관세 '으름장'",
+     "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1545055",
+     "host": "obsnews.co.kr",
+     "at": "2026-11-26T07:28:00.000Z"
+    },
+    {
+     "title": "트럼프 14개국 추가 관세 압박…美中 무역 휴전 시험대 오르나",
+     "link": "https://www.newsis.com/view/NISX20261126_0003884359",
+     "host": "newsis.com",
+     "at": "2026-11-26T05:44:00.000Z"
+    },
+    {
+     "title": "트럼프, 선거패배에도 관세장벽 재건",
+     "link": "https://www.naeil.com/news/read/610172?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-26T04:04:00.000Z"
+    },
+    {
+     "title": "트럼프 관세 재건… 중국 압박·법적 기반 강화",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3452299",
+     "host": "newscj.com",
+     "at": "2026-11-26T03:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 32,
+    "spike": 1.7,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.86,
+     "unit": "%",
+     "z": 1.2,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "금 +1.86%"
+    ]
+   }
+  },
+  {
    "id": "1jp94pj",
    "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
    "firstSeen": "2026-11-25T21:00:00.000Z",
@@ -682,14 +740,14 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.82,
+     "change": 1.86,
      "unit": "%",
      "z": 1.2,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '계엄'",
-     "금 +1.82%"
+     "금 +1.86%"
     ]
    }
   },
@@ -738,37 +796,37 @@
    "id": "1ehlmcp",
    "title": "한은, 기준금리 3.25%로 0.25%p 인상…성장 전망 대폭 높이고 긴축 가속",
    "firstSeen": "2026-11-26T01:02:00.000Z",
-   "lastSeen": "2026-11-26T07:29:00.000Z",
-   "count": 21,
-   "sources": 19,
+   "lastSeen": "2026-11-26T07:38:00.000Z",
+   "count": 25,
+   "sources": 23,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
     {
-     "title": "기준금리 3.25%로 인상… 한은 통화긴축 기조 재확인",
-     "link": "https://www.imaeil.com/page/view/2026112613160224691",
-     "host": "imaeil.com",
-     "at": "2026-11-26T07:29:00.000Z"
+     "title": "기준금리 인상만 세 차례⋯5억 주담대 연 이자 375만원 더 낼 판",
+     "link": "http://www.inews24.com/view/2030925",
+     "host": "inews24.com",
+     "at": "2026-11-26T07:38:00.000Z"
     },
     {
-     "title": "한은, 기준금리 0.25%p 인상…내년 경제성장률 전망 1.2%p 상향",
-     "link": "https://sports.hankooki.com/news/articleView.html?idxno=6944246",
-     "host": "sports.hankooki.com",
-     "at": "2026-11-26T07:18:00.000Z"
+     "title": "한은, 금리 3.25%로 인상…내년 1~2차례 더 올릴 듯, ‘이중 긴축’ 우려",
+     "link": "https://www.joongang.co.kr/article/25482301",
+     "host": "joongang.co.kr",
+     "at": "2026-11-26T07:37:00.000Z"
     },
     {
-     "title": "높은 성장률·물가 부담에 한은, 기준금리 3.25%로 인상(종합)",
-     "link": "https://www.newscj.com/news/articleView.html?idxno=3452237",
-     "host": "newscj.com",
-     "at": "2026-11-26T06:56:00.000Z"
+     "title": "[이슈앤피플] 한국은행, 기준금리 3.25%로 인상…내년 성장률 전망 4.1%로...",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005971183",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-26T07:34:00.000Z"
     },
     {
-     "title": "한은, '5대 2'로 기준금리 3.25% 인상…6개월 뒤 전망은 3.50%",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=355671",
-     "host": "greened.kr",
-     "at": "2026-11-26T06:38:00.000Z"
+     "title": "[핫이슈] 한은, 기준금리 연 3.25%로 인상…0.25%p↑",
+     "link": "http://www.newswatch.kr/news/articleView.html?idxno=82094",
+     "host": "newswatch.kr",
+     "at": "2026-11-26T07:30:00.000Z"
     }
    ],
    "assess": {
@@ -794,9 +852,9 @@
    "id": "6jc6wk",
    "title": "한은, 내년 성장률 '2.9→4.1%' 상향…반도체 낙관 땐 '4% 중반' 가능",
    "firstSeen": "2026-11-26T04:57:00.000Z",
-   "lastSeen": "2026-11-26T07:28:00.000Z",
-   "count": 12,
-   "sources": 12,
+   "lastSeen": "2026-11-26T07:41:00.000Z",
+   "count": 13,
+   "sources": 13,
    "topics": [
     "rates",
     "fx"
@@ -804,28 +862,28 @@
    "critical": [],
    "links": [
     {
-     "title": "한은, 내년 성장률 4.1% 상향…6년 만에 4%대 복귀 전망",
-     "link": "https://www.goodnews1.com/news/articleView.html?idxno=466699",
-     "host": "goodnews1.com",
+     "title": "한은, 6년 만에 '4%대 성장' 꺼냈다… \"반도체 호황 땐 내년 4.6%\"",
+     "link": "https://www.hankookilbo.com/news/article/A2026112610110004728?did=NA",
+     "host": "hankookilbo.com",
+     "at": "2026-11-26T07:41:00.000Z"
+    },
+    {
+     "title": "와닿지 않는 4% 성장률, 실질소득은 줄어···‘반도체 호황 괴리’ 커...",
+     "link": "https://www.khan.co.kr/article/202611261633001",
+     "host": "khan.co.kr",
+     "at": "2026-11-26T07:34:00.000Z"
+    },
+    {
+     "title": "[기준금리 3.25%] 반도체 호황 내년 성장률 4.1%…한은 \"성장 한 단계 높...",
+     "link": "https://www.g-enews.com/view.php?ud=20261126155929966cd0bfacc1c_1",
+     "host": "g-enews.com",
+     "at": "2026-11-26T07:32:00.000Z"
+    },
+    {
+     "title": "한은, 내년 성장률 4.1% 전망…반도체 호황에 투자·소비 선순환 기대",
+     "link": "https://www.newspim.com/news/view/20261126001210",
+     "host": "newspim.com",
      "at": "2026-11-26T07:28:00.000Z"
-    },
-    {
-     "title": "한은, 내년 성장률 4.1%로 대폭 상향…경상흑자 5천400억달러(종합3보)",
-     "link": "https://www.yna.co.kr/view/AKR20261126059053002?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-26T07:14:00.000Z"
-    },
-    {
-     "title": "[그래픽뉴스] 한은, 내년 성장률 4.1%로 대폭 상향…기준금리 3.25% 인상",
-     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316449",
-     "host": "jeonmae.co.kr",
-     "at": "2026-11-26T07:10:00.000Z"
-    },
-    {
-     "title": "반도체 호황에 한은 내년 성장률 2.9→4.1%…AI 투자 조정돼도 3.4%(종합...",
-     "link": "https://www.news1.kr/economy/trend/6367359",
-     "host": "news1.kr",
-     "at": "2026-11-26T07:00:00.000Z"
     }
    ],
    "assess": {
@@ -846,56 +904,33 @@
      "미국 10년 금리 −0.06%p"
     ]
    }
-  },
-  {
-   "id": "1epeupm",
-   "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
-   "firstSeen": "2026-11-25T07:56:00.000Z",
-   "lastSeen": "2026-11-25T11:32:00.000Z",
-   "count": 2,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "뱅크런 막아라…은행 유동성 ‘매일 관리’",
-     "link": "https://www.khan.co.kr/article/202611252032005",
-     "host": "khan.co.kr",
-     "at": "2026-11-25T11:32:00.000Z"
-    },
-    {
-     "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
-     "link": "https://www.khan.co.kr/article/202611251656001",
-     "host": "khan.co.kr",
-     "at": "2026-11-25T07:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 29,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "공포지수(VIX)",
-     "change": 7.32,
-     "unit": "%",
-     "z": 0.6,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "큰 사건 단어 '뱅크런'",
-     "공포지수(VIX) +7.32%"
-    ]
-   }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-26T07:47:46.920Z",
+   "id": "1pb8937",
+   "level": "caution",
+   "title": "올들어 이틀에 한 번꼴 사이드카…잦은 발동으로 무뎌진 증시 안전판",
+   "why": [
+    "큰 사건 단어 '사이드카'",
+    "공포지수(VIX) +7.32%"
+   ],
+   "link": "https://www.lawtv.kr/news/articleView.html?idxno=61531",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-26T07:47:46.920Z",
+   "id": "1wsbaf2",
+   "level": "caution",
+   "title": "김민석 민주당 대표 \"조희대 탄핵 5당 연대·민생 총력\"",
+   "why": [
+    "큰 사건 단어 '계엄'",
+    "금 +1.86%"
+   ],
+   "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-26T07:29:32.590Z",
    "id": "lc4ohe",
@@ -1110,30 +1145,6 @@
     "금 +2.48%"
    ],
    "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-26T04:16:16.317Z",
-   "id": "1we3f6o",
-   "level": "caution",
-   "title": "30년전 오늘 탄생한 사이드카···코스피 올해 62회 발동, 24년치 맞먹어",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +7.32%"
-   ],
-   "link": "https://www.hankookilbo.com/news/article/A2026112510260001040?did=NA",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-26T04:16:16.317Z",
-   "id": "1kfj94j",
-   "level": "caution",
-   "title": "사이버 공격에 디지털뱅크런까지…금융당국, 위기대응 첫 합동훈련",
-   "why": [
-    "핵심 단어",
-    "VIX 변동성 +7.32%"
-   ],
-   "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
    "delivered": false
   }
  ],
