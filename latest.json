@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-26T03:30:47.886Z",
+ "updatedAt": "2026-11-26T03:47:47.298Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,9 +10,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 4746.46,
-   "change": 1.04,
-   "z": 0.3,
+   "last": 4767.9,
+   "change": 1.5,
+   "z": 0.5,
    "sd": 3.0283318709427105,
    "source": "네이버 현재가",
    "live": true,
@@ -24,12 +24,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 662.92,
-   "change": 1.89,
+   "last": 663.0900268554688,
+   "change": 1.91,
    "z": 0.7,
    "sd": 2.871767536413246,
-   "source": "네이버 현재가",
-   "live": true,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -64,8 +63,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 1343.6600341796875,
-   "change": 0.08,
+   "last": 1343.47998046875,
+   "change": 0.06,
    "z": 0.1,
    "sd": 0.6302039844197797,
    "source": "Yahoo"
@@ -76,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 84.22000122070312,
-   "change": 0.65,
+   "last": 84.2699966430664,
+   "change": 0.71,
    "z": 0.2,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -88,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-25",
-   "last": 3603.60009765625,
-   "change": 1.92,
-   "z": 1.2,
+   "last": 3606,
+   "change": 1.99,
+   "z": 1.3,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -121,30 +120,30 @@
   }
  ],
  "spikes": {
-  "war": 4.7,
-  "politics": 1.1,
-  "rates": 1.2,
+  "war": 4.3,
+  "politics": 1,
+  "rates": 1.1,
   "trade": 1.8,
   "fx": -0.2,
   "energy": 2.2,
   "market": 0.9,
-  "credit": 1.4,
+  "credit": 0.7,
   "disaster": 0,
   "policy": -0.4
  },
  "rates": {
   "war": {
-   "rate": 6.6,
-   "saturated": 2,
+   "rate": 6.2,
+   "saturated": 1,
    "queries": 3
   },
   "politics": {
-   "rate": 3.1,
+   "rate": 3,
    "saturated": 1,
    "queries": 3
   },
   "rates": {
-   "rate": 4.6,
+   "rate": 4.4,
    "saturated": 2,
    "queries": 3
   },
@@ -169,7 +168,7 @@
    "queries": 3
   },
   "credit": {
-   "rate": 1.2,
+   "rate": 0.7,
    "saturated": 0,
    "queries": 2
   },
@@ -186,12 +185,53 @@
  },
  "issues": [
   {
+   "id": "1lfra0h",
+   "title": "[아시아라운드업 20261126] \"이란, 호르무즈 안전통항 대가로 암호화폐 ...",
+   "firstSeen": "2026-11-26T03:42:00.000Z",
+   "lastSeen": "2026-11-26T03:42:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "[아시아라운드업 20261126] \"이란, 호르무즈 안전통항 대가로 암호화폐 ...",
+     "link": "http://kor.theasian.asia/archives/423206",
+     "host": "kor.theasian.asia",
+     "at": "2026-11-26T03:42:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 58,
+    "spike": 4.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.99,
+     "unit": "%",
+     "z": 1.3
+    },
+    "why": [
+     "핵심 단어",
+     "기사 급증(평소 대비 4.3σ)",
+     "금 +1.99%"
+    ]
+   }
+  },
+  {
    "id": "lc4ohe",
-   "title": "금융당국, ‘디지털 뱅크런’ 대비 첫 합동훈련",
-   "firstSeen": "2026-11-25T06:01:00.000Z",
+   "title": "금융당국, 디지털 뱅크런 대비…합동 모의훈련",
+   "firstSeen": "2026-11-25T06:00:00.000Z",
    "lastSeen": "2026-11-25T07:52:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "count": 11,
+   "sources": 11,
    "topics": [
     "credit",
     "policy"
@@ -213,10 +253,10 @@
      "at": "2026-11-25T07:34:00.000Z"
     },
     {
-     "title": "'사이버 공격', 건전성 위협 시나리오 포함…금융당국·5대 지주 '디지털...",
-     "link": "https://biz.sbs.co.kr/article_hub/20000348826?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-25T06:48:00.000Z"
+     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
+     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
+     "host": "getnews.co.kr",
+     "at": "2026-11-25T07:02:00.000Z"
     },
     {
      "title": "'AI 해킹·디지털 뱅크런' 겹치면 어떻게 막나… 금융당국·5대 금융 첫...",
@@ -228,60 +268,8 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 54,
-    "spike": 1.4,
-    "news": true,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "lc4ohe",
-   "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
-   "firstSeen": "2026-11-25T06:00:00.000Z",
-   "lastSeen": "2026-11-25T07:02:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "AI 해킹에 뱅크런까지…금융당국, 5대 은행과 첫 합동 위기대응 훈련",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888457",
-     "host": "getnews.co.kr",
-     "at": "2026-11-25T07:02:00.000Z"
-    },
-    {
-     "title": "AI 해킹·디지털 뱅크런 대비…금융당국, 5대 은행과 위기대응 훈련",
-     "link": "https://www.dailian.co.kr/news/view/1719623/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-25T06:40:00.000Z"
-    },
-    {
-     "title": "AI 해킹이 뱅크런 될 수도…5대 은행, 위기대응 훈련",
-     "link": "https://www.sidae.com/article/2026112508551697703",
-     "host": "sidae.com",
-     "at": "2026-11-25T06:00:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 45,
-    "spike": 1.4,
+    "score": 51,
+    "spike": 0.7,
     "news": true,
     "reaction": {
      "symbol": "^VIX",
@@ -386,65 +374,77 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 43,
-    "spike": 1.1,
+    "score": 44,
+    "spike": 1,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.92,
+     "change": 1.99,
      "unit": "%",
-     "z": 1.2
+     "z": 1.3
     },
     "why": [
      "핵심 단어",
-     "금 +1.92%"
+     "금 +1.99%"
     ]
    }
   },
   {
-   "id": "1kfj94j",
-   "title": "사이버 공격에 디지털뱅크런까지…금융당국, 위기대응 첫 합동훈련",
-   "firstSeen": "2026-11-25T06:02:00.000Z",
-   "lastSeen": "2026-11-25T08:00:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "chzb4m",
+   "title": "[특징주] 국제유가 급등에 항공주 동반 약세…대한항공 6% 하락",
+   "firstSeen": "2026-11-26T00:46:00.000Z",
+   "lastSeen": "2026-11-26T02:32:00.000Z",
+   "count": 4,
+   "sources": 4,
    "topics": [
-    "credit"
+    "war",
+    "energy",
+    "market"
    ],
-   "critical": [
-    "credit"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "금융당국, AI 공격에 '디지털뱅크런' 대응 체계 점검",
-     "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
-     "host": "cstimes.com",
-     "at": "2026-11-25T08:00:00.000Z"
+     "title": "대한항공 주가 장중 6%대 하락, 국제유가 급등에 항공주 동반 약세",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452991",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-26T02:32:00.000Z"
     },
     {
-     "title": "사이버 공격에 디지털뱅크런까지…금융당국, 위기대응 첫 합동훈련",
-     "link": "http://www.joseilbo.com/news/news_read.php?uid=580420&class=18&grp=",
-     "host": "joseilbo.com",
-     "at": "2026-11-25T06:02:00.000Z"
+     "title": "[특징주] 유가 급등에 항공주 '약세'…대한항공, 6%대 하락",
+     "link": "https://www.ajunews.com/view/20261126110333810",
+     "host": "ajunews.com",
+     "at": "2026-11-26T02:06:00.000Z"
+    },
+    {
+     "title": "[특징주] 대한항공, 중동 긴장에 국제유가 급등.. 7%대 '급락'",
+     "link": "https://www.g-enews.com/view.php?ud=20261126103934857844093b5d4e_1",
+     "host": "g-enews.com",
+     "at": "2026-11-26T01:54:00.000Z"
+    },
+    {
+     "title": "[특징주] 국제유가 급등에 항공주 동반 약세…대한항공 6% 하락",
+     "link": "https://biz.chosun.com/stock/stock_general/2026/11/26/UAULN7TCSVCEFPM2UUZGHTIZVA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "host": "biz.chosun.com",
+     "at": "2026-11-26T00:58:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 42,
-    "spike": 1.4,
+    "spike": 4.3,
     "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.99,
      "unit": "%",
-     "z": 0.6
+     "z": 1.3
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "기사 급증(평소 대비 4.3σ)",
+     "금 +1.99%"
     ]
    }
   },
@@ -501,110 +501,6 @@
    }
   },
   {
-   "id": "chzb4m",
-   "title": "[특징주] 국제유가 급등에 항공주 동반 약세…대한항공 6% 하락",
-   "firstSeen": "2026-11-26T00:46:00.000Z",
-   "lastSeen": "2026-11-26T02:32:00.000Z",
-   "count": 4,
-   "sources": 4,
-   "topics": [
-    "war",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "대한항공 주가 장중 6%대 하락, 국제유가 급등에 항공주 동반 약세",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452991",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-26T02:32:00.000Z"
-    },
-    {
-     "title": "[특징주] 유가 급등에 항공주 '약세'…대한항공, 6%대 하락",
-     "link": "https://www.ajunews.com/view/20261126110333810",
-     "host": "ajunews.com",
-     "at": "2026-11-26T02:06:00.000Z"
-    },
-    {
-     "title": "[특징주] 대한항공, 중동 긴장에 국제유가 급등.. 7%대 '급락'",
-     "link": "https://www.g-enews.com/view.php?ud=20261126103934857844093b5d4e_1",
-     "host": "g-enews.com",
-     "at": "2026-11-26T01:54:00.000Z"
-    },
-    {
-     "title": "[특징주] 국제유가 급등에 항공주 동반 약세…대한항공 6% 하락",
-     "link": "https://biz.chosun.com/stock/stock_general/2026/11/26/UAULN7TCSVCEFPM2UUZGHTIZVA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-26T00:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 40,
-    "spike": 4.7,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.92,
-     "unit": "%",
-     "z": 1.2
-    },
-    "why": [
-     "기사 급증(평소 대비 4.7σ)",
-     "금 +1.92%"
-    ]
-   }
-  },
-  {
-   "id": "1epeupm",
-   "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
-   "firstSeen": "2026-11-25T07:56:00.000Z",
-   "lastSeen": "2026-11-25T11:32:00.000Z",
-   "count": 2,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "뱅크런 막아라…은행 유동성 ‘매일 관리’",
-     "link": "https://www.khan.co.kr/article/202611252032005",
-     "host": "khan.co.kr",
-     "at": "2026-11-25T11:32:00.000Z"
-    },
-    {
-     "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
-     "link": "https://www.khan.co.kr/article/202611251656001",
-     "host": "khan.co.kr",
-     "at": "2026-11-25T07:56:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 40,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
    "id": "1jp94pj",
    "title": "[출근길 브리핑-11월 26일] 尹 '계엄 국무회의 위증' 대법 선고·금통위...",
    "firstSeen": "2026-11-25T21:00:00.000Z",
@@ -629,99 +525,69 @@
    "assess": {
     "level": "watch",
     "label": "관찰",
-    "score": 40,
-    "spike": 1.1,
+    "score": 41,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.92,
+     "change": 1.99,
      "unit": "%",
-     "z": 1.2
+     "z": 1.3
     },
     "why": [
      "핵심 단어",
-     "금 +1.92%"
+     "금 +1.99%"
     ]
    }
   },
   {
-   "id": "f6pz6o",
-   "title": "금융당국, AI 해킹·디지털뱅크런 가정한 대형은행 위기훈련 실시",
-   "firstSeen": "2026-11-25T06:01:00.000Z",
-   "lastSeen": "2026-11-25T06:01:00.000Z",
-   "count": 1,
-   "sources": 1,
+   "id": "1yn07ef",
+   "title": "우크라 아동 9명 가족 품으로…'외교 보폭' 넓히는 멜라니아",
+   "firstSeen": "2026-11-26T01:23:00.000Z",
+   "lastSeen": "2026-11-26T02:33:00.000Z",
+   "count": 3,
+   "sources": 3,
    "topics": [
-    "credit"
+    "war"
    ],
-   "critical": [
-    "credit"
-   ],
+   "critical": [],
    "links": [
     {
-     "title": "금융당국, AI 해킹·디지털뱅크런 가정한 대형은행 위기훈련 실시",
-     "link": "https://www.etnews.com/20261125000097",
-     "host": "etnews.com",
-     "at": "2026-11-25T06:01:00.000Z"
+     "title": "‘9명 우크라 어린이’ 가족 품…“전폭 협력” 뜻밖 여성, 알고보니 멜...",
+     "link": "https://biz.heraldcorp.com/article/10950205?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-26T02:33:00.000Z"
+    },
+    {
+     "title": "‘은둔의 영부인’ 멜라니아, 우크라 아동 9명 또 구했다",
+     "link": "https://www.donga.com/news/Inter/article/all/20261126/135094402/1",
+     "host": "donga.com",
+     "at": "2026-11-26T01:56:00.000Z"
+    },
+    {
+     "title": "우크라 아동 9명 가족 품으로…'외교 보폭' 넓히는 멜라니아",
+     "link": "https://www.yna.co.kr/view/AKR20261126055900009?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-26T01:23:00.000Z"
     }
    ],
    "assess": {
-    "level": "watch",
-    "label": "관찰",
+    "level": "caution",
+    "label": "주의",
     "score": 39,
-    "spike": 1.4,
-    "news": false,
+    "spike": 4.3,
+    "news": true,
     "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.99,
      "unit": "%",
-     "z": 0.6
+     "z": 1.3
     },
     "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
-    ]
-   }
-  },
-  {
-   "id": "guwsq3",
-   "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
-   "firstSeen": "2026-11-25T09:24:00.000Z",
-   "lastSeen": "2026-11-25T09:24:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "디지털뱅크런부터 금융사 정리까지…당국·금융사 첫 합동 모의훈련",
-     "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=68460",
-     "host": "newsroad.co.kr",
-     "at": "2026-11-25T09:24:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "관찰",
-    "score": 39,
-    "spike": 1.4,
-    "news": false,
-    "reaction": {
-     "symbol": "^VIX",
-     "label": "VIX 변동성",
-     "change": 7.32,
-     "unit": "%",
-     "z": 0.6
-    },
-    "why": [
-     "핵심 단어",
-     "VIX 변동성 +7.32%"
+     "기사 급증(평소 대비 4.3σ)",
+     "금 +1.99%"
     ]
    }
   },
@@ -818,52 +684,94 @@
    }
   },
   {
-   "id": "1yn07ef",
-   "title": "우크라 아동 9명 가족 품으로…'외교 보폭' 넓히는 멜라니아",
-   "firstSeen": "2026-11-26T01:23:00.000Z",
-   "lastSeen": "2026-11-26T02:33:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "id": "1kfj94j",
+   "title": "사이버 공격에 디지털뱅크런까지…금융당국, 위기대응 첫 합동훈련",
+   "firstSeen": "2026-11-25T06:02:00.000Z",
+   "lastSeen": "2026-11-25T08:00:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "war"
+    "credit"
    ],
-   "critical": [],
+   "critical": [
+    "credit"
+   ],
    "links": [
     {
-     "title": "‘9명 우크라 어린이’ 가족 품…“전폭 협력” 뜻밖 여성, 알고보니 멜...",
-     "link": "https://biz.heraldcorp.com/article/10950205?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-26T02:33:00.000Z"
+     "title": "금융당국, AI 공격에 '디지털뱅크런' 대응 체계 점검",
+     "link": "https://www.cstimes.com/news/articleView.html?idxno=729422",
+     "host": "cstimes.com",
+     "at": "2026-11-25T08:00:00.000Z"
     },
     {
-     "title": "‘은둔의 영부인’ 멜라니아, 우크라 아동 9명 또 구했다",
-     "link": "https://www.donga.com/news/Inter/article/all/20261126/135094402/1",
-     "host": "donga.com",
-     "at": "2026-11-26T01:56:00.000Z"
-    },
-    {
-     "title": "우크라 아동 9명 가족 품으로…'외교 보폭' 넓히는 멜라니아",
-     "link": "https://www.yna.co.kr/view/AKR20261126055900009?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-26T01:23:00.000Z"
+     "title": "사이버 공격에 디지털뱅크런까지…금융당국, 위기대응 첫 합동훈련",
+     "link": "http://www.joseilbo.com/news/news_read.php?uid=580420&class=18&grp=",
+     "host": "joseilbo.com",
+     "at": "2026-11-25T06:02:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 37,
-    "spike": 4.7,
+    "spike": 0.7,
     "news": true,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.92,
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
      "unit": "%",
-     "z": 1.2
+     "z": 0.6
     },
     "why": [
-     "기사 급증(평소 대비 4.7σ)",
-     "금 +1.92%"
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "1epeupm",
+   "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
+   "firstSeen": "2026-11-25T07:56:00.000Z",
+   "lastSeen": "2026-11-25T11:32:00.000Z",
+   "count": 2,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "뱅크런 막아라…은행 유동성 ‘매일 관리’",
+     "link": "https://www.khan.co.kr/article/202611252032005",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T11:32:00.000Z"
+    },
+    {
+     "title": "[단독]‘손가락 터치’ 뱅크런 막아라···은행 유동성 ‘매일 관리’...",
+     "link": "https://www.khan.co.kr/article/202611251656001",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T07:56:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
     ]
    }
   },
@@ -886,6 +794,86 @@
      "link": "https://www.mk.co.kr/article/12218652",
      "host": "mk.co.kr",
      "at": "2026-11-25T11:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "ukjas0",
+   "title": "‘롤러코스피’ 감당 못하는 30년 된 사이드카 제도",
+   "firstSeen": "2026-11-25T12:21:00.000Z",
+   "lastSeen": "2026-11-25T12:21:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "‘롤러코스피’ 감당 못하는 30년 된 사이드카 제도",
+     "link": "https://www.khan.co.kr/article/202611252121005",
+     "host": "khan.co.kr",
+     "at": "2026-11-25T12:21:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "관찰",
+    "score": 35,
+    "spike": 0.9,
+    "news": false,
+    "reaction": {
+     "symbol": "^VIX",
+     "label": "VIX 변동성",
+     "change": 7.32,
+     "unit": "%",
+     "z": 0.6
+    },
+    "why": [
+     "핵심 단어",
+     "VIX 변동성 +7.32%"
+    ]
+   }
+  },
+  {
+   "id": "155f6dn",
+   "title": "\"사이드카 정도론 놀라지 않아\"…AI發 롤러코스터 장세 언제까지?",
+   "firstSeen": "2026-11-25T22:00:00.000Z",
+   "lastSeen": "2026-11-25T22:00:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "\"사이드카 정도론 놀라지 않아\"…AI發 롤러코스터 장세 언제까지?",
+     "link": "https://www.newsis.com/view/NISX20261125_0003883161",
+     "host": "newsis.com",
+     "at": "2026-11-25T22:00:00.000Z"
     }
    ],
    "assess": {
