@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T16:28:43.910Z",
+ "updatedAt": "2026-11-27T16:47:43.327Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -38,9 +38,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 7266.97998046875,
-   "change": 1.17,
-   "z": 0.9,
+   "last": 7281.509765625,
+   "change": 1.37,
+   "z": 1.1,
    "sd": 1.2640982837193226,
    "source": "Yahoo",
    "checked": true
@@ -51,9 +51,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 23963.6796875,
-   "change": 1.6,
-   "z": 0.9,
+   "last": 24017.58203125,
+   "change": 1.83,
+   "z": 1,
    "sd": 1.7506120825258182,
    "source": "Yahoo",
    "checked": true
@@ -64,9 +64,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1334.72998046875,
-   "change": -0.61,
-   "z": -1,
+   "last": 1333.52001953125,
+   "change": -0.7,
+   "z": -1.1,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
   },
@@ -76,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 83.45999908447266,
-   "change": -0.26,
-   "z": -0.1,
+   "last": 82.80999755859375,
+   "change": -1.04,
+   "z": -0.4,
    "sd": 2.870433546363806,
    "source": "Yahoo"
   },
@@ -88,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 3646,
-   "change": 3.12,
-   "z": 2,
+   "last": 3654.199951171875,
+   "change": 3.35,
+   "z": 2.2,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -100,9 +100,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 25.40999984741211,
-   "change": -5.19,
-   "z": -0.4,
+   "last": 25.1200008392334,
+   "change": -6.27,
+   "z": -0.5,
    "sd": 12.991606674217033,
    "source": "Yahoo",
    "checked": true
@@ -113,28 +113,28 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-27",
-   "last": 4.914000034332275,
-   "change": 6.6,
-   "z": 1.2,
+   "last": 4.927999973297119,
+   "change": 8,
+   "z": 1.4,
    "sd": 5.690532832669166,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -0.9,
+  "war": -0.8,
   "politics": -0.9,
-  "rates": -0.9,
-  "trade": -1.2,
+  "rates": -0.7,
+  "trade": -1,
   "fx": -0.2,
   "energy": -0.6,
-  "market": -2.1,
+  "market": -2,
   "credit": -0.3,
   "disaster": 0,
   "policy": -0.5
  },
  "rates": {
   "war": {
-   "rate": 0.3,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
@@ -144,12 +144,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 1,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 2.2,
+   "rate": 2.5,
    "saturated": 0,
    "queries": 2
   },
@@ -245,6 +245,53 @@
    }
   },
   {
+   "id": "10k7e0",
+   "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
+   "firstSeen": "2026-11-26T18:12:00.000Z",
+   "lastSeen": "2026-11-26T21:30:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "후티 반군, 사우디 정유시설 또 공격…연합군 발표",
+     "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
+     "host": "voakorea.com",
+     "at": "2026-11-26T21:30:00.000Z"
+    },
+    {
+     "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95678",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-26T18:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 49,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.35,
+     "unit": "%",
+     "z": 2.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '원유 공급 차질'",
+     "금 +3.35%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
    "id": "1fi7pmk",
    "title": "\"트럼프 '대중 40% 관세' 경고는 내달 미중 정상회담 협상용 카드\"",
    "firstSeen": "2026-11-27T02:42:00.000Z",
@@ -305,53 +352,6 @@
    }
   },
   {
-   "id": "10k7e0",
-   "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
-   "firstSeen": "2026-11-26T18:12:00.000Z",
-   "lastSeen": "2026-11-26T21:30:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "후티 반군, 사우디 정유시설 또 공격…연합군 발표",
-     "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
-     "host": "voakorea.com",
-     "at": "2026-11-26T21:30:00.000Z"
-    },
-    {
-     "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95678",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-26T18:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 46,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.12,
-     "unit": "%",
-     "z": 2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '원유 공급 차질'",
-     "금 +3.12%(평소의 2배)"
-    ]
-   }
-  },
-  {
    "id": "1ry3pnv",
    "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
    "firstSeen": "2026-11-26T23:52:00.000Z",
@@ -375,20 +375,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 43,
+    "score": 46,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.12,
+     "change": 3.35,
      "unit": "%",
-     "z": 2,
+     "z": 2.2,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +3.12%(평소의 2배)"
+     "금 +3.35%(평소의 2.2배)"
     ]
    }
   },
@@ -416,20 +416,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 43,
+    "score": 46,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.12,
+     "change": 3.35,
      "unit": "%",
-     "z": 2,
+     "z": 2.2,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +3.12%(평소의 2배)"
+     "금 +3.35%(평소의 2.2배)"
     ]
    }
   },
@@ -557,6 +557,120 @@
    }
   },
   {
+   "id": "1o6uqgc",
+   "title": "국민연금, 9월 말 수익률 13.28%…기금 1664조원",
+   "firstSeen": "2026-11-27T08:53:00.000Z",
+   "lastSeen": "2026-11-27T13:48:00.000Z",
+   "count": 4,
+   "sources": 3,
+   "topics": [
+    "war"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국민연금 적립금 1664조원 … 국내주식 수익률 66.38%",
+     "link": "https://www.naeil.com/news/read/610396?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-27T13:48:00.000Z"
+    },
+    {
+     "title": "국민연금 9월 말 수익률 13.28%…기금규모 1664조 원 [시그널]",
+     "link": "https://www.sedaily.com/article/20120030?ref=naver",
+     "host": "sedaily.com",
+     "at": "2026-11-27T11:15:00.000Z"
+    },
+    {
+     "title": "국민연금 적립금 석 달 새 202조원 줄어…9월 말 수익률 13.28%",
+     "link": "https://www.hankyung.com/article/202611275472r",
+     "host": "hankyung.com",
+     "at": "2026-11-27T09:00:00.000Z"
+    },
+    {
+     "title": "국민연금, 9월 말 수익률 13.28%…기금 1664조원",
+     "link": "https://www.hankyung.com/article/202611275461r",
+     "host": "hankyung.com",
+     "at": "2026-11-27T08:53:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 28,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.35,
+     "unit": "%",
+     "z": 2.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +3.35%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1hapebg",
+   "title": "국민연금 3개월 만에 202조원 증발…상반기 수익률 절반 반납",
+   "firstSeen": "2026-11-27T08:48:00.000Z",
+   "lastSeen": "2026-11-27T16:44:00.000Z",
+   "count": 13,
+   "sources": 12,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국민연금 적립금… 석달새 202조 줄어",
+     "link": "https://www.donga.com/news/Society/article/all/20261127/135106505/2",
+     "host": "donga.com",
+     "at": "2026-11-27T16:44:00.000Z"
+    },
+    {
+     "title": "국민연금 적립금, 석달 만에 202조원 줄었다…3분기 수익률 13%",
+     "link": "https://www.joongang.co.kr/article/25482644",
+     "host": "joongang.co.kr",
+     "at": "2026-11-27T10:43:00.000Z"
+    },
+    {
+     "title": "국민연금 3개월 만에 202조원 증발...상반기 수익 절반 반납",
+     "link": "http://www.metroseoul.co.kr/article/20261127500359",
+     "host": "metroseoul.co.kr",
+     "at": "2026-11-27T10:24:00.000Z"
+    },
+    {
+     "title": "국민연금 적립금 3개월 만에 202조 줄었다…수익률도 반토막",
+     "link": "https://news.bizwatch.co.kr/article/market/2026/11/27/0045",
+     "host": "news.bizwatch.co.kr",
+     "at": "2026-11-27T09:59:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 26,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.34,
+     "unit": "%",
+     "z": 1.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "코스피 +4.34%"
+    ]
+   }
+  },
+  {
    "id": "l4bj2s",
    "title": "코스피, 4%대 급등해 4900선 탈환…코스닥은 8%대 상승",
    "firstSeen": "2026-11-27T05:20:00.000Z",
@@ -613,98 +727,41 @@
    }
   },
   {
-   "id": "1o6uqgc",
-   "title": "국민연금, 9월 말 수익률 13.28%…기금 1664조원",
-   "firstSeen": "2026-11-27T08:53:00.000Z",
-   "lastSeen": "2026-11-27T13:48:00.000Z",
-   "count": 4,
-   "sources": 3,
-   "topics": [
-    "war"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국민연금 적립금 1664조원 … 국내주식 수익률 66.38%",
-     "link": "https://www.naeil.com/news/read/610396?ref=naver",
-     "host": "naeil.com",
-     "at": "2026-11-27T13:48:00.000Z"
-    },
-    {
-     "title": "국민연금 9월 말 수익률 13.28%…기금규모 1664조 원 [시그널]",
-     "link": "https://www.sedaily.com/article/20120030?ref=naver",
-     "host": "sedaily.com",
-     "at": "2026-11-27T11:15:00.000Z"
-    },
-    {
-     "title": "국민연금 적립금 석 달 새 202조원 줄어…9월 말 수익률 13.28%",
-     "link": "https://www.hankyung.com/article/202611275472r",
-     "host": "hankyung.com",
-     "at": "2026-11-27T09:00:00.000Z"
-    },
-    {
-     "title": "국민연금, 9월 말 수익률 13.28%…기금 1664조원",
-     "link": "https://www.hankyung.com/article/202611275461r",
-     "host": "hankyung.com",
-     "at": "2026-11-27T08:53:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 25,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.12,
-     "unit": "%",
-     "z": 2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +3.12%(평소의 2배)"
-    ]
-   }
-  },
-  {
-   "id": "1hapebg",
-   "title": "국민연금 3개월 만에 202조원 증발…상반기 수익률 절반 반납",
-   "firstSeen": "2026-11-27T08:48:00.000Z",
-   "lastSeen": "2026-11-27T10:43:00.000Z",
+   "id": "1n9clkz",
+   "title": "글로벌 기술주 반등세 지속…유럽증시 상승 출발·나스닥 선물 3% 급등",
+   "firstSeen": "2026-11-27T09:28:00.000Z",
+   "lastSeen": "2026-11-27T15:38:00.000Z",
    "count": 8,
    "sources": 8,
    "topics": [
     "rates",
-    "fx",
     "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "국민연금 적립금, 석달 만에 202조원 줄었다…3분기 수익률 13%",
-     "link": "https://www.joongang.co.kr/article/25482644",
-     "host": "joongang.co.kr",
-     "at": "2026-11-27T10:43:00.000Z"
+     "title": "[뉴욕증시] AI·기술주 저가 매수에 상승 출발…엔비디아 중국 악재로 약...",
+     "link": "https://www.dt.co.kr/article/12097677?ref=naver",
+     "host": "dt.co.kr",
+     "at": "2026-11-27T15:38:00.000Z"
     },
     {
-     "title": "국민연금 3개월 만에 202조원 증발...상반기 수익 절반 반납",
-     "link": "http://www.metroseoul.co.kr/article/20261127500359",
-     "host": "metroseoul.co.kr",
-     "at": "2026-11-27T10:24:00.000Z"
+     "title": "'AI 투매' 진정되나…뉴욕증시 상승 출발, 나스닥 0.7%↑",
+     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=102183",
+     "host": "newsian.co.kr",
+     "at": "2026-11-27T15:10:00.000Z"
     },
     {
-     "title": "국민연금 적립금 3개월 만에 202조 줄었다…수익률도 반토막",
-     "link": "https://news.bizwatch.co.kr/article/market/2026/11/27/0045",
-     "host": "news.bizwatch.co.kr",
-     "at": "2026-11-27T09:59:00.000Z"
+     "title": "[속보] 미국 뉴욕 증시 장초반 동반 상승…다우 0.76%·나스닥 0.90%↑",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631492",
+     "host": "cbci.co.kr",
+     "at": "2026-11-27T15:06:00.000Z"
     },
     {
-     "title": "국민연금, 202조 줄고도 수익률 13%…국내주식이 버팀목 [fn마켓워치]",
-     "link": "https://www.fnnews.com/news/202611271813285297",
-     "host": "fnnews.com",
-     "at": "2026-11-27T09:40:00.000Z"
+     "title": "[뉴욕개장] AI 관련주 매수세에 상승 출발…나스닥 1.58%↑",
+     "link": "https://www.news1.kr/world/usa-canada/6368993",
+     "host": "news1.kr",
+     "at": "2026-11-27T14:45:00.000Z"
     }
    ],
    "assess": {
@@ -727,59 +784,93 @@
    }
   },
   {
-   "id": "1n9clkz",
-   "title": "글로벌 기술주 반등세 지속…유럽증시 상승 출발·나스닥 선물 3% 급등",
-   "firstSeen": "2026-11-27T09:28:00.000Z",
-   "lastSeen": "2026-11-27T15:10:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "id": "1a9pey0",
+   "title": "아시아증시, 美 AI 쇼크 진정 효과⋯日 닛케이 2.1%↑",
+   "firstSeen": "2026-11-27T05:10:00.000Z",
+   "lastSeen": "2026-11-27T08:50:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "rates",
-    "market"
+    "war",
+    "politics",
+    "trade",
+    "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "'AI 투매' 진정되나…뉴욕증시 상승 출발, 나스닥 0.7%↑",
-     "link": "https://www.newsian.co.kr/news/articleView.html?idxno=102183",
-     "host": "newsian.co.kr",
-     "at": "2026-11-27T15:10:00.000Z"
+     "title": "[도쿄증시-마감] 닛케이, AI·반도체주 집중 매수에 2%대 상승",
+     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4447006",
+     "host": "news.einfomax.co.kr",
+     "at": "2026-11-27T08:50:00.000Z"
     },
     {
-     "title": "[속보] 미국 뉴욕 증시 장초반 동반 상승…다우 0.76%·나스닥 0.90%↑",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631492",
-     "host": "cbci.co.kr",
-     "at": "2026-11-27T15:06:00.000Z"
-    },
-    {
-     "title": "[뉴욕개장] AI 관련주 매수세에 상승 출발…나스닥 1.58%↑",
-     "link": "https://www.news1.kr/world/usa-canada/6368993",
-     "host": "news1.kr",
-     "at": "2026-11-27T14:45:00.000Z"
-    },
-    {
-     "title": "[서학개미 레이더] 엔비디아 주가 2.4%↑…나스닥 선물 2.68% 급등",
-     "link": "http://coinreaders.com/274030",
-     "host": "coinreaders.com",
-     "at": "2026-11-27T12:28:00.000Z"
+     "title": "아시아증시, 美 AI 쇼크 진정 효과⋯日 닛케이 2.1%↑",
+     "link": "https://www.etoday.co.kr/news/view/2654056",
+     "host": "etoday.co.kr",
+     "at": "2026-11-27T07:40:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 23,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.34,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.35,
      "unit": "%",
-     "z": 1.4,
+     "z": 2.2,
      "date": "2026-11-27"
     },
     "why": [
-     "코스피 +4.34%"
+     "금 +3.35%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1p5xgks",
+   "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
+   "firstSeen": "2026-11-27T05:42:00.000Z",
+   "lastSeen": "2026-11-27T15:29:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[천자칼럼] 유럽식 '거래의 정석'",
+     "link": "https://www.hankyung.com/article/2026112754031",
+     "host": "hankyung.com",
+     "at": "2026-11-27T15:29:00.000Z"
+    },
+    {
+     "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
+     "link": "http://www.kjdaily.com/article.php?aid=1795792945693751276",
+     "host": "kjdaily.com",
+     "at": "2026-11-27T15:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 24,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.35,
+     "unit": "%",
+     "z": 2.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +3.35%(평소의 2.2배)"
     ]
    }
   },
@@ -836,110 +927,6 @@
     },
     "why": [
      "코스피 +4.34%"
-    ]
-   }
-  },
-  {
-   "id": "4mc5or",
-   "title": "국고채 금리, 증시 강세에 중단기물 상승…초장기물은 하락(종합)",
-   "firstSeen": "2026-11-27T08:06:00.000Z",
-   "lastSeen": "2026-11-27T16:20:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "국고채 금리, 증시 급등에 중단기물 중심 상승…3년물 연 3.685%",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631438",
-     "host": "cbci.co.kr",
-     "at": "2026-11-27T16:20:00.000Z"
-    },
-    {
-     "title": "국고채 금리 중단기물 상승…증시 급등에 채권 약세",
-     "link": "http://www.kjdaily.com/article.php?aid=1795792357693753276",
-     "host": "kjdaily.com",
-     "at": "2026-11-27T15:14:00.000Z"
-    },
-    {
-     "title": "코스피 4900 탈환 ‘불장’에 채권은 화들짝…국고채 3년물 연 3.685%로 6...",
-     "link": "https://www.dt.co.kr/article/12097650?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-27T08:24:00.000Z"
-    },
-    {
-     "title": "증시 급등에 국고채 금리 상승…3년물 연 3.685%",
-     "link": "https://biz.sbs.co.kr/article_hub/20000349453?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-27T08:16:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 21,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.34,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "코스피 +4.34%"
-    ]
-   }
-  },
-  {
-   "id": "1a9pey0",
-   "title": "아시아증시, 美 AI 쇼크 진정 효과⋯日 닛케이 2.1%↑",
-   "firstSeen": "2026-11-27T05:10:00.000Z",
-   "lastSeen": "2026-11-27T08:50:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "politics",
-    "trade",
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[도쿄증시-마감] 닛케이, AI·반도체주 집중 매수에 2%대 상승",
-     "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4447006",
-     "host": "news.einfomax.co.kr",
-     "at": "2026-11-27T08:50:00.000Z"
-    },
-    {
-     "title": "아시아증시, 美 AI 쇼크 진정 효과⋯日 닛케이 2.1%↑",
-     "link": "https://www.etoday.co.kr/news/view/2654056",
-     "host": "etoday.co.kr",
-     "at": "2026-11-27T07:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 21,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.12,
-     "unit": "%",
-     "z": 2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +3.12%(평소의 2배)"
     ]
    }
   }
