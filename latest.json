@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T22:13:06.096Z",
+ "updatedAt": "2026-11-27T22:27:21.448Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -122,12 +122,12 @@
  ],
  "spikes": {
   "war": -0.3,
-  "politics": -0.5,
-  "rates": -0.7,
+  "politics": -0.3,
+  "rates": -0.5,
   "trade": 0,
   "fx": -0.2,
-  "energy": 0.1,
-  "market": -0.1,
+  "energy": 0.5,
+  "market": 0,
   "credit": -0.3,
   "disaster": 0,
   "policy": -0.8
@@ -139,12 +139,12 @@
    "queries": 3
   },
   "politics": {
-   "rate": 1.1,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.4,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
@@ -159,13 +159,13 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.3,
+   "rate": 3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.6,
-   "saturated": 0,
+   "rate": 3.7,
+   "saturated": 1,
    "queries": 3
   },
   "credit": {
@@ -247,6 +247,47 @@
    }
   },
   {
+   "id": "1ry3pnv",
+   "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
+   "firstSeen": "2026-11-26T23:52:00.000Z",
+   "lastSeen": "2026-11-26T23:52:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
+     "link": "https://www.kyosu.net/news/articleView.html?idxno=212785",
+     "host": "kyosu.net",
+     "at": "2026-11-26T23:52:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 53,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.75,
+     "unit": "%",
+     "z": 2.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '호르무즈'",
+     "금 +3.75%(평소의 2.4배)"
+    ]
+   }
+  },
+  {
    "id": "t9mjd9",
    "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
    "firstSeen": "2026-11-27T03:02:00.000Z",
@@ -306,58 +347,29 @@
    }
   },
   {
-   "id": "1ry3pnv",
-   "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
-   "firstSeen": "2026-11-26T23:52:00.000Z",
-   "lastSeen": "2026-11-26T23:52:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
-     "link": "https://www.kyosu.net/news/articleView.html?idxno=212785",
-     "host": "kyosu.net",
-     "at": "2026-11-26T23:52:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 50,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.75,
-     "unit": "%",
-     "z": 2.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '호르무즈'",
-     "금 +3.75%(평소의 2.4배)"
-    ]
-   }
-  },
-  {
    "id": "2t9n8o",
    "title": "젠슨 황 '불륜 상대' 얽힌 中시설에…수출금지 엔비디아 칩이 왜?",
    "firstSeen": "2026-11-27T16:44:00.000Z",
-   "lastSeen": "2026-11-27T21:47:00.000Z",
-   "count": 8,
-   "sources": 8,
+   "lastSeen": "2026-11-27T22:23:00.000Z",
+   "count": 10,
+   "sources": 10,
    "topics": [],
    "critical": [
     "trade"
    ],
    "links": [
+    {
+     "title": "젠슨 황 복귀하자마자…'불륜 상대' 둘러싼 새 의혹에 '발칵'",
+     "link": "https://www.hankyung.com/article/2026112857767",
+     "host": "hankyung.com",
+     "at": "2026-11-27T22:23:00.000Z"
+    },
+    {
+     "title": "젠슨 황 \"밀반출 불가능\" 주장 무색... 엔비디아 최첨단 AI칩 中 설치 확...",
+     "link": "https://www.insight.co.kr/news/583924",
+     "host": "insight.co.kr",
+     "at": "2026-11-27T22:16:00.000Z"
+    },
     {
      "title": "젠슨 황 부담 커지나…‘불륜 상대’ 연계 中시설서 엔비디아 최첨단 칩...",
      "link": "https://www.kyeonggi.com/article/20261128580003",
@@ -369,24 +381,12 @@
      "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/28/2026112890005.html",
      "host": "news.tvchosun.com",
      "at": "2026-11-27T21:31:00.000Z"
-    },
-    {
-     "title": "\"엔비디아 AI 칩 중국 반입 확인…앨리스 황 연계 시설\"",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008867473&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-27T21:18:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 불륜 상대' 연계 중국 시설서 엔비디아 최첨단 칩 발견",
-     "link": "https://imnews.imbc.com/news/2026/world/article/6869228_36925.html",
-     "host": "imnews.imbc.com",
-     "at": "2026-11-27T21:04:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 49,
+    "score": 51,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -725,12 +725,56 @@
    }
   },
   {
+   "id": "1p5xgks",
+   "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
+   "firstSeen": "2026-11-27T05:42:00.000Z",
+   "lastSeen": "2026-11-27T15:29:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[천자칼럼] 유럽식 '거래의 정석'",
+     "link": "https://www.hankyung.com/article/2026112754031",
+     "host": "hankyung.com",
+     "at": "2026-11-27T15:29:00.000Z"
+    },
+    {
+     "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
+     "link": "http://www.kjdaily.com/article.php?aid=1795792945693751276",
+     "host": "kjdaily.com",
+     "at": "2026-11-27T15:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 31,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.75,
+     "unit": "%",
+     "z": 2.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +3.75%(평소의 2.4배)"
+    ]
+   }
+  },
+  {
    "id": "1n9clkz",
    "title": "글로벌 기술주 반등세 지속…유럽증시 상승 출발·나스닥 선물 3% 급등",
    "firstSeen": "2026-11-27T09:28:00.000Z",
-   "lastSeen": "2026-11-27T22:12:00.000Z",
-   "count": 19,
-   "sources": 15,
+   "lastSeen": "2026-11-27T22:26:00.000Z",
+   "count": 15,
+   "sources": 11,
    "topics": [
     "rates",
     "market"
@@ -738,22 +782,22 @@
    "critical": [],
    "links": [
     {
-     "title": "AI 투자 우려 속 기술주 반등…나스닥 2.3% 상승 [뉴욕증시]",
-     "link": "https://www.hankyung.com/article/2026112857597",
-     "host": "hankyung.com",
-     "at": "2026-11-27T22:12:00.000Z"
+     "title": "뉴욕증시, AI 저가 매수에↑⋯다우 4년래 최대 주간 상승률 [종합]",
+     "link": "https://www.etoday.co.kr/news/view/2654163",
+     "host": "etoday.co.kr",
+     "at": "2026-11-27T22:26:00.000Z"
+    },
+    {
+     "title": "[지난밤 뉴욕에선] AI 저가 매수에 나스닥 2.31% 상승",
+     "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=316443",
+     "host": "straightnews.co.kr",
+     "at": "2026-11-27T22:18:00.000Z"
     },
     {
      "title": "뉴욕증시, AIㆍ칩 반등에 상승⋯나스닥 2.3%↑ [상보]",
      "link": "https://www.etoday.co.kr/news/view/2654160",
      "host": "etoday.co.kr",
      "at": "2026-11-27T21:56:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, AI·기술주 반등에 일제히 상승…나스닥 2.3%↑",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=785445",
-     "host": "slist.kr",
-     "at": "2026-11-27T21:48:00.000Z"
     },
     {
      "title": "[글로벌 마켓뷰] 한중일 증시 급등에 뉴욕증시도 화답했나 …나스닥 2.3...",
@@ -840,81 +884,30 @@
    }
   },
   {
-   "id": "1p5xgks",
-   "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
-   "firstSeen": "2026-11-27T05:42:00.000Z",
-   "lastSeen": "2026-11-27T15:29:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "1hywyyt",
+   "title": "사우디·러시아 정제시설 파손, 유가 3거래일 연속 상승",
+   "firstSeen": "2026-11-27T00:12:00.000Z",
+   "lastSeen": "2026-11-27T00:12:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
+    "war",
     "energy"
    ],
    "critical": [],
    "links": [
     {
-     "title": "[천자칼럼] 유럽식 '거래의 정석'",
-     "link": "https://www.hankyung.com/article/2026112754031",
-     "host": "hankyung.com",
-     "at": "2026-11-27T15:29:00.000Z"
-    },
-    {
-     "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
-     "link": "http://www.kjdaily.com/article.php?aid=1795792945693751276",
-     "host": "kjdaily.com",
-     "at": "2026-11-27T15:24:00.000Z"
+     "title": "사우디·러시아 정제시설 파손, 유가 3거래일 연속 상승",
+     "link": "http://www.e-platform.net/news/articleView.html?idxno=107384",
+     "host": "e-platform.net",
+     "at": "2026-11-27T00:12:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
     "score": 28,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.75,
-     "unit": "%",
-     "z": 2.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +3.75%(평소의 2.4배)"
-    ]
-   }
-  },
-  {
-   "id": "164p91h",
-   "title": "\"눈물 쏟고 고개 숙이고\"…코스피 반토막에 전문가들도 '충격'",
-   "firstSeen": "2026-11-27T09:18:00.000Z",
-   "lastSeen": "2026-11-27T14:35:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"잘 버텨내자\" 전문가도 울린 롤러코스피…반토막 난 코스피에 '충격'",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611270156&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-27T14:35:00.000Z"
-    },
-    {
-     "title": "\"눈물 쏟고 고개 숙이고\"…코스피 반토막에 전문가들도 '충격'",
-     "link": "https://www.hankyung.com/article/202611274867H",
-     "host": "hankyung.com",
-     "at": "2026-11-27T09:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 27,
-    "spike": 0,
+    "spike": 0.5,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
