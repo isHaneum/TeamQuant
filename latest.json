@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T13:47:48.567Z",
+ "updatedAt": "2026-11-27T14:14:07.677Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -35,12 +35,13 @@
    "label": "S&P500",
    "unit": "%",
    "available": true,
-   "date": "2026-11-25",
-   "last": 7182.77978515625,
-   "change": -0.25,
-   "z": -0.2,
+   "date": "2026-11-27",
+   "last": 7182.78,
+   "change": 0,
+   "z": 0,
    "sd": 1.2664607111290063,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -48,12 +49,13 @@
    "label": "나스닥",
    "unit": "%",
    "available": true,
-   "date": "2026-11-25",
-   "last": 23585.80078125,
-   "change": -0.62,
-   "z": -0.4,
+   "date": "2026-11-27",
+   "last": 23585.8,
+   "change": 0,
+   "z": 0,
    "sd": 1.7532348734617134,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": false,
    "checked": true
   },
   {
@@ -62,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1335.6600341796875,
-   "change": -0.54,
+   "last": 1335.3800048828125,
+   "change": -0.57,
    "z": -0.9,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
@@ -74,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 84.66000366210938,
-   "change": 1.17,
-   "z": 0.4,
+   "last": 84.41000366210938,
+   "change": 0.87,
+   "z": 0.3,
    "sd": 2.870433546363806,
    "source": "Yahoo"
   },
@@ -86,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 3670.800048828125,
-   "change": 3.82,
-   "z": 2.5,
+   "last": 3667.699951171875,
+   "change": 3.73,
+   "z": 2.4,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -98,8 +100,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 25.420000076293945,
-   "change": -5.15,
+   "last": 25.399999618530273,
+   "change": -5.22,
    "z": -0.4,
    "sd": 12.991606674217033,
    "source": "Yahoo",
@@ -111,28 +113,28 @@
    "unit": "bp",
    "available": true,
    "date": "2026-11-27",
-   "last": 4.900000095367432,
-   "change": 5.2,
+   "last": 4.9019999504089355,
+   "change": 5.4,
    "z": 0.9,
    "sd": 5.690532832669166,
    "source": "Yahoo"
   }
  ],
  "spikes": {
-  "war": -1.1,
+  "war": -1,
   "politics": -1.3,
   "rates": -1.2,
   "trade": -0.9,
   "fx": -0.2,
-  "energy": -0.5,
-  "market": -2.1,
+  "energy": -0.8,
+  "market": -2.2,
   "credit": -0.3,
   "disaster": 0,
   "policy": -0.5
  },
  "rates": {
   "war": {
-   "rate": 0.1,
+   "rate": 0.2,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.2,
+   "rate": 1,
    "saturated": 0,
    "queries": 3
   },
@@ -213,20 +215,20 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 54,
+    "score": 52,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '원유 공급 차질'",
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -261,20 +263,20 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 54,
+    "score": 52,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -361,20 +363,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 51,
+    "score": 49,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -505,14 +507,20 @@
    "id": "1o6uqgc",
    "title": "국민연금, 9월 말 수익률 13.28%…기금 1664조원",
    "firstSeen": "2026-11-27T08:53:00.000Z",
-   "lastSeen": "2026-11-27T11:15:00.000Z",
-   "count": 3,
-   "sources": 2,
+   "lastSeen": "2026-11-27T13:48:00.000Z",
+   "count": 4,
+   "sources": 3,
    "topics": [
     "war"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "국민연금 적립금 1664조원 … 국내주식 수익률 66.38%",
+     "link": "https://www.naeil.com/news/read/610396?ref=naver",
+     "host": "naeil.com",
+     "at": "2026-11-27T13:48:00.000Z"
+    },
     {
      "title": "국민연금 9월 말 수익률 13.28%…기금규모 1664조 원 [시그널]",
      "link": "https://www.sedaily.com/article/20120030?ref=naver",
@@ -533,21 +541,21 @@
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 30,
+    "level": "watch",
+    "label": "참고",
+    "score": 31,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -582,19 +590,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 29,
+    "score": 27,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -628,19 +636,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 29,
+    "score": 27,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -701,6 +709,64 @@
    }
   },
   {
+   "id": "1hapebg",
+   "title": "국민연금 3개월 만에 202조원 증발…상반기 수익률 절반 반납",
+   "firstSeen": "2026-11-27T08:48:00.000Z",
+   "lastSeen": "2026-11-27T10:43:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "rates",
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "국민연금 적립금, 석달 만에 202조원 줄었다…3분기 수익률 13%",
+     "link": "https://www.joongang.co.kr/article/25482644",
+     "host": "joongang.co.kr",
+     "at": "2026-11-27T10:43:00.000Z"
+    },
+    {
+     "title": "국민연금 3개월 만에 202조원 증발...상반기 수익 절반 반납",
+     "link": "http://www.metroseoul.co.kr/article/20261127500359",
+     "host": "metroseoul.co.kr",
+     "at": "2026-11-27T10:24:00.000Z"
+    },
+    {
+     "title": "국민연금 적립금 3개월 만에 202조 줄었다…수익률도 반토막",
+     "link": "https://news.bizwatch.co.kr/article/market/2026/11/27/0045",
+     "host": "news.bizwatch.co.kr",
+     "at": "2026-11-27T09:59:00.000Z"
+    },
+    {
+     "title": "국민연금, 202조 줄고도 수익률 13%…국내주식이 버팀목 [fn마켓워치]",
+     "link": "https://www.fnnews.com/news/202611271813285297",
+     "host": "fnnews.com",
+     "at": "2026-11-27T09:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 24,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.34,
+     "unit": "%",
+     "z": 1.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "코스피 +4.34%"
+    ]
+   }
+  },
+  {
    "id": "enj0x4",
    "title": "“온세상이 변동성이다”…후티공격에 브렌트유 하루만에 3.5% 급등",
    "firstSeen": "2026-11-26T14:36:00.000Z",
@@ -723,19 +789,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 26,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -762,19 +828,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 26,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   },
@@ -801,63 +867,48 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 26,
+    "score": 24,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.82,
+     "change": 3.73,
      "unit": "%",
-     "z": 2.5,
+     "z": 2.4,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.82%(평소의 2.5배)"
-    ]
-   }
-  },
-  {
-   "id": "15yulz",
-   "title": "中 “美, WTO 규칙 위반” 반발",
-   "firstSeen": "2026-11-27T02:30:00.000Z",
-   "lastSeen": "2026-11-27T02:30:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "中 “美, WTO 규칙 위반” 반발",
-     "link": "https://biz.heraldcorp.com/article/10951656?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-27T02:30:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 26,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.82,
-     "unit": "%",
-     "z": 2.5,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +3.82%(평소의 2.5배)"
+     "금 +3.73%(평소의 2.4배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-27T14:14:07.677Z",
+   "id": "1ry3pnv",
+   "level": "caution",
+   "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
+   "why": [
+    "큰 사건 단어 '호르무즈'",
+    "금 +3.73%(평소의 2.4배)"
+   ],
+   "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=888018",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-27T14:14:07.677Z",
+   "id": "xao6m6",
+   "level": "caution",
+   "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
+   "why": [
+    "큰 사건 단어 '사이드카'",
+    "코스피 +4.34%"
+   ],
+   "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=55265",
+   "delivered": false
+  },
   {
    "at": "2026-11-27T13:47:48.567Z",
    "id": "10k7e0",
@@ -1068,30 +1119,6 @@
     "금 +4.42%(평소의 2.8배)"
    ],
    "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-27T08:18:25.895Z",
-   "id": "15tedp0",
-   "level": "caution",
-   "title": "올해만 102차례… 피로감 커지는 ‘사이드카’ 실효성 글쎄",
-   "why": [
-    "큰 사건 단어 '사이드카'",
-    "코스피 +4.34%"
-   ],
-   "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82789",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-27T08:18:25.895Z",
-   "id": "1ry3pnv",
-   "level": "caution",
-   "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
-   "why": [
-    "큰 사건 단어 '호르무즈'",
-    "금 +4.42%(평소의 2.8배)"
-   ],
-   "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=888018",
    "delivered": false
   }
  ],
