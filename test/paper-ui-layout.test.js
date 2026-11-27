@@ -33,7 +33,8 @@ test('TC-UI-REORG-03 문구 규칙: "~할까요?" 없음 · 상태 띠 다섯 �
   assert.doesNotMatch(briefUi, /할까요\?/);
   // 2026-11-26 문구 정리: 운용 상태 → 자동 매매 · 마지막 자동 실행 → 마지막 자동 주문 · 계획 버전 → 계획 반영 · '아직 집행되지 않았습니다 (원인:' → '아직 못 삼 (이유:'
   for (const k of ['자동 매매', '마지막 자동 주문', '다음 점검', '계획 반영', '투자 비중']) assert.ok(paperUi.includes(`<span>${k} ${'$'}{tip(`), `strip item ${k} with tip()`);
-  assert.match(paperUi, /아직 못 삼 \(이유: /);
+  // 2026-11-27 보완 2(사용자 지시 "부가 설명은 클릭으로만"): 이유 문장은 줄에서 빼고 ⓘ 안 첫 줄('이유: …')로 옮겼다.
+  assert.match(paperUi, /아직 못 삼 \$\{tip\(`이유: /);
   assert.match(briefUi, /투자 비중 \$\{m\.investedPct\.toFixed\(0\)\}%/);
   assert.match(briefUi, /m\.run\?\.label/);
 });
@@ -72,6 +73,7 @@ test('TC-UI-REORG-04 헤드라인 규칙(결정 21): 모의계좌 카드의 운�
   assert.match(block, /const why = bm \? \(bm\.error \|\| '비교할 자료 부족'\) : s\.baseline \? '지수 비교 자료 없음 · 공개 자료 받기 전' : '처음 계획 없음';/);
   // 일수·기간은 비교 계산이 잰 기간(bm.days/from/asOf)을 따르고 marks 는 대체값
   assert.match(block, /const from = bm\?\.from \|\| m0\.date, asOf = bm\?\.asOf \|\| m1\.date, days = bm\?\.days \|\| s\.marks\.length;/); assert.match(block, /\$\{days\}일째 · 지수 대비 <b/); assert.doesNotMatch(block, /운용 \$\{s\.marks\.length\}일/);
-  assert.match(block, /위험이 같지는 않습니다/); assert.match(block, /class="cr-muted" title="\$\{esc\(tipText\)\}">ⓘ/);
+  // 2026-11-27 보완 2(R2): title 속성만 있던 글자 ⓘ 는 마우스를 올려야만 보여 누르면 열리는 tip() 으로 바꿨다.
+  assert.match(block, /위험이 같지는 않습니다/); assert.match(block, /const info = tip\(tipText, /); assert.doesNotMatch(block, /title="\$\{esc\(tipText\)\}"/);
   assert.match(paperUi, /prog = progressHtml\(s\)/);
 });

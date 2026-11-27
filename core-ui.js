@@ -90,11 +90,12 @@ window.addEventListener('teamquant:cash', e => { if (Number.isFinite(e.detail?.a
 // ── ② 오늘 점검(홈) ──────────────────────────────────────────
 // 2026-11-26 쉬운 말 정리: 칩마다 있던 ⓘ 대신 칩 글자에 숫자를 바로 쓴다(어긴 규칙은 ✕ 목록에만). '계좌 하루 95% 손실' 띠는 '나쁜 날 하루 손실' 칩으로 합쳤다.
 // 위쪽 메뉴와 같은 곳으로 가는 '규칙'·'모의투자' 버튼은 지웠고, '새로 넣을 돈'은 규칙 › 종목별 목표 비중으로 옮겼다.
-const CHECK_TIP = '내 규칙과 목표 비중으로 지금 계좌를 점검합니다.\n비중 맞추기: 매주 마지막 거래일 종가에 1번. 하루 손실이 한도의 1.25배를 넘거나, 레버리지 상품이 있거나, 한 종목이 상한의 1.2배를 넘으면 바로.\n목표 금액과 10% 넘게 차이 날 때만 맞춥니다.\n과거에 적용한 결과는 규칙 화면에 있습니다(덜 잃는 대신 덜 벌었음).';
+const CHECK_TIP = '할 일 금액은 내가 정한 규칙으로 계산한 결과이며, 실행 여부는 내가 정합니다.\n내 규칙과 목표 비중으로 지금 계좌를 점검합니다.\n목표 비중은 내가 종목마다 정한 비율입니다(없으면 지금 비중). 규칙 비중은 여기에 한 종목 최대 비중·변동성·현금 최소 비중·하루 손실 한도를 적용한 값이고, 할 일 금액은 규칙 비중으로 계산합니다.\n비중 맞추기: 매주 마지막 거래일 종가에 1번. 하루 손실이 한도의 1.25배를 넘거나, 레버리지 상품이 있거나, 한 종목이 상한의 1.2배를 넘으면 바로.\n목표 금액과 10% 넘게 차이 날 때만 맞춥니다.\n과거에 적용한 결과는 규칙 화면에 있습니다(덜 잃는 대신 덜 벌었음).';
 const VAR_TIP = '20거래일에 하루쯤은 이보다 더 잃을 수 있는 금액입니다. 지금 보유에 최근 500거래일의 하루 움직임을 요즘 변동성에 맞춰 넣어 계산했습니다.\n과거에 이 값을 넘은 날 비율은 규칙 › 근거 자료에 있습니다(목표 5%).';
 const PAPER_TIP = '이 점검은 이 화면에서 팀 모의계좌의 규칙·목표 비중으로 다시 계산한 값입니다. 실제 주문은 팀 모의계좌 자동 매매가 정하고(뉴스·공시 주의, 분할 매수 단계 포함), 결과는 모의투자 화면에 있습니다.';
 const CASH_IN_TIP = '새로 들어온 돈을 목표보다 모자란 종목부터 나눕니다. 떨어졌거나 덜 산 종목에 자연히 더 들어갑니다. 한 종목 최대 비중·현금 최소 비중·하루 손실 한도를 지키고 남는 돈은 현금으로 둡니다.\n무작위 6종목 포트폴리오 120개로 2016~2026년을 돌려 보니 매달 같은 비중으로 나눠 살 때와 수익·손실은 비슷하고 매매는 약 40% 적었습니다.';
-function weekEndNote() { const d = new Date(Date.now() + 9 * 3600e3), w = d.getUTCDay(); return w === 5 ? '오늘(금) 종가에 맞춤' : w === 6 || w === 0 ? '다음 주 금요일 종가에 맞춤' : `이번 주 금요일 종가에 맞춤`; }
+// 2026-11-27 보완 2: 맞춤 시점 줄('내 규칙: 이번 주 금요일 종가 기준')은 제목 ⓘ(CHECK_TIP '매주 마지막 거래일 종가에 1번')와 같은 말이라 뺐다.
+// 즉시 점검 조건일 때만 짧은 상태 라벨 '즉시 점검'을 보인다(조건은 같은 ⓘ 에 있음).
 // 칩 글자: 규칙 이름(또는 짧은 이름) + 숫자. 지킨 규칙·확인 못 한 규칙만 칩으로 보인다.
 function chipText(c, e, rules, t30) {
   if (c.id === 'maxSingle') { const xs = e.rows.filter(r => !r.capExempt); return xs.length ? `가장 큰 종목 ${Math.max(...xs.map(r => r.currentPct)).toFixed(1)}% · 한도 ${rules.maxSingle}%` : `${c.label} · 지수 ETF는 예외`; }
@@ -111,14 +112,14 @@ function renderToday() {
   const ready = Object.keys(S.risk).length > 0, { planSaved, rules } = current();
   // 불러오는 동안에도 최종 모양(제목 · 줄 2개 · 칩 줄)으로 그려 아래 카드가 밀리지 않게 한다.
   if (!ready) { card.innerHTML = `<header class="ct-hero"><h2>규칙 점검 중</h2></header><div class="shimmer ct-skel"></div><div class="shimmer ct-skel ct-skel-line"></div><div class="shimmer ct-skel ct-skel-line"></div>`; return; }
-  const s = state(), e = evaluate(s), when = e.urgent ? '지금 바로 맞출 일 있음' : weekEndNote(), paper = !!S.snap?.paper, la = paper ? (S.mock?.auto || []).at(-1) : null;
+  const s = state(), e = evaluate(s), paper = !!S.snap?.paper, la = paper ? (S.mock?.auto || []).at(-1) : null;
   const bad = e.checks.filter(c => c.ok === false), rest = e.checks.filter(c => c.ok !== false); card.classList.toggle('ct-has-bad', bad.length > 0);
-  card.innerHTML = `<header class="ct-hero"><h2>규칙 ${e.known}개 중 ${e.okCount}개 지킴 ${tip(CHECK_TIP)}</h2><span class="ct-when ${e.urgent ? 'urgent' : ''}">${esc(when)}</span></header>
+  card.innerHTML = `<header class="ct-hero"><h2>규칙 ${e.known}개 중 ${e.okCount}개 지킴 ${tip(CHECK_TIP)}</h2>${e.urgent ? '<span class="ct-when urgent">즉시 점검</span>' : ''}</header>
     ${bad.length ? `<ul class="ct-broken">${bad.map(c => `<li><b>${esc(c.label)}</b><span>${esc(String(c.detail || '').split(String.fromCharCode(10))[0].slice(0, 140))}${c.id === 'dailyLoss' ? tip(VAR_TIP) : ''}</span></li>`).join('')}</ul>` : '<p class="ct-allgood">오늘 어긴 규칙이 없습니다.</p>'}
     ${planSaved ? '' : `<p class="ct-note">목표 비중 없음 · 지금 비중으로 점검 ${tip(`한 종목 ${rules.maxSingle}%를 넘는 몫은 잘라 목표로 봤습니다.`)} <button type="button" class="text-button" data-core-go="rules" data-core-open="rl-plan">목표 비중 정하기</button></p>`}
     ${rest.length ? `<div class="ct-checks">${rest.map(c => `<span class="ct-chip ${c.ok === true ? 'ok' : 'na'}">${c.ok === true ? '✓' : '?'} ${esc(chipText(c, e, rules, s.trades30))}${c.id === 'dailyLoss' ? tip(VAR_TIP) : ''}</span>`).join('')}</div>` : ''}
     ${e.known < e.checks.length ? `<p class="ct-unknown">${e.checks.length - e.known}개는 자료가 없어 확인 못 함</p>` : ''}
-    ${paper ? `<p class="ct-none ct-auto">자동 주문${la ? ` · 마지막 ${esc(la.at ? md(kday(la.at)) : '')} · 주문 ${la.sent ?? 0}건 · 막힘 ${la.blocked ?? 0}건` : ' · 기록 없음'} ${tip(PAPER_TIP)}</p>` : e.actions.length ? `<ol class="ct-actions">${e.actions.slice(0, 6).map(a => `<li class="${a.kind}"><b>${esc(a.text)}</b>${a.why?.length ? `<small>${esc(a.why.join(' · '))}</small>` : ''}</li>`).join('')}</ol>` : '<p class="ct-none">할 일 없음 · 목표 비중대로 유지</p>'}
+    ${paper ? `<p class="ct-none ct-auto">자동 주문${la ? ` · 마지막 ${esc(la.at ? md(kday(la.at)) : '')} · 주문 ${la.sent ?? 0}건 · 막힘 ${la.blocked ?? 0}건` : ' · 기록 없음'} ${tip(PAPER_TIP)}</p>` : e.actions.length ? `<p class="ct-acts-title">규칙 계산 결과</p><ol class="ct-actions">${e.actions.slice(0, 6).map(a => `<li class="${a.kind}"><b>${esc(a.text)}</b>${a.why?.length ? `<small>${esc(a.why.join(' · '))}</small>` : ''}</li>`).join('')}</ol>` : '<p class="ct-none">할 일 없음 · 목표 비중대로 유지</p>'}
     <div class="ct-links"><button type="button" class="secondary" data-core-go="precheck">종목·주문 점검</button></div>`;
 }
 // '새로 넣을 돈'(규칙 › 종목별 목표 비중 안 · 예시·실계좌만): 들어온 돈을 목표보다 모자란 종목부터 나눈 목록만 보여 준다(주문 없음).
@@ -167,7 +168,7 @@ const ruleName = k => RULE_DEFS.find(d => d.id === k)?.label || { cadence: '점�
 const RULES_TIP = '오늘 점검과 주문 점검이 이 규칙으로 계산합니다. 손실을 줄이는 한도이지 사고팔라는 지시가 아닙니다. 예시 자산·내 계좌 규칙은 이 브라우저(프로필별)에만, 팀 모의계좌 규칙은 팀 PC에 저장됩니다.';
 const dcaSaved = (() => { try { return Number(JSON.parse(localStorage.getItem('teamQuantDcaGuide') || 'null')?.monthly) > 0; } catch { return false; } })();
 
-const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>규칙</h1><p id="rl-sub">정해 둔 규칙과 이유</p></div></div>
+const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>규칙</h1><p id="rl-sub"></p></div></div>
 <div class="rl">
   <article class="cr-card" id="rl-now"><div class="shimmer ct-skel"></div></article>
   <details class="cr-card rl-fold rl-dca-fold" id="rl-dca-fold" ${dcaSaved ? '' : 'open'}><summary><b>월급 적립</b></summary><div id="rl-dca"><div class="shimmer ct-skel"></div></div></details>
@@ -179,7 +180,7 @@ const rulesPage = addView('rules', '규칙', `<div class="page-head"><div><h1>�
   <article class="cr-card" id="cr-review"><header><h3>규칙 지킨 기록 ${tip("팀 모의계좌의 날마다 기록(총자산·현금·주문·막힌 이유)으로 규칙을 지켰는지 봅니다. 예측이 아닌 지난 기록이고 20거래일은 지나야 의미가 있습니다.\n'주문 오류 점검'은 주문이 제대로 처리됐는지이고, 규칙을 지켰는지와는 다릅니다.")}</h3></header><div id="cr-review-body"><p class="cr-muted">불러오는 중…</p></div></article>
   <div class="cr-card rl-folds">
   <details class="rl-fold" id="rl-change"><summary><b>규칙 바꾸기</b><small id="rl-change-state"></small></summary>
-    <div id="rl-levels" class="rl-levels"></div>
+    <div id="rl-levels" class="rl-levels"></div><p class="rl-cap" id="rl-levels-note"></p>
     <div id="rl-custom" hidden><form id="cr-form" class="cr-rules"></form><details class="cr-adv"><summary id="cr-adv-sum">변동성 규칙 (기본 끔)</summary><div id="cr-adv"></div></details></div>
     <p class="cr-err" id="cr-err" role="alert"></p>
     <div class="cr-actions"><button type="button" class="primary" id="rl-review-change">변경 내용 확인</button><span class="cr-muted" id="cr-saved"></span></div>
@@ -241,10 +242,11 @@ function notUsedHtml() {
 }
 function renderNow() {
   const box = $('#rl-now'); if (!box) return; const c = ruleCtx(), lv = RULE_LEVELS.find(l => l.id === c.level);
-  $('#rl-sub').textContent = c.kind === 'paper' ? '팀 모의계좌가 지키는 규칙 · 보기만' : c.kind === 'real' ? '내 계좌에 적용하는 규칙' : c.kind === 'demo' ? '예시 자산에 적용하는 규칙' : '정해 둔 규칙과 이유';
+  // 2026-11-27 보완 2: 어느 계좌 규칙인지는 짧은 이름만(설명 문장 없음).
+  $('#rl-sub').textContent = c.kind === 'paper' ? '팀 모의계좌 · 보기만' : c.kind === 'real' ? '내 계좌' : c.kind === 'demo' ? '예시 자산' : '';
   const status = c.kind === 'paper'
-    ? `팀 모의계좌 규칙 · ${c.savedAt ? `저장 ${esc(md(kday(c.savedAt)))}` : '기본 규칙으로 자동 매매 중'}${c.since ? ` · ${esc(md(c.since))}부터 변경 ${c.changes}회` : ''}`
-    : c.confirmedAt ? `확정 ${esc(md(kday(c.confirmedAt)))} · ${c.locked ? `${esc(md(kday(c.lockedUntil)))}부터 바꿀 수 있음` : '지금 바꿀 수 있음'}` : '아직 확정 전 · 기본 규칙으로 점검 중';
+    ? `${c.savedAt ? `저장 ${esc(md(kday(c.savedAt)))}` : '기본 규칙'}${c.since ? ` · ${esc(md(c.since))}부터 변경 ${c.changes}회` : ''}`
+    : c.confirmedAt ? `확정 ${esc(md(kday(c.confirmedAt)))} · ${c.locked ? `${esc(md(kday(c.lockedUntil)))}부터 바꿀 수 있음` : '지금 바꿀 수 있음'}` : '확정 전 · 기본 규칙';
   const past = guard('past-nums', () => pastNums(c)), pastCell = id => past ? (past[id] || '<span class="cr-muted">—</span>') : '<span class="cr-muted">불러오는 중…</span>';
   const rows = RULE_DEFS.filter(d => !ADV.has(d.id) || (d.id === 'perAssetVol' && c.rules.perAssetVol) || (d.id === 'volTarget' && c.rules.perAssetVol)).map(d => `<tr><td>${esc(d.label)} ${tip(RULE_WHY[d.id] ? `${d.help}\n${RULE_WHY[d.id]}` : d.help)}</td><td><b>${esc(ruleValue(d, c.rules[d.id]))}</b></td><td>${pastCell(d.id)}</td></tr>`).join('');
   const caps = c.kind === 'paper' ? c.mock?.planDoc?.caps : null;
@@ -254,11 +256,14 @@ function renderNow() {
     ? `<button type="button" class="secondary" data-demo-start>예시 자산으로 바꿔서 직접 정하기</button>`
     : c.kind === 'none' || c.confirmedAt ? ''
       : `<button type="button" class="primary" id="rl-confirm-now">이 규칙으로 확정</button><button type="button" class="secondary" id="rl-open-change">값 고쳐서 확정</button>`;
-  box.innerHTML = `<header><h3>지금 규칙 ${tip(`${RULES_TIP}\n${c.readOnly ? '팀 모의계좌가 실제로 쓰는 규칙입니다. 팀 PC에서만 바꿀 수 있고, 바꾸면 이유와 함께 공개 자료에 남습니다.' : `확정하면 ${RULE_LOCK_DAYS}일 동안 못 바꾸고, 그 뒤에는 이유를 적어야 바꿀 수 있습니다. 바꾼 지 20거래일이 안 된 성과로는 새 규칙을 평가할 수 없어서입니다. 스스로 한 약속이라 이 브라우저의 저장 기록을 지우면 풀립니다.`}`)}</h3><span class="rl-badge ${lv ? 'ok' : 'warn'}">${lv ? `${esc(lv.label)} · 과거 자료로 확인함` : '직접 정함 · 과거 확인 없음'}</span></header>
-    <p class="rl-cap">하루 손실 <b>${c.rules.dailyLoss}%</b> 넘을 것 같으면 주식 줄임 · ${status}</p>
+  // 2026-11-27: 잠금 사실은 누르기 전에 늘 보이게 확정 버튼 바로 위에 둔다(튜토리얼을 끈 사람도 본다 · .rl-note 는 간결 화면이 가려서 rl-cap).
+  // 보완 2(같은 날 · R6): 줄글 3문장 대신 '28일 잠금 ⓘ' 라벨. 날짜·이유 10자·저장 위치는 ⓘ 안, 날짜는 확인 표 '잠금' 줄에도 있다.
+  const lockNote = (c.kind === 'demo' || c.kind === 'real') && !c.confirmedAt ? `<p class="rl-cap">${RULE_LOCK_DAYS}일 잠금 ${tip(`확정하면 ${RULE_LOCK_DAYS}일 동안 바꿀 수 없습니다(${md(kday(Date.now() + RULE_LOCK_DAYS * 864e5))}부터 다시 바꿀 수 있음). 그 뒤에는 이유를 10자 이상 적어야 합니다. 잠금은 이 브라우저에만 저장됩니다.`, '잠금')}</p>` : '';
+  box.innerHTML = `<header><h3>지금 규칙 ${tip(`${RULES_TIP}\n${c.readOnly ? '팀 모의계좌가 실제로 쓰는 규칙입니다. 팀 PC에서만 바꿀 수 있고, 바꾸면 이유와 함께 공개 자료에 남습니다.\n내 규칙은 이 카드 맨 아래 [예시 자산으로 바꿔서 직접 정하기]에서 정합니다(예시 종목 6개).' : `확정하면 ${RULE_LOCK_DAYS}일 동안 못 바꾸고, 그 뒤에는 이유를 적어야 바꿀 수 있습니다. 바꾼 지 20거래일이 안 된 성과로는 새 규칙을 평가할 수 없어서입니다. 스스로 한 약속이라 이 브라우저의 저장 기록을 지우면 풀립니다.`}`)}</h3><span class="rl-badge ${lv ? 'ok' : 'warn'}">${lv ? `${esc(lv.label)} · 과거 자료로 확인함` : '직접 정함 · 과거 확인 없음'}</span></header>
+    <p class="rl-cap">${status}</p>
     <div class="table-wrap"><table class="cr-table rl-rules"><thead><tr><th>규칙</th><th>값</th><th>과거 숫자 ${tip('같은 계산을 과거 자료에 적용해 잰 숫자입니다. "정한 값"은 비교 자료 없이 정한 것입니다. 지금 살아남은 대형주로 만든 예시 포트폴리오라 실제보다 좋게 나옵니다.')}</th></tr></thead><tbody>${rows}${capRow}</tbody></table></div>
     ${guard('not-used', notUsedHtml) || ''}
-    ${buttons ? `<div class="cr-actions">${buttons}</div>` : ''}`;
+    ${lockNote}${buttons ? `<div class="cr-actions">${buttons}</div>` : ''}`;
 }
 
 // 계획의 위험 분해(결정 35): 개별 종목 묶음이 계좌 위험에서 차지하는 몫, 지수와 다르게 움직이는 정도(추적오차)가 어느 종목에서 나오는지, 위험을 같게 나누면 비중이 어떻게 되는지.
@@ -272,7 +277,7 @@ function sizingHtml() {
   const rows = syms.map(s => `<tr><td>${esc(short(s))}</td><td>${Number(S.mock?.planDoc?.weights?.[s]?.pct ?? cur.weightsPct[s]).toFixed(1)}%</td><td><b>${cur.activeSharePct[s].toFixed(0)}%</b></td><td>${alt.weightsPct[s].toFixed(1)}%</td></tr>`).join('');
   const near = Math.abs(eq.volPct - er.volPct) < 1 ? '(거의 같음)' : '';
   return `<div class="rl-sizing"><h4 class="rl-h4">종목별 위험 몫 ${tip('최근 3년 주간 수익률(원화)로 계산했습니다. "지수와 다르게 움직이는 정도"는 지수로만 담은 경우(국내·미국·현금 비율은 이 계좌와 같게, 국내는 KODEX 200, 미국은 S&P500 ETF로만)와의 차이가 한 해에 흔들리는 폭입니다. 종목별 위험 몫은 그 흔들림에 각 종목이 보탠 비율입니다. 수익을 예측한 값이 아닙니다.')}</h4>
-    <p class="rl-cap">개별 ${syms.length}종목 · 비중 ${satW.toFixed(0)}% · 계좌 위험 몫 <b>${cur.satRiskOfTotalPct.toFixed(0)}%</b> · 지수와 다르게 움직이는 정도 연 ${cur.tePct.toFixed(1)}% · ${ercPlan ? `종목마다 위험 몫을 <b>${(100 / syms.length).toFixed(0)}%</b>씩 같게 나눔` : `그중 <b>${topSum.toFixed(0)}%</b>가 ${top.map(s => esc(short(s))).join(' · ')}`}</p>
+    <p class="rl-cap">개별 ${syms.length}종목 · 비중 ${satW.toFixed(0)}% · 위험 몫 <b>${cur.satRiskOfTotalPct.toFixed(0)}%</b> · 지수와 차이 연 ${cur.tePct.toFixed(1)}% · ${ercPlan ? `종목당 위험 몫 <b>${(100 / syms.length).toFixed(0)}%</b>` : `그중 <b>${topSum.toFixed(0)}%</b>가 ${top.map(s => esc(short(s))).join(' · ')}`}</p>
     <details class="rl-in"><summary>${ercPlan ? '같은 비중과 비교' : '위험을 같게 나누면'}</summary>
       <div class="table-wrap"><table class="cr-table rl-size"><thead><tr><th>종목</th><th>목표 비중</th><th>위험 몫</th><th>${ercPlan ? '같은 비중이면' : '위험을 같게 나누면'}</th></tr></thead><tbody>${rows}</tbody></table></div>
       <p class="rl-cap">${ercPlan ? '같은 비중과 비교' : '위험을 같게 나누면'}: 지수와 다르게 움직이는 정도 연 ${eq.tePct.toFixed(2)}% → <b>${er.tePct.toFixed(2)}%</b> · 가장 큰 종목 위험 몫 ${eq.maxActiveSharePct.toFixed(0)}% → ${er.maxActiveSharePct.toFixed(0)}% · 계좌 변동성 ${eq.volPct.toFixed(1)}% → ${er.volPct.toFixed(1)}%${near}</p>
@@ -287,7 +292,7 @@ function renderRisk() {
   let live = '<p class="cr-muted">보유 자료를 불러오면 지금 위험을 계산합니다.</p>', tiles = '';
   if (S.positions.length && Object.keys(S.risk).length) { const e = guard('evaluate', () => evaluate(state()));
     if (e?.varNow?.ok && e.total > 0) { const now = e.varNow.var95 / e.total * 100, over = now > c.rules.dailyLoss * 1.001, after = e.varTarget?.ok ? e.varTarget.var95 : null;
-      live = `<p class="rl-cap">지금 나쁜 날 하루 손실 <b>−${won(e.varNow.var95)}</b> · 총자산의 ${now.toFixed(2)}% · 한도 ${c.rules.dailyLoss}% ${over ? '<b class="rl-bad">어김 · 줄일 차례</b>' : '지킴'}</p>`;
+      live = `<p class="rl-cap">지금 나쁜 날 하루 손실 <b>−${won(e.varNow.var95)}</b> · 총자산의 ${now.toFixed(2)}% · 한도 ${c.rules.dailyLoss}% ${over ? '<b class="rl-bad">어김</b>' : '지킴'}</p>`;
       tiles = `<div><span>나쁜 날 하루 손실(지금)</span><b>−${won(e.varNow.var95)}</b><small>총자산의 ${now.toFixed(2)}%</small></div><div><span>목표대로 맞추면</span><b>${after === null ? '—' : '−' + won(after)}</b><small>${after === null ? '' : `총자산의 ${(after / e.total * 100).toFixed(2)}% · 한도 ${c.rules.dailyLoss}%`}</small></div>`; } }
   if (pf) { const r = pf.variants[V], h = pf.hold;
     tiles += `<div><span>과거 최대 하락폭</span><b>${r.all.mdd}%</b><small>그냥 보유 ${h.all.mdd}%</small></div><div><span>과거 가장 나빴던 1년</span><b>${r.all.worst12}%</b><small>그냥 보유 ${h.all.worst12}%</small></div>`; }
@@ -301,19 +306,19 @@ function renderPast() {
   const box = $('#rl-past-body'); if (!box) return; document.querySelectorAll('#rl-pf [data-pf]').forEach(b => b.classList.toggle('on', b.dataset.pf === RL.pf));
   const pf = pfData(); if (!pf) return; const c = ruleCtx(), V = variantOf(c.level) || 'C', r = pf.variants[V], h = pf.hold, names = Object.keys(h.all.crisis || {});
   const better = names.filter(n => r.all.crisis?.[n] && r.all.crisis[n].ret > h.all.crisis[n].ret).length;
-  const s = rehearsal?.summary, head = s && V === 'C' ? `<p class="rl-cap">기간 ${rehearsal.windows.length}개 × 예시 포트폴리오 ${Object.keys(rehearsal.portfolios).length}개, ${s.cells}번 적용해 보니 <b>${Math.round(s.shareSmallerMddThanHold * s.cells)}번</b>은 그냥 보유보다 덜 빠졌고, 수익이 더 높았던 것은 <b>${Math.round(s.shareBetterRetThanHold * s.cells)}번</b>입니다. ${tip(`기간: ${rehearsal.windows.map(w => w.label).join(' · ')}. 기본 규칙 기준이고, 수익 차이의 중간값은 ${s.medianRetDiffVsHoldPct.toFixed(1)}%p, 최대 하락폭 차이의 중간값은 ${s.medianMddDiffVsHoldPct.toFixed(1)}%p입니다.`)}</p>` : '';
+  // 2026-11-27 보완 2: 문장 대신 숫자 라벨(어떻게 셌는지는 ⓘ).
+  const s = rehearsal?.summary, head = s && V === 'C' ? `<p class="rl-cap">${s.cells}번 중 그냥 보유보다 덜 빠짐 <b>${Math.round(s.shareSmallerMddThanHold * s.cells)}번</b> · 수익 더 높음 <b>${Math.round(s.shareBetterRetThanHold * s.cells)}번</b> ${tip(`기간 ${rehearsal.windows.length}개 × 예시 포트폴리오 ${Object.keys(rehearsal.portfolios).length}개, ${s.cells}번 적용한 결과입니다.\n기간: ${rehearsal.windows.map(w => w.label).join(' · ')}. 기본 규칙 기준이고, 수익 차이의 중간값은 ${s.medianRetDiffVsHoldPct.toFixed(1)}%p, 최대 하락폭 차이의 중간값은 ${s.medianMddDiffVsHoldPct.toFixed(1)}%p입니다.`)}</p>` : '';
   const dates = { '코로나 급락': '2020-02~03', '2022 하락장': '2022-01~10', '2026 하반기': '2026-06~' };
-  // '덜 잃는 대신 덜 벌었습니다'는 숫자가 그럴 때만 쓴다(최대 하락폭이 작고 연 수익도 낮을 때).
-  const tradeOff = r.all.mdd > h.all.mdd && r.all.cagr < h.all.cagr ? '덜 잃는 대신 덜 벌었습니다 · ' : '';
+  // '덜 잃는 대신 덜 벌었습니다'는 숫자가 그럴 때만, 전체 기간 제목 옆 ⓘ 에 쓴다(최대 하락폭이 작고 연 수익도 낮을 때 · 숫자는 바로 아래 타일).
+  const tradeOff = r.all.mdd > h.all.mdd && r.all.cagr < h.all.cagr ? tip('덜 잃는 대신 덜 벌었습니다.') : '';
   box.innerHTML = `${head}
-    ${variantOf(c.level) ? '' : '<p class="cr-note">직접 정한 규칙은 과거 결과가 없어 기본 규칙 결과를 보여 줍니다.</p>'}
+    ${variantOf(c.level) ? '' : `<p class="cr-note">기본 규칙 결과 ${tip('직접 정한 규칙은 과거 결과가 없어 기본 규칙 결과를 보여 줍니다.')}</p>`}
     <div class="rl-pastgrid"><div>
       <p class="rl-cap">하락장 ${names.length}번 중 <b>${better}번</b> 덜 잃음 · ${esc(PF_NAMES[RL.pf])}</p>
       <div class="table-wrap"><table class="cr-table rl-crisis"><thead><tr><th>구간</th><th>그냥 보유</th><th>규칙대로</th></tr></thead><tbody>${names.map(n => `<tr><td>${esc(n)} <small class="cr-muted">${esc(dates[n] || '')}</small></td><td>${h.all.crisis[n].ret}%<small class="cr-muted"> 최대 하락폭 ${h.all.crisis[n].mdd}%</small></td><td><b>${r.all.crisis?.[n]?.ret ?? '—'}%</b><small class="cr-muted"> 최대 하락폭 ${r.all.crisis?.[n]?.mdd ?? '—'}%</small></td></tr>`).join('')}</tbody></table></div>
     </div><div>
-      <p class="rl-cap">${esc(evidence.from.slice(0, 4))}~${esc(pf.to.slice(0, 4))}년 전체</p>
+      <p class="rl-cap">${esc(evidence.from.slice(0, 4))}~${esc(pf.to.slice(0, 4))}년 전체 ${tradeOff}</p>
       <div class="rl-tiles two"><div><span>최대 하락폭</span><b>${r.all.mdd}%</b><small>그냥 보유 ${h.all.mdd}%</small></div><div><span>연 수익</span><b>${r.all.cagr}%</b><small>그냥 보유 ${h.all.cagr}%</small></div><div><span>매매 ${tip('한 번에 낸 비중 맞추기 주문은 1번으로 셉니다.')}</span><b>연 ${r.trading.tradesPerYear}회</b><small>매매 횟수 상한을 넘긴 기간 ${r.trading.over30DayLimitShare}%</small></div></div>
-      ${tradeOff ? `<p class="rl-cap">${tradeOff}연 수익 ${r.all.cagr}% (그냥 보유 ${h.all.cagr}%)</p>` : ''}
     </div></div>`;
 }
 
@@ -334,7 +339,7 @@ async function renderReview() {
   const r = reviewRules(st, rules, { indexPct }), hist = (st.prefsHistory || []).filter(x => !(x.changed || []).includes('init'));
   const asOf = st.live ? '실시간' : `하루 1번 공개${st.asOf ? ` · ${kdt(st.asOf)} 기준` : ''}`;
   const team = `<p class="rl-cap">${own ? '팀 모의계좌 · ' : ''}자동 매매 <b>${r.days}일째</b> · 하루 한도(${rules.dailyLoss}%) 넘은 날 <b>${r.dailyBreaches}일</b> / ${Math.max(0, r.days - 1)}일 · 30일 매매 <b>${r.trades30}번</b>${tip('한 번에 낸 비중 맞추기 주문은 1번으로 셉니다.')} (상한 ${rules.maxTrades30}번) · 규칙 변경 <b>${hist.length}회</b> <small class="cr-muted">${esc(asOf)}</small></p>
-    <ul class="cr-find">${r.findings.map(f => `<li><span class="ct-chip ${f.tone > 0 ? 'ok' : f.tone < 0 ? 'bad' : 'na'}">${f.tone > 0 ? '좋음' : f.tone < 0 ? '주의' : '참고'}</span><div><b>${esc(f.key === 'blocked' ? f.text.replace(/\(\d+(?= \d+건)/g, '') : f.text)}</b>${f.suggest ? `<small>${esc(f.suggest)}</small>` : ''}</div></li>`).join('')}</ul>
+    <ul class="cr-find">${r.findings.map(f => `<li><span class="ct-chip ${f.tone > 0 ? 'ok' : f.tone < 0 ? 'bad' : 'na'}">${f.tone > 0 ? '좋음' : f.tone < 0 ? '주의' : '참고'}</span><div><b>${esc(f.text)}</b>${f.tip ? tip(f.key === 'blocked' ? f.tip.replace(/\(\d+(?= \d+건)/g, '') : f.tip) : ''}${f.suggest ? `<small>${esc(f.suggest)}</small>` : ''}</div></li>`).join('')}</ul>
     ${hist.length ? `<details class="rl-in"><summary>규칙을 바꾼 기록 ${hist.length}건</summary><ul class="cr-facts">${hist.slice().reverse().map(x => `<li>${esc(md(kday(x.at)))} · ${esc((x.changed || []).map(ruleName).join(', '))} · 이유: ${esc(x.reason || '(없음)')}</li>`).join('')}</ul></details>` : ''}`;
   box.innerHTML = `${own}${own ? `<details class="rl-in" id="cr-team"><summary>팀 모의계좌 기록 ${tip(`${kind === 'demo' ? '예시 자산' : '내 계좌'}는 날마다 기록이 없어 오늘 시점만 보입니다. 이 기록은 같은 방식으로 자동 매매 중인 팀 모의계좌 것입니다.`)}</summary>${team}</details>` : team}
     <div class="cr-actions"><button type="button" class="text-button" data-core-go="paper">모의투자에서 보기</button></div>`;
@@ -351,7 +356,10 @@ function renderChange({ keepForm = false } = {}) {
   $('#rl-change-state').textContent = RL.prefillNote && RL.pick === 'custom' ? RL.prefillNote : c.readOnly ? '팀 모의계좌 규칙은 팀 PC에서만' : c.locked ? `${md(kday(c.lockedUntil))}부터 가능` : c.confirmedAt ? '지금 바꿀 수 있음 · 이유 필요' : '아직 확정 전';
   if (RL.pick === null) RL.pick = c.level;
   const pf = pfData(), card = (id, title, sub, num) => `<label class="rl-level ${RL.pick === id ? 'on' : ''}"><input type="radio" name="rl-level" value="${id}" ${RL.pick === id ? 'checked' : ''}><b>${esc(title)}</b><span>${esc(sub)}</span><small>${num}</small></label>`;
-  $('#rl-levels').innerHTML = RULE_LEVELS.map(l => { const v = pf?.variants?.[l.variant]; return card(l.id, l.label, l.note, v ? `최대 하락폭 ${v.all.mdd}% · 연 수익 ${v.all.cagr}% · 매매 연 ${v.trading.tradesPerYear}회 · 매매 횟수 상한을 넘긴 기간 ${v.trading.over30DayLimitShare}%` : '과거 자료를 불러오는 중'); }).join('') + card('custom', '직접 입력', '숫자를 하나씩 정함', '<span class="rl-badge warn">과거 확인 없음</span>');
+  // 2026-11-27(F2-16): 수준 카드에는 연 수익 숫자를 두지 않고, 어느 기간·대상·비용의 과거 결과인지 한 줄을 붙인다.
+  $('#rl-levels').innerHTML = RULE_LEVELS.map(l => { const v = pf?.variants?.[l.variant]; return card(l.id, l.label, l.note, v ? `최대 하락폭 ${v.all.mdd}% · 매매 연 ${v.trading.tradesPerYear}회 · 매매 횟수 상한을 넘긴 기간 ${v.trading.over30DayLimitShare}%` : '과거 자료를 불러오는 중'); }).join('') + card('custom', '직접 입력', '숫자를 하나씩 정함', '<span class="rl-badge warn">과거 확인 없음</span>');
+  // 기간 · 대상 · 비용은 라벨로 보이고, 생존 편향·보장 없음은 ⓘ(LEGAL 5.2 수익률 배지 ⓘ)에 둔다(2026-11-27 보완 2).
+  const lvNote = $('#rl-levels-note'); if (lvNote) lvNote.innerHTML = pf && Number.isFinite(evidence?.cost) ? `과거 결과 ${esc(String(pf.from).slice(0, 4))}~${esc(String(pf.to).slice(0, 4))} ${tip(`${pf.label} · ${pf.from}~${pf.to} · 비용 ${+(evidence.cost * 100).toFixed(2)}%\n지금 살아남은 종목이라 실제보다 좋게 나옵니다. 과거 결과는 앞으로의 수익을 보장하지 않습니다.`)}` : '';
   $('#rl-custom').hidden = RL.pick !== 'custom';
   const adv = $('#cr-adv-sum'); if (adv) adv.textContent = c.rules.perAssetVol ? '변동성 규칙 (켬)' : '변동성 규칙 (기본 끔)';
   if (!keepForm) { $('#cr-form').innerHTML = RULE_DEFS.filter(d => !ADV.has(d.id)).map(d => ruleInput(d, c.rules[d.id])).join(''); $('#cr-adv').innerHTML = RULE_DEFS.filter(d => ADV.has(d.id)).map(d => ruleInput(d, c.rules[d.id])).join(''); }
@@ -374,14 +382,17 @@ function showConfirm() {
   box.innerHTML = `<div class="rl-confirm"><h4>변경 내용 확인</h4><table class="cr-table"><tbody>
       <tr><td>바뀌는 값</td><td>${diff}</td></tr><tr><td>오늘 점검</td><td>${today}</td></tr>${risk}
       <tr><td>과거 자료 확인</td><td>${lv === 'custom' ? '없음 · 직접 정한 값' : `있음 · ${esc(RULE_LEVELS.find(l => l.id === lv).label)}`}</td></tr>
-      <tr><td>잠금</td><td>확정하면 <b>${esc(until)}</b>까지 바꿀 수 없습니다</td></tr></tbody></table>
+      <tr><td>잠금</td><td>${RULE_LOCK_DAYS}일 · <b>${esc(until)}</b>부터 다시 바꿀 수 있습니다</td></tr></tbody></table>
     ${blocked ? `<p class="cr-err">${esc(g.why)}</p>` : `${g.first ? '' : `<label class="ck-field"><span>바꾸는 이유 (10자 이상 · 기록에 남음)</span><input id="rl-reason" maxlength="300" placeholder="예: 11월 기록에서 하루 한도를 넘은 날이 3일이라 한 단계 낮춤"></label>`}
       <div class="cr-actions"><button type="button" class="primary" id="rl-commit">확정</button><button type="button" class="text-button" id="rl-cancel">취소</button><span class="cr-err" id="rl-commit-err"></span></div>`}</div>`;
+  // 2026-11-27 첫 규칙 3단계(tutorial-ui.js): 확인 표가 실제로 보였을 때만 알린다(①을 '확인만 함'으로 센다).
+  window.dispatchEvent(new CustomEvent('teamquant:rules-preview', { detail: { blocked } }));
 }
 function commitChange() {
   const c = ruleCtx(), { rules: cand } = candidateRules(), reason = $('#rl-reason')?.value || '', res = applyChange(c.saved, cand, { reason });
   if (!res.ok) { $('#rl-commit-err').textContent = res.why; return; }
   if (!save({ ...res.value, plan: c.saved?.plan || null })) { $('#rl-commit-err').textContent = '이 브라우저에 저장하지 못했습니다(저장 공간이 막혀 있음).'; return; }
+  window.dispatchEvent(new Event('teamquant:rules-confirmed')); // 저장이 된 뒤에만(첫 규칙 3단계 ① '확정함')
   RL.pick = null; RL.prefillNote = ''; $('#rl-confirm').hidden = true; $('#rl-change').open = false; renderRules(); renderToday(); S.loading = loadAll(); $('#cr-saved').textContent = '확정했습니다';
 }
 // 다른 화면(모의투자 › 과거 시세로 테스트의 '이 규칙을 규칙 화면에 넣기')이 넘긴 규칙을 '규칙 바꾸기 › 직접 입력'에 채워 둔다.
@@ -577,7 +588,7 @@ const preP = addView('precheck', '종목·주문 점검', `<div class="page-head
   <div class="cp-seg" role="radiogroup" aria-label="매수·매도"><label><input type="radio" name="cp-side" value="BUY" checked><span>매수</span></label><label><input type="radio" name="cp-side" value="SELL"><span>매도</span></label></div>
   <label class="cp-l" for="cp-amt">금액(원)</label><input id="cp-amt" type="number" min="1000" step="any" inputmode="numeric" placeholder="예: 1000000">
   <button type="submit" class="primary" id="cp-run">규칙 점검</button><p class="cp-state" id="cp-state" role="status"></p></form>
-  <div class="cp-result" id="cp-result"><div id="cp-stock"></div><div id="cp-check"><div class="cr-card cp-empty"><p>종목을 고르면 시세·차트가, 금액을 넣고 '규칙 점검'을 누르면 점검 결과가 여기 나옵니다.</p></div></div></div></div>`);
+  <div class="cp-result" id="cp-result"><div id="cp-stock"></div><div id="cp-check"><div class="cr-card cp-empty"><p>종목 선택 전 ${tip("종목을 고르면 시세·차트가, 금액을 넣고 '규칙 점검'을 누르면 점검 결과가 여기 나옵니다.")}</p></div></div></div></div>`);
 let cpSel = null;
 // 종목을 고르기 전에는 한 열(넓은 빈 칸을 두지 않음), 고르면 넓은 화면에서 주문 칸 | 시세·결과 두 열.
 const cpPicked = () => document.getElementById('cp-wrap')?.classList.add('cp-picked');

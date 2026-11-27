@@ -71,7 +71,7 @@ test('공개 스냅샷(결정 21): 비교선은 정의(이름·국가 비중·�
 
 test('자산 스냅샷 변환: 토스 모양의 보유·체결(demo+paper 표식) · 현금은 달러 예수금을 환율로 합친다 · paperMeta 에 운용 상태·투자 비중·마지막 자동 실행', () => {
   const pub = publicSnapshot(status, { asOf: '2026-11-09T07:00:00Z' }), snap = assetSnapshotFrom(pub, { now: Date.parse('2026-11-09T07:00:00Z') });
-  assert.equal(snap.demo, true); assert.equal(snap.paper, true); assert.ok(snap.source.includes('가상 돈'), '2026-11-26 상단 띠 용어: 팀 모의계좌 · 가상 돈');
+  assert.equal(snap.demo, true); assert.equal(snap.paper, true); assert.equal(snap.source, '팀 모의계좌', '2026-11-27 보완 2(사용자 지시 "모의계좌면 가상 돈인 건 당연"): 꼬리 "· 가상 돈"을 뺀 이름표');
   assert.equal(snap.positions.length, 2); const s = snap.positions[0];
   assert.deepEqual([s.symbol, s.quantity, s.price, s.cost, s.value], ['005930', 100, 70000, 6_800_000, 7_000_000]); assert.ok(Math.abs(s.returnPct - 2.941) < 0.01);
   assert.equal(snap.demoCash, 20_000_000 + 1000 * 1450); assert.equal(snap.fx.midRate, 1450);

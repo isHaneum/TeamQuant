@@ -27,7 +27,7 @@ $('#toss-refresh').onclick=async()=>{
     if(snapshotOwner!==owner&&e.name!=='AbortError'){
       try{const history=await privateRead('history-list'),saved=lastObservation(history.records||[]);if(saved&&run===generation&&owner===sessionStorage.getItem('teamQuantSession')){snapshotOwner=owner;window.dispatchEvent(new CustomEvent('teamquant:asset-snapshot',{detail:saved}));$('#toss-result').textContent='최신 조회 실패 · 마지막으로 조회한 자료를 보여 줍니다';}}catch{/* PC unavailable: keep only this tab's already authorized observation. */}
     }
-    if(run===generation){$('#toss-status').textContent=snapshotOwner!==owner&&viewSource?`${viewSource} · 실계좌 연결 안 됨`:(snapshotOwner===owner?'최신 조회 실패 · 마지막 조회 자료 유지. ':'')+(e.name==='AbortError'?'조회 취소됨':e.message);window.dispatchEvent(new CustomEvent('teamquant:connection',{detail:{status:'error'}}));}
+    if(run===generation){$('#toss-status').textContent=snapshotOwner!==owner&&viewSource?viewSource:(snapshotOwner===owner?'최신 조회 실패 · 마지막 조회 자료 유지. ':'')+(e.name==='AbortError'?'조회 취소됨':e.message);window.dispatchEvent(new CustomEvent('teamquant:connection',{detail:{status:'error'}}));}
   }}finally{if(run===generation){pending=false;$('#toss-refresh').disabled=false;}}
 };
 $('#toss-clear').onclick=()=>{window.dispatchEvent(new Event('teamquant:asset-clear'));generation++;controller?.abort();$('#toss-refresh').disabled=false;$('#toss-result').replaceChildren();$('#toss-status').textContent='화면에서만 지웠습니다. PC 기록은 그대로입니다.';};

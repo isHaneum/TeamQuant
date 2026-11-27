@@ -28,4 +28,4 @@ main{min-width:0;padding:48px clamp(24px,5vw,72px) 100px}.view{display:none;max-
 /* CAP-04 표본 외 검증 */#verify-result .metrics{grid-template-columns:repeat(2,1fr)}#verify-result .metrics>div:nth-child(2n){border-right:0}#verify-result .metrics>div:nth-child(-n+2){border-bottom:1px solid var(--line)}#oos-history-box{margin:12px 0}#oos-history-box summary{cursor:pointer;font-weight:600;padding:8px 0}#oos-history .table-scroll{overflow-x:auto}#oos-history table{width:100%;min-width:640px;border-collapse:collapse;font-size:12px}#oos-history th,#oos-history td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;font-variant-numeric:tabular-nums}
 
 /* 2026-11-26 이용 안내의 설치 순서(개발자용)는 접어 둔다 · 포트폴리오의 '화면에서 지우기'는 원자료 칸 안의 작은 글자 버튼 */
-.help-install>summary{font-weight:700;cursor:pointer}.help-install[open]>summary{margin-bottom:var(--tq-sp-3)}.toss-clear-row{margin:var(--tq-sp-3) 0 0}
+.help-install>summary,.help-read>summary{font-weight:700;cursor:pointer}.help-install[open]>summary,.help-read[open]>summary{margin-bottom:var(--tq-sp-3)}.toss-clear-row{margin:var(--tq-sp-3) 0 0}

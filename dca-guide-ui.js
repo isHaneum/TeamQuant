@@ -10,6 +10,7 @@ const KEY = 'teamQuantDcaGuide';
 const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch { return null; } };
 const store = v => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch {} };
 const srcLine = s => `${s.t} (${s.d})`;
+let ruleFull = ''; // 복사할 적립 규칙 전문(화면에는 요약 한 줄 + ⓘ)
 const ACC = { pension: '연금저축', irp: 'IRP', isa: 'ISA(중개형)', general: '일반 계좌' };
 const introTip = g => `매달 들어오는 돈을 어느 계좌에, 어떤 ETF로 넣을지 정합니다.\n세법(${g.checked} 기준)과 운용사 공시 비용으로 계산한 값이며, 수익 예측이나 매수 권유가 아닙니다.\n입력값은 이 브라우저에만 저장됩니다.`;
 
@@ -28,7 +29,7 @@ function template(g, { inFold = false } = {}) {
     <section><h4>넣을 계좌 ${tip('세금 혜택이 큰 계좌부터 채웁니다. 노후용 돈: 연금저축 → IRP. 나머지: ISA → 일반 계좌.\n계좌 한도를 넘는 돈만 다음 계좌로 갑니다.')}</h4><ol class="dg-acc" id="dg-acc"></ol></section>
     <section><h4>살 ETF ${tip(`같은 지수를 따르는 ETF는 담긴 회사가 같아서 오래 들수록 비용 차이만 남습니다. 그래서 같은 지수 안에서는 1년 비용(실부담 비용)이 낮고 규모가 큰 ETF를 고릅니다.\n지수끼리 섞는 비율은 직접 정합니다.${g.missing ? `\n${g.missing}` : ''}`)}</h4><div id="dg-buy"></div></section>
   </div>
-  <section class="dg-skip-wrap"><h4>신경 쓰지 않아도 되는 것</h4><ul class="dg-skip" id="dg-skip"></ul></section>
+  <details class="dg-skip-wrap rl-in"><summary>신경 쓰지 않아도 되는 것</summary><ul class="dg-skip" id="dg-skip"></ul></details>
   <section class="dg-rule"><h4>내 적립 규칙</h4><p id="dg-rule"></p><div class="dg-actions"><button type="button" class="secondary" id="dg-copy">적립 규칙 복사</button><span id="dg-copied" class="cr-muted" role="status" aria-live="polite"></span></div></section>`;
 }
 
@@ -38,7 +39,7 @@ function accountRows(g, r) {
   const free = r.plan.isaLow ? isa.taxFreeLow : isa.taxFree;
   const refundTip = `연말정산 때 돌려받는 돈입니다. 그해 낸 소득세보다 많이 돌려받지는 못합니다(연봉이 낮으면 덜 받을 수 있음).\n${p.lockAge}세 전에 꺼내면 ${(p.earlyTax * 100).toFixed(1)}%를 다시 냅니다.\n출처: ${p.src.map(srcLine).join(' · ')}`;
   let n = 0;
-  if (r.plan.noSalary) out.push(`<li class="off"><span class="dg-n">—</span><b>연금저축</b><em>0원</em><small>월급이 생긴 해부터 1순위 · 넣는 돈의 ${(p.rateHigh * 100).toFixed(1)}~${(p.rateLow * 100).toFixed(1)}%를 돌려받음 ${tip(refundTip)}</small></li>`);
+  if (r.plan.noSalary) out.push(`<li class="off"><span class="dg-n">—</span><b>연금저축</b><em>0원</em><small>세액공제 ${(p.rateHigh * 100).toFixed(1)}~${(p.rateLow * 100).toFixed(1)}% ${tip(`월급이 생긴 해부터 1순위입니다. 넣는 돈의 ${(p.rateHigh * 100).toFixed(1)}~${(p.rateLow * 100).toFixed(1)}%를 돌려받습니다.\n${refundTip}`)}</small></li>`);
   for (const id of ['pension', 'irp', 'isa', 'general']) {
     const row = by(id); if (!(row.monthly > 0)) continue; n++;
     const head = `<span class="dg-n">${n}</span><b>${ACC[id]}</b><em>월 ${fmt(row.monthly)}</em>`;
@@ -66,9 +67,10 @@ function render(box, g, st, fold = null) {
   const p = g.tax.pension, $ = s => box.querySelector(s);
   const k = v => (v >= 10000 ? `${(Math.round(v / 1000) / 10).toLocaleString('ko-KR')}만 원` : v > 0 ? fmt(v) : '');
   $('#dg-monthly-k').textContent = k(r.input.monthly); $('#dg-old-k').textContent = k(r.input.oldAge);
-  const refund = r.plan.noSalary ? ['0원', '월급이 생기면 연금저축부터'] : r.plan.refundMax > 0 ? [`최대 ${fmt(r.plan.refundMax)}`, `연금저축·IRP · 공제율 ${(r.plan.rate * 100).toFixed(1)}%`] : ['0원', '노후용 돈을 정하면 생김'];
+  // 2026-11-27 보완 2: 숫자 없는 보조 설명('월급이 생기면 연금저축부터' 등)은 타일 이름 ⓘ 끝으로 옮겼다.
+  const refund = r.plan.noSalary ? ['0원', '', ' 월급이 생기면 연금저축부터 채웁니다.'] : r.plan.refundMax > 0 ? [`최대 ${fmt(r.plan.refundMax)}`, `연금저축·IRP · 공제율 ${(r.plan.rate * 100).toFixed(1)}%`, ''] : ['0원', '', ' 노후용 돈을 정하면 생깁니다.'];
   // 증권사 수수료 타일은 '신경 쓰지 않아도 되는 것' 첫 줄과 같은 숫자·ⓘ라 지웠다(타일 2개).
-  $('#dg-kpis').innerHTML = `<article><span>1년에 돌려받는 세금 ${tip('연금저축·IRP에 넣은 돈의 일부를 연말정산 때 돌려받습니다. 법으로 정해진 돈이라 시장과 관계없이 확정입니다(그해 낸 소득세 한도 안).')}</span><strong>${refund[0]}</strong><small>${refund[1]}</small></article>
+  $('#dg-kpis').innerHTML = `<article><span>1년에 돌려받는 세금 ${tip('연금저축·IRP에 넣은 돈의 일부를 연말정산 때 돌려받습니다. 법으로 정해진 돈이라 시장과 관계없이 확정입니다(그해 낸 소득세 한도 안).' + refund[2])}</span><strong>${refund[0]}</strong>${refund[1] ? `<small>${refund[1]}</small>` : ''}</article>
     <article><span>싼 ETF로 아끼는 돈 ${tip('같은 지수 안에서 비용이 낮은 큰 ETF를 고를 때와 가장 비싼 큰 ETF를 고를 때의 1년 비용 차이입니다. 모인 돈이 커질수록 같이 커집니다.')}</span><strong>1,000만 원당 ${fmt(r.costPer10m)}</strong><small>1년 기준</small></article>`;
   // 접힘이 닫혀 있을 때 보일 한 줄: 매달 넣을 돈 · 계좌별 금액 · 돌려받는 세금(숫자 먼저).
   const sumEl = fold?.querySelector('#dg-sum');
@@ -83,7 +85,10 @@ function render(box, g, st, fold = null) {
     `<li>배당 많은 ETF 고르기 — 배당만큼 값이 빠지고, 일반 계좌에선 세금만 먼저 냄 ${tip(`분배금은 받을 때마다 ${(g.tax.general.rate * 100).toFixed(1)}%를 떼고(일반 계좌), 한 해 금융소득 2,000만 원 기준에도 쌓입니다. ISA·연금계좌 안에서는 꺼낼 때까지 미뤄집니다.`)}</li>`,
     `<li>이미 산 ETF 갈아타기 — 1,000만 원당 1년 ${fmt(r.costPer10m)} 차이, 팔면 세금이 생김</li>`
   ].join('');
-  $('#dg-rule').textContent = r.input.monthly > 0 ? r.rule : '매달 넣을 돈을 넣으면 규칙 문장이 만들어집니다.';
+  // 2026-11-27 보완 2: 규칙 문장(복사할 전문)은 ⓘ 와 [적립 규칙 복사]에 두고, 화면에는 숫자 요약 한 줄만.
+  ruleFull = r.input.monthly > 0 ? r.rule : '';
+  if (ruleFull) { const buys = g.categories.filter(c => (Number(st.mix[c.id]) || 0) > 0).map(c => `${r.picks[c.id]?.pick?.name || c.label} ${st.mix[c.id]}%`); $('#dg-rule').innerHTML = `${esc([`매달 ${fmt(r.input.monthly)}`, ...r.plan.rows.filter(x => x.monthly > 0).map(x => `${ACC[x.id]} ${fmt(x.monthly)}`), ...buys, `${g.lockDays}일 잠금`].join(' · '))} ${tip(ruleFull, '적립 규칙 문장')}`; }
+  else $('#dg-rule').textContent = '매달 넣을 돈을 넣으면 규칙 문장이 만들어집니다.';
   $('#dg-copy').disabled = !(r.input.monthly > 0);
   box.dataset.version = r.version;
   return r;
@@ -116,7 +121,7 @@ export async function mountDcaGuide(box, { fold = null } = {}) {
     const chip = e.target.closest('[data-old]');
     if (chip) { const m = Number(st.monthly) || 0; st.oldAge = chip.dataset.old === 'all' ? m : chip.dataset.old === 'half' ? Math.round(m / 2 / 1000) * 1000 : 0; $('#dg-old').value = st.oldAge; update(); return; }
     if (e.target.closest('#dg-copy')) {
-      const text = $('#dg-rule').textContent, done = ok => { $('#dg-copied').textContent = ok ? '복사함' : '문장을 길게 눌러 복사하세요'; };
+      const text = ruleFull, done = ok => { $('#dg-copied').textContent = ok ? '복사함' : '문장을 길게 눌러 복사하세요'; };
       try { navigator.clipboard.writeText(text).then(() => done(true), () => done(false)); } catch { done(false); }
     }
   });

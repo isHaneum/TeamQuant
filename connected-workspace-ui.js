@@ -28,7 +28,7 @@ for(const page of ['strategy','comparison','assets']){
 // 2026-11-26: 화면에 보이지 않던 카드 버튼 5개·홈 버튼 3개(CSS 로 숨김)는 뺐다. 같은 곳은 메뉴로 간다.
 function sync(){
  const connected=!!snapshot&&owner===profile(),a=approved();
- for(const card of contexts){card.querySelector('.connected-summary').textContent=connected?[snapshot.source||'내 계좌',`보유 ${snapshot.positions.length}종목`,stamp(snapshot.fetchedAt)].filter(Boolean).join(' · '):'계좌를 연결하면 보유 종목으로 바로 테스트합니다.';card.querySelector('.connected-strategy').textContent=a?`확정한 규칙: ${a.definition.name}`:'매매 규칙을 확정하면 내 보유 종목에 바로 적용해 점검·테스트합니다.';}
+ for(const card of contexts){card.querySelector('.connected-summary').textContent=connected?[snapshot.source||'내 계좌',`보유 ${snapshot.positions.length}종목`,stamp(snapshot.fetchedAt)].filter(Boolean).join(' · '):'계좌를 연결하면 보유 종목으로 바로 테스트합니다.';card.querySelector('.connected-strategy').textContent=a?`확정한 규칙: ${a.definition.name}`:'매매 규칙 확정 전';}
  for(const p of Object.values(panels))p.hidden=!connected;
  $('#hub-strategy').textContent=a?`${a.definition.name} · ${a.definition.entryRule}`:'먼저 고급 전략 실험에서 매매 규칙을 확정하세요.';
  if(strategyId!==a?.definition.id){strategyId=a?.definition.id||null;window.dispatchEvent(new Event('teamquant:approved-context'));}

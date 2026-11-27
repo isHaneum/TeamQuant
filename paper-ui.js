@@ -308,7 +308,8 @@ function statusStrip(s) {
   <div><span>투자 비중 ${tip('총자산 중 주식에 들어간 비율입니다(지금 / 계획). 차이가 크면 아직 못 산 종목이 있다는 뜻이고, 이유는 \'아직 못 삼\' 줄에 적습니다. 계좌 전부가 아니라 계획이 정한 만큼만 사는 것이 정상입니다.')}</span><b>지금 ${f0(inv.nowPct)} · 계획 ${f0(inv.planPct)}</b><small>${gaps.map(g => `${esc(g.name)} ${g.heldPct === null ? '—' : g.heldPct + '%'} / 계획 ${g.planPct}%`).join(' · ')}</small></div></div>`;
 }
 // 목표와 10%p 넘게 차이 나는 시장: 숫자 타일 바로 밑에 둔다(접어 두지 않음).
-function gapHtml(s) { return planGaps(s).filter(g => g.reason).map(g => `<div class="pp-gap">${esc(g.name)}: 계획 ${g.planPct}%${g.heldPct > 0 ? ` 중 ${g.gapPct}%p` : ''} 아직 못 삼 (이유: ${esc(termFix(g.reason))}) ${tip('목표와 10%p 넘게 차이 나는 시장입니다. 이유는 그 시장의 마지막 자동 주문 기록(주문·막힘 건수, 가장 많이 막힌 이유)에서 가져왔습니다. 다음 자동 주문 때 다시 삽니다.')}</div>`).join(''); }
+// 2026-11-27 보완 2: 이유 문장(자동 주문 기록 원문)은 줄에서 빼고 ⓘ 안 첫 줄로 옮겼다.
+function gapHtml(s) { return planGaps(s).filter(g => g.reason).map(g => `<div class="pp-gap">${esc(g.name)}: 계획 ${g.planPct}%${g.heldPct > 0 ? ` 중 ${g.gapPct}%p` : ''} 아직 못 삼 ${tip(`이유: ${termFix(g.reason)}\n목표와 10%p 넘게 차이 나는 시장입니다. 이유는 그 시장의 마지막 자동 주문 기록(주문·막힘 건수, 가장 많이 막힌 이유)에서 가져왔습니다. 다음 자동 주문 때 다시 삽니다.`)}</div>`).join(''); }
 // 숫자 타일 밑 한 줄: 마지막 자동 주문과 다음 점검.
 function statusLine(s) {
   const la = lastAuto(s), next = nextChecks(s).checks.slice().sort((a, b) => String(a.at).localeCompare(String(b.at)))[0];
@@ -350,7 +351,7 @@ function holdingsTable(s, { missOnly = false } = {}) {
   const w = s.planDoc?.weights || {}, ps = (s.balance?.positions || []).filter(p => p.qty > 0).sort((a, b) => (b.valueKrw || 0) - (a.valueKrw || 0)), nh = plannedNotHeld(s), cur = c => c === 'USD' ? '달러' : '원화';
   const why = p => { const v = w[p.symbol]; if (!(v?.pct > 0)) return '<span class="stop">계획에 없음(정리 대상)</span>'; return `<b>목표 ${v.pct}%</b>${v.sectorName ? ` · ${esc(v.sectorName)}` : ''}${v.vol1y ? ` · 변동성 연 ${esc(v.vol1y)}%` : ''}${(v.why || []).length ? `<br>${v.why.map(esc).join(' · ')}` : ''}${v.exposure?.length ? `<br>관련 이슈: ${v.exposure.map(esc).join(' / ')}` : ''}`; };
   const held = ps.length ? `<details class="pp-kis-plan" open id="pp-kis-held"><summary>보유 ${ps.length}종목 ${tip('담은 이유는 팀 기본 계획의 종목별 메모입니다. 오를 종목을 고른 것이 아니라 위험을 나눠 담은 것입니다.')}</summary><div class="pp-scroll"><table class="pp-ref"><thead><tr><th>종목</th><th>수량</th><th>평가액</th><th>비중</th><th>담은 이유</th></tr></thead><tbody>${ps.map(p => `<tr><td>${esc(p.name)}<br><small class="cr-muted">${esc(p.symbol)} · ${cur(p.currency)}</small></td><td>${p.qty}</td><td>${won(p.valueKrw)}</td><td>${Number.isFinite(p.weightPct) ? p.weightPct.toFixed(1) + '%' : '—'}</td><td class="pp-why">${why(p)}</td></tr>`).join('')}</tbody></table></div></details>` : '';
-  const miss = nh.length ? `<details class="pp-kis-plan" open id="pp-kis-missing"><summary>아직 안 산 종목 ${nh.length}개 (목표 합 ${nh.reduce((a, b) => a + b.pct, 0).toFixed(1)}%) ${tip('계획에는 있지만 아직 안 산 종목입니다. 목표 비중과 이유는 마지막 주문·자동 주문 기록에서 가져왔고, 다음 자동 주문(계획을 바꿨을 때·금요일) 때 다시 삽니다.')}</summary><ul class="pp-kis-items">${nh.map(n => `<li class="bad"><span class="st">${esc(n.name)}</span> <small class="cr-muted pp-inline">${esc(n.symbol)} · ${cur(n.currency)}</small> · 목표 ${n.pct}%<small>${esc(termFix(n.reason))}</small></li>`).join('')}</ul></details>` : '';
+  const miss = nh.length ? `<details class="pp-kis-plan" open id="pp-kis-missing"><summary>아직 안 산 종목 ${nh.length}개 (목표 합 ${nh.reduce((a, b) => a + b.pct, 0).toFixed(1)}%) ${tip('계획에는 있지만 아직 안 산 종목입니다. 목표 비중과 이유는 마지막 주문·자동 주문 기록에서 가져왔고, 다음 자동 주문(계획을 바꿨을 때·금요일) 때 다시 삽니다.')}</summary><ul class="pp-kis-items">${nh.map(n => `<li class="bad"><span class="st">${esc(n.name)}</span> <small class="cr-muted pp-inline">${esc(n.symbol)} · ${cur(n.currency)}</small> · 목표 ${n.pct}%${n.reason ? ` ${tip(termFix(n.reason), '못 산 이유')}` : ''}</li>`).join('')}</ul></details>` : '';
   return (missOnly ? '' : held) + miss;
 }
 function activityHtml(s) { const a = s.activity30; if (!a) return ''; const has = v => v !== null && v !== undefined;
@@ -364,11 +365,11 @@ function fearHtml(s) { const f = s.fear; if (!f) return ''; const steps = f.step
 function issuesHtml(s) {
   const xs = s.issues || [], act = xs.filter(i => i.level !== 'note'), notes = xs.filter(i => i.level === 'note'), w = s.planDoc?.weights || {};
   const dc = Object.entries(s.dipCards || {}).filter(([, c]) => c && !c.expired), LAB = { allow: '허용', hold: '보류', forbid: '금지' };
-  const help = tip('개별 종목의 공시(국내 금융감독원 전자공시(DART) · 미국 SEC)와 뉴스 제목(2곳 이상 보도)을 10분마다 확인합니다.\n주의(수사·규제·경영진·회계·리콜·유상증자 등): 그 종목을 14일 동안 더 사지 않습니다.\n긴급(횡령·배임·감사의견·거래정지·주요 계약 해지 등): 목표 비중을 절반으로 줄입니다.\n소송·과징금·파업 기사는 기록만 합니다.\n하락 시 추가 매수는 사람이 하루 1번 떨어진 이유·제외 조건을 보고 허용한 종목만 첫 매수가의 −15%·−30%에서 더 삽니다.', '보유 종목 이슈 설명');
+  const help = tip('개별 종목의 공시(국내 금융감독원 전자공시(DART) · 미국 SEC)와 뉴스 제목(2곳 이상 보도)을 10분마다 확인합니다.\n주의(수사·규제·경영진·회계·리콜·유상증자 등): 그 종목을 14일 동안 더 사지 않습니다.\n긴급(횡령·배임·감사의견·거래정지·주요 계약 해지 등): 목표 비중을 절반으로 줄입니다.\n소송·과징금·파업 기사는 기록만 합니다.\n하락 시 추가 매수: AI 분석(Claude)이 하루 1번 떨어진 이유·제외 조건·중대 뉴스를 웹에서 찾고 따로 한 번 더 확인해 허용·보류·금지를 적습니다. 두 확인이 엇갈리면 보류합니다. 허용된 종목만 팀 모의계좌(가상 돈)가 첫 매수가의 −15%·−30%에서 더 삽니다. 모의 엔진의 규칙 관문 결과이며 따라 사라는 뜻이 아닙니다.', '보유 종목 이슈 설명');
   const head = act.length ? `보유 종목 이슈 <b class="cr-err">${act.length}건</b>` : '보유 종목 이슈: <b>없음</b>';
   const li = (i, cls, label, what) => `<li class="${cls}"><span class="st">${label}</span> · ${esc(i.name)} — ${what}${i.until ? ` (${esc(md(i.until))}까지)` : ''}<small>${esc(i.source || '')} ${esc(md(i.date))} · ${esc(termFix(i.reason || ''))}</small></li>`;
   const list = [...act.map(i => li(i, 'bad', i.level === 'urgent' ? '긴급' : '주의', i.level === 'urgent' ? '목표 비중 절반 · 더 사지 않음' : '더 사지 않음')), ...notes.map(i => li(i, 'ok', '기록', '매수 영향 없음')),
-    ...dc.map(([k, c]) => `<li class="${c.verdict === 'allow' ? 'ok' : 'bad'}"><span class="st">하락 시 추가 매수 ${esc(LAB[c.verdict] || c.verdict)}</span> · ${esc(w[k]?.name || k)}${c.until ? ` (${esc(md(c.until))}까지)` : ''}<small>${esc(md(c.asOf))} · ${esc(termFix(c.reason || ''))}</small></li>`)];
+    ...dc.map(([k, c]) => `<li class="${c.verdict === 'allow' ? 'ok' : 'bad'}"><span class="st">하락 시 추가 매수 ${esc(LAB[c.verdict] || c.verdict)}</span> · ${esc(w[k]?.name || k)}${c.until ? ` (${esc(md(c.until))}까지)` : ''}<small>${esc(termFix(c.reason || ''))} · AI 판정 · ${esc(md(c.asOf))}</small></li>`)];
   return `<p class="pp-kis-note pp-issue-head">${head} ${help}</p>${list.length ? `<ul class="pp-kis-items">${list.join('')}</ul>` : ''}`;
 }
 // 규칙 변경 기록: 항목 이름은 규칙 화면과 같은 이름(RULE_DEFS)으로 보인다(영어 키를 그대로 보이지 않음).
@@ -385,7 +386,8 @@ function progressHtml(s, { basis = 'plan' } = {}) {
   const from = bm?.from || m0.date, asOf = bm?.asOf || m1.date, days = bm?.days || s.marks.length;
   const src = basis === 'holdings' ? `첫 기록일(${esc(from)})의 보유 국가 비중(국내 평가액 ÷ 총자산 · 미국 평가액×환율 ÷ 총자산 · 나머지 현금)에서` : `처음 계획(${esc(s.baseline?.from || from)})에서 국가 비중과 현금 비중만 가져와`;
   const tipText = `지수로만 담은 경우: ${src} 국내 ${w ? w.KR : '—'}%는 KODEX 200, 미국 ${w ? w.US : '—'}%는 S&P500 ETF(원화 환산), 현금 ${w ? w.cash : '—'}%로 둔 지수 투자입니다. 이 계좌는 개별 종목을 들고 있어 위험이 같지는 않습니다. 수익률 자체는 그 기간 시장 방향에 따라 달라서 굵은 숫자는 지수 대비 차이(%p) 하나만 둡니다. 기간: ${esc(from)} ~ ${esc(asOf)}.`;
-  const info = `<span class="cr-muted" title="${esc(tipText)}">ⓘ</span>`;
+  // 2026-11-27 보완 2(R2): 마우스를 올려야만 보이던 글자 ⓘ(title)를 누르면 열리는 tip() 으로 바꿨다.
+  const info = tip(tipText, '지수로만 담은 경우');
   if (bm && Number.isFinite(bm.diffPp)) return `<p class="pp-kis-note">${days}일째 · 지수 대비 <b class="${tone(bm.diffPp)}">${pp(bm.diffPp)}</b> (${who} ${pct(Number.isFinite(bm.ownRetPct) ? bm.ownRetPct / 100 : own)} · 지수로만 ${pct(bm.benchRetPct / 100)})${bm.error ? ` <small class="cr-muted">${esc(termFix(bm.error))}</small>` : ''} ${info}</p>`;
   // 이유는 빠진 것에서 고른다: 비교 객체가 있으면 그 error(없으면 자료 부족) · 없는데 처음 계획은 있으면 서버가 아직 비교를 안 실은 공개 자료(갱신 전) · 둘 다 없으면 처음 계획 없음.
   const why = bm ? (bm.error || '비교할 자료 부족') : s.baseline ? '지수 비교 자료 없음 · 공개 자료 받기 전' : '처음 계획 없음';
@@ -476,7 +478,7 @@ function renderHyp(list, readOnly = false) {
   // 보기만(공개 사이트)일 때와 자료를 못 읽었을 때는 등록 양식을 숨긴다 — 펼쳐도 등록할 수 없다.
   const box = $('#pp-hyp-list'); if (!box) return; const form = $('#pp-hyp-new'); if (form) form.hidden = readOnly || !list;
   if (!list) { box.innerHTML = '<p class="cr-muted">팀 모의계좌 자료를 불러오면 목록이 보입니다.</p>'; return; }
-  if (!list.length) { box.innerHTML = '<p class="cr-muted">직접 고른 종목이 없습니다. 지금은 팀 기본 계획(지수 ETF + 종목 기준을 통과한 개별 종목)만 들고 있습니다.</p>'; return; }
+  if (!list.length) { box.innerHTML = `<p class="cr-muted">직접 고른 종목 없음 ${tip('지금은 팀 기본 계획(지수 ETF + 종목 기준을 통과한 개별 종목)만 들고 있습니다.')}</p>`; return; }
   const total = K.status?.total || K.status?.balance?.total || null;
   box.innerHTML = [...list].sort((a, b) => (['open', 'proposed'].includes(a.status) ? 0 : 1) - (['open', 'proposed'].includes(b.status) ? 0 : 1) || b.openedAt.localeCompare(a.openedAt)).map(h => `<div class="ph-item"><header><b>${esc(h.name)} <small class="cr-muted">${esc(h.symbol)} · 최대 ${h.capPct}% · ${esc(phTerm(h))}${h.public === false ? ' · 비공개' : ''}</small></b><span class="st ${h.status}">${esc(phStatusLabel(h))}</span></header>
     <div class="num">${h.status === 'proposed' ? `계획에 넣으면 다음 장중에 ${h.capPct}%(약 ${total ? won(total * h.capPct / 100) : '—'})를 삽니다` : h.returnPct !== null && h.returnPct !== undefined ? `${h.soldQty ? '이 종목 손익(판 것 포함)' : '산 가격 대비'} <b class="${h.returnPct > 0 ? 'up' : h.returnPct < 0 ? 'down' : ''}">${pct(h.returnPct)}</b>` : h.boughtQty ? '수익 계산 못 함(시세·잔고 확인 전)' : '아직 체결 없음'}${h.indexPct !== null && h.indexPct !== undefined ? ` · 같은 기간 지수 ${pct(h.indexPct)}` : ''}${h.excessPct !== null && h.excessPct !== undefined ? ` · 지수 대비 <b>${pp(h.excessPct * 100)}</b>` : ''} · ${h.daysOpen}일째</div>

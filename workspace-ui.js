@@ -40,7 +40,8 @@ for(const d of document.querySelectorAll('.sidebar details'))if(!d.querySelector
 // Settings is a separate view so connection forms retain their original handlers.
 // 2026-11-26 설정은 카드 하나짜리 목록: 프로필 · 내 PC 연결 · 동의 관리 · 내 기록. 동의 관리 칸(#tq-consent-manage)은 자리만 만들고 consent-ui.js 가 채운다.
 const TIP_PROFILE='프로필은 이 브라우저 안에서 규칙·가상 투자 기록을 사람별로 나누는 이름표입니다. 잠금 번호는 보안 장치가 아니고, 실계좌는 내 PC 연결로만 봅니다. 회원 가입은 없습니다.';
-const TIP_PC='실계좌는 내 PC 프로그램과 내 API 키로만 연결됩니다. 연결 번호를 넣을 때 \'30일 자동 연결\'을 고르면 PC 프로그램이 켜져 있는 동안 다시 묻지 않습니다. 토스 API 키는 내 PC에만 있습니다. 공용 PC에서는 자동 연결을 쓰지 마세요. \'연결 끊기\'를 누르면 자동 연결도 지워집니다.';
+// 2026-11-27 보완 2: 연결 칸 아래 문단 두 개(bridge-client.js installBridgeUi)를 이 ⓘ 로 옮겼다.
+const TIP_PC='실계좌는 내 PC 프로그램과 내 API 키로만 연결됩니다. 공개 사이트는 화면만 보여 줍니다. 조회한 자료는 PC에서 이 창으로 바로 오고, 보유 주식 조회 기록은 PC에만 저장합니다(공개 사이트 서버에는 저장하지 않음).\nPC 프로그램을 켜 두세요. 연결 번호를 넣을 때 \'30일 자동 연결\'을 고르면 30일 동안 번호를 다시 넣지 않습니다. 조회는 5분마다 다시 합니다. 브라우저가 \'로컬 네트워크 접근\'을 물으면 내 연결인지 확인하고 허용하세요.\n토스 API 키는 내 PC에만 있습니다. 공용 PC에서는 자동 연결을 쓰지 마세요. \'연결 끊기\'를 누르면 자동 연결도 지워집니다.';
 const TIP_CLEAR='이 브라우저의 규칙·가상계좌·동의 기록을 지웁니다. PC에 저장된 기록은 그대로입니다.';
 const settings=document.createElement('section');settings.className='view';settings.dataset.page='settings';settings.id='workspace-settings';settings.innerHTML='<div class="page-head"><div><h1>설정</h1><p>프로필 · 내 PC 연결 · 동의 관리 · 내 기록</p></div></div><div class="ws-list"><article class="panel ws-row"><h2>프로필 '+tip(TIP_PROFILE)+'</h2><div id="workspace-profile"></div></article><article class="panel ws-row"><h2>내 PC 연결 '+tip(TIP_PC)+'</h2><div id="workspace-connections"></div></article><article class="panel ws-row" id="tq-consent-manage"></article><article class="panel ws-row"><h2>내 기록 '+tip(TIP_CLEAR)+'</h2><div id="workspace-data"><button type="button" class="secondary" id="workspace-clear">내 기록 지우기</button><span id="workspace-clear-state" class="muted" role="status"></span></div></article></div>';
 document.querySelector('main').append(settings);
@@ -59,7 +60,9 @@ $('#workspace-clear').onclick=async()=>{
   location.reload();
 };
 
-function sync(){const view=$('.view.active')?.dataset.page||'home',top=marketViews.includes(view)?'market':labViews.includes(view)?'quicktest':view;for(const [key,b] of topButtons){b.classList.toggle('active',key===top);b.setAttribute('aria-current',key===top?'page':'false');}const adv=advancedViews.includes(view),inMore=moreViews.includes(view)||adv;moreMenu.classList.toggle('active',inMore);moreMenu.querySelector('summary').textContent=inMore?(adv?names.strategy:names[view])+' ▾':'더보기 ▾';for(const b of moreMenu.querySelectorAll('button'))b.setAttribute('aria-current',b.dataset.workspace===view||(b.dataset.workspace==='strategy'&&adv)?'page':'false');}
+function sync(){const view=$('.view.active')?.dataset.page||'home',top=marketViews.includes(view)?'market':labViews.includes(view)?'quicktest':view;for(const [key,b] of topButtons){b.classList.toggle('active',key===top);b.setAttribute('aria-current',key===top?'page':'false');}const adv=advancedViews.includes(view),inMore=moreViews.includes(view)||adv;moreMenu.classList.toggle('active',inMore);moreMenu.querySelector('summary').textContent=inMore&&!narrow.matches?(adv?names.strategy:names[view])+' ▾':'더보기 ▾';for(const b of moreMenu.querySelectorAll('button'))b.setAttribute('aria-current',b.dataset.workspace===view||(b.dataset.workspace==='strategy'&&adv)?'page':'false');}
+// 2026-11-27 보완 2(R6): 640px 이하에서는 '내 포트폴리오 ▾'처럼 긴 하위 화면 이름이 머리글 '투자 권유 아님' 배지를 덮었다. 좁은 화면은 '더보기 ▾'(밑줄로 선택 표시 · 화면 제목이 이름을 보임).
+const narrow=matchMedia('(max-width:640px)');try{narrow.addEventListener('change',sync);}catch{/* 옛 브라우저: 새로 그릴 때 반영 */}
 window.addEventListener('teamquant:page',sync);window.addEventListener('teamquant:state',sync);sync();
 
 // 2026-11-26 홈 머리: 큰 제목 '내 자산'(메뉴가 이미 '홈')과 큰 [계좌 새로고침] 버튼·상태 문장을 뺐다. 제목은 화면 낭독기에만 남긴다.
@@ -83,5 +86,7 @@ const strategySummary=$('#ov-strategy-summary')?.closest('article');if(strategyS
 const ovRefresh=$('#overview .page-head #ov-refresh');if(ovRefresh)ovRefresh.hidden=true;
 // 2026-11-16 사용자 확인 조항(consent-ui.js): 설정 화면이 만들어진 뒤에 붙인다(동의 관리 칸이 설정에 들어가야 하므로).
 import('/consent-ui.js').catch(()=>{});
+// 2026-11-27 첫 방문 안내 '첫 규칙 3단계'(tutorial-ui.js · 결정 71): 홈 맨 위 카드 + 아래 띠. 못 불러오면 다시 보기 버튼도 생기지 않는다.
+import('/tutorial-ui.js').catch(()=>{});
 // 2026-11-16 간결 화면(compact-ui.js · compact.css): 설명 문장을 가리고 핵심 숫자만 남긴다.
 import('/compact-ui.js').catch(()=>{});

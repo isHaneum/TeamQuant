@@ -10,7 +10,7 @@ const css=document.createElement('link');css.rel='stylesheet';css.href='/planner
 const nav=document.createElement('button');nav.className='nav-button';nav.dataset.view='planner';nav.textContent='목표·ETF 적립';document.querySelector('.overview-nav nav').prepend(nav);
 const page=document.createElement('section');page.id='planner';page.className='view';page.dataset.page='planner';page.innerHTML=`
 <div class="page-head"><div><h1>목표·ETF 적립 <span id="pl-mode" class="pl-chip">내 PC · 가상 적립 계획</span></h1><p>목표를 확인하고 이번 달 적립금을 어디에 나눠 살지 정합니다.</p></div><button id="pl-demo" class="secondary">예시로 보기</button></div>
-<div class="pl-offline" id="pl-offline" hidden><span>내 PC 프로그램과 연결하면 계획을 저장할 수 있습니다. 지금은 예시로 볼 수 있습니다.</span><button type="button" class="secondary" data-pl-demo>예시로 보기</button></div>
+<div class="pl-offline" id="pl-offline" hidden><span>PC 연결 전 · 저장 안 됨 ${tip('내 PC 프로그램과 연결하면 계획을 저장할 수 있습니다. 지금은 예시로 볼 수 있습니다.')}</span><button type="button" class="secondary" data-pl-demo>예시로 보기</button></div>
 <div class="pl-toolbar pl-books"><label>저장한 계획<select id="pl-books"><option value="">계획 선택</option></select></label><button id="pl-new" class="secondary">새 계획</button><button id="pl-import" class="secondary">실제 보유 종목으로 시작</button></div>
 <p id="pl-status" class="pl-status" role="status" aria-live="polite"></p>
 <form id="pl-form"><article class="panel"><div class="panel-head"><h2>1. 목표와 적립 계획 ${tip('월말 적립·세금 전 금액 기준입니다. 연 수익률은 비용을 뺀 뒤의 가정으로 직접 넣는 값이며, 이룰 수 있다는 예측이 아닙니다. 저장한 뒤 현금·수량은 가상 매수 기록으로만 바뀝니다.')}</h2><span id="pl-version" class="muted">저장 전</span></div><div class="pl-fields">
@@ -37,7 +37,7 @@ const stamp=iso=>{const t=new Date(iso);if(!iso||!Number.isFinite(t.getTime()))r
 const val=id=>{const x=$('#pl-'+id).value;if(x.trim()==='')throw new Error('빈칸이 있습니다. 현금·비용이 0이면 0을 넣어 주세요.');return Number(x);};
 function status(text,error=false){$('#pl-status').textContent=text;$('#pl-status').classList.toggle('pl-error',error);}
 function invalidate(){approval=null;plans=[];$('#pl-comparison').replaceChildren();$('#pl-goal').replaceChildren();}
-function mode(){$('#pl-mode').textContent=demo?'예시 · 실제 아님 · 저장 안 함':book?`내 PC · ${book.label}`:'내 PC · 가상 적립 계획';}
+function mode(){$('#pl-mode').textContent=demo?'예시 · 저장 안 함':book?`내 PC · ${book.label}`:'내 PC · 가상 적립 계획';}
 // PC와 연결되지 않았으면 입력 폼 대신 '예시로 보기'와 안내 한 줄만 보인다.
 function setOffline(on){const off=on&&!demo;page.classList.toggle('pl-offline',off);$('#pl-offline').hidden=!off;}
 async function run(fn){if(busy)return;busy=true;const token=epoch,profile=sessionStorage.getItem('teamQuantSession');page.setAttribute('aria-busy','true');const buttons=[...page.querySelectorAll('button')].map(b=>[b,b.disabled]);for(const [b] of buttons)b.disabled=true;try{await fn(token);}catch(e){if(profile===sessionStorage.getItem('teamQuantSession'))status(e.message,true);}finally{busy=false;page.removeAttribute('aria-busy');for(const [b,disabled] of buttons)if(b.isConnected)b.disabled=disabled;}}

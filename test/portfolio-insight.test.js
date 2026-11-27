@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { num, annualSummary, fromKorea, fromUs, normalizeSymbol } from '../lib/fundamentals.js';
 import { scoreStock, factors } from '../lib/stock-score.js';
 import { explainMove } from '../lib/move-explain.js';
-import { advisePortfolio } from '../lib/portfolio-advice.js';
+import { advisePortfolio, weightRule } from '../lib/portfolio-advice.js';
 import { createCashStore, validateCashInput } from '../lib/cash-store.js';
 import { createLocalBridge } from '../lib/local-bridge.js';
 
@@ -40,11 +40,12 @@ test('투자 성향에 따라 같은 종목도 판단이 달라진다', () => {
   assert.equal(scoreStock(cheapDividend, { style: 'dividend' }).stance, 'buy');
   assert.ok(scoreStock(pricyGrowth, { style: 'growth' }).score > scoreStock(pricyGrowth, { style: 'value' }).score);
   const big = scoreStock(cheapDividend, { style: 'dividend', weightPct: 40 });
-  assert.equal(big.label, '좋지만 비중이 큼');
-  assert.equal(scoreStock({ per: null }, {}).stance, 'unknown');
+  // 2026-11-27 LEGAL 4.3 사실형 라벨. 한도의 출처를 그대로 적는다: 내 규칙이 없으면 '성향 기준', 있으면 '내 한도'.
+  assert.match(big.label, /^지표 좋음 · 비중 \d+% \(성향 기준 \d+% 넘음\)$/);
+  assert.equal(scoreStock({ per: null }, {}).stance, 'unknown'); assert.equal(scoreStock({ per: null }, {}).label, '지표 부족');
   // 배당 성향에서는 배당이 없는 성장주를 감점한다.
   assert.ok(scoreStock(pricyGrowth, { style: 'dividend' }).factors.find(f => f.key === 'dividend').tone < 0);
-  assert.equal(scoreStock(cheapDividend, { style: 'balanced', weightPct: 26, weightLimit: 25 }).label, '좋지만 비중이 큼');
+  assert.match(scoreStock(cheapDividend, { style: 'balanced', weightPct: 26, weightLimit: 25, limitMine: true }).label, /^지표 좋음 · 비중 26% \(내 한도 25% 넘음\)$/);
   assert.ok(factors({ per: -3, annual: {} }).some(f => f.value === '계산 불가'));
 });
 
@@ -70,11 +71,33 @@ test('현금·집중·업종 기준으로 방향을 제안한다', () => {
   assert.ok(a.checks.find(c => c.key === 'cash').tone < 0);
   assert.match(a.checks.find(c => c.key === 'single').title, /A 60%/);
   assert.match(a.checks.find(c => c.key === 'sector').title, /반도체 업종 90%/);
-  assert.ok(a.actions.some(x => /지표가 약한 종목: .*B/.test(x)));
-  assert.ok(a.actions.some(x => /A, B는 더 사지 말고/.test(x)));
-  assert.ok(!a.actions.some(x => /지표 상위: .*A/.test(x))); // 비중이 큰 종목은 매수 후보에서 뺀다
+  // 2026-11-27 보완 2(사용자 지시 "줄글 설명 제거"): 비중 점검 목록은 문장이 아니라 상태 줄('✕ 규칙 · 지금 값 · 한도 (기준)')이다. 뜻·숫자·기준 이름은 그대로.
+  assert.ok(a.actions.includes('✕ 한 종목 최대 비중 · A 60%, B 30% · 한도 25% (성향 기준)'), a.actions.join(' | '));
+  assert.ok(a.actions.includes('✕ 현금 최소 비중 · 현금 5% · 최소 10% (성향 기준)')); // 내 규칙이 없으면 '내 규칙'이라고 쓰지 않는다
+  assert.ok(a.actions.includes('✕ 섹터 상한 · 반도체 90% · 상한 40%'), a.actions.join(' | '));
+  assert.ok(!a.actions.some(x => /[.]$|니다$/.test(x)), '문장으로 끝나지 않음');
+  // 2026-11-27(LEGAL 2.1): 종목 이름별 매수 후보·매도 검토 줄을 내지 않는다(지표 요약은 표의 열에만).
+  assert.ok(!a.actions.some(x => /지표 상위|지표가 약한|더 살지/.test(x)));
   assert.equal(a.dividend, 6 + 0 + 3);
   assert.equal(advisePortfolio(holdings, {}).cashPct, null);
+  // 내 규칙이 있으면 그 한도·문구를 쓴다
+  const m = advisePortfolio(holdings, { cash: 50, rules: { maxSingle: 20, minCash: 10 } });
+  assert.ok(m.actions.some(x => /한도 20% \(내 규칙\)/.test(x))); assert.ok(m.actions.some(x => /현금 최소 비중 · 현금 \d+% · 최소 10% \(내 규칙\)/.test(x)));
+});
+
+test('비중 기준: 비중 점검과 종목 점검 표가 같은 한도·분모를 쓴다', () => {
+  // 내 규칙 + 현금을 앎 → 내 한도 · 총자산 대비(규칙 화면과 같음)
+  assert.deepEqual(weightRule({ stocks: 700, cash: 300, style: 'balanced', rules: { maxSingle: 20, minCash: 5 } }), { single: 20, mine: true, base: 1000, baseName: '총자산' });
+  // 내 규칙 + 현금 모름 → 내 한도 · 주식 합계 대비
+  assert.deepEqual(weightRule({ stocks: 700, cash: null, rules: { maxSingle: 20, minCash: 5 } }), { single: 20, mine: true, base: 700, baseName: '주식' });
+  // 내 규칙 없음(팀 모의계좌) → 성향 기준값 · 주식 합계 대비
+  assert.deepEqual(weightRule({ stocks: 700, cash: 300, style: 'growth', rules: null }), { single: 30, mine: false, base: 700, baseName: '주식' });
+  // 같은 분모로 점검: 총자산 1000 중 A 300 = 30% > 내 한도 25% → 비중 점검과 라벨이 함께 넘음
+  const w = weightRule({ stocks: 700, cash: 300, rules: { maxSingle: 25, minCash: 5 } }), pctA = 300 / w.base * 100;
+  const label = scoreStock({ per: 7, dividendYield: 5, price: 100, targetPrice: 120, annual: { roe: 12, revenueGrowth: 2, debtRatio: 60 } }, { style: 'dividend', weightPct: pctA, weightLimit: w.single, limitMine: w.mine }).label;
+  assert.equal(label, '지표 좋음 · 비중 30% (내 한도 25% 넘음)');
+  const adv = advisePortfolio([{ name: 'A', valueKrw: 300 }, { name: 'B', valueKrw: 200 }, { name: 'C', valueKrw: 200 }], { cash: 300, rules: { maxSingle: 25, minCash: 5 } });
+  assert.match(adv.checks.find(c => c.key === 'single').title, /A 30%/);
 });
 
 test('현금 기록은 PC 폴더에 이어 붙이고 공개 폴더·클라우드는 거부한다', async () => {

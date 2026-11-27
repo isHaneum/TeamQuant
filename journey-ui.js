@@ -11,7 +11,7 @@ function guide(){
   const s=state();if(!s.comparison&&$('#comparison-settings'))$('#comparison-settings').open=true;
   if(result && result.strategyId!==s.approved?.definition.id){result=null;$('#comparison-result').hidden=true;}
   if(!result && s.comparison?.perStock && s.comparison.strategyId===s.approved?.definition.id){result=s.comparison;renderComparison();}
-  $('#comparison-strategy').textContent=s.approved?`${s.approved.definition.name} · ${s.approved.definition.entryRule}`:'아직 매매 규칙이 없습니다. 먼저 매매 규칙을 정하고 확정해 주세요.';
+  $('#comparison-strategy').textContent=s.approved?`${s.approved.definition.name} · ${s.approved.definition.entryRule}`:'매매 규칙 없음';
 }
 window.addEventListener('teamquant:state',guide);
 $('#comparison-nav').addEventListener('click',guide);

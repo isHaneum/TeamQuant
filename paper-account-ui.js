@@ -5,8 +5,9 @@ import { privateRead } from '/bridge-client.js';
 import { publicSnapshot, assetSnapshotFrom } from '/lib/paper-public.js';
 
 const $ = s => document.querySelector(s);
-/** 상단 띠 계좌 표시(2026-11-26 용어 정리). 다른 화면(toss-ui · connected-workspace-ui)도 이 값을 쓴다 — 한곳에서만 정의한다. */
-export const ACCOUNT_LABEL = { real: '실계좌 · 조회만', paper: '팀 모의계좌 · 가상 돈', mine: '내 가상계좌 · 가상 돈', demo: '예시 자산 · 실제 아님', lab: '가상 투자 · 가상 돈', none: '계좌 연결 전' };
+/** 상단 띠 계좌 표시(2026-11-26 용어 정리). 다른 화면(toss-ui · connected-workspace-ui)도 이 값을 쓴다 — 한곳에서만 정의한다.
+ *  2026-11-27 보완 2(사용자 지시 "모의계좌라면 가상 돈인 건 당연히 안다"): '· 가상 돈'·'· 실제 아님' 꼬리를 뺐다. 이름 자체(모의·가상·예시)가 구분한다. */
+export const ACCOUNT_LABEL = { real: '실계좌 · 조회만', paper: '팀 모의계좌', mine: '내 가상계좌', demo: '예시 자산', lab: '가상 투자', none: '계좌 연결 전' };
 export const kindOf = snap => !snap ? 'none' : snap.paper ? 'paper' : snap.demo ? 'demo' : 'real';
 const state = { kind: 'none', loading: null, timer: null, cache: null, cacheAt: 0 };
 
@@ -23,14 +24,14 @@ export const mockCached = () => state.cache;
 function setKind(k) { state.kind = k; document.body.dataset.account = k; const m = $('.mode'); if (m && document.querySelector('.view.active')?.dataset.page !== 'toss') m.textContent = ACCOUNT_LABEL[k] || ACCOUNT_LABEL.none; }
 async function activate() {
   if (state.kind !== 'none' || state.loading || !sessionStorage.getItem('teamQuantSession') || $('#app')?.hidden) return;
-  const st = $('#hm-connect-state'); if (st) st.textContent = '실계좌가 없어 팀 모의계좌를 불러옵니다…';
+  const st = $('#hm-connect-state'); if (st) st.textContent = '팀 모의계좌 불러오는 중…';
   state.loading = (async () => {
     try {
       const pub = await loadMockAccount(); if (state.kind !== 'none') return;
       const snap = assetSnapshotFrom(pub);
       window.dispatchEvent(new CustomEvent('teamquant:asset-snapshot', { detail: snap }));
       window.dispatchEvent(new CustomEvent('teamquant:cash', { detail: { amount: snap.demoCash, note: '팀 모의계좌 예수금' } }));
-    } catch (e) { if (st) st.textContent = `${e.message} 계좌를 연결하거나 예시 자산을 켜 주세요.`; }
+    } catch { if (st) st.textContent = '팀 모의계좌 기록을 불러오지 못했습니다'; } // 오류 한 줄(연결·예시 버튼은 바로 위에 있다 · 2026-11-27 보완 2)
     finally { state.loading = null; }
   })();
 }

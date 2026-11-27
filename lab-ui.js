@@ -98,7 +98,8 @@ const presetValue = () => page.querySelector('[name="lt-preset"]:checked').value
 function syncPreset() {
   const input = page.querySelector('[name="lt-preset"]:checked'), v = input.value, custom = v === 'custom';
   $('#lt-custom').hidden = !custom; $('#lt-stop-wrap').hidden = custom || v.startsWith('s:');
-  $('#lt-help').textContent = input.dataset.help || '';
+  // 2026-11-27 보완 2: 고른 방식 설명은 줄글 대신 이름 + ⓘ(누르면 설명).
+  $('#lt-help').innerHTML = input.dataset.help ? `${esc(input.closest('label')?.querySelector('strong')?.textContent || '')} ${tip(input.dataset.help, '방식 설명')}` : '';
   if (v.startsWith('s:')) $('#lt-more').open = true;
 }
 page.querySelectorAll('[name="lt-preset"]').forEach(r => r.onchange = () => { syncPreset(); if (presetValue() === 'custom') $('#lt-text').focus(); });
@@ -135,8 +136,8 @@ function strategyTable(stats, group, state) {
   const rows = SIT.map(s => ({ s, e: e[s.id], r: r?.[s.id] })).filter(x => x.e?.n);
   const calm = rows.filter(x => x.r && x.r.mean >= 2).sort((a, b) => (b.r.mean + b.e.mean) - (a.r.mean + a.e.mean))[0];
   const lead = ruled
-    ? `이 상황에서는 과거 <b>${esc(ruled.title)}</b>${josa(ruled.title, '이', '가')} 그냥 보유보다 나았습니다.`
-    : `그냥 보유보다 확실히 나은 방식이 없었습니다. <b>꾸준히 보유·적립이 기본</b>입니다.${calm ? `<br>손실을 줄이려면 <b>${esc(calm.s.title)}</b>: 수익 ${pp(calm.e.mean)} · 최대 하락폭(중간값) −${calm.r.mean.toFixed(1)}%p` : ''}`;
+    ? `과거 이 상황에서 나은 방식: <b>${esc(ruled.title)}</b>`
+    : `그냥 보유보다 나은 방식 없음 ${tip('그냥 보유보다 확실히 나은 방식이 없었습니다. 꾸준히 보유·적립이 기본입니다.')}${calm ? `<br>손실 줄인 방식: <b>${esc(calm.s.title)}</b> · 수익 ${pp(calm.e.mean)} · 최대 하락폭(중간값) −${calm.r.mean.toFixed(1)}%p` : ''}`;
   return `<p class="lt-lead">${lead}</p>
     <div class="table-wrap"><table class="lt-table lt-edge"><thead><tr><th>방식</th><th>수익 차이 ${tip('이 상황에서 시작해 3개월(60거래일) 동안 이 방식을 썼을 때 수익률 − 그냥 보유 수익률의 평균입니다. 비용 0.2% 포함.')}</th><th>이긴 비율</th><th>최대 하락폭 차이 ${tip('그냥 보유보다 최대 하락폭(중간값)이 몇 %p 작았는지입니다(+면 덜 빠짐). 현금으로 오래 있는 방식은 손실도 수익도 작습니다.')}</th><th></th></tr></thead>
     <tbody>${rows.map(x => `<tr class="${x.s.id === rule ? 'pick' : ''}"><td>${esc(x.s.title)}${tip(`${x.s.how}\n맞는 때: ${x.s.when}`)}</td><td class="${tone(x.e.mean)}"><b>${pp(x.e.mean)}</b></td><td>${x.e.hit}%</td><td class="${x.r?.mean > 0 ? 'good' : ''}">${x.r ? pp(x.r.mean) : '—'}</td><td><button type="button" class="text-button" data-try="${x.s.id}">이 방식 테스트</button></td></tr>`).join('')}</tbody></table></div>
@@ -252,7 +253,7 @@ async function runBasket(t, s) {
   const med = ok.length ? ok.map(r => r.edge).sort((a, b) => a - b)[Math.floor(ok.length / 2)] : null, max = Math.max(1, ...ok.map(r => Math.abs(r.edge)));
   box.innerHTML = `<h4>${esc(GROUPS[t.group])} ${ok.length}종목에 같은 기간 테스트</h4>
     <p class="lt-lead">${ok.length}종목 중 나음 <b>${better}</b> · 그냥 보유가 나음 ${worse} · 차이 중간값 <b class="${tone(med)}">${pp(med)}</b></p>
-    <div class="lt-basket-bars">${ok.map(r => `<div title="${esc(`${r.name}: 이 방식 ${pct(r.ret)} · 그냥 보유 ${pct(r.hold)}`)}"><span>${esc(r.name)}</span><span class="track"><i class="${tone(r.edge)}" style="--w:${(Math.abs(r.edge) / max * 50).toFixed(1)}%"></i></span><b class="${tone(r.edge)}">${pp(r.edge)}</b></div>`).join('')}</div>`;
+    <div class="lt-basket-bars">${ok.map(r => `<div><span>${esc(r.name)}${tip(`이 방식 ${pct(r.ret)} · 그냥 보유 ${pct(r.hold)}`, r.name)}</span><span class="track"><i class="${tone(r.edge)}" style="--w:${(Math.abs(r.edge) / max * 50).toFixed(1)}%"></i></span><b class="${tone(r.edge)}">${pp(r.edge)}</b></div>`).join('')}</div>`;
 }
 
 function renderAll(rows, s) {

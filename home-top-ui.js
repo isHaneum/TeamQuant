@@ -6,6 +6,7 @@ import { tip } from '/tooltip-ui.js';
 import { reportCard } from '/lib/report-card.js';
 import { koreaDay } from '/lib/asset-timeline.js';
 import { monthsAgo, indexCompare, pickNews } from '/lib/index-compare.js';
+import { chartModel, chartSvg, pointAt, nearestIndex, summaryText, keySvg } from '/lib/compare-chart.js';
 import { getJson } from '/lib/client-data.js';
 import { kstStamp } from '/lib/paper-public.js';
 import { mockCached, loadMockAccount } from '/paper-account-ui.js';
@@ -71,23 +72,83 @@ function compareHead(kind) {
   return `<header><h3>${title} ${tip(kind === 'paper' ? TIP_PAPER : TIP_HOLD)}</h3>${kind === 'none' ? '' : seg}</header>`;
 }
 function drawCompare(kind, html) { const el = $id('ht-compare'); if (!el) return; lastChart = null; el.innerHTML = compareHead(kind) + html; }
-function lineSvg(line, names, W, aria) {
-  const H = 120, T = 10, B = 10, L = 2, R = Math.min(132, Math.max(104, Math.round(W * 0.3)));
-  const keys = ['own', 'spx', 'kospi'].filter(k => line.some(p => Number.isFinite(p[k])));
-  const vals = line.flatMap(p => keys.map(k => p[k])).filter(Number.isFinite);
-  let lo = Math.min(100, ...vals), hi = Math.max(100, ...vals); const pad = (hi - lo) * 0.1 || 1; lo -= pad; hi += pad;
-  const n = line.length, X = i => L + (n === 1 ? 0 : i / (n - 1)) * (W - L - R), Y = v => T + (hi - v) / (hi - lo) * (H - T - B);
-  const path = k => line.map((p, i) => Number.isFinite(p[k]) ? `${X(i).toFixed(1)},${Y(p[k]).toFixed(1)}` : null).filter(Boolean).join(' ');
-  // 선 끝 이름표(범례 대신): 겹치지 않게 14px 간격으로 벌린다.
-  const ends = keys.map(k => { let i = n - 1; while (i > 0 && !Number.isFinite(line[i][k])) i--; return { k, y: Y(line[i][k]), v: line[i][k] - 100 }; }).sort((a, b) => a.y - b.y);
-  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
-  const over = ends.length ? ends.at(-1).y - (H - 4) : 0; if (over > 0) for (const e of ends) e.y -= over;
-  return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(aria)}"><line class="base" x1="${L}" x2="${(W - R).toFixed(1)}" y1="${Y(100).toFixed(1)}" y2="${Y(100).toFixed(1)}"/>${keys.map(k => `<polyline class="l-${k}" points="${path(k)}"/>`).join('')}${ends.map(e => `<text class="t-${e.k}" x="${(W - R + 6).toFixed(1)}" y="${(e.y + 4).toFixed(1)}">${esc(names[e.k])} ${esc(pct1(e.v))}</text>`).join('')}</svg>`;
+// 그래프: 좌표·눈금·이름표는 lib/compare-chart.js(순수 함수 · node 시험)가 만들고, 여기서는 붙이기·마우스·키보드만 한다.
+// 세로축 = 시작일 대비 %, 가로축 = 날짜. 마우스를 올리거나 그래프에 포커스를 두고 ←·→ 를 누르면 그날 세 값을 보여 준다.
+const CHART_H = 220;
+const CHART_CSS = `#ht-compare .ht-chart{position:relative;height:auto;min-height:${CHART_H}px;margin-top:var(--tq-sp-3);border-radius:var(--tq-r-1);outline:none;touch-action:pan-y;cursor:crosshair}
+#ht-compare .ht-chart:focus-visible{box-shadow:0 0 0 2px var(--tq-accent)}
+#ht-compare .ht-chart svg{display:block;overflow:visible}
+#ht-compare .ht-chart text{font-size:var(--tq-fs-1);font-variant-numeric:tabular-nums}
+#ht-compare .cc-grid,#ht-compare .cc-axis{stroke:var(--tq-line);stroke-width:1}
+#ht-compare .cc-zero{stroke:var(--tq-faint);stroke-width:1.25}
+#ht-compare .cc-xtick{stroke:var(--tq-faint);stroke-width:1}
+#ht-compare .cc-tick{fill:var(--tq-faint)}#ht-compare .cc-tick0{fill:var(--tq-sub);font-weight:600}#ht-compare .cc-cap{fill:var(--tq-sub)}
+#ht-compare .cc-l{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+#ht-compare .cc-l.cc-own{stroke:var(--tq-ink);stroke-width:2.75}
+#ht-compare .cc-l.cc-spx{stroke:var(--tq-sub);stroke-dasharray:7 4;stroke-linecap:butt}
+#ht-compare .cc-l.cc-kospi{stroke:var(--tq-faint);stroke-dasharray:1 4}
+#ht-compare circle{stroke:var(--tq-paper);stroke-width:2}
+#ht-compare circle.cc-own{fill:var(--tq-ink)}#ht-compare circle.cc-spx{fill:var(--tq-sub)}#ht-compare circle.cc-kospi{fill:var(--tq-faint)}
+#ht-compare .cc-lab{fill:var(--tq-sub)}#ht-compare .cc-t-own{fill:var(--tq-ink);font-weight:700}
+#ht-compare .cc-lead{fill:none;stroke:var(--tq-faint);stroke-width:1}
+#ht-compare .cc-guide{stroke:var(--tq-sub);stroke-width:1}
+#ht-compare .cc-key{display:inline-block;vertical-align:middle;margin-right:var(--tq-sp-1)}
+#ht-compare .cc-tip{position:absolute;top:var(--tq-sp-5);z-index:2;padding:var(--tq-sp-2) var(--tq-sp-3);border:1px solid var(--tq-line);border-radius:var(--tq-r-1);background:var(--tq-paper);color:var(--tq-ink);font-size:var(--tq-fs-1);line-height:1.6;white-space:nowrap;pointer-events:none}
+#ht-compare .cc-tip[hidden]{display:none}
+#ht-compare .cc-tip b{display:block;font-weight:700}
+#ht-compare .cc-tip span{display:flex;align-items:center;gap:var(--tq-sp-2)}
+#ht-compare .cc-tip em{margin-left:auto;padding-left:var(--tq-sp-3);font-style:normal;font-weight:600;font-variant-numeric:tabular-nums}
+#ht-compare .cc-sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}`;
+function chartStyle() { if ($id('ht-chart-style')) return; const s = document.createElement('style'); s.id = 'ht-chart-style'; s.textContent = CHART_CSS; document.head.append(s); }
+function chartHide(host) {
+  if (lastChart) lastChart.at = null;
+  host.querySelector('.cc-hover')?.setAttribute('visibility', 'hidden');
+  const t = host.querySelector('.cc-tip'); if (t) t.hidden = true;
+}
+function chartShow(host, i) {
+  const m = lastChart?.model, p = pointAt(m, i); if (!p) return;
+  lastChart.at = i;
+  const g = host.querySelector('.cc-hover'); if (!g) return;
+  g.setAttribute('visibility', 'visible');
+  const guide = g.querySelector('.cc-guide'); guide.setAttribute('x1', p.x.toFixed(1)); guide.setAttribute('x2', p.x.toFixed(1));
+  for (const c of g.querySelectorAll('.cc-hdot')) {
+    const r = p.rows.find(x => x.key === c.dataset.key);
+    if (!Number.isFinite(r?.y)) c.setAttribute('visibility', 'hidden'); else { c.removeAttribute('visibility'); c.setAttribute('cx', p.x.toFixed(1)); c.setAttribute('cy', r.y.toFixed(1)); }
+  }
+  let tipEl = host.querySelector('.cc-tip');
+  if (!tipEl) { tipEl = document.createElement('div'); tipEl.className = 'cc-tip'; tipEl.setAttribute('aria-hidden', 'true'); host.append(tipEl); }
+  const head = document.createElement('b'); head.textContent = p.date;
+  tipEl.replaceChildren(head, ...p.rows.map(r => { const s = document.createElement('span'); s.insertAdjacentHTML('beforeend', keySvg(r.key)); s.append(document.createTextNode(r.name)); const v = document.createElement('em'); v.textContent = r.text; s.append(v); return s; }));
+  tipEl.hidden = false;
+  const scale = (host.clientWidth || m.W) / m.W, px = p.x * scale, w = tipEl.offsetWidth;
+  tipEl.style.left = `${Math.max(0, px + 12 + w > host.clientWidth ? px - 12 - w : px + 12)}px`;
+  const live = host.parentElement?.querySelector('.cc-sr'); if (live) live.textContent = `${p.date} · ${p.rows.map(r => `${r.name} ${r.text}`).join(' · ')}`;
+}
+function chartBind(host) {
+  if (host.dataset.bound) return; host.dataset.bound = '1';
+  const at = e => { const svg = host.querySelector('svg'), m = lastChart?.model; if (!svg || !m) return -1; const b = svg.getBoundingClientRect(); return b.width ? nearestIndex(m, (e.clientX - b.left) * m.W / b.width) : -1; };
+  host.addEventListener('pointermove', e => { const i = at(e); if (i >= 0) chartShow(host, i); });
+  host.addEventListener('pointerdown', e => { const i = at(e); if (i >= 0) chartShow(host, i); });
+  host.addEventListener('pointerleave', () => { if (document.activeElement !== host) chartHide(host); });
+  host.addEventListener('focus', () => { const n = lastChart?.model?.n || 0; if (n) chartShow(host, lastChart.at ?? n - 1); });
+  host.addEventListener('blur', () => chartHide(host));
+  host.addEventListener('keydown', e => {
+    const n = lastChart?.model?.n || 0; if (!n) return;
+    const cur = lastChart.at ?? n - 1;
+    const next = { ArrowLeft: cur - 1, ArrowRight: cur + 1, Home: 0, End: n - 1 }[e.key];
+    if (e.key === 'Escape') { chartHide(host); return; }
+    if (next === undefined) return;
+    e.preventDefault(); chartShow(host, Math.min(n - 1, Math.max(0, next)));
+  });
 }
 function paintChart() {
   const host = $id('ht-compare')?.querySelector('.ht-chart'); if (!host || !lastChart) return;
-  const W = Math.max(240, Math.round(host.clientWidth || 480)); if (lastChart.w === W && host.firstElementChild) return;
-  lastChart.w = W; host.innerHTML = lineSvg(lastChart.line, lastChart.names, W, lastChart.aria);
+  chartStyle(); chartBind(host);
+  const W = Math.max(200, Math.round(host.clientWidth || 480)); if (lastChart.w === W && host.querySelector('svg')) return;
+  lastChart.w = W; lastChart.model = chartModel(lastChart.line, { width: W, height: CHART_H, names: lastChart.names });
+  const keep = lastChart.at;
+  host.innerHTML = chartSvg(lastChart.model);
+  if (keep != null && keep < lastChart.model.n) chartShow(host, keep); else lastChart.at = null;
 }
 const sizer = typeof ResizeObserver === 'function' ? new ResizeObserver(() => paintChart()) : null;
 
@@ -123,13 +184,18 @@ async function renderCompare() {
   if (!res) { drawCompare(kind, '<p class="ht-empty">거래일이 이틀 넘게 쌓이면 비교합니다</p>'); return; }
   const name = OWN_NAME[kind], noIndex = res.spx === null && res.kospi === null;
   const vs = [res.vsSpx === null ? '' : `S&P500보다 <b class="${tone(res.vsSpx)}">${pp(res.vsSpx)}</b>`, res.vsKospi === null ? '' : `코스피보다 <b class="${tone(res.vsKospi)}">${pp(res.vsKospi)}</b>`].filter(Boolean).join(' · ');
-  const basis = kind === 'paper' ? '총자산(현금 포함) · 가상 돈' : kind === 'demo' ? '현금 제외 · 실제 아님' : '현금 제외';
-  drawCompare(kind, `<p class="ht-meta">${esc(day(res.from))} ~ ${esc(day(res.to))} · ${basis} · 원화 기준</p>
-    <p class="ht-nums"><span>${name} <b class="${tone(res.own)}">${pct1(res.own)}</b></span><span>S&P500 <b class="${tone(res.spx)}">${pct1(res.spx)}</b></span><span>코스피 <b class="${tone(res.kospi)}">${pct1(res.kospi)}</b></span></p>
+  // 2026-11-27 보완 2: 기간 줄은 날짜만 보이고, 기준(현금 포함 여부 · 원화)과 '그 뒤만 비교' 같은 메모는 ⓘ 안에 둔다('가상 돈'·'실제 아님'은 뺌).
+  const basis = kind === 'paper' ? '총자산(현금 포함)' : '현금 제외';
+  const metaTip = [`${basis} · 원화 기준 · ${months}개월 비교`, ...notes].join(String.fromCharCode(10));
+  // 숫자 줄이 범례를 겸한다(선 모양 + 이름 + 기간 수익률). 지수 선이 없으면 그 칸은 '—'.
+  const key = (k, has) => has ? keySvg(k) : '';
+  const aria = `${summaryText({ months, from: res.from, to: res.to, values: [{ name, v: res.own }, ...(res.spx === null ? [] : [{ name: 'S&P500', v: res.spx }]), ...(res.kospi === null ? [] : [{ name: '코스피', v: res.kospi }])] })}. 세로축은 시작일 대비 %, 가로축은 날짜입니다. 왼쪽·오른쪽 화살표로 날짜별 값을 읽습니다.`;
+  drawCompare(kind, `<p class="ht-meta">기간 ${esc(day(res.from))} ~ ${esc(day(res.to))} ${tip(metaTip, '기준')}</p>
+    <p class="ht-nums"><span>${key('own', true)}${name} <b class="${tone(res.own)}">${pct1(res.own)}</b></span><span>${key('spx', res.spx !== null)}S&P500 <b class="${tone(res.spx)}">${pct1(res.spx)}</b></span><span>${key('kospi', res.kospi !== null)}코스피 <b class="${tone(res.kospi)}">${pct1(res.kospi)}</b></span></p>
     <p class="ht-vs">${noIndex ? '지수 시세를 못 받아 내 계좌만 보여 줍니다' : vs}</p>
-    <div class="ht-chart"></div>${notes.length ? `<p class="ht-note">${esc(notes.join(' · '))}</p>` : ''}`);
-  const aria = `${day(res.from)}부터 ${day(res.to)}까지(시작 = 100) ${name} ${pct1(res.own)}, S&P500 ${pct1(res.spx)}, 코스피 ${pct1(res.kospi)}`;
-  lastChart = { line: res.line, names: { own: LINE_NAME[kind], spx: 'S&P500', kospi: '코스피' }, aria, w: 0 };
+    <div class="ht-chart" tabindex="0" role="img" aria-label="${esc(aria)}"></div><p class="cc-sr" aria-live="polite"></p>`);
+  lastChart = { line: res.line, names: { own: LINE_NAME[kind], spx: 'S&P500', kospi: '코스피' }, w: 0, model: null, at: null };
+  chartStyle();
   paintChart();
   const host = $id('ht-compare')?.querySelector('.ht-chart'); if (host && sizer) { sizer.disconnect(); sizer.observe(host); }
 }
@@ -141,7 +207,7 @@ $id('ht-compare')?.addEventListener('click', e => {
 });
 
 // ── ② 오늘 시장 ──────────────────────────────────────────────
-const MARKET_TIP = 'AI 요약(있을 때): 장 마감 기사(네이버 뉴스)를 PC 프로그램에서 Claude(Opus 5.5)가 국내 15:50 · 미국 06:40에 묶은 것입니다. 기사에 나온 이유만 쓰고 인과를 확인한 것은 아닙니다. 투자 권유가 아닙니다.\n지수·환율: 네이버 증권 시세(늦을 수 있음). 미국 장이 끝났으면 간밤 종가입니다.\n기사에 많이 나온 이유: 국내·미국 장 마감 기사 제목·요약에 많이 나온 낱말을 센 것이며, 원인을 확인한 것은 아닙니다.\n평소보다 큰 움직임: 최근 60거래일 하루 움직임의 2배를 넘을 때 표시합니다.\n내 종목 소식: 3일 안 공시 · 평소의 2배 넘는 움직임 · 오늘 기사 2건 이상인 종목을 최대 3개 보여 줍니다.';
+const MARKET_TIP = 'AI 요약: 2026-11-27부터 멈춤.\n지수·환율: 네이버 증권 시세(늦을 수 있음). 미국 장이 끝났으면 간밤 종가입니다.\n기사에 많이 나온 이유: 국내·미국 장 마감 기사 제목·요약에 많이 나온 낱말을 센 것이며, 원인을 확인한 것은 아닙니다.\n평소보다 큰 움직임: 최근 60거래일 하루 움직임의 2배를 넘을 때 표시합니다.\n내 종목 소식: 3일 안 공시 · 평소의 2배 넘는 움직임 · 오늘 기사 2건 이상인 종목을 최대 3개 보여 줍니다.';
 const ISSUE_KEY = { '^KS11': 'KOSPI', '^KQ11': 'KOSDAQ', '^GSPC': 'SPX', '^IXIC': 'IXIC', 'KRW=X': 'USDKRW' }, LEVEL = { urgent: '긴급', caution: '주의' };
 const mk = { at: 0, data: null, failed: false, issues: null, issuesAt: 0, reasons: null, why: null, loading: null };
 const fxText = v => Number.isFinite(v) ? `${v.toLocaleString('ko-KR', { maximumFractionDigits: 1 })}원` : '—';
@@ -191,7 +257,7 @@ function reasonsLines() {
   const row = (label, x) => {
     if (!x) return '';
     if (x.error) return `<li><span class="ht-k">${label}</span> 기사를 불러오지 못했습니다</li>`;
-    if (!x.available) return `<li><span class="ht-k">${label}</span> 장 마감 기사를 아직 못 찾았습니다</li>`;
+    if (!x.available) return ''; // 2026-11-27: 기사 없음 줄은 보이지 않게(정보 없는 문장 · 사용자 지시)
     const top = (x.themes || []).filter(t => t.count >= 1).slice(0, 2).map(t => t.label), a = x.articles?.[0];
     return `<li><span class="ht-k">${label}</span> ${top.length ? `기사에 많이 나온 이유: <b>${esc(top.join(', '))}</b>` : '기사에서 뚜렷한 이유 낱말을 못 찾았습니다'}${a && safeUrl(a.link) ? ` · ${link(a.link, '첫 기사')}` : ''}</li>`;
   };

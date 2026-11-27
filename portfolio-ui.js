@@ -1,9 +1,9 @@
-// 포트폴리오 화면(예전 "보유 종목·거래"): 무엇을 더 사고 무엇을 줄일지 정하는 곳.
-// 왼쪽: 보유 종목 성적표(투자 지표 + 판단), 종목별로 맞았던 매매 방식. 오른쪽: 현금 기록(PC 저장), 자산 구성, 추천 방향.
+// 포트폴리오 화면(예전 "보유 종목·거래"): 보유 종목의 지표와 비중을 내 규칙·기준과 비교해 보는 곳(매수·매도 판단 아님 · 2026-11-27 LEGAL 4.3).
+// 왼쪽: 종목 점검 표(투자 지표 + 지표 요약), 종목별로 맞았던 매매 방식. 오른쪽: 현금 기록(PC 저장), 자산 구성, 비중 점검.
 // 예전 표·주문 이력·고급 도구는 지우지 않고 맨 아래 "원자료"에 접어 둔다.
 import { fundamentals, candles, indexSeries, getStyle, setStyle } from '/lib/client-data.js';
 import { scoreStock, STYLES } from '/lib/stock-score.js';
-import { advisePortfolio, TARGETS } from '/lib/portfolio-advice.js';
+import { advisePortfolio, weightRule } from '/lib/portfolio-advice.js';
 import { normalizeRules } from '/lib/core-rules.js';
 import { findBestFit, periodStart } from '/lib/strategy-lab.js';
 import { privateRead } from '/bridge-client.js';
@@ -21,13 +21,13 @@ const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '
 
 const root = document.createElement('section'); root.className = 'pf'; root.id = 'portfolio';
 root.innerHTML = `
-<div class="pf-empty" id="pf-empty" hidden><b>계좌 연결 전입니다.</b><span>연결하면 보유 종목을 점검합니다.</span><button type="button" class="primary" data-go-home>홈에서 계좌 연결</button><button type="button" class="secondary" data-demo-start>예시로 보기</button></div>
-<div class="hm-demo" id="pf-demo" hidden><b>예시 자산</b><span>실제 계좌 아님 · 현금 기록 저장 안 함</span><button type="button" class="text-button" data-demo-stop>예시 끄기</button></div>
+<div class="pf-empty" id="pf-empty" hidden><b>계좌 연결 전</b><button type="button" class="primary" data-go-home>홈에서 계좌 연결</button><button type="button" class="secondary" data-demo-start>예시로 보기</button></div>
+<div class="hm-demo" id="pf-demo" hidden><b id="pf-demo-name">예시 자산</b>${tip('현금 기록은 저장하지 않습니다.')}<button type="button" class="text-button" id="pf-demo-stop" data-demo-stop>예시 끄기</button></div>
 <div class="pf-style"><span>투자 성향 ${tip(Object.values(STYLES).map(x => `${x.label}: ${x.desc}`).join('\n'))}</span><div class="lt-seg" role="radiogroup">${Object.entries(STYLES).map(([k, s]) => `<label><input type="radio" name="pf-style" value="${k}"><span>${s.label}</span></label>`).join('')}</div></div>
 <div class="pf-grid">
   <div class="pf-main">
     <article class="pf-card"><header><h3>종목 점검 <span id="pf-how-tip"></span></h3></header>
-      <div class="table-wrap"><table class="pf-table"><thead><tr><th>종목</th><th>비중</th><th>수익률</th><th>PER</th><th>ROE</th><th>배당률</th><th>매출 성장률</th><th>목표주가까지</th><th>맞았던 방식 ${tip('지난 1년, 4가지 매매 방식과 그냥 보유를 종목마다 비교했습니다. 지난 결과에 맞춘 것이라 앞으로도 같다는 보장은 없습니다. 방식 하나를 자세히 보려면 전략 테스트를 쓰세요.')}</th><th>판단</th></tr></thead><tbody id="pf-rows"><tr><td colspan="10" class="pf-muted">계좌를 불러오면 점검합니다.</td></tr></tbody></table></div>
+      <div class="table-wrap"><table class="pf-table"><thead><tr><th>종목</th><th>비중 ${tip('오른쪽 비중 점검과 같은 기준입니다. 규칙 화면의 내 규칙이 있고 현금을 알면 총자산(현금 포함) 대비, 그렇지 않으면 주식 합계 대비입니다.')}</th><th>수익률</th><th>PER</th><th>ROE</th><th>배당률</th><th>매출 성장률</th><th>목표주가까지</th><th>맞았던 방식 ${tip('지난 1년, 4가지 매매 방식과 그냥 보유를 종목마다 비교했습니다. 지난 결과에 맞춘 것이라 앞으로도 같다는 보장은 없습니다. 방식 하나를 자세히 보려면 전략 테스트를 쓰세요.')}</th><th>지표 요약 ${tip('지표를 요약한 것이며 매수 판단이 아닙니다.')}</th></tr></thead><tbody id="pf-rows"><tr><td colspan="10" class="pf-muted">계좌를 불러오면 점검합니다.</td></tr></tbody></table></div>
       <p id="pf-fit" class="pf-fit-sum"></p>
     </article>
   </div>
@@ -58,17 +58,21 @@ window.addEventListener('teamquant:page', () => { if (root.isConnected) mount();
 
 let snapshot = null, epoch = 0, cash = null, funds = new Map(), briefs = new Map(), fits = new Map(), style = getStyle();
 const valueKrw = (v, c) => c === 'KRW' ? v : snapshot?.fx?.midRate ? v * snapshot.fx.midRate : null;
+const cashAmount = () => (cash?.latest ? cash.latest.amount : null);
+// 비중 열·지표 요약 라벨은 비중 점검과 같은 한도·기준(weightRule)을 쓴다(2026-11-27: 라벨의 '내 한도'가 성향 기준값이고 비중도 규칙 화면과 기준이 달랐다).
+let wr = weightRule({});
 function positions() {
   const list = (snapshot?.positions || []).map(p => ({ ...p, valueKrw: valueKrw(p.value, p.currency) }));
-  const total = list.reduce((s, p) => s + (p.valueKrw || 0), 0);
-  for (const p of list) p.weightPct = total ? (p.valueKrw || 0) / total * 100 : null;
+  const stocks = list.reduce((s, p) => s + (p.valueKrw || 0), 0);
+  wr = weightRule({ stocks, cash: cashAmount(), style, rules: myRules() });
+  for (const p of list) p.weightPct = wr.base ? (p.valueKrw || 0) / wr.base * 100 : null;
   return list.sort((a, b) => (b.valueKrw || 0) - (a.valueKrw || 0));
 }
-function judge(p) { const f = funds.get(p.symbol); return f && !f.error ? scoreStock(f, { style, price: p.price, brief: briefs.get(p.symbol), weightPct: p.weightPct, weightLimit: TARGETS[style].single }) : null; }
+function judge(p) { const f = funds.get(p.symbol); return f && !f.error ? scoreStock(f, { style, price: p.price, brief: briefs.get(p.symbol), weightPct: p.weightPct, weightLimit: wr.single, limitMine: wr.mine }) : null; }
 
 function renderStyle() {
   root.querySelectorAll('[name="pf-style"]').forEach(r => { r.checked = r.value === style; });
-  $('#pf-how-tip').innerHTML = tip(`PER·ROE·매출 성장·배당·재무 안정·목표주가·최근 주가 흐름·뉴스 분위기를 좋음·보통·나쁨으로 매겨 성향별 반영 비율로 합칩니다.\n+0.3 이상 '추가 매수 검토', −0.25 이하 '비중 줄이기 검토', 그 사이 '보유 유지'. 비중이 성향별 한도를 넘으면 '좋지만 비중이 큼'.\n행을 누르면 종목 상세가 열립니다. 매수·매도 지시가 아닙니다.`);
+  $('#pf-how-tip').innerHTML = tip(`PER·ROE·매출 성장·배당·재무 안정·목표주가·최근 주가 흐름·뉴스 분위기를 좋음·보통·나쁨으로 매겨 성향별 반영 비율로 합칩니다.\n+0.3 이상 '좋은 지표가 많음', −0.25 이하 '약한 지표가 많음', 그 사이 '지표 보통'. 지표가 좋아도 비중이 한 종목 한도를 넘으면 '지표 좋음 · 비중 N% (내 한도 M% 넘음)'(규칙 화면의 한 종목 최대 비중) 또는 '(성향 기준 M% 넘음)'(팀 모의계좌처럼 내 규칙이 없을 때)로 적습니다. 비중은 비중 점검과 같은 기준입니다.\n행을 누르면 종목 상세가 열립니다. 지표를 요약한 것이며 매수·매도 판단이 아닙니다.`);
 }
 root.querySelectorAll('[name="pf-style"]').forEach(r => r.onchange = () => setStyle(r.value));
 window.addEventListener('teamquant:style', e => { style = e.detail; renderStyle(); renderAll(); });
@@ -89,15 +93,16 @@ function renderTable() {
       ${fitCell(fits.get(p.symbol))}
       <td>${j ? `<span class="pf-stance ${STANCE_CLASS[j.stance]}">${esc(j.label)}</span><small>${esc(j.summary)}</small>` : f?.error ? '<span class="pf-stance s-unknown">지표 없음</span>' : '<span class="pf-muted">점검 중…</span>'}</td></tr>`;
   }).join('');
-  $('#pf-rows').querySelectorAll('tr[data-symbol]').forEach(tr => { const open = () => window.dispatchEvent(new CustomEvent('teamquant:open-stock', { detail: { symbol: tr.dataset.symbol } })); tr.onclick = open; tr.onkeydown = e => { if (e.key === 'Enter') open(); }; });
+  $('#pf-rows').querySelectorAll('tr[data-symbol]').forEach(tr => { const open = () => window.dispatchEvent(new CustomEvent('teamquant:open-stock', { detail: { symbol: tr.dataset.symbol } })); tr.onclick = open; tr.onkeydown = e => { if (e.key === 'Enter' && !e.target.closest?.('.tip')) open(); }; /* 칸 안 ⓘ 에서 Enter 는 ⓘ 만 연다 */ });
 }
 // 종목별로 맞았던 매매 방식(지난 1년): 따로 카드를 두지 않고 종목 점검 표의 한 칸으로 보인다.
 function fitCell(f) {
   if (!f) return '<td class="pf-muted">계산 중…</td>';
-  if (!f.available) return `<td class="pf-muted" title="${esc(f.message)}">—</td>`;
+  // 2026-11-27 보완 2(R2): title(마우스 전용) 대신 누르면 열리는 ⓘ.
+  if (!f.available) return `<td class="pf-muted">—${f.message ? tip(f.message) : ''}</td>`;
   const title = `${f.best.title} ${pct(f.best.return)} · 그냥 보유 ${pct(f.best.hold)}`;
-  return f.fitsHold ? `<td class="pf-fit" title="${esc(title)}">그냥 보유</td>`
-    : `<td class="pf-fit" title="${esc(title)}">${esc(f.best.title)}<small>${f.best.holding ? '지금 보유 중' : '지금 현금 대기'}</small></td>`;
+  return f.fitsHold ? `<td class="pf-fit">그냥 보유${tip(title)}</td>`
+    : `<td class="pf-fit">${esc(f.best.title)}${tip(title)}</td>`; // 2026-11-27: '지금 보유 중 / 현금 대기'는 매매 시점 신호처럼 읽혀 뺐다
 }
 function renderFit() {
   const list = positions(); if (!list.length) return;
@@ -115,8 +120,8 @@ function myRules() {
   catch { return normalizeRules({}).rules; }
 }
 function renderSide() {
-  const list = positions(), holdings = list.map(p => { const f = funds.get(p.symbol), j = judge(p); return { name: p.name, valueKrw: p.valueKrw, sector: f?.sector || null, country: p.currency === 'KRW' ? '국내' : '해외', dividendYield: f?.dividendYield, stance: j?.stance }; });
-  const a = advisePortfolio(holdings, { cash: cash?.latest ? cash.latest.amount : null, style, rules: myRules() });
+  const list = positions(), holdings = list.map(p => { const f = funds.get(p.symbol); return { name: p.name, valueKrw: p.valueKrw, sector: f?.sector || null, country: p.currency === 'KRW' ? '국내' : '해외', dividendYield: f?.dividendYield }; });
+  const a = advisePortfolio(holdings, { cash: cashAmount(), style, rules: myRules() });
   const parts = [['국내 주식', a.countries.find(c => c.label === '국내')?.value || 0, 'kr'], ['해외 주식', a.countries.find(c => c.label === '해외')?.value || 0, 'us'], ['현금', Number.isFinite(a.cash) ? a.cash : 0, 'cash']], total = parts.reduce((s, x) => s + x[1], 0);
   $('#pf-mix').innerHTML = `<p class="pf-total">${Number.isFinite(a.cash) ? '현금 포함 총자산' : '주식 평가액'} <b>${won(Number.isFinite(a.cash) ? a.total : a.stocks)}</b></p>
     <div class="pf-bar">${parts.filter(x => x[1] > 0).map(x => `<i class="${x[2]}" style="--w:${(x[1] / total * 100).toFixed(1)}%" title="${x[0]}"></i>`).join('')}</div>
@@ -137,13 +142,15 @@ function renderCash() {
   $('#pf-cash-log').innerHTML = cash.entries.slice(-5).reverse().map(e => `<li><span>${new Date(e.recordedAt).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric' })}</span><b>${won(e.amount)}</b><small>${esc(e.note || '')}</small></li>`).join('');
   window.dispatchEvent(new CustomEvent('teamquant:cash', { detail: l ? { amount: l.amount, recordedAt: l.recordedAt } : null }));
 }
-async function loadCash() { if (snapshot?.demo) { cash = { latest: { amount: snapshot.demoCash, note: snapshot.paper ? '팀 모의계좌 예수금' : '예시', recordedAt: new Date().toISOString() }, entries: [] }; renderCash(); renderSide(); return; } try { cash = await privateRead('cash-get'); renderCash(); renderSide(); } catch (e) { $('#pf-cash-state').textContent = `현금 기록을 불러오지 못했습니다: ${e.message}`; } }
+// 현금이 바뀌면 비중 기준(총자산·주식 합계)도 바뀔 수 있어 표도 다시 그린다.
+const afterCash = () => { renderCash(); if (snapshot) renderTable(); renderSide(); };
+async function loadCash() { if (snapshot?.demo) { cash = { latest: { amount: snapshot.demoCash, note: snapshot.paper ? '팀 모의계좌 예수금' : '예시', recordedAt: new Date().toISOString() }, entries: [] }; afterCash(); return; } try { cash = await privateRead('cash-get'); afterCash(); } catch (e) { $('#pf-cash-state').textContent = `현금 기록을 불러오지 못했습니다: ${e.message}`; } }
 $('#pf-cash').addEventListener('input', e => { const d = e.target.value.replace(/[^\d]/g, ''); e.target.value = d ? Number(d).toLocaleString('ko-KR') : ''; });
 $('#pf-cash-form').onsubmit = async e => {
   e.preventDefault(); const amount = Number($('#pf-cash').value.replace(/[^\d]/g, ''));
   if (!$('#pf-cash').value.trim()) { $('#pf-cash-state').textContent = '금액을 적어 주세요.'; return; }
-  if (snapshot?.demo) { cash = { latest: { amount, note: snapshot.paper ? '팀 모의계좌(저장 안 함)' : '예시', recordedAt: new Date().toISOString() }, entries: [] }; renderCash(); renderSide(); return; }
-  try { cash = await privateRead('cash-set', { amount, note: $('#pf-cash-note').value.trim() }); $('#pf-cash').value = ''; $('#pf-cash-note').value = ''; renderCash(); renderSide(); }
+  if (snapshot?.demo) { cash = { latest: { amount, note: snapshot.paper ? '팀 모의계좌(저장 안 함)' : '예시', recordedAt: new Date().toISOString() }, entries: [] }; afterCash(); return; }
+  try { cash = await privateRead('cash-set', { amount, note: $('#pf-cash-note').value.trim() }); $('#pf-cash').value = ''; $('#pf-cash-note').value = ''; afterCash(); }
   catch (err) { $('#pf-cash-state').textContent = `저장하지 못했습니다: ${err.message}`; }
 };
 
@@ -166,7 +173,7 @@ window.addEventListener('teamquant:brief', e => { briefs.set(e.detail.symbol, e.
 window.addEventListener('teamquant:asset-clear', () => { epoch++; snapshot = null; funds = new Map(); briefs = new Map(); fits = new Map(); $('#pf-rows').innerHTML = '<tr><td colspan="10" class="pf-muted">화면의 자산 정보를 지웠습니다.</td></tr>'; $('#pf-fit').innerHTML = ''; $('#pf-mix').innerHTML = ''; $('#pf-advice').innerHTML = ''; });
 renderStyle();
 let connection = 'unknown';
-function syncState() { $('#pf-empty').hidden = !(!snapshot && connection === 'error'); $('#pf-demo').hidden = !snapshot?.demo; root.classList.toggle('pf-state-empty', !snapshot && connection === 'error'); }
+function syncState() { $('#pf-empty').hidden = !(!snapshot && connection === 'error'); $('#pf-demo').hidden = !snapshot?.demo; $('#pf-demo-name').textContent = snapshot?.paper ? '팀 모의계좌' : '예시 자산'; $('#pf-demo-stop').hidden = !!snapshot?.paper; /* 팀 모의계좌도 demo 표식이 있어 이름을 맞춘다(2026-11-27) */ root.classList.toggle('pf-state-empty', !snapshot && connection === 'error'); }
 window.addEventListener('teamquant:connection', e => { connection = e.detail?.status || 'unknown'; syncState(); });
 window.addEventListener('teamquant:asset-snapshot', syncState);
 window.addEventListener('teamquant:asset-clear', () => { connection = 'error'; cash = null; syncState(); });

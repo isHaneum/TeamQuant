@@ -96,7 +96,7 @@ function renderOosHistory(ledger=[]) {
   if(!rows.length){node.innerHTML='<p class="muted">아직 테스트 기록이 없습니다.</p>';return;}
   const value=(key,v)=>v===null||v===undefined?"—":key==="type"?(TYPE_LABEL[v]||v):v;
   const change=(e)=>e.changesFromPrevious?.length?e.changesFromPrevious.map(c=>`${PARAM_LABEL[c.key]||c.key} ${value(c.key,c.before)}→${value(c.key,c.after)}`).join(", "):"—";
-  node.innerHTML=`<p class="muted">최근 ${rows.length}건 / 전체 ${ledger.length}건 · 기록은 하나씩 고치거나 지울 수 없습니다 ${tip("이 브라우저 프로필에 저장됩니다. 설정 > 내 기록 지우기로는 모두 지울 수 있습니다.")}</p><div class="table-scroll"><table><thead><tr><th>#</th><th>종목</th><th>규칙 이름</th><th>확인 기간</th><th>정할 때</th><th>확인</th><th>확인 기간 결과</th><th>바뀐 항목</th></tr></thead><tbody>${rows.map(e=>`<tr><td>${e.trialNumber}</td><td>${escapeHtml(stockName(e.symbol))}</td><td>${escapeHtml(e.strategyName||"—")}</td><td>${escapeHtml(e.test.start)}~${escapeHtml(e.test.end)}</td><td>${pct(e.tuningReturn)}</td><td>${pct(e.testReturn)}</td><td title="${escapeHtml(e.reasons.join(" "))}">${e.independent?"예":"아니오"}</td><td>${escapeHtml(change(e))}</td></tr>`).join("")}</tbody></table></div>`;
+  node.innerHTML=`<p class="muted">최근 ${rows.length}건 / 전체 ${ledger.length}건 · 기록은 하나씩 고치거나 지울 수 없습니다 ${tip("이 브라우저 프로필에 저장됩니다. 설정 > 내 기록 지우기로는 모두 지울 수 있습니다.")}</p><div class="table-scroll"><table><thead><tr><th>#</th><th>종목</th><th>규칙 이름</th><th>확인 기간</th><th>정할 때</th><th>확인</th><th>확인 기간 결과</th><th>바뀐 항목</th></tr></thead><tbody>${rows.map(e=>`<tr><td>${e.trialNumber}</td><td>${escapeHtml(stockName(e.symbol))}</td><td>${escapeHtml(e.strategyName||"—")}</td><td>${escapeHtml(e.test.start)}~${escapeHtml(e.test.end)}</td><td>${pct(e.tuningReturn)}</td><td>${pct(e.testReturn)}</td><td>${e.independent?"예":"아니오"}${e.reasons.length?tip(e.reasons.join(" ")):""}</td><td>${escapeHtml(change(e))}</td></tr>`).join("")}</tbody></table></div>`;
 }
 
 async function runApprovedBacktest() {
@@ -117,8 +117,8 @@ function renderAssets() {
   const state=loadState(),paper=state.paper,run=state.lastRun,holdings=Object.values(paper.holdings); let holdingValue=0,pnl=0;
   $("#holdings-body").innerHTML=holdings.length?holdings.map(h=>{const value=h.qty*h.lastPrice,itemPnl=(h.lastPrice-h.avgPrice)*h.qty;holdingValue+=value;pnl+=itemPnl;return `<tr><td>${stockName(h.symbol)}</td><td>${won.format(h.qty)}주</td><td>${money(h.avgPrice)}</td><td>${money(h.lastPrice)}</td><td class="${itemPnl>=0?'good':'bad'}">${money(itemPnl)}</td></tr>`}).join(""):'<tr><td colspan="5" class="empty">보유 종목이 없습니다.</td></tr>';
   $("#asset-total").textContent=money(paper.cash+holdingValue); $("#asset-cash").textContent=money(paper.cash); $("#asset-pnl").textContent=money(pnl); $("#asset-pnl").className=pnl>=0?"good":"bad";
-  $("#order-asof").textContent=run?`${run.endDate} 테스트 기준 가격 · 실제 체결 아님(가상 투자)`:"테스트한 날의 가격과 신호가 보입니다.";
-  $("#order-symbol").textContent=run?`${stockName(run.symbol)} · ${money(run.lastPrice)}`:"테스트 결과 없음"; $("#order-decision").textContent=run?.latestDecision.decision||"—"; $("#order-reason").textContent=run?.latestDecision.reason||"최근 신호의 이유가 보입니다."; $("#order-evidence").textContent=`지표 · ${indicatorText(run?.latestDecision.indicators)}`;
+  $("#order-asof").textContent=run?`${run.endDate} 테스트 기준`:"—"; // 2026-11-27 보완 2: '실제 체결 아님(가상 투자)' 같은 뻔한 말과 빈 상태 안내 문장을 뺐다
+  $("#order-symbol").textContent=run?`${stockName(run.symbol)} · ${money(run.lastPrice)}`:"테스트 결과 없음"; $("#order-decision").textContent=run?.latestDecision.decision||"—"; $("#order-reason").textContent=run?.latestDecision.reason||"—"; $("#order-evidence").textContent=`지표 · ${indicatorText(run?.latestDecision.indicators)}`;
 }
 
 async function refreshAssets() {

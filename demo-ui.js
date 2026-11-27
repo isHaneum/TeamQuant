@@ -1,5 +1,5 @@
 // 예시 자산으로 둘러보기: 계좌를 연결하지 않은 사람도 홈·포트폴리오·성적표 흐름을 체험한다.
-// 공개 시세로 만든 예시 보유 종목과 예시 체결이며 실제가 아니다(화면 이름: '예시 자산 · 실제 아님'). 실계좌가 연결되면 그 자료로 바로 바뀐다.
+// 공개 시세로 만든 예시 보유 종목과 예시 체결이며 실제가 아니다(화면 이름: '예시 자산' · 2026-11-27 보완 2에서 '· 실제 아님' 꼬리를 뺌). 실계좌가 연결되면 그 자료로 바로 바뀐다.
 import { candles } from '/lib/client-data.js';
 
 const BOOK = [['005930', '삼성전자', 'KRW'], ['000660', 'SK하이닉스', 'KRW'], ['069500', 'KODEX 200', 'KRW'], ['NVDA', '엔비디아', 'USD'], ['KO', '코카콜라', 'USD'], ['035420', 'NAVER', 'KRW']];
@@ -19,7 +19,7 @@ export async function buildDemo() {
     return { symbol: s, name: meta[s].name, currency: meta[s].currency, quantity: q, avgCost: cost[s] / q, price, cost: cost[s], value, pnl: value - cost[s], returnPct: (value / cost[s] - 1) * 100, dailyPnl: q * (price - prev) }; });
   const fx = (await candles('KRW=X', 'USD').catch(() => null))?.candles?.at(-1)?.close || 1400;
   const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' }).format(new Date());
-  return { source: '예시 자산 · 실제 아님', fetchedAt: new Date().toISOString(), fx: { midRate: fx, asOf: '예시' }, positions, totals: [], cashKnown: false, demo: true,
+  return { source: '예시 자산', fetchedAt: new Date().toISOString(), fx: { midRate: fx, asOf: '예시' }, positions, totals: [], cashKnown: false, demo: true,
     demoCash: 3_000_000, demoOrders: { query: { from: new Date(Date.parse(today) - 365 * 864e5).toISOString().slice(0, 10), to: today, status: 'CLOSED', symbol: '' }, orders: orders.reverse(), totals: [], pages: 1, paginationComplete: true, issue: null, fetchedAt: new Date().toISOString(), source: '예시', notice: '' } };
 }
 export async function startDemo(button) {

@@ -1,4 +1,6 @@
-// 홈: 계좌 띠(계좌 · 기준 시각 · 평가액 · 원금 · 손익 · 오늘) → 맨 위 두 칸(지수 대비 수익률 · 오늘 시장 — home-top-ui.js) → 규칙 점검 → 접힌 카드(월별 주식 평가액 · 매매 성적표) | 보유 종목.
+// 홈(2026-11-26 사용자가 정한 순서): 계좌 띠(원금 · 총자산 · 총 손익 · 실현 손익 · 오늘 손익) 아래
+//   넓은 화면(1280px 이상) 왼쪽 = 규칙 점검 → 지수 대비 수익률(home-top-ui.js) → 오늘 밤 주문(PC 사본만) → 접힌 카드 | 오른쪽 = 종목별 수익률(home-holdings-ui.js) → 오늘 시장
+//   좁은 화면 한 줄 = 계좌 띠 → 규칙 → 종목별 수익률 → 지수 대비 → 오늘 시장 → 오늘 밤 주문 → 접힌 카드(순서는 brief.css 의 order).
 // 실제 보유·주문 자료는 이 탭의 메모리에서만 쓰고 저장·전송하지 않는다(시세·뉴스·공시 조회에는 종목 이름·코드만 보낸다).
 import { composeBrief } from '/lib/market-brief.js';
 import { classifyHeadline, relevantTo } from '/lib/market-brief.js';
@@ -13,8 +15,10 @@ import { reviewTrades } from '/lib/trade-review.js';
 import { kstStamp, assetSnapshotFrom } from '/lib/paper-public.js';
 import { marketReasons, marketQuery } from '/lib/market-reasons.js';
 import { privateRead } from '/bridge-client.js';
-import { loadMockAccount, ACCOUNT_LABEL } from '/paper-account-ui.js';
+import { loadMockAccount, mockCached, ACCOUNT_LABEL } from '/paper-account-ui.js';
 import { tip } from '/tooltip-ui.js';
+import { accountSummary } from '/lib/holdings-view.js';
+import { renderHoldings } from '/home-holdings-ui.js';
 import '/demo-ui.js';
 import { stockName } from '/lib/instruments.js';
 
@@ -29,7 +33,6 @@ const toneClass = v => v > 0 ? 'up' : v < 0 ? 'down' : 'flat';
 // 금액: '8,500원' · '1,234만 원' · '1억 230만 원'
 const won = v => { if (!Number.isFinite(v)) return '—'; const a = Math.abs(v), s = v < 0 ? MINUS : ''; if (a < 1e4) return `${s}${Math.round(a).toLocaleString('ko-KR')}원`; const man = Math.round(a / 1e4); if (man < 1e4) return `${s}${man.toLocaleString('ko-KR')}만 원`; const eok = Math.floor(man / 1e4), rest = man % 1e4; return `${s}${eok.toLocaleString('ko-KR')}억${rest ? ` ${rest.toLocaleString('ko-KR')}만` : ''} 원`; };
 const signedWon = v => Number.isFinite(v) ? (v > 0 ? '+' : '') + won(v) : '—';
-const signedUsd = v => Number.isFinite(v) ? `${signOf(v)}$${Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : '—';
 const today = () => koreaDay(Date.now());
 // 날짜는 올해면 'MM-DD', 다른 해면 'YYYY-MM-DD' · 기준 시각은 'MM-DD HH:mm'(한국 시간)
 const day = ymd => !ymd ? '' : String(ymd).slice(0, 4) === today().slice(0, 4) ? String(ymd).slice(5, 10) : String(ymd).slice(0, 10);
@@ -38,13 +41,12 @@ const fundSource = s => String(s || '').replace(/Yahoo Finance( chart API)?/g, '
 // 2026-11-06 핵심 기능만: 검증하지 않은 판단(종목 점수, 원인 결론, 맞았던 방식, 상황 통계, 점검 문구)은 종목 상세에서 뺀다.
 const CORE_ONLY = true;
 
-const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/brief.css?v=home-20261126'; document.head.append(css);
+const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/brief.css?v=home-20261126b'; document.head.append(css);
 
 const root = document.createElement('section'); root.className = 'hm'; root.id = 'report';
 root.innerHTML = `
 <div class="hm-connect" id="hm-connect" hidden>
-  <div class="hm-connect-main"><h2>계좌를 연결하면 내 자산이 여기에 보입니다</h2>
-    <p class="hm-connect-steps">PC 프로그램 실행 → PC 화면에서 연결 번호 받기 → 이 화면에 입력 ${tip("토스 API 키는 내 PC에만 저장됩니다. 처음이면 'PC 프로그램 받기'로 설치하세요. 연결 번호는 PC 화면의 설정 > 내 PC 연결에서 받고, 한 번 입력하면 30일 자동 연결됩니다.")}</p>
+  <div class="hm-connect-main"><h2>계좌 연결 전 ${tip("PC 프로그램 실행 → PC 화면에서 연결 번호 받기 → 이 화면에 입력.\n토스 API 키는 내 PC에만 저장됩니다. 처음이면 'PC 프로그램 받기'로 설치하세요. 연결 번호는 PC 화면의 설정 > 내 PC 연결에서 받고, 한 번 입력하면 30일 자동 연결됩니다.", '연결 순서')}</h2>
     <div class="hm-connect-actions"><button type="button" class="primary" id="hm-connect-go">연결 번호 입력</button><button type="button" class="secondary" data-demo-start>예시 자산으로 둘러보기</button><a class="text-button" href="/downloads/TeamQuant-PC.zip" download>PC 프로그램 받기</a></div>
     <p class="hm-connect-state" id="hm-connect-state" role="status"></p></div>
 </div>
@@ -58,11 +60,11 @@ root.innerHTML = `
   </div>
   <div class="hm-kpis" id="hm-kpis" hidden></div>
 </div>
-<section class="ht" id="home-top" aria-label="지수 대비 수익률과 오늘 시장">
+<div class="hm-left" id="hm-left">
+<section class="ht" id="home-top" aria-label="지수 대비 수익률">
   <article class="ht-card" id="ht-compare"><header><h3>지수 대비 수익률</h3></header><div class="ht-skel shimmer"></div></article>
-  <article class="ht-card" id="ht-market"><header><h3>오늘 시장</h3></header><div class="ht-skel shimmer"></div></article>
-  <section id="hm-tonight" hidden></section>
 </section>
+<section id="hm-tonight" hidden></section>
 <div class="hm-main">
   <details class="hm-card hm-fold" id="hm-trend" hidden>
     <summary><h3>월별 주식 평가액 ${tip('막대: 월말 평가액 · 선: 원금(그때 가진 주식을 산 금액). 막대가 선보다 높으면 이익입니다. 최근 1년 실제 체결로 거꾸로 계산했고 현금은 넣지 않았으며, 달러 종목은 그 달 환율을 씁니다.')}</h3><span class="hm-fold-sum" id="hm-trend-sum"></span></summary>
@@ -74,9 +76,10 @@ root.innerHTML = `
     <div id="hm-grade-body"></div>
   </details>
 </div>
-<aside class="hm-side">
-  <div class="hm-side-head"><h3>보유 종목 ${tip('누르면 오늘 등락 · 투자 지표 · 최근 주가 흐름 · 공시·기사를 봅니다.')}</h3><span id="hm-count"></span></div>
-  <ol id="hm-list" class="hm-list"><li class="hm-empty">계좌를 불러오는 중입니다.</li></ol>
+</div>
+<aside class="hm-right" id="hm-right" aria-label="종목별 수익률과 오늘 시장">
+  <article class="hm-card hh-card" id="hm-holdings" aria-labelledby="hh-title"><header><h3 id="hh-title">종목별 수익률</h3></header><p class="hm-empty">계좌를 불러오는 중입니다.</p></article>
+  <article class="ht-card" id="ht-market"><header><h3>오늘 시장</h3></header><div class="ht-skel shimmer"></div></article>
 </aside>`;
 const dialog = document.createElement('dialog'); dialog.className = 'hm-dialog'; dialog.innerHTML = '<div class="hm-dialog-head"><div><strong id="hm-d-title"></strong><small id="hm-d-sub"></small></div><button type="button" class="text-button" id="hm-d-close">닫기 ✕</button></div><div id="hm-d-body" class="rp"></div>';
 document.body.append(dialog);
@@ -101,18 +104,20 @@ if (!mount()) {
 window.addEventListener('teamquant:page', () => { if (root.isConnected) mount(); });
 
 // 다른 모듈이 홈에 끼워 넣는 카드(규칙 점검 core-ui · 섹터 sector-ui · 실계좌 기록 paper-ui)의 자리를 고정한다.
-// 그 모듈들은 id로 다시 찾아 그리므로 옮겨도 계속 동작한다. 규칙 점검은 맨 위 두 칸 바로 아래 전체 폭, 나머지는 왼쪽 열에서 접힌 카드 다음.
+// 그 모듈들은 id로 다시 찾아 그리므로 옮겨도 계속 동작한다. 왼쪽 열 = 규칙 점검(맨 앞) → 지수 대비(#home-top) → 오늘 밤 주문(#hm-tonight, PC 사본 tonight-ui.js) → 접힌 카드.
+// 좁은 화면의 한 줄 순서는 DOM 이 아니라 brief.css 의 order 가 정한다(왼쪽·오른쪽 열은 display:contents).
 const MAIN_ORDER = ['hm-trend', 'hm-grade', 'home-sectors', 'hm-real'];
 function placeCards() {
-  const main = root.querySelector('.hm-main'), top = root.querySelector('#home-top'), rules = document.getElementById('core-today');
-  if (!main || !top) return;
-  if (rules && root.contains(rules) && top.nextElementSibling !== rules) top.after(rules);
+  const left = root.querySelector('.hm-left'), main = root.querySelector('.hm-main'), top = root.querySelector('#home-top'), rules = document.getElementById('core-today'), tonight = document.getElementById('hm-tonight');
+  if (!left || !main || !top) return;
+  if (rules && root.contains(rules) && left.firstElementChild !== rules) left.prepend(rules);
+  if (tonight && root.contains(tonight) && top.nextElementSibling !== tonight) top.after(tonight);
   const els = MAIN_ORDER.map(id => document.getElementById(id)).filter(el => el && root.contains(el));
   const ordered = els.every((el, i) => el.parentElement === main && (i === 0 || (els[i - 1].compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING)));
   if (!ordered) for (const el of els) main.append(el);
 }
 const placer = new MutationObserver(placeCards);
-for (const node of [root, root.querySelector('.hm-band'), root.querySelector('.hm-main')]) placer.observe(node, { childList: true });
+for (const node of [root, root.querySelector('.hm-band'), root.querySelector('.hm-left'), root.querySelector('.hm-main'), root.querySelector('.hm-right')]) placer.observe(node, { childList: true });
 
 let snapshot = null, briefs = new Map(), epoch = 0, reasons = {}, funds = new Map(), cashInfo = null, history = null, lastTrend = null;
 const fitCache = new Map();
@@ -221,47 +226,84 @@ function finTable(f) {
 const scopeOf = currency => currency === 'USD' ? 'US' : 'KR';
 const nameOf = symbol => snapshot?.positions?.find(p => p.symbol === symbol)?.name || stockName(symbol);
 
-// ── 계좌 띠의 숫자 한 줄: 평가액 · 원금 · 평가 손익 · 오늘 손익 (휴대폰은 평가액과 오늘 손익만) ──
+// ── 계좌 띠(원금 기준, 2026-11-26): 원금 · 총자산(주식 + 현금) · 총 손익(총자산 − 원금) · 이번 달/올해 실현 손익 · 오늘 손익 + 작은 글씨 '평가 손익(보유 중)' ──
+// 원금은 실계좌 기록(PC 프로그램 kis-real-status)이 줄 때만 '원금'이라 부른다. 없으면 지금 가진 주식을 산 금액을 '매입 원가'로 보인다(넣은 돈과 다름).
+// 숫자 계산은 lib/holdings-view.js accountSummary(node 시험).
+const REAL_TTL = 25 * 60e3; // paper-ui.js 실계좌 기록 카드와 같은 간격(읽을 때마다 PC가 증권사를 조회해 기록함)
+const realRec = { at: 0, data: null, job: null };
+/** 실계좌 기록(이 탭 메모리 · 저장하지 않음). 다른 화면이 같은 기록을 다시 묻지 않게 내보낸다. */
+export const homeRealStatus = () => realRec.data;
+function loadRealStatus({ force = false } = {}) {
+  if (!snapshot || snapshot.demo || realRec.job) return;
+  if (!force && realRec.at && Date.now() - realRec.at < REAL_TTL) return;
+  realRec.job = privateRead('kis-real-status').then(s => s && s.readOnly === true ? s : null).catch(() => null).then(s => {
+    realRec.at = Date.now(); realRec.job = null; realRec.data = s;
+    if (snapshot && !snapshot.demo) renderKpis(current());
+  });
+}
+// 홈 스냅샷과 같은 증권사의 기록일 때만 쓴다(토스 스냅샷에 한투 기록의 원금을 붙이지 않게).
+const realFor = snap => { const s = realRec.data; if (!s || !snap || snap.demo) return null; return !s.source || !snap.provider || s.source === snap.provider ? s : null; };
+// 현금: 예시·팀 모의계좌는 스냅샷의 예수금, 실계좌는 기록이 아는 현금(못 읽은 날 제외) → PC에 적어 둔 현금 순서.
+const cashKrwNow = () => {
+  if (snapshot?.demo) return Number.isFinite(snapshot.demoCash) ? snapshot.demoCash : null;
+  const b = realFor(snapshot)?.balance;
+  if (b && b.cashKnown !== false && Number.isFinite(b.cash) && !realRec.data?.markStale) return b.cash;
+  return Number.isFinite(cashInfo?.amount) ? cashInfo.amount : null;
+};
+
 function renderKpis(positions) {
-  // 2026-11-16: 원금·손익·수익률은 holdingsReturn(토스 계좌 합계 = 미국 주식 원금은 산 날 환율). 예전에는 원금도 오늘 환율로 바꿔 달러 기준이 됐다(산 뒤 원화가 강해지면 토스보다 높게 나옴).
-  const R = holdingsReturn(snapshot), value = R.value, cost = R.cost, gain = R.pnl;
+  // 2026-11-16: 평가 손익·수익률은 holdingsReturn(토스 계좌 합계 = 미국 주식 원금은 산 날 환율). 예전에는 원금도 오늘 환율로 바꿔 달러 기준이 됐다(산 뒤 원화가 강해지면 토스보다 높게 나옴).
+  const R = holdingsReturn(snapshot), value = R.value, gain = R.pnl;
+  const kind = snapshot?.paper ? 'paper' : snapshot?.demo ? 'demo' : 'real', real = kind === 'real' ? realFor(snapshot) : null, cashKrw = cashKrwNow();
+  const pub = kind === 'paper' ? mockCached() : null;
+  const S = accountSummary({ kind, holdings: R, cashKrw, real, paper: { principalKrw: pub?.principalKrw ?? null, startTotal: snapshot?.paperMeta?.startTotal ?? pub?.startTotal ?? null }, today: today() });
   const daily = positions.length && positions.every(p => Number.isFinite(p.dailyKrw)) ? positions.reduce((s, p) => s + p.dailyKrw, 0) : NaN;
-  const retTip = R.basis === 'purchase_fx' ? `토스와 같은 계산입니다(평가액은 오늘 환율, 미국 주식 원금은 산 날 환율).${Number.isFinite(R.currentFxPct) ? ` 환율 변화를 빼면 ${pct(R.currentFxPct)}` : ''}${Number.isFinite(R.returnAfterCostPct) ? ` · 팔 때 수수료·세금을 빼면 ${pct(R.returnAfterCostPct)}` : ''} · 현금 제외.`
-    : R.basis === 'current_fx' ? '미국 주식 원금도 산 날 환율을 몰라 오늘 환율로 계산했습니다. 그래서 산 뒤 환율 변화(환차익·환차손)는 빠져 있습니다.' : '지금 가진 주식의 평가액에서 원금을 뺀 값입니다(현금 제외).';
-  const costTip = snapshot?.paper ? '팀 모의계좌가 지금 가진 주식을 산 금액(가상 돈)입니다.' : `지금 가진 주식을 산 금액입니다.${R.basis === 'purchase_fx' ? ' 미국 주식은 산 날 환율로 셉니다.' : R.basis === 'current_fx' ? ' 미국 주식은 오늘 환율로 바꿨습니다.' : ''}`;
+  const retTip = R.basis === 'purchase_fx' ? `지금 가진 주식의 평가액 − 산 금액입니다. 토스와 같은 계산입니다(평가액은 오늘 환율, 미국 주식 원금은 산 날 환율).${Number.isFinite(R.currentFxPct) ? ` 환율 변화를 빼면 ${pct(R.currentFxPct)}` : ''}${Number.isFinite(R.returnAfterCostPct) ? ` · 팔 때 수수료·세금을 빼면 ${pct(R.returnAfterCostPct)}` : ''} · 판 종목과 현금 제외.`
+    : R.basis === 'current_fx' ? '지금 가진 주식의 평가액 − 산 금액입니다. 미국 주식은 산 날 환율을 몰라 오늘 환율로 계산해 산 뒤 환율 변화(환차익·환차손)가 빠져 있습니다.' : '지금 가진 주식의 평가액 − 산 금액입니다(판 종목과 현금 제외).';
+  const costTip = `${snapshot?.paper ? '팀 모의계좌가 지금 가진 주식을 산 금액입니다.' : `지금 가진 주식을 산 금액입니다.${R.basis === 'purchase_fx' ? ' 미국 주식은 산 날 환율로 셉니다.' : R.basis === 'current_fx' ? ' 미국 주식은 오늘 환율로 바꿨습니다.' : ''}`} 계좌에 넣은 돈(원금)과는 다릅니다${kind === 'real' ? '. PC 프로그램의 실계좌 기록이 있으면 원금으로 바뀝니다' : ''}.`;
   // 종목별 오늘 손익이 없으면(팀 모의계좌 등) 시세를 받은 종목만 비중대로 합친다. 일부만 받았으면 'N/M종목'을 붙인다.
   const done = positions.map(p => ({ p, b: briefs.get(p.symbol) })).filter(x => x.b?.available && Number.isFinite(x.b.price?.dayReturn) && x.p.valueKrw > 0);
   const doneValue = done.reduce((s, x) => s + x.p.valueKrw, 0);
   let dayAmt = null, dayPct = null, dayNote = '';
+  // 팀 모의계좌 공개 기록이 오늘 것이 아니면 보유는 그날 기준이라고 적는다(2026-11-27 점검: 11-16 보유에 오늘 등락을 곱한 값이 오늘 계좌 손익처럼 읽힘).
+  const pm = kind === 'paper' ? (snapshot?.paperMeta || {}) : {}, pDay = !pm.live && Number.isFinite(Date.parse(pm.asOf || '')) ? koreaDay(Date.parse(pm.asOf)) : '', heldOn = pDay && pDay !== today() ? pDay : '';
   if (Number.isFinite(daily)) { dayAmt = daily; dayPct = value - daily ? daily / (value - daily) * 100 : null; }
   else if (doneValue > 0) {
     dayPct = done.reduce((s, x) => s + x.p.valueKrw / doneValue * x.b.price.dayReturn, 0);
     dayAmt = done.reduce((s, x) => s + x.p.valueKrw * (x.b.price.dayReturn / 100) / (1 + x.b.price.dayReturn / 100), 0);
-    dayNote = `${done.length < positions.length ? ` (${done.length}/${positions.length}종목)` : ''}${tip('종목별 최근 거래일 등락을 보유 비중대로 합친 값입니다.')}`;
+    // 2026-11-27 보완 2: '(MM-DD 보유 기준)' 괄호 메모는 바로 옆 ⓘ 와 같은 말이라 뺐다(그 날짜는 ⓘ 안에 그대로 있다).
+    dayNote = `${done.length < positions.length ? ` <small>(${done.length}/${positions.length}종목)</small>` : ''}${tip(`종목별 최근 거래일 등락(전날 종가 대비)을 보유 비중대로 합친 값입니다.${heldOn ? ` 보유 종목·수량은 ${day(heldOn)}에 공개된 팀 기록 기준이라 지금 팀 모의계좌와 다를 수 있습니다.` : ''}`)}`;
   }
-  const item = (cls, label, valueHtml, sub = '') => `<span class="hm-kpi ${cls}"><span>${label}</span> <b class="${valueHtml.tone || ''}">${esc(valueHtml.text)}</b>${sub}</span>`;
-  $('#hm-kpis').innerHTML = [
-    item('k-value', '평가액', { text: won(value) }, cashInfo ? ` <small>현금 포함 ${esc(won(value + cashInfo.amount))}</small>` : ''),
-    item('k-cost', `원금 ${tip(costTip)}`, { text: won(cost) }),
-    item('k-gain', `평가 손익 ${tip(retTip)}`, { text: signedWon(gain), tone: toneClass(gain) }, Number.isFinite(R.returnPct) ? ` <small class="${toneClass(R.returnPct)}">${pct(R.returnPct)}</small>` : ''),
-    dayAmt === null ? item('k-day', '오늘 손익', { text: positions.length ? '계산 중…' : '—' }) : item('k-day', '오늘 손익', { text: signedWon(dayAmt), tone: toneClass(dayAmt) }, `${Number.isFinite(dayPct) ? ` <small class="${toneClass(dayPct)}">${pct(dayPct)}</small>` : ''}${dayNote}`)
-  ].join('');
+  const item = (cls, label, text, t = '', sub = '') => `<div class="hm-kpi ${cls}"><span class="hm-kpi-l">${label}</span><span class="hm-kpi-v"><b class="${t}">${esc(text)}</b>${sub}</span></div>`;
+  const small = v => Number.isFinite(v) ? ` <small class="${toneClass(v)}">${pct(v)}</small>` : '';
+  const P = S.principal, A = S.assets, src = real?.label || '증권사';
+  const range = (since, asOf) => [since ? `${day(since)}부터` : '', asOf ? `${day(asOf)} 기준` : ''].filter(Boolean).join(' · ');
+  // 거래내역 원금이 덜 세졌거나(다른 증권사에서 옮겨 온 주식 금액 모름 등) 마지막 읽기가 실패했으면 그대로 말한다(2026-11-26 검토).
+  const readAt = P?.method === 'transactions' && P.asOf && Number.isFinite(Date.parse(P.asOf)) ? stamp(P.asOf) : '';
+  const pGap = P?.method !== 'transactions' ? '' : `${P.complete === false ? ` 금액을 모르는 거래${P.unknownCount ? ` ${P.unknownCount}건` : ''}(다른 증권사에서 옮겨 온 주식 등)이 빠져 실제 넣은 돈과 다를 수 있고, 그만큼 총 손익도 틀릴 수 있습니다.` : ''}${P.fetchError ? ' 최근 거래내역 읽기에 실패해 마지막으로 읽은 내역 기준입니다.' : ''}${readAt ? ` 거래내역을 읽은 때: ${readAt}.` : ''}`;
+  const pTip = !P ? '' : P.method === 'transactions' ? `${src} 입출금 내역으로 센 넣은 돈 − 뺀 돈입니다${Number.isFinite(P.deposits) ? `(입금 ${won(P.deposits)}${Number.isFinite(P.withdrawals) ? ` · 출금 ${won(P.withdrawals)}` : ''})` : ''}.${P.since ? ` ${day(P.since)}부터.` : ''}${pGap}`
+    : P.method === 'estimated' ? `입출금 내역이 아니라 날마다 기록한 총자산의 변화로 넣고 뺀 돈을 추정했습니다. 실제로 넣은 돈과 다를 수 있습니다.${range(P.since, P.asOf) ? ` ${range(P.since, P.asOf)}.` : ''}`
+    : P.method === 'paper' ? '모의계좌를 열 때 받은 예수금입니다.' : P.method === 'paper-start' ? '처음 기록한 총자산입니다.' : '예시 현금과 예시 종목을 산 금액을 더한 값입니다.';
+  const pLabel = !P ? '' : P.method === 'transactions' ? (P.complete === false ? '원금(일부 모름)' : '원금(입출금 기준)') : P.method === 'estimated' ? '원금(추정)' : P.method === 'demo' ? '원금(예시)' : '원금';
+  const aTip = A.cashKnown ? `주식 ${won(A.stockKrw)} + 현금 ${won(A.cashKrw)}${A.from === 'record' ? ` · 실계좌 기록${real?.asOf ? ` ${stamp(real.asOf)}` : ''} 기준` : cashInfo?.note && !snapshot?.demo ? ` · 현금: ${cashInfo.note}` : ''}.` : '현금을 몰라 주식 평가액만 셉니다. 규칙 화면에서 현금을 적으면 총자산이 됩니다.';
+  const items = [];
+  if (P) items.push(item('k-principal', `${pLabel} ${tip(pTip)}`, won(P.krw)));
+  else items.push(item('k-cost', `매입 원가 ${tip(costTip)}`, won(S.costKrw)));
+  items.push(item('k-assets', `${A.cashKnown ? '총자산' : '주식 평가액'} ${tip(aTip)}`, won(A.krw)));
+  if (S.totalPnl) items.push(item('k-total', `총 손익 ${tip(`총자산 − ${pLabel}입니다. 판 종목에서 확정된 손익(실현)과 지금 가진 종목의 손익(평가)이 모두 들어 있습니다.${S.totalPnl.from === 'record' && real?.returns?.asOf ? ` ${day(real.returns.asOf)} 기록 기준.` : ''}`)}`, signedWon(S.totalPnl.krw), toneClass(S.totalPnl.krw), small(S.totalPnl.pct)));
+  else items.push(item('k-gain', `평가 손익(보유 중) ${tip(retTip)}`, signedWon(gain), toneClass(gain), small(R.returnPct)));
+  if (S.realized) items.push(item('k-realized', `실현 손익${S.realized.unknownSells ? ' <small>(일부 매도 제외)</small>' : ''} ${tip(`판 종목에서 확정된 손익입니다.${S.realized.unknownSells ? ` 산 값을 몰라 매도 ${S.realized.unknownSells}건은 넣지 않았습니다.` : ''}${range(S.realized.since, S.realized.asOf) ? ` ${range(S.realized.since, S.realized.asOf)}.` : ''}`)}`, `이번 달 ${signedWon(S.realized.month)}`, toneClass(S.realized.month), ` <small class="${toneClass(S.realized.year)}">올해 ${esc(signedWon(S.realized.year))}</small>`));
+  items.push(dayAmt === null ? item('k-day', '오늘 손익', positions.length ? '계산 중…' : '—') : item('k-day', '오늘 손익', signedWon(dayAmt), toneClass(dayAmt), `${small(dayPct)}${dayNote}`));
+  if (S.totalPnl) items.push(item('k-gain hm-kpi-minor', `평가 손익(보유 중) ${tip(retTip)}`, signedWon(gain), toneClass(gain), small(R.returnPct)));
+  $('#hm-kpis').innerHTML = items.join('');
 }
 
-// ── 보유 종목(오른쪽): 한 칸 세 줄 — 이름·오늘 등락 / 평가액·수익률(손익) / 비중 ──
-function renderList(positions) {
-  const list = [...positions].sort((a, b) => (b.valueKrw || 0) - (a.valueKrw || 0));
-  $('#hm-count').textContent = list.length ? `${list.length}종목` : '';
-  $('#hm-list').innerHTML = list.map((p, i) => {
-    const b = briefs.get(p.symbol), dayRet = b?.available ? b.price.dayReturn : null, isUsd = p.currency === 'USD';
-    const gain = Number.isFinite(p.pnl) ? (isUsd ? signedUsd(p.pnl) : signedWon(p.pnl)) : '';
-    return `<li style="--i:${i}"><button type="button" data-symbol="${esc(p.symbol)}">
-      <span class="hm-row"><strong>${esc(p.name)}</strong><span class="hm-day ${toneClass(dayRet)}">${dayRet === null ? '' : `오늘 ${pct(dayRet)}`}</span></span>
-      <span class="hm-row hm-sub"><span>${won(p.valueKrw)}</span><span class="${toneClass(p.returnPct)}">수익률${isUsd ? '(환율 제외)' : ''} ${pct(p.returnPct)}${gain ? ` (${gain})` : ''}</span></span>
-      <span class="hm-row hm-sub"><span>비중 ${Number.isFinite(p.weightPct) ? p.weightPct.toFixed(0) + '%' : '—'}</span></span>
-    </button></li>`;
-  }).join('') || '<li class="hm-empty">보유 주식이 없습니다.</li>';
-  $('#hm-list').querySelectorAll('button[data-symbol]').forEach(btn => btn.onclick = () => openDetail(btn.dataset.symbol));
+// ── 종목별 수익률(오른쪽 맨 위 · home-holdings-ui.js): 같은 보유 스냅샷 · 오늘 등락은 증권사 값 → 시세(전날 종가 대비) ──
+function drawHoldings() {
+  const host = $('#hm-holdings'); if (!host) return;
+  if (!snapshot?.positions) { renderHoldings(host, 'none'); return; }
+  const dayPct = {}; for (const [s, b] of briefs) if (b?.available && Number.isFinite(b.price?.dayReturn)) dayPct[s] = b.price.dayReturn;
+  renderHoldings(host, 'ok', { positions: snapshot.positions, fxRate: snapshot.fx?.midRate ?? null, cashKrw: cashKrwNow(), dayPct, total: holdingsReturn(snapshot), asOf: stamp(snapshot.fetchedAt), won, signedWon });
 }
 
 
@@ -442,8 +484,8 @@ async function loadBriefs(positions, run, signal) {
       briefs.set(p.symbol, { name: p.name, symbol: p.symbol, available: false, headline: `시세를 가져오지 못했습니다(${e.message}).` });
     }
   });
-  for (let k = 0; k < tasks.length; k += 3) { await Promise.all(tasks.slice(k, k + 3).map(t => t())); if (run !== epoch) return; renderList(positions); renderKpis(positions); }
-  renderList(positions); renderKpis(positions);
+  for (let k = 0; k < tasks.length; k += 3) { await Promise.all(tasks.slice(k, k + 3).map(t => t())); if (run !== epoch) return; drawHoldings(); renderKpis(positions); }
+  drawHoldings(); renderKpis(positions);
 }
 
 function current() {
@@ -461,7 +503,7 @@ async function build() {
   briefs = new Map(); history = null; lastTrend = null; announceHistory();
   const positions = current();
   document.querySelector('#overview')?.classList.add('hm-loaded');
-  renderKpis(positions); renderList(positions);
+  renderKpis(positions); drawHoldings(); loadRealStatus();
   for (const id of ['#hm-trend', '#hm-grade']) $(id).hidden = true; // 자료가 올 때까지 자리를 차지하지 않는다
   for (const id of ['#hm-trend-sum', '#hm-grade-sum', '#hm-trend-note']) $(id).replaceChildren();
   $('#hm-trend-chart').innerHTML = '<div class="shimmer hm-chart-skel"></div>'; $('#hm-grade-body').innerHTML = '<div class="shimmer rp-line"></div><div class="shimmer rp-line short"></div>';
@@ -470,22 +512,27 @@ async function build() {
   await Promise.allSettled([loadBriefs(positions, run, controller.signal), loadHistory(positions, run, controller.signal)]);
 }
 
-window.addEventListener('teamquant:asset-snapshot', e => { snapshot = e.detail; void build(); });
+// 계좌 종류가 바뀌면(팀 모의계좌 → 실계좌 등) 앞 계좌의 현금·실계좌 기록을 쓰지 않는다. 팀 모의계좌는 스냅샷 뒤에 현금을 다시 보낸다.
+const kindOfSnap = s => !s ? 'none' : s.paper ? 'paper' : s.demo ? 'demo' : 'real';
+window.addEventListener('teamquant:asset-snapshot', e => {
+  if (snapshot && kindOfSnap(e.detail) !== kindOfSnap(snapshot)) { cashInfo = null; Object.assign(realRec, { at: 0, data: null }); }
+  snapshot = e.detail; void build();
+});
 window.addEventListener('teamquant:asset-clear', () => {
-  epoch++; build.controller?.abort(); snapshot = null; briefs = new Map(); cashInfo = null; series.clear(); history = null; lastTrend = null; announceHistory();
+  epoch++; build.controller?.abort(); snapshot = null; briefs = new Map(); cashInfo = null; series.clear(); history = null; lastTrend = null; Object.assign(realRec, { at: 0, data: null }); announceHistory();
   document.querySelector('#overview')?.classList.remove('hm-loaded'); if (dialog.open) dialog.close();
-  $('#hm-list').innerHTML = '<li class="hm-empty">화면의 자산 정보를 지웠습니다.</li>'; $('#hm-count').textContent = '';
+  renderHoldings($('#hm-holdings'), 'clear');
   for (const id of ['#hm-trend', '#hm-grade']) $(id).hidden = true;
   for (const id of ['#hm-trend-chart', '#hm-trend-note', '#hm-trend-sum', '#hm-grade-body', '#hm-grade-sum', '#hm-kpis']) $(id).replaceChildren();
 });
 
 window.addEventListener('teamquant:open-stock', e => { const s = e.detail?.symbol; if (s) void openDetail(s); });
-window.addEventListener('teamquant:cash', e => { cashInfo = e.detail; if (snapshot) renderKpis(current()); });
+window.addEventListener('teamquant:cash', e => { cashInfo = e.detail; if (snapshot) { renderKpis(current()); drawHoldings(); } });
 
 // ── 연결 상태와 계좌 띠: 계좌가 없으면 빈 화면 대신 연결 안내와 예시 둘러보기를 보여 준다 ──
 let connection = 'unknown';
 // 팀 모의계좌 ⓘ: 진행 상태 · 투자 비중 · 마지막 자동 주문(절대 날짜, 한국 시간)까지 한 번에 보여 준다. 진행 상태는 lib/paper-public.js runState 가 정한다.
-function paperText(m, at) { const ret = m.startTotal > 0 && m.total > 0 ? (m.total / m.startTotal - 1) * 100 : null; const inv = Number.isFinite(m.investedPct) ? ` · 투자 비중 ${m.investedPct.toFixed(0)}%${Number.isFinite(m.planInvestedPct) ? ` (계획 ${m.planInvestedPct.toFixed(0)}%)` : ''}` : ''; return `팀 모의계좌${m.run?.label ? ` · ${m.run.label}` : ''} · 가상 1억 원 · ${m.days || 0}일째${m.since ? ` (${day(m.since)}부터)` : ''}${ret === null ? '' : ` · 원금 대비 ${pct(ret)}(원금 = 처음 기록한 총자산)`}${inv}${m.lastAutoAt ? ` · 마지막 자동 주문 ${stamp(m.lastAutoAt)}` : ''} · ${m.live ? '실시간' : '하루 1번 공개'} ${stamp(at)} 기준 · 실계좌를 연결하면 그 자료로 바뀝니다.`; }
+function paperText(m, at) { const inv = Number.isFinite(m.investedPct) ? ` · 투자 비중 ${m.investedPct.toFixed(0)}%${Number.isFinite(m.planInvestedPct) ? ` (계획 ${m.planInvestedPct.toFixed(0)}%)` : ''}` : ''; return `팀 모의계좌${m.run?.label ? ` · ${m.run.label}` : ''} · 시작 1억 원 · ${m.days || 0}일째${m.since ? ` (${day(m.since)}부터)` : ''}${inv}${m.lastAutoAt ? ` · 마지막 자동 주문 ${stamp(m.lastAutoAt)}` : ''} · ${m.live ? '실시간' : '하루 1번 공개'} ${stamp(at)} 기준 · 실계좌를 연결하면 그 자료로 바뀝니다.`; }
 function syncState() {
   const none = !snapshot && connection === 'error';
   $('#hm-connect').hidden = !none; root.classList.toggle('hm-state-connect', none);
@@ -494,7 +541,7 @@ function syncState() {
   const acct = $('#hm-acct'); acct.hidden = kind === 'demo' || kind === 'paper';
   if (kind === 'none') acct.textContent = '계좌 확인 중…';
   if (kind === 'real') { const old = snapshot.provenance?.kind === 'saved_observation'; acct.innerHTML = `<b>${ACCOUNT_LABEL.real}</b> · ${old ? '마지막 조회 ' : ''}${esc(stamp(snapshot.fetchedAt))} 기준${old ? ' · 최신 조회 실패' : ''}`; }
-  if (kind === 'paper') { const m = snapshot.paperMeta || {}, ret = m.startTotal > 0 && m.total > 0 ? (m.total / m.startTotal - 1) * 100 : null; $('#hm-paper-text').innerHTML = `${m.days ? ` · ${m.days}일째` : ''}${ret === null ? '' : ` · 원금 대비 <b class="${toneClass(ret)}">${pct(ret)}</b>`} · ${esc(stamp(m.asOf || snapshot.fetchedAt))} 기준 ${tip(paperText(m, snapshot.fetchedAt))}`; }
+  if (kind === 'paper') { const m = snapshot.paperMeta || {}; $('#hm-paper-text').innerHTML = `${m.days ? ` · ${m.days}일째` : ''} · ${esc(stamp(m.asOf || snapshot.fetchedAt))} 기준 ${tip(paperText(m, snapshot.fetchedAt))}`; }
   $('#hm-refresh').hidden = !(kind === 'real' || kind === 'paper');
   $('#hm-kpis').hidden = !snapshot;
   if (none) $('#hm-connect-state').textContent = document.querySelector('#toss-status')?.textContent || '';
@@ -506,7 +553,7 @@ const refreshBtn = $('#hm-refresh'), bandMsg = $('#hm-band-msg');
 function setRefreshing(on) { refreshBtn.disabled = on; refreshBtn.textContent = on ? '새로고침 중…' : '새로고침'; }
 refreshBtn.onclick = async () => {
   bandMsg.textContent = '';
-  if (!snapshot?.paper) { const t = document.querySelector('#toss-refresh'); if (t && !t.disabled) t.click(); return; }
+  if (!snapshot?.paper) { const t = document.querySelector('#toss-refresh'); if (t && !t.disabled) { realRec.at = 0; t.click(); } return; } // 실계좌 기록(원금)도 다음 스냅샷 때 다시 읽는다
   if (paperBusy) return; paperBusy = true; setRefreshing(true);
   try {
     const snap = assetSnapshotFrom(await loadMockAccount({ fresh: true, maxAge: 0 }));
@@ -519,5 +566,5 @@ window.addEventListener('teamquant:connection', e => { connection = e.detail?.st
 window.addEventListener('teamquant:asset-snapshot', syncState);
 window.addEventListener('teamquant:asset-clear', () => { connection = 'error'; syncState(); });
 
-// 홈 맨 위 두 칸(지수 대비 수익률 · 오늘 시장)은 따로 그린다. 홈 뼈대(.hm)가 생긴 뒤에 붙는다.
+// 지수 대비 수익률(왼쪽) · 오늘 시장(오른쪽)은 home-top-ui.js 가 id 로 찾아 그린다. 홈 뼈대(.hm)가 생긴 뒤에 붙는다.
 import('/home-top-ui.js').catch(() => { for (const id of ['#ht-compare', '#ht-market']) { const c = $(id); if (c) c.hidden = true; } });
