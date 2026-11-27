@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T01:27:37.492Z",
+ "updatedAt": "2026-11-27T01:47:20.347Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,12 +10,11 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 4798.55,
-   "change": 1.85,
+   "last": 4800.18017578125,
+   "change": 1.89,
    "z": 0.6,
-   "sd": 3.0283318709427105,
-   "source": "네이버 현재가",
-   "live": true,
+   "sd": 3.0263724756554877,
+   "source": "Yahoo",
    "checked": true
   },
   {
@@ -24,10 +23,10 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 690.39,
-   "change": 5.29,
-   "z": 1.8,
-   "sd": 2.871767536413246,
+   "last": 693.22,
+   "change": 5.72,
+   "z": 2,
+   "sd": 2.8750514650474877,
    "source": "네이버 현재가",
    "live": true,
    "checked": true
@@ -64,8 +63,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1341.97998046875,
-   "change": -0.07,
+   "last": 1342.5400390625,
+   "change": -0.03,
    "z": -0.1,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
@@ -76,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 85.27999877929688,
-   "change": 1.91,
+   "last": 85.41999816894531,
+   "change": 2.08,
    "z": 0.7,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -88,9 +87,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3595.199951171875,
-   "change": 1.68,
-   "z": 1.1,
+   "last": 3600.199951171875,
+   "change": 1.82,
+   "z": 1.2,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -121,20 +120,20 @@
   }
  ],
  "spikes": {
-  "war": 1.8,
+  "war": 1.4,
   "politics": 0.7,
-  "rates": 1.6,
+  "rates": 1.3,
   "trade": 1.6,
   "fx": -0.2,
-  "energy": 2.1,
+  "energy": 2.3,
   "market": 0.8,
   "credit": 0.4,
   "disaster": 0,
-  "policy": 0.4
+  "policy": 0.2
  },
  "rates": {
   "war": {
-   "rate": 3.6,
+   "rate": 3.1,
    "saturated": 0,
    "queries": 3
   },
@@ -144,7 +143,7 @@
    "queries": 3
   },
   "rates": {
-   "rate": 5.6,
+   "rate": 5,
    "saturated": 1,
    "queries": 3
   },
@@ -159,8 +158,8 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6.3,
-   "saturated": 0,
+   "rate": 6.7,
+   "saturated": 1,
    "queries": 1
   },
   "market": {
@@ -179,7 +178,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 2.3,
+   "rate": 2,
    "saturated": 0,
    "queries": 1
   }
@@ -228,80 +227,79 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 58,
-    "spike": 2.1,
+    "score": 61,
+    "spike": 2.3,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.68,
+     "change": 1.82,
      "unit": "%",
-     "z": 1.1,
+     "z": 1.2,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '원유 공급 차질'",
-     "금 +1.68%"
+     "금 +1.82%"
     ]
    }
   },
   {
-   "id": "1odb41r",
-   "title": "금융위, 30일 시장안정 점검회의…10조 증안펀드 확대할까?",
-   "firstSeen": "2026-11-26T08:08:00.000Z",
-   "lastSeen": "2026-11-26T10:00:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "xao6m6",
+   "title": "[속보] 코스닥 장중 5% 급등‥'매수 사이드카' 발동",
+   "firstSeen": "2026-11-27T01:25:00.000Z",
+   "lastSeen": "2026-11-27T01:46:00.000Z",
+   "count": 12,
+   "sources": 12,
    "topics": [
-    "market",
-    "policy"
+    "market"
    ],
    "critical": [
-    "rates"
+    "market"
    ],
    "links": [
     {
-     "title": "금융위, 30일 금융권 긴급 점검회의…10조원대 증안펀드 가동 논의",
-     "link": "https://www.dt.co.kr/article/12097541?ref=naver",
-     "host": "dt.co.kr",
-     "at": "2026-11-26T10:00:00.000Z"
+     "title": "코스닥 5%대 급등에 매수 사이드카 발동",
+     "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316583",
+     "host": "jeonmae.co.kr",
+     "at": "2026-11-27T01:46:00.000Z"
     },
     {
-     "title": "금융위, 증시 급락에 긴급회의…증안펀드 윤곽 나오나",
-     "link": "https://www.dailian.co.kr/news/view/1720286/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-26T08:41:00.000Z"
+     "title": "코스닥 '5%대 급등' 매수 사이드카…코스피도 상승폭 키워",
+     "link": "https://www.nocutnews.co.kr/news/6613578?utm_source=naver&utm_medium=article&utm_campaign=20261127104336",
+     "host": "nocutnews.co.kr",
+     "at": "2026-11-27T01:44:00.000Z"
     },
     {
-     "title": "금융위, 내주 금융권 긴급 소집 추진…증안펀드 가동 논의할 듯",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026112617184807347",
-     "host": "newsway.co.kr",
-     "at": "2026-11-26T08:30:00.000Z"
+     "title": "코스닥, 외국인 매수세에 5%대 상승···매수 사이드카 발동",
+     "link": "http://www.finomy.com/news/articleView.html?idxno=268129",
+     "host": "finomy.com",
+     "at": "2026-11-27T01:40:00.000Z"
     },
     {
-     "title": "금융위, 30일 금융권 긴급 점검회의…10조원대 증안펀드 준비 속도",
-     "link": "https://biz.chosun.com/stock/stock_general/2026/11/26/FZGNIRCOIRHVVEDWS63QA3YRBM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-26T08:30:00.000Z"
+     "title": "코스닥 매수 사이드카…장중 급반등·690 회복",
+     "link": "https://www.mt.co.kr/stock/2026/11/27/2026112710330974009",
+     "host": "mt.co.kr",
+     "at": "2026-11-27T01:40:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 46,
+    "score": 51,
     "spike": 0.8,
     "news": true,
     "reaction": {
-     "symbol": "^TNX",
-     "label": "미국 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1,
-     "date": "2026-11-25"
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.89,
+     "unit": "%",
+     "z": 0.6,
+     "date": "2026-11-27"
     },
     "why": [
-     "큰 사건 단어 '긴급회의'",
-     "미국 10년 금리 −0.06%p"
+     "큰 사건 단어 '사이드카'",
+     "코스피 +1.89%"
     ]
    }
   },
@@ -329,169 +327,62 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 46,
-    "spike": 2.1,
+    "score": 49,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.68,
+     "change": 1.82,
      "unit": "%",
-     "z": 1.1,
+     "z": 1.2,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +1.68%"
+     "금 +1.82%"
     ]
    }
   },
   {
-   "id": "1acxoeo",
-   "title": "[시론] 트럼프에게 고마운 이유",
-   "firstSeen": "2026-11-26T19:20:00.000Z",
-   "lastSeen": "2026-11-26T22:11:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "id": "4p3hc7",
+   "title": "금융위, 증시 급락에 긴급회의…증안펀드 윤곽 나오나",
+   "firstSeen": "2026-11-26T08:41:00.000Z",
+   "lastSeen": "2026-11-26T08:41:00.000Z",
+   "count": 1,
+   "sources": 1,
    "topics": [
-    "politics",
-    "trade"
+    "market",
+    "policy"
    ],
    "critical": [
-    "trade"
+    "rates"
    ],
    "links": [
     {
-     "title": "‘블프’ 직전 관세폭탄 날린 트럼프…“최악 시기” 평가받는 이유",
-     "link": "https://www.joongang.co.kr/article/25482486",
-     "host": "joongang.co.kr",
-     "at": "2026-11-26T22:11:00.000Z"
-    },
-    {
-     "title": "[시론] 트럼프에게 고마운 이유",
-     "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611251818457160664",
-     "host": "dnews.co.kr",
-     "at": "2026-11-26T19:20:00.000Z"
+     "title": "금융위, 증시 급락에 긴급회의…증안펀드 윤곽 나오나",
+     "link": "https://www.dailian.co.kr/news/view/1720286/?sc=Naver",
+     "host": "dailian.co.kr",
+     "at": "2026-11-26T08:41:00.000Z"
     }
    ],
    "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 44,
-    "spike": 1.6,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.85,
-     "unit": "%",
-     "z": 0.6,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '관세폭탄'",
-     "코스피 +1.85%"
-    ]
-   }
-  },
-  {
-   "id": "27n60f",
-   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-   "firstSeen": "2026-11-26T01:47:00.000Z",
-   "lastSeen": "2026-11-27T00:14:00.000Z",
-   "count": 3,
-   "sources": 3,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "war",
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "한병도 민주당 원내대표 \"조희대 탄핵 흔들림 없이 추진“",
-     "link": "http://www.breaknews.com/1254538",
-     "host": "breaknews.com",
-     "at": "2026-11-27T00:14:00.000Z"
-    },
-    {
-     "title": "박용진, 조희대 탄핵 추진에 “실익 없어…민주당 책임으로 돌아와”",
-     "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
-     "host": "biz.heraldcorp.com",
-     "at": "2026-11-26T02:16:00.000Z"
-    },
-    {
-     "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-     "link": "https://www.mk.co.kr/article/12219128",
-     "host": "mk.co.kr",
-     "at": "2026-11-26T01:47:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 41,
-    "spike": 0.7,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 1.68,
-     "unit": "%",
-     "z": 1.1,
-     "date": "2026-11-26"
-    },
-    "why": [
-     "큰 사건 단어 '계엄'",
-     "금 +1.68%"
-    ]
-   }
-  },
-  {
-   "id": "1axxnqz",
-   "title": "이틀에 한 번 울린 '사이드카'... 도입 30년 '증시 안전판' 효용성 도마...",
-   "firstSeen": "2026-11-26T01:32:00.000Z",
-   "lastSeen": "2026-11-26T20:30:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[기자수첩]102번 울린 사이드카, 시장 지켰나",
-     "link": "https://www.mt.co.kr/opinion/2026/11/27/2026112512075092447",
-     "host": "mt.co.kr",
-     "at": "2026-11-26T20:30:00.000Z"
-    },
-    {
-     "title": "이틀에 한 번 울린 '사이드카'... 도입 30년 '증시 안전판' 효용성 도마...",
-     "link": "https://www.lawtv.kr/news/articleView.html?idxno=61531",
-     "host": "lawtv.kr",
-     "at": "2026-11-26T01:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 37,
+    "level": "watch",
+    "label": "참고",
+    "score": 34,
     "spike": 0.8,
-    "news": true,
+    "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.85,
-     "unit": "%",
-     "z": 0.6,
-     "date": "2026-11-27"
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
     },
     "why": [
-     "큰 사건 단어 '사이드카'",
-     "코스피 +1.85%"
+     "큰 사건 단어 '긴급회의'",
+     "미국 10년 금리 −0.06%p"
     ]
    }
   },
@@ -525,14 +416,14 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 1.85,
+     "change": 1.89,
      "unit": "%",
      "z": 0.6,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +1.85%"
+     "코스피 +1.89%"
     ]
    }
   },
@@ -566,14 +457,55 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 1.85,
+     "change": 1.89,
      "unit": "%",
      "z": 0.6,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +1.85%"
+     "코스피 +1.89%"
+    ]
+   }
+  },
+  {
+   "id": "1axxnqz",
+   "title": "[기자수첩]102번 울린 사이드카, 시장 지켰나",
+   "firstSeen": "2026-11-26T01:32:00.000Z",
+   "lastSeen": "2026-11-26T20:30:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[기자수첩]102번 울린 사이드카, 시장 지켰나",
+     "link": "https://www.mt.co.kr/opinion/2026/11/27/2026112512075092447",
+     "host": "mt.co.kr",
+     "at": "2026-11-26T20:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 34,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.89,
+     "unit": "%",
+     "z": 0.6,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '사이드카'",
+     "코스피 +1.89%"
     ]
    }
   },
@@ -607,29 +539,41 @@
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 1.85,
+     "change": 1.89,
      "unit": "%",
      "z": 0.6,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '쿠데타'",
-     "코스피 +1.85%"
+     "코스피 +1.89%"
     ]
    }
   },
   {
    "id": "1q4q4oi",
-   "title": "깜짝성장·물가압력 선제 대응…한은, 기준금리 3.25%로 인상",
+   "title": "반도체 호황·물가 부담에… 한은, 기준금리 3.25%로 인상 外 [오늘의 주...",
    "firstSeen": "2026-11-26T02:16:00.000Z",
-   "lastSeen": "2026-11-27T01:01:00.000Z",
-   "count": 13,
-   "sources": 13,
+   "lastSeen": "2026-11-27T01:32:00.000Z",
+   "count": 15,
+   "sources": 15,
    "topics": [
     "rates"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "한은, 기준금리 3.25%로 인상…내년 성장률 전망 4.1%로 상향",
+     "link": "https://www.dailyt.co.kr/newsView/dlt202611270019",
+     "host": "dailyt.co.kr",
+     "at": "2026-11-27T01:32:00.000Z"
+    },
+    {
+     "title": "[분석] 기준금리 인상 속 동결 소수의견 부각...최종금리 3.50% 수렴 전망",
+     "link": "https://www.mdtoday.co.kr/news/articleView.html?idxno=628108",
+     "host": "mdtoday.co.kr",
+     "at": "2026-11-27T01:30:00.000Z"
+    },
     {
      "title": "한은, 석 달 만에 기준금리 3.25%로 인상…긴축 장기화 전망",
      "link": "https://www.sedaily.com/article/20119706?ref=naver",
@@ -641,25 +585,13 @@
      "link": "https://www.ddaily.co.kr/page/view/2026112617513410978",
      "host": "ddaily.co.kr",
      "at": "2026-11-26T21:01:00.000Z"
-    },
-    {
-     "title": "한은 기준금리 0.25%포인트 인상…내년 성장률 전망 4.1%",
-     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3764702",
-     "host": "gukjenews.com",
-     "at": "2026-11-26T16:24:00.000Z"
-    },
-    {
-     "title": "한국은행 기준금리 3.25%로 인상…하반기에만 세번째",
-     "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1073739",
-     "host": "ksilbo.co.kr",
-     "at": "2026-11-26T15:04:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 33,
-    "spike": 1.6,
+    "score": 30,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -676,11 +608,11 @@
   },
   {
    "id": "b0frsx",
-   "title": "차기 ECB 총재에 '비둘기파' 스페인 데코스(종합)",
+   "title": "스페인 출신 첫 ECB 총재 탄생…유럽 금융권력 지형 바뀐다",
    "firstSeen": "2026-11-26T16:56:00.000Z",
    "lastSeen": "2026-11-27T00:54:00.000Z",
-   "count": 13,
-   "sources": 11,
+   "count": 8,
+   "sources": 8,
    "topics": [
     "rates"
    ],
@@ -714,8 +646,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 33,
-    "spike": 1.6,
+    "score": 28,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "^TNX",
@@ -727,176 +659,6 @@
     },
     "why": [
      "미국 10년 금리 −0.06%p"
-    ]
-   }
-  },
-  {
-   "id": "17uyf37",
-   "title": "[박정식의 국내 주식시황] 美 추수감사절 휴장 속 기관 매수 지속…코스...",
-   "firstSeen": "2026-11-26T13:30:00.000Z",
-   "lastSeen": "2026-11-27T01:02:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "rates"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[뉴욕 브리핑] 美증시 추수감사절 휴장…AI투자 회의론 지속",
-     "link": "https://news.dealsitetv.com/articles/179270",
-     "host": "news.dealsitetv.com",
-     "at": "2026-11-27T01:02:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 추수감사절 휴장 속 코스피 약보합…장 초반 4700선 등락",
-     "link": "https://www.slist.kr/news/articleView.html?idxno=785287",
-     "host": "slist.kr",
-     "at": "2026-11-27T00:26:00.000Z"
-    },
-    {
-     "title": "美 추수감사절 휴장…코스피, 외국인 매수세에 4720선 강보합",
-     "link": "https://www.etoday.co.kr/news/view/2653776",
-     "host": "etoday.co.kr",
-     "at": "2026-11-27T00:18:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 추수감사절 휴장…블랙프라이데이 소비 주목",
-     "link": "https://www.newstopkorea.com/ko-kr/articles/49351",
-     "host": "newstopkorea.com",
-     "at": "2026-11-27T00:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 30,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미국 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "미국 10년 금리 −0.06%p"
-    ]
-   }
-  },
-  {
-   "id": "u1ykn9",
-   "title": "코스피, 반도체 대형주 약세에 장 초반 하락 전환…코스닥은 3%대↑",
-   "firstSeen": "2026-11-27T00:26:00.000Z",
-   "lastSeen": "2026-11-27T01:14:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[증시 오늘(27일) 주요 특징주] 로봇·보안·바이오가 이끈 코스닥 4%대...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95738",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-27T01:14:00.000Z"
-    },
-    {
-     "title": "코스피 장중 금리 인상 부담에 '하락 전환' 4700선, 코스닥은 정책 기대...",
-     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=453087",
-     "host": "businesspost.co.kr",
-     "at": "2026-11-27T00:52:00.000Z"
-    },
-    {
-     "title": "[개장시황] 코스피, 반도체 대형주 약세에 장 초반 주춤…코스닥 3%대 상...",
-     "link": "https://www.meconomynews.com/news/articleView.html?idxno=204214",
-     "host": "meconomynews.com",
-     "at": "2026-11-27T00:46:00.000Z"
-    },
-    {
-     "title": "[이 시각 시황] 코스피 보합·코스닥 3% 급등…바이오·로봇·2차전지주...",
-     "link": "https://biz.sbs.co.kr/article_hub/20000349248?division=NAVER",
-     "host": "biz.sbs.co.kr",
-     "at": "2026-11-27T00:42:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 29,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^TNX",
-     "label": "미국 10년 금리",
-     "change": -5.6,
-     "unit": "bp",
-     "z": -1,
-     "date": "2026-11-25"
-    },
-    "why": [
-     "미국 10년 금리 −0.06%p"
-    ]
-   }
-  },
-  {
-   "id": "350ggq",
-   "title": "코스피, 외인 매수세에도 장 초반 보합권 등락…4700선 공방",
-   "firstSeen": "2026-11-26T00:16:00.000Z",
-   "lastSeen": "2026-11-27T01:17:00.000Z",
-   "count": 6,
-   "sources": 6,
-   "topics": [
-    "trade",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "“외인 돌아오자 반등”…코스피 1%·코스닥 5% 가까이 급등 [시황]",
-     "link": "https://www.dailian.co.kr/news/view/1720477/?sc=Naver",
-     "host": "dailian.co.kr",
-     "at": "2026-11-27T01:17:00.000Z"
-    },
-    {
-     "title": "개인·외인 '수급 공방'⋯코스피 '4710선' 약보합 등락",
-     "link": "http://www.inews24.com/view/2031108",
-     "host": "inews24.com",
-     "at": "2026-11-27T00:54:00.000Z"
-    },
-    {
-     "title": "관세 우려 덜었지만…코스피 4700선 안팎서 보합권 등락",
-     "link": "https://www.seoul.co.kr/news/economy/securities/2026/11/27/20261127500036?wlog_tag3=naver",
-     "host": "seoul.co.kr",
-     "at": "2026-11-27T00:41:00.000Z"
-    },
-    {
-     "title": "코스피, 반도체주 약세에 4700선 붕괴…코스닥은 3%대 급등",
-     "link": "https://www.ddaily.co.kr/page/view/2026112709395464111",
-     "host": "ddaily.co.kr",
-     "at": "2026-11-27T00:41:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 29,
-    "spike": 1.6,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 1.85,
-     "unit": "%",
-     "z": 0.6,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "코스피 +1.85%"
     ]
    }
   },
@@ -905,22 +667,15 @@
    "title": "美 과잉생산 관세에 中 반발…미중 무역휴전 다시 '시험대'",
    "firstSeen": "2026-11-26T15:45:00.000Z",
    "lastSeen": "2026-11-26T23:32:00.000Z",
-   "count": 3,
-   "sources": 3,
+   "count": 2,
+   "sources": 2,
    "topics": [
     "war",
-    "politics",
     "trade",
     "energy"
    ],
    "critical": [],
    "links": [
-    {
-     "title": "트럼프 추가 관세에 아시아 반발…미·중 휴전 위기",
-     "link": "https://www.hankyung.com/article/202611273771i",
-     "host": "hankyung.com",
-     "at": "2026-11-26T23:32:00.000Z"
-    },
     {
      "title": "[국제금융 브리핑] 미 과잉생산 관세에 중국·EU 반발…브렌트유 96.57달...",
      "link": "https://www.tokenpost.kr/news/economy/445161",
@@ -938,23 +693,237 @@
     "level": "watch",
     "label": "참고",
     "score": 27,
-    "spike": 2.1,
+    "spike": 2.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 1.68,
+     "change": 1.82,
      "unit": "%",
-     "z": 1.1,
+     "z": 1.2,
      "date": "2026-11-26"
     },
     "why": [
-     "금 +1.68%"
+     "금 +1.82%"
+    ]
+   }
+  },
+  {
+   "id": "54vcj8",
+   "title": "\"한국가스공사, 해외 LNG로 이익·미수금 동반 급증…목표가↑\"-현대차",
+   "firstSeen": "2026-11-26T23:19:00.000Z",
+   "lastSeen": "2026-11-26T23:25:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[모닝 리포트] \"한국가스공사, LNG 가격 상승에 해외사업 이익 증가\"",
+     "link": "https://www.newspim.com/news/view/20261127000086",
+     "host": "newspim.com",
+     "at": "2026-11-26T23:25:00.000Z"
+    },
+    {
+     "title": "\"한국가스공사, 해외 LNG로 이익·미수금 동반 급증…목표가↑\"-현대차",
+     "link": "https://www.hankyung.com/article/2026112737626",
+     "host": "hankyung.com",
+     "at": "2026-11-26T23:19:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 27,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.82,
+     "unit": "%",
+     "z": 1.2,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "금 +1.82%"
+    ]
+   }
+  },
+  {
+   "id": "1jtgo4n",
+   "title": "금시세·금값 27일",
+   "firstSeen": "2026-11-27T00:28:00.000Z",
+   "lastSeen": "2026-11-27T01:18:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "금시세(금값) 약보합",
+     "link": "http://www.kjdaily.com/article.php?aid=1795742172693732227",
+     "host": "kjdaily.com",
+     "at": "2026-11-27T01:18:00.000Z"
+    },
+    {
+     "title": "금시세·금값 27일",
+     "link": "https://www.bntnews.co.kr/article/view/bnt202611270151",
+     "host": "bntnews.co.kr",
+     "at": "2026-11-27T00:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 27,
+    "spike": 2.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 1.82,
+     "unit": "%",
+     "z": 1.2,
+     "date": "2026-11-26"
+    },
+    "why": [
+     "금 +1.82%"
+    ]
+   }
+  },
+  {
+   "id": "k29b",
+   "title": "[개장 시황] 코스피, 상승 출발…외국인 순매수에 강보합",
+   "firstSeen": "2026-11-26T23:10:00.000Z",
+   "lastSeen": "2026-11-27T01:46:00.000Z",
+   "count": 15,
+   "sources": 15,
+   "topics": [
+    "fx",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[오늘의 증시] 코스피 4790선 회복·코스닥 5%대 급등…외국인·기관 동...",
+     "link": "https://www.job-post.co.kr/news/articleView.html?idxno=241380",
+     "host": "job-post.co.kr",
+     "at": "2026-11-27T01:46:00.000Z"
+    },
+    {
+     "title": "SK하이닉스 주가 장중 1%대 강세, 배당락일 하락 출발 뒤 상승 전환",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=453098",
+     "host": "businesspost.co.kr",
+     "at": "2026-11-27T01:34:00.000Z"
+    },
+    {
+     "title": "[위클리오늘] 코스피 4700선 상승 출발···환율 1340원대",
+     "link": "http://www.weeklytoday.com/news/articleView.html?idxno=803738",
+     "host": "weeklytoday.com",
+     "at": "2026-11-27T01:18:00.000Z"
+    },
+    {
+     "title": "코스피, 외인 매수에 반등···4740선 회복",
+     "link": "http://www.finomy.com/news/articleView.html?idxno=268124",
+     "host": "finomy.com",
+     "at": "2026-11-27T01:04:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 26,
+    "spike": 0.8,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 1.89,
+     "unit": "%",
+     "z": 0.6,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "코스피 +1.89%"
+    ]
+   }
+  },
+  {
+   "id": "17uyf37",
+   "title": "[박정식의 국내 주식시황] 美 추수감사절 휴장 속 기관 매수 지속…코스...",
+   "firstSeen": "2026-11-26T13:30:00.000Z",
+   "lastSeen": "2026-11-27T00:26:00.000Z",
+   "count": 5,
+   "sources": 5,
+   "topics": [
+    "rates"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "뉴욕증시 추수감사절 휴장 속 코스피 약보합…장 초반 4700선 등락",
+     "link": "https://www.slist.kr/news/articleView.html?idxno=785287",
+     "host": "slist.kr",
+     "at": "2026-11-27T00:26:00.000Z"
+    },
+    {
+     "title": "美 추수감사절 휴장…코스피, 외국인 매수세에 4720선 강보합",
+     "link": "https://www.etoday.co.kr/news/view/2653776",
+     "host": "etoday.co.kr",
+     "at": "2026-11-27T00:18:00.000Z"
+    },
+    {
+     "title": "뉴욕증시, 추수감사절 휴장…블랙프라이데이 소비 주목",
+     "link": "https://www.newstopkorea.com/ko-kr/articles/49351",
+     "host": "newstopkorea.com",
+     "at": "2026-11-27T00:18:00.000Z"
+    },
+    {
+     "title": "[굿모닝 마켓] 뉴욕증시, 추수감사절 휴장…나스닥 선물 0.4%↑",
+     "link": "https://biz.sbs.co.kr/article_hub/20000349244?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-26T23:37:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 25,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "^TNX",
+     "label": "미국 10년 금리",
+     "change": -5.6,
+     "unit": "bp",
+     "z": -1,
+     "date": "2026-11-25"
+    },
+    "why": [
+     "미국 10년 금리 −0.06%p"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-27T01:47:20.347Z",
+   "id": "xao6m6",
+   "level": "caution",
+   "title": "[속보] 코스닥 장중 5% 급등‥'매수 사이드카' 발동",
+   "why": [
+    "큰 사건 단어 '사이드카'",
+    "코스피 +1.89%"
+   ],
+   "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316583",
+   "delivered": false
+  },
   {
    "at": "2026-11-27T01:27:37.492Z",
    "id": "1odb41r",
@@ -1181,18 +1150,6 @@
     "S&P500 −0.25%"
    ],
    "link": "https://www.joongang.co.kr/article/25482486",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-26T23:27:34.061Z",
-   "id": "1q39fa1",
-   "level": "caution",
-   "title": "금값 15개월 만에 최저 수준… ‘증안펀드’ 29일 긴급회의",
-   "why": [
-    "큰 사건 단어 '긴급회의'",
-    "금 +1.61%"
-   ],
-   "link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2241019",
    "delivered": false
   }
  ],
