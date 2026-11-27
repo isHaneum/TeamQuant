@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T09:15:46.660Z",
+ "updatedAt": "2026-11-27T09:29:21.808Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -62,9 +62,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1333.31005859375,
-   "change": -0.72,
-   "z": -1.2,
+   "last": 1332.239990234375,
+   "change": -0.8,
+   "z": -1.3,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
   },
@@ -74,9 +74,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 85.81999969482422,
-   "change": 2.56,
-   "z": 0.9,
+   "last": 85.58000183105469,
+   "change": 2.27,
+   "z": 0.8,
    "sd": 2.870433546363806,
    "source": "Yahoo"
   },
@@ -86,8 +86,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 3711.89990234375,
-   "change": 4.98,
+   "last": 3708.699951171875,
+   "change": 4.89,
    "z": 3.2,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
@@ -98,8 +98,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 24.610000610351562,
-   "change": -8.17,
+   "last": 24.649999618530273,
+   "change": -8.02,
    "z": -0.6,
    "sd": 12.991606674217033,
    "source": "Yahoo",
@@ -119,35 +119,35 @@
   }
  ],
  "spikes": {
-  "war": 0.4,
-  "politics": -0.5,
-  "rates": 1.3,
-  "trade": 0.5,
+  "war": 0.5,
+  "politics": -0.3,
+  "rates": 1.1,
+  "trade": 0.7,
   "fx": 1.3,
-  "energy": 1.9,
+  "energy": 0.8,
   "market": 0.3,
   "credit": 0.1,
   "disaster": 0,
-  "policy": 2
+  "policy": 2.2
  },
  "rates": {
   "war": {
-   "rate": 1.9,
+   "rate": 2,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 1.1,
+   "rate": 1.4,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 5,
+   "rate": 4.7,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 5,
+   "rate": 5.3,
    "saturated": 1,
    "queries": 2
   },
@@ -157,7 +157,7 @@
    "queries": 1
   },
   "energy": {
-   "rate": 6,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 1
   },
@@ -177,59 +177,12 @@
    "queries": 1
   },
   "policy": {
-   "rate": 5.3,
+   "rate": 5.7,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
-  {
-   "id": "9460ef",
-   "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
-   "firstSeen": "2026-11-26T08:43:00.000Z",
-   "lastSeen": "2026-11-26T21:30:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [
-    "energy"
-   ],
-   "links": [
-    {
-     "title": "후티 반군, 사우디 정유시설 또 공격…연합군 발표",
-     "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
-     "host": "voakorea.com",
-     "at": "2026-11-26T21:30:00.000Z"
-    },
-    {
-     "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95678",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-26T18:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 76,
-    "spike": 1.9,
-    "news": true,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.98,
-     "unit": "%",
-     "z": 3.2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '원유 공급 차질'",
-     "금 +4.98%(평소의 3.2배)"
-    ]
-   }
-  },
   {
    "id": "1ry3pnv",
    "title": "긴장 고조되는 호르무즈, 한국은 원유 도입선 다변화 지속해야",
@@ -261,20 +214,67 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 76,
-    "spike": 1.9,
+    "score": 71,
+    "spike": 1.3,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "9460ef",
+   "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
+   "firstSeen": "2026-11-26T08:43:00.000Z",
+   "lastSeen": "2026-11-26T21:30:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "후티 반군, 사우디 정유시설 또 공격…연합군 발표",
+     "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
+     "host": "voakorea.com",
+     "at": "2026-11-26T21:30:00.000Z"
+    },
+    {
+     "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
+     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95678",
+     "host": "thefairnews.co.kr",
+     "at": "2026-11-26T18:12:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 67,
+    "spike": 0.8,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.89,
+     "unit": "%",
+     "z": 3.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '원유 공급 차질'",
+     "금 +4.89%(평소의 3.2배)"
     ]
    }
   },
@@ -308,14 +308,14 @@
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
     ]
    }
   },
@@ -324,8 +324,8 @@
    "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
    "firstSeen": "2026-11-27T01:25:00.000Z",
    "lastSeen": "2026-11-27T09:10:00.000Z",
-   "count": 27,
-   "sources": 27,
+   "count": 18,
+   "sources": 18,
    "topics": [
     "market"
    ],
@@ -352,10 +352,10 @@
      "at": "2026-11-27T08:45:00.000Z"
     },
     {
-     "title": "코스피, 4.34% 오른 4915.68…코스닥 8.13%↑",
-     "link": "https://news.mtn.co.kr/article/2026112717030120309",
-     "host": "news.mtn.co.kr",
-     "at": "2026-11-27T08:36:00.000Z"
+     "title": "코스닥 8.13% 급등에 '매수 사이드카'발동",
+     "link": "http://www.newskr.kr/news/articleView.html?idxno=108380",
+     "host": "newskr.kr",
+     "at": "2026-11-27T08:12:00.000Z"
     }
    ],
    "assess": {
@@ -379,12 +379,171 @@
    }
   },
   {
-   "id": "1jtgo4n",
-   "title": "금시세(금값) 약보합",
-   "firstSeen": "2026-11-27T00:28:00.000Z",
+   "id": "zp43bk",
+   "title": "글로벌 로펌이 맡던 해외 M&A…K로펌, 이젠 '兆단위 빅딜' 총괄",
+   "firstSeen": "2026-11-27T08:28:00.000Z",
+   "lastSeen": "2026-11-27T08:28:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "trade",
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "글로벌 로펌이 맡던 해외 M&A…K로펌, 이젠 '兆단위 빅딜' 총괄",
+     "link": "https://www.hankyung.com/article/2026112753471",
+     "host": "hankyung.com",
+     "at": "2026-11-27T08:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 51,
+    "spike": 2.2,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.89,
+     "unit": "%",
+     "z": 3.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +4.89%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "ip7p96",
+   "title": "[영상] 금융시장 불안·대형 산불에 반역 사건까지…인니 괜찮나",
+   "firstSeen": "2026-11-27T07:29:00.000Z",
+   "lastSeen": "2026-11-27T07:29:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "[영상] 금융시장 불안·대형 산불에 반역 사건까지…인니 괜찮나",
+     "link": "https://www.yna.co.kr/view/AKR20261125160000797?input=1195m",
+     "host": "yna.co.kr",
+     "at": "2026-11-27T07:29:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 43,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.89,
+     "unit": "%",
+     "z": 3.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +4.89%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "qhs6j9",
+   "title": "브렌트유 100달러 눈앞…SK이노베이션·GS 정유주에 볕드나",
+   "firstSeen": "2026-11-27T07:44:00.000Z",
+   "lastSeen": "2026-11-27T07:44:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "브렌트유 100달러 눈앞…SK이노베이션·GS 정유주에 볕드나",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=508979",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-27T07:44:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 43,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.89,
+     "unit": "%",
+     "z": 3.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +4.89%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1m451ra",
+   "title": "'증안펀드 기대감' 대단하네 … 하루 8% 튀어 오른 코스닥",
+   "firstSeen": "2026-11-27T06:06:00.000Z",
+   "lastSeen": "2026-11-27T08:34:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "fx",
+    "energy",
+    "market"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "'증안펀드 기대감' 대단하네 … 하루 8% 튀어 오른 코스닥",
+     "link": "https://www.mk.co.kr/article/12220396",
+     "host": "mk.co.kr",
+     "at": "2026-11-27T08:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 43,
+    "spike": 1.3,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 4.89,
+     "unit": "%",
+     "z": 3.2,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +4.89%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "1ha7qhv",
+   "title": "[속보] 국제 금시세(금값) 4%대 급등…온스당 3600달러선 돌파",
+   "firstSeen": "2026-11-27T08:36:00.000Z",
    "lastSeen": "2026-11-27T08:36:00.000Z",
-   "count": 2,
-   "sources": 2,
+   "count": 1,
+   "sources": 1,
    "topics": [
     "fx",
     "energy",
@@ -397,30 +556,24 @@
      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631424",
      "host": "cbci.co.kr",
      "at": "2026-11-27T08:36:00.000Z"
-    },
-    {
-     "title": "금시세(금값) 약보합",
-     "link": "http://www.kjdaily.com/article.php?aid=1795742172693732227",
-     "host": "kjdaily.com",
-     "at": "2026-11-27T01:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 51,
-    "spike": 1.9,
+    "score": 43,
+    "spike": 1.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
     ]
    }
   },
@@ -454,19 +607,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 51,
-    "spike": 1.9,
+    "score": 42,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
     ]
    }
   },
@@ -501,59 +654,115 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 51,
-    "spike": 1.9,
+    "score": 42,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
     ]
    }
   },
   {
-   "id": "zp43bk",
-   "title": "글로벌 로펌이 맡던 해외 M&A…K로펌, 이젠 '兆단위 빅딜' 총괄",
-   "firstSeen": "2026-11-27T08:28:00.000Z",
-   "lastSeen": "2026-11-27T08:28:00.000Z",
+   "id": "164p91h",
+   "title": "전문가들도 '울컥'…코스피 반토막에 '경고 못드려 죄송\"",
+   "firstSeen": "2026-11-27T09:18:00.000Z",
+   "lastSeen": "2026-11-27T09:18:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
     "war",
-    "trade",
-    "policy"
+    "rates",
+    "market"
    ],
    "critical": [],
    "links": [
     {
-     "title": "글로벌 로펌이 맡던 해외 M&A…K로펌, 이젠 '兆단위 빅딜' 총괄",
-     "link": "https://www.hankyung.com/article/2026112753471",
+     "title": "전문가들도 '울컥'…코스피 반토막에 '경고 못드려 죄송\"",
+     "link": "https://www.hankyung.com/article/202611274867H",
      "host": "hankyung.com",
-     "at": "2026-11-27T08:28:00.000Z"
+     "at": "2026-11-27T09:18:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 49,
-    "spike": 2,
+    "score": 42,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
+    ]
+   }
+  },
+  {
+   "id": "ykvbhp",
+   "title": "주병기 \"사상 최대 수출에도 공급망 파급효과 미미\"…상생 강조",
+   "firstSeen": "2026-11-27T06:17:00.000Z",
+   "lastSeen": "2026-11-27T07:18:00.000Z",
+   "count": 6,
+   "sources": 6,
+   "topics": [
+    "policy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "주병기 \"대기업 수출 최대인데 공급망 파급효과 미미\"",
+     "link": "https://www.newscj.com/news/articleView.html?idxno=3452729",
+     "host": "newscj.com",
+     "at": "2026-11-27T07:18:00.000Z"
+    },
+    {
+     "title": "공정위원장 “대기업 수출 사상 최대에도…공급망 통한 파급효과 미미”",
+     "link": "https://biz.heraldcorp.com/article/10952045?ref=naver",
+     "host": "biz.heraldcorp.com",
+     "at": "2026-11-27T06:49:00.000Z"
+    },
+    {
+     "title": "주병기 \"반도체 수출 호황에도 파급효과 미미…상생협력 필요\"",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=02686326645649984&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "host": "edaily.co.kr",
+     "at": "2026-11-27T06:28:00.000Z"
+    },
+    {
+     "title": "주병기 \"사상 최대 수출, 공급망 파급효과 미미\" 협력사 상생 강조",
+     "link": "https://www.busan.com/view/busan/view.php?code=2026112715234560592",
+     "host": "busan.com",
+     "at": "2026-11-27T06:24:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 40,
+    "spike": 2.2,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.34,
+     "unit": "%",
+     "z": 1.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "코스피 +4.34%"
     ]
    }
   },
@@ -580,19 +789,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 48,
-    "spike": 1.9,
+    "score": 39,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
     ]
    }
   },
@@ -619,220 +828,48 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 48,
-    "spike": 1.9,
+    "score": 39,
+    "spike": 0.8,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 4.98,
+     "change": 4.89,
      "unit": "%",
      "z": 3.2,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +4.98%(평소의 3.2배)"
-    ]
-   }
-  },
-  {
-   "id": "mhoqq8",
-   "title": "오늘 금시세(금값) 이틀 연속 급등... 금가격이 1년 최저점 찍고 튀어 오...",
-   "firstSeen": "2026-11-27T05:44:00.000Z",
-   "lastSeen": "2026-11-27T05:44:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "오늘 금시세(금값) 이틀 연속 급등... 금가격이 1년 최저점 찍고 튀어 오...",
-     "link": "https://www.wikitree.co.kr/articles/1178368",
-     "host": "wikitree.co.kr",
-     "at": "2026-11-27T05:44:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 48,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.98,
-     "unit": "%",
-     "z": 3.2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +4.98%(평소의 3.2배)"
-    ]
-   }
-  },
-  {
-   "id": "xuzqa3",
-   "title": "\"청년농부가 키운 우리 감자로\"…롯데리아, 'K-준 포테이토' 출시",
-   "firstSeen": "2026-11-27T06:28:00.000Z",
-   "lastSeen": "2026-11-27T06:28:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"청년농부가 키운 우리 감자로\"…롯데리아, 'K-준 포테이토' 출시",
-     "link": "http://www.newswatch.kr/news/articleView.html?idxno=82112",
-     "host": "newswatch.kr",
-     "at": "2026-11-27T06:28:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 48,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.98,
-     "unit": "%",
-     "z": 3.2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +4.98%(평소의 3.2배)"
-    ]
-   }
-  },
-  {
-   "id": "nagq4u",
-   "title": "고점서 35% 밀린 국제 금값…美 긴축 끝나면 반등?",
-   "firstSeen": "2026-11-27T00:14:00.000Z",
-   "lastSeen": "2026-11-27T07:19:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "고점서 35% 밀린 국제 금값…美 긴축 끝나면 반등?",
-     "link": "https://www.fnnews.com/news/202611271609352896",
-     "host": "fnnews.com",
-     "at": "2026-11-27T07:19:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 48,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.98,
-     "unit": "%",
-     "z": 3.2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +4.98%(평소의 3.2배)"
-    ]
-   }
-  },
-  {
-   "id": "ip7p96",
-   "title": "[영상] 금융시장 불안·대형 산불에 반역 사건까지…인니 괜찮나",
-   "firstSeen": "2026-11-27T07:29:00.000Z",
-   "lastSeen": "2026-11-27T07:29:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "fx",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[영상] 금융시장 불안·대형 산불에 반역 사건까지…인니 괜찮나",
-     "link": "https://www.yna.co.kr/view/AKR20261125160000797?input=1195m",
-     "host": "yna.co.kr",
-     "at": "2026-11-27T07:29:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 48,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.98,
-     "unit": "%",
-     "z": 3.2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +4.98%(평소의 3.2배)"
-    ]
-   }
-  },
-  {
-   "id": "1xu0ty9",
-   "title": "오늘의 프리미엄9 콘텐츠 다이제스트(11월 27일)",
-   "firstSeen": "2026-11-27T07:32:00.000Z",
-   "lastSeen": "2026-11-27T07:32:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "war",
-    "energy",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "오늘의 프리미엄9 콘텐츠 다이제스트(11월 27일)",
-     "link": "https://www.hankyung.com/article/202611275074i",
-     "host": "hankyung.com",
-     "at": "2026-11-27T07:32:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 48,
-    "spike": 1.9,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 4.98,
-     "unit": "%",
-     "z": 3.2,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +4.98%(평소의 3.2배)"
+     "금 +4.89%(평소의 3.2배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-27T09:29:21.808Z",
+   "id": "9460ef",
+   "level": "caution",
+   "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
+   "why": [
+    "큰 사건 단어 '원유 공급 차질'",
+    "금 +4.89%(평소의 3.2배)"
+   ],
+   "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
+   "delivered": false
+  },
+  {
+   "at": "2026-11-27T09:29:21.808Z",
+   "id": "xao6m6",
+   "level": "caution",
+   "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
+   "why": [
+    "큰 사건 단어 '사이드카'",
+    "코스피 +4.34%"
+   ],
+   "link": "http://www.queen.co.kr/news/articleView.html?idxno=467078",
+   "delivered": false
+  },
   {
    "at": "2026-11-27T09:15:46.660Z",
    "id": "1ry3pnv",
@@ -1043,30 +1080,6 @@
     "코스피 +4.09%"
    ],
    "link": "https://biz.sbs.co.kr/article_hub/20000349323?division=NAVER",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-27T04:47:51.341Z",
-   "id": "9460ef",
-   "level": "caution",
-   "title": "유가 또 들썩 … 후티, 사우디 정유시설 공격",
-   "why": [
-    "큰 사건 단어 '원유 공급 차질'",
-    "금 +3.56%(평소의 2.3배)"
-   ],
-   "link": "http://www.newstomato.com/ReadNews.aspx?no=1322102&inflow=N",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-27T04:29:42.029Z",
-   "id": "xao6m6",
-   "level": "caution",
-   "title": "[서울데이터랩] 코스닥 674.75로 급등 출발…외국인·기관 동반 매수에 ...",
-   "why": [
-    "큰 사건 단어 '사이드카'",
-    "코스피 +3.64%"
-   ],
-   "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631320",
    "delivered": false
   }
  ],
