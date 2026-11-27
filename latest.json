@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T05:28:32.170Z",
+ "updatedAt": "2026-11-27T05:48:02.548Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 4904.10009765625,
-   "change": 4.09,
-   "z": 1.4,
+   "last": 4918.48,
+   "change": 4.4,
+   "z": 1.5,
    "sd": 3.0263724756554877,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,11 +24,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 705.9099731445312,
-   "change": 7.66,
-   "z": 2.7,
+   "last": 709.53,
+   "change": 8.21,
+   "z": 2.9,
    "sd": 2.8750514650474877,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -62,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1337.5799560546875,
-   "change": -0.4,
+   "last": 1337.3800048828125,
+   "change": -0.42,
    "z": -0.7,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
@@ -74,9 +76,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 86.02999877929688,
-   "change": 2.81,
-   "z": 1,
+   "last": 85.95999908447266,
+   "change": 2.72,
+   "z": 0.9,
    "sd": 2.870433546363806,
    "source": "Yahoo"
   },
@@ -86,9 +88,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 3667,
-   "change": 3.71,
-   "z": 2.4,
+   "last": 3673.699951171875,
+   "change": 3.9,
+   "z": 2.5,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
   },
@@ -120,12 +122,12 @@
  ],
  "spikes": {
   "war": -0.2,
-  "politics": 0.2,
-  "rates": 0.5,
+  "politics": 0,
+  "rates": 0.6,
   "trade": -0.2,
   "fx": -0.2,
   "energy": -0.4,
-  "market": -0.2,
+  "market": 0,
   "credit": 0,
   "disaster": 0,
   "policy": 0.9
@@ -137,17 +139,17 @@
    "queries": 3
   },
   "politics": {
-   "rate": 2,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.6,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 3.7,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 2
   },
@@ -162,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 3.6,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 3
   },
@@ -226,20 +228,20 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 58,
+    "score": 60,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.71,
+     "change": 3.9,
      "unit": "%",
-     "z": 2.4,
+     "z": 2.5,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '원유 공급 차질'",
-     "금 +3.71%(평소의 2.4배)"
+     "금 +3.9%(평소의 2.5배)"
     ]
    }
   },
@@ -258,7 +260,7 @@
    ],
    "links": [
     {
-     "title": "코스피, '외인·기관' 매수에 3%대 ↑....코스닥도 7%대 급등",
+     "title": "코스피, '외인·기관' 매수에 3%대 ↑...코스닥도 7%대 급등",
      "link": "https://www.newspim.com/news/view/20261127000926",
      "host": "newspim.com",
      "at": "2026-11-27T05:09:00.000Z"
@@ -285,20 +287,20 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 51,
+    "score": 53,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 4.09,
+     "change": 4.4,
      "unit": "%",
-     "z": 1.4,
+     "z": 1.5,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +4.09%"
+     "코스피 +4.4%"
     ]
    }
   },
@@ -326,20 +328,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 49,
+    "score": 51,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.71,
+     "change": 3.9,
      "unit": "%",
-     "z": 2.4,
+     "z": 2.5,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +3.71%(평소의 2.4배)"
+     "금 +3.9%(평소의 2.5배)"
     ]
    }
   },
@@ -373,20 +375,143 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 37,
+    "score": 39,
     "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 4.09,
+     "change": 4.4,
      "unit": "%",
-     "z": 1.4,
+     "z": 1.5,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +4.09%"
+     "코스피 +4.4%"
+    ]
+   }
+  },
+  {
+   "id": "hfdw04",
+   "title": "일상이 된 사이드카…롤러코스터 증시 언제까지",
+   "firstSeen": "2026-11-26T09:40:00.000Z",
+   "lastSeen": "2026-11-26T09:40:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "일상이 된 사이드카…롤러코스터 증시 언제까지",
+     "link": "https://www.sentv.co.kr/article/view/sentv202611260111",
+     "host": "sentv.co.kr",
+     "at": "2026-11-26T09:40:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 36,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.4,
+     "unit": "%",
+     "z": 1.5,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '사이드카'",
+     "코스피 +4.4%"
+    ]
+   }
+  },
+  {
+   "id": "15tedp0",
+   "title": "올해만 102차례… 피로감 커지는 ‘사이드카’ 실효성 글쎄",
+   "firstSeen": "2026-11-26T17:10:00.000Z",
+   "lastSeen": "2026-11-26T17:10:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "올해만 102차례… 피로감 커지는 ‘사이드카’ 실효성 글쎄",
+     "link": "https://www.kmib.co.kr/article/20261126501919",
+     "host": "kmib.co.kr",
+     "at": "2026-11-26T17:10:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 36,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.4,
+     "unit": "%",
+     "z": 1.5,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '사이드카'",
+     "코스피 +4.4%"
+    ]
+   }
+  },
+  {
+   "id": "1axxnqz",
+   "title": "[기자수첩]102번 울린 사이드카, 시장 지켰나",
+   "firstSeen": "2026-11-26T01:32:00.000Z",
+   "lastSeen": "2026-11-26T20:30:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "[기자수첩]102번 울린 사이드카, 시장 지켰나",
+     "link": "https://www.mt.co.kr/opinion/2026/11/27/2026112512075092447",
+     "host": "mt.co.kr",
+     "at": "2026-11-26T20:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 36,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.4,
+     "unit": "%",
+     "z": 1.5,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '사이드카'",
+     "코스피 +4.4%"
     ]
    }
   },
@@ -415,142 +540,19 @@
     "level": "watch",
     "label": "참고",
     "score": 36,
-    "spike": 0.2,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 4.09,
+     "change": 4.4,
      "unit": "%",
-     "z": 1.4,
+     "z": 1.5,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '쿠데타'",
-     "코스피 +4.09%"
-    ]
-   }
-  },
-  {
-   "id": "hfdw04",
-   "title": "일상이 된 사이드카…롤러코스터 증시 언제까지",
-   "firstSeen": "2026-11-26T09:40:00.000Z",
-   "lastSeen": "2026-11-26T09:40:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "일상이 된 사이드카…롤러코스터 증시 언제까지",
-     "link": "https://www.sentv.co.kr/article/view/sentv202611260111",
-     "host": "sentv.co.kr",
-     "at": "2026-11-26T09:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.09,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '사이드카'",
-     "코스피 +4.09%"
-    ]
-   }
-  },
-  {
-   "id": "15tedp0",
-   "title": "올해만 102차례… 피로감 커지는 ‘사이드카’ 실효성 글쎄",
-   "firstSeen": "2026-11-26T17:10:00.000Z",
-   "lastSeen": "2026-11-26T17:10:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "올해만 102차례… 피로감 커지는 ‘사이드카’ 실효성 글쎄",
-     "link": "https://www.kmib.co.kr/article/20261126501919",
-     "host": "kmib.co.kr",
-     "at": "2026-11-26T17:10:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.09,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '사이드카'",
-     "코스피 +4.09%"
-    ]
-   }
-  },
-  {
-   "id": "1axxnqz",
-   "title": "[기자수첩]102번 울린 사이드카, 시장 지켰나",
-   "firstSeen": "2026-11-26T01:32:00.000Z",
-   "lastSeen": "2026-11-26T20:30:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[기자수첩]102번 울린 사이드카, 시장 지켰나",
-     "link": "https://www.mt.co.kr/opinion/2026/11/27/2026112512075092447",
-     "host": "mt.co.kr",
-     "at": "2026-11-26T20:30:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.09,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '사이드카'",
-     "코스피 +4.09%"
+     "코스피 +4.4%"
     ]
    }
   },
@@ -578,20 +580,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 34,
+    "score": 36,
     "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 4.09,
+     "change": 4.4,
      "unit": "%",
-     "z": 1.4,
+     "z": 1.5,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '디폴트'",
-     "코스피 +4.09%"
+     "코스피 +4.4%"
     ]
    }
   },
@@ -599,7 +601,7 @@
    "id": "1q4q4oi",
    "title": "한은, '5대 2'로 기준금리 3.25% 인상…6개월 뒤 전망은 3.50%",
    "firstSeen": "2026-11-26T02:16:00.000Z",
-   "lastSeen": "2026-11-27T04:40:00.000Z",
+   "lastSeen": "2026-11-27T05:30:00.000Z",
    "count": 11,
    "sources": 11,
    "topics": [
@@ -607,6 +609,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "반도체 올라타 기준금리 올린 한은…다음 '호미질'은 언제일까",
+     "link": "https://www.newsis.com/view/NISX20261127_0003886312",
+     "host": "newsis.com",
+     "at": "2026-11-27T05:30:00.000Z"
+    },
     {
      "title": "한은, 기준금리 3.25%로 인상…긴축 청구서 커진다",
      "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=200619",
@@ -620,12 +628,6 @@
      "at": "2026-11-27T03:00:00.000Z"
     },
     {
-     "title": "‘기준금리 인상’ 한은, 긴축 박차…2027년 성장률 4.1% 전망 [한강로 ...",
-     "link": "https://www.segye.com/newsView/20261127506356?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-27T02:45:00.000Z"
-    },
-    {
      "title": "[NZSI INDEX] 2026년 11월 26일… 코스피 0.29% 상승, 한국은행 기준금리...",
      "link": "https://www.the-today.com/news/articleView.html?idxno=94186",
      "host": "the-today.com",
@@ -635,76 +637,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 30,
-    "spike": 0.5,
+    "score": 32,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 4.09,
+     "change": 4.4,
      "unit": "%",
-     "z": 1.4,
+     "z": 1.5,
      "date": "2026-11-27"
     },
     "why": [
-     "코스피 +4.09%"
-    ]
-   }
-  },
-  {
-   "id": "1mhv92v",
-   "title": "F4 \"반도체발 증시 변동성 주시\"…공매도 특이동향 없어",
-   "firstSeen": "2026-11-27T01:53:00.000Z",
-   "lastSeen": "2026-11-27T05:08:00.000Z",
-   "count": 5,
-   "sources": 5,
-   "topics": [
-    "market",
-    "policy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "롤러코스터 장세에 시장점검 나선 정부 \"공매도 특이동향 없어\"",
-     "link": "https://www.hankookilbo.com/news/article/A2026112710530005221?did=NA",
-     "host": "hankookilbo.com",
-     "at": "2026-11-27T05:08:00.000Z"
-    },
-    {
-     "title": "이형일 \"시장 상황 따라 필요한 조치\"…공매도 특이동향 없어",
-     "link": "https://www.imaeil.com/page/view/2026112712395739861",
-     "host": "imaeil.com",
-     "at": "2026-11-27T03:41:00.000Z"
-    },
-    {
-     "title": "증시 등락에 화들짝, 정부 “공매도 특이동향 없다”",
-     "link": "https://www.ekn.kr/web/view.php?key=20261127025245707",
-     "host": "ekn.kr",
-     "at": "2026-11-27T03:14:00.000Z"
-    },
-    {
-     "title": "F4 “공매도 특이동향 없어”…반도체발 증시 변동성 주시",
-     "link": "http://www.metroseoul.co.kr/article/20261127500104",
-     "host": "metroseoul.co.kr",
-     "at": "2026-11-27T02:20:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 28,
-    "spike": 0.9,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.09,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "코스피 +4.09%"
+     "코스피 +4.4%"
     ]
    }
   },
@@ -750,19 +695,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
+    "score": 30,
     "spike": 0.9,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 4.09,
+     "change": 4.4,
      "unit": "%",
-     "z": 1.4,
+     "z": 1.5,
      "date": "2026-11-27"
     },
     "why": [
-     "코스피 +4.09%"
+     "코스피 +4.4%"
     ]
    }
   },
@@ -789,19 +734,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
-    "spike": 0.5,
+    "score": 30,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.71,
+     "change": 3.9,
      "unit": "%",
-     "z": 2.4,
+     "z": 2.5,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.71%(평소의 2.4배)"
+     "금 +3.9%(평소의 2.5배)"
     ]
    }
   },
@@ -829,80 +774,124 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
-    "spike": 0.5,
+    "score": 30,
+    "spike": 0.6,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.71,
+     "change": 3.9,
      "unit": "%",
-     "z": 2.4,
+     "z": 2.5,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.71%(평소의 2.4배)"
+     "금 +3.9%(평소의 2.5배)"
     ]
    }
   },
   {
-   "id": "b0frsx",
-   "title": "ECB, 이미 금리 올리는 중인데 차기 총재는 '비둘기파'…데코스의 시험...",
-   "firstSeen": "2026-11-26T16:56:00.000Z",
-   "lastSeen": "2026-11-27T02:44:00.000Z",
-   "count": 7,
-   "sources": 7,
+   "id": "su9h71",
+   "title": "[증시전략] '젠슨 황 호재' 삼킨 악재들…연말 산타 랠리는 없나?",
+   "firstSeen": "2026-11-26T22:01:00.000Z",
+   "lastSeen": "2026-11-27T05:24:00.000Z",
+   "count": 2,
+   "sources": 2,
    "topics": [
-    "rates"
+    "war"
    ],
    "critical": [],
    "links": [
     {
-     "title": "새 ECB 총재 데코스 “난 매파도 비둘기파도 아닌 올빼미파”",
-     "link": "https://www.munhwa.com/article/11634607?ref=naver",
-     "host": "munhwa.com",
-     "at": "2026-11-27T02:44:00.000Z"
+     "title": "올해 한국 증시의 '산타 랠리' 가능성은?...\"글쎄\", \"낮다\"가 우세",
+     "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=82789",
+     "host": "newsfc.co.kr",
+     "at": "2026-11-27T05:24:00.000Z"
     },
     {
-     "title": "ECB 사상 첫 스페인 출신 총재 탄생 눈앞…데코스 BIS 사무총장 내정",
-     "link": "https://www.ajunews.com/view/20261127093423644",
-     "host": "ajunews.com",
-     "at": "2026-11-27T00:54:00.000Z"
-    },
-    {
-     "title": "ECB 차기 총재에 '올빼미파' 데 코스…내년 2월 취임",
-     "link": "http://www.4th.kr/news/articleView.html?idxno=2122810",
-     "host": "4th.kr",
-     "at": "2026-11-27T00:26:00.000Z"
-    },
-    {
-     "title": "차기 ECB 총재에 '비둘기파' 스페인 데코스...EU 정상들 합의",
-     "link": "https://www.tfmedia.co.kr/news/article.html?no=209280",
-     "host": "tfmedia.co.kr",
-     "at": "2026-11-26T23:30:00.000Z"
+     "title": "[증시전략] '젠슨 황 호재' 삼킨 악재들…연말 산타 랠리는 없나?",
+     "link": "https://biz.sbs.co.kr/article_hub/20000349227?division=NAVER",
+     "host": "biz.sbs.co.kr",
+     "at": "2026-11-26T22:01:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 27,
-    "spike": 0.5,
+    "score": 29,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.09,
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.9,
      "unit": "%",
-     "z": 1.4,
+     "z": 2.5,
      "date": "2026-11-27"
     },
     "why": [
-     "코스피 +4.09%"
+     "금 +3.9%(평소의 2.5배)"
+    ]
+   }
+  },
+  {
+   "id": "1jtgo4n",
+   "title": "금시세·금값 27일",
+   "firstSeen": "2026-11-27T00:28:00.000Z",
+   "lastSeen": "2026-11-27T01:18:00.000Z",
+   "count": 2,
+   "sources": 2,
+   "topics": [
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "금시세(금값) 약보합",
+     "link": "http://www.kjdaily.com/article.php?aid=1795742172693732227",
+     "host": "kjdaily.com",
+     "at": "2026-11-27T01:18:00.000Z"
+    },
+    {
+     "title": "금시세·금값 27일",
+     "link": "https://www.bntnews.co.kr/article/view/bnt202611270151",
+     "host": "bntnews.co.kr",
+     "at": "2026-11-27T00:28:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 29,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.9,
+     "unit": "%",
+     "z": 2.5,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +3.9%(평소의 2.5배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-27T05:48:02.548Z",
+   "id": "9460ef",
+   "level": "caution",
+   "title": "유가 또 들썩 … 후티, 사우디 정유시설 공격",
+   "why": [
+    "큰 사건 단어 '원유 공급 차질'",
+    "금 +3.9%(평소의 2.5배)"
+   ],
+   "link": "http://www.newstomato.com/ReadNews.aspx?no=1322102&inflow=N",
+   "delivered": false
+  },
   {
    "at": "2026-11-27T05:28:32.170Z",
    "id": "ohz635",
@@ -1129,18 +1118,6 @@
     "금 +1.68%"
    ],
    "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-27T00:33:53.237Z",
-   "id": "6v8qpu",
-   "level": "caution",
-   "title": "10조원대 증안펀드 가동 검토…금융위, 30일 시장안정 긴급회의",
-   "why": [
-    "큰 사건 단어 '긴급회의'",
-    "미국 10년 금리 −0.06%p"
-   ],
-   "link": "https://www.dt.co.kr/article/12097541?ref=naver",
    "delivered": false
   }
  ],
