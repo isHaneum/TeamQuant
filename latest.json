@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T19:47:49.319Z",
+ "updatedAt": "2026-11-27T20:13:48.284Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1333.8599853515625,
-   "change": -0.68,
+   "last": 1333.4599609375,
+   "change": -0.71,
    "z": -1.1,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
@@ -121,35 +121,35 @@
   }
  ],
  "spikes": {
-  "war": -0.6,
-  "politics": -1,
+  "war": -0.5,
+  "politics": -0.9,
   "rates": -1.1,
-  "trade": -1.1,
+  "trade": -1.2,
   "fx": -0.2,
   "energy": -0.3,
-  "market": -2,
+  "market": -1.8,
   "credit": -0.3,
   "disaster": 0,
   "policy": -0.9
  },
  "rates": {
   "war": {
-   "rate": 0.7,
+   "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 0.4,
-   "saturated": 0,
-   "queries": 3
-  },
-  "rates": {
    "rate": 0.6,
    "saturated": 0,
    "queries": 3
   },
+  "rates": {
+   "rate": 0.7,
+   "saturated": 0,
+   "queries": 3
+  },
   "trade": {
-   "rate": 2.3,
+   "rate": 2.2,
    "saturated": 0,
    "queries": 2
   },
@@ -164,7 +164,7 @@
    "queries": 1
   },
   "market": {
-   "rate": 1,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 3
   },
@@ -187,11 +187,11 @@
  "issues": [
   {
    "id": "d1h4oa",
-   "title": "증안펀드 확대 기대에 코스닥 8% 급등…코스피도 4900선 회복",
+   "title": "증안펀드 20조 '실탄' 기대에 코스닥 8% 폭등 … 코스피도 4% 급반등",
    "firstSeen": "2026-11-27T04:44:00.000Z",
    "lastSeen": "2026-11-27T15:35:00.000Z",
-   "count": 25,
-   "sources": 22,
+   "count": 23,
+   "sources": 20,
    "topics": [
     "market"
    ],
@@ -218,10 +218,10 @@
      "at": "2026-11-27T15:10:00.000Z"
     },
     {
-     "title": "코스피, 4%대 상승에 4900선 회복...SK하이닉스, SK스퀘어 등 상승",
-     "link": "http://www.econonews.co.kr/news/articleView.html?idxno=447844",
-     "host": "econonews.co.kr",
-     "at": "2026-11-27T12:30:00.000Z"
+     "title": "코스피 4915.68 마감…코스닥 8.13% 급등",
+     "link": "https://www.vegannews.co.kr/news/article.html?no=412289",
+     "host": "vegannews.co.kr",
+     "at": "2026-11-27T10:54:00.000Z"
     }
    ],
    "assess": {
@@ -240,6 +240,65 @@
     },
     "why": [
      "큰 사건 단어",
+     "코스피 +4.34%"
+    ]
+   }
+  },
+  {
+   "id": "2t9n8o",
+   "title": "'젠슨황 불륜 상대' 연계 中시설서 엔비디아 최첨단 칩 발견",
+   "firstSeen": "2026-11-27T16:44:00.000Z",
+   "lastSeen": "2026-11-27T18:42:00.000Z",
+   "count": 8,
+   "sources": 8,
+   "topics": [
+    "trade"
+   ],
+   "critical": [
+    "trade"
+   ],
+   "links": [
+    {
+     "title": "젠슨 황 '불륜 상대' 얽힌 中시설에…수출금지 엔비디아 칩이 왜?",
+     "link": "https://www.mt.co.kr/world/2026/11/28/2026112803365763647",
+     "host": "mt.co.kr",
+     "at": "2026-11-27T18:42:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 불륜 상대' 연계 시설서 엔비디아 최첨단 칩 발견",
+     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008867451&plink=ORI&cooper=NAVER",
+     "host": "news.sbs.co.kr",
+     "at": "2026-11-27T18:24:00.000Z"
+    },
+    {
+     "title": "\"엔비디아 블랙웰 中 반입 확인…앨리스 황 연계 시설\"",
+     "link": "https://www.newsis.com/view/NISX20261128_0003886949",
+     "host": "newsis.com",
+     "at": "2026-11-27T18:09:00.000Z"
+    },
+    {
+     "title": "‘젠슨황 불륜 상대’ 관련 중국 시설에 엔비디아 최첨단 칩 설치",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8724992&ref=A",
+     "host": "news.kbs.co.kr",
+     "at": "2026-11-27T17:15:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 49,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.34,
+     "unit": "%",
+     "z": 1.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '수출금지'",
      "코스피 +4.34%"
     ]
    }
@@ -323,65 +382,6 @@
     "why": [
      "큰 사건 단어 '호르무즈'",
      "금 +3.75%(평소의 2.4배)"
-    ]
-   }
-  },
-  {
-   "id": "2t9n8o",
-   "title": "'젠슨황 불륜 상대' 연계 中시설서 엔비디아 최첨단 칩 발견",
-   "firstSeen": "2026-11-27T16:44:00.000Z",
-   "lastSeen": "2026-11-27T18:42:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "trade"
-   ],
-   "critical": [
-    "trade"
-   ],
-   "links": [
-    {
-     "title": "젠슨 황 '불륜 상대' 얽힌 中시설에…수출금지 엔비디아 칩이 왜?",
-     "link": "https://www.mt.co.kr/world/2026/11/28/2026112803365763647",
-     "host": "mt.co.kr",
-     "at": "2026-11-27T18:42:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 불륜 상대' 연계 시설서 엔비디아 최첨단 칩 발견",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008867451&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-27T18:24:00.000Z"
-    },
-    {
-     "title": "‘젠슨황 불륜 상대’ 관련 중국 시설에 엔비디아 최첨단 칩 설치",
-     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8724992&ref=A",
-     "host": "news.kbs.co.kr",
-     "at": "2026-11-27T17:15:00.000Z"
-    },
-    {
-     "title": "‘젠슨 황 불륜 상대’ 연관된 中 데이터센터에서 엔비디아 최첨단 칩 ...",
-     "link": "https://biz.chosun.com/international/international_general/2026/11/28/OP5IVPGRBZGBNLR3T4TH3V34TM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "host": "biz.chosun.com",
-     "at": "2026-11-27T17:12:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 48,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.34,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '수출금지'",
-     "코스피 +4.34%"
     ]
    }
   },
@@ -628,9 +628,9 @@
    "id": "1hapebg",
    "title": "국민연금 3개월 만에 202조원 증발…상반기 수익률 절반 반납",
    "firstSeen": "2026-11-27T08:48:00.000Z",
-   "lastSeen": "2026-11-27T16:44:00.000Z",
-   "count": 16,
-   "sources": 15,
+   "lastSeen": "2026-11-27T20:00:00.000Z",
+   "count": 9,
+   "sources": 9,
    "topics": [
     "rates",
     "fx",
@@ -639,10 +639,10 @@
    "critical": [],
    "links": [
     {
-     "title": "국민연금 적립금… 석달새 202조 줄어",
-     "link": "https://www.donga.com/news/Society/article/all/20261127/135106505/2",
-     "host": "donga.com",
-     "at": "2026-11-27T16:44:00.000Z"
+     "title": "국민연금 3분기 누적 수익률 13.28%…적립금 202조원 감소",
+     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631435",
+     "host": "cbci.co.kr",
+     "at": "2026-11-27T20:00:00.000Z"
     },
     {
      "title": "국민연금 적립금 1664조원 … 국내주식 수익률 66.38%",
@@ -666,7 +666,7 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
+    "score": 27,
     "spike": 0,
     "news": false,
     "reaction": {
