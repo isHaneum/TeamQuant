@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T20:47:19.184Z",
+ "updatedAt": "2026-11-27T21:11:36.801Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -64,8 +64,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1333.8599853515625,
-   "change": -0.68,
+   "last": 1333.469970703125,
+   "change": -0.71,
    "z": -1.1,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
@@ -121,35 +121,35 @@
   }
  ],
  "spikes": {
-  "war": -0.3,
-  "politics": -0.8,
-  "rates": -1,
-  "trade": -1.2,
+  "war": -0.5,
+  "politics": -0.7,
+  "rates": -0.9,
+  "trade": -0.8,
   "fx": -0.2,
-  "energy": -0.3,
-  "market": -1.6,
+  "energy": -0.5,
+  "market": -1.2,
   "credit": -0.3,
   "disaster": 0,
-  "policy": -0.9
+  "policy": -0.8
  },
  "rates": {
   "war": {
-   "rate": 1,
-   "saturated": 0,
-   "queries": 3
-  },
-  "politics": {
-   "rate": 0.7,
-   "saturated": 0,
-   "queries": 3
-  },
-  "rates": {
    "rate": 0.8,
    "saturated": 0,
    "queries": 3
   },
+  "politics": {
+   "rate": 0.8,
+   "saturated": 0,
+   "queries": 3
+  },
+  "rates": {
+   "rate": 1.1,
+   "saturated": 0,
+   "queries": 3
+  },
   "trade": {
-   "rate": 2.2,
+   "rate": 2.8,
    "saturated": 0,
    "queries": 2
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 1.3,
+   "rate": 1,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 1.6,
+   "rate": 2.1,
    "saturated": 0,
    "queries": 3
   },
@@ -179,19 +179,80 @@
    "queries": 1
   },
   "policy": {
-   "rate": 0,
+   "rate": 0.3,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
   {
-   "id": "d1h4oa",
-   "title": "증안펀드 확대 기대에 코스닥 8% 급등…코스피도 4900선 회복",
-   "firstSeen": "2026-11-27T04:44:00.000Z",
+   "id": "16ibryt",
+   "title": "[오늘의 신문] 조희대 대법원장 탄핵 추진에 사법부 반발 확산...한은 기...",
+   "firstSeen": "2026-11-26T22:30:00.000Z",
+   "lastSeen": "2026-11-27T21:02:00.000Z",
+   "count": 4,
+   "sources": 4,
+   "topics": [
+    "politics",
+    "rates"
+   ],
+   "critical": [
+    "war",
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "‘계엄 2년’ 앞두고 조희대 탄핵 정국…국힘, ‘사법부 독립’ 여론전",
+     "link": "https://www.etoday.co.kr/news/view/2654017",
+     "host": "etoday.co.kr",
+     "at": "2026-11-27T21:02:00.000Z"
+    },
+    {
+     "title": "국내 증시 투자자 69% \"올해 손실\"…조희대 탄핵 '반대' 42%로 우세",
+     "link": "https://www.hankyung.com/article/202611274266i",
+     "host": "hankyung.com",
+     "at": "2026-11-27T01:34:00.000Z"
+    },
+    {
+     "title": "한병도 민주당 원내대표 \"조희대 탄핵 흔들림 없이 추진“",
+     "link": "http://www.breaknews.com/1254538",
+     "host": "breaknews.com",
+     "at": "2026-11-27T00:14:00.000Z"
+    },
+    {
+     "title": "[오늘의 신문] 조희대 대법원장 탄핵 추진에 사법부 반발 확산...한은 기...",
+     "link": "http://kor.theasian.asia/archives/423344",
+     "host": "kor.theasian.asia",
+     "at": "2026-11-26T22:30:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 58,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.75,
+     "unit": "%",
+     "z": 2.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '계엄'",
+     "금 +3.75%(평소의 2.4배)"
+    ]
+   }
+  },
+  {
+   "id": "1b1la51",
+   "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
+   "firstSeen": "2026-11-27T01:40:00.000Z",
    "lastSeen": "2026-11-27T15:35:00.000Z",
-   "count": 23,
-   "sources": 20,
+   "count": 13,
+   "sources": 9,
    "topics": [
     "market"
    ],
@@ -239,18 +300,18 @@
      "date": "2026-11-27"
     },
     "why": [
-     "큰 사건 단어",
+     "큰 사건 단어 '사이드카'",
      "코스피 +4.34%"
     ]
    }
   },
   {
    "id": "2t9n8o",
-   "title": "'젠슨황 불륜 상대' 연계 中시설서 엔비디아 최첨단 칩 발견",
+   "title": "[속보] ‘젠슨 황 불륜 상대’ 얽힌 中기업서 엔비디아 ‘블랙웰’ 칩 ...",
    "firstSeen": "2026-11-27T16:44:00.000Z",
-   "lastSeen": "2026-11-27T20:30:00.000Z",
-   "count": 9,
-   "sources": 9,
+   "lastSeen": "2026-11-27T21:04:00.000Z",
+   "count": 8,
+   "sources": 8,
    "topics": [
     "trade"
    ],
@@ -258,6 +319,18 @@
     "trade"
    ],
    "links": [
+    {
+     "title": "'젠슨 황 불륜 상대' 연계 중국 시설서 엔비디아 최첨단 칩 발견",
+     "link": "https://imnews.imbc.com/news/2026/world/article/6869228_36925.html",
+     "host": "imnews.imbc.com",
+     "at": "2026-11-27T21:04:00.000Z"
+    },
+    {
+     "title": "'젠슨 황 불륜 상대' 관련 中시설서 엔비디아 최첨단 칩 발견",
+     "link": "https://www.nocutnews.co.kr/news/6614002?utm_source=naver&utm_medium=article&utm_campaign=20261128054845",
+     "host": "nocutnews.co.kr",
+     "at": "2026-11-27T20:49:00.000Z"
+    },
     {
      "title": "'젠슨황 불륜 상대' 관련 중국 시설서 엔비디아 최첨단 칩 발견",
      "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5233390",
@@ -269,24 +342,12 @@
      "link": "https://www.mt.co.kr/world/2026/11/28/2026112803365763647",
      "host": "mt.co.kr",
      "at": "2026-11-27T18:42:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 불륜 상대' 연계 시설서 엔비디아 최첨단 칩 발견",
-     "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008867451&plink=ORI&cooper=NAVER",
-     "host": "news.sbs.co.kr",
-     "at": "2026-11-27T18:24:00.000Z"
-    },
-    {
-     "title": "\"엔비디아 블랙웰 中 반입 확인…앨리스 황 연계 시설\"",
-     "link": "https://www.newsis.com/view/NISX20261128_0003886949",
-     "host": "newsis.com",
-     "at": "2026-11-27T18:09:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 50,
+    "score": 49,
     "spike": 0,
     "news": true,
     "reaction": {
@@ -363,6 +424,47 @@
      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=508939",
      "host": "pinpointnews.co.kr",
      "at": "2026-11-27T06:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 49,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.75,
+     "unit": "%",
+     "z": 2.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '호르무즈'",
+     "금 +3.75%(평소의 2.4배)"
+    ]
+   }
+  },
+  {
+   "id": "5swb82",
+   "title": "호르무즈 봉쇄 장기화⋯“중동 국가들, 2029년까지 긴장 이어질 것”",
+   "firstSeen": "2026-11-27T21:02:00.000Z",
+   "lastSeen": "2026-11-27T21:02:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [
+    "energy"
+   ],
+   "links": [
+    {
+     "title": "호르무즈 봉쇄 장기화⋯“중동 국가들, 2029년까지 긴장 이어질 것”",
+     "link": "https://www.etoday.co.kr/news/view/2652941",
+     "host": "etoday.co.kr",
+     "at": "2026-11-27T21:02:00.000Z"
     }
    ],
    "assess": {
@@ -641,10 +743,10 @@
    }
   },
   {
-   "id": "1b1la51",
-   "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
-   "firstSeen": "2026-11-27T01:40:00.000Z",
-   "lastSeen": "2026-11-27T03:02:00.000Z",
+   "id": "1f0t5e6",
+   "title": "[이번주 증시는?]사이드카가 '출근 도장' 찍은 롤코 증시..젠슨황 '하루...",
+   "firstSeen": "2026-11-27T21:01:00.000Z",
+   "lastSeen": "2026-11-27T21:01:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
@@ -655,10 +757,10 @@
    ],
    "links": [
     {
-     "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
-     "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631320",
-     "host": "cbci.co.kr",
-     "at": "2026-11-27T03:02:00.000Z"
+     "title": "[이번주 증시는?]사이드카가 '출근 도장' 찍은 롤코 증시..젠슨황 '하루...",
+     "link": "https://www.fnnews.com/news/202611271557237153",
+     "host": "fnnews.com",
+     "at": "2026-11-27T21:01:00.000Z"
     }
    ],
    "assess": {
@@ -810,96 +912,6 @@
      "link": "https://www.etoday.co.kr/news/view/2654056",
      "host": "etoday.co.kr",
      "at": "2026-11-27T07:40:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 27,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.75,
-     "unit": "%",
-     "z": 2.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +3.75%(평소의 2.4배)"
-    ]
-   }
-  },
-  {
-   "id": "164p91h",
-   "title": "\"눈물 쏟고 고개 숙이고\"…코스피 반토막에 전문가들도 '충격'",
-   "firstSeen": "2026-11-27T09:18:00.000Z",
-   "lastSeen": "2026-11-27T14:35:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "war",
-    "rates",
-    "market"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"잘 버텨내자\" 전문가도 울린 롤러코스피…반토막 난 코스피에 '충격'",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611270156&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-27T14:35:00.000Z"
-    },
-    {
-     "title": "\"눈물 쏟고 고개 숙이고\"…코스피 반토막에 전문가들도 '충격'",
-     "link": "https://www.hankyung.com/article/202611274867H",
-     "host": "hankyung.com",
-     "at": "2026-11-27T09:18:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 27,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.75,
-     "unit": "%",
-     "z": 2.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "금 +3.75%(평소의 2.4배)"
-    ]
-   }
-  },
-  {
-   "id": "1p5xgks",
-   "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
-   "firstSeen": "2026-11-27T05:42:00.000Z",
-   "lastSeen": "2026-11-27T15:29:00.000Z",
-   "count": 2,
-   "sources": 2,
-   "topics": [
-    "energy"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "[천자칼럼] 유럽식 '거래의 정석'",
-     "link": "https://www.hankyung.com/article/2026112754031",
-     "host": "hankyung.com",
-     "at": "2026-11-27T15:29:00.000Z"
-    },
-    {
-     "title": "코스피200 레버리지 거래 35%↑…인버스2X 14%↓",
-     "link": "http://www.kjdaily.com/article.php?aid=1795792945693751276",
-     "host": "kjdaily.com",
-     "at": "2026-11-27T15:24:00.000Z"
     }
    ],
    "assess": {
