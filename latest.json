@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-27T03:16:27.781Z",
+ "updatedAt": "2026-11-27T03:31:02.025Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -10,11 +10,12 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 4842.89990234375,
-   "change": 2.8,
-   "z": 0.9,
+   "last": 4872.01,
+   "change": 3.41,
+   "z": 1.1,
    "sd": 3.0263724756554877,
-   "source": "Yahoo",
+   "source": "네이버 현재가",
+   "live": true,
    "checked": true
   },
   {
@@ -23,9 +24,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 693.47998046875,
-   "change": 5.76,
-   "z": 2,
+   "last": 694.7899780273438,
+   "change": 5.96,
+   "z": 2.1,
    "sd": 2.8750514650474877,
    "source": "Yahoo",
    "checked": true
@@ -62,9 +63,9 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-27",
-   "last": 1341.260009765625,
-   "change": -0.13,
-   "z": -0.2,
+   "last": 1340.31005859375,
+   "change": -0.2,
+   "z": -0.3,
    "sd": 0.6158674134044025,
    "source": "Yahoo"
   },
@@ -74,8 +75,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 85.75,
-   "change": 2.47,
+   "last": 85.8499984741211,
+   "change": 2.59,
    "z": 0.9,
    "sd": 2.870433546363806,
    "source": "Yahoo"
@@ -86,8 +87,8 @@
    "unit": "%",
    "available": true,
    "date": "2026-11-26",
-   "last": 3659.10009765625,
-   "change": 3.49,
+   "last": 3656.10009765625,
+   "change": 3.4,
    "z": 2.2,
    "sd": 1.5507206150509518,
    "source": "Yahoo"
@@ -119,20 +120,20 @@
   }
  ],
  "spikes": {
-  "war": 0.4,
+  "war": 0.3,
   "politics": 0.5,
-  "rates": 0.8,
-  "trade": 1,
+  "rates": 0.6,
+  "trade": 0.5,
   "fx": -0.2,
-  "energy": 1.3,
-  "market": 0.4,
+  "energy": 1.1,
+  "market": 0.1,
   "credit": 0.7,
   "disaster": 0,
   "policy": 1.1
  },
  "rates": {
   "war": {
-   "rate": 1.9,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
@@ -142,12 +143,12 @@
    "queries": 3
   },
   "rates": {
-   "rate": 4.1,
+   "rate": 3.8,
    "saturated": 1,
    "queries": 3
   },
   "trade": {
-   "rate": 5.7,
+   "rate": 5,
    "saturated": 1,
    "queries": 2
   },
@@ -157,12 +158,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 4.7,
+   "rate": 4.3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 4.4,
+   "rate": 4,
    "saturated": 1,
    "queries": 3
   },
@@ -226,20 +227,20 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 65,
-    "spike": 1.3,
+    "score": 64,
+    "spike": 1.1,
     "news": true,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.49,
+     "change": 3.4,
      "unit": "%",
      "z": 2.2,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '원유 공급 차질'",
-     "금 +3.49%(평소의 2.2배)"
+     "금 +3.4%(평소의 2.2배)"
     ]
    }
   },
@@ -267,20 +268,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 56,
-    "spike": 1.3,
+    "score": 55,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.49,
+     "change": 3.4,
      "unit": "%",
      "z": 2.2,
      "date": "2026-11-26"
     },
     "why": [
      "큰 사건 단어 '호르무즈'",
-     "금 +3.49%(평소의 2.2배)"
+     "금 +3.4%(평소의 2.2배)"
     ]
    }
   },
@@ -288,9 +289,9 @@
    "id": "ohz635",
    "title": "국내 증시 장 초반 엇갈려…코스피 보합·코스닥 3%↑",
    "firstSeen": "2026-11-27T00:38:00.000Z",
-   "lastSeen": "2026-11-27T03:02:00.000Z",
-   "count": 11,
-   "sources": 11,
+   "lastSeen": "2026-11-27T03:20:00.000Z",
+   "count": 12,
+   "sources": 12,
    "topics": [
     "market"
    ],
@@ -298,6 +299,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "[오전시황] 코스닥 6%대 급등, 상한가 9개 종목...매수사이드카 발동",
+     "link": "https://www.junggi.co.kr/news/articleView.html?idxno=38677",
+     "host": "junggi.co.kr",
+     "at": "2026-11-27T03:20:00.000Z"
+    },
     {
      "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=631320",
@@ -315,31 +322,25 @@
      "link": "https://www.ytn.co.kr/_ln/0102_202611271135369388",
      "host": "ytn.co.kr",
      "at": "2026-11-27T02:35:00.000Z"
-    },
-    {
-     "title": "코스닥, '외국인·기관' 매수에 5%대 급등...매수 사이드카 발동",
-     "link": "https://www.newspim.com/news/view/20261127000353",
-     "host": "newspim.com",
-     "at": "2026-11-27T02:05:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 48,
-    "spike": 0.4,
+    "score": 47,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 2.8,
+     "change": 3.41,
      "unit": "%",
-     "z": 0.9,
+     "z": 1.1,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +2.8%"
+     "코스피 +3.41%"
     ]
    }
   },
@@ -347,9 +348,9 @@
    "id": "xao6m6",
    "title": "코스닥 장중 5% 넘게 급등…증안펀드 투입 기대에 외국인·기관 ‘사자...",
    "firstSeen": "2026-11-27T01:25:00.000Z",
-   "lastSeen": "2026-11-27T03:00:00.000Z",
-   "count": 6,
-   "sources": 6,
+   "lastSeen": "2026-11-27T03:24:00.000Z",
+   "count": 7,
+   "sources": 7,
    "topics": [
     "market"
    ],
@@ -357,6 +358,12 @@
     "market"
    ],
    "links": [
+    {
+     "title": "코스피 장중 4800선 회복… 코스닥 6%대 급등",
+     "link": "https://www.kbsm.net/news/view.php?idx=543581",
+     "host": "kbsm.net",
+     "at": "2026-11-27T03:24:00.000Z"
+    },
     {
      "title": "[종합] 코스닥 5%대 급등…증안펀드 기대에 3거래일 만에 매수 사이드카",
      "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904691",
@@ -374,31 +381,25 @@
      "link": "https://www.edaily.co.kr/News/Read?newsId=02072966645649984&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
      "host": "edaily.co.kr",
      "at": "2026-11-27T02:28:00.000Z"
-    },
-    {
-     "title": "증안펀드 기대에 살아난 증시…코스닥 매수 사이드카",
-     "link": "https://www.sidae.com/article/2026112710482234680",
-     "host": "sidae.com",
-     "at": "2026-11-27T02:24:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 44,
-    "spike": 0.4,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 2.8,
+     "change": 3.41,
      "unit": "%",
-     "z": 0.9,
+     "z": 1.1,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +2.8%"
+     "코스피 +3.41%"
     ]
    }
   },
@@ -445,19 +446,101 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 40,
-    "spike": 1.3,
+    "score": 39,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.49,
+     "change": 3.4,
      "unit": "%",
      "z": 2.2,
      "date": "2026-11-26"
     },
     "why": [
-     "금 +3.49%(평소의 2.2배)"
+     "금 +3.4%(평소의 2.2배)"
+    ]
+   }
+  },
+  {
+   "id": "zmqmtg",
+   "title": "만기 연장에도 또 부도 위험… 中 부동산 ‘2차 디폴트’ 그림자",
+   "firstSeen": "2026-11-27T01:58:00.000Z",
+   "lastSeen": "2026-11-27T01:58:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "credit"
+   ],
+   "critical": [
+    "credit"
+   ],
+   "links": [
+    {
+     "title": "만기 연장에도 또 부도 위험… 中 부동산 ‘2차 디폴트’ 그림자",
+     "link": "https://www.segye.com/newsView/20261127505596?OutUrl=naver",
+     "host": "segye.com",
+     "at": "2026-11-27T01:58:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 35,
+    "spike": 0.7,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 3.41,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '디폴트'",
+     "코스피 +3.41%"
+    ]
+   }
+  },
+  {
+   "id": "2vy9me",
+   "title": "장동혁 국민의힘 대표, “대법원장 탄핵 의회 쿠데타…안보 해체 막을 ...",
+   "firstSeen": "2026-11-27T00:14:00.000Z",
+   "lastSeen": "2026-11-27T00:14:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "politics"
+   ],
+   "critical": [
+    "politics"
+   ],
+   "links": [
+    {
+     "title": "장동혁 국민의힘 대표, “대법원장 탄핵 의회 쿠데타…안보 해체 막을 ...",
+     "link": "http://www.breaknews.com/1254541",
+     "host": "breaknews.com",
+     "at": "2026-11-27T00:14:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 34,
+    "spike": 0.5,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 3.41,
+     "unit": "%",
+     "z": 1.1,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '쿠데타'",
+     "코스피 +3.41%"
     ]
    }
   },
@@ -489,19 +572,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 34,
-    "spike": 1.3,
+    "score": 33,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.49,
+     "change": 3.4,
      "unit": "%",
      "z": 2.2,
      "date": "2026-11-26"
     },
     "why": [
-     "금 +3.49%(평소의 2.2배)"
+     "금 +3.4%(평소의 2.2배)"
     ]
    }
   },
@@ -535,102 +618,20 @@
    "assess": {
     "level": "caution",
     "label": "주의",
-    "score": 34,
-    "spike": 0.4,
+    "score": 33,
+    "spike": 0.1,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 2.8,
+     "change": 3.41,
      "unit": "%",
-     "z": 0.9,
+     "z": 1.1,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +2.8%"
-    ]
-   }
-  },
-  {
-   "id": "zmqmtg",
-   "title": "만기 연장에도 또 부도 위험… 中 부동산 ‘2차 디폴트’ 그림자",
-   "firstSeen": "2026-11-27T01:58:00.000Z",
-   "lastSeen": "2026-11-27T01:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "만기 연장에도 또 부도 위험… 中 부동산 ‘2차 디폴트’ 그림자",
-     "link": "https://www.segye.com/newsView/20261127505596?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-27T01:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 34,
-    "spike": 0.7,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 2.8,
-     "unit": "%",
-     "z": 0.9,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '디폴트'",
-     "코스피 +2.8%"
-    ]
-   }
-  },
-  {
-   "id": "2vy9me",
-   "title": "장동혁 국민의힘 대표, “대법원장 탄핵 의회 쿠데타…안보 해체 막을 ...",
-   "firstSeen": "2026-11-27T00:14:00.000Z",
-   "lastSeen": "2026-11-27T00:14:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "politics"
-   ],
-   "critical": [
-    "politics"
-   ],
-   "links": [
-    {
-     "title": "장동혁 국민의힘 대표, “대법원장 탄핵 의회 쿠데타…안보 해체 막을 ...",
-     "link": "http://www.breaknews.com/1254541",
-     "host": "breaknews.com",
-     "at": "2026-11-27T00:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 32,
-    "spike": 0.5,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 2.8,
-     "unit": "%",
-     "z": 0.9,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '쿠데타'",
-     "코스피 +2.8%"
+     "코스피 +3.41%"
     ]
    }
   },
@@ -658,19 +659,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 31,
-    "spike": 1.3,
+    "score": 30,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.49,
+     "change": 3.4,
      "unit": "%",
      "z": 2.2,
      "date": "2026-11-26"
     },
     "why": [
-     "금 +3.49%(평소의 2.2배)"
+     "금 +3.4%(평소의 2.2배)"
     ]
    }
   },
@@ -698,20 +699,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 31,
-    "spike": 0.4,
+    "score": 30,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 2.8,
+     "change": 3.41,
      "unit": "%",
-     "z": 0.9,
+     "z": 1.1,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +2.8%"
+     "코스피 +3.41%"
     ]
    }
   },
@@ -738,19 +739,19 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 31,
-    "spike": 1.3,
+    "score": 30,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.49,
+     "change": 3.4,
      "unit": "%",
      "z": 2.2,
      "date": "2026-11-26"
     },
     "why": [
-     "금 +3.49%(평소의 2.2배)"
+     "금 +3.4%(평소의 2.2배)"
     ]
    }
   },
@@ -778,20 +779,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 31,
-    "spike": 0.4,
+    "score": 30,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 2.8,
+     "change": 3.41,
      "unit": "%",
-     "z": 0.9,
+     "z": 1.1,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +2.8%"
+     "코스피 +3.41%"
     ]
    }
   },
@@ -819,20 +820,20 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 31,
-    "spike": 0.4,
+    "score": 30,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
      "label": "코스피",
-     "change": 2.8,
+     "change": 3.41,
      "unit": "%",
-     "z": 0.9,
+     "z": 1.1,
      "date": "2026-11-27"
     },
     "why": [
      "큰 사건 단어 '사이드카'",
-     "코스피 +2.8%"
+     "코스피 +3.41%"
     ]
    }
   },
@@ -859,24 +860,36 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 31,
-    "spike": 1.3,
+    "score": 30,
+    "spike": 1.1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
      "label": "금",
-     "change": 3.49,
+     "change": 3.4,
      "unit": "%",
      "z": 2.2,
      "date": "2026-11-26"
     },
     "why": [
-     "금 +3.49%(평소의 2.2배)"
+     "금 +3.4%(평소의 2.2배)"
     ]
    }
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-27T03:31:02.025Z",
+   "id": "9460ef",
+   "level": "caution",
+   "title": "유가 또 들썩 … 후티, 사우디 정유시설 공격",
+   "why": [
+    "큰 사건 단어 '원유 공급 차질'",
+    "금 +3.4%(평소의 2.2배)"
+   ],
+   "link": "http://www.newstomato.com/ReadNews.aspx?no=1322102&inflow=N",
+   "delivered": false
+  },
   {
    "at": "2026-11-27T02:47:53.528Z",
    "id": "ohz635",
@@ -1103,18 +1116,6 @@
     "공포지수(VIX) −5.27%"
    ],
    "link": "https://www.mt.co.kr/opinion/2026/11/27/2026112512075092447",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-26T23:27:34.061Z",
-   "id": "27n60f",
-   "level": "caution",
-   "title": "천하람 “조희대 탄핵, 비상계엄 못잖은 미친 짓”…민주당·정부 정책...",
-   "why": [
-    "큰 사건 단어 '계엄'",
-    "금 +1.61%"
-   ],
-   "link": "https://biz.heraldcorp.com/article/10950119?ref=naver",
    "delivered": false
   }
  ],
