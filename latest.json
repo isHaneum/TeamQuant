@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-28T01:47:38.248Z",
+ "updatedAt": "2026-11-28T02:17:56.492Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -121,35 +121,35 @@
   }
  ],
  "spikes": {
-  "war": 0.7,
-  "politics": 0.2,
-  "rates": 0.2,
-  "trade": 0,
+  "war": 1,
+  "politics": 0.4,
+  "rates": 0.3,
+  "trade": 0.1,
   "fx": -0.2,
-  "energy": 0.3,
-  "market": 0.1,
+  "energy": 0.4,
+  "market": 0,
   "credit": -0.3,
   "disaster": 0,
-  "policy": -0.2
+  "policy": 0
  },
  "rates": {
   "war": {
-   "rate": 2.3,
+   "rate": 2.6,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2,
+   "rate": 2.3,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.1,
+   "rate": 3.3,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 4.2,
+   "rate": 4.3,
    "saturated": 1,
    "queries": 2
   },
@@ -159,12 +159,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.7,
+   "rate": 3,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.8,
+   "rate": 3.7,
    "saturated": 0,
    "queries": 3
   },
@@ -179,7 +179,7 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   }
@@ -209,8 +209,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 55,
-    "spike": 0.7,
+    "score": 57,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -251,8 +251,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 51,
-    "spike": 0.2,
+    "score": 52,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -273,8 +273,8 @@
    "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
    "firstSeen": "2026-11-27T03:02:00.000Z",
    "lastSeen": "2026-11-28T01:34:00.000Z",
-   "count": 8,
-   "sources": 7,
+   "count": 9,
+   "sources": 8,
    "topics": [
     "market"
    ],
@@ -301,17 +301,17 @@
      "at": "2026-11-27T23:53:00.000Z"
     },
     {
-     "title": "증안펀드 기대에 증시 급등…코스닥 '사이드카'",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH202611271917413XG",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-27T10:18:00.000Z"
+     "title": "[데일리 머니마켓] 나스닥 2.3% 급등",
+     "link": "https://www.bigtanews.co.kr/article/view/big202611280001",
+     "host": "bigtanews.co.kr",
+     "at": "2026-11-27T22:14:00.000Z"
     }
    ],
    "assess": {
     "level": "caution",
     "label": "주의",
     "score": 50,
-    "spike": 0.1,
+    "spike": 0,
     "news": true,
     "reaction": {
      "symbol": "^KS11",
@@ -331,15 +331,27 @@
    "id": "1gcxv3k",
    "title": "[亞증시-종합] 기술주 반등에 일제히 상승",
    "firstSeen": "2026-11-27T10:16:00.000Z",
-   "lastSeen": "2026-11-28T01:44:00.000Z",
-   "count": 23,
-   "sources": 21,
+   "lastSeen": "2026-11-28T02:16:00.000Z",
+   "count": 25,
+   "sources": 24,
    "topics": [
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "[해외시황] 뉴욕증시, AI·기술주 반등에 3대 지수 상승…나스닥 2.31%↑",
+     "link": "http://www.newsprime.co.kr/news/article.html?no=756918",
+     "host": "newsprime.co.kr",
+     "at": "2026-11-28T02:16:00.000Z"
+    },
+    {
+     "title": "뉴욕증시 AI·반도체 급반등에 3대 지수 일제히 상승… 나스닥 2.31% 껑충",
+     "link": "https://www.gukjenews.com/news/articleView.html?idxno=3765945",
+     "host": "gukjenews.com",
+     "at": "2026-11-28T01:50:00.000Z"
+    },
     {
      "title": "뉴욕증시, AI·기술주 반등에 상승 마감…나스닥 2.3%↑",
      "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005972221",
@@ -351,25 +363,13 @@
      "link": "https://www.newsway.co.kr/news/view?ud=2026112810350136829",
      "host": "newsway.co.kr",
      "at": "2026-11-28T01:36:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 기술주 반등에 일제히 상승⋯나스닥 2.31%↑",
-     "link": "https://www.viva100.com/article/20261128500049",
-     "host": "viva100.com",
-     "at": "2026-11-28T01:22:00.000Z"
-    },
-    {
-     "title": "뉴욕증시 AI 기술주 강세에 상승 마감...주간 나스닥 4월 이후 최대 상승",
-     "link": "https://www.chosun.com/economy/money/2026/11/28/T3O5LC4ZTBFB5CC2AUYYZWQRQE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "host": "chosun.com",
-     "at": "2026-11-28T00:57:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 43,
-    "spike": 0.3,
+    "score": 44,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -386,9 +386,9 @@
   },
   {
    "id": "ouowsb",
-   "title": "美 '블프' 온라인 소비 역대 최대 전망…고물가에 할인상품 몰려",
+   "title": "美 '블프' 온라인 소비 역대 최대 전망…고물가에 할인행사에 '인산인해...",
    "firstSeen": "2026-11-27T22:41:00.000Z",
-   "lastSeen": "2026-11-28T01:42:00.000Z",
+   "lastSeen": "2026-11-28T02:06:00.000Z",
    "count": 5,
    "sources": 5,
    "topics": [
@@ -396,6 +396,12 @@
    ],
    "critical": [],
    "links": [
+    {
+     "title": "美 블랙프라이데이 온라인 소비 역대 최대 전망…고물가에 생필품도 할...",
+     "link": "https://www.munhwa.com/article/11634747?ref=naver",
+     "host": "munhwa.com",
+     "at": "2026-11-28T02:06:00.000Z"
+    },
     {
      "title": "미 '블프' 온라인 소비 역대 최대 전망…할인상품 몰린 이유",
      "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008867725&plink=ORI&cooper=NAVER",
@@ -413,19 +419,13 @@
      "link": "https://www.slist.kr/news/articleView.html?idxno=785481",
      "host": "slist.kr",
      "at": "2026-11-27T23:20:00.000Z"
-    },
-    {
-     "title": "美 '블프' 온라인 소비 역대 최대 전망…고물가에 할인행사에 '인산인해...",
-     "link": "https://www.getnews.co.kr/news/articleView.html?idxno=888760",
-     "host": "getnews.co.kr",
-     "at": "2026-11-27T23:00:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 42,
-    "spike": 0.7,
+    "score": 44,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -480,8 +480,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 42,
-    "spike": 0.7,
+    "score": 44,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -536,8 +536,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 39,
-    "spike": 0.7,
+    "score": 41,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -577,8 +577,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 36,
-    "spike": 0.2,
+    "score": 37,
+    "spike": 0.4,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -590,88 +590,6 @@
     },
     "why": [
      "큰 사건 단어 '관세 폭탄'",
-     "코스피 +4.34%"
-    ]
-   }
-  },
-  {
-   "id": "1f0t5e6",
-   "title": "[이번주 증시는?]사이드카가 '출근 도장' 찍은 롤코 증시..젠슨황 '하루...",
-   "firstSeen": "2026-11-27T21:01:00.000Z",
-   "lastSeen": "2026-11-27T21:01:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[이번주 증시는?]사이드카가 '출근 도장' 찍은 롤코 증시..젠슨황 '하루...",
-     "link": "https://www.fnnews.com/news/202611271557237153",
-     "host": "fnnews.com",
-     "at": "2026-11-27T21:01:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 35,
-    "spike": 0.1,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.34,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '사이드카'",
-     "코스피 +4.34%"
-    ]
-   }
-  },
-  {
-   "id": "zmqmtg",
-   "title": "만기 연장에도 또 부도 위험… 中 부동산 ‘2차 디폴트’ 그림자",
-   "firstSeen": "2026-11-27T01:58:00.000Z",
-   "lastSeen": "2026-11-27T01:58:00.000Z",
-   "count": 1,
-   "sources": 1,
-   "topics": [
-    "credit"
-   ],
-   "critical": [
-    "credit"
-   ],
-   "links": [
-    {
-     "title": "만기 연장에도 또 부도 위험… 中 부동산 ‘2차 디폴트’ 그림자",
-     "link": "https://www.segye.com/newsView/20261127505596?OutUrl=naver",
-     "host": "segye.com",
-     "at": "2026-11-27T01:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 34,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.34,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '디폴트'",
      "코스피 +4.34%"
     ]
    }
@@ -705,8 +623,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 33,
-    "spike": 0.7,
+    "score": 35,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -722,40 +640,43 @@
    }
   },
   {
-   "id": "1rnsrr5",
-   "title": "전쟁 피해 복구 사업 커지나…현대건설·GS건설 등 건설주 '함박웃음'",
-   "firstSeen": "2026-11-27T05:24:00.000Z",
-   "lastSeen": "2026-11-27T05:24:00.000Z",
+   "id": "1f0t5e6",
+   "title": "[이번주 증시는?]사이드카가 '출근 도장' 찍은 롤코 증시..젠슨황 '하루...",
+   "firstSeen": "2026-11-27T21:01:00.000Z",
+   "lastSeen": "2026-11-27T21:01:00.000Z",
    "count": 1,
    "sources": 1,
    "topics": [
-    "war"
+    "market"
    ],
-   "critical": [],
+   "critical": [
+    "market"
+   ],
    "links": [
     {
-     "title": "전쟁 피해 복구 사업 커지나…현대건설·GS건설 등 건설주 '함박웃음'",
-     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=508872",
-     "host": "pinpointnews.co.kr",
-     "at": "2026-11-27T05:24:00.000Z"
+     "title": "[이번주 증시는?]사이드카가 '출근 도장' 찍은 롤코 증시..젠슨황 '하루...",
+     "link": "https://www.fnnews.com/news/202611271557237153",
+     "host": "fnnews.com",
+     "at": "2026-11-27T21:01:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 30,
-    "spike": 0.7,
+    "score": 34,
+    "spike": 0,
     "news": false,
     "reaction": {
-     "symbol": "GC=F",
-     "label": "금",
-     "change": 3.75,
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.34,
      "unit": "%",
-     "z": 2.4,
+     "z": 1.4,
      "date": "2026-11-27"
     },
     "why": [
-     "금 +3.75%(평소의 2.4배)"
+     "큰 사건 단어 '사이드카'",
+     "코스피 +4.34%"
     ]
    }
   },
@@ -782,8 +703,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 30,
-    "spike": 0.7,
+    "score": 32,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -822,8 +743,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 30,
-    "spike": 0.7,
+    "score": 32,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -861,8 +782,85 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 30,
-    "spike": 0.7,
+    "score": 32,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.75,
+     "unit": "%",
+     "z": 2.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +3.75%(평소의 2.4배)"
+    ]
+   }
+  },
+  {
+   "id": "avzvqn",
+   "title": "중동발 원유 공급 위기 다시 부상…S-Oil 웃고 제주항공 울까",
+   "firstSeen": "2026-11-27T21:34:00.000Z",
+   "lastSeen": "2026-11-27T21:34:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war",
+    "energy"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "중동발 원유 공급 위기 다시 부상…S-Oil 웃고 제주항공 울까",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=509074",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-27T21:34:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 32,
+    "spike": 1,
+    "news": false,
+    "reaction": {
+     "symbol": "GC=F",
+     "label": "금",
+     "change": 3.75,
+     "unit": "%",
+     "z": 2.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "금 +3.75%(평소의 2.4배)"
+    ]
+   }
+  },
+  {
+   "id": "1qycp95",
+   "title": "AI 데이터센터가 부른 구리 확보 전쟁…LS·풍산 수혜 기대 커지나",
+   "firstSeen": "2026-11-27T22:54:00.000Z",
+   "lastSeen": "2026-11-27T22:54:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "war"
+   ],
+   "critical": [],
+   "links": [
+    {
+     "title": "AI 데이터센터가 부른 구리 확보 전쟁…LS·풍산 수혜 기대 커지나",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=509096",
+     "host": "pinpointnews.co.kr",
+     "at": "2026-11-27T22:54:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 32,
+    "spike": 1,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
