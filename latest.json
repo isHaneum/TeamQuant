@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-28T02:47:46.333Z",
+ "updatedAt": "2026-11-28T03:15:36.913Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -119,30 +119,30 @@
   }
  ],
  "spikes": {
-  "war": 0.5,
-  "politics": 0.2,
-  "rates": 0.2,
+  "war": 0.3,
+  "politics": -0.1,
+  "rates": 0,
   "trade": 0.1,
   "fx": -0.2,
-  "energy": 0.1,
-  "market": -0.2,
+  "energy": -0.2,
+  "market": -0.9,
   "credit": -0.3,
   "disaster": 0,
-  "policy": 0
+  "policy": -0.2
  },
  "rates": {
   "war": {
-   "rate": 2,
+   "rate": 1.8,
    "saturated": 0,
    "queries": 3
   },
   "politics": {
-   "rate": 2,
+   "rate": 1.6,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 3.1,
+   "rate": 2.7,
    "saturated": 0,
    "queries": 3
   },
@@ -157,12 +157,12 @@
    "queries": 1
   },
   "energy": {
-   "rate": 2.3,
+   "rate": 1.7,
    "saturated": 0,
    "queries": 1
   },
   "market": {
-   "rate": 3.4,
+   "rate": 2.4,
    "saturated": 0,
    "queries": 3
   },
@@ -177,12 +177,71 @@
    "queries": 1
   },
   "policy": {
-   "rate": 1.7,
+   "rate": 1.3,
    "saturated": 0,
    "queries": 1
   }
  },
  "issues": [
+  {
+   "id": "1kus3wj",
+   "title": "코스피 4.3% 급등·코스닥 8.1% 폭등...외국인 1조원대 매수, 롤러코스터...",
+   "firstSeen": "2026-11-27T07:16:00.000Z",
+   "lastSeen": "2026-11-28T02:12:00.000Z",
+   "count": 11,
+   "sources": 10,
+   "topics": [
+    "market"
+   ],
+   "critical": [
+    "market"
+   ],
+   "links": [
+    {
+     "title": "“4% 급등에도 고점 대비 반토막”…코스피 구할 증안펀드 언제 투입되...",
+     "link": "https://www.ddaily.co.kr/page/view/2026112809201727871",
+     "host": "ddaily.co.kr",
+     "at": "2026-11-28T02:12:00.000Z"
+    },
+    {
+     "title": "[11월 넷째 주 세계경제동향 브리핑] 코스닥 9.8% 급등…한미 증시 동반...",
+     "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3042393",
+     "host": "kihoilbo.co.kr",
+     "at": "2026-11-28T01:34:00.000Z"
+    },
+    {
+     "title": "[NZSI INDEX] 2026년 11월 27일… 코스피 4.34%·코스닥 8.13% 급등, 외국...",
+     "link": "https://www.the-today.com/news/articleView.html?idxno=94217",
+     "host": "the-today.com",
+     "at": "2026-11-28T00:40:00.000Z"
+    },
+    {
+     "title": "나스닥 주간 6.7% 반등·SOXL 14% 급등…외국인 돌아온 코스피, 5000선 회...",
+     "link": "https://www.greened.kr/news/articleView.html?idxno=355829",
+     "host": "greened.kr",
+     "at": "2026-11-27T23:53:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "caution",
+    "label": "주의",
+    "score": 51,
+    "spike": 0,
+    "news": true,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.34,
+     "unit": "%",
+     "z": 1.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어",
+     "코스피 +4.34%"
+    ]
+   }
+  },
   {
    "id": "4klakp",
    "title": "호르무즈 해협 다시 전운…美 봉쇄 돌파 상선 타격, 이란 강경 맞불",
@@ -207,8 +266,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 53,
-    "spike": 0.5,
+    "score": 51,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -249,8 +308,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 51,
-    "spike": 0.2,
+    "score": 49,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -267,77 +326,24 @@
    }
   },
   {
-   "id": "t9mjd9",
-   "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
-   "firstSeen": "2026-11-27T03:02:00.000Z",
-   "lastSeen": "2026-11-28T01:34:00.000Z",
-   "count": 9,
-   "sources": 8,
-   "topics": [
-    "market"
-   ],
-   "critical": [
-    "market"
-   ],
-   "links": [
-    {
-     "title": "[11월 넷째 주 세계경제동향 브리핑] 코스닥 9.8% 급등…한미 증시 동반...",
-     "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3042393",
-     "host": "kihoilbo.co.kr",
-     "at": "2026-11-28T01:34:00.000Z"
-    },
-    {
-     "title": "[NZSI INDEX] 2026년 11월 27일… 코스피 4.34%·코스닥 8.13% 급등, 외국...",
-     "link": "https://www.the-today.com/news/articleView.html?idxno=94217",
-     "host": "the-today.com",
-     "at": "2026-11-28T00:40:00.000Z"
-    },
-    {
-     "title": "나스닥 주간 6.7% 반등·SOXL 14% 급등…외국인 돌아온 코스피, 5000선 회...",
-     "link": "https://www.greened.kr/news/articleView.html?idxno=355829",
-     "host": "greened.kr",
-     "at": "2026-11-27T23:53:00.000Z"
-    },
-    {
-     "title": "[데일리 머니마켓] 나스닥 2.3% 급등",
-     "link": "https://www.bigtanews.co.kr/article/view/big202611280001",
-     "host": "bigtanews.co.kr",
-     "at": "2026-11-27T22:14:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "caution",
-    "label": "주의",
-    "score": 50,
-    "spike": 0,
-    "news": true,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.34,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "큰 사건 단어 '사이드카'",
-     "코스피 +4.34%"
-    ]
-   }
-  },
-  {
    "id": "1gcxv3k",
    "title": "[亞증시-종합] 기술주 반등에 일제히 상승",
    "firstSeen": "2026-11-27T10:16:00.000Z",
-   "lastSeen": "2026-11-28T02:16:00.000Z",
+   "lastSeen": "2026-11-28T02:50:00.000Z",
    "count": 25,
-   "sources": 24,
+   "sources": 25,
    "topics": [
     "energy",
     "market"
    ],
    "critical": [],
    "links": [
+    {
+     "title": "뉴욕증시, AI 투자 우려 완화에 일제히 상승-나스닥 2.31% 급등",
+     "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=96134",
+     "host": "mediafine.co.kr",
+     "at": "2026-11-28T02:50:00.000Z"
+    },
     {
      "title": "[해외시황] 뉴욕증시, AI·기술주 반등에 3대 지수 상승…나스닥 2.31%↑",
      "link": "http://www.newsprime.co.kr/news/article.html?no=756918",
@@ -355,19 +361,13 @@
      "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005972221",
      "host": "mbnmoney.mbn.co.kr",
      "at": "2026-11-28T01:44:00.000Z"
-    },
-    {
-     "title": "뉴욕증시, 반도체주 반등에 일제히 상승…나스닥 2.31%↑",
-     "link": "https://www.newsway.co.kr/news/view?ud=2026112810350136829",
-     "host": "newsway.co.kr",
-     "at": "2026-11-28T01:36:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 42,
-    "spike": 0.1,
+    "score": 41,
+    "spike": 0,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -422,8 +422,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 40,
-    "spike": 0.5,
+    "score": 38,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -478,8 +478,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 40,
-    "spike": 0.5,
+    "score": 38,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -534,8 +534,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 37,
-    "spike": 0.5,
+    "score": 35,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -575,8 +575,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 36,
-    "spike": 0.2,
+    "score": 35,
+    "spike": 0.1,
     "news": false,
     "reaction": {
      "symbol": "^KS11",
@@ -662,8 +662,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 31,
-    "spike": 0.5,
+    "score": 29,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -701,8 +701,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
-    "spike": 0.5,
+    "score": 26,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -741,8 +741,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
-    "spike": 0.5,
+    "score": 26,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -780,8 +780,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
-    "spike": 0.5,
+    "score": 26,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -819,8 +819,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
-    "spike": 0.5,
+    "score": 26,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -857,8 +857,8 @@
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 28,
-    "spike": 0.5,
+    "score": 26,
+    "spike": 0.3,
     "news": false,
     "reaction": {
      "symbol": "GC=F",
@@ -875,6 +875,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-28T03:15:36.913Z",
+   "id": "1kus3wj",
+   "level": "caution",
+   "title": "코스피 4.3% 급등·코스닥 8.1% 폭등...외국인 1조원대 매수, 롤러코스터...",
+   "why": [
+    "큰 사건 단어",
+    "코스피 +4.34%"
+   ],
+   "link": "https://www.ddaily.co.kr/page/view/2026112809201727871",
+   "delivered": false
+  },
   {
    "at": "2026-11-28T02:47:46.333Z",
    "id": "t9mjd9",
@@ -1100,18 +1112,6 @@
     "코스피 +4.34%"
    ],
    "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=55265",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-27T12:33:01.046Z",
-   "id": "10k7e0",
-   "level": "caution",
-   "title": "후티, 사우디 최대 정유시설 공격 주장…원유 공급 차질 우려",
-   "why": [
-    "큰 사건 단어 '원유 공급 차질'",
-    "금 +4.52%(평소의 2.9배)"
-   ],
-   "link": "https://www.voakorea.com/a/yemen-violence-/8228365.html",
    "delivered": false
   }
  ],
