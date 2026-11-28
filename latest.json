@@ -1,6 +1,6 @@
 {
  "version": "I1-2026-11-06",
- "updatedAt": "2026-11-28T06:20:37.109Z",
+ "updatedAt": "2026-11-28T06:35:20.659Z",
  "mode": "watch",
  "newsSource": "네이버 뉴스 검색(배포 서버 경유)",
  "markets": [
@@ -120,7 +120,7 @@
  ],
  "spikes": {
   "war": -0.3,
-  "politics": -0.9,
+  "politics": -1,
   "rates": -0.8,
   "trade": -0.2,
   "fx": -0.2,
@@ -137,17 +137,17 @@
    "queries": 3
   },
   "politics": {
-   "rate": 0.6,
+   "rate": 0.4,
    "saturated": 0,
    "queries": 3
   },
   "rates": {
-   "rate": 1.3,
+   "rate": 1.2,
    "saturated": 0,
    "queries": 3
   },
   "trade": {
-   "rate": 3.8,
+   "rate": 3.7,
    "saturated": 1,
    "queries": 2
   },
@@ -566,6 +566,47 @@
    }
   },
   {
+   "id": "96l6t",
+   "title": "18년 만의 증시안정펀드 투입 임박...'공매도 금지' 카드까지 꺼낼까",
+   "firstSeen": "2026-11-28T06:22:00.000Z",
+   "lastSeen": "2026-11-28T06:22:00.000Z",
+   "count": 1,
+   "sources": 1,
+   "topics": [
+    "policy"
+   ],
+   "critical": [
+    "policy"
+   ],
+   "links": [
+    {
+     "title": "18년 만의 증시안정펀드 투입 임박...'공매도 금지' 카드까지 꺼낼까",
+     "link": "https://www.jibs.co.kr/news/articles/articlesDetail/68016?feed=na",
+     "host": "jibs.co.kr",
+     "at": "2026-11-28T06:22:00.000Z"
+    }
+   ],
+   "assess": {
+    "level": "watch",
+    "label": "참고",
+    "score": 34,
+    "spike": 0,
+    "news": false,
+    "reaction": {
+     "symbol": "^KS11",
+     "label": "코스피",
+     "change": 4.34,
+     "unit": "%",
+     "z": 1.4,
+     "date": "2026-11-27"
+    },
+    "why": [
+     "큰 사건 단어 '공매도 금지'",
+     "코스피 +4.34%"
+    ]
+   }
+  },
+  {
    "id": "kf0nak",
    "title": "이란 혁명수비대, 美 해상봉쇄 돌파 결의…\"공중·해상서 행동\"",
    "firstSeen": "2026-11-27T17:16:00.000Z",
@@ -622,62 +663,6 @@
    }
   },
   {
-   "id": "3qbuw0",
-   "title": "앨리스황 연계 中 데이터센터에 블랙웰 반입…젠슨 황 부담 가중",
-   "firstSeen": "2026-11-27T18:09:00.000Z",
-   "lastSeen": "2026-11-28T06:03:00.000Z",
-   "count": 7,
-   "sources": 7,
-   "topics": [
-    "trade"
-   ],
-   "critical": [],
-   "links": [
-    {
-     "title": "\"앨리스 황 연계 중국 시설에 엔비디아 AI 칩\"",
-     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261128150213SUE",
-     "host": "yonhapnewstv.co.kr",
-     "at": "2026-11-28T06:03:00.000Z"
-    },
-    {
-     "title": "'젠슨황 불륜' 앨리스 황 연계 중국 시설서 엔비디아 최첨단 칩 발견",
-     "link": "https://news.tf.co.kr/read/world/2394542.htm",
-     "host": "news.tf.co.kr",
-     "at": "2026-11-28T05:11:00.000Z"
-    },
-    {
-     "title": "'젠슨 황 불륜상대' 연계 中 데이터센터서 엔비디아 AI칩 발견",
-     "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0400&key=20261128.99099008945",
-     "host": "kookje.co.kr",
-     "at": "2026-11-28T05:06:00.000Z"
-    },
-    {
-     "title": "'젠슨황 불륜 상대' 연계 중국 시설서 엔비디아 최첨단 칩 발견",
-     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005972263",
-     "host": "mbnmoney.mbn.co.kr",
-     "at": "2026-11-28T04:58:00.000Z"
-    }
-   ],
-   "assess": {
-    "level": "watch",
-    "label": "참고",
-    "score": 23,
-    "spike": 0,
-    "news": false,
-    "reaction": {
-     "symbol": "^KS11",
-     "label": "코스피",
-     "change": 4.34,
-     "unit": "%",
-     "z": 1.4,
-     "date": "2026-11-27"
-    },
-    "why": [
-     "코스피 +4.34%"
-    ]
-   }
-  },
-  {
    "id": "1ioq1v2",
    "title": "\"고물가에 추가 긴축\" 한은, 기준금리 3.00→3.25%…하반기 세 차례 인상",
    "firstSeen": "2026-11-27T07:18:00.000Z",
@@ -690,15 +675,15 @@
    "critical": [],
    "links": [
     {
-     "title": "올해 3번 오른 한은 기준금리…다음 인상은 '내년 2월' 무게",
-     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904659",
-     "host": "newsworks.co.kr",
-     "at": "2026-11-27T23:00:00.000Z"
-    },
-    {
      "title": "반도체發 고성장…한은 긴축 딜레마[반도체 호황의 역설①]",
      "link": "https://www.newsis.com/view/NISX20261127_0003886733",
      "host": "newsis.com",
+     "at": "2026-11-27T23:00:00.000Z"
+    },
+    {
+     "title": "올해 3번 오른 한은 기준금리…다음 인상은 '내년 2월' 무게",
+     "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904659",
+     "host": "newsworks.co.kr",
      "at": "2026-11-27T23:00:00.000Z"
     },
     {
@@ -891,46 +876,46 @@
    }
   },
   {
-   "id": "1ixuj8z",
-   "title": "젠슨 황 복귀 카드도 안 통했다…흔들리는 '트럼프 풋'",
-   "firstSeen": "2026-11-27T22:29:00.000Z",
-   "lastSeen": "2026-11-28T02:16:00.000Z",
-   "count": 5,
-   "sources": 5,
+   "id": "2t9n8o",
+   "title": "젠슨 황 '불륜 상대' 연계 中 데이터센터서 엔비디아 최첨단 AI칩 발견",
+   "firstSeen": "2026-11-27T16:44:00.000Z",
+   "lastSeen": "2026-11-28T06:03:00.000Z",
+   "count": 6,
+   "sources": 6,
    "topics": [
-    "politics"
+    "trade"
    ],
    "critical": [],
    "links": [
     {
-     "title": "약발 다한 '트럼프 풋'…젠슨 황 복귀 효과도 '반짝'",
-     "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611280017&t=NN",
-     "host": "wowtv.co.kr",
-     "at": "2026-11-28T02:16:00.000Z"
+     "title": "\"앨리스 황 연계 중국 시설에 엔비디아 AI 칩\"",
+     "link": "http://www.yonhapnewstv.co.kr/news/MYH20261128150213SUE",
+     "host": "yonhapnewstv.co.kr",
+     "at": "2026-11-28T06:03:00.000Z"
     },
     {
-     "title": "[위클리 PICK 3] 젠슨 황 엔비디아 CEO 복귀부터 美, 한국에 과잉생산 관...",
-     "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=147571",
-     "host": "opinionnews.co.kr",
-     "at": "2026-11-28T01:00:00.000Z"
+     "title": "'젠슨황 불륜' 앨리스 황 연계 중국 시설서 엔비디아 최첨단 칩 발견",
+     "link": "https://news.tf.co.kr/read/world/2394542.htm",
+     "host": "news.tf.co.kr",
+     "at": "2026-11-28T05:11:00.000Z"
     },
     {
-     "title": "[명리예언] 경주 도사(道士) 단원(丹垣)...\"젠슨 황, 복귀 서둘렀다…20...",
-     "link": "http://www.breaknews.com/1254965",
-     "host": "breaknews.com",
-     "at": "2026-11-28T00:38:00.000Z"
+     "title": "'젠슨 황 불륜상대' 연계 中 데이터센터서 엔비디아 AI칩 발견",
+     "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0400&key=20261128.99099008945",
+     "host": "kookje.co.kr",
+     "at": "2026-11-28T05:06:00.000Z"
     },
     {
-     "title": "[뉴욕증시 주간결산] 젠슨 황 복귀에 엔비디아 20%↑…S&P500 5.6% 올라 1년...",
-     "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=95838",
-     "host": "thefairnews.co.kr",
-     "at": "2026-11-28T00:10:00.000Z"
+     "title": "'젠슨황 불륜 상대' 연계 중국 시설서 엔비디아 최첨단 칩 발견",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005972263",
+     "host": "mbnmoney.mbn.co.kr",
+     "at": "2026-11-28T04:58:00.000Z"
     }
    ],
    "assess": {
     "level": "watch",
     "label": "참고",
-    "score": 21,
+    "score": 22,
     "spike": 0,
     "news": false,
     "reaction": {
@@ -948,6 +933,18 @@
   }
  ],
  "alerts": [
+  {
+   "at": "2026-11-28T06:35:20.659Z",
+   "id": "1nflm7t",
+   "level": "caution",
+   "title": "하마스 소식통 \"이스라엘, 지도자 아들 살해 시도했으나 실패\"",
+   "why": [
+    "큰 사건 단어 '공습'",
+    "금 +2.94%"
+   ],
+   "link": "https://www.dailian.co.kr/news/view/1720826/?sc=Naver",
+   "delivered": false
+  },
   {
    "at": "2026-11-28T06:20:37.109Z",
    "id": "1m451ra",
@@ -1174,18 +1171,6 @@
     "금 +3.73%(평소의 2.4배)"
    ],
    "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=888018",
-   "delivered": false
-  },
-  {
-   "at": "2026-11-27T14:14:07.677Z",
-   "id": "xao6m6",
-   "level": "caution",
-   "title": "코스닥 매수 사이드카 발동…5.38% 급등, 외국인·기관 동반 매수",
-   "why": [
-    "큰 사건 단어 '사이드카'",
-    "코스피 +4.34%"
-   ],
-   "link": "https://www.koreareport.co.kr/news/articleView.html?idxno=55265",
    "delivered": false
   }
  ],
